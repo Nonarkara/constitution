@@ -41,7 +41,8 @@ export function Provider({ children }: { children: ReactNode }) {
       setStorageError(true);
     }
     setReady(true);
-    if ("serviceWorker" in navigator)
+    // Development assets change in place and must never enter the offline cache.
+    if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator)
       navigator.serviceWorker.register("/sw.js").catch(() => {});
   }, []);
   useEffect(() => {
