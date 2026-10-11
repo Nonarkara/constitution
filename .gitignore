@@ -5,3 +5,4 @@ out/
 *.tsbuildinfo
 .openai/*.local.json
 .openai/*.tar.gz
+next-env.d.ts

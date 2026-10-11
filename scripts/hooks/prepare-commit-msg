@@ -1,0 +1,5 @@
+#!/bin/sh
+# Attribute automatic Sites commits without changing human or other-agent trailers.
+if [ "$(head -n 1 "$1")" = "Update Site source" ] && ! rg -q '^(Agent:|Co-Authored-By:)' "$1"; then
+  printf '\nAgent: sites-workflow\n' >> "$1"
+fi
