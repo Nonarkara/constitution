@@ -29,15 +29,15 @@ def main():
   lang,n,text,digest,path,metadata,source=job
   if path.exists() and metadata.exists():
    previous=json.loads(metadata.read_text())
-   if previous.get('textSha256')==digest and previous.get('audioSha256')==hashlib.sha256(path.read_bytes()).hexdigest():return previous,True
+   if previous.get('bitRate')==40000 and previous.get('textSha256')==digest and previous.get('audioSha256')==hashlib.sha256(path.read_bytes()).hexdigest():return previous,True
   with tempfile.TemporaryDirectory(prefix='constitution-audio-') as tmp:
    work=pathlib.Path(tmp);(work/'speech.txt').write_text(text)
    subprocess.run(['say','-v',VOICES[lang],'-r','175','-f',str(work/'speech.txt'),'-o',str(work/'speech.aiff')],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE)
-   subprocess.run(['ffmpeg','-v','error','-y','-i',str(work/'speech.aiff'),'-ac','1','-ar','22050','-b:a','48k',str(work/'speech.mp3')],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE)
+   subprocess.run(['ffmpeg','-v','error','-y','-i',str(work/'speech.aiff'),'-ac','1','-ar','22050','-b:a','40k',str(work/'speech.mp3')],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE)
    duration=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',str(work/'speech.mp3')]))
    if duration<=0:raise ValueError(f'Empty audio {lang}/{n}')
    data=(work/'speech.mp3').read_bytes();path.write_bytes(data)
-  result={'section':n,'lang':lang,'url':f'/audio/{lang}/{n:03}.mp3','durationSeconds':round(duration,3),'bytes':len(data),'voice':VOICES[lang],'rate':175,'textSha256':digest,'audioSha256':hashlib.sha256(data).hexdigest(),'source':source,'kind':'generated-recording','translation':lang=='zh' or (lang=='en' and str(n) in amend)}
+  result={'section':n,'lang':lang,'url':f'/audio/{lang}/{n:03}.mp3','durationSeconds':round(duration,3),'bytes':len(data),'voice':VOICES[lang],'rate':175,'bitRate':40000,'textSha256':digest,'audioSha256':hashlib.sha256(data).hexdigest(),'source':source,'kind':'generated-recording','translation':lang=='zh' or (lang=='en' and str(n) in amend)}
   metadata.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');return result,False
  outputs=[];done=0;start=time.monotonic()
  with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as executor:

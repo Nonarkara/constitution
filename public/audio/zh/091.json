@@ -3,11 +3,11 @@
   "lang": "zh",
   "url": "/audio/zh/091.mp3",
   "durationSeconds": 40.222,
-  "bytes": 241912,
+  "bytes": 201631,
   "voice": "Tingting (Chinese (China mainland))",
   "rate": 175,
   "textSha256": "4c429f432cd31f36d1338962896b8ff2c463f823284d62011637157c2b7f1503",
-  "audioSha256": "d1711eaba08d9d96951004ba399745e5eea792c1b096c3dd0ec0e73b2b972fe6",
+  "audioSha256": "a420957edc64f962a3264552c46843dab8b29b24f2ef6fcb444911cd699edc22",
   "source": {
     "url": "https://intranet.senate.go.th/assets/portals/15/fileups/114/files/con2560edit4.pdf",
     "pages": [
@@ -15,5 +15,6 @@
     ]
   },
   "kind": "generated-recording",
-  "translation": true
+  "translation": true,
+  "bitRate": 40000
 }

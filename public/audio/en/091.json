@@ -3,11 +3,11 @@
   "lang": "en",
   "url": "/audio/en/091.mp3",
   "durationSeconds": 51.009,
-  "bytes": 306643,
+  "bytes": 255574,
   "voice": "Samantha (English (US))",
   "rate": 175,
   "textSha256": "7028d6be93443599406c658f39f36f46ec69739708396a3788c04366f44424a8",
-  "audioSha256": "2ffea743b97a2390713a9973bb94220d42a03e9cd8f9970ba486948cc1bff826",
+  "audioSha256": "c786554818740543fd5c87898331e1202cf87efd7c6c63a52c1870aca7d7d945",
   "source": {
     "url": "https://intranet.senate.go.th/assets/portals/15/fileups/114/files/con2560edit4.pdf",
     "pages": [
@@ -15,5 +15,6 @@
     ]
   },
   "kind": "generated-recording",
-  "translation": true
+  "translation": true,
+  "bitRate": 40000
 }

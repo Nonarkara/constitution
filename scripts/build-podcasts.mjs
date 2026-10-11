@@ -4,6 +4,23 @@ const records = JSON.parse(
   await readFile("data/audio-recordings.json", "utf8"),
 );
 const corpus = JSON.parse(await readFile("data/constitution.json", "utf8"));
+const english = {
+  ...JSON.parse(await readFile("data/translations/en-amendments.json", "utf8")),
+  ...JSON.parse(await readFile("data/translations/en-corrections.json", "utf8")),
+};
+const chinese = {
+  ...JSON.parse(await readFile("data/translations/zh-001-139.json", "utf8")),
+  ...JSON.parse(await readFile("data/translations/zh-140-279.json", "utf8")),
+};
+const voices = { th: "Kanya (Thai (Thailand))", en: "Samantha (English (US))", zh: "Tingting (Chinese (China mainland))" };
+function transcript(section, lang) {
+  let intro = { th: `มาตรา ${section.number}. `, en: `Section ${section.number}. `, zh: `第${section.number}条。` }[lang];
+  if (lang === "en" && [83, 86, 91].includes(section.number)) intro += "Study translation of the 2021 amendment. Thai text prevails. ";
+  if (lang === "en" && section.number in english && ![83, 86, 91].includes(section.number)) intro += "Study translation corrected against the Thai source. Thai text prevails. ";
+  if (lang === "zh") intro += "学习译文，以泰文原文为准。";
+  if (section.chapter === 17) intro += { th: "บทเฉพาะกาล โปรดตรวจเงื่อนไขเวลาในตัวบท. ", en: "Transitory provision. Check the time limits in the legal text. ", zh: "过渡条款，请核对原文规定的期限。" }[lang];
+  return intro + (lang === "th" ? section.th : lang === "en" ? (english[section.number]?.en ?? section.en) : chinese[section.number].zh);
+}
 const languages = ["th", "en", "zh"];
 const origin = "https://constitution-study.nonsmartcity.chatgpt.site";
 const escape = (value) =>
@@ -23,6 +40,10 @@ for (const lang of languages) {
   )
     throw Error(`Missing ${lang} section recordings: ${entries.length}/279`);
   for (const record of entries) {
+    const section = corpus.sections.find((section) => section.number === record.section);
+    const expectedTextHash = createHash("sha256").update(voices[lang] + "|rate=175|" + transcript(section, lang)).digest("hex");
+    if (record.textSha256 !== expectedTextHash || record.voice !== voices[lang] || record.rate !== 175 || record.bitRate !== 40000 || JSON.stringify(record.source) !== JSON.stringify(section.source.th))
+      throw Error(`Recording needs regeneration for current source: ${record.url}`);
     const bytes = await readFile("public" + record.url);
     if (
       bytes.length !== record.bytes ||
