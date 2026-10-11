@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600&display=swap");
+@import url("/fonts/fonts.css");
 :root {
   --paper: #fff;
   --ink: #24251f;
@@ -998,5 +998,72 @@ html[data-large="true"] {
   .audio-note > .study-art {
     width: 100px;
     margin: 0 0 12px 16px;
+  }
+}
+
+[lang="zh"] {
+  font-family:
+    "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "IBM Plex Sans Thai",
+    sans-serif;
+}
+.recorded-audio {
+  margin: 20px 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.recorded-audio audio {
+  display: block;
+  width: 100%;
+  height: 44px;
+  margin: 12px 0;
+}
+.audio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.recorded-audio p {
+  margin: 10px 0 0;
+}
+.podcast-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+.institution-map {
+  margin: 32px 0;
+  border-top: 3px solid var(--ink);
+  padding-top: 22px;
+}
+.institution-map svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.institution-map svg text {
+  font-size: var(--micro);
+  font-family: inherit;
+}
+.institution-tabs {
+  grid-template-columns: repeat(3, 1fr);
+}
+.institution-map .flow-detail p {
+  margin-bottom: 12px;
+}
+.institution-map > .micro:last-child {
+  margin-top: 18px;
+}
+@media (max-width: 480px) {
+  .institution-map svg text {
+    font-size: 18px;
+  }
+  .institution-tabs {
+    grid-template-columns: 1fr;
+  }
+  .institution-tabs button {
+    flex-direction: row;
+    justify-content: center;
   }
 }

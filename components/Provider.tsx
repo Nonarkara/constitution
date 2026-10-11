@@ -7,7 +7,9 @@ import {
   type ReactNode,
 } from "react";
 import { defaultProgress, type Progress } from "@/lib/learning";
+import questions from "@/data/questions.json";
 import { parseProgress } from "@/lib/progress";
+import { workerMessage, type OfflineStatus } from "@/lib/offline";
 import type { Lang } from "@/lib/i18n";
 type State = {
   lang: Lang;
@@ -16,6 +18,7 @@ type State = {
   save: (p: Progress) => void;
   ready: boolean;
   storageError: boolean;
+  offline: OfflineStatus;
   large: boolean;
   setLarge: (b: boolean) => void;
 };
@@ -26,13 +29,17 @@ export function Provider({ children }: { children: ReactNode }) {
     [ready, setReady] = useState(false),
     [storageError, setStorageError] = useState(false),
     [large, setBig] = useState(false);
+  const [offline, setOffline] = useState<OfflineStatus>("unavailable");
   useEffect(() => {
     try {
       const l = localStorage.getItem("constitution-lang");
       if (l === "th" || l === "en" || l === "zh") setL(l);
       const p = localStorage.getItem("constitution-progress");
       if (p) {
-        const parsed = parseProgress(JSON.parse(p));
+        const parsed = parseProgress(
+          JSON.parse(p),
+          new Set(questions.map((q) => q.id)),
+        );
         if (parsed) setP(parsed);
         else setStorageError(true);
       }
@@ -42,8 +49,36 @@ export function Provider({ children }: { children: ReactNode }) {
     }
     setReady(true);
     // Development assets change in place and must never enter the offline cache.
-    if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator)
-      navigator.serviceWorker.register("/sw.js").catch(() => {});
+    if (process.env.NODE_ENV === "production") {
+      if (!("serviceWorker" in navigator)) {
+        setOffline("unsupported");
+        return;
+      }
+      setOffline("loading");
+      const check = async () => {
+        try {
+          const registration = await navigator.serviceWorker.ready;
+          const worker = registration.active;
+          if (!worker) {
+            setOffline("unavailable");
+            return;
+          }
+          const status = await workerMessage<{ ready: boolean }>(worker, {
+            type: "OFFLINE_STATUS",
+          });
+          setOffline(status.ready ? "ready" : "unavailable");
+        } catch {
+          setOffline("unavailable");
+        }
+      };
+      navigator.serviceWorker.addEventListener("controllerchange", check);
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then(check)
+        .catch(() => setOffline("unavailable"));
+      return () =>
+        navigator.serviceWorker.removeEventListener("controllerchange", check);
+    }
   }, []);
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -82,6 +117,7 @@ export function Provider({ children }: { children: ReactNode }) {
         save,
         ready,
         storageError,
+        offline,
         large,
         setLarge,
       }}

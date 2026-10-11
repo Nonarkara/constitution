@@ -38,6 +38,8 @@ export function VoiceSearch({
     [msg, setMsg] = useState("");
   const recognition = useRef<Recognition | null>(null),
     session = useRef(0);
+  const currentLanguage = useRef(lang);
+  currentLanguage.current = lang;
   useEffect(() => {
     const w = window as SpeechWindow;
     setAvailable(!!(w.SpeechRecognition || w.webkitSpeechRecognition));
@@ -46,6 +48,13 @@ export function VoiceSearch({
       recognition.current?.abort();
     };
   }, []);
+  useEffect(() => {
+    session.current++;
+    recognition.current?.abort();
+    recognition.current = null;
+    setListening(false);
+    setMsg("");
+  }, [lang]);
   const start = () => {
     if (listening) {
       session.current++;
@@ -63,14 +72,14 @@ export function VoiceSearch({
     r.continuous = false;
     r.interimResults = false;
     r.onresult = (e) => {
-      if (id !== session.current) return;
+      if (id !== session.current || currentLanguage.current !== lang) return;
       let t = "";
       for (let i = e.resultIndex; i < e.results.length; i++)
         if (e.results[i].isFinal) t += e.results[i][0].transcript;
       if (t) onText(t.trim());
     };
     r.onerror = (e) => {
-      if (id !== session.current) return;
+      if (id !== session.current || currentLanguage.current !== lang) return;
       setMsg(
         e.error === "not-allowed"
           ? tr(
@@ -89,7 +98,8 @@ export function VoiceSearch({
       setListening(false);
     };
     r.onend = () => {
-      if (id === session.current) setListening(false);
+      if (id === session.current && currentLanguage.current === lang)
+        setListening(false);
     };
     try {
       r.start();

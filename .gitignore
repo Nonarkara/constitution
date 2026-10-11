@@ -6,3 +6,8 @@ out/
 .openai/*.local.json
 .openai/*.tar.gz
 next-env.d.ts
+
+.openai/audio-work/
+.openai/qa/
+
+.openai/*-fonts.css

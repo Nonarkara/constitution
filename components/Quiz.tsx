@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import questions from "@/data/questions.json";
-import { sections, chapters, chineseText } from "@/lib/corpus";
+import { sections, chapters, chineseText, readingText } from "@/lib/corpus";
 import { recordAnswer } from "@/lib/learning";
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
@@ -80,9 +80,9 @@ export function Quiz({
         {related.map((s) => (
           <div className="reading-excerpt" key={s.number}>
             <h2>{sectionLabel(lang, s.number)}</h2>
-            <p lang={lang}>{lang === "zh" ? chineseText(s.number) : s[lang]}</p>
+            <p lang={lang}>{readingText(s.number, lang)}</p>
             {lang === "zh" && (
-              <p className="micro">中文学习摘要，以泰文原文为准。</p>
+              <p className="micro">中文学习译文，以泰文原文为准。</p>
             )}
             {lang === "en" && s.amended && (
               <p className="notice">

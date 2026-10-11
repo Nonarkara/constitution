@@ -1,0 +1,19 @@
+{
+  "section": 86,
+  "lang": "th",
+  "url": "/audio/th/086.mp3",
+  "durationSeconds": 129.365,
+  "bytes": 776847,
+  "voice": "Kanya (Thai (Thailand))",
+  "rate": 175,
+  "textSha256": "ac17267c812bce1fd215730d52011bac6a741f1117c2dfa774ec186ae32f5ebc",
+  "audioSha256": "e8f094456ab1db1d0ff8c92151cbd9107a23afac3a364ecd9027a000a5dd68bf",
+  "source": {
+    "url": "https://intranet.senate.go.th/assets/portals/15/fileups/114/files/con2560edit4.pdf",
+    "pages": [
+      42
+    ]
+  },
+  "kind": "generated-recording",
+  "translation": false
+}

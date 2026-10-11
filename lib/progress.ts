@@ -1,6 +1,17 @@
 import { defaultProgress, type Progress } from "./learning.ts";
 /** Validate saved and imported data before it can affect scheduling or rendering. */
-export function parseProgress(input: unknown): Progress | null {
+function validDay(value: unknown): value is string {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value))
+    return false;
+  const date = new Date(`${value}T00:00:00Z`);
+  return (
+    Number.isFinite(date.getTime()) && date.toISOString().slice(0, 10) === value
+  );
+}
+export function parseProgress(
+  input: unknown,
+  allowedIds?: ReadonlySet<string>,
+): Progress | null {
   if (!input || typeof input !== "object" || Array.isArray(input)) return null;
   const p = input as Record<string, unknown>;
   if (
@@ -15,14 +26,16 @@ export function parseProgress(input: unknown): Progress | null {
     Array.isArray(p.questions)
   )
     return null;
-  if (
-    p.lastStudyDay !== null &&
-    (typeof p.lastStudyDay !== "string" ||
-      !/^\d{4}-\d{2}-\d{2}$/.test(p.lastStudyDay))
-  )
-    return null;
+  if (p.lastStudyDay !== null && !validDay(p.lastStudyDay)) return null;
   for (const [id, value] of Object.entries(p.questions)) {
-    if (!id || !value || typeof value !== "object" || Array.isArray(value))
+    if (
+      !id ||
+      (allowedIds && !allowedIds.has(id)) ||
+      ["__proto__", "constructor", "prototype"].includes(id) ||
+      !value ||
+      typeof value !== "object" ||
+      Array.isArray(value)
+    )
       return null;
     const q = value as Record<string, unknown>;
     if (
@@ -33,7 +46,8 @@ export function parseProgress(input: unknown): Progress | null {
       q.level > 4 ||
       typeof q.due !== "number" ||
       !Number.isFinite(q.due) ||
-      q.due < 0
+      q.due < 0 ||
+      (q.correct ? q.level === 0 : q.level !== 0)
     )
       return null;
   }
@@ -50,9 +64,6 @@ export function parseProgress(input: unknown): Progress | null {
       p.energy <= 12
         ? p.energy
         : base.energy,
-    energyDay:
-      typeof p.energyDay === "string" && /^\d{4}-\d{2}-\d{2}$/.test(p.energyDay)
-        ? p.energyDay
-        : null,
+    energyDay: validDay(p.energyDay) ? p.energyDay : null,
   };
 }

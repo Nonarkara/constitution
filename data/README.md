@@ -28,3 +28,11 @@ node scripts/validate-corpus.mjs
 The extractor downloads missing source PDFs via `curl`, removes Gazette headers, recognizes section headings in increasing numeric order (wrapped references must not become headings), removes chapter/part headings and final countersignatures, and normalizes whitespace and Thai SARA AM glyph encoding. Current amended provisions are extracted from their specific body blocks in the Senate consolidated PDF, excluding margin labels and footnotes.
 
 This is text extraction, not a certified manual transcription. Paragraph line breaks are normalized to spaces; numbered subsection markers remain. Integrity checks verify counts, numbering, source-page metadata, chapter coverage, replacement values and translation-version labels. These checks do not certify every glyph. Legal use should consult the linked PDF.
+
+## Full study translations and recorded readings
+
+`translations/zh-001-139.json` and `zh-140-279.json` supply full Chinese study translations with identical Thai citations. The original short summaries remain in `chinese.json`. These translations are unofficial and not certified. Structural checks cover keys, sources and cross-references; the targeted semantic review is described in the shard notes.
+
+`en-amendments.json` supplies current study translations for 83/86/91. `en-corrections.json` supplies readings for natural resources in 37, 98(14)’s inclusive two-year boundary, 101(13)’s suspended-sentence exception, loan use in 134, and signatory representatives in 256. The original government text is retained unchanged in the corpus for comparison.
+
+`audio-recordings.json` identifies all 837 generated readings with text/audio SHA-256, source, voice, length and duration. These are synthetic study recordings, separate from the Senate’s human recordings.

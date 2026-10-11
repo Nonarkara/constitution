@@ -3,12 +3,22 @@ import { StudyArt } from "./StudyArt";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { sections, chapters, searchSections, chineseText } from "@/lib/corpus";
+import {
+  sections,
+  chapters,
+  searchSections,
+  chineseText,
+  chineseSummary,
+  readingText,
+  englishIsStudyTranslation,
+} from "@/lib/corpus";
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel, type Lang } from "@/lib/i18n";
+import { Recording } from "./Recording";
 import { Speech } from "./Speech";
 import { VoiceSearch } from "./VoiceSearch";
 import audio from "@/data/audio.json";
+import { InstitutionMap } from "./InstitutionMap";
 import { LawFlow } from "./LawFlow";
 const senateAudio =
   "https://www.senate.go.th/view/1/รายละเอียดข่าว/13564/TH-TH";
@@ -92,13 +102,7 @@ export function Reader() {
             {results.map((s) => (
               <button key={s.number} onClick={() => open(s.number)}>
                 <span className="mono">{s.number}</span>
-                <span>
-                  {(lang === "zh" ? chineseText(s.number) : s[lang]).slice(
-                    0,
-                    140,
-                  )}
-                  …
-                </span>
+                <span>{readingText(s.number, lang).slice(0, 140)}…</span>
                 <span aria-hidden="true">↗</span>
               </button>
             ))}
@@ -140,9 +144,9 @@ export function Reader() {
             <div className="notice">
               {tr(
                 lang,
-                "มาตรานี้แก้ไขใน พ.ศ. 2564 ข้อความไทยด้านล่างเป็นฉบับแก้ไข ส่วนภาษาอังกฤษเป็นฉบับเดิม พ.ศ. 2560",
-                "Amended in 2021. Thai below reflects the amendment. The English column is the historical 2017 version.",
-                "本条于2021年修订。下方泰文为修订文本，英文栏为2017年旧译文。",
+                "มาตรานี้แก้ไขใน พ.ศ. 2564 ข้อความไทยเป็นฉบับแก้ไข คำแปลอังกฤษและจีนจัดทำเพื่อศึกษา และมีฉบับอังกฤษเดิมให้เทียบด้านล่าง",
+                "Amended in 2021. Thai reflects the amendment. English and Chinese are study translations; the historical English version remains available below.",
+                "本条于2021年修订。泰文为修订文本，英文与中文为学习译文，下方另保留原英文译文供对照。",
               )}
             </div>
           )}
@@ -163,35 +167,34 @@ export function Reader() {
                   {l === "th"
                     ? "ไทย · ต้นฉบับ"
                     : l === "en"
-                      ? section.amended
-                        ? "EN · HISTORICAL 2017"
+                      ? englishIsStudyTranslation(section.number)
+                        ? "EN · STUDY TRANSLATION"
                         : "EN · GOVERNMENT TRANSLATION"
-                      : "中文 · 学习摘要"}
+                      : "中文 · 学习译文"}
                 </div>
-                <p className="law-text">
-                  {l === "zh" ? chineseText(section.number) : section[l]}
-                </p>
-                <Speech
-                  lang={l}
-                  text={
-                    l === "zh"
-                      ? chineseText(section.number)
-                      : l === "en" && section.amended
-                        ? "Historical 2017 text, replaced in 2021. " +
-                          section.en
-                        : section[l]
-                  }
-                />
+                <p className="law-text">{readingText(section.number, l)}</p>
+                <Recording section={section.number} lang={l} />
+                <details className="device-speech">
+                  <summary>
+                    {tr(
+                      l,
+                      "ใช้เสียงจากอุปกรณ์",
+                      "Use device voice",
+                      "使用设备语音",
+                    )}
+                  </summary>
+                  <Speech lang={l} text={readingText(section.number, l)} />
+                </details>
                 {l === "zh" ? (
                   <p className="micro">
-                    非官方学习摘要，并非完整法律译文。以泰文原文为准。
+                    完整学习译文，并非官方或经认证的法律译文。请以泰文原文为准。
                   </p>
                 ) : (
                   <a
                     className="micro source-link"
                     target="_blank"
                     rel="noreferrer"
-                    href={`${section.source[l].url}#page=${section.source[l].pages[0]}`}
+                    href={`${(l === "en" && englishIsStudyTranslation(section.number) ? section.source.th : section.source[l]).url}#page=${(l === "en" && englishIsStudyTranslation(section.number) ? section.source.th : section.source[l]).pages[0]}`}
                   >
                     {tr(
                       lang,
@@ -199,10 +202,50 @@ export function Reader() {
                       "Source PDF, page",
                       "原始PDF，页",
                     )}{" "}
-                    {section.source[l].pages.join(", ")} ↗
+                    {(l === "en" && englishIsStudyTranslation(section.number)
+                      ? section.source.th
+                      : section.source[l]
+                    ).pages.join(", ")}{" "}
+                    ↗
                   </a>
                 )}
+                {l === "zh" && (
+                  <>
+                    <a
+                      className="micro source-link"
+                      href={`${section.source.th.url}#page=${section.source.th.pages[0]}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      泰文原文 PDF · 第{section.source.th.pages.join(", ")}页 ↗
+                    </a>
+                  </>
+                )}
+                {l === "zh" && (
+                  <details>
+                    <summary>查看简明学习摘要</summary>
+                    <p>{chineseSummary(section.number)}</p>
+                  </details>
+                )}
+                {l === "en" && englishIsStudyTranslation(section.number) && (
+                  <details>
+                    <summary>Compare original government translation</summary>
+                    <p className="micro">
+                      Study wording follows the authoritative Thai text; the
+                      original English below is retained for source comparison.
+                    </p>
+                    <p className="law-text">{section.en}</p>
+                  </details>
+                )}
               </article>
+            ))}
+          </div>
+          <div className="podcast-links">
+            {(["th", "en", "zh"] as Lang[]).map((l) => (
+              <a className="button" key={l} href={`/podcast/${l}.xml`}>
+                {tr(lang, "พอดแคสต์", "Podcast feed", "播客订阅")} ·{" "}
+                {l.toUpperCase()} ↗
+              </a>
             ))}
           </div>
           <div className="audio-note">
@@ -267,6 +310,9 @@ export function Reader() {
               ↗
             </a>
           </div>
+          {[3, 79, 158, 188, 215].includes(section.number) && (
+            <InstitutionMap />
+          )}
           {[133, 134, 136, 145, 256].includes(section.number) && (
             <LawFlow amendment={section.number === 256} />
           )}
@@ -293,9 +339,9 @@ export function Reader() {
           <p>
             {tr(
               lang,
-              "ค้นจากข้อความไทย อังกฤษ หรือสรุปภาษาจีน หรือเลือกหมวดด้านล่างเพื่อเริ่มอ่าน",
-              "Search Thai, English, or Chinese study summaries, or choose a chapter below.",
-              "可搜索泰文、英文和中文学习摘要，也可从下方选择章节。",
+              "ค้นจากข้อความไทย อังกฤษ หรือจีน หรือเลือกหมวดด้านล่างเพื่อเริ่มอ่าน",
+              "Search the full Thai, English and Chinese text, or choose a chapter below.",
+              "可搜索完整泰文、英文与中文文本，也可从下方选择章节。",
             )}
           </p>
           <div className="index-list">

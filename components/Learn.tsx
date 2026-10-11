@@ -1,4 +1,5 @@
 "use client";
+import { InstitutionMap } from "./InstitutionMap";
 import { StudyArt } from "./StudyArt";
 import { useState } from "react";
 import Link from "next/link";
@@ -154,6 +155,7 @@ export function Learn() {
           );
         })}
       </div>
+      <InstitutionMap />
       <div className="note">
         <strong>
           {tr(

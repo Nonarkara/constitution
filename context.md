@@ -10,7 +10,7 @@ Register: Civic. White paper, black ink, amber #f59e0b for the next action. IBM 
 
 Stack: Next.js 16 static export. No account or paid service required. Browser speech is device dependent; missing voices and recognition have explicit fallbacks. iPad dictation works through the search keyboard even without Web Speech recognition. PWA shell caches same-origin successful requests only.
 
-Content: Thai and English official PDFs with amendment metadata. Chinese is a clearly marked study translation, never an official legal text. No invented exam-frequency rankings: relevance ranks use text matches and named editorial priorities.
+Content: Thai and English official PDFs with amendment metadata. Chinese has full, clearly marked study translations, never an official legal text. No invented exam-frequency rankings: relevance ranks use text matches and named editorial priorities.
 
 ## Illustration direction — 12 October 2026
 
@@ -19,3 +19,7 @@ User-authorized original AI-generated crayon drawings: scratchy wax texture, une
 Named palette exception: **illustrated study scenes** may contain natural plant greens, skin tones and small card marks. These belong inside the artwork and distinguish objects; amber remains the only UI accent. This exception follows the user’s illustrated references and never applies to controls or legal text.
 
 Original PNGs and full prompts are in `design/illustrations/`; lightweight WebP assets are in `public/illustrations/`. These are generated images with a handmade visual style, not claimed to be hand-drawn. No decorative animation or repeating motion.
+
+## Ship audit
+
+Full Chinese translations and current English study overlays retain original government text for comparison. Prepared per-section MP3s in all three languages and podcast feeds supplement device speech. Offline installation must precache every dependency of the exported app before claiming readiness. Idle players must never cancel another player; language changes invalidate old recognition callbacks; imported progress must preserve review-state invariants.

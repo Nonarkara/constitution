@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { playback } from "@/lib/playback";
 import { tr, type Lang } from "@/lib/i18n";
 export function Speech({ text, lang }: { text: string; lang: Lang }) {
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]),
@@ -8,6 +9,7 @@ export function Speech({ text, lang }: { text: string; lang: Lang }) {
     [rate, setRate] = useState(0.9),
     [message, setMessage] = useState("");
   const session = useRef(0);
+  const owner = useRef(Symbol("device speech"));
   const utterance = useRef<SpeechSynthesisUtterance | null>(null);
   useEffect(() => {
     if (!("speechSynthesis" in window)) return;
@@ -17,13 +19,13 @@ export function Speech({ text, lang }: { text: string; lang: Lang }) {
     window.speechSynthesis.addEventListener("voiceschanged", load);
     return () => {
       session.current++;
-      window.speechSynthesis.cancel();
+      playback().stop(owner.current);
       window.speechSynthesis.removeEventListener("voiceschanged", load);
     };
   }, []);
   useEffect(() => {
     session.current++;
-    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+    if ("speechSynthesis" in window) playback().stop(owner.current);
     setPlaying(false);
     setMessage("");
   }, [text, lang]);
@@ -32,7 +34,7 @@ export function Speech({ text, lang }: { text: string; lang: Lang }) {
   );
   const stop = () => {
     session.current++;
-    window.speechSynthesis.cancel();
+    playback().stop(owner.current);
     setPlaying(false);
   };
   const play = () => {
@@ -48,6 +50,10 @@ export function Speech({ text, lang }: { text: string; lang: Lang }) {
       return;
     }
     stop();
+    playback().take(owner.current, () => {
+      session.current++;
+      setPlaying(false);
+    });
     const id = ++session.current;
     const chunks = text.match(
       /[\s\S]{1,180}(?:\s|[。.!?]|$)|[\s\S]{1,180}/g,
@@ -58,6 +64,7 @@ export function Speech({ text, lang }: { text: string; lang: Lang }) {
     const speak = () => {
       if (id !== session.current) return;
       if (i >= chunks.length) {
+        playback().release(owner.current);
         setPlaying(false);
         return;
       }
@@ -69,6 +76,7 @@ export function Speech({ text, lang }: { text: string; lang: Lang }) {
       u.onend = speak;
       u.onerror = (e) => {
         if (id !== session.current) return;
+        playback().release(owner.current);
         setPlaying(false);
         if (e.error !== "canceled" && e.error !== "interrupted")
           setMessage(

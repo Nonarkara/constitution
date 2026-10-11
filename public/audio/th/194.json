@@ -1,0 +1,19 @@
+{
+  "section": 194,
+  "lang": "th",
+  "url": "/audio/th/194.mp3",
+  "durationSeconds": 22.19,
+  "bytes": 133765,
+  "voice": "Kanya (Thai (Thailand))",
+  "rate": 175,
+  "textSha256": "a610170d8f726cf8e8caf6f97e2ac1d3b52ed77e546240a6f17b9776a61d88b5",
+  "audioSha256": "f2c74dc753cac33cbd57643bed34da8d45f04a78dc8fb0bf828ec301947ae1ad",
+  "source": {
+    "url": "https://www.senate.go.th/assets/portals/1/files/1%20(1)(1).PDF",
+    "pages": [
+      55
+    ]
+  },
+  "kind": "generated-recording",
+  "translation": false
+}

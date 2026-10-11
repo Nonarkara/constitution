@@ -1,0 +1,19 @@
+{
+  "section": 135,
+  "lang": "zh",
+  "url": "/audio/zh/135.mp3",
+  "durationSeconds": 42.068,
+  "bytes": 253040,
+  "voice": "Tingting (Chinese (China mainland))",
+  "rate": 175,
+  "textSha256": "1b65164495fabda1dd3adf469afc98117a56acdfd07895598100ac660f1b1b26",
+  "audioSha256": "583408083f197ac54f907b950597b9fd1e907fa230c10e6e741d2b2572e37f8f",
+  "source": {
+    "url": "https://www.senate.go.th/assets/portals/1/files/1%20(1)(1).PDF",
+    "pages": [
+      39
+    ]
+  },
+  "kind": "generated-recording",
+  "translation": true
+}

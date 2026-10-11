@@ -1,5 +1,9 @@
 import corpus from "@/data/constitution.json";
 import chinese from "@/data/chinese.json";
+import zhFirst from "@/data/translations/zh-001-139.json";
+import zhSecond from "@/data/translations/zh-140-279.json";
+import enAmendments from "@/data/translations/en-amendments.json";
+import enCorrections from "@/data/translations/en-corrections.json";
 export type Section = {
   number: number;
   chapter: number;
@@ -21,9 +25,36 @@ export type Chapter = {
 export const sections = corpus.sections as Section[];
 export const chapters = corpus.chapters as Chapter[];
 export const meta = corpus.meta;
+const zhTranslations = { ...zhFirst, ...zhSecond } as Record<
+  string,
+  { zh: string }
+>;
+const enTranslations = { ...enAmendments, ...enCorrections } as Record<
+  string,
+  { en: string }
+>;
 export function chineseText(n: number): string {
-  const data = chinese as unknown as Record<string, { zh: string }>;
-  return data[String(n)]?.zh ?? "此条的中文学习摘要尚未完成。请查阅泰文原文。";
+  return zhTranslations[String(n)]?.zh ?? "此条译文缺失，请查阅泰文原文。";
+}
+export function chineseSummary(n: number): string {
+  return (chinese as Record<string, { zh: string }>)[String(n)]?.zh ?? "";
+}
+export function englishText(n: number): string {
+  return (
+    enTranslations[String(n)]?.en ??
+    sections.find((s) => s.number === n)?.en ??
+    ""
+  );
+}
+export function readingText(n: number, lang: "th" | "en" | "zh"): string {
+  return lang === "zh"
+    ? chineseText(n)
+    : lang === "en"
+      ? englishText(n)
+      : (sections.find((s) => s.number === n)?.th ?? "");
+}
+export function englishIsStudyTranslation(n: number) {
+  return String(n) in enTranslations;
 }
 export function searchSections(query: string): Section[] {
   const q = query
@@ -38,10 +69,12 @@ export function searchSections(query: string): Section[] {
   return sections
     .map((s) => ({
       s,
-      score: [s.th, s.en, chineseText(s.number)].reduce(
-        (score, t) => score + (t.toLowerCase().includes(q) ? 1 : 0),
-        0,
-      ),
+      score: [
+        s.th,
+        englishText(s.number),
+        chineseText(s.number),
+        chineseSummary(s.number),
+      ].reduce((score, t) => score + (t.toLowerCase().includes(q) ? 1 : 0), 0),
     }))
     .filter((r) => r.score > 0)
     .sort((a, b) => b.score - a.score || a.s.number - b.s.number)

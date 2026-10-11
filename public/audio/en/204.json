@@ -1,0 +1,19 @@
+{
+  "section": 204,
+  "lang": "en",
+  "url": "/audio/en/204.mp3",
+  "durationSeconds": 40.098,
+  "bytes": 241128,
+  "voice": "Samantha (English (US))",
+  "rate": 175,
+  "textSha256": "b44c081ea12c4d31a7ad5d82fca0d57bf0b904319641a25d8ae34846f7b3eee1",
+  "audioSha256": "b12cb93c200ec69dd5070743faf85fb9bc2286e2a16301b03cfe42595b065f24",
+  "source": {
+    "url": "https://www.senate.go.th/assets/portals/1/files/1%20(1)(1).PDF",
+    "pages": [
+      59
+    ]
+  },
+  "kind": "generated-recording",
+  "translation": false
+}

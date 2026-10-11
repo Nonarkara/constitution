@@ -18,9 +18,9 @@ export function Sources() {
       <p>
         {tr(
           lang,
-          "ตัวบทภาษาไทยเป็นหลักเสมอ คำอธิบาย ข้อฝึก และสรุปภาษาจีนมีไว้ช่วยเรียน ไม่ใช้แทนตัวบท",
-          "The Thai text governs. Explanations, practice questions and Chinese summaries help you study; they cannot replace the law.",
-          "请以泰文原文为准。解析、练习题与中文摘要用于学习，不能代替法律文本。",
+          "ตัวบทภาษาไทยเป็นหลักเสมอ คำอธิบาย ข้อฝึก และคำแปลเพื่อศึกษามีไว้ช่วยเรียน ไม่ใช้แทนตัวบท",
+          "The Thai text governs. Explanations, practice questions and Chinese study translations help you study; they cannot replace the law.",
+          "请以泰文原文为准。解析、练习题与学习译文用于学习，不能代替法律文本。",
         )}
       </p>
       <div className="source-card">
@@ -80,9 +80,9 @@ export function Sources() {
         <p>
           {tr(
             lang,
-            "คำแปลของสำนักงานคณะกรรมการกฤษฎีกา เผยแพร่โดย ก.พ.ร. เป็นฉบับ พ.ศ. 2560 มาตรา 83, 86 และ 91 ภาษาอังกฤษยังเป็นฉบับเดิมและติดป้ายชัดเจน",
-            "Council of State translation, published by OPDC, for the 2017 version. English sections 83, 86 and 91 remain historical and are labeled accordingly.",
-            "国务委员会英文译文，由公共部门发展委员会发布，依据2017年版本。第83、86、91条英文为旧版本，已明确标注。",
+            "คำแปลของสำนักงานคณะกรรมการกฤษฎีกา เผยแพร่โดย ก.พ.ร. เป็นฉบับ พ.ศ. 2560 ส่วนมาตรา 83, 86 และ 91 ใช้คำแปลฉบับแก้ไขเพื่อศึกษา มาตรา 37, 98, 101, 134 และ 256 ปรับคำแปลตามตัวบทไทย ฉบับแปลเดิมยังเปิดเทียบได้",
+            "Council of State translation published by OPDC for 2017. Sections 83, 86 and 91 use current study translations; 37, 98, 101, 134 and 256 include corrections against Thai. Original English passages remain available for comparison.",
+            "2017年国务委员会英文译文，由公共部门发展委员会发布。第83、86、91条采用修订后的学习译文，第37、98、101、134、256条按泰文纠正。原英文保留供对照。",
           )}
         </p>
         <a target="_blank" rel="noreferrer" href={meta.sources.en2017.url}>
@@ -94,18 +94,54 @@ export function Sources() {
         <h2>
           {tr(
             lang,
-            "สรุปภาษาจีนเพื่อเรียน",
-            "Chinese study summaries",
-            "中文学习摘要",
+            "คำแปลจีนเพื่อเรียน",
+            "Chinese study translations",
+            "中文学习译文",
           )}
         </h2>
         <p>
           {tr(
             lang,
-            "สรุปที่จัดทำเพื่อช่วยเรียนรู้ ไม่ใช่คำแปลทางกฎหมายฉบับเต็มหรือฉบับทางการ ตรวจรายละเอียดจากตัวบทภาษาไทย",
-            "Prepared study summaries, not full legal translations or official text. Check details against the Thai original.",
-            "为辅助学习整理的摘要，并非完整法律译文或官方文本。具体规定请核对泰文原文。",
+            "คำแปลเพื่อศึกษาครบทั้ง 279 มาตรา พร้อมสรุปสั้น ไม่ใช่ฉบับทางการหรือคำแปลที่ได้รับการรับรอง ตรวจรายละเอียดจากตัวบทภาษาไทย",
+            "Full study translations of all 279 sections, with short summaries retained. These are not official or certified legal translations. Check details against the Thai original.",
+            "全部279条的完整学习译文，并保留简明摘要。译文并非官方或经认证的法律译文。请核对泰文原文。",
           )}
+        </p>
+      </div>
+      <div className="source-card">
+        <span className="mono">05 / LEARNING</span>
+        <h2>
+          {tr(
+            lang,
+            "ทำไมต้องลองตอบและกลับมาทบทวน",
+            "Why recall and spaced review?",
+            "为什么要回忆并间隔复习？",
+          )}
+        </h2>
+        <p>
+          {tr(
+            lang,
+            "งานวิจัยด้านความจำสนับสนุนการฝึกดึงคำตอบจากความจำและการเว้นช่วงทบทวน แอปใช้หลักนี้ แต่ช่วงเวลา 1/3/7/14 วันและเกณฑ์ 80% เป็นตัวเลือกออกแบบ ไม่ใช่สูตรที่พิสูจน์แล้วว่าจะสอบผ่าน",
+            "Memory research supports retrieval practice and spaced study. This app uses those principles; its 1/3/7/14-day schedule and 80% practice threshold are design choices, not a proven formula for passing the exam.",
+            "记忆研究支持提取练习与间隔学习。本应用采用这些原则；1、3、7、14天间隔及80%练习标准是设计选择，并非已证明能保证考试通过的公式。",
+          )}
+        </p>
+        <p className="micro">
+          <a
+            href="https://doi.org/10.1126/science.1152408"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Karpicke &amp; Roediger (2008) · Retrieval practice ↗
+          </a>
+          <br />
+          <a
+            href="https://laplab.ucsd.edu/articles/Cepeda_etal_2006.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Cepeda et al. (2006) · Distributed practice ↗
+          </a>
         </p>
       </div>
       <div className="note">

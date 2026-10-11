@@ -52,8 +52,10 @@ export function recordAnswer(
   const eligible = !previous || previous.due <= now;
   const level = correct
     ? eligible
-      ? Math.min((previous?.level ?? 0) + 1, INTERVALS.length)
-      : Math.max(previous.level, 1)
+      ? Math.min((previous?.correct ? previous.level : 0) + 1, INTERVALS.length)
+      : previous.correct
+        ? Math.max(previous.level, 1)
+        : 1
     : 0;
   const due = correct
     ? eligible || !previous?.correct

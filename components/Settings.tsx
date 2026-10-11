@@ -2,10 +2,11 @@
 import { useState } from "react";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
+import questions from "@/data/questions.json";
 import { parseProgress } from "@/lib/progress";
 import { defaultProgress } from "@/lib/learning";
 export function Settings() {
-  const { lang, progress, save, large, setLarge } = useStudy();
+  const { lang, progress, save, large, setLarge, offline } = useStudy();
   const [confirm, setConfirm] = useState(false),
     [message, setMessage] = useState("");
   const download = () => {
@@ -44,12 +45,34 @@ export function Settings() {
         <p className="micro">
           {tr(
             lang,
-            "หลังเปิดหน้าครั้งแรก หน้าที่เคยเปิดจะอ่านได้เมื่อออฟไลน์ เสียงวุฒิสภาและการพูดค้นหาต้องใช้อินเทอร์เน็ตตามบริการที่ใช้",
-            "After your first visit, previously opened pages can be read offline. Senate audio and browser voice search may need internet access.",
-            "首次访问后，已打开过的页面可离线阅读。参议院录音和浏览器语音搜索可能需要网络。",
+            "เมื่อสถานะด้านล่างพร้อมแล้ว จะอ่าน ค้น และฝึกตอบได้ออฟไลน์ เสียงที่เลือกบันทึกไว้จะฟังได้ออฟไลน์ด้วย ส่วนเสียงวุฒิสภาและการพูดค้นหาอาจต้องใช้อินเทอร์เน็ต",
+            "Once the status below is ready, reading, search and practice work offline. Audio saved for offline use works too. Senate recordings and browser voice search may need internet access.",
+            "下方显示准备完成后，可离线阅读、搜索和练习。保存到离线的录音也可播放。参议院录音及浏览器语音搜索可能需要网络。",
           )}
         </p>
       </div>
+      <p className="notice" role="status">
+        {offline === "ready"
+          ? tr(
+              lang,
+              "พร้อมเรียนออฟไลน์แล้ว",
+              "Ready for offline study",
+              "已准备好离线学习",
+            )
+          : offline === "loading"
+            ? tr(
+                lang,
+                "กำลังบันทึกชุดเรียนไว้บนเครื่อง…",
+                "Saving the study kit on this device…",
+                "正在将学习内容保存到设备…",
+              )
+            : tr(
+                lang,
+                "ยังไม่ได้บันทึกชุดเรียนออฟไลน์ ลองเปิดเว็บขณะมีอินเทอร์เน็ตอีกครั้ง",
+                "Offline kit is not saved yet. Reopen while connected to try again.",
+                "离线内容尚未保存，请联网重新打开网站。",
+              )}
+      </p>
       <div className="source-card">
         <h2>
           {tr(lang, "อ่านสบายขึ้น", "Read more comfortably", "更舒适地阅读")}
@@ -98,7 +121,10 @@ export function Settings() {
                 if (!f) return;
                 try {
                   const d = JSON.parse(await f.text());
-                  const p = parseProgress(d.progress);
+                  const p = parseProgress(
+                    d.progress,
+                    new Set(questions.map((q) => q.id)),
+                  );
                   if (d.version !== 1 || !p) throw new Error("invalid");
                   save(p);
                   setMessage(
