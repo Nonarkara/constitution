@@ -1,0 +1,2043 @@
+[
+  {
+    "id": "c01-01",
+    "chapter": 1,
+    "sections": [
+      1
+    ],
+    "prompt": {
+      "th": "มีผู้เสนอแบ่งประเทศไทยเป็นหลายรัฐเอกราช ข้อใดตรงกับมาตรา 1?",
+      "en": "Someone proposes dividing Thailand into separate sovereign states. What does section 1 say?",
+      "zh": "有人提议把泰国分成数个独立国家。第1条如何规定？"
+    },
+    "choices": [
+      {
+        "th": "เป็นราชอาณาจักรอันหนึ่งอันเดียว จะแบ่งแยกมิได้",
+        "en": "Thailand is one indivisible Kingdom",
+        "zh": "泰国是统一、不可分割的王国"
+      },
+      {
+        "th": "แบ่งได้ด้วยมติคณะรัฐมนตรี",
+        "en": "The Cabinet may divide it",
+        "zh": "内阁可以决定分割"
+      },
+      {
+        "th": "แบ่งได้ด้วยมติจังหวัด",
+        "en": "Provinces may divide it",
+        "zh": "各府可以决定分割"
+      },
+      {
+        "th": "แบ่งได้โดยผู้ว่าราชการจังหวัด",
+        "en": "A governor may divide it",
+        "zh": "府尹可以决定分割"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 1 กำหนดให้ประเทศไทยเป็นราชอาณาจักรอันหนึ่งอันเดียว จะแบ่งแยกมิได้",
+      "en": "Section 1 establishes Thailand as one indivisible Kingdom.",
+      "zh": "第1条规定泰国为统一、不可分割的王国。"
+    }
+  },
+  {
+    "id": "c01-02",
+    "chapter": 1,
+    "sections": [
+      3
+    ],
+    "prompt": {
+      "th": "นักเรียนถามว่าอำนาจอธิปไตยเป็นของใคร ควรตอบอย่างไร?",
+      "en": "A learner asks who holds sovereign power. What is the constitutional answer?",
+      "zh": "学习者问主权属于谁。宪法如何回答？"
+    },
+    "choices": [
+      {
+        "th": "องค์กรอิสระเท่านั้น",
+        "en": "Only independent organs",
+        "zh": "仅属于独立机构"
+      },
+      {
+        "th": "ปวงชนชาวไทย",
+        "en": "The Thai people",
+        "zh": "全体泰国人民"
+      },
+      {
+        "th": "คณะรัฐมนตรีเท่านั้น",
+        "en": "Only the Cabinet",
+        "zh": "仅属于内阁"
+      },
+      {
+        "th": "กองทัพเท่านั้น",
+        "en": "Only the armed forces",
+        "zh": "仅属于军队"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 3 ระบุว่าอำนาจอธิปไตยเป็นของปวงชนชาวไทย และทรงใช้อำนาจทางรัฐสภา คณะรัฐมนตรี และศาล",
+      "en": "Section 3 places sovereignty in the Thai people, exercised by the King through Parliament, the Cabinet and the courts.",
+      "zh": "第3条规定主权属于全体泰国人民，由国王通过国会、内阁和法院行使。"
+    }
+  },
+  {
+    "id": "c01-03",
+    "chapter": 1,
+    "sections": [
+      5
+    ],
+    "prompt": {
+      "th": "กฎของหน่วยงานขัดกับรัฐธรรมนูญ หลักใดใช้ตัดสิน?",
+      "en": "An agency rule conflicts with the Constitution. Which principle applies?",
+      "zh": "机关规章与宪法冲突时，应适用什么原则？"
+    },
+    "choices": [
+      {
+        "th": "กฎที่ใหม่กว่าสูงกว่าเสมอ",
+        "en": "The newer rule always takes priority",
+        "zh": "较新的规章总是优先"
+      },
+      {
+        "th": "ผู้บริหารเลือกได้ตามใจ",
+        "en": "The administrator may freely choose",
+        "zh": "管理者可以任意选择"
+      },
+      {
+        "th": "บทบัญญัติที่ขัดรัฐธรรมนูญใช้บังคับมิได้",
+        "en": "The conflicting provision is unenforceable",
+        "zh": "冲突的规定不能施行"
+      },
+      {
+        "th": "กฎหน่วยงานสูงกว่า",
+        "en": "The agency rule takes priority",
+        "zh": "机关规章优先"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 5 ให้รัฐธรรมนูญเป็นกฎหมายสูงสุด บทบัญญัติหรือการกระทำที่ขัดหรือแย้งย่อมใช้บังคับมิได้",
+      "en": "Under section 5, the Constitution is supreme; conflicting provisions or acts are unenforceable.",
+      "zh": "根据第5条，宪法具有最高效力；与之冲突的规定或行为不能施行。"
+    }
+  },
+  {
+    "id": "c02-01",
+    "chapter": 2,
+    "sections": [
+      7
+    ],
+    "prompt": {
+      "th": "ในบทเรียนเรื่องพระมหากษัตริย์ ข้อใดตรงกับมาตรา 7?",
+      "en": "In a lesson on the King, which statement matches section 7?",
+      "zh": "关于国王的课程中，哪项符合第7条？"
+    },
+    "choices": [
+      {
+        "th": "ทรงอุปถัมภ์ศาสนาเดียวเท่านั้น",
+        "en": "The King upholds only one religion",
+        "zh": "国王仅保护一种宗教"
+      },
+      {
+        "th": "ต้องทรงเป็นหัวหน้าพรรคการเมือง",
+        "en": "The King must lead a political party",
+        "zh": "国王必须领导政党"
+      },
+      {
+        "th": "ต้องทรงเป็นประธานศาลฎีกา",
+        "en": "The King must preside over the Supreme Court",
+        "zh": "国王必须担任最高法院院长"
+      },
+      {
+        "th": "ทรงเป็นพุทธมามกะและอัครศาสนูปถัมภก",
+        "en": "The King is Buddhist and Upholder of religions",
+        "zh": "国王信奉佛教，并为各宗教的保护者"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 7 ระบุทั้งการทรงเป็นพุทธมามกะและการทรงเป็นอัครศาสนูปถัมภก",
+      "en": "Section 7 states that the King is Buddhist and Upholder of religions.",
+      "zh": "第7条同时规定国王信奉佛教，并为各宗教的保护者。"
+    }
+  },
+  {
+    "id": "c02-02",
+    "chapter": 2,
+    "sections": [
+      10
+    ],
+    "prompt": {
+      "th": "กำลังทำแผนผังคณะองคมนตรี จำนวนสูงสุดรวมประธานเป็นเท่าใด?",
+      "en": "You are drawing the Privy Council. What is its maximum membership including the President?",
+      "zh": "绘制枢密院组织图时，包括院长在内最多有多少人？"
+    },
+    "choices": [
+      {
+        "th": "19 คน",
+        "en": "19 members",
+        "zh": "19人"
+      },
+      {
+        "th": "18 คน",
+        "en": "18 members",
+        "zh": "18人"
+      },
+      {
+        "th": "20 คน",
+        "en": "20 members",
+        "zh": "20人"
+      },
+      {
+        "th": "35 คน",
+        "en": "35 members",
+        "zh": "35人"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 10 กำหนดประธานองคมนตรีหนึ่งคน และองคมนตรีอื่นไม่เกินสิบแปดคน รวมไม่เกินสิบเก้าคน",
+      "en": "Section 10 provides for one President and no more than eighteen other Privy Councillors: at most nineteen.",
+      "zh": "第10条规定一名院长及不超过十八名其他枢密顾问，因此最多十九人。"
+    }
+  },
+  {
+    "id": "c02-03",
+    "chapter": 2,
+    "sections": [
+      12
+    ],
+    "prompt": {
+      "th": "องคมนตรีจะเข้าร่วมเป็นสมาชิกพรรคการเมืองได้หรือไม่?",
+      "en": "May a Privy Councillor become a political party member?",
+      "zh": "枢密顾问可以成为政党成员吗？"
+    },
+    "choices": [
+      {
+        "th": "ได้ถ้าไม่รับเงินเดือน",
+        "en": "Yes, if unpaid",
+        "zh": "不领薪水就可以"
+      },
+      {
+        "th": "ไม่ได้ตามข้อห้ามมาตรา 12",
+        "en": "No, section 12 prohibits it",
+        "zh": "不可以，第12条禁止这样做"
+      },
+      {
+        "th": "ได้ถ้าพรรคอนุญาต",
+        "en": "Yes, if the party permits",
+        "zh": "政党同意即可"
+      },
+      {
+        "th": "ได้เฉพาะวันหยุด",
+        "en": "Yes, only on holidays",
+        "zh": "仅限假日可以"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 12 ห้ามองคมนตรีเป็นสมาชิกหรือเจ้าหน้าที่ของพรรคการเมือง และห้ามแสดงการฝักใฝ่ในพรรคใด",
+      "en": "Section 12 bars Privy Councillors from party membership or office and from showing allegiance to a party.",
+      "zh": "第12条禁止枢密顾问成为政党成员或工作人员，也禁止表现出对任何政党的偏向。"
+    }
+  },
+  {
+    "id": "c03-01",
+    "chapter": 3,
+    "sections": [
+      27
+    ],
+    "prompt": {
+      "th": "หน่วยงานปฏิเสธบริการเพียงเพราะผู้ขอเป็นผู้หญิง ควรทบทวนหลักใด?",
+      "en": "An agency refuses service solely because the applicant is a woman. Which principle should it review?",
+      "zh": "机关仅因申请者是女性而拒绝服务，应重新审视哪项原则？"
+    },
+    "choices": [
+      {
+        "th": "การสืบราชสันตติวงศ์",
+        "en": "Succession to the throne",
+        "zh": "王位继承"
+      },
+      {
+        "th": "การตั้งงบประมาณ",
+        "en": "Budget preparation",
+        "zh": "预算编制"
+      },
+      {
+        "th": "ความเสมอภาคและการไม่เลือกปฏิบัติโดยไม่เป็นธรรม",
+        "en": "Equality and protection against unjust discrimination",
+        "zh": "平等及不得不公正歧视"
+      },
+      {
+        "th": "สิทธิยุบสภา",
+        "en": "The power to dissolve the House",
+        "zh": "解散众议院的权力"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 27 รับรองความเสมอภาคตามกฎหมาย และห้ามการเลือกปฏิบัติโดยไม่เป็นธรรมด้วยเหตุเพศและเหตุอื่นที่ระบุ",
+      "en": "Section 27 guarantees equality before the law and bars unjust discrimination on grounds including sex.",
+      "zh": "第27条保障法律面前的平等，禁止因性别等列明原因而不公正歧视。"
+    }
+  },
+  {
+    "id": "c03-02",
+    "chapter": 3,
+    "sections": [
+      34
+    ],
+    "prompt": {
+      "th": "คนหนึ่งวิจารณ์นโยบายรัฐอย่างสุจริต สิทธิใดเกี่ยวข้องโดยตรง?",
+      "en": "Someone honestly criticises public policy. Which freedom is directly relevant?",
+      "zh": "有人善意批评公共政策，直接涉及哪项自由？"
+    },
+    "choices": [
+      {
+        "th": "สิทธิแต่งตั้งรัฐมนตรี",
+        "en": "The right to appoint ministers",
+        "zh": "任命部长的权利"
+      },
+      {
+        "th": "สิทธิออกพระราชกำหนด",
+        "en": "The right to issue emergency decrees",
+        "zh": "颁布紧急法令的权利"
+      },
+      {
+        "th": "สิทธิยุบพรรคด้วยตนเอง",
+        "en": "The right to dissolve a party personally",
+        "zh": "自行解散政党的权利"
+      },
+      {
+        "th": "เสรีภาพในการแสดงความคิดเห็น",
+        "en": "Freedom of expression",
+        "zh": "表达自由"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 34 รับรองเสรีภาพในการแสดงความคิดเห็น การจำกัดต้องอาศัยกฎหมายเพื่อวัตถุประสงค์ที่มาตรานี้กำหนด",
+      "en": "Section 34 protects expression; restrictions must be imposed by law for the purposes specified in that section.",
+      "zh": "第34条保障表达自由；限制必须依据法律，并服务于该条规定的目的。"
+    }
+  },
+  {
+    "id": "c03-03",
+    "chapter": 3,
+    "sections": [
+      44
+    ],
+    "prompt": {
+      "th": "ประชาชนชุมนุมอย่างสงบและปราศจากอาวุธ หลักใดคุ้มครอง?",
+      "en": "People assemble peacefully without weapons. Which freedom protects them?",
+      "zh": "民众和平、无武器集会，受哪项自由保障？"
+    },
+    "choices": [
+      {
+        "th": "เสรีภาพในการชุมนุม",
+        "en": "Freedom of assembly",
+        "zh": "集会自由"
+      },
+      {
+        "th": "สิทธิแต่งตั้งผู้ว่าราชการ",
+        "en": "The right to appoint governors",
+        "zh": "任命府尹的权利"
+      },
+      {
+        "th": "สิทธิยกเลิกภาษี",
+        "en": "The right to abolish taxes",
+        "zh": "废除税收的权利"
+      },
+      {
+        "th": "สิทธิเลือกตุลาการโดยตรง",
+        "en": "The right to elect judges directly",
+        "zh": "直接选举法官的权利"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 44 รับรองเสรีภาพในการชุมนุมโดยสงบและปราศจากอาวุธ โดยมีเงื่อนไขการจำกัดตามที่บัญญัติไว้",
+      "en": "Section 44 protects peaceful, unarmed assembly, subject to its specified conditions for restrictions.",
+      "zh": "第44条保障和平、无武器集会自由，限制须符合该条规定的条件。"
+    }
+  },
+  {
+    "id": "c04-01",
+    "chapter": 4,
+    "sections": [
+      50
+    ],
+    "prompt": {
+      "th": "ไปเลือกตั้งแล้วอยากทำหน้าที่พลเมืองให้ครบ ข้อใดตรงกับรัฐธรรมนูญ?",
+      "en": "A voter wants to fulfil constitutional civic duties. Which action is required?",
+      "zh": "选民希望履行宪法规定的公民义务，哪项属于该义务？"
+    },
+    "choices": [
+      {
+        "th": "ละเลยกฎหมายเลือกตั้ง",
+        "en": "Ignore election laws",
+        "zh": "无视选举法律"
+      },
+      {
+        "th": "ไปใช้สิทธิเลือกตั้งโดยคำนึงถึงประโยชน์ส่วนรวม",
+        "en": "Vote with the common interest in mind",
+        "zh": "投票时考虑共同利益"
+      },
+      {
+        "th": "ขายเสียงถ้าไม่มีใครเห็น",
+        "en": "Sell a vote if nobody sees",
+        "zh": "无人看见时出售选票"
+      },
+      {
+        "th": "เลือกแทนคนอื่น",
+        "en": "Vote on behalf of another person",
+        "zh": "替他人投票"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 50 (7) กำหนดหน้าที่ไปใช้สิทธิเลือกตั้งหรือออกเสียงประชามติอย่างอิสระโดยคำนึงถึงประโยชน์ส่วนรวม",
+      "en": "Section 50(7) requires independent participation in elections or referendums with the common interest in mind.",
+      "zh": "第50条第7项要求独立参加选举或公投，并考虑共同利益。"
+    }
+  },
+  {
+    "id": "c04-02",
+    "chapter": 4,
+    "sections": [
+      50
+    ],
+    "prompt": {
+      "th": "เจ้าหน้าที่ชวนประชาชนร่วมต่อต้านทุจริต สอดคล้องกับหน้าที่ใด?",
+      "en": "An official asks citizens to oppose corruption. Which duty does this reflect?",
+      "zh": "公务人员邀请民众反对腐败，这体现哪项义务？"
+    },
+    "choices": [
+      {
+        "th": "ให้ของตอบแทนเพื่อข้ามขั้นตอน",
+        "en": "Pay to bypass procedures",
+        "zh": "付钱绕过程序"
+      },
+      {
+        "th": "ปกปิดทุจริตทุกกรณี",
+        "en": "Conceal corruption in every case",
+        "zh": "在所有情况下隐瞒腐败"
+      },
+      {
+        "th": "ไม่ร่วมมือหรือสนับสนุนการทุจริต",
+        "en": "Do not cooperate with or support corruption",
+        "zh": "不参与或支持腐败"
+      },
+      {
+        "th": "สนับสนุนทุจริตหากได้ประโยชน์",
+        "en": "Support corruption when beneficial",
+        "zh": "有利可图时支持腐败"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 50 (10) กำหนดหน้าที่ไม่ร่วมมือหรือสนับสนุนการทุจริตและประพฤติมิชอบทุกรูปแบบ",
+      "en": "Section 50(10) requires citizens not to cooperate with or support any form of corruption or misconduct.",
+      "zh": "第50条第10项规定，不得参与或支持任何形式的腐败或不当行为。"
+    }
+  },
+  {
+    "id": "c04-03",
+    "chapter": 4,
+    "sections": [
+      50
+    ],
+    "prompt": {
+      "th": "ผู้มีรายได้ถามว่าการเสียภาษีเป็นเพียงความสมัครใจหรือไม่ ควรตอบอย่างไร?",
+      "en": "An income earner asks whether paying tax is purely voluntary. What is the answer?",
+      "zh": "有收入者问纳税是否纯属自愿，应如何回答？"
+    },
+    "choices": [
+      {
+        "th": "สมัครใจทุกกรณี",
+        "en": "Always voluntary",
+        "zh": "在所有情况下都是自愿"
+      },
+      {
+        "th": "เป็นหน้าที่เฉพาะรัฐมนตรี",
+        "en": "Only ministers have that duty",
+        "zh": "仅部长负有此义务"
+      },
+      {
+        "th": "ไม่เกี่ยวกับรัฐธรรมนูญ",
+        "en": "The Constitution does not address it",
+        "zh": "宪法没有涉及"
+      },
+      {
+        "th": "เป็นหน้าที่ตามที่กฎหมายบัญญัติ",
+        "en": "It is a duty as prescribed by law",
+        "zh": "是依法规定的义务"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 50 (9) กำหนดหน้าที่เสียภาษีอากรตามที่กฎหมายบัญญัติ",
+      "en": "Section 50(9) establishes the duty to pay taxes as prescribed by law.",
+      "zh": "第50条第9项规定依法纳税的义务。"
+    }
+  },
+  {
+    "id": "c05-01",
+    "chapter": 5,
+    "sections": [
+      54
+    ],
+    "prompt": {
+      "th": "ครอบครัวถามว่ารัฐต้องจัดการศึกษาฟรีตามมาตรา 54 กี่ปี?",
+      "en": "A family asks how many years of free education section 54 requires the State to provide.",
+      "zh": "家庭询问第54条要求国家提供多少年的免费教育。"
+    },
+    "choices": [
+      {
+        "th": "12 ปี ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับ",
+        "en": "12 years, from preschool through compulsory education",
+        "zh": "12年，从学前教育至义务教育结束"
+      },
+      {
+        "th": "9 ปี เริ่มมัธยมศึกษา",
+        "en": "9 years beginning at secondary school",
+        "zh": "9年，从中学开始"
+      },
+      {
+        "th": "เฉพาะมหาวิทยาลัย",
+        "en": "Only university education",
+        "zh": "仅大学教育"
+      },
+      {
+        "th": "ตลอดชีวิตโดยไม่มีเงื่อนไข",
+        "en": "Lifelong, without conditions",
+        "zh": "无条件终身免费"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 54 กำหนดให้เด็กทุกคนได้รับการศึกษา 12 ปี ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับอย่างมีคุณภาพโดยไม่เก็บค่าใช้จ่าย",
+      "en": "Section 54 requires twelve years of quality, free education for every child, from preschool through compulsory education.",
+      "zh": "第54条要求每个儿童从学前至义务教育结束，享有十二年有质量的免费教育。"
+    }
+  },
+  {
+    "id": "c05-02",
+    "chapter": 5,
+    "sections": [
+      58
+    ],
+    "prompt": {
+      "th": "โครงการรัฐอาจกระทบรุนแรงต่อชุมชน ก่อนเริ่มควรทำอะไร?",
+      "en": "A public project may seriously affect a community. What must precede it?",
+      "zh": "公共项目可能严重影响社区，开展前应做什么？"
+    },
+    "choices": [
+      {
+        "th": "ปิดข้อมูลผลกระทบเสมอ",
+        "en": "Always conceal impact information",
+        "zh": "始终隐瞒影响信息"
+      },
+      {
+        "th": "ศึกษาและประเมินผลกระทบ พร้อมรับฟังผู้เกี่ยวข้อง",
+        "en": "Assess impacts and hear those concerned",
+        "zh": "评估影响并听取相关人员意见"
+      },
+      {
+        "th": "เริ่มทันทีโดยไม่รับฟัง",
+        "en": "Start immediately without consultation",
+        "zh": "无需听取意见，立即开展"
+      },
+      {
+        "th": "ให้ผู้รับเหมาตัดสินทั้งหมด",
+        "en": "Let the contractor decide everything",
+        "zh": "全部交由承包商决定"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 58 กำหนดการศึกษาและประเมินผลกระทบต่อสิ่งแวดล้อมและสุขภาพ และการรับฟังความคิดเห็นก่อนดำเนินการที่อาจมีผลกระทบรุนแรงตามมาตรานี้",
+      "en": "Section 58 requires environmental and health impact assessment and consultation before activities likely to cause the serious impacts it specifies.",
+      "zh": "第58条要求，对可能造成该条所述严重影响的活动，事先进行环境和健康影响评估并听取意见。"
+    }
+  },
+  {
+    "id": "c05-03",
+    "chapter": 5,
+    "sections": [
+      63
+    ],
+    "prompt": {
+      "th": "หน่วยงานต้องการป้องกันทุจริต วิธีใดตรงกับหน้าที่ของรัฐ?",
+      "en": "An agency wants to prevent corruption. Which approach matches the State’s duty?",
+      "zh": "机关希望防止腐败，哪种做法符合国家义务？"
+    },
+    "choices": [
+      {
+        "th": "ลดช่องทางแจ้งเบาะแสทั้งหมด",
+        "en": "Remove all reporting channels",
+        "zh": "取消全部举报渠道"
+      },
+      {
+        "th": "อนุญาตทุจริตเล็กน้อยเสมอ",
+        "en": "Always permit minor corruption",
+        "zh": "始终允许轻微腐败"
+      },
+      {
+        "th": "ให้ความรู้และสนับสนุนประชาชนมีส่วนร่วมป้องกันทุจริต",
+        "en": "Educate and support public participation in prevention",
+        "zh": "开展教育并支持公众参与预防腐败"
+      },
+      {
+        "th": "ถือว่าทุจริตเป็นเรื่องส่วนตัว",
+        "en": "Treat corruption as a private matter",
+        "zh": "把腐败视为私人事务"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 63 กำหนดให้รัฐส่งเสริมความรู้เกี่ยวกับอันตรายจากทุจริต จัดมาตรการป้องกัน และส่งเสริมการมีส่วนร่วมของประชาชน",
+      "en": "Section 63 requires awareness of corruption’s dangers, preventive measures and support for public participation.",
+      "zh": "第63条要求提高对腐败危害的认识、采取预防措施并支持公众参与。"
+    }
+  },
+  {
+    "id": "c06-01",
+    "chapter": 6,
+    "sections": [
+      65
+    ],
+    "prompt": {
+      "th": "ผู้วางแผนนโยบายถามว่ารัฐพึงจัดยุทธศาสตร์ชาติไว้เพื่ออะไร?",
+      "en": "A policy planner asks why the State should establish a national strategy.",
+      "zh": "政策规划者问国家为何应制定国家战略。"
+    },
+    "choices": [
+      {
+        "th": "ใช้แทนรัฐธรรมนูญทั้งหมด",
+        "en": "To replace the whole Constitution",
+        "zh": "取代整部宪法"
+      },
+      {
+        "th": "ใช้แทนคำพิพากษา",
+        "en": "To replace court judgments",
+        "zh": "取代法院判决"
+      },
+      {
+        "th": "ยกเลิกการมีส่วนร่วม",
+        "en": "To end participation",
+        "zh": "终止公众参与"
+      },
+      {
+        "th": "เป็นเป้าหมายการพัฒนาประเทศอย่างยั่งยืน",
+        "en": "To guide sustainable national development",
+        "zh": "作为国家可持续发展的目标"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 65 ให้รัฐพึงจัดยุทธศาสตร์ชาติเป็นเป้าหมายการพัฒนาประเทศอย่างยั่งยืนตามหลักธรรมาภิบาล",
+      "en": "Section 65 calls for a national strategy to guide sustainable development in accordance with good governance.",
+      "zh": "第65条要求国家制定国家战略，依良好治理原则实现可持续发展。"
+    }
+  },
+  {
+    "id": "c06-02",
+    "chapter": 6,
+    "sections": [
+      77
+    ],
+    "prompt": {
+      "th": "กำลังร่างกฎหมายใหม่ ก่อนตราควรทำอะไร?",
+      "en": "A new law is being drafted. What should happen before enactment?",
+      "zh": "制定新法律时，颁布前应做什么？"
+    },
+    "choices": [
+      {
+        "th": "รับฟังความคิดเห็นและวิเคราะห์ผลกระทบ",
+        "en": "Consult stakeholders and analyse impacts",
+        "zh": "听取意见并分析影响"
+      },
+      {
+        "th": "ห้ามประชาชนเห็นร่างทุกกรณี",
+        "en": "Always hide the draft from the public",
+        "zh": "在所有情况下向公众隐瞒草案"
+      },
+      {
+        "th": "ออกกฎหมายให้มากที่สุด",
+        "en": "Make as many laws as possible",
+        "zh": "制定尽可能多的法律"
+      },
+      {
+        "th": "ข้ามการประเมินความจำเป็น",
+        "en": "Skip the necessity assessment",
+        "zh": "跳过必要性评估"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 77 ให้รัฐมีกฎหมายเท่าที่จำเป็น รับฟังผู้เกี่ยวข้องและวิเคราะห์ผลกระทบก่อนตรา พร้อมเปิดเผยผล",
+      "en": "Section 77 calls for only necessary laws, consultation and impact analysis before enactment, with results disclosed.",
+      "zh": "第77条要求仅制定必要法律，事前听取意见、分析影响并公布结果。"
+    }
+  },
+  {
+    "id": "c06-03",
+    "chapter": 6,
+    "sections": [
+      76
+    ],
+    "prompt": {
+      "th": "ผู้สมัครงานรัฐถามว่าการบริหารงานบุคคลพึงยึดระบบใด?",
+      "en": "A public-service applicant asks which personnel system the State should use.",
+      "zh": "报考公务员者问国家人事管理应采用什么制度。"
+    },
+    "choices": [
+      {
+        "th": "เลือกตามความสนิทเท่านั้น",
+        "en": "Personal closeness alone",
+        "zh": "仅凭私人交情"
+      },
+      {
+        "th": "ระบบคุณธรรม",
+        "en": "The merit system",
+        "zh": "择优任用制度"
+      },
+      {
+        "th": "ระบบเส้นสาย",
+        "en": "Patronage",
+        "zh": "关系任用制度"
+      },
+      {
+        "th": "จับสลากทุกตำแหน่ง",
+        "en": "A lottery for every post",
+        "zh": "所有职位抽签决定"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 76 ให้รัฐพัฒนาการบริหารราชการ และใช้ระบบคุณธรรมในการบริหารงานบุคคลของหน่วยงานของรัฐ",
+      "en": "Section 76 calls for effective public administration and a merit system for State personnel management.",
+      "zh": "第76条要求改进公共行政，并在人事管理中采用择优任用制度。"
+    }
+  },
+  {
+    "id": "c07-01",
+    "chapter": 7,
+    "sections": [
+      79
+    ],
+    "prompt": {
+      "th": "กำลังวาดแผนผังรัฐสภา ต้องมีสภาใดบ้าง?",
+      "en": "You are mapping Parliament. Which chambers belong in it?",
+      "zh": "绘制国会组织图时，应包含哪些议院？"
+    },
+    "choices": [
+      {
+        "th": "สภาท้องถิ่นเท่านั้น",
+        "en": "Only local councils",
+        "zh": "仅地方议会"
+      },
+      {
+        "th": "องคมนตรีและคณะรัฐมนตรี",
+        "en": "The Privy Council and the Cabinet",
+        "zh": "枢密院和内阁"
+      },
+      {
+        "th": "สภาผู้แทนราษฎรและวุฒิสภา",
+        "en": "The House of Representatives and the Senate",
+        "zh": "众议院和参议院"
+      },
+      {
+        "th": "คณะรัฐมนตรีและศาล",
+        "en": "The Cabinet and the courts",
+        "zh": "内阁和法院"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 79 กำหนดให้รัฐสภาประกอบด้วยสภาผู้แทนราษฎรและวุฒิสภา",
+      "en": "Section 79 establishes Parliament as the House of Representatives and the Senate.",
+      "zh": "第79条规定国会由众议院和参议院组成。"
+    }
+  },
+  {
+    "id": "c07-02",
+    "chapter": 7,
+    "sections": [
+      83
+    ],
+    "prompt": {
+      "th": "พบหนังสือเก่าระบุ ส.ส. 350+150 ฉบับแก้ไข พ.ศ. 2564 กำหนดอย่างไร?",
+      "en": "An old book says 350+150 MPs. What does the 2021 amendment provide?",
+      "zh": "旧书写众议员为350加150席。2021年修正案如何规定？"
+    },
+    "choices": [
+      {
+        "th": "แบ่งเขต 350 คน บัญชีรายชื่อ 150 คน",
+        "en": "350 constituency and 150 party-list MPs",
+        "zh": "350名选区议员和150名名单议员"
+      },
+      {
+        "th": "แบ่งเขต 250 คน บัญชีรายชื่อ 250 คน",
+        "en": "250 constituency and 250 party-list MPs",
+        "zh": "250名选区议员和250名名单议员"
+      },
+      {
+        "th": "แบ่งเขต 500 คน ไม่มีบัญชีรายชื่อ",
+        "en": "500 constituency MPs, no party list",
+        "zh": "500名选区议员，没有名单议员"
+      },
+      {
+        "th": "แบ่งเขต 400 คน บัญชีรายชื่อ 100 คน",
+        "en": "400 constituency MPs and 100 party-list MPs",
+        "zh": "400名选区议员和100名政党名单议员"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 83 ที่แก้ไขเพิ่มเติม พ.ศ. 2564 กำหนด ส.ส. รวม 500 คน แบ่งเขต 400 คน และบัญชีรายชื่อ 100 คน",
+      "en": "Section 83 as amended in 2021 provides for 500 MPs: 400 constituency and 100 party-list members.",
+      "zh": "2021年修订后的第83条规定众议员共500名，其中选区400名、政党名单100名。"
+    }
+  },
+  {
+    "id": "c07-03",
+    "chapter": 7,
+    "sections": [
+      107
+    ],
+    "prompt": {
+      "th": "กำลังทบทวนวุฒิสภาตามบทหลัก ไม่ใช่บทเฉพาะกาล จำนวนสมาชิกเท่าใด?",
+      "en": "You are reviewing the Senate under the permanent provisions, not the transitional rules. How many members?",
+      "zh": "复习正式条款中的参议院，而非过渡条款时，议员人数是多少？"
+    },
+    "choices": [
+      {
+        "th": "200 คน",
+        "en": "200 members",
+        "zh": "200人"
+      },
+      {
+        "th": "250 คน",
+        "en": "250 members",
+        "zh": "250人"
+      },
+      {
+        "th": "500 คน",
+        "en": "500 members",
+        "zh": "500人"
+      },
+      {
+        "th": "100 คน",
+        "en": "100 members",
+        "zh": "100人"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 107 กำหนดวุฒิสภา 200 คน ซึ่งมาจากการเลือกกันเองของบุคคลตามกลุ่มที่กฎหมายกำหนด",
+      "en": "Section 107 provides for 200 Senators selected among persons in legally defined groups.",
+      "zh": "第107条规定参议员200名，由依法划分的各组人员互选产生。"
+    }
+  },
+  {
+    "id": "c08-01",
+    "chapter": 8,
+    "sections": [
+      158
+    ],
+    "prompt": {
+      "th": "กำลังตรวจจำนวนคณะรัฐมนตรี ข้อใดถูกต้อง?",
+      "en": "You are checking Cabinet size. Which statement is correct?",
+      "zh": "核对内阁人数时，哪项正确？"
+    },
+    "choices": [
+      {
+        "th": "รวมทุกคนต้องมี 50 คน",
+        "en": "Exactly 50 members in total",
+        "zh": "总人数必须是50人"
+      },
+      {
+        "th": "นายกรัฐมนตรีหนึ่งคน และรัฐมนตรีอื่นไม่เกิน 35 คน",
+        "en": "One Prime Minister and at most 35 other ministers",
+        "zh": "一名总理及最多35名其他部长"
+      },
+      {
+        "th": "นายกรัฐมนตรีสองคน",
+        "en": "Two Prime Ministers",
+        "zh": "两名总理"
+      },
+      {
+        "th": "รัฐมนตรีอื่นไม่จำกัดจำนวน",
+        "en": "No limit on other ministers",
+        "zh": "其他部长人数不限"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 158 กำหนดนายกรัฐมนตรีหนึ่งคน และรัฐมนตรีอื่นไม่เกิน 35 คน รวมไม่เกิน 36 คน",
+      "en": "Section 158 provides for one Prime Minister and no more than 35 other ministers, at most 36 in total.",
+      "zh": "第158条规定一名总理及不超过35名其他部长，总数最多36人。"
+    }
+  },
+  {
+    "id": "c08-02",
+    "chapter": 8,
+    "sections": [
+      160
+    ],
+    "prompt": {
+      "th": "ผู้สมัครเป็นรัฐมนตรีอายุ 34 ปี ผ่านเกณฑ์อายุหรือไม่?",
+      "en": "A prospective minister is 34. Does the person meet the age requirement?",
+      "zh": "拟任部长者34岁，符合年龄要求吗？"
+    },
+    "choices": [
+      {
+        "th": "ผ่าน เพราะขั้นต่ำ 25 ปี",
+        "en": "Yes; the minimum is 25",
+        "zh": "符合，最低25岁"
+      },
+      {
+        "th": "ไม่มีเกณฑ์อายุ",
+        "en": "There is no age requirement",
+        "zh": "没有年龄要求"
+      },
+      {
+        "th": "ไม่ผ่าน ต้องมีอายุไม่ต่ำกว่า 35 ปี",
+        "en": "No; the minimum age is 35",
+        "zh": "不符合，最低年龄为35岁"
+      },
+      {
+        "th": "ผ่าน เพราะขั้นต่ำ 18 ปี",
+        "en": "Yes; the minimum is 18",
+        "zh": "符合，最低18岁"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 160 (2) กำหนดให้รัฐมนตรีมีอายุไม่ต่ำกว่า 35 ปี และยังต้องผ่านคุณสมบัติอื่นด้วย",
+      "en": "Section 160(2) sets a minimum age of 35; other qualifications must also be met.",
+      "zh": "第160条第2项规定部长须年满35岁，且还须符合其他资格条件。"
+    }
+  },
+  {
+    "id": "c08-03",
+    "chapter": 8,
+    "sections": [
+      159
+    ],
+    "prompt": {
+      "th": "ตามบทหลัก ใครลงมติเห็นชอบบุคคลที่จะเป็นนายกรัฐมนตรี?",
+      "en": "Under the permanent provisions, who approves the person to become Prime Minister?",
+      "zh": "根据正式条款，由谁表决同意出任总理的人选？"
+    },
+    "choices": [
+      {
+        "th": "วุฒิสภาเพียงสภาเดียว",
+        "en": "The Senate alone",
+        "zh": "仅参议院"
+      },
+      {
+        "th": "ศาลปกครอง",
+        "en": "The Administrative Court",
+        "zh": "行政法院"
+      },
+      {
+        "th": "ผู้ว่าราชการจังหวัดทั้งหมด",
+        "en": "All provincial governors",
+        "zh": "全体府尹"
+      },
+      {
+        "th": "สภาผู้แทนราษฎร",
+        "en": "The House of Representatives",
+        "zh": "众议院"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 159 ให้สภาผู้แทนราษฎรลงคะแนนโดยเปิดเผย และต้องเห็นชอบมากกว่ากึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่",
+      "en": "Section 159 requires an open vote in the House and approval by more than half of its existing members.",
+      "zh": "第159条要求众议院公开表决，赞成票须超过现有议员总数的一半。"
+    }
+  },
+  {
+    "id": "c09-01",
+    "chapter": 9,
+    "sections": [
+      184
+    ],
+    "prompt": {
+      "th": "ส.ส. อยากแทรกแซงการรับสัมปทานรัฐเพื่อประโยชน์ตน ควรดูหมวดใด?",
+      "en": "An MP wants to intervene in a State concession for personal benefit. Which chapter addresses this?",
+      "zh": "众议员想干预国家特许经营以谋取私利，应查看哪一章？"
+    },
+    "choices": [
+      {
+        "th": "การขัดกันแห่งผลประโยชน์",
+        "en": "Conflict of interests",
+        "zh": "利益冲突"
+      },
+      {
+        "th": "การปกครองส่วนท้องถิ่น",
+        "en": "Local administration",
+        "zh": "地方行政"
+      },
+      {
+        "th": "พระมหากษัตริย์",
+        "en": "The King",
+        "zh": "国王"
+      },
+      {
+        "th": "บททั่วไปเท่านั้น",
+        "en": "General provisions only",
+        "zh": "仅总则"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 184 ในหมวด 9 วางข้อห้ามเกี่ยวกับผลประโยชน์ของ ส.ส. และ ส.ว. รวมถึงสัมปทานรัฐตามเงื่อนไขของมาตรานี้",
+      "en": "Section 184 in Chapter 9 restricts MPs’ and Senators’ interests, including State concessions under its specified conditions.",
+      "zh": "第9章第184条限制众议员与参议员的利益关系，包括该条规定的国家特许经营。"
+    }
+  },
+  {
+    "id": "c09-02",
+    "chapter": 9,
+    "sections": [
+      185
+    ],
+    "prompt": {
+      "th": "ส.ส. กดดันให้หน่วยงานย้ายข้าราชการเพื่อประโยชน์พรรค หลักใดเกี่ยวข้อง?",
+      "en": "An MP pressures an agency to transfer an official for party benefit. Which rule is relevant?",
+      "zh": "众议员为政党利益施压，要求机关调动公务员，涉及什么规则？"
+    },
+    "choices": [
+      {
+        "th": "เป็นอำนาจประจำของ ส.ส.",
+        "en": "It is a routine power of MPs",
+        "zh": "这是众议员的日常权力"
+      },
+      {
+        "th": "ห้ามใช้สถานะก้าวก่ายการบรรจุ แต่งตั้ง หรือโยกย้าย",
+        "en": "No using parliamentary status to interfere in recruitment, appointment or transfer",
+        "zh": "不得利用议员身份干预录用、任命或调动"
+      },
+      {
+        "th": "ทำได้เสมอเมื่อเป็น ส.ส.",
+        "en": "MPs may always do this",
+        "zh": "众议员始终可以这样做"
+      },
+      {
+        "th": "ทำได้ถ้าไม่เขียนเป็นหนังสือ",
+        "en": "Allowed if not put in writing",
+        "zh": "不留下书面记录即可"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 185 ห้าม ส.ส. และ ส.ว. ใช้สถานะก้าวก่ายหรือแทรกแซงเพื่อประโยชน์ตน ผู้อื่น หรือพรรค รวมถึงเรื่องบุคลากรที่ระบุ",
+      "en": "Section 185 bars MPs and Senators from using their status to interfere for their own, another’s or a party’s benefit, including the listed personnel matters.",
+      "zh": "第185条禁止议员为本人、他人或政党利益利用身份干预事务，包括该条列明的人事事项。"
+    }
+  },
+  {
+    "id": "c09-03",
+    "chapter": 9,
+    "sections": [
+      186
+    ],
+    "prompt": {
+      "th": "รัฐมนตรีบอกว่าข้อห้ามแทรกแซงบุคลากรไม่เกี่ยวกับตน ถูกหรือไม่?",
+      "en": "A minister claims the personnel-interference prohibitions never apply to ministers. Is that correct?",
+      "zh": "部长声称禁止干预人事的规定与部长无关，是否正确？"
+    },
+    "choices": [
+      {
+        "th": "ถูก ถ้ามีเสียงข้างมาก",
+        "en": "Yes, with a majority",
+        "zh": "正确，只要有多数支持"
+      },
+      {
+        "th": "ถูก ถ้าเป็นรัฐมนตรีใหม่",
+        "en": "Yes, for new ministers",
+        "zh": "正确，新任部长可豁免"
+      },
+      {
+        "th": "ไม่ถูก มาตรา 186 นำข้อห้ามมาใช้ด้วย แต่มีข้อยกเว้นตามหน้าที่",
+        "en": "No; section 186 applies the rules, subject to its official-duty exception",
+        "zh": "不正确；第186条适用这些限制，但规定了履职例外"
+      },
+      {
+        "th": "ถูก รัฐมนตรีได้รับยกเว้นทั้งหมด",
+        "en": "Yes; ministers are entirely exempt",
+        "zh": "正确；部长全部豁免"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 186 นำมาตรา 184 มาใช้กับรัฐมนตรีโดยอนุโลม และใช้มาตรา 185 ด้วย เว้นแต่การกระทำตามหน้าที่และอำนาจในการบริหารราชการ",
+      "en": "Section 186 applies section 184 to ministers with appropriate modifications and section 185 subject to the stated administrative-duty exception.",
+      "zh": "第186条将第184条作相应调整后适用于部长，并适用第185条，同时设有依法履行行政职权的例外。"
+    }
+  },
+  {
+    "id": "c10-01",
+    "chapter": 10,
+    "sections": [
+      188
+    ],
+    "prompt": {
+      "th": "ผู้บริหารสั่งผู้พิพากษาให้ตัดสินคดีตามความต้องการ ขัดหลักใด?",
+      "en": "An administrator orders a judge to decide a case as desired. Which principle is violated?",
+      "zh": "行政负责人命令法官按其意愿判案，违反什么原则？"
+    },
+    "choices": [
+      {
+        "th": "ระบบบัญชีรายชื่อ",
+        "en": "The party-list system",
+        "zh": "政党名单制度"
+      },
+      {
+        "th": "การเลือกตั้งท้องถิ่น",
+        "en": "Local elections",
+        "zh": "地方选举"
+      },
+      {
+        "th": "การสืบราชสมบัติ",
+        "en": "Royal succession",
+        "zh": "王位继承"
+      },
+      {
+        "th": "ความเป็นอิสระในการพิจารณาพิพากษา",
+        "en": "Independence in adjudication",
+        "zh": "独立审判"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 188 ให้ผู้พิพากษาและตุลาการมีอิสระในการพิจารณาพิพากษาอรรถคดีตามรัฐธรรมนูญและกฎหมาย",
+      "en": "Section 188 guarantees judges’ independence in adjudication in accordance with the Constitution and law.",
+      "zh": "第188条保障法官依据宪法及法律独立审判。"
+    }
+  },
+  {
+    "id": "c10-02",
+    "chapter": 10,
+    "sections": [
+      194
+    ],
+    "prompt": {
+      "th": "คดีทั่วไปไม่อยู่ในเขตอำนาจศาลอื่น รัฐธรรมนูญกำหนดให้ศาลใดพิจารณา?",
+      "en": "A case falls outside the jurisdiction of other courts. Which courts have general jurisdiction?",
+      "zh": "案件不属其他法院管辖时，哪类法院具有一般管辖权？"
+    },
+    "choices": [
+      {
+        "th": "ศาลยุติธรรม",
+        "en": "Courts of Justice",
+        "zh": "普通法院"
+      },
+      {
+        "th": "ศาลรัฐธรรมนูญทุกกรณี",
+        "en": "Always the Constitutional Court",
+        "zh": "一律由宪法法院"
+      },
+      {
+        "th": "ศาลทหารทุกกรณี",
+        "en": "Always the Military Courts",
+        "zh": "一律由军事法院"
+      },
+      {
+        "th": "สภาท้องถิ่น",
+        "en": "Local councils",
+        "zh": "地方议会"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 194 ให้ศาลยุติธรรมพิจารณาพิพากษาคดีทั้งปวง เว้นแต่รัฐธรรมนูญหรือกฎหมายกำหนดให้อยู่ในอำนาจศาลอื่น",
+      "en": "Section 194 gives Courts of Justice jurisdiction over all cases unless the Constitution or law assigns them to another court.",
+      "zh": "第194条规定普通法院审理所有案件，但宪法或法律指定由其他法院管辖的除外。"
+    }
+  },
+  {
+    "id": "c10-03",
+    "chapter": 10,
+    "sections": [
+      197
+    ],
+    "prompt": {
+      "th": "ข้อพิพาทเกิดจากหน่วยงานรัฐใช้อำนาจทางปกครอง ศาลประเภทใดเกี่ยวข้อง?",
+      "en": "A dispute arises from a State agency’s exercise of administrative powers. Which court category is relevant?",
+      "zh": "争议源于国家机关行使行政权，涉及哪类法院？"
+    },
+    "choices": [
+      {
+        "th": "รัฐสภาทำหน้าที่ศาล",
+        "en": "Parliament acts as a court",
+        "zh": "国会充当法院"
+      },
+      {
+        "th": "ศาลปกครองตามเงื่อนไขเขตอำนาจ",
+        "en": "Administrative Courts, subject to jurisdiction rules",
+        "zh": "行政法院，须符合管辖规定"
+      },
+      {
+        "th": "ศาลทหารเสมอ",
+        "en": "Always Military Courts",
+        "zh": "始终由军事法院"
+      },
+      {
+        "th": "คณะรัฐมนตรีทำหน้าที่ศาล",
+        "en": "The Cabinet acts as a court",
+        "zh": "内阁充当法院"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 197 กำหนดอำนาจศาลปกครองในข้อพิพาทเกี่ยวกับการใช้อำนาจทางปกครองหรือกิจการทางปกครองตามเงื่อนไขที่บัญญัติ",
+      "en": "Section 197 assigns Administrative Courts disputes concerning administrative powers or activities within its stated jurisdiction.",
+      "zh": "第197条规定行政法院依其管辖条件审理涉及行政权或行政活动的争议。"
+    }
+  },
+  {
+    "id": "c11-01",
+    "chapter": 11,
+    "sections": [
+      200
+    ],
+    "prompt": {
+      "th": "กำลังทำผังศาลรัฐธรรมนูญ มีตุลาการกี่คน?",
+      "en": "You are mapping the Constitutional Court. How many judges does it have?",
+      "zh": "绘制宪法法院组织图时，法官有多少名？"
+    },
+    "choices": [
+      {
+        "th": "15 คน",
+        "en": "15 judges",
+        "zh": "15名"
+      },
+      {
+        "th": "19 คน",
+        "en": "19 judges",
+        "zh": "19名"
+      },
+      {
+        "th": "9 คน",
+        "en": "9 judges",
+        "zh": "9名"
+      },
+      {
+        "th": "7 คน",
+        "en": "7 judges",
+        "zh": "7名"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 200 กำหนดศาลรัฐธรรมนูญประกอบด้วยตุลาการเก้าคน",
+      "en": "Section 200 provides for nine Constitutional Court judges.",
+      "zh": "第200条规定宪法法院由九名法官组成。"
+    }
+  },
+  {
+    "id": "c11-02",
+    "chapter": 11,
+    "sections": [
+      210
+    ],
+    "prompt": {
+      "th": "มีคำถามว่ากฎหมายขัดรัฐธรรมนูญหรือไม่ องค์กรใดมีหน้าที่วินิจฉัยตามกระบวนการที่กำหนด?",
+      "en": "A question concerns whether a law conflicts with the Constitution. Which body decides through the prescribed procedure?",
+      "zh": "某法律是否违宪，应由哪个机构依规定程序裁决？"
+    },
+    "choices": [
+      {
+        "th": "คณะกรรมการการเลือกตั้ง",
+        "en": "The Election Commission",
+        "zh": "选举委员会"
+      },
+      {
+        "th": "สภาจังหวัด",
+        "en": "A provincial council",
+        "zh": "府级议会"
+      },
+      {
+        "th": "กรมบัญชีกลาง",
+        "en": "The Comptroller General’s Department",
+        "zh": "财政总监署"
+      },
+      {
+        "th": "ศาลรัฐธรรมนูญ",
+        "en": "The Constitutional Court",
+        "zh": "宪法法院"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 210 (1) ให้ศาลรัฐธรรมนูญวินิจฉัยความชอบด้วยรัฐธรรมนูญของกฎหมายหรือร่างกฎหมายตามที่รัฐธรรมนูญกำหนด",
+      "en": "Section 210(1) authorises the Constitutional Court to decide the constitutionality of laws or bills as provided by the Constitution.",
+      "zh": "第210条第1项授权宪法法院依宪法规定裁决法律或法律草案是否合宪。"
+    }
+  },
+  {
+    "id": "c11-03",
+    "chapter": 11,
+    "sections": [
+      211
+    ],
+    "prompt": {
+      "th": "หลังศาลรัฐธรรมนูญมีคำวินิจฉัย ผลทางรัฐธรรมนูญคืออะไร?",
+      "en": "What constitutional effect does a Constitutional Court decision have?",
+      "zh": "宪法法院裁决具有何种宪法效力？"
+    },
+    "choices": [
+      {
+        "th": "เป็นเด็ดขาดและผูกพันองค์กรรัฐที่ระบุ",
+        "en": "It is final and binds the State bodies specified",
+        "zh": "具有终局效力并约束列明的国家机构"
+      },
+      {
+        "th": "เป็นคำแนะนำเท่านั้น",
+        "en": "It is only advice",
+        "zh": "仅为建议"
+      },
+      {
+        "th": "ต้องให้จังหวัดรับรองก่อน",
+        "en": "It first needs provincial approval",
+        "zh": "须先经各府批准"
+      },
+      {
+        "th": "คณะรัฐมนตรีเพิกเฉยได้เสมอ",
+        "en": "The Cabinet may always ignore it",
+        "zh": "内阁始终可以不予理会"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 211 ให้คำวินิจฉัยเป็นเด็ดขาด ผูกพันรัฐสภา คณะรัฐมนตรี ศาล องค์กรอิสระ และหน่วยงานของรัฐ",
+      "en": "Section 211 makes decisions final and binding on Parliament, the Cabinet, courts, independent organs and State agencies.",
+      "zh": "第211条规定裁决为终局裁决，对国会、内阁、法院、独立机构及国家机关均有约束力。"
+    }
+  },
+  {
+    "id": "c12-01",
+    "chapter": 12,
+    "sections": [
+      224
+    ],
+    "prompt": {
+      "th": "พบปัญหาความสุจริตในการเลือกตั้ง องค์กรใดมีหน้าที่จัดหรือดำเนินการและควบคุมการเลือกตั้ง?",
+      "en": "An election-integrity issue arises. Which body organises or conducts and supervises elections?",
+      "zh": "出现选举公正问题时，哪个机构负责组织或实施并监督选举？"
+    },
+    "choices": [
+      {
+        "th": "คณะองคมนตรี",
+        "en": "The Privy Council",
+        "zh": "枢密院"
+      },
+      {
+        "th": "คณะกรรมการการเลือกตั้ง",
+        "en": "The Election Commission",
+        "zh": "选举委员会"
+      },
+      {
+        "th": "คณะกรรมการสิทธิมนุษยชนแห่งชาติ",
+        "en": "The National Human Rights Commission",
+        "zh": "国家人权委员会"
+      },
+      {
+        "th": "ผู้ตรวจการแผ่นดินเท่านั้น",
+        "en": "Only the Ombudsmen",
+        "zh": "仅监察专员"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 224 กำหนดหน้าที่และอำนาจของ กกต. ในการจัดหรือดำเนินการและควบคุมการเลือกตั้งและประชามติให้สุจริตเที่ยงธรรมตามที่บัญญัติ",
+      "en": "Section 224 gives the Election Commission duties to organise or conduct and supervise elections and referendums fairly as specified.",
+      "zh": "第224条规定选举委员会依条款组织或实施并监督选举及公投，确保诚实公正。"
+    }
+  },
+  {
+    "id": "c12-02",
+    "chapter": 12,
+    "sections": [
+      230
+    ],
+    "prompt": {
+      "th": "ประชาชนเดือดร้อนจากขั้นตอนราชการที่ไม่เป็นธรรม ผู้ตรวจการแผ่นดินมีบทบาทใด?",
+      "en": "People suffer from unfair administrative procedures. What role do Ombudsmen have?",
+      "zh": "民众受到不公正行政程序的困扰，监察专员可发挥什么作用？"
+    },
+    "choices": [
+      {
+        "th": "ออกกฎหมายเอง",
+        "en": "Enact laws themselves",
+        "zh": "自行制定法律"
+      },
+      {
+        "th": "แต่งตั้งนายกรัฐมนตรี",
+        "en": "Appoint the Prime Minister",
+        "zh": "任命总理"
+      },
+      {
+        "th": "แสวงหาข้อเท็จจริงและเสนอแก้ไขตามหน้าที่",
+        "en": "Find facts and recommend remedies within their duties",
+        "zh": "依职权查明事实并建议改正"
+      },
+      {
+        "th": "พิพากษาจำคุกโดยตรง",
+        "en": "Directly sentence people to prison",
+        "zh": "直接判处监禁"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 230 ให้ผู้ตรวจการแผ่นดินแสวงหาข้อเท็จจริงและเสนอแนะการแก้ไขปัญหาความเดือดร้อนหรือความไม่เป็นธรรมตามขอบเขตที่กำหนด",
+      "en": "Section 230 empowers Ombudsmen to establish facts and recommend remedies for hardship or unfairness within the stated scope.",
+      "zh": "第230条授权监察专员在规定范围内查明事实，并就困扰或不公提出改正建议。"
+    }
+  },
+  {
+    "id": "c12-03",
+    "chapter": 12,
+    "sections": [
+      234
+    ],
+    "prompt": {
+      "th": "มีข้อกล่าวหาว่าเจ้าหน้าที่รัฐร่ำรวยผิดปกติ องค์กรใดมีหน้าที่ไต่สวนตามมาตรา 234?",
+      "en": "A State official is accused of unusual wealth. Which body investigates under section 234?",
+      "zh": "国家工作人员被指异常富有，第234条规定由哪个机构调查？"
+    },
+    "choices": [
+      {
+        "th": "คณะกรรมการการเลือกตั้ง",
+        "en": "The Election Commission",
+        "zh": "选举委员会"
+      },
+      {
+        "th": "สภาท้องถิ่นทุกแห่ง",
+        "en": "Every local council",
+        "zh": "所有地方议会"
+      },
+      {
+        "th": "คณะกรรมการสิทธิมนุษยชนแห่งชาติ",
+        "en": "The National Human Rights Commission",
+        "zh": "国家人权委员会"
+      },
+      {
+        "th": "คณะกรรมการ ป.ป.ช.",
+        "en": "The National Anti-Corruption Commission",
+        "zh": "国家反腐败委员会"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 234 กำหนดหน้าที่ไต่สวนของ ป.ป.ช. รวมถึงข้อกล่าวหาเจ้าหน้าที่รัฐร่ำรวยผิดปกติตามเงื่อนไขที่บัญญัติ",
+      "en": "Section 234 assigns the NACC investigative duties including allegations of unusual wealth against State officials under its conditions.",
+      "zh": "第234条规定国家反腐败委员会的调查职责，包括依规定调查国家工作人员异常富有的指控。"
+    }
+  },
+  {
+    "id": "c13-01",
+    "chapter": 13,
+    "sections": [
+      248
+    ],
+    "prompt": {
+      "th": "พนักงานอัยการพิจารณาสั่งคดี ควรยึดหลักใด?",
+      "en": "A public prosecutor decides how to proceed with a case. Which principle applies?",
+      "zh": "检察官决定案件处理方式时，应遵循什么原则？"
+    },
+    "choices": [
+      {
+        "th": "อิสระ รวดเร็ว เที่ยงธรรม และปราศจากอคติ",
+        "en": "Independence, promptness, fairness and freedom from bias",
+        "zh": "独立、及时、公正且不抱偏见"
+      },
+      {
+        "th": "ทำตามผู้มีอิทธิพลเสมอ",
+        "en": "Always follow influential people",
+        "zh": "始终听从有势力者"
+      },
+      {
+        "th": "คำนึงถึงพรรคการเมืองก่อน",
+        "en": "Put party interests first",
+        "zh": "优先考虑政党利益"
+      },
+      {
+        "th": "รับของตอบแทนก่อนสั่งคดี",
+        "en": "Accept a reward before deciding",
+        "zh": "决定前收取报酬"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 248 รับรองความเป็นอิสระของพนักงานอัยการในการพิจารณาสั่งคดีและปฏิบัติหน้าที่โดยรวดเร็ว เที่ยงธรรม และปราศจากอคติ",
+      "en": "Section 248 protects prosecutorial independence and requires prompt, fair, unbiased performance.",
+      "zh": "第248条保障检察官独立处理案件，并要求及时、公正且无偏见地履职。"
+    }
+  },
+  {
+    "id": "c13-02",
+    "chapter": 13,
+    "sections": [
+      248
+    ],
+    "prompt": {
+      "th": "กำลังจัดทำงบองค์กรอัยการ ข้อใดตรงกับมาตรา 248?",
+      "en": "You are preparing the public prosecution organisation’s budget. What does section 248 provide?",
+      "zh": "编制检察机关预算时，哪项符合第248条？"
+    },
+    "choices": [
+      {
+        "th": "ให้ศาลท้องถิ่นกำหนดทั้งหมด",
+        "en": "Local courts determine everything",
+        "zh": "全部由地方法院决定"
+      },
+      {
+        "th": "การบริหารบุคคล งบประมาณ และงานอื่นขององค์กรอัยการเป็นอิสระ",
+        "en": "The organisation is independent in personnel, budget and other operations",
+        "zh": "检察机关在人事、预算及其他运作方面具有独立性"
+      },
+      {
+        "th": "ขึ้นตรงต่อพรรคการเมือง",
+        "en": "It reports to a political party",
+        "zh": "隶属政党"
+      },
+      {
+        "th": "ไม่มีหน่วยธุรการ",
+        "en": "It has no administrative unit",
+        "zh": "没有行政单位"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 248 กำหนดให้การบริหารงานบุคคล การงบประมาณ และการดำเนินการอื่นขององค์กรอัยการมีความเป็นอิสระ",
+      "en": "Section 248 establishes independence in the prosecution organisation’s personnel administration, budgeting and other operations.",
+      "zh": "第248条规定检察机关在人事管理、预算及其他运作方面具有独立性。"
+    }
+  },
+  {
+    "id": "c13-03",
+    "chapter": 13,
+    "sections": [
+      248
+    ],
+    "prompt": {
+      "th": "กำลังร่างมาตรการป้องกันผลประโยชน์ทับซ้อนของอัยการ มาตรา 248 กำหนดลักษณะมาตรการอย่างไร?",
+      "en": "Rules are being drafted to prevent prosecutors’ conflicts of interest. What does section 248 require of these measures?",
+      "zh": "制定预防检察官利益冲突的措施时，第248条对措施提出什么要求？"
+    },
+    "choices": [
+      {
+        "th": "อนุญาตทุกตำแหน่งโดยไม่มีข้อจำกัด",
+        "en": "Allow all posts without restrictions",
+        "zh": "无限制允许一切职务"
+      },
+      {
+        "th": "ยกเลิกความเป็นอิสระของอัยการ",
+        "en": "End prosecutorial independence",
+        "zh": "取消检察独立"
+      },
+      {
+        "th": "กำหนดชัดแจ้งและใช้เป็นการทั่วไป ไม่มอบอำนาจพิจารณาเป็นรายกรณี",
+        "en": "Clear rules of general application, not delegated case-by-case discretion",
+        "zh": "明确规定并普遍适用，不得授权逐案决定"
+      },
+      {
+        "th": "บังคับให้ทุกคนเป็นกรรมการรัฐวิสาหกิจ",
+        "en": "Mandatory State-enterprise board membership",
+        "zh": "强制人人担任国企董事"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 248 กำหนดให้กฎหมายมีมาตรการป้องกันการกระทำหรือตำแหน่งที่อาจกระทบการสั่งคดีหรือก่อผลประโยชน์ทับซ้อน ต้องกำหนดชัดแจ้งและใช้เป็นการทั่วไป",
+      "en": "Section 248 requires legal safeguards against actions or positions that could compromise prosecution or create conflicts; the measures must be clear and generally applicable.",
+      "zh": "第248条要求法律防范可能损害案件处理或产生利益冲突的行为与任职；措施须明确且普遍适用。"
+    }
+  },
+  {
+    "id": "c14-01",
+    "chapter": 14,
+    "sections": [
+      249
+    ],
+    "prompt": {
+      "th": "ชุมชนอยากจัดบริการท้องถิ่นด้วยตนเอง หลักใดรองรับ?",
+      "en": "A community wants to manage local services itself. Which principle supports this?",
+      "zh": "社区希望自行管理地方服务，哪项原则支持这样做？"
+    },
+    "choices": [
+      {
+        "th": "คณะรัฐมนตรีต้องทำเองทุกเรื่อง",
+        "en": "The Cabinet must do everything itself",
+        "zh": "一切必须由内阁亲自办理"
+      },
+      {
+        "th": "ห้ามองค์กรปกครองส่วนท้องถิ่น",
+        "en": "Local government is prohibited",
+        "zh": "禁止地方政府"
+      },
+      {
+        "th": "องค์กรท้องถิ่นเป็นรัฐเอกราช",
+        "en": "Local bodies are sovereign states",
+        "zh": "地方机构是主权国家"
+      },
+      {
+        "th": "การปกครองตนเองตามเจตนารมณ์ประชาชนในท้องถิ่น",
+        "en": "Local self-government reflecting residents’ wishes",
+        "zh": "依地方居民意愿实行地方自治"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 249 ให้จัดการปกครองส่วนท้องถิ่นตามหลักการปกครองตนเองตามเจตนารมณ์ของประชาชนและตามรูปแบบที่กฎหมายกำหนด",
+      "en": "Section 249 provides for local self-government according to residents’ wishes and forms prescribed by law.",
+      "zh": "第249条规定依居民意愿及法律规定的形式实行地方自治。"
+    }
+  },
+  {
+    "id": "c14-02",
+    "chapter": 14,
+    "sections": [
+      252
+    ],
+    "prompt": {
+      "th": "เลือกสมาชิกสภาท้องถิ่น วิธีใดตรงกับรัฐธรรมนูญ?",
+      "en": "How must local council members be chosen under the Constitution?",
+      "zh": "地方议会议员应如何产生？"
+    },
+    "choices": [
+      {
+        "th": "มาจากการเลือกตั้ง",
+        "en": "By election",
+        "zh": "通过选举"
+      },
+      {
+        "th": "จับสลากทั้งหมด",
+        "en": "Entirely by lottery",
+        "zh": "全部抽签"
+      },
+      {
+        "th": "แต่งตั้งโดยเอกชน",
+        "en": "Appointment by private firms",
+        "zh": "由私人企业任命"
+      },
+      {
+        "th": "รับตำแหน่งโดยมรดก",
+        "en": "By inheritance",
+        "zh": "世袭"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 252 กำหนดสมาชิกสภาท้องถิ่นมาจากการเลือกตั้ง ส่วนผู้บริหารมีวิธีได้มาตามที่มาตรานี้และกฎหมายกำหนด",
+      "en": "Section 252 requires local council members to be elected; local executives are chosen through the routes specified there and by law.",
+      "zh": "第252条要求地方议员经选举产生；地方行政首长按该条及法律规定的方式产生。"
+    }
+  },
+  {
+    "id": "c14-03",
+    "chapter": 14,
+    "sections": [
+      253
+    ],
+    "prompt": {
+      "th": "ชาวบ้านอยากตรวจการใช้เงินท้องถิ่น องค์กรท้องถิ่นควรทำอะไร?",
+      "en": "Residents want to scrutinise local spending. What should the local authority do?",
+      "zh": "居民希望监督地方支出，地方政府应做什么？"
+    },
+    "choices": [
+      {
+        "th": "ไม่ต้องรายงานผล",
+        "en": "Never report results",
+        "zh": "无需报告结果"
+      },
+      {
+        "th": "เปิดเผยข้อมูลและจัดกลไกให้ประชาชนมีส่วนร่วม",
+        "en": "Disclose information and enable public participation",
+        "zh": "公开信息并建立公众参与机制"
+      },
+      {
+        "th": "ปิดข้อมูลการใช้เงินทุกกรณี",
+        "en": "Always conceal spending",
+        "zh": "在所有情况下隐瞒支出"
+      },
+      {
+        "th": "เปิดเฉพาะผู้บริจาค",
+        "en": "Disclose only to donors",
+        "zh": "仅向捐赠者公开"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 253 ให้เปิดเผยข้อมูลและรายงานผลการดำเนินงานแก่ประชาชน พร้อมกลไกให้ประชาชนมีส่วนร่วมตามที่กำหนด",
+      "en": "Section 253 requires public disclosure of information and performance reports, with mechanisms for participation as specified.",
+      "zh": "第253条要求向公众公开信息及工作报告，并依规定建立参与机制。"
+    }
+  },
+  {
+    "id": "c15-01",
+    "chapter": 15,
+    "sections": [
+      255
+    ],
+    "prompt": {
+      "th": "มีร่างแก้ไขให้เปลี่ยนรูปแบบของรัฐ มาตรา 255 วางหลักอย่างไร?",
+      "en": "An amendment would change the form of the State. What does section 255 say?",
+      "zh": "修正案拟改变国家形式，第255条如何规定？"
+    },
+    "choices": [
+      {
+        "th": "ทำได้ด้วยมติจังหวัด",
+        "en": "A province may approve it",
+        "zh": "一府同意即可"
+      },
+      {
+        "th": "ไม่มีข้อจำกัดใด",
+        "en": "There are no restrictions",
+        "zh": "没有任何限制"
+      },
+      {
+        "th": "แก้ไขเช่นนั้นมิได้",
+        "en": "Such an amendment is prohibited",
+        "zh": "禁止此类修正"
+      },
+      {
+        "th": "ทำได้ด้วยเสียงรัฐมนตรีคนเดียว",
+        "en": "One minister may approve it",
+        "zh": "一位部长同意即可"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 255 ห้ามแก้ไขเปลี่ยนแปลงระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือรูปแบบของรัฐ",
+      "en": "Section 255 prohibits amendments changing the democratic regime with the King as Head of State or the form of the State.",
+      "zh": "第255条禁止改变以国王为国家元首的民主政体或国家形式的修正。"
+    }
+  },
+  {
+    "id": "c15-02",
+    "chapter": 15,
+    "sections": [
+      256
+    ],
+    "prompt": {
+      "th": "ประชาชนจะเข้าชื่อเสนอแก้ไขรัฐธรรมนูญ ต้องมีผู้มีสิทธิเลือกตั้งอย่างน้อยเท่าใด?",
+      "en": "How many eligible voters must sign a citizen proposal to amend the Constitution?",
+      "zh": "公民联署提议修宪，至少需要多少名有选举权者？"
+    },
+    "choices": [
+      {
+        "th": "10,000 คน",
+        "en": "10,000 voters",
+        "zh": "10,000人"
+      },
+      {
+        "th": "1,000 คน",
+        "en": "1,000 voters",
+        "zh": "1,000人"
+      },
+      {
+        "th": "100 คน",
+        "en": "100 voters",
+        "zh": "100人"
+      },
+      {
+        "th": "50,000 คน",
+        "en": "50,000 voters",
+        "zh": "50,000人"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 256 (1) เปิดให้ประชาชนผู้มีสิทธิเลือกตั้งไม่น้อยกว่า 50,000 คนเข้าชื่อเสนอแก้ไขตามกฎหมาย",
+      "en": "Section 256(1) allows at least 50,000 eligible voters to submit an amendment proposal under the petition law.",
+      "zh": "第256条第1项允许至少50,000名有选举权者依联署法律提出修宪案。"
+    }
+  },
+  {
+    "id": "c15-03",
+    "chapter": 15,
+    "sections": [
+      256
+    ],
+    "prompt": {
+      "th": "รัฐสภารับร่างแก้ไขรัฐธรรมนูญแล้ว ต้องพิจารณากี่วาระ?",
+      "en": "Once an amendment bill is submitted, how many readings must Parliament conduct?",
+      "zh": "修宪草案提交国会后，须经过几次审议？"
+    },
+    "choices": [
+      {
+        "th": "3 วาระ",
+        "en": "3 readings",
+        "zh": "三读"
+      },
+      {
+        "th": "1 วาระ",
+        "en": "1 reading",
+        "zh": "一读"
+      },
+      {
+        "th": "2 วาระ",
+        "en": "2 readings",
+        "zh": "二读"
+      },
+      {
+        "th": "5 วาระ",
+        "en": "5 readings",
+        "zh": "五读"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 256 (2) ให้รัฐสภาพิจารณาร่างรัฐธรรมนูญแก้ไขเพิ่มเติมเป็นสามวาระ โดยแต่ละวาระมีเงื่อนไขตามมาตรานี้",
+      "en": "Section 256(2) requires three readings, each subject to the conditions set out in that section.",
+      "zh": "第256条第2项要求三读，各读须符合该条规定的条件。"
+    }
+  },
+  {
+    "id": "c16-01",
+    "chapter": 16,
+    "sections": [
+      257
+    ],
+    "prompt": {
+      "th": "กำลังประเมินเป้าหมายการปฏิรูปประเทศ ข้อใดตรงกับมาตรา 257?",
+      "en": "You are evaluating national reform goals. Which matches section 257?",
+      "zh": "评估国家改革目标时，哪项符合第257条？"
+    },
+    "choices": [
+      {
+        "th": "ยกเลิกการพัฒนาอย่างยั่งยืน",
+        "en": "Abandon sustainable development",
+        "zh": "放弃可持续发展"
+      },
+      {
+        "th": "สังคมสงบ เป็นธรรม และมีโอกาสทัดเทียม",
+        "en": "A peaceful, just society with equal opportunities",
+        "zh": "和平、公正且机会平等的社会"
+      },
+      {
+        "th": "เพิ่มอภิสิทธิ์ของกลุ่มเดียว",
+        "en": "Increase one group’s privileges",
+        "zh": "增加单一群体的特权"
+      },
+      {
+        "th": "ลดโอกาสประชาชน",
+        "en": "Reduce public opportunities",
+        "zh": "减少民众机会"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 257 ระบุเป้าหมายการปฏิรูป รวมสังคมสงบสุข เป็นธรรม และมีโอกาสทัดเทียมเพื่อขจัดความเหลื่อมล้ำ",
+      "en": "Section 257 includes a peaceful, just society with equal opportunities to eliminate disparities among reform goals.",
+      "zh": "第257条将和平、公正及机会平等以消除差距的社会列为改革目标。"
+    }
+  },
+  {
+    "id": "c16-02",
+    "chapter": 16,
+    "sections": [
+      258
+    ],
+    "prompt": {
+      "th": "กำลังแยกหัวข้อการปฏิรูป ข้อใดเป็นด้านที่ระบุไว้ในมาตรา 258?",
+      "en": "Which area is expressly listed among reforms in section 258?",
+      "zh": "第258条明确列明哪一改革领域？"
+    },
+    "choices": [
+      {
+        "th": "การยกเลิกโรงเรียนทั้งหมด",
+        "en": "Closing every school",
+        "zh": "关闭所有学校"
+      },
+      {
+        "th": "การห้ามบริการสาธารณะ",
+        "en": "Prohibiting public services",
+        "zh": "禁止公共服务"
+      },
+      {
+        "th": "กระบวนการยุติธรรม",
+        "en": "The justice system",
+        "zh": "司法程序"
+      },
+      {
+        "th": "การตั้งอาณานิคม",
+        "en": "Colonial expansion",
+        "zh": "殖民扩张"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 258 ระบุหลายด้าน รวมการเมือง การบริหารราชการ กฎหมาย กระบวนการยุติธรรม การศึกษา และเศรษฐกิจ",
+      "en": "Section 258 lists areas including politics, administration, law, justice, education and the economy.",
+      "zh": "第258条列明政治、行政、法律、司法、教育及经济等改革领域。"
+    }
+  },
+  {
+    "id": "c16-03",
+    "chapter": 16,
+    "sections": [
+      259
+    ],
+    "prompt": {
+      "th": "กฎหมายว่าด้วยแผนปฏิรูปควรมีอะไรเพื่อให้ติดตามได้?",
+      "en": "What must reform-plan legislation include to enable tracking?",
+      "zh": "改革计划法律须包含什么内容，以便追踪成效？"
+    },
+    "choices": [
+      {
+        "th": "เป้าหมายโดยไม่มีการวัดผล",
+        "en": "Goals without measurement",
+        "zh": "只有目标，没有衡量"
+      },
+      {
+        "th": "ปิดแผนต่อประชาชน",
+        "en": "Plans hidden from the public",
+        "zh": "向公众隐瞒计划"
+      },
+      {
+        "th": "ไม่ต้องมีขั้นตอน",
+        "en": "No procedures",
+        "zh": "无需程序"
+      },
+      {
+        "th": "การมีส่วนร่วม การวัดผล และระยะเวลาดำเนินการ",
+        "en": "Participation, measurement and implementation timeframes",
+        "zh": "公众参与、成效衡量及实施期限"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 259 กำหนดองค์ประกอบขั้นต่ำของกฎหมายแผนและขั้นตอนปฏิรูป รวมการมีส่วนร่วม การวัดผล และระยะเวลา",
+      "en": "Section 259 sets minimum elements for reform-plan legislation, including participation, measurement and timeframes.",
+      "zh": "第259条规定改革计划法律的最低内容，包括参与、衡量及期限。"
+    }
+  },
+  {
+    "id": "c17-01",
+    "chapter": 17,
+    "sections": [
+      269
+    ],
+    "prompt": {
+      "th": "อ่านบทเฉพาะกาลแล้วพบ ส.ว. 250 คน ควรเข้าใจอย่างไร?",
+      "en": "The transitional provisions mention 250 Senators. How should this be understood?",
+      "zh": "过渡条款提到250名参议员，应如何理解？"
+    },
+    "choices": [
+      {
+        "th": "เป็นวุฒิสภาชุดแรกตามบทเฉพาะกาล ไม่ใช่จำนวนตามมาตรา 107",
+        "en": "It refers to the first transitional Senate, not the number under section 107",
+        "zh": "这是首届过渡参议院，非第107条规定的人数"
+      },
+      {
+        "th": "วุฒิสภาทุกชุดต้องมี 250 คนตลอดไป",
+        "en": "Every Senate forever has 250 members",
+        "zh": "所有参议院永久都有250人"
+      },
+      {
+        "th": "เป็นจำนวน ส.ส. แบบแบ่งเขต",
+        "en": "It is the constituency MP count",
+        "zh": "这是选区众议员人数"
+      },
+      {
+        "th": "เป็นจำนวนรัฐมนตรี",
+        "en": "It is the minister count",
+        "zh": "这是部长人数"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 269 กำหนดวุฒิสภาชุดแรก 250 คน และอายุห้าปีนับแต่แต่งตั้ง ส่วนบทหลักมาตรา 107 กำหนด 200 คน",
+      "en": "Section 269 established the first transitional Senate of 250 for five years from appointment; section 107 provides for 200 under the permanent rules.",
+      "zh": "第269条设立首届250人的过渡参议院，任期自任命起五年；正式条款第107条规定200人。"
+    }
+  },
+  {
+    "id": "c17-02",
+    "chapter": 17,
+    "sections": [
+      272,
+      159
+    ],
+    "prompt": {
+      "th": "เห็นข้อสอบเก่าว่า ส.ว. ร่วมเลือกนายกรัฐมนตรี ข้อนี้ใช้ตลอดไปหรือไม่?",
+      "en": "An old practice item says Senators join the Prime Minister vote. Is that permanent?",
+      "zh": "旧练习题说参议员参与总理表决，这项规则是永久的吗？"
+    },
+    "choices": [
+      {
+        "th": "ให้ ส.ว. เลือกคนเดียวเสมอ",
+        "en": "The Senate always chooses alone",
+        "zh": "始终由参议院单独选择"
+      },
+      {
+        "th": "ไม่ใช่ มาตรา 272 จำกัดไว้ห้าปีจากการมีรัฐสภาชุดแรก",
+        "en": "No; section 272 limited it to five years from the first Parliament",
+        "zh": "不是，第272条仅限首届国会成立后的五年"
+      },
+      {
+        "th": "ใช่ เป็นอำนาจถาวร",
+        "en": "Yes, it is permanent",
+        "zh": "是永久权力"
+      },
+      {
+        "th": "ใช่ แต่เฉพาะวันอาทิตย์",
+        "en": "Yes, but only on Sundays",
+        "zh": "是，但仅限星期日"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 272 เป็นข้อยกเว้นชั่วคราวห้าปี ระยะเวลานั้นสิ้นสุดแล้ว การทบทวนบทหลักให้ดูมาตรา 159 ซึ่งเป็นมติของสภาผู้แทนราษฎร",
+      "en": "Section 272 created a five-year exception whose period has ended. The permanent rule in section 159 uses approval by the House of Representatives.",
+      "zh": "第272条设立五年过渡例外，该期限已届满。正式规则第159条规定由众议院表决同意。"
+    }
+  },
+  {
+    "id": "c17-03",
+    "chapter": 17,
+    "sections": [
+      262
+    ],
+    "prompt": {
+      "th": "เมื่อรัฐธรรมนูญ 2560 ประกาศใช้ คณะองคมนตรีเดิมมีสถานะอย่างไรตามบทเฉพาะกาล?",
+      "en": "When the 2017 Constitution took effect, what happened to the existing Privy Council?",
+      "zh": "2017年宪法生效时，原枢密院依过渡条款如何处理？"
+    },
+    "choices": [
+      {
+        "th": "เปลี่ยนเป็นคณะรัฐมนตรี",
+        "en": "It became the Cabinet",
+        "zh": "转为内阁"
+      },
+      {
+        "th": "เปลี่ยนเป็นศาลรัฐธรรมนูญ",
+        "en": "It became the Constitutional Court",
+        "zh": "转为宪法法院"
+      },
+      {
+        "th": "เป็นคณะองคมนตรีตามรัฐธรรมนูญนี้ต่อไป",
+        "en": "It continued as the Privy Council under this Constitution",
+        "zh": "继续作为本宪法下的枢密院"
+      },
+      {
+        "th": "สิ้นสุดทันทีทั้งหมด",
+        "en": "It immediately ceased entirely",
+        "zh": "立即全部终止"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 262 ให้คณะองคมนตรีที่ดำรงตำแหน่งก่อนวันประกาศใช้เป็นคณะองคมนตรีตามรัฐธรรมนูญนี้",
+      "en": "Section 262 continued the Privy Council serving before promulgation as the Council under this Constitution.",
+      "zh": "第262条规定颁布前任职的枢密院继续作为本宪法下的枢密院。"
+    }
+  }
+]
