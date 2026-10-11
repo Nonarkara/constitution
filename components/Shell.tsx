@@ -6,7 +6,7 @@ import { energyRemaining } from "@/lib/learning";
 import { useEffect, useState } from "react";
 import { labels, tr, type Lang } from "@/lib/i18n";
 export function Shell({ children }: { children: React.ReactNode }) {
-  const { lang, setLang, progress, storageError } = useStudy();
+  const { lang, setLang, progress, storageError, ready } = useStudy();
   const path = usePathname();
   const [now, setNow] = useState(0);
   useEffect(() => setNow(Date.now()), [progress]);
@@ -43,6 +43,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <button
               key={l}
               lang={l}
+              disabled={!ready}
               aria-pressed={lang === l}
               onClick={() => setLang(l)}
             >

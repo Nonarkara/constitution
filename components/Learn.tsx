@@ -8,7 +8,7 @@ import { Quiz } from "./Quiz";
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
 export function Learn() {
-  const { lang, progress } = useStudy();
+  const { lang, progress, ready } = useStudy();
   const [chapter, setChapter] = useState<number | null>(null);
   const mastered = chapters.filter(
     (c) =>
@@ -51,7 +51,11 @@ export function Learn() {
               "不必一天记住全部。先读懂一个概念，再用练习检验理解。",
             )}
           </p>
-          <button className="primary" onClick={() => setChapter(next.number)}>
+          <button
+            className="primary"
+            disabled={!ready}
+            onClick={() => setChapter(next.number)}
+          >
             {tr(
               lang,
               "เริ่มบทเรียนสั้น ๆ",
@@ -137,7 +141,7 @@ export function Learn() {
                 </span>
               </div>
               <div className="chapter-actions">
-                <button onClick={() => setChapter(c.number)}>
+                <button disabled={!ready} onClick={() => setChapter(c.number)}>
                   {tr(lang, "ฝึกตอบ", "Practice", "练习")} ↗
                 </button>
                 <Link href={`/section/?n=${c.start}`}>
