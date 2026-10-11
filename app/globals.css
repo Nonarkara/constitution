@@ -937,3 +937,66 @@ html[data-large="true"] {
     border-bottom: 1px solid var(--line);
   }
 }
+/* Original crayon scenes stay secondary to the learning task. */
+.study-art {
+  margin: 0;
+  width: 180px;
+  max-width: 100%;
+}
+.study-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.intro-copy {
+  position: relative;
+}
+.intro-copy > .study-art {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.intro-copy > h1 {
+  padding-right: 185px;
+  min-height: 160px;
+}
+.review-intro {
+  position: relative;
+}
+.review-intro > .study-art {
+  float: right;
+  margin: 12px 0 18px 22px;
+}
+.review-intro::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.audio-note > .study-art {
+  float: right;
+  width: 150px;
+  margin: 0 0 14px 22px;
+}
+.audio-note::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media (max-width: 720px) {
+  .intro-copy > .study-art {
+    width: 120px;
+    top: 0;
+  }
+  .intro-copy > h1 {
+    padding-right: 126px;
+    min-height: 115px;
+  }
+  .review-intro > .study-art {
+    width: 120px;
+    margin: 12px 0 12px 16px;
+  }
+  .audio-note > .study-art {
+    width: 100px;
+    margin: 0 0 12px 16px;
+  }
+}

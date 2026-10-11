@@ -1,4 +1,5 @@
 "use client";
+import { StudyArt } from "./StudyArt";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -205,6 +206,7 @@ export function Reader() {
             ))}
           </div>
           <div className="audio-note">
+            <StudyArt scene="listening" compact />
             <strong>
               {tr(
                 lang,

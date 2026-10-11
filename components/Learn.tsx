@@ -1,4 +1,5 @@
 "use client";
+import { StudyArt } from "./StudyArt";
 import { useState } from "react";
 import Link from "next/link";
 import { chapters } from "@/lib/corpus";
@@ -34,7 +35,8 @@ export function Learn() {
         <div className="intro-index mono" aria-hidden="true">
           ๑
         </div>
-        <div>
+        <div className="intro-copy">
+          <StudyArt scene="reading" />
           <h1>
             {tr(
               lang,

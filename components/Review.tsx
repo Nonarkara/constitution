@@ -1,4 +1,5 @@
 "use client";
+import { StudyArt } from "./StudyArt";
 import { useEffect, useState } from "react";
 import questions from "@/data/questions.json";
 import { dueQuestions } from "@/lib/learning";
@@ -34,22 +35,25 @@ export function Review() {
   return (
     <>
       <span className="page-kicker mono">RETURN & REMEMBER · 03</span>
-      <h1>
-        {tr(
-          lang,
-          "จำได้ดีขึ้น\nเมื่อกลับมาอีกครั้ง",
-          "Return to what\nyou’ve learned.",
-          "再回顾一次，\n记得更牢。",
-        )}
-      </h1>
-      <p>
-        {tr(
-          lang,
-          "คำถามที่เคยตอบจะกลับมาตามช่วงเวลา ข้อที่พลาดกลับมาเร็ว ข้อที่เข้าใจแล้วเว้นให้นานขึ้น",
-          "Questions return over time. Missed ones return sooner; correct ones get more breathing room.",
-          "学过的题目会按间隔再次出现。错题早点复习，答对的题目间隔更长。",
-        )}
-      </p>
+      <div className="review-intro">
+        <StudyArt scene="review" />
+        <h1>
+          {tr(
+            lang,
+            "จำได้ดีขึ้น\nเมื่อกลับมาอีกครั้ง",
+            "Return to what\nyou’ve learned.",
+            "再回顾一次，\n记得更牢。",
+          )}
+        </h1>
+        <p>
+          {tr(
+            lang,
+            "คำถามที่เคยตอบจะกลับมาตามช่วงเวลา ข้อที่พลาดกลับมาเร็ว ข้อที่เข้าใจแล้วเว้นให้นานขึ้น",
+            "Questions return over time. Missed ones return sooner; correct ones get more breathing room.",
+            "学过的题目会按间隔再次出现。错题早点复习，答对的题目间隔更长。",
+          )}
+        </p>
+      </div>
       <div className="review-count">
         <strong className="mono">{due.length}</strong>
         <span>
