@@ -14,10 +14,28 @@ export function Recording({ section, lang }: { section: number; lang: Lang }) {
   const resource = useRef(url), request = useRef(0);
   resource.current = url;
   useEffect(() => {
-    request.current += 1;
-    setStatus("idle");
+    const kit = "serviceWorker" in navigator ? navigator.serviceWorker : null;
+    const refresh = async () => {
+      const id = ++request.current;
+      setStatus("idle");
+      if (!kit) return;
+      try {
+        const worker = kit.controller ?? (await kit.getRegistration())?.active;
+        if (!worker) return;
+        const result = await workerMessage<{ cached: boolean }>(worker, {
+          type: "AUDIO_STATUS", url,
+        });
+        if (id === request.current && resource.current === url && result.cached)
+          setStatus("saved");
+      } catch {
+        // A missing worker does not prevent streaming or downloading the MP3.
+      }
+    };
     setFailed(false);
+    void refresh();
+    kit?.addEventListener("controllerchange", refresh);
     return () => {
+      kit?.removeEventListener("controllerchange", refresh);
       request.current += 1;
       playback().stop(owner.current);
     };

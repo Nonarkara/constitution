@@ -93,7 +93,14 @@ function worker() {
     listeners.activate({ waitUntil: (promise: Promise<unknown>) => (task = promise) });
     await task;
   }
-  return { install, activate, get, offline: () => (online = false), storage };
+  async function message(type: string, url: string) {
+    let task;
+    let result;
+    listeners.message({ data: { type, url }, ports: [{ postMessage: (value: unknown) => (result = value) }], waitUntil: (promise: Promise<unknown>) => (task = promise) });
+    await task;
+    return JSON.parse(JSON.stringify(result));
+  }
+  return { install, activate, get, message, offline: () => (online = false), storage };
 }
 test("a first installation caches HTML and its JS/CSS/font dependencies before offline reload", async () => {
   const w = worker();
@@ -148,4 +155,16 @@ test("a corrected recording revision evicts old audio while retaining current do
   w.offline();
   assert.equal((await w.get("/audio/en/027.mp3")).status, 503);
   assert.equal(await (await w.get("/audio/en/028.mp3")).text(), "current wording");
+});
+
+test("reopening and saving cached audio works offline without another download", async () => {
+  const w = worker();
+  await w.install();
+  assert.deepEqual(await w.message("AUDIO_STATUS", "/audio/en/027.mp3"), { cached: false });
+  assert.deepEqual(await w.message("SAVE_AUDIO", "/audio/en/027.mp3"), { ok: true });
+  w.offline();
+  assert.deepEqual(await w.message("AUDIO_STATUS", "/audio/en/027.mp3"), { cached: true });
+  assert.deepEqual(await w.message("SAVE_AUDIO", "/audio/en/027.mp3"), { ok: true });
+  assert.deepEqual(await w.message("AUDIO_STATUS", "https://other.test/audio/en/027.mp3"), { ok: false, cached: false });
+  assert.deepEqual(await w.message("SAVE_AUDIO", "/audio/en/028.mp3"), { ok: false, cached: false });
 });

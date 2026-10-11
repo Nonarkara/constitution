@@ -12,9 +12,10 @@ const source = readFileSync(
 );
 
 /** Execute the actual component and defer its worker response across React lifecycles. */
-function recording(componentSource = source) {
+function recording(componentSource = source, deferCache = false) {
   const slots: Slot[] = [], effects: (() => void)[] = [];
   const requests: { url: string; resolve: (value: { ok: boolean }) => void }[] = [];
+  const checks: { url: string; resolve: (value: { cached: boolean }) => void }[] = [];
   let cursor = 0, writes = 0;
   const React = {
     useState(initial: unknown) {
@@ -50,7 +51,7 @@ function recording(componentSource = source) {
     },
   }).outputText, {
     module, exports: module.exports,
-    navigator: { serviceWorker: { controller: {} } },
+    navigator: { serviceWorker: { controller: {}, addEventListener() {}, removeEventListener() {} } },
     require(name: string) {
       if (name === "react") return React;
       if (name === "react/jsx-runtime") return { jsx, jsxs: jsx };
@@ -61,7 +62,11 @@ function recording(componentSource = source) {
         playback: () => ({ stop() {}, take() {}, release() {} }),
       };
       if (name === "@/lib/offline") return {
-        workerMessage: (_worker: unknown, message: { url: string }) =>
+        workerMessage: (_worker: unknown, message: { type: string; url: string }) =>
+          message.type === "AUDIO_STATUS" ? new Promise<{ cached: boolean }>((resolve) => {
+            checks.push({ url: message.url, resolve });
+            if (!deferCache) resolve({ cached: false });
+          }) :
           new Promise<{ ok: boolean }>((resolve) =>
             requests.push({ url: message.url, resolve })),
       };
@@ -69,7 +74,7 @@ function recording(componentSource = source) {
     },
   });
   return {
-    requests,
+    requests, checks,
     writes: () => writes,
     render(section: number) {
       cursor = 0;
@@ -164,4 +169,23 @@ test("the original unguarded completion also updates state after unmount", async
   app.requests[0].resolve({ ok: true });
   await pending;
   assert.equal(app.writes(), writes + 1);
+});
+
+test("a reopened recording restores Saved from the current cache", async () => {
+  const app = recording(source, true);
+  app.render(27); app.effects();
+  assert.equal(app.checks[0].url, "/audio/en/027.mp3");
+  app.checks[0].resolve({ cached: true });
+  await new Promise<void>((resolve) => setImmediate(resolve));
+  assert.equal(saveButton(app.render(27)).props.children, "Saved ✓");
+});
+
+test("an old cached-status response cannot mark the next section saved", async () => {
+  const app = recording(source, true);
+  app.render(27); app.effects();
+  app.render(28); app.effects();
+  app.checks[0].resolve({ cached: true });
+  app.checks[1].resolve({ cached: false });
+  await new Promise<void>((resolve) => setImmediate(resolve));
+  assert.equal(saveButton(app.render(28)).props.children, "Save for offline");
 });

@@ -125,23 +125,36 @@ self.addEventListener("message", (event) => {
         .catch(() => port?.postMessage({ ready: false })),
     );
   }
-  if (event.data?.type === "SAVE_AUDIO") {
-    const url = new URL(event.data.url, self.location.origin);
+  if (["SAVE_AUDIO", "AUDIO_STATUS"].includes(event.data?.type)) {
+    let url;
+    try {
+      url = new URL(event.data.url, self.location.origin);
+    } catch {
+      port?.postMessage({ ok: false, cached: false });
+      return;
+    }
     if (
       url.origin !== self.location.origin ||
       !/^\/audio\/(th|en|zh)\/\d{3}\.mp3$/.test(url.pathname)
     ) {
-      port?.postMessage({ ok: false });
+      port?.postMessage({ ok: false, cached: false });
       return;
     }
     event.waitUntil(
-      fetch(url.href)
-        .then(async (response) => {
+      (async () => {
+        const cache = await caches.open(AUDIO_CACHE);
+        const cached = await cache.match(url.pathname);
+        if (event.data.type === "AUDIO_STATUS") {
+          port?.postMessage({ cached: Boolean(cached) });
+          return;
+        }
+        if (!cached) {
+          const response = await fetch(url.href);
           if (response.status !== 200) throw new Error("Audio download failed");
-          await (await caches.open(AUDIO_CACHE)).put(url.pathname, response);
-          port?.postMessage({ ok: true });
-        })
-        .catch(() => port?.postMessage({ ok: false })),
+          await cache.put(url.pathname, response);
+        }
+        port?.postMessage({ ok: true });
+      })().catch(() => port?.postMessage({ ok: false, cached: false })),
     );
   }
 });
