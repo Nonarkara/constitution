@@ -48,7 +48,7 @@ export function Learn() {
   return (
     <>
       {/* One dominant element: the drawing and the next step read as a single block. */}
-      <div className="civic-shortcuts"><Link href="/amend/">{tr(lang, "ถ้าเราอยากแก้รัฐธรรมนูญ", "If we want to amend it", "如果我们想修宪")} →</Link><Link href="/news/">{tr(lang, "ข่าวสั้น", "Headlines", "新闻标题")} →</Link></div>
+      <div className="civic-shortcuts"><Link href="/civic/">{tr(lang,"ตรวจคำสัญญา","Check the promise","核查承诺")} →</Link><Link href="/amend/">{tr(lang, "ถ้าเราอยากแก้รัฐธรรมนูญ", "If we want to amend it", "如果我们想修宪")} →</Link><Link href="/news/">{tr(lang, "ข่าวสั้น", "Headlines", "新闻标题")} →</Link></div>
       <section className="hero">
         <figure className="hero-art" aria-hidden="true">
           <Image src="/illustrations/reading.webp" alt="" width={720} height={720} priority sizes="(max-width: 720px) 100vw, 46vw" />

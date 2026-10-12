@@ -18396,5 +18396,727 @@
       "en": "Section 203 paragraph four provides that the President of the Senate countersigns the appointment of the President and judges of the Constitutional Court.",
       "zh": "第203条第四款规定，由参议院议长副署任命宪法法院院长及宪法法院法官的王室谕令。"
     }
+  },
+  {
+    "id": "civic-01",
+    "chapter": 15,
+    "sections": [
+      256
+    ],
+    "prompt": {
+      "th": "ผู้สมัครสมมติบอกว่า «ชนะเลือกตั้งแล้ว ผมแก้รัฐธรรมนูญได้คนเดียว» ขาดอะไร?",
+      "en": "A fictional candidate says: “Win the election and I can amend the Constitution alone.” What is missing?",
+      "zh": "虚构候选人说：“赢了选举，我一个人就能修宪。”漏掉了什么？"
+    },
+    "choices": [
+      {
+        "th": "ขั้นตอนและเสียงเห็นชอบตามมาตรา 256",
+        "en": "The procedure and votes required by section 256",
+        "zh": "第256条规定的程序与赞成票"
+      },
+      {
+        "th": "เพียงยอดไลก์",
+        "en": "Only enough likes",
+        "zh": "只需点赞数"
+      },
+      {
+        "th": "เพียงคำสั่งผู้สมัคร",
+        "en": "Only the candidate’s order",
+        "zh": "只需候选人下令"
+      },
+      {
+        "th": "ไม่ขาดอะไร",
+        "en": "Nothing",
+        "zh": "什么都没漏"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 256 มีผู้เสนอ วาระพิจารณา และเกณฑ์เสียงหลายส่วน ชนะเลือกตั้งไม่ได้ให้อำนาจแก้ไขฝ่ายเดียว",
+      "en": "Section 256 requires an eligible proposer, readings and several voting thresholds. An election win does not confer unilateral amendment power.",
+      "zh": "第256条规定提案资格、审议阶段及多项票数门槛。选举获胜不等于拥有单方面修宪权。"
+    },
+    "hook": {
+      "th": "ประตูแก้ไขมีหลายกุญแจ บัตรเลือกตั้งไม่ใช่กุญแจทั้งหมด",
+      "en": "The amendment door needs several keys; a ballot is not all of them.",
+      "zh": "修宪门需要多把钥匙；选票不是全部钥匙。"
+    }
+  },
+  {
+    "id": "civic-02",
+    "chapter": 15,
+    "sections": [
+      256
+    ],
+    "prompt": {
+      "th": "ประชาชนผู้มีสิทธิเลือกตั้งเสนอร่างแก้ไข ต้องเข้าชื่ออย่างน้อยกี่คน?",
+      "en": "How many eligible voters must sign to propose an amendment?",
+      "zh": "选民联署提出修宪草案，至少需要多少人？"
+    },
+    "choices": [
+      {
+        "th": "10,000 คน",
+        "en": "10,000",
+        "zh": "10,000人"
+      },
+      {
+        "th": "20,000 คน",
+        "en": "20,000",
+        "zh": "20,000人"
+      },
+      {
+        "th": "50,000 คน",
+        "en": "50,000",
+        "zh": "50,000人"
+      },
+      {
+        "th": "100,000 คน",
+        "en": "100,000",
+        "zh": "100,000人"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 256 (1) ใช้ผู้มีสิทธิเลือกตั้งไม่น้อยกว่า 50,000 คน เป็นเกณฑ์เสนอ ไม่ใช่รับรองว่าร่างผ่าน",
+      "en": "Section 256(1) requires at least 50,000 eligible voters. This opens the proposal route; it does not guarantee passage.",
+      "zh": "第256条第1项要求至少50,000名选民联署。这是提案门槛，不保证草案通过。"
+    },
+    "hook": {
+      "th": "ห้าหมื่นคนพาไปถึงประตู ยังไม่ได้พาออกอีกฝั่ง",
+      "en": "Fifty thousand reach the door, not the other side.",
+      "zh": "五万人把草案送到门口，还没走到门外。"
+    }
+  },
+  {
+    "id": "civic-03",
+    "chapter": 15,
+    "sections": [
+      256
+    ],
+    "prompt": {
+      "th": "สมมติ ส.ส. 500 ส.ว. 200 วาระแรก 350 เสียงรวมและ ส.ว. 67 เสียง ผ่านเกณฑ์เสียงไหม?",
+      "en": "Fictional membership: 500 MPs and 200 senators. First reading: 350 total yes, including 67 senators. Are the vote thresholds met?",
+      "zh": "假设有500名议员、200名参议员。一读共350票赞成，其中67票来自参议员。达到票数门槛了吗？"
+    },
+    "choices": [
+      {
+        "th": "ไม่ผ่าน ต้อง 351 ในวาระแรก",
+        "en": "No; first reading needs 351",
+        "zh": "没有；一读需要351票"
+      },
+      {
+        "th": "ผ่านเกณฑ์เสียงวาระแรก",
+        "en": "Yes, the first-reading vote thresholds",
+        "zh": "达到一读票数门槛"
+      },
+      {
+        "th": "ผ่านทั้งกระบวนการแล้ว",
+        "en": "The whole process is complete",
+        "zh": "整个程序已完成"
+      },
+      {
+        "th": "ไม่ผ่าน ต้อง ส.ว. 100 เสียง",
+        "en": "No; it needs 100 senators",
+        "zh": "没有；需要100名参议员"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 256 (3) ใช้ไม่น้อยกว่ากึ่งหนึ่งของสมาชิกทั้งสองสภาเท่าที่มีอยู่ และ ส.ว. ไม่น้อยกว่าหนึ่งในสาม 350 และ 67 ถึงเกณฑ์สมมตินี้ แต่วาระสุดท้ายใช้มากกว่ากึ่งหนึ่ง",
+      "en": "Section 256(3) requires at least half of existing combined membership and at least one third of senators. Here 350 and 67 suffice for first reading; final reading requires more than half.",
+      "zh": "第256条第3项要求现有两院成员至少半数赞成，且参议员至少三分之一赞成。此例350票与67票满足一读；终读要求超过半数。"
+    },
+    "hook": {
+      "th": "ประตูแรกแตะครึ่ง ประตูสุดท้ายข้ามครึ่ง",
+      "en": "First door: reach half. Final door: cross half.",
+      "zh": "第一扇门：达到半数。最后一扇门：超过半数。"
+    }
+  },
+  {
+    "id": "civic-04",
+    "chapter": 15,
+    "sections": [
+      255
+    ],
+    "prompt": {
+      "th": "ถ้าคนส่วนใหญ่เห็นด้วย แก้รัฐธรรมนูญเพื่อแบ่งราชอาณาจักรได้ไหม?",
+      "en": "If a majority agrees, may an amendment divide the Kingdom?",
+      "zh": "多数人同意，就能通过修宪分割王国吗？"
+    },
+    "choices": [
+      {
+        "th": "ได้ทุกกรณี",
+        "en": "Always",
+        "zh": "任何情况下都可以"
+      },
+      {
+        "th": "ได้เมื่อผู้สมัครรับปาก",
+        "en": "If a candidate promises",
+        "zh": "候选人承诺就可以"
+      },
+      {
+        "th": "ได้ถ้ามีผู้เข้าชื่อมากพอ",
+        "en": "If enough people sign",
+        "zh": "联署人数够就可以"
+      },
+      {
+        "th": "ไม่ได้ตามข้อห้ามมาตรา 255",
+        "en": "No, under the prohibition in section 255",
+        "zh": "不可以；第255条有禁止规定"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 255 ห้ามเปลี่ยนรูปแบบของรัฐ และระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข คะแนนนิยมไม่ลบข้อห้ามนี้",
+      "en": "Section 255 prohibits changing the form of the State or the democratic regime with the King as Head of State. Popular support does not remove this prohibition.",
+      "zh": "第255条禁止改变国家形式及以国王为国家元首的民主政体。民意支持不会取消这项禁令。"
+    },
+    "hook": {
+      "th": "กุญแจหลายดอกก็เปิดประตูที่กฎหมายห้ามไม่ได้",
+      "en": "Many keys cannot open a legally forbidden door.",
+      "zh": "钥匙再多，也打不开法律禁止开启的门。"
+    }
+  },
+  {
+    "id": "civic-05",
+    "chapter": 15,
+    "sections": [
+      256
+    ],
+    "prompt": {
+      "th": "ร่างแก้คุณสมบัติผู้ดำรงตำแหน่งตามรัฐธรรมนูญ ต้องคิดถึงขั้นตอนใดเพิ่ม?",
+      "en": "An amendment changes qualifications of constitutional office-holders. Which additional gate matters?",
+      "zh": "修正案改变宪法职位的任职资格，还涉及哪道门槛？"
+    },
+    "choices": [
+      {
+        "th": "ประชามติก่อนนำขึ้นทูลเกล้าฯ",
+        "en": "A referendum before submission for royal assent",
+        "zh": "呈请御准前举行公投"
+      },
+      {
+        "th": "ยอดแชร์แทนเสียงสภา",
+        "en": "Shares replace parliamentary votes",
+        "zh": "转发数代替议会票数"
+      },
+      {
+        "th": "ผู้สมัครลงชื่อคนเดียว",
+        "en": "The candidate signs alone",
+        "zh": "候选人独自签字"
+      },
+      {
+        "th": "ไม่มีขั้นตอนเพิ่มเติม",
+        "en": "No additional gate",
+        "zh": "没有额外门槛"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 256 (8) กำหนดประชามติสำหรับการแก้ไขบางประเภท รวมถึงคุณสมบัติหรือลักษณะต้องห้ามของผู้ดำรงตำแหน่งตามรัฐธรรมนูญ อ่านเงื่อนไขทั้งข้อด้วย",
+      "en": "Section 256(8) requires a referendum for specified amendment categories, including qualifications or prohibitions of constitutional office-holders. Read the complete clause.",
+      "zh": "第256条第8项规定，某些修正须公投，包括改变宪法职位的任职资格或禁止条件。请阅读完整条款。"
+    },
+    "hook": {
+      "th": "ประตูคุณสมบัติมีโต๊ะประชามติอยู่ข้างหน้า",
+      "en": "The qualifications door has a referendum table in front.",
+      "zh": "资格门前还有一张公投桌。"
+    }
+  },
+  {
+    "id": "civic-06",
+    "chapter": 15,
+    "sections": [
+      256
+    ],
+    "prompt": {
+      "th": "วาระสุดท้ายผ่านแล้ว «พรุ่งนี้เสร็จแน่» เชื่อได้จากตัวบทอย่างเดียวไหม?",
+      "en": "Final reading passes. “It will definitely be done tomorrow.” Does the text alone support that?",
+      "zh": "终读通过了。“明天肯定完成。”仅凭条文能支持这个说法吗？"
+    },
+    "choices": [
+      {
+        "th": "ได้ เพราะไม่มีเวลารอ",
+        "en": "Yes, there is no wait",
+        "zh": "能；没有等待期"
+      },
+      {
+        "th": "ไม่ได้ มีช่วงรอ 15 วันและอาจมีขั้นตอนอื่น",
+        "en": "No; there is a 15-day wait and possible further gates",
+        "zh": "不能；有15天等待期，且可能还有其他程序"
+      },
+      {
+        "th": "ได้ ถ้าคนส่วนใหญ่ชอบ",
+        "en": "Yes, if most people like it",
+        "zh": "能；多数人喜欢就行"
+      },
+      {
+        "th": "ได้ ถ้านายกรัฐมนตรีพูด",
+        "en": "Yes, if the PM says so",
+        "zh": "能；总理说了就行"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 256 (7) ให้รอ 15 วันหลังวาระสุดท้าย และข้อ (8)–(9) อาจเพิ่มประชามติหรือการวินิจฉัย จึงไม่รับรองวันจบทั้งหมด",
+      "en": "Section 256(7) requires a 15-day wait after final approval. Clauses (8)–(9) may add a referendum or constitutional review, so this is not a guaranteed total completion date.",
+      "zh": "第256条第7项要求终读通过后等待15天；第8至9项可能增加公投或宪法审查，不能保证整个程序何时完成。"
+    },
+    "hook": {
+      "th": "นาฬิกาทรายบอกเวลาขั้นต่ำ ไม่ใช่วันส่งมอบ",
+      "en": "The hourglass marks a minimum wait, not a delivery date.",
+      "zh": "沙漏提示最低等待期，不是交付日期。"
+    }
+  },
+  {
+    "id": "civic-07",
+    "chapter": 1,
+    "sections": [
+      3
+    ],
+    "prompt": {
+      "th": "เลือกตั้งชนะแล้ว รัฐบาลทำอะไรก็ได้โดยไม่ต้องสนใจกฎหมาย จริงไหม?",
+      "en": "An election winner can do anything without regard to law. True?",
+      "zh": "赢得选举的政府可以不顾法律做任何事，是真的吗？"
+    },
+    "choices": [
+      {
+        "th": "จริง อำนาจไม่จำกัด",
+        "en": "True; power is unlimited",
+        "zh": "真的；权力无限"
+      },
+      {
+        "th": "จริง หากได้เสียงมาก",
+        "en": "True with many votes",
+        "zh": "票数多就是真的"
+      },
+      {
+        "th": "ไม่จริง การใช้อำนาจอยู่ภายใต้รัฐธรรมนูญและหลักนิติธรรม",
+        "en": "False; power is exercised under the Constitution and rule of law",
+        "zh": "不是真的；行使权力须遵守宪法与法治原则"
+      },
+      {
+        "th": "จริง หากเป็นฝ่ายที่เราชอบ",
+        "en": "True for our preferred side",
+        "zh": "我们喜欢的一方就可以"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 3 วางอำนาจอธิปไตยและการใช้อำนาจตามรัฐธรรมนูญ องค์กรรัฐต้องทำหน้าที่ตามรัฐธรรมนูญ กฎหมาย และหลักนิติธรรม",
+      "en": "Section 3 places the exercise of sovereign power under the Constitution. State organs must act in accordance with the Constitution, law and rule of law.",
+      "zh": "第3条规定依宪法行使主权。国家机关履职须遵守宪法、法律与法治原则。"
+    },
+    "hook": {
+      "th": "บัตรเลือกตั้งมอบงาน ไม่ใช่เช็คเปล่า",
+      "en": "A ballot gives a mandate, not a blank cheque.",
+      "zh": "选票授予职责，不是空白支票。"
+    }
+  },
+  {
+    "id": "civic-08",
+    "chapter": 8,
+    "sections": [
+      159
+    ],
+    "prompt": {
+      "th": "คำสัญญา «ผมเป็นนายกรัฐมนตรีอัตโนมัติถ้าคนชอบผมที่สุด» ข้ามอะไรในมาตรา 159?",
+      "en": "“I automatically become PM if I am most popular.” What does this skip in section 159?",
+      "zh": "“我最受欢迎，就自动当总理。”跳过了第159条中的什么？"
+    },
+    "choices": [
+      {
+        "th": "ไม่มีอะไร",
+        "en": "Nothing",
+        "zh": "什么都没跳过"
+      },
+      {
+        "th": "ผลโหวตออนไลน์",
+        "en": "An online poll",
+        "zh": "网络投票"
+      },
+      {
+        "th": "จำนวนผู้ติดตาม",
+        "en": "Follower count",
+        "zh": "粉丝数"
+      },
+      {
+        "th": "การพิจารณาและความเห็นชอบของสภาผู้แทนราษฎร",
+        "en": "Consideration and approval by the House of Representatives",
+        "zh": "众议院的审议与批准"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 159 กำหนดกระบวนการให้สภาผู้แทนราษฎรเห็นชอบบุคคลเพื่อแต่งตั้งเป็นนายกรัฐมนตรี ความนิยมอย่างเดียวไม่แทนกระบวนการนี้",
+      "en": "Section 159 provides the House approval process for a person to be appointed Prime Minister. Popularity alone cannot replace it.",
+      "zh": "第159条规定由众议院批准拟任总理人选的程序。人气不能代替该程序。"
+    },
+    "hook": {
+      "th": "จากกล่องบัตรยังต้องเดินไปโต๊ะสภา",
+      "en": "From the ballot box, walk on to the House table.",
+      "zh": "从投票箱出发，还得走到众议院的桌前。"
+    }
+  },
+  {
+    "id": "civic-09",
+    "chapter": 3,
+    "sections": [
+      44
+    ],
+    "prompt": {
+      "th": "มีคนบอก «การชุมนุมผิดกฎหมายเสมอ» ตัวบทให้ตรวจอะไร?",
+      "en": "Someone says: “Assemblies are always illegal.” What should we check?",
+      "zh": "有人说：“集会一律违法。”应核对什么？"
+    },
+    "choices": [
+      {
+        "th": "เสรีภาพชุมนุมโดยสงบและปราศจากอาวุธ รวมถึงข้อจำกัดตามกฎหมาย",
+        "en": "Freedom of peaceful, unarmed assembly and lawful restrictions",
+        "zh": "和平、非武装集会自由及法律规定的限制"
+      },
+      {
+        "th": "จำนวนยอดไลก์เท่านั้น",
+        "en": "Only likes",
+        "zh": "只看点赞数"
+      },
+      {
+        "th": "ฝ่ายการเมืองของผู้ชุมนุมเท่านั้น",
+        "en": "Only the protesters’ political side",
+        "zh": "只看集会者属于哪一派"
+      },
+      {
+        "th": "ไม่มีสิทธิชุมนุมในรัฐธรรมนูญ",
+        "en": "The Constitution has no assembly right",
+        "zh": "宪法没有集会权"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 44 รับรองการชุมนุมโดยสงบและปราศจากอาวุธ และระบุเงื่อนไขจำกัดโดยกฎหมาย สิทธินี้ไม่ใช่อำนาจข้ามขั้นตอนแก้ไขรัฐธรรมนูญ",
+      "en": "Section 44 protects peaceful, unarmed assembly and specifies grounds for restriction by law. This right is not a power to bypass amendment procedures.",
+      "zh": "第44条保障和平、非武装集会，并规定依法限制的条件。这项权利不意味着可以跳过修宪程序。"
+    },
+    "hook": {
+      "th": "จัตุรัสมีที่ให้พูด แต่ไม่ใช่ประตูออกนอกกฎหมาย",
+      "en": "The square gives space to speak, not a legal bypass.",
+      "zh": "广场给人发声的空间，不是绕过法律的通道。"
+    }
+  },
+  {
+    "id": "civic-10",
+    "chapter": 3,
+    "sections": [
+      41
+    ],
+    "prompt": {
+      "th": "คำร้องขอแก้ปัญหาที่ส่งหน่วยงานรัฐตามมาตรา 41 ทำให้คำขอผ่านอัตโนมัติไหม?",
+      "en": "Does a petition to a state agency under section 41 automatically grant the request?",
+      "zh": "依第41条向国家机关提出请愿，会自动批准请求吗？"
+    },
+    "choices": [
+      {
+        "th": "ใช่ ทุกคำร้องต้องผ่าน",
+        "en": "Yes, every request must be granted",
+        "zh": "会；所有请求必须批准"
+      },
+      {
+        "th": "ไม่ใช่ มีสิทธิเสนอเรื่องราวร้องทุกข์และได้รับแจ้งผลโดยรวดเร็ว",
+        "en": "No; there is a right to petition and be informed promptly of the result",
+        "zh": "不会；有提出请愿及及时获知结果的权利"
+      },
+      {
+        "th": "ใช่ ถ้าคนส่งอายุน้อย",
+        "en": "Yes for young petitioners",
+        "zh": "年轻人提交就会"
+      },
+      {
+        "th": "ใช่ ถ้าส่งผ่านสื่อสังคม",
+        "en": "Yes if sent on social media",
+        "zh": "通过社交媒体提交就会"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 41 (2) รับรองสิทธิเสนอเรื่องราวร้องทุกข์และได้รับแจ้งผลการพิจารณาโดยรวดเร็ว สิทธิให้พิจารณาไม่เท่ากับรับรองว่าจะอนุมัติ",
+      "en": "Section 41(2) protects petitioning and being informed promptly of the consideration result. A right to consideration is not a guarantee of approval.",
+      "zh": "第41条第2项保障请愿及及时获知审议结果的权利。得到审议的权利不等于保证获准。"
+    },
+    "hook": {
+      "th": "เคาะประตูแล้วต้องได้คำตอบ ไม่ใช่ต้องได้ทุกอย่าง",
+      "en": "Knock and receive an answer, not necessarily everything requested.",
+      "zh": "敲门应得到答复，但不一定得到所求的一切。"
+    }
+  },
+  {
+    "id": "civic-11",
+    "chapter": 7,
+    "sections": [
+      133,
+      256
+    ],
+    "prompt": {
+      "th": "เพื่อนจำว่า «เข้าชื่อกฎหมายกับแก้รัฐธรรมนูญใช้จำนวนเดียวกัน» ถูกไหม?",
+      "en": "“Citizen law proposals and constitutional amendments use the same signature count.” Correct?",
+      "zh": "“公民提普通法案与修宪，联署人数一样。”对吗？"
+    },
+    "choices": [
+      {
+        "th": "ถูก ใช้ 10,000 ทั้งคู่",
+        "en": "Yes, both use 10,000",
+        "zh": "对；都是10,000人"
+      },
+      {
+        "th": "ถูก ใช้ 50,000 ทั้งคู่",
+        "en": "Yes, both use 50,000",
+        "zh": "对；都是50,000人"
+      },
+      {
+        "th": "ไม่ถูก ร่าง พ.ร.บ. ตามเงื่อนไขใช้ 10,000 แก้รัฐธรรมนูญใช้ 50,000",
+        "en": "No; qualifying bills use 10,000, amendments 50,000",
+        "zh": "不对；符合条件的普通法案为10,000人，修宪为50,000人"
+      },
+      {
+        "th": "ไม่มีการเสนอโดยประชาชน",
+        "en": "Citizens cannot propose either",
+        "zh": "公民不能提出这两种提案"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 133 ใช้ผู้มีสิทธิเลือกตั้งไม่น้อยกว่า 10,000 คนสำหรับร่างกฎหมายตามหมวด 3 หรือ 5 และเงื่อนไขที่กำหนด มาตรา 256 ใช้ 50,000 คนสำหรับร่างแก้ไข อย่าสลับประตู",
+      "en": "Section 133 uses at least 10,000 eligible voters for bills under Chapters 3 or 5, subject to its conditions. Section 256 uses 50,000 for amendment proposals. Do not swap the doors.",
+      "zh": "第133条规定至少10,000名选民可按条件提出涉及第3或5章的法案；第256条修宪提案须50,000人。别混淆两扇门。"
+    },
+    "hook": {
+      "th": "ประตูกฎหมายหนึ่งหมื่น ประตูแก้ไขห้าหมื่น",
+      "en": "Bill door: ten thousand. Amendment door: fifty thousand.",
+      "zh": "普通法案门：一万人。修宪门：五万人。"
+    }
+  },
+  {
+    "id": "civic-12",
+    "chapter": 7,
+    "sections": [
+      140
+    ],
+    "prompt": {
+      "th": "ผู้สมัครสัญญาว่าจะจ่ายเงินสาธารณะทันที ควรถามอะไรตามมาตรา 140?",
+      "en": "A candidate promises immediate public spending. What should we ask under section 140?",
+      "zh": "候选人承诺马上支出公款，依第140条应问什么？"
+    },
+    "choices": [
+      {
+        "th": "ใครตะโกนดังที่สุด",
+        "en": "Who shouts loudest",
+        "zh": "谁喊得最响"
+      },
+      {
+        "th": "มีโปสเตอร์กี่ใบ",
+        "en": "How many posters",
+        "zh": "有多少海报"
+      },
+      {
+        "th": "คนปรบมือกี่คน",
+        "en": "How many people applaud",
+        "zh": "多少人鼓掌"
+      },
+      {
+        "th": "มีกฎหมายให้อำนาจจ่ายเงินหรือเข้าเงื่อนไขข้อยกเว้นหรือไม่",
+        "en": "Is spending authorised by law or covered by an applicable exception?",
+        "zh": "支出是否有法律授权，或符合适用的例外条件？"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 140 วางกฎหมายที่ให้อำนาจจ่ายเงินแผ่นดินและข้อยกเว้นตามเงื่อนไข คำสัญญาหาเสียงอย่างเดียวไม่ใช่ฐานกฎหมายในการจ่าย",
+      "en": "Section 140 sets out legal authorisation for public expenditure and conditional exceptions. A campaign promise alone is not spending authority.",
+      "zh": "第140条规定公款支出的法律授权及附条件例外。竞选承诺本身不是支出的法律依据。"
+    },
+    "hook": {
+      "th": "โต๊ะเงินต้องมีใบอนุญาตจากกฎหมาย ไม่ใช่แค่โปสเตอร์",
+      "en": "The money desk needs legal authority, not just a poster.",
+      "zh": "资金桌需要法律授权，不是一张海报。"
+    }
+  },
+  {
+    "id": "civic-13",
+    "chapter": 5,
+    "sections": [
+      62
+    ],
+    "prompt": {
+      "th": "นโยบาย «ทุกอย่างฟรี ไม่มีต้นทุนเลย» ควรตรวจเรื่องใดก่อน?",
+      "en": "“Everything is free; there is no cost.” What should we examine?",
+      "zh": "“一切免费，完全没有成本。”首先该核查什么？"
+    },
+    "choices": [
+      {
+        "th": "วินัยการเงินการคลังและความมั่นคงทางการเงินการคลังของรัฐ",
+        "en": "Fiscal discipline and the State’s fiscal stability",
+        "zh": "财政纪律及国家财政稳定"
+      },
+      {
+        "th": "สีเสื้อผู้สมัคร",
+        "en": "The candidate’s shirt colour",
+        "zh": "候选人衣服颜色"
+      },
+      {
+        "th": "จำนวนเพลงหาเสียง",
+        "en": "Number of campaign songs",
+        "zh": "竞选歌曲数量"
+      },
+      {
+        "th": "ความชอบส่วนตัวแทนหลักฐาน",
+        "en": "Personal preference instead of evidence",
+        "zh": "用个人喜好代替证据"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 62 กำหนดให้รัฐรักษาวินัยการเงินการคลังอย่างเคร่งครัดเพื่อให้ฐานะการเงินการคลังมั่นคงอย่างยั่งยืน บทนี้ไม่ตัดสินว่านโยบายใดดีหรือเลวโดยอัตโนมัติ แต่ชวนตรวจแหล่งเงินและภาระ",
+      "en": "Section 62 requires strict fiscal discipline for sustainable fiscal stability. It does not automatically decide whether a policy is good or bad; ask about funding and obligations.",
+      "zh": "第62条要求严格遵守财政纪律，维持财政的可持续稳定。这不会自动判定政策好坏；应追问资金来源及负担。"
+    },
+    "hook": {
+      "th": "เงินในลิ้นชักไม่ได้งอกเอง ถามว่ามาจากไหน",
+      "en": "Drawer coins do not grow themselves: ask where they come from.",
+      "zh": "抽屉里的钱不会自己长出来：问它从哪里来。"
+    }
+  },
+  {
+    "id": "civic-14",
+    "chapter": 6,
+    "sections": [
+      77
+    ],
+    "prompt": {
+      "th": "«ออกกฎหมายใหม่ได้เลย ไม่ต้องฟังใคร» ขาดหลักใด?",
+      "en": "“Pass a new law without listening to anyone.” Which principle is missing?",
+      "zh": "“新法律直接通过，不必听任何人。”漏掉什么原则？"
+    },
+    "choices": [
+      {
+        "th": "ต้องใช้โพลแทนสภา",
+        "en": "Polls must replace Parliament",
+        "zh": "民调须取代议会"
+      },
+      {
+        "th": "รับฟังผู้เกี่ยวข้องและวิเคราะห์ผลกระทบก่อนตรากฎหมาย",
+        "en": "Consult those concerned and analyse impacts before legislation",
+        "zh": "立法前听取相关者意见并分析影响"
+      },
+      {
+        "th": "ห้ามออกกฎหมายใหม่ทุกชนิด",
+        "en": "All new laws are prohibited",
+        "zh": "禁止制定所有新法律"
+      },
+      {
+        "th": "ผู้สมัครตัดสินคนเดียว",
+        "en": "The candidate decides alone",
+        "zh": "候选人独自决定"
+      }
+    ],
+    "answer": 1,
+    "explanation": {
+      "th": "มาตรา 77 กำหนดให้รับฟังความคิดเห็นของผู้เกี่ยวข้อง วิเคราะห์ผลกระทบ และเปิดเผยผลก่อนตรากฎหมาย การรับฟังไม่เท่ากับทุกข้อเรียกร้องต้องกลายเป็นกฎหมาย",
+      "en": "Section 77 calls for consultation, impact analysis and disclosure before legislation. Consultation does not mean every demand must become law.",
+      "zh": "第77条要求立法前征求相关者意见、分析影响并公开结果。听取意见不意味着每项诉求都必须成为法律。"
+    },
+    "hook": {
+      "th": "โต๊ะร่างกฎหมายมีเก้าอี้ให้ผู้ได้รับผลกระทบ",
+      "en": "The law desk has a chair for people affected.",
+      "zh": "立法桌前给受影响的人留一把椅子。"
+    }
+  },
+  {
+    "id": "civic-15",
+    "chapter": 15,
+    "sections": [
+      256
+    ],
+    "prompt": {
+      "th": "สมมติสมาชิก 700 คน วาระสุดท้าย 351 เสียง ส.ว. 67 และ ส.ส. กลุ่มที่กำหนด 19 จาก 100 ผ่านไหม?",
+      "en": "Fictional 700 members: final reading has 351 total yes, 67 senators and 19 of 100 MPs in the specified party group. Pass?",
+      "zh": "假设两院共700人：终读351票赞成，参议员67票，特定政党组100名议员中19票。通过吗？"
+    },
+    "choices": [
+      {
+        "th": "ผ่าน เพราะเกินครึ่ง",
+        "en": "Yes, because it exceeds half",
+        "zh": "通过；已超过半数"
+      },
+      {
+        "th": "ผ่าน เพราะ ส.ว. พอ",
+        "en": "Yes, because senators suffice",
+        "zh": "通过；参议员票数够"
+      },
+      {
+        "th": "ไม่ผ่าน เกณฑ์กลุ่ม ส.ส. ต้องอย่างน้อย 20",
+        "en": "No; the specified MP group needs at least 20",
+        "zh": "不通过；特定议员组至少需要20票"
+      },
+      {
+        "th": "ผ่าน เพราะเลือกตั้งมาแล้ว",
+        "en": "Yes, because there was an election",
+        "zh": "通过；已经选举了"
+      }
+    ],
+    "answer": 2,
+    "explanation": {
+      "th": "มาตรา 256 (6) ต้องได้เกณฑ์ทุกส่วน รวมถึงไม่น้อยกว่าร้อยละ 20 ของ ส.ส. ในพรรคที่สมาชิกมิได้เป็นรัฐมนตรี ประธานหรือรองประธานสภาผู้แทนราษฎร 19 จาก 100 ยังไม่ถึง",
+      "en": "Section 256(6) requires all thresholds, including at least 20% of MPs in parties whose members are not ministers, House Speaker or Deputy Speakers. Nineteen of 100 falls short.",
+      "zh": "第256条第6项须同时达到各门槛，包括成员未任部长、众议院议长或副议长的政党之议员至少20%赞成。100人中的19票不足。"
+    },
+    "hook": {
+      "th": "สามกุญแจต้องมาพร้อมกัน รวม ส.ว. และกลุ่ม ส.ส.",
+      "en": "Three keys together: total, senators, specified MPs.",
+      "zh": "三把钥匙一起：总票数、参议员、特定议员组。"
+    }
+  },
+  {
+    "id": "civic-16",
+    "chapter": 3,
+    "sections": [
+      34,
+      44
+    ],
+    "prompt": {
+      "th": "เราไม่ชอบคำพูดของผู้ชุมนุม จึงสรุปว่าไม่มีสิทธิพูดหรือชุมนุมได้เลยไหม?",
+      "en": "We dislike protesters’ speech. Does that alone mean they have no speech or assembly rights?",
+      "zh": "不喜欢集会者的言论，就能断定他们没有表达或集会权吗？"
+    },
+    "choices": [
+      {
+        "th": "ได้ ถ้าเราเป็นเสียงส่วนใหญ่",
+        "en": "Yes if we are the majority",
+        "zh": "可以；我们是多数就行"
+      },
+      {
+        "th": "ได้ ถ้าพวกเขาอายุน้อย",
+        "en": "Yes if they are young",
+        "zh": "可以；他们年轻就行"
+      },
+      {
+        "th": "ได้ ถ้าพวกเขาเป็นฝ่ายตรงข้าม",
+        "en": "Yes if they oppose our side",
+        "zh": "可以；他们属于对立一方就行"
+      },
+      {
+        "th": "ไม่ได้ ต้องตรวจสิทธิและเงื่อนไขจำกัดตามกฎหมาย",
+        "en": "No; examine the rights and lawful restrictions",
+        "zh": "不能；须核查权利及依法限制的条件"
+      }
+    ],
+    "answer": 3,
+    "explanation": {
+      "th": "มาตรา 34 และ 44 รับรองเสรีภาพในการแสดงความคิดเห็นและการชุมนุมตามเงื่อนไข ความไม่ชอบใจไม่ใช่ข้อจำกัดในตัวเอง ตรวจพฤติการณ์และกฎหมาย ไม่ตัดสินจากฝ่ายที่เลือก",
+      "en": "Sections 34 and 44 protect expression and assembly subject to their conditions. Dislike alone is not a restriction; examine conduct and law rather than allegiance.",
+      "zh": "第34条和44条依条件保障表达与集会自由。反感本身不是限制理由；应核查行为与法律，而非政治立场。"
+    },
+    "hook": {
+      "th": "จัตุรัสมีที่ให้คนที่เราไม่เห็นด้วยด้วย",
+      "en": "The square also has room for people we disagree with.",
+      "zh": "广场也给意见不同的人留空间。"
+    }
   }
 ]

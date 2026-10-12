@@ -10,6 +10,7 @@ export default function Page() {
         zh: "理解整个体系：你的权利、索引和术语表。",
       }}
       items={[
+        { href: "/civic/", title: { th: "ตรวจคำสัญญาในบ้านความจำ", en: "Check promises in the memory house", zh: "在记忆屋核查承诺" }, text: { th: "16 โจทย์แก้ไข สิทธิและงบประมาณ พร้อมคั่นไว้อ่านต่อ", en: "16 amendment, rights and budget puzzles; bookmark the law", zh: "16道修宪、权利与预算题；收藏条文" } },
         { href: "/amend/", title: { th: "ถ้าเราอยากแก้รัฐธรรมนูญ", en: "If we want to amend it", zh: "如果我们想修宪" }, text: { th: "เรื่องสมมติ ประตูจริง และคำตอบของคุณเอง", en: "A fictional story, real gates and your own reflection", zh: "虚构故事、真实门槛与你自己的思考" } },
         { href: "/news/", title: { th: "ข่าวสั้นหนึ่งแก้ว", en: "A cup of headlines", zh: "一杯新闻标题" }, text: { th: "หัวข่าวกฎหมายไทย พร้อมนับคำใน 7 วัน", en: "Thai-law headlines and keyword counts over 7 days", zh: "泰国法律标题与7天关键词计数" } },
         { href: "/research/", title: { th: "ทำไมผมสร้างสมุดเล่มนี้", en: "Why I built this notebook", zh: "我为何做这本笔记" }, text: { th: "Dr. Non: จุดประสงค์ วิธีเรียน และการทดสอบ", en: "Dr. Non: purpose, learning methods and testing", zh: "Dr. Non：目的、学习方法与测试" } },

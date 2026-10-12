@@ -74,6 +74,7 @@ export function Notes() {
         )}
       </p>
       <ReflectionSummary/>
+      <p><Link href="/civic/">{tr(lang, "กลับไปฝึกตรวจคำสัญญาในบ้านความจำ", "Return to the promise-checking memory house", "返回核查承诺的记忆屋")} →</Link></p>
       <label className="micro" htmlFor="notes-chapter">
         {tr(lang, "กรองตามหมวด", "Filter by chapter", "按章节筛选")}
       </label>

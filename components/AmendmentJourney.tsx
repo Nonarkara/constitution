@@ -276,6 +276,7 @@ export function AmendmentJourney() {
         </div>
         <StudyArt scene="reading" />
       </div>
+        <p><Link href="/civic/">{tr(lang,"ฝึกต่อ: ตรวจคำสัญญา 16 ข้อ","Keep practising: check 16 promises","继续练习：核查16个承诺")} →</Link></p>
       <nav
         className="journey-progress"
         aria-label={tr(lang, "ช่วงของเรื่อง", "Story stages", "故事阶段")}

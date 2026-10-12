@@ -3362,3 +3362,17 @@ footer { flex-wrap:wrap; gap:16px; }
 .hub-list strong {
   font-weight: 600;
 }
+
+/* Four memory stations: artwork above, one active story below. */
+.civic-panorama { margin: var(--space-4, 1.5rem) 0; }
+.civic-panorama img { width: 100%; height: auto; max-height: 320px; object-fit: contain; filter: var(--art); }
+.civic-rooms { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 3px solid var(--ink); margin-block: 1.5rem; }
+.civic-rooms button { display: flex; flex-direction: column; text-align: left; gap: .5rem; padding: 1rem; border: 0; border-right: 1px solid var(--line); background: transparent; }
+.civic-rooms button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.civic-rooms span { font-size: var(--micro); }
+.civic-room { max-width: 760px; }
+.civic-law-list { margin-block: 1.5rem; }
+.civic-law-list > div { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--line); padding-block: .5rem; }
+.civic-resources { border-top: 3px solid var(--ink); margin-top: 2rem; padding-top: 1rem; }
+.civic-resources li { margin-block: .75rem; }
+@media(max-width:1024px) { .civic-rooms { grid-template-columns: repeat(2,minmax(0,1fr)); } .civic-rooms button { padding: .75rem; } }
