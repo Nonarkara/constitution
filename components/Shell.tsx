@@ -12,6 +12,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   useEffect(() => setNow(Date.now()), [progress]);
   const nav = [
     ["/learn/", labels.learn],
+    ["/rights/", labels.rights],
     ["/section/", labels.search],
     ["/review/", labels.review],
     ["/sources/", labels.sources],

@@ -763,15 +763,17 @@ html[data-large="true"] {
   }
   .sidebar nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 0;
     border-bottom: 1px solid var(--line);
   }
   .sidebar nav a {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 12px 4px;
+    min-height: 44px;
+    padding: 8px 2px;
     font-size: var(--micro);
   }
   .sidebar nav a > .mono,

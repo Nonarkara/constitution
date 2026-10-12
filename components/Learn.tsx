@@ -70,9 +70,9 @@ export function Learn() {
           <p className="micro">
             {tr(
               lang,
-              "อ่านมาตราที่เกี่ยวข้องก่อนตอบ • ไม่จำกัดเวลา",
-              "Read the cited sections first · No timer",
-              "先读相关法条 · 不限时",
+              "เริ่มจากโจทย์ในชีวิตจริง • แล้วอ่านกฎหมาย • ไม่จำกัดเวลา",
+              "A real-life puzzle first · then the law · No timer",
+              "先做生活题 · 再读法条 · 不限时",
             )}
           </p>
         </div>

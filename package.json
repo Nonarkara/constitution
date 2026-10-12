@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/validate-translations.mjs && node scripts/build-podcasts.mjs && next build --webpack && node scripts/build-offline.mjs",
+    "build": "node scripts/validate-translations.mjs && node scripts/validate-cases.mjs && node scripts/build-podcasts.mjs && next build --webpack && node scripts/build-offline.mjs",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
-    "verify": "node scripts/validate-corpus.mjs && node scripts/validate-translations.mjs && npm test && npm run typecheck"
+    "verify": "node scripts/validate-corpus.mjs && node scripts/validate-translations.mjs && node scripts/validate-cases.mjs && npm test && npm run typecheck"
   },
   "dependencies": {
     "next": "^16.0.0",

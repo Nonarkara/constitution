@@ -45,7 +45,7 @@ export function Reader() {
   const section = sections.find((s) => s.number === number);
   return (
     <>
-      <span className="page-kicker mono">THE READING ROOM · 02</span>
+      <span className="page-kicker mono">THE READING ROOM · 03</span>
       <h1 id="reader-title" tabIndex={-1}>
         {tr(
           lang,

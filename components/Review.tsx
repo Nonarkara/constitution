@@ -34,7 +34,7 @@ export function Review() {
   const studied = Object.values(progress.questions).length;
   return (
     <>
-      <span className="page-kicker mono">RETURN & REMEMBER · 03</span>
+      <span className="page-kicker mono">RETURN & REMEMBER · 04</span>
       <div className="review-intro">
         <StudyArt scene="review" />
         <h1>

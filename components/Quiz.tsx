@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import questions from "@/data/questions.json";
+import cases from "@/data/cases.json";
+import { Puzzle } from "./Puzzle";
 import { sections, chapters, chineseText, readingText } from "@/lib/corpus";
 import { recordAnswer } from "@/lib/learning";
 import { useStudy } from "./Provider";
@@ -25,10 +27,16 @@ export function Quiz({
     [checked, setChecked] = useState(false),
     [read, setRead] = useState(!chapter),
     [correct, setCorrect] = useState(0);
+  // Chapter lessons open with a real-life puzzle; review sessions stay pure retrieval.
+  const [puzzle, setPuzzle] = useState(() => {
+    const own = chapter ? cases.filter((c) => c.chapter === chapter) : [];
+    return own.length ? own[Math.floor(Math.random() * own.length)] : null;
+  });
   const q = list[index];
   useEffect(() => {
     document.querySelector<HTMLElement>("#quiz-heading")?.focus();
-  }, [index, read]);
+  }, [index, read, puzzle]);
+  if (puzzle) return <Puzzle item={puzzle} onDone={() => setPuzzle(null)} />;
   if (!q)
     return (
       <section className="complete">

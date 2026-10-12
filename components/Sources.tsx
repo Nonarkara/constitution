@@ -6,7 +6,7 @@ export function Sources() {
   const { lang } = useStudy();
   return (
     <>
-      <span className="page-kicker mono">READ THE ORIGINAL · 04</span>
+      <span className="page-kicker mono">READ THE ORIGINAL · 05</span>
       <h1>
         {tr(
           lang,
