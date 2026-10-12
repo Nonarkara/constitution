@@ -2878,3 +2878,10 @@ footer { flex-wrap:wrap; gap:16px; }
  .news-filters label:first-child { flex:1 1 160px; }
  .news-filters label:last-child { flex:1 1 100px; }
 }
+@media(min-width:721px) {
+ .journey-progress { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+ .journey-progress button { min-width:0; }
+}
+@media(min-width:721px) and (max-width:1000px) {
+ .journey-progress { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
