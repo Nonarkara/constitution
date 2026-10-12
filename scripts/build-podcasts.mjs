@@ -22,7 +22,7 @@ function transcript(section, lang) {
   return intro + (lang === "th" ? section.th : lang === "en" ? (english[section.number]?.en ?? section.en) : chinese[section.number].zh);
 }
 const languages = ["th", "en", "zh"];
-const origin = "https://constitution-study.nonsmartcity.chatgpt.site";
+const origin = "https://constitution.nonarkara.org";
 const escape = (value) =>
   String(value)
     .replaceAll("&", "&amp;")

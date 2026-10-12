@@ -19,6 +19,8 @@ const paths = (await walk(root))
       !path.startsWith("podcast/") &&
       !path.startsWith(".openai/") &&
       path !== "sw.js" &&
+      path !== "404.html" && // the host redirects it to /404/, which is precached
+
       path !== "offline-manifest.json",
   )
   .sort();

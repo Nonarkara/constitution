@@ -1,0 +1,11 @@
+// Static export served as Worker assets: `npm run build && wrangler deploy`.
+{
+  "name": "constitution",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./out",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [{ "pattern": "constitution.nonarkara.org", "custom_domain": true }]
+}

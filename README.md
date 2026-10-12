@@ -11,7 +11,7 @@ npm run verify
 npm run build
 ```
 
-The deployable static site is `out/`. Hosting identity lives in `.openai/hosting.json`. Never create a second Site for this checkout.
+The deployable static site is `out/`, served from https://constitution.nonarkara.org as Cloudflare Worker assets (`wrangler.jsonc`). Deploy with `npm run build && wrangler deploy`. The earlier OpenAI Sites edition (`.openai/hosting.json`) stays up for existing links; progress moves between them through Settings export/import.
 
 ## What works
 
