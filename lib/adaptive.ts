@@ -130,3 +130,192 @@ export function analyzeUserLearning(
     },
   };
 }
+
+export type TopicWeakness = {
+  id: string;
+  title: { th: string; en: string; zh: string };
+  description: { th: string; en: string; zh: string };
+  sections: number[];
+  errorCount: number;
+  totalQuestions: number;
+  answeredCount: number;
+  accuracy: number;
+};
+
+export const CORE_TOPICS = [
+  {
+    id: "court-procedures",
+    title: {
+      th: "ศาลรัฐธรรมนูญและกระบวนการยื่นคำร้อง (ม.210–214)",
+      en: "Constitutional Court Procedures (Sec 210–214)",
+      zh: "宪法法院与诉讼审理程序（第210–214条）"
+    },
+    description: {
+      th: "การส่งเรื่องตาม ม.212 (ศาลส่ง) เทียบกับ ม.213 (ประชาชนยื่นตรงผ่านผู้ตรวจการแผ่นดิน)",
+      en: "Incidental referral (Sec 212) vs. Direct citizen petition (Sec 213)",
+      zh: "第212条法院移送与第213条公民直接申诉之区别"
+    },
+    sections: [210, 211, 212, 213, 214]
+  },
+  {
+    id: "royal-countersign",
+    title: {
+      th: "ผู้ลงนามรับสนองพระบรมราชโองการ",
+      en: "Countersignatories to Royal Commands",
+      zh: "王室谕令副署人制度"
+    },
+    description: {
+      th: "ใครลงนามแต่งตั้งนายกฯ (ประธานสภาผู้แทนฯ) เทียบกับประธานองคมนตรี (ประธานรัฐสภา)",
+      en: "Countersignatures: PM (House Speaker) vs. Privy Council President (Assembly President)",
+      zh: "任命总理（众议院议长）与任命枢密院院长（国会主席）之副署区分"
+    },
+    sections: [11, 122, 145, 158, 172, 175, 203]
+  },
+  {
+    id: "emergency-decrees",
+    title: {
+      th: "พระราชกำหนดและการตรวจสอบความฉุกเฉิน (ม.172–174)",
+      en: "Emergency Decrees & 4-Gate Review (Sec 172–174)",
+      zh: "紧急法令与紧迫性审查程序（第172–174条）"
+    },
+    description: {
+      th: "เงื่อนไขจำเป็นฉุกเฉิน และสิทธิ ส.ส./ส.ว. 1/5 เข้าชื่อส่งศาลรัฐธรรมนูญ",
+      en: "Criteria of urgent necessity & 1/5 MPs/Senators petitioning the Constitutional Court",
+      zh: "紧迫法定条件与五分之一议员提请宪法法院审查机制"
+    },
+    sections: [172, 173, 174]
+  },
+  {
+    id: "proportionality-rights",
+    title: {
+      th: "หลักความได้สัดส่วนและสิทธิฟ้องรัฐ (ม.25–26, 41, 51)",
+      en: "Proportionality & Right to Sue the State (Sec 25–26, 41, 51)",
+      zh: "比例原则与公民起诉国家权（第25–26、41、51条）"
+    },
+    description: {
+      th: "การจำกัดสิทธิต้องไม่กระทบสาระสำคัญ และสิทธิฟ้องหน่วยงานรัฐที่ไม่ปฏิบัติหน้าที่",
+      en: "Restrictions must not impair essential core; citizen right to sue non-compliant agencies",
+      zh: "限制权利不得侵犯核心本质，及对不履职国家机关提起诉讼"
+    },
+    sections: [25, 26, 33, 41, 43, 51]
+  },
+  {
+    id: "parliamentary-checks",
+    title: {
+      th: "การตรวจสอบ ส.ส./ส.ว. และการสิ้นสุดสมาชิกภาพ (ม.82, 101, 148)",
+      en: "Parliamentary Status Loss & Bill Review (Sec 82, 101, 148)",
+      zh: "议员资格终止审查与违宪法案先期审查（第82、101、148条）"
+    },
+    description: {
+      th: "การเข้าชื่อ 1/10 ส่งศาลรัฐธรรมนูญตรวจสอบสมาชิกภาพ หรือตรวจสอบร่าง พ.ร.บ. ก่อนทูลเกล้าฯ",
+      en: "1/10 signature threshold to challenge MP qualifications or bills before Royal Assent",
+      zh: "十分之一议员联名提请审查议员资格或御准前审查法案"
+    },
+    sections: [82, 98, 101, 148, 170]
+  },
+  {
+    id: "amendments-referendum",
+    title: {
+      th: "การแก้ไขรัฐธรรมนูญและประชามติ (ม.255–256)",
+      en: "Constitutional Amendments & Referendum (Sec 255–256)",
+      zh: "宪法修改程序与公决三道锁（第255–256条）"
+    },
+    description: {
+      th: "ข้อห้ามแก้ไขเด็ดขาด ม.255, เกณฑ์ ส.ว. 1/3, และเกณฑ์ทำประชามติ ม.256(8)",
+      en: "Absolute ban (Sec 255), 1/3 Senate lock, and mandatory referendums (Sec 256(8))",
+      zh: "绝对禁修条款（第255条）、参议院三分之一锁与必经公投事项"
+    },
+    sections: [255, 256]
+  }
+];
+
+export function detectTopicWeaknesses(
+  questions: Pick<Question, "id" | "sections">[],
+  progress: Progress
+): TopicWeakness[] {
+  return CORE_TOPICS.map((topic) => {
+    const secSet = new Set(topic.sections);
+    const topicQuestions = questions.filter((q) =>
+      q.sections.some((s) => secSet.has(s))
+    );
+    let totalQuestions = topicQuestions.length;
+    let answeredCount = 0;
+    let correctCount = 0;
+    let errorCount = 0;
+
+    for (const q of topicQuestions) {
+      const record = progress.questions[q.id];
+      if (record) {
+        answeredCount++;
+        if (record.correct) correctCount++;
+        else errorCount++;
+      }
+    }
+
+    const accuracy =
+      answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
+
+    return {
+      id: topic.id,
+      title: topic.title,
+      description: topic.description,
+      sections: topic.sections,
+      errorCount,
+      totalQuestions,
+      answeredCount,
+      accuracy,
+    };
+  }).sort((a, b) => b.errorCount - a.errorCount);
+}
+
+export function buildPracticeQueue(
+  allQuestions: Question[],
+  progress: Progress,
+  mode: "competition" | "weak" | "sprint" | "real-life" | "endless" | "chapter",
+  chapterNum?: number
+): Question[] {
+  if (mode === "chapter" && chapterNum) {
+    return allQuestions.filter((q) => q.chapter === chapterNum);
+  }
+
+  if (mode === "competition") {
+    // Priority to comp-* and constitutional court / procedure questions
+    const compList = allQuestions.filter((q) => q.id.startsWith("comp-"));
+    const related = allQuestions.filter(
+      (q) => !q.id.startsWith("comp-") && (q.chapter === 11 || q.chapter === 8 || q.chapter === 15)
+    );
+    const shuffledRelated = [...related].sort(() => Math.random() - 0.5);
+    return [...compList, ...shuffledRelated].slice(0, 30);
+  }
+
+  if (mode === "weak") {
+    // Questions answered with errors first, then unmastered questions from weakest chapters
+    const errorQuestions: Question[] = [];
+    const unmastered: Question[] = [];
+    for (const q of allQuestions) {
+      const rec = progress.questions[q.id];
+      if (rec && !rec.correct) {
+        errorQuestions.push(q);
+      } else if (!rec) {
+        unmastered.push(q);
+      }
+    }
+    const combined = [...errorQuestions, ...unmastered.sort(() => Math.random() - 0.5)];
+    return combined.slice(0, 20);
+  }
+
+  if (mode === "real-life") {
+    // Chapters 3 (Rights), 5 (Duties of State), and sections on citizen standing
+    const scenarioSections = new Set([25, 26, 27, 28, 29, 32, 33, 34, 41, 42, 43, 47, 50, 51, 54, 59, 212, 213]);
+    const matches = allQuestions.filter((q) => q.sections.some((s) => scenarioSections.has(s)));
+    return [...matches].sort(() => Math.random() - 0.5).slice(0, 20);
+  }
+
+  if (mode === "sprint") {
+    return [...allQuestions].sort(() => Math.random() - 0.5).slice(0, 10);
+  }
+
+  // Endless / all
+  return [...allQuestions].sort(() => Math.random() - 0.5);
+}
+

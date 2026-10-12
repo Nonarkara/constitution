@@ -17192,5 +17192,1209 @@
       "en": "Section 279 says NCPO announcements or orders are repealed or amended by an Act, except executive-power ones, which can be handled by a Prime Minister's order or a Cabinet resolution. The section does not make a Constitutional Court ruling the route for repeal. The other three statements match Section 279.",
       "zh": "第279条规定，废止或修正该委员会的公告、命令应以法律为之；本质上属于行使行政权力的，得以总理命令或内阁决议为之。本条并未规定以宪法法院裁决作为废止途径。其余三项都符合第279条。"
     }
+  },
+  {
+    "id": "comp-01",
+    "chapter": 8,
+    "sections": [
+      158
+    ],
+    "prompt": {
+      "th": "ตามรัฐธรรมนูญ ผู้มีหน้าที่ลงนามรับสนองพระบรมราชโองการแต่งตั้งนายกรัฐมนตรีคือบุคคลใด?",
+      "en": "Under the Constitution, who is required to countersign the Royal Command appointing the Prime Minister?",
+      "zh": "根据宪法，由谁签署副署任命总理的王室谕令？"
+    },
+    "choices": [
+      {
+        "th": "ประธานสภาผู้แทนราษฎร",
+        "en": "President of the House of Representatives",
+        "zh": "众议院议长"
+      },
+      {
+        "th": "ประธานวุฒิสภา",
+        "en": "President of the Senate",
+        "zh": "参议院议长"
+      },
+      {
+        "th": "ประธานองคมนตรี",
+        "en": "President of the Privy Council",
+        "zh": "枢密院院长"
+      },
+      {
+        "th": "นายกรัฐมนตรีรักษาการ",
+        "en": "Caretaker Prime Minister",
+        "zh": "看守总理"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 158 วรรคสี่ บัญญัติให้ประธานสภาผู้แทนราษฎรเป็นผู้ลงนามรับสนองพระบรมราชโองการแต่งตั้งนายกรัฐมนตรี",
+      "en": "Section 158 paragraph four explicitly provides that the President of the House of Representatives countersigns the Royal Command appointing the Prime Minister.",
+      "zh": "第158条第四款明确规定，由众议院议长副署任命总理的王室谕令。"
+    }
+  },
+  {
+    "id": "comp-02",
+    "chapter": 2,
+    "sections": [
+      11
+    ],
+    "prompt": {
+      "th": "การแต่งตั้งประธานองคมนตรี ใครเป็นผู้ลงนามรับสนองพระบรมราชโองการ?",
+      "en": "Who countersigns the Royal Command appointing the President of the Privy Council?",
+      "zh": "任命枢密院院长时，由谁签署副署王室谕令？"
+    },
+    "choices": [
+      {
+        "th": "ประธานรัฐสภา",
+        "en": "President of the National Assembly",
+        "zh": "国会主席"
+      },
+      {
+        "th": "นายกรัฐมนตรี",
+        "en": "Prime Minister",
+        "zh": "总理"
+      },
+      {
+        "th": "ประธานศาลฎีกา",
+        "en": "President of the Supreme Court",
+        "zh": "最高法院院长"
+      },
+      {
+        "th": "องคมนตรีที่อาวุโสสูงสุด",
+        "en": "Senior-most Privy Councilor",
+        "zh": "最资深枢密院大臣"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 11 กำหนดให้ประธานรัฐสภาเป็นผู้ลงนามรับสนองพระบรมราชโองการแต่งตั้งประธานองคมนตรี",
+      "en": "Section 11 provides that the President of the National Assembly countersigns the appointment of the President of the Privy Council.",
+      "zh": "第11条规定，任命枢密院院长由国会主席副署王室谕令。"
+    }
+  },
+  {
+    "id": "comp-03",
+    "chapter": 2,
+    "sections": [
+      11
+    ],
+    "prompt": {
+      "th": "การแต่งตั้งองคมนตรีอื่น (ที่ไม่ใช่ประธานองคมนตรี) ใครเป็นผู้ลงนามรับสนองพระบรมราชโองการ?",
+      "en": "Who countersigns the Royal Command appointing other Privy Councilors (not the President of the Privy Council)?",
+      "zh": "任命其他枢密院大臣（非枢密院院长）时，由谁签署副署王室谕令？"
+    },
+    "choices": [
+      {
+        "th": "ประธานองคมนตรี",
+        "en": "President of the Privy Council",
+        "zh": "枢密院院长"
+      },
+      {
+        "th": "นายกรัฐมนตรี",
+        "en": "Prime Minister",
+        "zh": "总理"
+      },
+      {
+        "th": "ประธานรัฐสภา",
+        "en": "President of the National Assembly",
+        "zh": "国会主席"
+      },
+      {
+        "th": "ประธานศาลรัฐธรรมนูญ",
+        "en": "President of the Constitutional Court",
+        "zh": "宪法法院院长"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 11 วรรคสี่ บัญญัติให้ประธานองคมนตรีเป็นผู้ลงนามรับสนองพระบรมราชโองการแต่งตั้งองคมนตรีอื่น",
+      "en": "Section 11 paragraph four states that the President of the Privy Council countersigns the appointment of other Privy Councilors.",
+      "zh": "第11条第四款规定，任命其他枢密院大臣由枢密院院长副署王室谕令。"
+    }
+  },
+  {
+    "id": "comp-04",
+    "chapter": 11,
+    "sections": [
+      212
+    ],
+    "prompt": {
+      "th": "ในคดีที่พิจารณาในศาล หากคู่ความโต้แย้งว่ากฎหมายที่ใช้ขัดรัฐธรรมนูญ ศาลนั้นต้องดำเนินการอย่างไรตามมาตรา 212?",
+      "en": "In a trial court case, if a party contends that an applicable law violates the Constitution, what must the court do under Section 212?",
+      "zh": "在法院审理案件中，若当事人抗辩适用的法律违宪，该法院依第212条应如何处理？"
+    },
+    "choices": [
+      {
+        "th": "ส่งความเห็นต่อศาลรัฐธรรมนูญและรอการพิพากษาคดีไว้ชั่วคราว",
+        "en": "Submit the opinion to Constitutional Court and stay judgment temporarily",
+        "zh": "将意见提交宪法法院并暂时停止审理裁决"
+      },
+      {
+        "th": "ให้ศาลนั้นวินิจฉัยชี้ขาดเองว่ากฎหมายขัดหรือไม่ทันที",
+        "en": "Immediately decide the constitutional validity on its own",
+        "zh": "由该法院自行直接裁决法律是否违宪"
+      },
+      {
+        "th": "ยกฟ้องคดีนั้นทันทีโดยไม่ต้องพิจารณาต่อ",
+        "en": "Dismiss the lawsuit immediately without further proceedings",
+        "zh": "直接驳回起诉无需继续审理"
+      },
+      {
+        "th": "ส่งเรื่องให้รัฐสภาแก้ไขกฎหมายก่อนตัดสิน",
+        "en": "Send the matter to Parliament to amend the law first",
+        "zh": "先送交国会修改法律再作裁决"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 212 กำหนดว่าหากยังไม่มีคำวินิจฉัยของศาลรัฐธรรมนูญ ให้ศาลส่งความเห็นต่อศาลรัฐธรรมนูญและรอการพิพากษาคดีไว้ชั่วคราว",
+      "en": "Section 212 dictates that unless already ruled upon, the court must stay its judgment and submit the issue to the Constitutional Court.",
+      "zh": "第212条规定，若尚无宪法法院裁定，该法院须暂停判决并将该法律问题送交宪法法院裁决。"
+    }
+  },
+  {
+    "id": "comp-05",
+    "chapter": 11,
+    "sections": [
+      213
+    ],
+    "prompt": {
+      "th": "บุคคลที่ถูกละเมิดสิทธิเสรีภาพตามรัฐธรรมนูญจะยื่นคำร้องตรงต่อศาลรัฐธรรมนูญตามมาตรา 213 ได้เมื่อใด?",
+      "en": "When can an individual whose constitutional rights are violated petition the Constitutional Court directly under Section 213?",
+      "zh": "被侵犯宪法权利的个人何时能依第213条直接向宪法法院提出诉求？"
+    },
+    "choices": [
+      {
+        "th": "ยื่นผ่านผู้ตรวจการแผ่นดินก่อนและไม่มีทางเยียวยาอื่นแล้ว",
+        "en": "After petitioning through the Ombudsman and having exhausted other remedies",
+        "zh": "先向监察员申诉且无其他法定救济途径之后"
+      },
+      {
+        "th": "ยื่นได้ทันทีโดยไม่ต้องผ่านองค์กรใดและฟ้องคำพิพากษาศาลได้",
+        "en": "Immediately without going through any organ, even against court judgments",
+        "zh": "可直接向宪法法院申诉且可就法院判决提起申诉"
+      },
+      {
+        "th": "ต้องได้รับความยินยอมจากนายกรัฐมนตรีก่อนเสมอ",
+        "en": "Only with prior consent of the Prime Minister",
+        "zh": "必须先经总理书面同意"
+      },
+      {
+        "th": "ต้องรวมชื่อประชาชนให้ได้ 10,000 คนก่อนยื่น",
+        "en": "Only after gathering 10,000 voter signatures",
+        "zh": "必须集齐10,000名选民签名"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 213 กำหนดสิทธิประชาชนยื่นคำร้องเมื่อถูกละเมิดสิทธิ แต่ต้องเป็นไปตาม พ.ร.ป.วิธีพิจารณาของศาลรัฐธรรมนูญ โดยต้องไม่อยู่ระหว่างฟ้องศาลอื่นและไม่ใช่การฟ้องคำพิพากษาของศาล",
+      "en": "Section 213 grants individual standing for constitutional rights violations, subject to statutory exhaustion and excluding appeals of court judgments.",
+      "zh": "第213条赋予公民在权利受侵害时的申诉权，但须用尽其他救济且不得针对其他法院之生效裁判。"
+    }
+  },
+  {
+    "id": "comp-06",
+    "chapter": 11,
+    "sections": [
+      200,
+      207
+    ],
+    "prompt": {
+      "th": "ตุลาการศาลรัฐธรรมนูญมีจำนวนกี่คน และมีวาระดำรงตำแหน่งอย่างไรตามมาตรา 200 และมาตรา 207?",
+      "en": "How many Constitutional Court judges are there, and what is their term of office under Section 200 and Section 207?",
+      "zh": "宪法法院法官共有几人？依第200条和第207条其任期如何规定？"
+    },
+    "choices": [
+      {
+        "th": "9 คน วาระ 7 ปี ดำรงตำแหน่งได้เพียงวาระเดียว",
+        "en": "9 judges, 7-year term, single term only",
+        "zh": "9人，任期7年，仅限连任一届（不得连任）"
+      },
+      {
+        "th": "9 คน วาระ 9 ปี ดำรงตำแหน่งได้สองวาระ",
+        "en": "9 judges, 9-year term, maximum two terms",
+        "zh": "9人，任期9年，最多两届"
+      },
+      {
+        "th": "7 คน วาระ 5 ปี ดำรงตำแหน่งจนถึงอายุ 70 ปี",
+        "en": "7 judges, 5-year term, until age 70",
+        "zh": "7人，任期5年，至70岁退休"
+      },
+      {
+        "th": "15 คน วาระ 6 ปี ตามมติของที่ประชุมใหญ่ศาลฎีกา",
+        "en": "15 judges, 6-year term, selected by Supreme Court",
+        "zh": "15人，任期6年，由最高法院选出"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 200 บัญญัติให้ศาลรัฐธรรมนูญประกอบด้วยตุลาการ 9 คน และมาตรา 207 กำหนดให้มีวาระ 7 ปี ดำรงตำแหน่งได้เพียงวาระเดียว",
+      "en": "Section 200 establishes 9 Constitutional Court judges, and Section 207 fixes their tenure at 7 years for a single term only.",
+      "zh": "第200条设立9位宪法法院法官，第207条规定任期为7年且只能担任一届。"
+    }
+  },
+  {
+    "id": "comp-07",
+    "chapter": 11,
+    "sections": [
+      211
+    ],
+    "prompt": {
+      "th": "องค์ประชุมของตุลาการศาลรัฐธรรมนูญในการนั่งพิจารณาและทำคำวินิจฉัยต้องมีไม่น้อยกว่ากี่คนตามมาตรา 211?",
+      "en": "What is the minimum quorum of Constitutional Court judges required to hear and decide a case under Section 211?",
+      "zh": "依第211条，宪法法院开庭审理并作出裁决的法定最低出席人数是多少？"
+    },
+    "choices": [
+      {
+        "th": "ไม่น้อยกว่า 7 คน",
+        "en": "Not less than 7 judges",
+        "zh": "不少于7人"
+      },
+      {
+        "th": "ไม่น้อยกว่า 5 คน",
+        "en": "Not less than 5 judges",
+        "zh": "不少于5人"
+      },
+      {
+        "th": "ครบทั้ง 9 คนเท่านั้น",
+        "en": "All 9 judges must be present",
+        "zh": "必须全员9人到齐"
+      },
+      {
+        "th": "กึ่งหนึ่งของจำนวนตุลาการที่มีอยู่",
+        "en": "More than half of existing judges",
+        "zh": "在任法官过半数"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 211 บัญญัติว่าองค์ประชุมของศาลรัฐธรรมนูญในการนั่งพิจารณาและในการทำคำวินิจฉัย ต้องประกอบด้วยตุลาการไม่น้อยกว่า 7 คน",
+      "en": "Section 211 requires a quorum of not less than 7 judges for both hearing and delivering decisions.",
+      "zh": "第211条规定，宪法法院开庭审判及作出裁判之法定人数不得少于7人。"
+    }
+  },
+  {
+    "id": "comp-08",
+    "chapter": 8,
+    "sections": [
+      172
+    ],
+    "prompt": {
+      "th": "หากสมาชิกสภาผู้แทนราษฎรเห็นว่าพระราชกำหนดที่ออกไม่เป็นไปตามเงื่อนไขฉุกเฉิน ต้องเข้าชื่อกันจำนวนเท่าใดส่งศาลรัฐธรรมนูญตามมาตรา 172?",
+      "en": "If MPs believe an Emergency Decree fails the urgent necessity criteria, what proportion must petition the Constitutional Court under Section 172?",
+      "zh": "若众议员认为紧急法令不符合紧迫必要性条件，依第172条须联合多少比例人数向宪法法院提请审查？"
+    },
+    "choices": [
+      {
+        "th": "ไม่น้อยกว่า 1 ใน 5 ของจำนวนสมาชิกทั้งหมดเท่าที่มีอยู่",
+        "en": "Not less than one-fifth of existing members",
+        "zh": "不少于现有议员总数的五分之一"
+      },
+      {
+        "th": "ไม่น้อยกว่า 1 ใน 10 ของจำนวนสมาชิกทั้งหมดเท่าที่มีอยู่",
+        "en": "Not less than one-tenth of existing members",
+        "zh": "不少于现有议员总数的十分之一"
+      },
+      {
+        "th": "ไม่น้อยกว่ากึ่งหนึ่งของสมาชิกที่มาประชุม",
+        "en": "Not less than half of members present",
+        "zh": "不少于出席议员半数"
+      },
+      {
+        "th": "ต้องเป็นมติร่วมกันของทุกพรรคฝ่ายค้าน",
+        "en": "Unanimous resolution of all opposition parties",
+        "zh": "所有反对党的一致决议"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 172 วรรคสาม กำหนดให้ ส.ส. หรือ ส.ว. ไม่น้อยกว่า 1 ใน 5 ของแต่ละสภา หรือรวมกันไม่น้อยกว่า 1 ใน 5 มีสิทธิเสนอความเห็นต่อศาลรัฐธรรมนูญตรวจสอบความจำเป็นฉุกเฉิน",
+      "en": "Section 172 paragraph three requires not less than one-fifth of members of either house or both combined to petition the Constitutional Court.",
+      "zh": "第172条第三款规定，任何一院不少于五分之一议员或两院合计不少于五分之一可提请宪法法院审查紧急法令紧迫性。"
+    }
+  },
+  {
+    "id": "comp-09",
+    "chapter": 7,
+    "sections": [
+      148
+    ],
+    "prompt": {
+      "th": "ร่างพระราชบัญญัติที่รัฐสภาให้ความเห็นชอบแล้ว แต่ก่อนนายกฯ นำขึ้นทูลเกล้าฯ หาก ส.ส. หรือ ส.ว. เห็นว่าขัดรัฐธรรมนูญ ต้องเข้าชื่อเท่าใดตามมาตรา 148?",
+      "en": "After Parliament approves a bill but before Royal Assent, what proportion of MPs or Senators may petition the Constitutional Court under Section 148?",
+      "zh": "国会通过法案后、总理呈请御准前，若议员认为法案违宪，依第148条须联名多少人提请宪法法院？"
+    },
+    "choices": [
+      {
+        "th": "ไม่น้อยกว่า 1 ใน 10 ของจำนวนสมาชิกทั้งหมดเท่าที่มีอยู่ของแต่ละสภา",
+        "en": "Not less than one-tenth of existing members of either house",
+        "zh": "不少于任一议院现有议员总数的十分之一"
+      },
+      {
+        "th": "ไม่น้อยกว่า 1 ใน 5 ของจำนวนสมาชิกทั้งหมดเท่าที่มีอยู่",
+        "en": "Not less than one-fifth of existing members",
+        "zh": "不少于现有议员总数的五分之一"
+      },
+      {
+        "th": "ไม่น้อยกว่ากึ่งหนึ่งของสภาผู้แทนราษฎร",
+        "en": "Not less than half of the House of Representatives",
+        "zh": "不少于众议院现有议员半数"
+      },
+      {
+        "th": "ผู้นำฝ่ายค้านในสภาผู้แทนราษฎรคนเดียวก็ยื่นได้",
+        "en": "The Opposition Leader alone may submit",
+        "zh": "反对党领袖一人即可提出"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 148 กำหนดให้ ส.ส. หรือ ส.ว. ไม่น้อยกว่า 1 ใน 10 ของแต่ละสภา หรือรวมกันไม่น้อยกว่า 1 ใน 10 ส่งความเห็นให้ศาลรัฐธรรมนูญวินิจฉัยก่อนนายกฯ นำขึ้นทูลเกล้าฯ",
+      "en": "Section 148 requires not less than one-tenth of members of either house or both combined to submit unconstitutionality opinions before Royal Assent.",
+      "zh": "第148条规定，任一议院不少于十分之一议员或两院合计不少于十分之一可在呈请御准前送交宪法法院审查。"
+    }
+  },
+  {
+    "id": "comp-10",
+    "chapter": 3,
+    "sections": [
+      26
+    ],
+    "prompt": {
+      "th": "การตรากฎหมายจำกัดสิทธิและเสรีภาพของประชาชนตามมาตรา 26 มีข้อห้ามเด็ดขาดและหลักสำคัญที่สุดในข้อใด?",
+      "en": "What is the absolute constitutional prohibition and core principle when enacting laws restricting rights under Section 26?",
+      "zh": "依第26条制定限制公民权利自由的法律时，最核心的绝对禁令与法定原则是什么？"
+    },
+    "choices": [
+      {
+        "th": "ต้องไม่กระทบกระเทือนสาระสำคัญแห่งสิทธิและต้องได้สัดส่วน",
+        "en": "Must not affect the essential substance of rights and must satisfy proportionality",
+        "zh": "不得损害权利的核心实质内容，且必须符合比例原则"
+      },
+      {
+        "th": "จำกัดได้ทั้งหมดหากคณะรัฐมนตรีเห็นว่าเป็นประโยชน์ทางเศรษฐกิจ",
+        "en": "Can restrict entirely if the Cabinet deems economically beneficial",
+        "zh": "只要内阁认为具有经济效益即可全面限制"
+      },
+      {
+        "th": "ต้องให้ประชาชนทุกคนลงประชามติเห็นชอบก่อนประกาศใช้",
+        "en": "Must hold a nationwide referendum prior to enactment",
+        "zh": "必须在颁布前经全体全民公投通过"
+      },
+      {
+        "th": "ทำได้เฉพาะในพื้นที่ที่มีการประกาศสถานการณ์ฉุกเฉินเท่านั้น",
+        "en": "Allowed exclusively in areas under declared state of emergency",
+        "zh": "仅限在宣布紧急状态的地区方可实行"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 26 บัญญัติชัดเจนว่าการจำกัดสิทธิต้องไม่กระทบกระเทือนสาระสำคัญแห่งสิทธิ และต้องไม่ขัดต่อหลักนิติธรรมหรือเกินกว่าเหตุ",
+      "en": "Section 26 explicitly prohibits affecting the essential core of rights and mandates strict adherence to the proportionality principle.",
+      "zh": "第26条明确规定，限制权利不得侵犯权利的实质本质，且不得违反比例原则及法治原则。"
+    }
+  },
+  {
+    "id": "comp-11",
+    "chapter": 3,
+    "sections": [
+      33
+    ],
+    "prompt": {
+      "th": "เจ้าพนักงานจะเข้าไปในเคหสถานของบุคคลโดยปราศจากความยินยอมได้ในกรณีใดตามมาตรา 33?",
+      "en": "Under Section 33, in what circumstances may an officer enter a person's dwelling without consent?",
+      "zh": "依第33条，执法人员在何种法定情形下可在未经同意的情况下进入他人住宅？"
+    },
+    "choices": [
+      {
+        "th": "มีหมายศาลหรือมีเหตุยกเว้นตามที่กฎหมายบัญญัติ",
+        "en": "With a court warrant or legal exception provided by law",
+        "zh": "持有法院令状或具有法律规定的例外法定事由"
+      },
+      {
+        "th": "ผู้ว่าราชการจังหวัดมีคำสั่งทางวาจา",
+        "en": "With verbal order from the provincial governor",
+        "zh": "经府尹口头下令即可进入"
+      },
+      {
+        "th": "เมื่อมีเพื่อนบ้านร้องเรียนเรื่องส่งเสียงดัง",
+        "en": "Whenever neighbors complain about loud noise",
+        "zh": "只要有邻居投诉噪音扰民即可进入"
+      },
+      {
+        "th": "เจ้าหน้าที่ตำรวจชั้นประทวนมีดุลพินิจสงสัยเอง",
+        "en": "At the personal suspicion of any police officer",
+        "zh": "基层警员凭借个人怀疑自行决定"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 33 คุ้มครองสิทธิในเคหสถาน การค้นจะกระทำมิได้เว้นแต่มีคำสั่งหรือหมายของศาล หรือมีเหตุตามที่กฎหมายบัญญัติ",
+      "en": "Section 33 protects the right to dwelling privacy; searches are prohibited without a court warrant or specific statutory exceptions.",
+      "zh": "第33条保护住宅隐私不受侵犯；非有法院搜查令状或法律特别明文规定事由，不得搜查。"
+    }
+  },
+  {
+    "id": "comp-12",
+    "chapter": 3,
+    "sections": [
+      43
+    ],
+    "prompt": {
+      "th": "สิทธิของชุมชนในการจัดการ บำรุงรักษา และใช้ประโยชน์จากทรัพยากรธรรมชาติและสิ่งแวดล้อม ได้รับการรับรองไว้ในมาตราใด?",
+      "en": "Under which Section are community rights to manage, conserve, and utilize local natural resources and environment guaranteed?",
+      "zh": "社区管理、维护及利用当地自然资源与环境的权利，受宪法哪一条保障？"
+    },
+    "choices": [
+      {
+        "th": "มาตรา 43",
+        "en": "Section 43",
+        "zh": "第43条"
+      },
+      {
+        "th": "มาตรา 1",
+        "en": "Section 1",
+        "zh": "第1条"
+      },
+      {
+        "th": "มาตรา 88",
+        "en": "Section 88",
+        "zh": "第88条"
+      },
+      {
+        "th": "มาตรา 145",
+        "en": "Section 145",
+        "zh": "第145条"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 43 (2) รับรองสิทธิของบุคคลและชุมชนในการจัดการ บำรุงรักษา และใช้ประโยชน์จากทรัพยากรธรรมชาติ สิ่งแวดล้อม และความหลากหลายทางชีวภาพ",
+      "en": "Section 43 (2) guarantees the rights of individuals and communities to manage, maintain, and exploit natural resources, environment, and biodiversity.",
+      "zh": "第43条第(2)款保障个人及社区参与管理、保护及永续利用自然资源、环境和生物多样性的权利。"
+    }
+  },
+  {
+    "id": "comp-13",
+    "chapter": 15,
+    "sections": [
+      255
+    ],
+    "prompt": {
+      "th": "ญัตติขอแก้ไขเพิ่มเติมรัฐธรรมนูญเรื่องใดที่มาตรา 255 ห้ามมิให้มีการแก้ไขโดยเด็ดขาด?",
+      "en": "Which amendment motion is strictly and absolutely prohibited from being made under Section 255?",
+      "zh": "依第255条，哪项修宪提案被绝对明文禁止提出？"
+    },
+    "choices": [
+      {
+        "th": "การเปลี่ยนรูปของรัฐหรือเปลี่ยนแปลงการปกครองระบอบประชาธิปไตยฯ",
+        "en": "Changing the form of state or the democratic regime with King as Head",
+        "zh": "改变国家形态或改变以国王为元首的民主政体"
+      },
+      {
+        "th": "การปรับปรุงโครงสร้างภาษีที่ดินและสิ่งปลูกสร้าง",
+        "en": "Modifying land and building taxation structures",
+        "zh": "调整土地与不动产税结构"
+      },
+      {
+        "th": "การเพิ่มจำนวนสมาชิกสภาผู้แทนราษฎรระบบบัญชีรายชื่อ",
+        "en": "Increasing the number of party-list members of parliament",
+        "zh": "增加政党名单制众议员人数"
+      },
+      {
+        "th": "การปรับลดวาระดำรงตำแหน่งของกรรมการองค์กรอิสระ",
+        "en": "Shortening terms of independent organ commissioners",
+        "zh": "缩短独立机构委员的任期"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 255 บัญญัติห้ามแก้ไขเพิ่มเติมรัฐธรรมนูญที่มีผลเป็นการเปลี่ยนแปลงการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือเปลี่ยนแปลงรูปของรัฐ",
+      "en": "Section 255 absolutely prohibits any constitutional amendment that alters the democratic regime with the King as Head of State or changes the unitary form of the State.",
+      "zh": "第255条绝对禁止旨在改变以国王为元首的民主政体或改变单一国家形态的宪法修改。"
+    }
+  },
+  {
+    "id": "comp-14",
+    "chapter": 15,
+    "sections": [
+      256
+    ],
+    "prompt": {
+      "th": "การลงมติเห็นชอบร่างแก้ไขเพิ่มเติมรัฐธรรมนูญในวาระที่ 1 และวาระที่ 3 ต้องมีคะแนนเสียง ส.ว. เห็นชอบเท่าใดตามมาตรา 256?",
+      "en": "Under Section 256, what minimum Senate vote threshold is required to pass a constitutional amendment in the 1st and 3rd readings?",
+      "zh": "依第256条，通过修宪草案第一读会及第三读会必须获得参议院至少多少票赞成？"
+    },
+    "choices": [
+      {
+        "th": "ไม่น้อยกว่า 1 ใน 3 ของจำนวนสมาชิกวุฒิสภาทั้งหมดเท่าที่มีอยู่",
+        "en": "Not less than one-third of total existing Senators",
+        "zh": "不少于现有参议院议员总数的三分之一"
+      },
+      {
+        "th": "ไม่น้อยกว่ากึ่งหนึ่งของสมาชิกวุฒิสภาที่มาประชุม",
+        "en": "Not less than half of Senators present",
+        "zh": "不少于出席参议员过半数"
+      },
+      {
+        "th": "ไม่น้อยกว่า 2 ใน 3 ของสมาชิกวุฒิสภาทั้งหมด",
+        "en": "Not less than two-thirds of total Senators",
+        "zh": "不少于参议院全体总数的三分之二"
+      },
+      {
+        "th": "ไม่จำเป็นต้องมี ส.ว. เห็นชอบ หาก ส.ส. เกินกึ่งหนึ่ง",
+        "en": "No Senate threshold if MPs exceed half",
+        "zh": "若众议员过半则无需参议员票数门槛"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 256 (3) และ (6) กำหนดเป็นเงื่อนไขสำคัญว่าคะแนนเสียงเห็นชอบต้องมีสมาชิกวุฒิสภาเห็นชอบด้วยไม่น้อยกว่า 1 ใน 3 ของจำนวน ส.ว. ทั้งหมดเท่าที่มีอยู่",
+      "en": "Section 256 paragraphs (3) and (6) mandate that amendment passage requires votes from not less than one-third of total existing Senators.",
+      "zh": "第256条第(3)款及第(6)款明确规定，赞成票中必须包含不少于现有参议员总数三分之一的赞成票。"
+    }
+  },
+  {
+    "id": "comp-15",
+    "chapter": 15,
+    "sections": [
+      256
+    ],
+    "prompt": {
+      "th": "ร่างแก้ไขเพิ่มเติมรัฐธรรมนูญในเรื่องใดต่อไปนี้ที่มาตรา 256 (8) กำหนดว่าต้องจัดให้มีการออกเสียงประชามติก่อน?",
+      "en": "Which of the following constitutional amendments requires a mandatory national referendum under Section 256 (8)?",
+      "zh": "依第256条第(8)款，修改以下哪项内容必须先举行全民公决？"
+    },
+    "choices": [
+      {
+        "th": "หมวด 1 หมวด 2 หรือหมวด 15 หรือคุณสมบัติองค์กรอิสระ",
+        "en": "Chapter 1, Chapter 2, Chapter 15, or independent organ qualifications",
+        "zh": "第1章、第2章、第15章或有关独立机构法定资质"
+      },
+      {
+        "th": "การปรับปรุงกฎหมายวิธีพิจารณาความแพ่ง",
+        "en": "Amendments to civil procedure laws",
+        "zh": "民事诉讼程序法的常规修订"
+      },
+      {
+        "th": "การขยายถนนและโครงสร้างพื้นฐานคมนาคม",
+        "en": "Highway and transportation infrastructure expansion",
+        "zh": "交通基础设施扩建规划"
+      },
+      {
+        "th": "การตั้งงบประมาณรายจ่ายประจำปีของกระทรวงการต่างประเทศ",
+        "en": "Annual foreign ministry budget allocation",
+        "zh": "外交部年度预算案审议"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 256 (8) กำหนดให้ต้องจัดทำประชามติหากแก้ไขเพิ่มเติมหมวด 1 บททั่วไป หมวด 2 พระมหากษัตริย์ หรือหมวด 15 การแก้ไขเพิ่มเติมรัฐธรรมนูญ หรือเรื่องเกี่ยวกับศาลหรือองค์กรอิสระ",
+      "en": "Section 256 (8) requires a referendum for amendments to Chapter 1, Chapter 2, Chapter 15, or qualifications/powers of courts or independent organs.",
+      "zh": "第256条第(8)款规定，修改第1章总则、第2章国王、第15章宪法修改，或涉及法院与独立机构职责时必须举行公投。"
+    }
+  },
+  {
+    "id": "comp-16",
+    "chapter": 14,
+    "sections": [
+      249,
+      252
+    ],
+    "prompt": {
+      "th": "ตามรัฐธรรมนูญหมวด 14 สมาชิกสภาท้องถิ่นและผู้บริหารท้องถิ่นต้องมีที่มาอย่างไรตามมาตรา 252?",
+      "en": "Under Chapter 14, how must members of local assemblies and local administrators be selected according to Section 252?",
+      "zh": "根据宪法第14章第252条，地方议会议员与地方行政长官应如何产生？"
+    },
+    "choices": [
+      {
+        "th": "มาจากการเลือกตั้งของประชาชนในท้องถิ่น",
+        "en": "Elected by local residents",
+        "zh": "由当地民众通过选举产生"
+      },
+      {
+        "th": "มาจากการแต่งตั้งโดยรัฐมนตรีว่าการกระทรวงมหาดไทย",
+        "en": "Appointed by Minister of Interior",
+        "zh": "由内政部长统一任命"
+      },
+      {
+        "th": "มาจากการสับเปลี่ยนหมุนเวียนของข้าราชการพลเรือน",
+        "en": "Rotated among civil servants",
+        "zh": "由公务员定期轮岗进驻"
+      },
+      {
+        "th": "มาจากการคัดเลือกโดยผู้ว่าราชการจังหวัดเพียงผู้เดียว",
+        "en": "Selected solely by the provincial governor",
+        "zh": "由府尹一人直接遴选"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 252 กำหนดให้สมาชิกสภาท้องถิ่นต้องมาจากการเลือกตั้ง และผู้บริหารท้องถิ่นให้มาจากการเลือกตั้งหรือความเห็นชอบของสภาท้องถิ่น",
+      "en": "Section 252 provides that local assembly members must be elected, and local administrators must be elected or approved by the local assembly.",
+      "zh": "第252条规定，地方议会议员须经选举产生，地方行政长官由民众选举产生或经地方议会同意。"
+    }
+  },
+  {
+    "id": "comp-17",
+    "chapter": 7,
+    "sections": [
+      133
+    ],
+    "prompt": {
+      "th": "ผู้มีสิทธิเลือกตั้งจำนวนไม่น้อยกว่าเท่าใด มีสิทธิเข้าชื่อเสนอร่าง พ.ร.บ. ในหมวด 3 หรือหมวด 5 ตามมาตรา 133?",
+      "en": "How many eligible voters are required to co-sponsor a legislative bill under Chapter 3 or Chapter 5 pursuant to Section 133?",
+      "zh": "依第133条，不少于多少名选民有权联名提出涉及第3章或第5章的法律草案？"
+    },
+    "choices": [
+      {
+        "th": "ไม่น้อยกว่า 10,000 คน",
+        "en": "Not less than 10,000 voters",
+        "zh": "不少于10,000人"
+      },
+      {
+        "th": "ไม่น้อยกว่า 50,000 คน",
+        "en": "Not less than 50,000 voters",
+        "zh": "不少于50,000人"
+      },
+      {
+        "th": "ไม่น้อยกว่า 100,000 คน",
+        "en": "Not less than 100,000 voters",
+        "zh": "不少于100,000人"
+      },
+      {
+        "th": "ไม่น้อยกว่า 5,000 คน",
+        "en": "Not less than 5,000 voters",
+        "zh": "不少于5,000人"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 133 (3) ให้สิทธิผู้มีสิทธิเลือกตั้งไม่น้อยกว่า 10,000 คน เข้าชื่อเสนอร่าง พ.ร.บ. เกี่ยวกับสิทธิเสรีภาพหรือหน้าที่ของรัฐ",
+      "en": "Section 133 (3) entitles not less than 10,000 eligible voters to propose bills concerning fundamental rights or duties of the State.",
+      "zh": "第133条第(3)款赋予不少于10,000名选民就公民权利自由或国家职责事项联名提出法案的权利。"
+    }
+  },
+  {
+    "id": "comp-18",
+    "chapter": 7,
+    "sections": [
+      82,
+      101
+    ],
+    "prompt": {
+      "th": "การยื่นขอให้ศาลรัฐธรรมนูญวินิจฉัยว่าสมาชิกภาพของ ส.ส. สิ้นสุดลงหรือไม่ ส.ส. ต้องเข้าชื่อกันเท่าใดตามมาตรา 82?",
+      "en": "What proportion of MPs must co-sign a petition under Section 82 requesting the Constitutional Court to rule on termination of an MP's membership?",
+      "zh": "依第82条提请宪法法院裁决众议员资格是否终止，众议员须联名达到多少比例？"
+    },
+    "choices": [
+      {
+        "th": "ไม่น้อยกว่า 1 ใน 10 ของจำนวนสมาชิกทั้งหมดเท่าที่มีอยู่",
+        "en": "Not less than one-tenth of total existing members",
+        "zh": "不少于现有议员总数的十分之一"
+      },
+      {
+        "th": "ไม่น้อยกว่า 1 ใน 5 ของจำนวนสมาชิกทั้งหมดเท่าที่มีอยู่",
+        "en": "Not less than one-fifth of total existing members",
+        "zh": "不少于现有议员总数的五分之一"
+      },
+      {
+        "th": "ไม่น้อยกว่ากึ่งหนึ่งของสมาชิกสภาผู้แทนราษฎร",
+        "en": "Not less than half of House of Representatives",
+        "zh": "不少于众议院议员过半数"
+      },
+      {
+        "th": "ต้องมีมติ 2 ใน 3 ของที่ประชุมร่วมรัฐสภา",
+        "en": "Two-thirds resolution of joint parliamentary sitting",
+        "zh": "须经国会两院联席会议三分之二决议"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 82 กำหนดให้ ส.ส. หรือ ส.ว. ไม่น้อยกว่า 1 ใน 10 ของแต่ละสภา เข้าชื่อร้องต่อประธานสภาเพื่อส่งศาลรัฐธรรมนูญวินิจฉัยสมาชิกภาพสิ้นสุดลงตามมาตรา 101",
+      "en": "Section 82 provides that not less than one-tenth of members of either house may petition the Constitutional Court regarding membership termination under Section 101.",
+      "zh": "第82条规定，任一议院不少于十分之一议员可提请宪法法院就第101条规定的议员资格终止事由作出裁决。"
+    }
+  },
+  {
+    "id": "comp-19",
+    "chapter": 11,
+    "sections": [
+      210
+    ],
+    "prompt": {
+      "th": "กรณีเกิดข้อขัดแย้งเกี่ยวกับหน้าที่และอำนาจระหว่างคณะรัฐมนตรีกับรัฐสภา ศาลใดมีอำนาจวินิจฉัยชี้ขาดตามมาตรา 210?",
+      "en": "In a dispute concerning the duties and powers between the Cabinet and the National Assembly, which court has jurisdiction to decide under Section 210?",
+      "zh": "当内阁与国会之间发生职责与权力争议时，依第210条由哪一法院主管裁决？"
+    },
+    "choices": [
+      {
+        "th": "ศาลรัฐธรรมนูญ",
+        "en": "The Constitutional Court",
+        "zh": "宪法法院"
+      },
+      {
+        "th": "ศาลปกครองสูงสุด",
+        "en": "The Supreme Administrative Court",
+        "zh": "最高行政法院"
+      },
+      {
+        "th": "ศาลฎีกาแผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมือง",
+        "en": "Supreme Court Criminal Division for Political Office Holders",
+        "zh": "最高法院政界人士刑事审判庭"
+      },
+      {
+        "th": "คณะกรรมการกฤษฎีกา",
+        "en": "Council of State",
+        "zh": "国务法团委员会"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 210 (2) บัญญัติให้ศาลรัฐธรรมนูญมีหน้าที่และอำนาจพิจารณาวินิจฉัยปัญหาเกี่ยวกับหน้าที่และอำนาจของสภาผู้แทนราษฎร วุฒิสภา รัฐสภา คณะรัฐมนตรี หรือองค์กรอิสระ",
+      "en": "Section 210 (2) explicitly empowers the Constitutional Court to rule on conflicts of duties and powers between Parliament, Cabinet, and independent organs.",
+      "zh": "第210条第(2)款明确赋予宪法法院裁定众议院、参议院、国会、内阁或各独立机构间职权争议的管辖权。"
+    }
+  },
+  {
+    "id": "comp-20",
+    "chapter": 8,
+    "sections": [
+      170,
+      82
+    ],
+    "prompt": {
+      "th": "การสิ้นสุดความเป็นรัฐมนตรีเฉพาะตัวเพราะขาดคุณสมบัติหรือมีลักษณะต้องห้าม สามารถส่งให้ศาลใดวินิจฉัยตามมาตรา 170?",
+      "en": "To challenge an individual Minister's loss of office due to disqualification, which court has jurisdiction under Section 170?",
+      "zh": "因丧失资格或触犯法定禁止事由而提请确认个别部长职务终止，依第170条应由哪一法院裁决？"
+    },
+    "choices": [
+      {
+        "th": "ศาลรัฐธรรมนูญ",
+        "en": "The Constitutional Court",
+        "zh": "宪法法院"
+      },
+      {
+        "th": "ศาลยุติธรรม",
+        "en": "The Court of Justice",
+        "zh": "司法法院"
+      },
+      {
+        "th": "ศาลปกครองกลาง",
+        "en": "The Central Administrative Court",
+        "zh": "中央行政法院"
+      },
+      {
+        "th": "ศาลทหารกรุงเทพ",
+        "en": "Bangkok Military Court",
+        "zh": "曼谷军事法院"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 170 วรรคสาม ให้นำมาตรา 82 มาใช้บังคับโดยอนุโลม โดย ส.ส. หรือ ส.ว. ไม่น้อยกว่า 1 ใน 10 หรือ กกต. สามารถส่งศาลรัฐธรรมนูญวินิจฉัยความเป็นรัฐมนตรีสิ้นสุดลง",
+      "en": "Section 170 paragraph three applies Section 82 mutatis mutandis, allowing one-tenth of MPs/Senators or the Election Commission to refer ministerial disqualifications to the Constitutional Court.",
+      "zh": "第170条第三款准用第82条规定，十分之一议员或选委会可提请宪法法院裁决个别部长职务终止。"
+    }
+  },
+  {
+    "id": "comp-21",
+    "chapter": 7,
+    "sections": [
+      122
+    ],
+    "prompt": {
+      "th": "พระราชกฤษฎีกาเรียกประชุม ขยายเวลาประชุม และปิดประชุมรัฐสภาสมัยวิสามัญ ใครเป็นผู้ลงนามรับสนองพระบรมราชโองการตามมาตรา 122?",
+      "en": "Under Section 122, who countersigns the Royal Decree convening, extending, or proroguing an extraordinary session of the National Assembly?",
+      "zh": "依第122条，召集、延长及闭幕国会特别会议的王室法令由谁签署副署？"
+    },
+    "choices": [
+      {
+        "th": "นายกรัฐมนตรี",
+        "en": "The Prime Minister",
+        "zh": "总理"
+      },
+      {
+        "th": "ประธานรัฐสภา",
+        "en": "President of the National Assembly",
+        "zh": "国会主席"
+      },
+      {
+        "th": "ประธานศาลฎีกา",
+        "en": "President of the Supreme Court",
+        "zh": "最高法院院长"
+      },
+      {
+        "th": "เลขาธิการสภาผู้แทนราษฎร",
+        "en": "Secretary-General of the House",
+        "zh": "众议院秘书长"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 122 กำหนดให้นายกรัฐมนตรีเป็นผู้ลงนามรับสนองพระบรมราชโองการพระราชกฤษฎีกาเรียกประชุม ขยายเวลา และปิดประชุมรัฐสภาสมัยวิสามัญ",
+      "en": "Section 122 provides that the Prime Minister countersigns Royal Decrees regarding extraordinary parliamentary sessions.",
+      "zh": "第122条规定，由总理副署有关国会特别会议召集、延期与闭会的王室法令。"
+    }
+  },
+  {
+    "id": "comp-22",
+    "chapter": 8,
+    "sections": [
+      175
+    ],
+    "prompt": {
+      "th": "การตราพระราชกฤษฎีกาที่มิได้ขัดต่อกฎหมาย พระมหากษัตริย์ทรงตราขึ้นตามคำแนะนำขององค์กรใดตามมาตรา 175?",
+      "en": "Under Section 175, upon whose advice does the King enact a Royal Decree not contrary to law?",
+      "zh": "依第175条，国王依据哪个机构的建议制定不违背法律的王室法令（Royal Decree）？"
+    },
+    "choices": [
+      {
+        "th": "คณะรัฐมนตรี",
+        "en": "The Council of Ministers (Cabinet)",
+        "zh": "内阁（部长会议）"
+      },
+      {
+        "th": "องคมนตรี",
+        "en": "The Privy Council",
+        "zh": "枢密院"
+      },
+      {
+        "th": "ศาลรัฐธรรมนูญ",
+        "en": "The Constitutional Court",
+        "zh": "宪法法院"
+      },
+      {
+        "th": "คณะกรรมการกฤษฎีกา",
+        "en": "The Council of State",
+        "zh": "国务法团委员会"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 175 บัญญัติว่าพระมหากษัตริย์ทรงไว้ซึ่งพระราชอำนาจในการตราพระราชกฤษฎีกาโดยไม่ขัดต่อกฎหมาย โดยกระทำตามคำแนะนำของคณะรัฐมนตรี",
+      "en": "Section 175 provides that the King has the royal prerogative to issue Royal Decrees not contrary to law, on the advice of the Cabinet.",
+      "zh": "第175条规定，国王依内阁建议行使制定不违反法律之王室法令的王室特权。"
+    }
+  },
+  {
+    "id": "comp-23",
+    "chapter": 8,
+    "sections": [
+      177
+    ],
+    "prompt": {
+      "th": "พระมหากษัตริย์ทรงไว้ซึ่งพระราชอำนาจในการประกาศสงครามเมื่อใดตามมาตรา 177?",
+      "en": "Under what condition does the King exercise the prerogative to declare war pursuant to Section 177?",
+      "zh": "依第177条，国王在何种法定条件下行使宣布宣战的权力？"
+    },
+    "choices": [
+      {
+        "th": "เมื่อได้รับความเห็นชอบของรัฐสภาด้วยคะแนนเสียงไม่น้อยกว่า 2 ใน 3",
+        "en": "Upon approval of the National Assembly by not less than two-thirds vote",
+        "zh": "经国会两院以不少于三分之二多数投票同意后"
+      },
+      {
+        "th": "เมื่อนายกรัฐมนตรีทูลเกล้าฯ เสนอโดยไม่ต้องผ่านสภา",
+        "en": "Upon the Prime Minister's sole proposal without parliamentary approval",
+        "zh": "只要总理单独呈请无需经国会审议"
+      },
+      {
+        "th": "เมื่อสภาความมั่นคงแห่งชาติมีมติเป็นเอกฉันท์",
+        "en": "Upon unanimous vote of the National Security Council",
+        "zh": "经国家安全委员会一致决议"
+      },
+      {
+        "th": "เมื่อกองทัพไทยทุกเหล่าทัพประกาศกฎอัยการศึกร่วมกัน",
+        "en": "Upon joint martial law declaration by all armed forces",
+        "zh": "由全军各军种联合宣布戒严时"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 177 บัญญัติว่าพระมหากษัตริย์ทรงไว้ซึ่งพระราชอำนาจในการประกาศสงครามเมื่อได้รับความเห็นชอบของรัฐสภาด้วยคะแนนเสียงไม่น้อยกว่า 2 ใน 3 ของสมาชิกทั้งหมดเท่าที่มีอยู่ของทั้งสองสภา",
+      "en": "Section 177 stipulates that declaring war requires the approval of the National Assembly by a vote of not less than two-thirds of total existing members of both houses.",
+      "zh": "第177条规定，国王在获得国会两院现有议员总数不少于三分之二赞成票批准后，方得行使宣战特权。"
+    }
+  },
+  {
+    "id": "comp-24",
+    "chapter": 11,
+    "sections": [
+      211
+    ],
+    "prompt": {
+      "th": "คำวินิจฉัยของศาลรัฐธรรมนูญมีผลผูกพันองค์กรใดบ้างตามมาตรา 211 วรรคสี่?",
+      "en": "Which state organs are bound by rulings of the Constitutional Court pursuant to Section 211 paragraph four?",
+      "zh": "依第211条第四款，宪法法院的裁决对哪些国家机构具有法定约束力？"
+    },
+    "choices": [
+      {
+        "th": "เป็นเด็ดขาด ผูกพันรัฐสภา คณะรัฐมนตรี ศาล องค์กรอิสระ และหน่วยงานของรัฐ",
+        "en": "Final and binding upon Parliament, Cabinet, Courts, Independent Organs, and state agencies",
+        "zh": "终局裁决，对国会、内阁、法院、各独立机构及所有国家机关具有普遍约束力"
+      },
+      {
+        "th": "ผูกพันเฉพาะคู่ความในคดีนั้นเท่านั้น",
+        "en": "Binding solely on the specific parties to the case",
+        "zh": "仅对该案的具体当事人具有约束力"
+      },
+      {
+        "th": "ผูกพันเฉพาะฝ่ายบริหาร แต่ไม่ผูกพันศาลยุติธรรม",
+        "en": "Binding on the executive but not on the Courts of Justice",
+        "zh": "仅约束行政机关，对司法法院不具约束力"
+      },
+      {
+        "th": "เป็นเพียงคำแนะนำทางวิชาการ ไม่มีผลบังคับทางกฎหมาย",
+        "en": "Purely advisory academic opinions without legal effect",
+        "zh": "仅具学术咨询参考性质，无强制法律约束力"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 211 วรรคสี่ บัญญัติชัดเจนว่าคำวินิจฉัยของศาลรัฐธรรมนูญให้เป็นเด็ดขาด มีผลผูกพันรัฐสภา คณะรัฐมนตรี ศาล องค์กรอิสระ และหน่วยงานของรัฐ",
+      "en": "Section 211 paragraph four explicitly establishes that rulings of the Constitutional Court are final and binding on Parliament, Cabinet, Courts, Independent Organs, and all state agencies.",
+      "zh": "第211条第四款明确规定，宪法法院之判决为终局裁决，对国会、内阁、法院、独立机构及国家机关均有拘束力。"
+    }
+  },
+  {
+    "id": "comp-25",
+    "chapter": 11,
+    "sections": [
+      219
+    ],
+    "prompt": {
+      "th": "มาตรฐานทางจริยธรรมของตุลาการศาลรัฐธรรมนูญและผู้ดำรงตำแหน่งในองค์กรอิสระ ใครเป็นผู้จัดทำตามมาตรา 219?",
+      "en": "Under Section 219, who is responsible for formulating the Ethical Standards for Constitutional Court judges and independent organ members?",
+      "zh": "依第219条，宪法法院法官及各独立机构负责人的道德伦理标准由谁共同制定？"
+    },
+    "choices": [
+      {
+        "th": "ศาลรัฐธรรมนูญและองค์กรอิสระร่วมกันกำหนด",
+        "en": "Jointly formulated by the Constitutional Court and Independent Organs",
+        "zh": "由宪法法院与各独立机构共同联合制定"
+      },
+      {
+        "th": "คณะรัฐมนตรีตราขึ้นเป็นพระราชกฤษฎีกา",
+        "en": "Enacted by the Cabinet as a Royal Decree",
+        "zh": "由内阁直接颁布为王室法令"
+      },
+      {
+        "th": "สภาผู้แทนราษฎรแต่งตั้งคณะกรรมาธิการร่างฝ่ายเดียว",
+        "en": "Drafted unilaterally by a House committee",
+        "zh": "由众议院专门委员会单方面起草"
+      },
+      {
+        "th": "สภาทนายความแห่งประเทศไทย",
+        "en": "Lawyers Council of Thailand",
+        "zh": "泰国全国律师公会"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 219 บัญญัติให้ศาลรัฐธรรมนูญและองค์กรอิสระร่วมกันกำหนดมาตรฐานทางจริยธรรมขึ้น และให้ใช้บังคับแก่ ส.ส. ส.ว. และ ครม. ด้วย",
+      "en": "Section 219 requires the Constitutional Court and Independent Organs to jointly formulate ethical standards, which also apply to MPs, Senators, and Cabinet members.",
+      "zh": "第219条规定，宪法法院与各独立机构应共同制定道德伦理标准，该标准亦适用于众议员、参议员及内阁阁员。"
+    }
+  },
+  {
+    "id": "comp-26",
+    "chapter": 12,
+    "sections": [
+      235
+    ],
+    "prompt": {
+      "th": "หาก ป.ป.ช. ไต่สวนพบว่าผู้ดำรงตำแหน่งทางการเมืองฝ่าฝืนมาตรฐานทางจริยธรรมอย่างร้ายแรง ให้เสนอเรื่องต่อศาลใดตามมาตรา 235?",
+      "en": "If the NACC finds a political office holder committed a gross violation of ethical standards, which court must it refer to under Section 235?",
+      "zh": "若反贪委（NACC）调查查明政界人士严重违反道德伦理标准，依第235条应移送哪一法院审理？"
+    },
+    "choices": [
+      {
+        "th": "ศาลฎีกา",
+        "en": "The Supreme Court",
+        "zh": "最高法院"
+      },
+      {
+        "th": "ศาลแพ่ง",
+        "en": "Civil Court",
+        "zh": "民事法院"
+      },
+      {
+        "th": "ศาลปกครองชั้นต้น",
+        "en": "Court of First Instance for Administrative Cases",
+        "zh": "初等行政法院"
+      },
+      {
+        "th": "ศาลทรัพย์สินทางปัญญาและการค้าระหว่างประเทศ",
+        "en": "Central Intellectual Property and International Trade Court",
+        "zh": "中央知识产权与国际贸易法院"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 235 วรรคหนึ่ง (1) กำหนดว่าในกรณีฝ่าฝืนหรือไม่ปฏิบัติตามมาตรฐานทางจริยธรรมอย่างร้ายแรง ให้ ป.ป.ช. เสนอเรื่องต่อศาลฎีกาเพื่อวินิจฉัย",
+      "en": "Section 235 paragraph one (1) provides that for gross violations of ethical standards, the NACC refers the matter to the Supreme Court for adjudication.",
+      "zh": "第235条第一款第(1)项规定，对于严重违反道德准则的行为，国家反贪污委员会应向最高法院提起诉由以行裁判。"
+    }
+  },
+  {
+    "id": "comp-27",
+    "chapter": 3,
+    "sections": [
+      41
+    ],
+    "prompt": {
+      "th": "สิทธิของประชาชนในการฟ้องหน่วยงานของรัฐให้รับผิดเนื่องจากการกระทำหรือละเว้นการกระทำของเจ้าหน้าที่ ได้รับการรับรองในมาตราใด?",
+      "en": "Under which Section is the citizen's right to sue state agencies for liability resulting from acts or omissions of public officials guaranteed?",
+      "zh": "公民因公职人员的作为或不作为而向国家机关追究责任的起诉权，受宪法哪一条保障？"
+    },
+    "choices": [
+      {
+        "th": "มาตรา 41",
+        "en": "Section 41",
+        "zh": "第41条"
+      },
+      {
+        "th": "มาตรา 2",
+        "en": "Section 2",
+        "zh": "第2条"
+      },
+      {
+        "th": "มาตรา 80",
+        "en": "Section 80",
+        "zh": "第80条"
+      },
+      {
+        "th": "มาตรา 180",
+        "en": "Section 180",
+        "zh": "第180条"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 41 (2) รับรองสิทธิของบุคคลที่จะฟ้องหน่วยงานของรัฐให้รับผิดเนื่องจากการกระทำหรือการละเว้นการกระทำของเจ้าหน้าที่ของรัฐ",
+      "en": "Section 41 (2) guarantees individual rights to sue state agencies for legal liability arising from wrongful acts or omissions of government officials.",
+      "zh": "第41条第(2)款保障个人因国家公职人员违法行使或不履行职权而要求国家机关承担赔偿责任的起诉权利。"
+    }
+  },
+  {
+    "id": "comp-28",
+    "chapter": 5,
+    "sections": [
+      51
+    ],
+    "prompt": {
+      "th": "หากรัฐไม่ปฏิบัติหน้าที่ตามหมวด 5 หน้าที่ของรัฐ ประชาชนและชุมชนมีสิทธิดำเนินการอย่างไรตามมาตรา 51?",
+      "en": "If the State fails to perform its duties under Chapter 5 (Duties of the State), what rights do citizens and communities have under Section 51?",
+      "zh": "若国家未履行第5章“国家职责”所规定的义务，公民与社区依第51条有权采取何种行动？"
+    },
+    "choices": [
+      {
+        "th": "มีสิทธิติดตาม เร่งรัด และฟ้องร้องหน่วยงานของรัฐที่เกี่ยวข้องได้",
+        "en": "Have the right to monitor, expedite, and sue relevant state agencies",
+        "zh": "有权跟进、敦促并对相关国家机关提起诉讼"
+      },
+      {
+        "th": "ทำได้เพียงทำหนังสือร้องเรียนต่อนายกรัฐมนตรีเท่านั้น",
+        "en": "May only submit petition letters to the Prime Minister",
+        "zh": "仅能向总理一人提交书面陈情"
+      },
+      {
+        "th": "ไม่มีสิทธิใดๆ เพราะหน้าที่ของรัฐเป็นเรื่องนโยบายฝ่ายเดียว",
+        "en": "Have no legal rights as state duties are purely non-actionable policy",
+        "zh": "无任何法律权利，因国家职责纯属自由裁量政策"
+      },
+      {
+        "th": "ต้องระดมเสียงประชาชน 100,000 คนก่อนจึงจะสอบถามได้",
+        "en": "Must gather 100,000 signatures before inquiring",
+        "zh": "必须征集100,000名选民签名方能质询"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 51 บัญญัติให้ประชาชนและชุมชนมีสิทธิติดตามและเร่งรัดให้รัฐปฏิบัติหน้าที่ รวมทั้งฟ้องร้องหน่วยงานของรัฐเพื่อให้ปฏิบัติหน้าที่ตามหมวด 5 ได้",
+      "en": "Section 51 empowers citizens and communities to monitor, demand compliance, and initiate litigation against responsible state agencies failing Chapter 5 duties.",
+      "zh": "第51条赋予公民与社区督促国家履责之权，并有权对不作为的相关国家机关提起法律诉讼。"
+    }
+  },
+  {
+    "id": "comp-29",
+    "chapter": 7,
+    "sections": [
+      98
+    ],
+    "prompt": {
+      "th": "บุคคลที่เคยถูกสั่งให้พ้นจากราชการเพราะทุจริตต่อหน้าที่ มีลักษณะต้องห้ามมิให้สมัครรับเลือกตั้งเป็น ส.ส. อย่างไรตามมาตรา 98?",
+      "en": "How does past dismissal from government service for corruption affect candidacy for MP under Section 98?",
+      "zh": "曾因职务贪腐被开除公职的人员，依第98条对其参选众议员有何法定禁止限制？"
+    },
+    "choices": [
+      {
+        "th": "เป็นลักษณะต้องห้ามตลอดไป ไม่สามารถสมัครรับเลือกตั้งได้",
+        "en": "Permanent disqualification; barred from running for election indefinitely",
+        "zh": "属于终身禁止事由，永远不得参选众议员"
+      },
+      {
+        "th": "ห้ามเฉพาะภายใน 5 ปีนับแต่วันที่พ้นจากราชการ",
+        "en": "Disqualified only within 5 years of dismissal",
+        "zh": "仅自被开除之日起5年内禁止参选"
+      },
+      {
+        "th": "ห้ามเฉพาะภายใน 10 ปี แต่หากพ้นแล้วสามารถสมัครได้",
+        "en": "Disqualified only within 10 years, eligible thereafter",
+        "zh": "仅10年内禁止参选，期满后恢复资格"
+      },
+      {
+        "th": "สมัครได้ทันทีหากมีพรรคการเมืองรับรอง",
+        "en": "Eligible immediately if endorsed by a political party",
+        "zh": "只要获得政党背书即可立即参选"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 98 (8) กำหนดลักษณะต้องห้ามของผู้สมัคร ส.ส. ว่าเคยถูกสั่งให้พ้นจากราชการเพราะทุจริตต่อหน้าที่ เป็นลักษณะต้องห้ามตลอดชีพ",
+      "en": "Section 98 (8) permanently disqualifies individuals dismissed from official service for corruption from ever running for parliament.",
+      "zh": "第98条第(8)项规定，曾因贪污渎职被开除公职者，终身丧失众议员候选人资格。"
+    }
+  },
+  {
+    "id": "comp-30",
+    "chapter": 11,
+    "sections": [
+      203
+    ],
+    "prompt": {
+      "th": "ใครเป็นผู้ลงนามรับสนองพระบรมราชโองการแต่งตั้งประธานและตุลาการศาลรัฐธรรมนูญตามมาตรา 203?",
+      "en": "Under Section 203, who countersigns the Royal Command appointing the President and judges of the Constitutional Court?",
+      "zh": "依第203条，由谁签署副署任命宪法法院院长及法官的王室谕令？"
+    },
+    "choices": [
+      {
+        "th": "ประธานวุฒิสภา",
+        "en": "President of the Senate",
+        "zh": "参议院议长"
+      },
+      {
+        "th": "นายกรัฐมนตรี",
+        "en": "The Prime Minister",
+        "zh": "总理"
+      },
+      {
+        "th": "ประธานสภาผู้แทนราษฎร",
+        "en": "President of the House of Representatives",
+        "zh": "众议院议长"
+      },
+      {
+        "th": "ประธานองคมนตรี",
+        "en": "President of the Privy Council",
+        "zh": "枢密院院长"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 203 วรรคสี่ บัญญัติให้ประธานวุฒิสภาเป็นผู้ลงนามรับสนองพระบรมราชโองการแต่งตั้งประธานศาลรัฐธรรมนูญและตุลาการศาลรัฐธรรมนูญ",
+      "en": "Section 203 paragraph four provides that the President of the Senate countersigns the appointment of the President and judges of the Constitutional Court.",
+      "zh": "第203条第四款规定，由参议院议长副署任命宪法法院院长及宪法法院法官的王室谕令。"
+    }
   }
 ]
