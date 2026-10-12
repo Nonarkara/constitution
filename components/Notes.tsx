@@ -1,6 +1,10 @@
 "use client";
 import { ReflectionSummary } from "./ReflectionSummary";
-import { useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { DigPanel, DotsMap, Thread } from "./DotsMap";
+import { questionIndex } from "@/lib/outline";
+import { knowSummary, sectionSignals, stateOf } from "@/lib/knowledge";
+import { mostCited, nextDots } from "@/lib/dots";
 import Link from "next/link";
 import { chapters, readingText, sections } from "@/lib/corpus";
 import { anchor } from "@/lib/marks";
@@ -11,8 +15,30 @@ const where = (n: number) => `/read/?c=${sections[n - 1].chapter}#s-${n}`;
 
 // Everything the learner marked, in constitution order, so their own notebook becomes a study tool.
 export function Notes() {
-  const { lang, marks, annotations } = useStudy();
+  const { lang, marks, annotations, progress, read, ready } = useStudy();
   const [chapter, setChapter] = useState(0);
+  const signals = useMemo(
+    () => sectionSignals({ progress, marks, annotations, read, questions: questionIndex, now: Date.now() }),
+    [progress, marks, annotations, read],
+  );
+  // Her dots are what she chose to mark or practise; a passing read lights the map but not the thread.
+  const mine = useMemo(() => signals.filter((s) => s.marked || s.answered > 0).map((s) => s.n), [signals]);
+  const met = useMemo(() => signals.filter((s) => stateOf(s) !== "unseen").map((s) => s.n), [signals]);
+  const next = useMemo(() => nextDots(mine, met), [mine, met]);
+  const sum = knowSummary(signals);
+  const [selected, setSelected] = useState(0);
+  const dig = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!ready) return; // choose only once her own marks have loaded
+    const fromLink = Number(location.hash.match(/^#dot-(\d+)$/)?.[1]);
+    const latest = [...marks.marks].sort((a, b) => b.createdAt - a.createdAt)[0]?.section;
+    setSelected((current) => current || (fromLink >= 1 && fromLink <= 279 ? fromLink : latest ?? mine[mine.length - 1] ?? mostCited(1)[0].n));
+  }, [mine, ready]);
+  const go = (n: number) => {
+    setSelected(n);
+    history.replaceState(null, "", `#dot-${n}`);
+    dig.current?.scrollIntoView({ block: "start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  };
   const inChapter = (n: number) => !chapter || sections[n - 1].chapter === chapter;
   const highlights = marks.marks
     .filter((m) => inChapter(m.section))
@@ -24,9 +50,22 @@ export function Notes() {
   const empty = !highlights.length && !bookmarks.length && !sectionNotes.length;
   return (
     <>
-      <span className="page-kicker mono">YOUR NOTES · 04</span>
-      <h1>{tr(lang, "บันทึกของคุณ", "Your notes", "你的笔记")}</h1>
+      <h1>{tr(lang, "สิ่งที่คุณรู้", "What you know", "你所知道的")}</h1>
       <p>
+        {tr(
+          lang,
+          `รู้จักแล้ว ${sum.met} จาก 279 มาตรา จดไว้ ${sum.marked} มาตรา มั่นใจ ${sum.known} มาตรา จุดสีเหลืองคือที่คุณไฮไลต์หรือฝึก เส้นเข้มคือสิ่งที่เชื่อมจุดของคุณ แตะจุดไหนก็ได้เพื่อขุดต่อ`,
+          `You have met ${sum.met} of 279 sections, marked ${sum.marked} and are confident in ${sum.known}. Amber dots are what you highlighted or practised; dark lines are what connects them. Tap any dot to dig further.`,
+          `你已接触 279 条中的 ${sum.met} 条，标记了 ${sum.marked} 条，掌握了 ${sum.known} 条。琥珀色的点是你标记或练习过的；深色线把它们连起来。点任意一个点继续深挖。`,
+        )}
+      </p>
+      <DotsMap signals={signals} mine={mine} next={next} selected={selected} onSelect={go} />
+      <div className="dots-body">
+        <div ref={dig}>{selected > 0 && <DigPanel n={selected} signals={signals} onGo={go} />}</div>
+        <Thread mine={mine} next={next} onGo={go} />
+      </div>
+      <h2 className="notes-all">{tr(lang, "บันทึกทั้งหมดของคุณ", "Everything you wrote", "你写下的全部")}</h2>
+      <p className="micro">
         {tr(
           lang,
           `ไฮไลต์ ${marks.marks.length} จุด · คั่นหน้า ${marks.bookmarks.length} มาตรา · เก็บไว้ในเครื่องนี้ สำรองได้ที่หน้าอุปกรณ์`,

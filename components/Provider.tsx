@@ -18,6 +18,7 @@ import type { ExamTarget } from "@/lib/adaptive";
 import { MARKS_KEY, emptyMarks, parseMarks, type Marks } from "@/lib/marks";
 import { workerMessage, type OfflineStatus } from "@/lib/offline";
 import type { Lang } from "@/lib/i18n";
+import { READ_KEY, markRead, parseRead, type ReadLog } from "@/lib/knowledge";
 type State = {
   lang: Lang;
   setLang: (l: Lang) => void;
@@ -27,6 +28,9 @@ type State = {
   saveAnnotations: (a: UserAnnotations) => void;
   marks: Marks;
   saveMarks: (m: Marks) => void;
+  read: ReadLog;
+  saveRead: (r: ReadLog) => void;
+  noteRead: (n: number) => void;
   examTarget: ExamTarget;
   setExamTarget: (t: ExamTarget) => void;
   ready: boolean;
@@ -42,6 +46,7 @@ export function Provider({ children }: { children: ReactNode }) {
     [progress, setP] = useState<Progress>(defaultProgress),
     [annotations, setA] = useState<UserAnnotations>(defaultAnnotations),
     [marks, setM] = useState<Marks>(emptyMarks),
+    [read, setR] = useState<ReadLog>({}),
     [examTarget, setTarget] = useState<ExamTarget>("all"),
     [ready, setReady] = useState(false),
     [storageError, setStorageError] = useState(false),
@@ -77,6 +82,9 @@ export function Provider({ children }: { children: ReactNode }) {
         if (parsedMarks) setM(parsedMarks);
         else localStorage.setItem(`${MARKS_KEY}-backup-${Date.now()}`, storedMarks);
       }
+      try {
+        setR(parseRead(JSON.parse(localStorage.getItem(READ_KEY) ?? "{}")) ?? {});
+      } catch {}
       const savedTarget = localStorage.getItem("constitution-exam-target") as ExamTarget | null;
       if (
         savedTarget === "all" ||
@@ -153,6 +161,11 @@ export function Provider({ children }: { children: ReactNode }) {
           if (parsedMarks) setM(parsedMarks);
         } catch {}
       }
+      if (e.key === READ_KEY) {
+        try {
+          setR(parseRead(JSON.parse(e.newValue ?? "{}")) ?? {});
+        } catch {}
+      }
       if (e.key === "constitution-lang" && (e.newValue === "th" || e.newValue === "en" || e.newValue === "zh"))
         setL(e.newValue);
     };
@@ -193,6 +206,24 @@ export function Provider({ children }: { children: ReactNode }) {
       setStorageError(true);
     }
   };
+  const saveRead = (r: ReadLog) => {
+    setR(r);
+    try {
+      localStorage.setItem(READ_KEY, JSON.stringify(r));
+    } catch {
+      setStorageError(true);
+    }
+  };
+  // Functional update: several sections can finish reading in the same moment.
+  const noteRead = (n: number) =>
+    setR((current) => {
+      const next = markRead(current, n, Date.now());
+      if (next !== current)
+        try {
+          localStorage.setItem(READ_KEY, JSON.stringify(next));
+        } catch {}
+      return next;
+    });
   const setExamGoal = (t: ExamTarget) => {
     setTarget(t);
     try {
@@ -220,6 +251,9 @@ export function Provider({ children }: { children: ReactNode }) {
         saveAnnotations,
         marks,
         saveMarks,
+        read,
+        saveRead,
+        noteRead,
         examTarget,
         setExamTarget: setExamGoal,
         ready,

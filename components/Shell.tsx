@@ -5,10 +5,22 @@ import { useStudy } from "./Provider";
 import { labels, tr, type Lang } from "@/lib/i18n";
 import { SWATCH, THEMES, THEME_NAME } from "@/lib/theme";
 import { useTheme } from "@/lib/use-theme";
+import { useMemo } from "react";
+import { questionIndex } from "@/lib/outline";
+import { dueQuestions } from "@/lib/learning";
+import { knowSummary, sectionSignals } from "@/lib/knowledge";
 export function Shell({ children }: { children: React.ReactNode }) {
-  const { lang, setLang, progress, storageError, ready, online } = useStudy();
+  const { lang, setLang, progress, storageError, ready, online, marks, annotations, read } = useStudy();
   const path = usePathname();
   const theme = useTheme();
+  // What she knows, not points: counted from her own reading, marks and answers.
+  const known = useMemo(() => {
+    const now = Date.now();
+    return {
+      ...knowSummary(sectionSignals({ progress, marks, annotations, read, questions: questionIndex, now })),
+      due: dueQuestions(questionIndex, progress, now).length,
+    };
+  }, [progress, marks, annotations, read]);
   // Five destinations; every other page belongs to one of them for the active state.
   const nav = [
     ["/learn/", labels.learn, ["/", "/learn/"]],
@@ -122,13 +134,22 @@ export function Shell({ children }: { children: React.ReactNode }) {
               )}
             </p>
           )}
-          <div className="study-strip micro">
-            <span>{progress.xp} XP</span>
-            <span>
-              {progress.streak}{" "}
-              {tr(lang, "วันต่อเนื่อง", "day streak", "天连续学习")}
-            </span>
-          </div>
+          {ready && (
+            <nav className="study-strip micro" aria-label={tr(lang, "สิ่งที่คุณรู้แล้ว", "What you know", "你已掌握的")}>
+              <Link href="/notes/">
+                <b>{known.met}</b>/279 {tr(lang, "มาตราที่รู้จักแล้ว", "sections met", "条已接触")}
+              </Link>
+              <Link href="/notes/">
+                <b>{known.marked}</b> {tr(lang, "มาตราที่จดไว้", "marked", "条已标记")}
+              </Link>
+              <Link href="/notes/">
+                <b>{known.known}</b> {tr(lang, "มาตราที่มั่นใจ", "confident", "条已掌握")}
+              </Link>
+              <Link href="/review/" className={known.due ? "due" : undefined}>
+                <b>{known.due}</b> {tr(lang, "ข้อรอทบทวน", "due for review", "题待复习")}
+              </Link>
+            </nav>
+          )}
           {storageError && (
             <p role="alert" className="notice">
               {tr(

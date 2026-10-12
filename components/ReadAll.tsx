@@ -7,6 +7,7 @@ import glossaryData from "@/data/glossary.json";
 import { addMark, removeMark, segments, setNote, toggleBookmark, type Mark } from "@/lib/marks";
 import { readingTokens, type Term, type Token } from "@/lib/reading";
 import { useStudy } from "./Provider";
+import { useReadOnScreen } from "./useReadOnScreen";
 import { LawRef } from "./LawRef";
 import { tr, labels, sectionLabel, type Lang } from "@/lib/i18n";
 
@@ -48,6 +49,7 @@ export function ReadAll() {
   const [sheet, setSheet] = useState<Sheet>(null);
   const [draft, setDraft] = useState("");
   const sheetRef = useRef<HTMLDivElement>(null);
+  useReadOnScreen(`${chapterNumber}-${lang}`);
 
   // Track a selection that sits inside one section's text.
   useEffect(() => {
@@ -166,7 +168,7 @@ export function ReadAll() {
                 {tr(lang, "ฟังและเทียบภาษา", "Listen & compare", "朗读与对照")} ↗
               </Link>
             </div>
-            <p className="read-text" lang={lang} data-text={s.number}>
+            <p className="read-text" lang={lang} data-text={s.number} data-read={s.number}>
               {segments(text, ownMarks(s.number)).map((seg) => {
                 const inner = renderTokens(seg.text, seg.start, tokens, setSheet, lang);
                 return seg.mark ? (
@@ -190,7 +192,7 @@ export function ReadAll() {
         <button disabled={chapterNumber === 1} onClick={() => go(chapterNumber - 1)}>
           ← {tr(lang, "หมวดก่อน", "Previous chapter", "上一章")}
         </button>
-        <Link href="/notes/">{tr(lang, "บันทึกของคุณ", "Your notes", "你的笔记")} ↗</Link>
+        <Link href="/notes/">{tr(lang, "ดูว่าจุดของคุณเชื่อมกันอย่างไร", "See how your dots connect", "看看你的点如何相连")} →</Link>
         <button disabled={chapterNumber === 17} onClick={() => go(chapterNumber + 1)}>
           {tr(lang, "หมวดถัดไป", "Next chapter", "下一章")} →
         </button>

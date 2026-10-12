@@ -445,7 +445,7 @@ main {
   border: 1px solid var(--edge);
   display: grid;
   place-items: center;
-  background: white;
+  background: var(--paper);
   z-index: 1;
 }
 .chapter-row:not(:last-child):after {
@@ -571,7 +571,7 @@ footer {
   border: 1px solid var(--edge);
   padding: 12px;
   font-size: var(--body);
-  background: white;
+  background: var(--paper);
 }
 .voice-note {
   grid-column: 1/-1;
@@ -1106,7 +1106,29 @@ html[data-large="true"] {
   }
 }
 .study-strip {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+  padding: 14px 0;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+.study-strip a {
+  text-decoration: none;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.study-strip a:hover {
+  text-decoration: underline;
+}
+.study-strip b {
+  color: var(--ink);
+  font-family: "JetBrains Mono", monospace;
+}
+.study-strip a.due b {
+  color: var(--accent-deep);
 }
 .audio-player {
   margin: 16px 0;
@@ -1114,20 +1136,10 @@ html[data-large="true"] {
 .audio-player iframe {
   border: 1px solid var(--edge);
   margin: 12px 0;
-  background: white;
+  background: var(--paper);
 }
 .audio-player p {
   margin: 8px 0;
-}
-@media (max-width: 1100px) {
-  .study-strip {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    padding-bottom: 18px;
-    margin-bottom: 26px;
-    border-bottom: 1px solid var(--line);
-  }
 }
 /* Original crayon scenes stay secondary to the learning task. */
 .study-art {
@@ -1280,7 +1292,7 @@ html[data-large="true"] {
   padding: 12px;
   font: inherit;
   font-size: var(--body);
-  background: white;
+  background: var(--paper);
   resize: vertical;
 }
 .ask-consent {
@@ -2089,7 +2101,7 @@ html[data-large="true"] {
   margin: 6px 0 12px;
   border: 1px solid var(--edge);
   padding: 8px 10px;
-  background: white;
+  background: var(--paper);
   font-size: var(--body);
 }
 .read-section {
@@ -2219,7 +2231,7 @@ mark.hl.has-note {
   margin: 6px 0 24px;
   border: 1px solid var(--edge);
   padding: 8px 10px;
-  background: white;
+  background: var(--paper);
   font-size: var(--body);
 }
 .reading-excerpt blockquote {
@@ -2454,7 +2466,7 @@ mark.hl.has-note {
   padding: 8px 12px;
   font: inherit;
   font-size: var(--body);
-  background: white;
+  background: var(--paper);
 }
 .glossary-list > div {
   border-top: 1px solid var(--line);
@@ -3056,4 +3068,222 @@ footer { flex-wrap:wrap; gap:16px; }
 .theme-choices legend {
   font-weight: 600;
   margin-bottom: 4px;
+}
+
+/* What you know: the dots map, dig panel and written thread. Phone first. */
+.dots-map {
+  margin: 28px 0 0;
+  border-top: 3px solid var(--ink);
+  padding-top: 8px;
+  min-height: 200px;
+}
+.dots-map svg {
+  display: block;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.dots-label {
+  font-family: "JetBrains Mono", "IBM Plex Sans Thai", monospace;
+  font-size: var(--micro);
+  fill: var(--muted);
+}
+.dots-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  padding: 12px 0 18px;
+  border-bottom: 1px solid var(--line);
+}
+.dots-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.dot {
+  display: inline-block;
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+.dot.unseen {
+  background: var(--paper);
+  border: 1px solid var(--edge);
+}
+.dot.read {
+  background: var(--muted);
+}
+.dot.due {
+  box-shadow: inset 0 0 0 2px var(--accent);
+  background: var(--paper);
+}
+.dot.mine {
+  background: var(--accent);
+  border: 1px solid var(--accent-deep);
+}
+.dot.next {
+  background: transparent;
+  border: 1px dashed var(--accent-deep);
+}
+.stroke {
+  display: inline-block;
+  width: 22px;
+  border-top: 2px solid var(--ink);
+}
+.stroke.dashed {
+  border-top-style: dashed;
+}
+.dots-body {
+  display: grid;
+  gap: 40px;
+  padding-top: 28px;
+}
+.dig {
+  border-left: 3px solid var(--accent);
+  padding-left: 18px;
+  scroll-margin-top: 16px;
+}
+.dig-head {
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  gap: 12px;
+  align-items: center;
+}
+.dig-head h2 {
+  margin: 0;
+}
+.dig-head button {
+  padding: 0;
+}
+.dig-lead {
+  margin: 14px 0;
+  padding: 0 0 0 14px;
+  border-left: 1px solid var(--line);
+}
+.dig-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dig-block {
+  margin-top: 28px;
+}
+.dig-block h3,
+.thread h3 {
+  font-size: var(--body);
+  margin: 0 0 10px;
+}
+.dig-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dig-links li {
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  gap: 4px 12px;
+  align-items: start;
+  padding: 6px 0;
+  border-top: 1px solid var(--line);
+}
+.dig-go {
+  border: 0;
+  justify-content: flex-start;
+  padding: 0;
+  font-size: var(--body);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.dig-reason {
+  display: block;
+  padding: 10px 0 0;
+  font-size: var(--micro);
+  color: var(--muted);
+}
+.dig-reason .mono {
+  color: var(--ink);
+  margin-right: 6px;
+}
+.dig-mark blockquote {
+  margin: 0;
+}
+.dig-case {
+  display: block;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  min-height: 44px;
+}
+.thread-group {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+.thread-members {
+  margin: 0 0 8px;
+}
+.thread-list {
+  margin: 0;
+  padding-left: 18px;
+}
+.thread-list li {
+  padding: 4px 0;
+}
+.inline-go {
+  display: inline;
+  min-height: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.inline-go:hover {
+  background: none;
+  color: var(--accent-deep);
+}
+.notes-all {
+  margin-top: 56px;
+  padding-top: 18px;
+  border-top: 3px solid var(--ink);
+}
+@media (min-width: 900px) {
+  .dots-body {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: 48px;
+  }
+}
+.connections {
+  margin: 36px 0;
+  padding-top: 18px;
+  border-top: 3px solid var(--ink);
+}
+.connections h2 {
+  margin-top: 0;
+}
+.connections > a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}
+.column-audio {
+  margin-top: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+}
+.column-audio > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--micro);
+  font-weight: 600;
+}
+.column-audio > summary::before {
+  content: "▸";
+  margin-right: 8px;
+}
+.column-audio[open] > summary::before {
+  content: "▾";
 }

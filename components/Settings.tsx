@@ -20,6 +20,8 @@ export function Settings() {
     saveMarks,
     annotations,
     saveAnnotations,
+    read,
+    saveRead,
   } = useStudy();
   const theme = useTheme();
   const [confirm, setConfirm] = useState(false),
@@ -31,6 +33,7 @@ export function Settings() {
         marks,
         annotations,
         localStorage.getItem(REFLECTION_KEY),
+        read,
       );
       const url = URL.createObjectURL(
         new Blob([JSON.stringify(backup, null, 2)], {
@@ -228,6 +231,7 @@ export function Settings() {
                   if (imported.marks) saveMarks(imported.marks);
                   if (imported.annotations)
                     saveAnnotations(imported.annotations);
+                  if (imported.read) saveRead(imported.read);
                   setMessage(
                     tr(
                       lang,

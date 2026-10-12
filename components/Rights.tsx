@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import cases from "@/data/cases.json";
 import { groupedRights } from "@/lib/rights";
 import { Puzzle, type Case } from "./Puzzle";
@@ -11,6 +11,12 @@ export function Rights() {
   const { lang } = useStudy();
   const [open, setOpen] = useState<Case | null>(null);
   const groups = groupedRights(cases);
+  // /rights/?case=<id> opens one puzzle directly, for links from the dots map.
+  useEffect(() => {
+    const id = new URLSearchParams(location.search).get("case");
+    const found = (cases as Case[]).find((c) => c.id === id);
+    if (found) setOpen(found);
+  }, []);
   if (open)
     return (
       <>

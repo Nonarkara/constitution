@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useStudy } from "./Provider";
+import { useReadOnScreen } from "./useReadOnScreen";
 import {
   sections,
   chapters,
@@ -27,6 +28,7 @@ export function DoublePageReader() {
   const [viewCompare, setViewCompare] = useState<boolean>(false);
   const [jumpInput, setJumpInput] = useState<string>("");
   const [savedNoteStatus, setSavedNoteStatus] = useState<Record<number, boolean>>({});
+  useReadOnScreen(leftSecNum);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -254,7 +256,7 @@ export function DoublePageReader() {
 
         {/* LEFT PAGE */}
         {leftSection && (
-          <article className={`book-page page-left ${highlightClass(leftSection.number)}`}>
+          <article className={`book-page page-left ${highlightClass(leftSection.number)}`} data-read={leftSection.number}>
             <header className="page-header">
               <span className="page-chapter-label micro">
                 {chapters.find((c) => c.number === leftSection.chapter)?.title[lang]}
@@ -353,7 +355,7 @@ export function DoublePageReader() {
 
         {/* RIGHT PAGE */}
         {rightSection ? (
-          <article className={`book-page page-right ${highlightClass(rightSection.number)}`}>
+          <article className={`book-page page-right ${highlightClass(rightSection.number)}`} data-read={rightSection.number}>
             <header className="page-header">
               <span className="page-chapter-label micro">
                 {chapters.find((c) => c.number === rightSection.chapter)?.title[lang]}

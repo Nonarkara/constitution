@@ -387,9 +387,9 @@ export function PracticeArena() {
                 <p>
                   {tr(
                     lang,
-                    "ฝึกตอบต่อเนื่องไม่รู้จบ สะสมคะแนนและสตรีค เหมาะสำหรับผู้เตรียมสอบแข่งขันเข้มข้น",
-                    "Continuous practice through the entire bank. Keep your streak and XP rising without interruption.",
-                    "无尽连续练习，持续累积经验值与连击，适合深度备考。"
+                    "คำถามจากทั้งคลัง ทีละข้อต่อกันไป หยุดเมื่อไรก็ได้",
+                    "Questions from the whole bank, one after another, until you stop.",
+                    "从整个题库连续出题，一题接一题，随时可停。"
                   )}
                 </p>
                 <button className="mode-start-btn">

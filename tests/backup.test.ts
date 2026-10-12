@@ -13,18 +13,20 @@ const reflection = {
   cost: "Time matters",
   evidence: "New evidence could change my mind",
 };
-test("version3 backup round-trips political reflection with study notes and progress", () => {
-  const backup = createBackup(
-    defaultProgress(),
-    emptyMarks(),
-    {},
-    JSON.stringify(reflection),
-  );
+test("version4 backup round-trips political reflection with study notes and progress", () => {
+  const backup = createBackup(defaultProgress(), emptyMarks(), {}, JSON.stringify(reflection), {});
   const restored = parseBackup(JSON.parse(JSON.stringify(backup)), ids);
   assert.deepEqual(restored?.reflection, reflection);
   assert.equal(restored?.progress.xp, 0);
   assert.deepEqual(restored?.marks, emptyMarks());
   assert.deepEqual(restored?.annotations, {});
+  assert.deepEqual(restored?.read, {});
+});
+test("reading history travels in version4 and older files keep the device's own", () => {
+  const backup = createBackup(defaultProgress(), emptyMarks(), {}, null, { 26: 5, 27: 6 });
+  assert.deepEqual(parseBackup(JSON.parse(JSON.stringify(backup)), ids)?.read, { 26: 5, 27: 6 });
+  assert.equal(parseBackup({ ...backup, version: 3 }, ids)?.read, undefined);
+  assert.equal(parseBackup({ ...backup, read: "nope" }, ids), null);
 });
 test("old backup imports distinguish missing reflection from an explicit empty one", () => {
   for (const version of [1, 2])
@@ -41,18 +43,13 @@ test("old backup imports distinguish missing reflection from an explicit empty o
       undefined,
     );
   assert.equal(
-    parseBackup(createBackup(defaultProgress(), emptyMarks(), {}, null), ids)
+    parseBackup(createBackup(defaultProgress(), emptyMarks(), {}, null, {}), ids)
       ?.reflection,
     null,
   );
 });
 test("invalid reflection or missing version3 fields rejects the whole import before replacement", () => {
-  const backup = createBackup(
-    defaultProgress(),
-    emptyMarks(),
-    {},
-    JSON.stringify(reflection),
-  );
+  const backup = createBackup(defaultProgress(), emptyMarks(), {}, JSON.stringify(reflection), {});
   assert.equal(
     parseBackup(
       { ...backup, reflection: { ...reflection, choice: "force-yes" } },
@@ -64,14 +61,9 @@ test("invalid reflection or missing version3 fields rejects the whole import bef
   assert.equal(parseBackup({ ...backup, marks: null }, ids), null);
   assert.equal(parseBackup({ ...backup, annotations: null }, ids), null);
   assert.throws(() =>
-    createBackup(defaultProgress(), emptyMarks(), {}, "broken-json"),
+    createBackup(defaultProgress(), emptyMarks(), {}, "broken-json", {}),
   );
   assert.throws(() =>
-    createBackup(
-      defaultProgress(),
-      emptyMarks(),
-      {},
-      JSON.stringify({ version: 99 }),
-    ),
+    createBackup(defaultProgress(), emptyMarks(), {}, JSON.stringify({ version: 99 }), {}),
   );
 });

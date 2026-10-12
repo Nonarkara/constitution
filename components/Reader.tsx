@@ -18,10 +18,11 @@ import { Speech } from "./Speech";
 import { VoiceSearch } from "./VoiceSearch";
 import { Ask } from "./Ask";
 import cases from "@/data/cases.json";
+import { Connections } from "./DotsMap";
 const senateAudio =
   "https://www.senate.go.th/view/1/รายละเอียดข่าว/13564/TH-TH";
 export function Reader() {
-  const { lang } = useStudy();
+  const { lang, noteRead } = useStudy();
   const params = useSearchParams();
   const [query, setQuery] = useState(""),
     [number, setNumber] = useState<number | null>(null),
@@ -30,6 +31,13 @@ export function Reader() {
     const n = Number(params.get("n"));
     setNumber(n >= 1 && n <= 279 ? n : null);
   }, [params]);
+  // Opening one section on its own page and staying a moment counts as reading it.
+  useEffect(() => {
+    if (!number) return;
+    const t = window.setTimeout(() => noteRead(number), 4000);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [number]);
   const open = (n: number) => {
     window.history.pushState({}, "", `/section/?n=${n}`);
     setNumber(n);
@@ -174,17 +182,21 @@ export function Reader() {
                       : tr(lang, "จีน · คำแปลเพื่อศึกษา", "Chinese · study translation", "中文 · 学习译文")}
                 </div>
                 <p className="law-text">{sectionBody(section.number, l)}</p>
-                <Recording section={section.number} lang={l} />
-                <details className="device-speech">
-                  <summary>
-                    {tr(
-                      l,
-                      "ใช้เสียงจากอุปกรณ์",
-                      "Use device voice",
-                      "使用设备语音",
-                    )}
-                  </summary>
-                  <Speech lang={l} text={readingText(section.number, l)} />
+                {/* Three columns of players read as noise; side by side, each folds away. */}
+                <details className="column-audio" open={!compare}>
+                  <summary>{tr(lang, "ฟังภาษานี้", "Listen in this language", "收听本语言")}</summary>
+                  <Recording section={section.number} lang={l} />
+                  <details className="device-speech">
+                    <summary>
+                      {tr(
+                        l,
+                        "ใช้เสียงจากอุปกรณ์",
+                        "Use device voice",
+                        "使用设备语音",
+                      )}
+                    </summary>
+                    <Speech lang={l} text={readingText(section.number, l)} />
+                  </details>
                 </details>
                 {l === "zh" ? (
                   <p className="micro">
@@ -261,6 +273,7 @@ export function Reader() {
               <p>{item.why[lang]}</p>
             </div>
           ))}
+          <Connections n={section.number} />
           <p className="micro">
             <a href={senateAudio} target="_blank" rel="noreferrer">
               {tr(
