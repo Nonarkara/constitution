@@ -5,6 +5,8 @@ import questions from "@/data/questions.json";
 import { chapters } from "@/lib/outline";
 import { recordAnswer } from "@/lib/learning";
 import { useStudy } from "./Provider";
+import { choiceLetter, fisherYates } from "@/lib/shuffle";
+import { preparePracticeQuestion, practiceSessionScore } from "@/lib/practice-session";
 import { tr, sectionLabel } from "@/lib/i18n";
 import {
   analyzeUserLearning,
@@ -16,7 +18,7 @@ import { StudyArt } from "./StudyArt";
 
 type Question = (typeof questions)[number];
 
-const letters = ["ก", "ข", "ค", "ง"];
+
 
 export function PracticeArena() {
   const { lang, progress, save, annotations, examTarget } = useStudy();
@@ -35,7 +37,7 @@ export function PracticeArena() {
   const [sessionAnswers, setSessionAnswers] = useState<Record<string, number>>({});
   const [showExplanation, setShowExplanation] = useState<boolean>(false);
   const [sessionCompleted, setSessionCompleted] = useState<boolean>(false);
-  const [score, setScore] = useState<number>(0);
+  const [sessionNotice, setSessionNotice] = useState("");
 
   // Adaptive profile and weaknesses
   const profile = useMemo(() => {
@@ -60,29 +62,32 @@ export function PracticeArena() {
       chosenMode,
       chNum ?? selectedChapter
     );
+    if (!qList.length) {
+      setSessionNotice(tr(lang, "ไม่มีข้อที่ต้องซ่อมตอนนี้ เลือกโหมดอื่นเพื่อฝึกต่อได้", "No questions need repair right now. Choose another mode to keep practising.", "目前没有待强化的题目，请选择其他模式继续练习。"));
+      setIsActive(false);
+      return;
+    }
+    setSessionNotice("");
     setMode(chosenMode);
     if (chNum) setSelectedChapter(chNum);
-    setQueue(qList);
+    setQueue(qList.map((question) => preparePracticeQuestion(question)));
     setCurrentIndex(0);
     setSelectedChoice(null);
     setSessionAnswers({});
     setShowExplanation(false);
     setSessionCompleted(false);
-    setScore(0);
     setIsActive(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const currentQ = queue[currentIndex];
+  const { correct: score, percentage } = practiceSessionScore(queue, sessionAnswers);
 
   const handleSelectChoice = (choiceIdx: number) => {
     if (selectedChoice !== null && immediateFeedback) return;
     setSelectedChoice(choiceIdx);
 
     const isCorrect = choiceIdx === currentQ.answer;
-    if (isCorrect) {
-      setScore((prev) => prev + 1);
-    }
 
     // Record answer in global progress
     const updated = recordAnswer(progress, currentQ, isCorrect, Date.now());
@@ -109,15 +114,14 @@ export function PracticeArena() {
   const startTopicDrill = (topic: TopicWeakness) => {
     const secSet = new Set(topic.sections);
     const topicQ = questions.filter((q) => q.sections.some((s) => secSet.has(s)));
-    const shuffled = [...topicQ].sort(() => Math.random() - 0.5);
+    const shuffled = fisherYates(topicQ);
     setMode("weak");
-    setQueue(shuffled.slice(0, 15));
+    setQueue(shuffled.slice(0, 15).map((question) => preparePracticeQuestion(question)));
     setCurrentIndex(0);
     setSelectedChoice(null);
     setSessionAnswers({});
     setShowExplanation(false);
     setSessionCompleted(false);
-    setScore(0);
     setIsActive(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -128,6 +132,7 @@ export function PracticeArena() {
 
       {!isActive ? (
         <>
+          {sessionNotice && <p role="status">{sessionNotice}</p>}
           <header className="practice-header">
             <div className="intro-copy">
               <StudyArt scene="reading" compact />
@@ -142,9 +147,9 @@ export function PracticeArena() {
               <p>
                 {tr(
                   lang,
-                  `ฝึกทำข้อสอบจริง ${questions.length} ข้อ ทั้งแนวแข่งขันตอบปัญหากฎหมายศาลรัฐธรรมนูญ ข้อสอบราชการ และสถานการณ์จริงในชีวิต ระบบจะตรวจจับจุดที่คุณยังตอบผิดและจัดชุดฝึกแก้จุดอ่อนให้โดยอัตโนมัติ`,
-                  `Practice across all ${questions.length} competition and real-situation exam questions. The adaptive engine detects your specific trouble spots and personalizes targeted drills.`,
-                  `练习全部${questions.length}道宪法竞赛与实战案例题。系统实时诊断您的薄弱知识点，自动量身定制针对性强化训练。`
+                  `ข้อฝึกแต่งขึ้นจากตัวบท ${questions.length} ข้อ สำหรับฝึกแนวแข่งขันตอบปัญหากฎหมายและสถานการณ์ในชีวิต ไม่ใช่ข้อสอบจริงหรือข้อสอบทางการ ระบบจะตรวจจับจุดที่คุณยังตอบผิดและจัดชุดฝึกแก้จุดอ่อนให้โดยอัตโนมัติ`,
+                  `Practise ${questions.length} original study questions based on the Constitution. These are not official exams or verified past-paper questions. The adaptive engine detects your specific trouble spots and personalizes targeted drills.`,
+                  `练习${questions.length}道依据宪法编写的原创学习题，并非官方试题或经核实的历年真题。系统实时诊断您的薄弱知识点，自动量身定制针对性强化训练。`
                 )}
               </p>
             </div>
@@ -484,7 +489,7 @@ export function PracticeArena() {
                 QUESTION {currentIndex + 1} / {queue.length}
               </span>
               <span>
-                SCORE: {score} ({currentIndex > 0 ? Math.round((score / currentIndex) * 100) : 0}%)
+                SCORE: {score} ({percentage}%)
               </span>
             </div>
           </div>
@@ -539,7 +544,7 @@ export function PracticeArena() {
                     }}
                   >
                     <span className="mono choice-letter">
-                      {letters[idx] ?? String.fromCharCode(65 + idx)}
+                      {choiceLetter(lang, idx)}
                     </span>
                     <span className="choice-text">{choice[lang]}</span>
                   </div>
@@ -562,9 +567,9 @@ export function PracticeArena() {
                       ? `✅ ${tr(lang, "ถูกต้องยอดเยี่ยม!", "Correct!", "回答正确！")}`
                       : `❌ ${tr(
                           lang,
-                          `ยังไม่ถูกต้อง คำตอบที่ถูกคือข้อ ${letters[currentQ.answer]}`,
-                          `Incorrect. The correct answer is (${letters[currentQ.answer]})`,
-                          `回答错误，正确答案为 (${letters[currentQ.answer]})`
+                          `ยังไม่ถูกต้อง คำตอบที่ถูกคือข้อ ${choiceLetter(lang, currentQ.answer)}`,
+                          `Incorrect. The correct answer is (${choiceLetter(lang, currentQ.answer)})`,
+                          `回答错误，正确答案为 (${choiceLetter(lang, currentQ.answer)})`
                         )}`}
                   </span>
                 </div>
