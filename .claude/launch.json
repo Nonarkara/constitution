@@ -1,6 +1,18 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "constitution-dev", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev", "--", "--webpack", "-p", "3061"], "port": 3061 }
+    {
+      "name": "constitution-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--",
+        "--webpack",
+        "-p",
+        "3061"
+      ],
+      "port": 3061
+    }
   ]
 }

@@ -20,6 +20,7 @@ import { VoiceSearch } from "./VoiceSearch";
 import audio from "@/data/audio.json";
 import { InstitutionMap } from "./InstitutionMap";
 import { LawFlow } from "./LawFlow";
+import { Ask } from "./Ask";
 const senateAudio =
   "https://www.senate.go.th/view/1/รายละเอียดข่าว/13564/TH-TH";
 export function Reader() {
@@ -117,6 +118,7 @@ export function Reader() {
               )}
             </p>
           )}
+          {!results.length && <Ask initial={query} />}
         </section>
       ) : section ? (
         <section className="legal-reader">
@@ -333,6 +335,7 @@ export function Reader() {
               {tr(lang, "ถัดไป", "Next", "下一条")} →
             </button>
           </div>
+          <Ask sections={[section.number]} key={section.number} />
         </section>
       ) : (
         <>

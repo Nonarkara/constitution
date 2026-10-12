@@ -2,6 +2,7 @@
 import { useState } from "react";
 import cases from "@/data/cases.json";
 import { Puzzle, type Case } from "./Puzzle";
+import { Ask } from "./Ask";
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
 export function Rights() {
@@ -59,6 +60,7 @@ export function Rights() {
           </article>
         ))}
       </div>
+      <Ask />
     </>
   );
 }

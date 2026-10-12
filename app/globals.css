@@ -1069,3 +1069,26 @@ html[data-large="true"] {
     justify-content: center;
   }
 }
+.ask textarea {
+  display: block;
+  width: 100%;
+  min-height: 96px;
+  margin: 8px 0 12px;
+  border: 1px solid #777b6d;
+  padding: 12px;
+  font: inherit;
+  font-size: var(--body);
+  background: white;
+  resize: vertical;
+}
+.ask-consent {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  min-height: 44px;
+  margin: 12px 0;
+}
+.ask-text {
+  white-space: pre-line;
+  margin-top: 24px;
+}
