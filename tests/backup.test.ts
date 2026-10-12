@@ -14,7 +14,13 @@ const reflection = {
   evidence: "New evidence could change my mind",
 };
 test("version4 backup round-trips political reflection with study notes and progress", () => {
-  const backup = createBackup(defaultProgress(), emptyMarks(), {}, JSON.stringify(reflection), {});
+  const backup = createBackup(
+    defaultProgress(),
+    emptyMarks(),
+    {},
+    JSON.stringify(reflection),
+    {},
+  );
   const restored = parseBackup(JSON.parse(JSON.stringify(backup)), ids);
   assert.deepEqual(restored?.reflection, reflection);
   assert.equal(restored?.progress.xp, 0);
@@ -23,8 +29,14 @@ test("version4 backup round-trips political reflection with study notes and prog
   assert.deepEqual(restored?.read, {});
 });
 test("reading history travels in version4 and older files keep the device's own", () => {
-  const backup = createBackup(defaultProgress(), emptyMarks(), {}, null, { 26: 5, 27: 6 });
-  assert.deepEqual(parseBackup(JSON.parse(JSON.stringify(backup)), ids)?.read, { 26: 5, 27: 6 });
+  const backup = createBackup(defaultProgress(), emptyMarks(), {}, null, {
+    26: 5,
+    27: 6,
+  });
+  assert.deepEqual(parseBackup(JSON.parse(JSON.stringify(backup)), ids)?.read, {
+    26: 5,
+    27: 6,
+  });
   assert.equal(parseBackup({ ...backup, version: 3 }, ids)?.read, undefined);
   assert.equal(parseBackup({ ...backup, read: "nope" }, ids), null);
 });
@@ -43,13 +55,21 @@ test("old backup imports distinguish missing reflection from an explicit empty o
       undefined,
     );
   assert.equal(
-    parseBackup(createBackup(defaultProgress(), emptyMarks(), {}, null, {}), ids)
-      ?.reflection,
+    parseBackup(
+      createBackup(defaultProgress(), emptyMarks(), {}, null, {}),
+      ids,
+    )?.reflection,
     null,
   );
 });
 test("invalid reflection or missing version3 fields rejects the whole import before replacement", () => {
-  const backup = createBackup(defaultProgress(), emptyMarks(), {}, JSON.stringify(reflection), {});
+  const backup = createBackup(
+    defaultProgress(),
+    emptyMarks(),
+    {},
+    JSON.stringify(reflection),
+    {},
+  );
   assert.equal(
     parseBackup(
       { ...backup, reflection: { ...reflection, choice: "force-yes" } },
@@ -64,6 +84,28 @@ test("invalid reflection or missing version3 fields rejects the whole import bef
     createBackup(defaultProgress(), emptyMarks(), {}, "broken-json", {}),
   );
   assert.throws(() =>
-    createBackup(defaultProgress(), emptyMarks(), {}, JSON.stringify({ version: 99 }), {}),
+    createBackup(
+      defaultProgress(),
+      emptyMarks(),
+      {},
+      JSON.stringify({ version: 99 }),
+      {},
+    ),
   );
+});
+
+test("version4 imports reject invalid reading timestamps rather than erase history", () => {
+  const backup = createBackup(defaultProgress(), emptyMarks(), {}, null, {
+    1: 1720000000000,
+  });
+  for (const read of [
+    { 1: Infinity },
+    { 1: "wrong" },
+    { 1: -1 },
+    { 1: 1.5 },
+    { 280: 1720000000000 },
+    { "01": 1720000000000 },
+  ])
+    assert.equal(parseBackup({ ...backup, read }, ids), null);
+  assert.deepEqual(parseBackup(backup, ids)?.read, { 1: 1720000000000 });
 });

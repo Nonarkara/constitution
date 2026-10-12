@@ -34,6 +34,28 @@ export function parseBackup(
   }
   let read: ReadLog | undefined = undefined;
   if (value.version === 4) {
+    // Local recovery may discard bad entries; an import must not silently
+    // replace a person's reading history with a filtered empty object.
+    if (
+      !value.read ||
+      typeof value.read !== "object" ||
+      Array.isArray(value.read)
+    )
+      return null;
+    for (const [key, timestamp] of Object.entries(value.read)) {
+      const n = Number(key);
+      if (
+        !Number.isInteger(n) ||
+        n < 1 ||
+        n > 279 ||
+        String(n) !== key ||
+        typeof timestamp !== "number" ||
+        !Number.isSafeInteger(timestamp) ||
+        timestamp <= 0 ||
+        timestamp > 8.64e15
+      )
+        return null;
+    }
     read = parseRead(value.read) ?? undefined;
     if (!read) return null;
   }
@@ -50,5 +72,12 @@ export function createBackup(
     rawReflection === null ? null : parseReflection(JSON.parse(rawReflection));
   if (rawReflection !== null && !reflection)
     throw new Error("Unreadable reflection; preserve the saved value");
-  return { version: 4 as const, progress, marks, annotations, reflection, read };
+  return {
+    version: 4 as const,
+    progress,
+    marks,
+    annotations,
+    reflection,
+    read,
+  };
 }

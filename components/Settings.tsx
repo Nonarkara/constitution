@@ -139,7 +139,12 @@ export function Settings() {
           <legend>{tr(lang, "สีหน้าจอ", "Screen colours", "屏幕配色")}</legend>
           {(["auto", ...THEMES] as ThemeChoice[]).map((t) => (
             <label className="setting-label" key={t}>
-              <input type="radio" name="theme" checked={theme.choice === t} onChange={() => theme.choose(t)} />
+              <input
+                type="radio"
+                name="theme"
+                checked={theme.choice === t}
+                onChange={() => theme.choose(t)}
+              />
               {THEME_NAME[t][lang]}
             </label>
           ))}
@@ -232,14 +237,26 @@ export function Settings() {
                       "已导入进度。",
                     ),
                   );
-                } catch {
+                } catch (error) {
+                  const storageFailure =
+                    error instanceof DOMException &&
+                    ["QuotaExceededError", "SecurityError"].includes(
+                      error.name,
+                    );
                   setMessage(
-                    tr(
-                      lang,
-                      "ไฟล์นี้ใช้ไม่ได้ เลือกไฟล์ส่งออกจากแอปนี้",
-                      "Invalid file. Choose a progress export from this app.",
-                      "文件无效，请选择此应用导出的进度文件。",
-                    ),
+                    storageFailure
+                      ? tr(
+                          lang,
+                          "เครื่องนี้บันทึกข้อมูลนำเข้าไม่ได้ ข้อมูลที่ยังไม่แทนที่ยังอยู่",
+                          "This device could not save the import. Data not yet replaced is preserved.",
+                          "此设备无法保存导入数据，尚未替换的数据仍保留。",
+                        )
+                      : tr(
+                          lang,
+                          "ไฟล์นี้ใช้ไม่ได้ เลือกไฟล์ส่งออกจากแอปนี้",
+                          "Invalid file. Choose a progress export from this app.",
+                          "文件无效，请选择此应用导出的进度文件。",
+                        ),
                   );
                 }
                 e.target.value = "";
