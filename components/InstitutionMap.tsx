@@ -119,7 +119,7 @@ export function InstitutionMap() {
       <div className="flow-detail" key={selected} aria-live="polite">
         <p>{branches[selected].detail}</p>
         <Link href={`/section/?n=${branches[selected].section}`}>
-          {sectionLabel(lang, branches[selected].section)} ↗
+          {sectionLabel(lang, branches[selected].section)} →
         </Link>
       </div>
       <p className="micro">
@@ -129,7 +129,7 @@ export function InstitutionMap() {
           "This diagram shows the relationship in section 3, not a reporting hierarchy. Independent organs have their own status and duties under chapter 12.",
           "此图展示第3条的关系，并非上下级指挥链。独立机构的地位与职责见第12章。",
         )}{" "}
-        <Link href="/section/?n=215">{sectionLabel(lang, 215)} ↗</Link>
+        <Link href="/section/?n=215">{sectionLabel(lang, 215)} →</Link>
       </p>
     </section>
   );

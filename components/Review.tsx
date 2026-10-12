@@ -59,9 +59,6 @@ export function Review() {
   const studied = Object.values(progress.questions).length;
   return (
     <>
-      <span className="page-kicker mono">
-        {tr(lang, "กลับมาทบทวน · 04", "Return and remember · 04", "复习 · 04")}
-      </span>
       <div className="review-intro">
         <StudyArt scene="review" />
         <h1>
@@ -102,7 +99,7 @@ export function Review() {
         </button>
 
         <Link href="/flashcards/" className="button">
-          {tr(lang, "เปิดการ์ดความจำ", "Open the flashcards", "打开记忆闪卡")} ↗
+          {tr(lang, "เปิดการ์ดความจำ", "Open the flashcards", "打开记忆闪卡")} →
         </Link>
       </div>
 

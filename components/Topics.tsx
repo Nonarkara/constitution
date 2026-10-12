@@ -16,7 +16,6 @@ export function Topics() {
     .sort((a, b) => a.topic[lang].localeCompare(b.topic[lang], lang === "zh" ? "zh" : lang));
   return (
     <>
-      <span className="page-kicker mono">SUBJECT INDEX · 05</span>
       <h1>{tr(lang, "ดัชนีเรื่อง", "Subject index", "主题索引")}</h1>
       <p>
         {tr(

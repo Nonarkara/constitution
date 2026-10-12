@@ -27,7 +27,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
     ["/read/", labels.read, ["/read/", "/section/", "/notebook/"]],
     ["/practice/", labels.practice, ["/practice/", "/review/", "/exam/", "/flashcards/", "/games/"]],
     ["/notes/", labels.notes, ["/notes/"]],
-    ["/library/", labels.library, ["/library/", "/amend/", "/news/", "/research/", "/bible/", "/rights/", "/cheatsheet/", "/topics/", "/glossary/", "/palace/", "/sources/", "/settings/"]],
+    ["/library/", labels.library, ["/library/", "/amend/", "/news/", "/research/", "/bible/", "/rights/", "/cheatsheet/", "/topics/", "/glossary/", "/sources/", "/settings/"]],
   ] as const;
   return (
     <>
@@ -85,16 +85,14 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <div className="app-grid">
         <aside className="sidebar">
           <nav aria-label={tr(lang, "เมนูหลัก", "Main navigation", "主导航")}>
-            {nav.map(([href, title, match], i) => (
+            {nav.map(([href, title, match]) => (
               <Link
                 aria-current={(match as readonly string[]).includes(path) ? "page" : undefined}
                 className={(match as readonly string[]).includes(path) ? "nav-active" : ""}
                 key={href}
                 href={href}
               >
-                <span className="mono">0{i + 1}</span>
                 {title[lang]}
-                <span aria-hidden="true">↗</span>
               </Link>
             ))}
           </nav>
@@ -120,7 +118,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </p>
           </div>
           <Link className="device-link" href="/settings/">
-            {labels.settings[lang]} ↗
+            {labels.settings[lang]} →
           </Link>
         </aside>
         <main id="content">
@@ -137,7 +135,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           {ready && (
             <nav className="study-strip micro" aria-label={tr(lang, "สิ่งที่คุณรู้แล้ว", "What you know", "你已掌握的")}>
               <Link href="/notes/">
-                <b>{known.met}</b>/279 {tr(lang, "มาตราที่รู้จักแล้ว", "sections met", "条已接触")}
+                <b>{known.met}/279</b> {tr(lang, "มาตราที่รู้จักแล้ว", "sections met", "条已接触")}
               </Link>
               <Link href="/notes/">
                 <b>{known.marked}</b> {tr(lang, "มาตราที่จดไว้", "marked", "条已标记")}

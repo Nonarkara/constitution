@@ -66,14 +66,6 @@ export function Settings() {
   };
   return (
     <>
-      <span className="page-kicker mono">
-        {tr(
-          lang,
-          "ทำให้เป็นห้องของคุณ",
-          "Make yourself at home",
-          "把这里调成你的房间",
-        )}
-      </span>
       <h1>
         {tr(
           lang,

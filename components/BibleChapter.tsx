@@ -143,9 +143,6 @@ export function BibleChapterView({ chapter, prev, next }: { chapter: BibleChapte
   const titled = chapter.blocks.map((b, i) => ({ b, i })).filter(({ b }) => "title" in b && b.title);
   return (
     <article className="bible">
-      <span className="page-kicker mono">
-        STUDY GUIDE · {String(chapter.order).padStart(2, "0")}
-      </span>
       <h1>{text(chapter.title, lang)}</h1>
       <p className="bible-lede">
         <LawText text={text(chapter.lede, lang)} lang={l} />
@@ -197,7 +194,6 @@ export function BibleIndex({ chapters }: { chapters: { slug: string; order: numb
   const { lang } = useStudy();
   return (
     <>
-      <span className="page-kicker mono">STUDY GUIDE · 05</span>
       <h1>{tr(lang, "คัมภีร์รัฐธรรมนูญ", "The study guide", "学习指南")}</h1>
       <p>
         {tr(
@@ -216,7 +212,7 @@ export function BibleIndex({ chapters }: { chapters: { slug: string; order: numb
               <span className="micro">{text(c.lede, lang).slice(0, 140)}…</span>
             </div>
             <div className="chapter-actions">
-              <Link href={`/bible/${c.slug}/`}>{tr(lang, "อ่าน", "Read", "阅读")} ↗</Link>
+              <Link href={`/bible/${c.slug}/`}>{tr(lang, "อ่าน", "Read", "阅读")} →</Link>
             </div>
           </article>
         ))}

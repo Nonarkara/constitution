@@ -16,7 +16,6 @@ export function Glossary() {
     .sort((a, b) => a.term[lang].localeCompare(b.term[lang], lang === "zh" ? "zh" : lang));
   return (
     <>
-      <span className="page-kicker mono">GLOSSARY · 05</span>
       <h1>{tr(lang, "อภิธานศัพท์", "Glossary", "术语表")}</h1>
       <p>
         {tr(

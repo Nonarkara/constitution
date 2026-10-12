@@ -1,17 +1,21 @@
 # 泰国王国佛历2560年宪法（2017）研习笔记本
-### 算法化理解、三语对照与蜡笔手绘图解备考指南
 
-[![Verify & Tests](https://github.com/Nonarkara/constitution/actions/workflows/verify.yml/badge.svg)](https://github.com/Nonarkara/constitution)
-[![Live Site](https://img.shields.io/badge/在线学习-constitution.nonarkara.org-amber?style=flat)](https://constitution.nonarkara.org)
-[![Offline PWA](https://img.shields.io/badge/pwa-离线模式就绪-black)](https://constitution.nonarkara.org)
 
 > **为 Tikky、泰国国家公务员备考者（OCSC / 县长行政官 / 法务官 / 法院检察人员），以及希望系统了解泰国最高宪制运作的学习者精心打造的本地化学习工具。**
 >
-> 📖 [ภาษาไทย (README.th.md)](./README.th.md) · [English (README.md)](./README.md) · [中文 (README.zh.md)](./README.zh.md)
+> [ภาษาไทย (README.th.md)](./README.th.md) · [English (README.md)](./README.md) · [中文 (README.zh.md)](./README.zh.md)
 
 ---
 
-## 🎨 视觉风格：严谨公民规范与温润蜡笔图解（Crayon Aesthetic）
+## 你所知道的，以及把点连起来的线
+
+你读过、标记过、写过和练过的一切，都会汇集在 `/notes/` 的一张图上：一章是一条线，一条是一个站点。只有当条文本身互相点名（泰文本中共220处），或本笔记的索引把它们归为同一主题时，你的条文之间才会连线。界面始终注明每条线来自条文还是索引。点任意一条即可继续深挖。
+
+屏幕配色有四种：浅色、柔和、深色和高对比，默认跟随设备设置。
+
+---
+
+## 视觉风格：严谨公民规范与温润蜡笔图解（Crayon Aesthetic）
 
 本平台秉持**“严谨公民制度 + 温暖手绘笔记”**的双重视角：
 - **纯白纸感与清晰炭黑墨迹：** 严格遵循公法研读排版规范，选用 `IBM Plex Sans Thai`、`Source Sans 3`、`Noto Sans SC` 与 `JetBrains Mono` 字体，摒弃杂乱装饰与花哨渐变。
@@ -21,7 +25,7 @@
 
 ---
 
-## 🧠 六步深度学习法（Learning Methodology）
+## 六步深度学习法（Learning Methodology）
 
 ```
 [第一步：生活实境谜题] ──> [第二步：回归法定原条文] ──> [第三步：算法公式解析]
@@ -41,7 +45,7 @@
 
 ---
 
-## ⚡ 泰国宪法核心算法速查（Constitutional Algorithms）
+## 泰国宪法核心算法速查（Constitutional Algorithms）
 
 ### 算法一：宪法最高性与违宪审查（第5条、第212条）
 $$\text{任何法规或行为} \land \text{抵触宪法} \implies \text{自始无效且不可执行（第5条）}$$
@@ -115,7 +119,7 @@ $$\text{紧急法令} = \text{迫切不可拖延} \land \text{四大法定事由
 
 ---
 
-## 🔢 核心数字对照表
+## 核心数字对照表
 
 | 核心数据 | 宪法内涵与法定规范 | 宪法条款 |
 | :--- | :--- | :--- |
@@ -135,7 +139,7 @@ $$\text{紧急法令} = \text{迫切不可拖延} \land \text{四大法定事由
 
 ---
 
-## 💻 本地运行与检验指令
+## 本地运行与检验指令
 
 ```bash
 # 安装依赖

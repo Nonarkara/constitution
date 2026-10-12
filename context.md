@@ -41,3 +41,11 @@ Ask (`components/Ask.tsx`) sends questions the notebook cannot answer to Non-Law
 `/research/` gives Dr. Non Arkaraprasertkul's purpose and design/testing account. Tikky may be an imagined narrative companion. Published learning research, design hypotheses, automated checks and future human/iPad testing are distinct. The actual legal text establishes institutions; their fairness or value remains a question for readers.
 
 Design reference: the existing exam notebook and a newspaper's ruled bulletin. Story path, headline rows and research prose are different layouts because they support different tasks. Moderate variance, low motion, medium story density/high bulletin density. All earned diagrams preserved; phone360 px/tablet768 px checked.
+
+## What you know, themes and the human pass — 12 October 2026
+
+Themes: light, mild (warm paper, lower blue), dark (warm near-black #15140f, drawings dimmed via `--art`) and high contrast. `html[data-theme]` is set before first paint by `lib/theme.ts` (inline head script); `auto` follows prefers-color-scheme / prefers-contrast. Every colour in globals.css is a token; `tests/theme.test.ts` checks WCAG pairs per theme and that the no-JS dark fallback and swatches match. Never add a raw hex outside the theme blocks.
+
+Dots: `/notes/` is "What you know". Invariant: every section is in exactly one state (due > known > practising > read > unseen), counts sum to 279 (`lib/knowledge.ts`). Links come only from data (`data/graph.json` via build-indexes): `cites` = the Thai text names the section (220); topic/term/question = the notebook's index, always labelled "index". Text links outrank any mix of index links. Reading counts after 4 s on screen (`constitution-read-v1`, backup v4). XP/streak still stored, no longer shown.
+
+Human pass: no numbered eyebrows, no tracking on Thai, ↗ only for links that leave the site, no emoji in UI, three font-size tokens only, practice modes and library as ruled lists. `InstitutionMap.tsx` and `LawFlow.tsx` are unused; left in place.

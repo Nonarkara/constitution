@@ -164,9 +164,6 @@ export function Flashcards() {
 
   return (
     <div className="flashcards-page">
-      <div className="page-kicker mono">
-        {tr(lang, "ทบทวนตามจังหวะ · การ์ดความจำ", "Self-paced revision · flashcards", "按自己的节奏 · 记忆闪卡")}
-      </div>
 
       <header className="intro">
         <div className="intro-index mono" aria-hidden="true">
@@ -177,17 +174,17 @@ export function Flashcards() {
           <h1>
             {tr(
               lang,
-              "การ์ดความจำรัฐธรรมนูญ\nทบทวนด้วยตนเอง",
-              "Constitutional Flashcards:\nActive Recall Practice.",
-              "宪法记忆闪卡：\n主动回忆复习。",
+              "นึกก่อน\nแล้วค่อยพลิก",
+              "Recall first,\nthen flip.",
+              "先回想，\n再翻面。",
             )}
           </h1>
           <p>
             {tr(
               lang,
-              "พลิกการ์ดทดสอบความจำ นึกตัวบทและสูตรอัลกอริทึมก่อนพลิกดูเฉลย พร้อมระบบปรับแต่งเฉพาะบุคคลตามจุดอ่อนและโน้ตย่อที่คุณจดไว้",
-              "Flip cards to test your recall. Try to remember the legal rule and formula before revealing the answer. Customized to your personal trouble spots and margin notes.",
-              "翻转闪卡检验记忆。在查看答案前先主动回忆法条与算法公式。系统根据您的薄弱章节与个人笔记进行自适应定制。",
+              "ลองนึกหลักของมาตราให้ได้ก่อนพลิกดูคำตอบ สำรับหนึ่งมาจากหมวดที่คุณยังพลาด อีกสำรับมาจากโน้ตที่คุณจดเอง",
+              "Try to recall the rule before you turn the card. One deck comes from chapters you still miss; another from the notes you wrote.",
+              "翻面前先试着回想条文要点。一组来自你仍常出错的章节，另一组来自你自己写的笔记。",
             )}
           </p>
         </div>
@@ -266,9 +263,9 @@ export function Flashcards() {
                 )
               : tr(
                   lang,
-                  "คุณทำคะแนนได้ดีเยี่ยมในทุกหมวด! ลองสลับไปยังสำรับคลังข้อสอบทั้งหมด",
-                  "You have solid scores across chapters! Try switching to the All Rules deck.",
-                  "您在各章节表现良好！可切换至全部核心卡包进行练习。",
+                  "ยังไม่มีหมวดที่พลาดซ้ำ ลองสำรับทั้งหมดแทน",
+                  "No chapter you keep missing. Try the full deck instead.",
+                  "没有反复出错的章节。试试全部卡组。",
                 )}
           </p>
           <Link href="/notebook/" className="primary inline-block">
@@ -399,7 +396,7 @@ export function Flashcards() {
                       className="link-underlined"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      {tr(lang, "เปิดในสมุดคู่หน้า ↗", "Open in Notebook Spread ↗", "在双页开本中阅读 ↗")}
+                      {tr(lang, "เปิดในสมุดคู่หน้า →", "Open in Notebook Spread →", "在双页开本中阅读 →")}
                     </Link>
                   </div>
                 </div>

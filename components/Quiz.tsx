@@ -123,7 +123,7 @@ export function Quiz({
                 "Compare languages and listen",
                 "对照阅读与朗读",
               )}{" "}
-              ↗
+              →
             </Link>
           </div>
         ))}
@@ -268,7 +268,7 @@ export function Quiz({
             <div>
               {q.sections.map((n) => (
                 <Link className="citation" href={`/section/?n=${n}`} key={n}>
-                  {sectionLabel(lang, n)} ↗
+                  {sectionLabel(lang, n)} →
                 </Link>
               ))}
             </div>

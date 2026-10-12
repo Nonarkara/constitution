@@ -205,7 +205,7 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
               <h3>{sectionLabel(lang, n)}</h3>
               <p lang="th">{corpus[n - 1].th}</p>
               <Link href={`/section/?n=${n}`}>
-                {tr(lang, "อ่านในสมุด", "Read in the notebook", "在笔记中阅读")} ↗
+                {tr(lang, "อ่านในสมุด", "Read in the notebook", "在笔记中阅读")} →
               </Link>
             </div>
           ))}

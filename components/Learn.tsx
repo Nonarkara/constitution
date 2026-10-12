@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { chapters, questionIndex as questions } from "@/lib/outline";
 import { chapterMastery } from "@/lib/learning";
@@ -8,8 +8,25 @@ import dynamic from "next/dynamic";
 const Quiz = dynamic(() => import("./Quiz").then((m) => m.Quiz));
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
+import { sectionSignals, stateOf, type Signals } from "@/lib/knowledge";
+import { cases, clusters } from "@/lib/dots";
+
+// One small station per section, so each chapter row shows what is read, marked and known.
+function Stations({ start, end, signals }: { start: number; end: number; signals: Signals[] }) {
+  return (
+    <span className="stations" aria-hidden="true">
+      {signals.slice(start - 1, end).map((s) => (
+        <i key={s.n} className={`dot ${s.marked ? "mine" : stateOf(s)}`} />
+      ))}
+    </span>
+  );
+}
 export function Learn() {
-  const { lang, progress, ready } = useStudy();
+  const { lang, progress, ready, marks, annotations, read } = useStudy();
+  const signals = useMemo(
+    () => sectionSignals({ progress, marks, annotations, read, questions, now: Date.now() }),
+    [progress, marks, annotations, read],
+  );
   const [chapter, setChapter] = useState<number | null>(null);
   const mastered = chapters.filter(
     (c) =>
@@ -31,15 +48,12 @@ export function Learn() {
   return (
     <>
       {/* One dominant element: the drawing and the next step read as a single block. */}
-      <div className="civic-shortcuts"><Link href="/amend/">{tr(lang, "ถ้าเราอยากแก้รัฐธรรมนูญ", "If we want to amend it", "如果我们想修宪")} ↗</Link><Link href="/news/">{tr(lang, "ข่าวสั้น", "Headlines", "新闻标题")} ↗</Link></div>
+      <div className="civic-shortcuts"><Link href="/amend/">{tr(lang, "ถ้าเราอยากแก้รัฐธรรมนูญ", "If we want to amend it", "如果我们想修宪")} →</Link><Link href="/news/">{tr(lang, "ข่าวสั้น", "Headlines", "新闻标题")} →</Link></div>
       <section className="hero">
         <figure className="hero-art" aria-hidden="true">
           <Image src="/illustrations/reading.webp" alt="" width={720} height={720} priority sizes="(max-width: 720px) 100vw, 46vw" />
         </figure>
         <div className="hero-copy">
-          <span className="page-kicker mono">
-            {tr(lang, "เส้นทางเรียน · 01", "Your learning path · 01", "学习路径 · 01")}
-          </span>
           <h1>
             {tr(lang, "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ", "One section.\nOne small step.", "一条一条读，\n一点一点懂。")}
           </h1>
@@ -71,6 +85,7 @@ export function Learn() {
           </p>
         </div>
       </section>
+      <WhereYouAre signals={signals} chapter={next.number} />
       <div className="section-heading">
         <div>
           <span className="mono">2560 / 2017</span>
@@ -118,6 +133,7 @@ export function Learn() {
                   )}
                 </span>
                 <h3>{c.title[lang]}</h3>
+                <Stations start={c.start} end={c.end} signals={signals} />
                 <div className="mastery-line" aria-label={`${m.percent}%`}>
                   <span style={{ transform: `scaleX(${m.percent / 100})` }} />
                 </div>
@@ -139,7 +155,7 @@ export function Learn() {
               </div>
               <div className="chapter-actions">
                 <button disabled={!ready} onClick={() => setChapter(c.number)}>
-                  {tr(lang, "ฝึกตอบ", "Practice", "练习")} ↗
+                  {tr(lang, "ฝึกตอบ", "Practice", "练习")} →
                 </button>
                 <Link href={`/section/?n=${c.start}`}>
                   {tr(lang, "อ่าน", "Read", "阅读")}
@@ -168,5 +184,45 @@ export function Learn() {
         </p>
       </div>
     </>
+  );
+}
+
+function WhereYouAre({ signals, chapter }: { signals: Signals[]; chapter: number }) {
+  const { lang, read } = useStudy();
+  const last = Object.entries(read).sort((a, b) => b[1] - a[1])[0];
+  const lastN = last ? Number(last[0]) : 0;
+  const mine = signals.filter((s) => s.marked || s.answered > 0).map((s) => s.n);
+  const joined = clusters(mine).reduce((sum, g) => sum + g.length, 0);
+  const chapterOf = (n: number) => chapters.find((h) => n >= h.start && n <= h.end)!.number;
+  // A puzzle from the chapter she is on; every chapter has at least one.
+  const puzzle = cases.find((c) => c.sections.some((n) => chapterOf(n) === chapter)) ?? cases[0];
+  return (
+    <section className="where" aria-label={tr(lang, "คุณอยู่ตรงไหน", "Where you are", "你现在的位置")}>
+      <Link href="/notes/" className="where-item">
+        <span className="micro">{tr(lang, "จุดของคุณ", "Your dots", "你的点")}</span>
+        <strong>
+          {mine.length
+            ? tr(lang, `${mine.length} จุด · ${joined} จุดต่อกันแล้ว`, `${mine.length} dots · ${joined} already connected`, `${mine.length} 个点 · ${joined} 个已相连`)
+            : tr(lang, "ยังไม่มีจุด ไฮไลต์สักประโยคเพื่อเริ่ม", "None yet. Highlight one sentence to start", "还没有。标记一句话开始")}
+        </strong>
+        <span className="micro">{tr(lang, "ดูว่าเชื่อมกันอย่างไร", "See how they connect", "看看如何相连")} →</span>
+      </Link>
+      <Link href={lastN ? `/read/?c=${chapterOf(Math.min(279, lastN + 1))}#s-${Math.min(279, lastN + 1)}` : "/read/"} className="where-item">
+        <span className="micro">{tr(lang, "อ่านต่อ", "Keep reading", "继续阅读")}</span>
+        <strong>
+          {lastN
+            ? tr(lang, `ล่าสุด ${sectionLabel(lang, lastN)} · ต่อที่ ${sectionLabel(lang, Math.min(279, lastN + 1))}`, `Last ${sectionLabel(lang, lastN)} · next ${sectionLabel(lang, Math.min(279, lastN + 1))}`, `上次${sectionLabel(lang, lastN)} · 接着读${sectionLabel(lang, Math.min(279, lastN + 1))}`)
+            : tr(lang, "เริ่มที่มาตรา 1", "Start at section 1", "从第1条开始")}
+        </strong>
+        <span className="micro">{tr(lang, "อ่านทั้งฉบับ", "The whole text", "阅读全文")} →</span>
+      </Link>
+      {puzzle && (
+        <Link href={`/rights/?case=${puzzle.id}`} className="where-item">
+          <span className="micro">{tr(lang, "โจทย์จากชีวิตจริง", "A real-life puzzle", "生活中的题")}</span>
+          <strong>{puzzle.prompt[lang]}</strong>
+          <span className="micro">{tr(lang, "ลองเดาก่อน", "Guess first", "先猜猜看")} →</span>
+        </Link>
+      )}
+    </section>
   );
 }

@@ -439,9 +439,6 @@ export function CheatSheet() {
 
   return (
     <div className="cheatsheet-page">
-      <div className="page-kicker mono">
-        {tr(lang, "สูตรและแผนภาพ", "Cheat sheets and diagrams", "速查表与图解")}
-      </div>
       
       <section className="intro">
         <div className="intro-index mono" aria-hidden="true">
@@ -452,17 +449,17 @@ export function CheatSheet() {
           <h1>
             {tr(
               lang,
-              "สรุปสูตร & แผนภาพ\nเข้าใจด้วยอัลกอริทึม",
-              "Cheat Sheets & Formulas:\nLearn Algorithmically.",
-              "速查表与思维导图：\n用算法理解宪法。",
+              "สูตรและแผนภาพ\nของรัฐธรรมนูญ",
+              "The constitution\nas diagrams and steps.",
+              "宪法的\n图解与步骤。",
             )}
           </h1>
           <p>
             {tr(
               lang,
-              "ทำข้อสอบและเข้าใจโครงสร้างอำนาจอย่างแม่นยำ ไม่ต้องท่องจำแบบสับสน ด้วยแผนภาพสไตล์ดินสอสี สูตรเงื่อนไข และตัวเลขสำคัญในรัฐธรรมนูญ",
-              "Master constitutional architecture with precision. No confusing rote memorization: explore crayon diagrams, logic gates, and vital exam numbers.",
-              "告别死记硬背与概念混淆。通过温润的蜡笔手绘图解、逻辑判定树与关键数字速查表，清晰透视宪制架构。",
+              "ลำดับชั้นของกฎหมาย ขั้นตอนแก้รัฐธรรมนูญ ประตูของพระราชกำหนด หลักความได้สัดส่วน และตัวเลขที่ต้องจำ แต่ละแผนภาพบอกมาตราที่มาไว้ให้กดอ่านต่อ",
+              "The hierarchy of laws, the amendment steps, the gates an emergency decree must pass, proportionality and the numbers worth knowing. Each diagram names its sections so you can open them.",
+              "法律位阶、修宪步骤、紧急法令须通过的关口、比例原则，以及值得记住的数字。每张图都标明出处条文，可点开阅读。",
             )}
           </p>
         </div>
@@ -605,7 +602,7 @@ export function CheatSheet() {
             <div className="citations-row">
               {pyramidLevels[pyramidLevel].sections.map((n) => (
                 <Link className="citation" href={`/section/?n=${n}`} key={n}>
-                  {sectionLabel(lang, n)} ↗
+                  {sectionLabel(lang, n)} →
                 </Link>
               ))}
             </div>
@@ -656,7 +653,7 @@ export function CheatSheet() {
             <h3>{amendmentSteps[flowStep].title}</h3>
             <pre className="step-rule-text">{amendmentSteps[flowStep].rule}</pre>
             <Link className="citation" href={`/section/?n=${flowStep === 6 ? 255 : 256}`}>
-              {sectionLabel(lang, flowStep === 6 ? 255 : 256)} ↗
+              {sectionLabel(lang, flowStep === 6 ? 255 : 256)} →
             </Link>
           </div>
         </section>
@@ -737,10 +734,10 @@ export function CheatSheet() {
           </div>
           <div className="citations-row">
             <Link className="citation" href="/section/?n=172">
-              {sectionLabel(lang, 172)} ↗
+              {sectionLabel(lang, 172)} →
             </Link>
             <Link className="citation" href="/section/?n=173">
-              {sectionLabel(lang, 173)} ↗
+              {sectionLabel(lang, 173)} →
             </Link>
           </div>
         </section>
@@ -849,7 +846,7 @@ export function CheatSheet() {
               </ol>
             </div>
             <Link className="citation" href="/section/?n=26">
-              {sectionLabel(lang, 26)} ↗
+              {sectionLabel(lang, 26)} →
             </Link>
           </div>
         </section>
@@ -891,7 +888,7 @@ export function CheatSheet() {
                 <div className="citations-row">
                   {cur.sections.map((n) => (
                     <Link className="citation" href={`/section/?n=${n}`} key={n}>
-                      {sectionLabel(lang, n)} ↗
+                      {sectionLabel(lang, n)} →
                     </Link>
                   ))}
                 </div>
@@ -929,7 +926,7 @@ export function CheatSheet() {
                 <div className="citations-row">
                   {m.sections.map((n) => (
                     <Link className="citation" href={`/section/?n=${n}`} key={n}>
-                      {sectionLabel(lang, n)} ↗
+                      {sectionLabel(lang, n)} →
                     </Link>
                   ))}
                 </div>

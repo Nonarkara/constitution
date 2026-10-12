@@ -79,7 +79,6 @@ export function Exam() {
   if (!paper)
     return (
       <>
-        <span className="page-kicker mono">MOCK EXAM · 03</span>
         <h1>{tr(lang, "ข้อสอบจำลอง", "Mock exam", "模拟考试")}</h1>
         <p>
           {tr(
@@ -120,7 +119,6 @@ export function Exam() {
   if (done && result)
     return (
       <>
-        <span className="page-kicker mono">MOCK EXAM · RESULT</span>
         <h1>
           {result.right} / {paper.list.length}
         </h1>
@@ -167,7 +165,7 @@ export function Exam() {
               <div>
                 {q.sections.map((n) => (
                   <Link className="citation" key={n} href={`/read/?c=${chapters.find((c) => n >= c.start && n <= c.end)?.number}#s-${n}`}>
-                    {sectionLabel(lang, n)} ↗
+                    {sectionLabel(lang, n)} →
                   </Link>
                 ))}
               </div>

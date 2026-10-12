@@ -114,7 +114,7 @@ export function Notes() {
           <div>
             {bookmarks.map((n) => (
               <Link className="citation" key={n} href={where(n)}>
-                {sectionLabel(lang, n)} ↗
+                {sectionLabel(lang, n)} →
               </Link>
             ))}
           </div>
@@ -129,7 +129,7 @@ export function Notes() {
             return (
               <article className="reading-excerpt" key={m.id}>
                 <Link href={where(m.section)}>
-                  {sectionLabel(lang, m.section)} · {m.lang.toUpperCase()} ↗
+                  {sectionLabel(lang, m.section)} · {m.lang.toUpperCase()} →
                 </Link>
                 <blockquote lang={m.lang}>{m.quote}</blockquote>
                 {m.note && <p className="notes-note">{m.note}</p>}
@@ -154,7 +154,7 @@ export function Notes() {
           <h2>{tr(lang, "โน้ตจากสมุดสองหน้า", "From the double-page notebook", "双页笔记中的记录")}</h2>
           {sectionNotes.map((a) => (
             <article className="reading-excerpt" key={a.section}>
-              <Link href={where(a.section)}>{sectionLabel(lang, a.section)} ↗</Link>
+              <Link href={where(a.section)}>{sectionLabel(lang, a.section)} →</Link>
               {a.note ? <p className="notes-note">{a.note}</p> : <p className="micro">{tr(lang, "ไฮไลต์ทั้งมาตรา", "Whole section highlighted", "整条已标记")}</p>}
             </article>
           ))}

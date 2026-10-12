@@ -128,7 +128,6 @@ export function PracticeArena() {
 
   return (
     <div className="practice-arena">
-      <span className="page-kicker mono">EXAM PRACTICE ARENA · 03</span>
 
       {!isActive ? (
         <>
@@ -139,17 +138,17 @@ export function PracticeArena() {
               <h1>
                 {tr(
                   lang,
-                  "คลังฝึกทำข้อสอบรัฐธรรมนูญ\nพร้อมระบบวิเคราะห์จุดที่ต้องช่วยเสริม",
-                  "Constitutional Exam Practice:\nAdaptive Mastery & Competition Arena.",
-                  "宪法题库强化练习：\n自适应诊断与竞赛专项。"
+                  "ฝึกตอบ\nแล้วดูว่าพลาดตรงไหน",
+                  "Practise,\nthen see where you slip.",
+                  "练习，\n然后看看哪里出错。"
                 )}
               </h1>
               <p>
                 {tr(
                   lang,
-                  `ข้อฝึกแต่งขึ้นจากตัวบท ${questions.length} ข้อ สำหรับฝึกแนวแข่งขันตอบปัญหากฎหมายและสถานการณ์ในชีวิต ไม่ใช่ข้อสอบจริงหรือข้อสอบทางการ ระบบจะตรวจจับจุดที่คุณยังตอบผิดและจัดชุดฝึกแก้จุดอ่อนให้โดยอัตโนมัติ`,
-                  `Practise ${questions.length} original study questions based on the Constitution. These are not official exams or verified past-paper questions. The adaptive engine detects your specific trouble spots and personalizes targeted drills.`,
-                  `练习${questions.length}道依据宪法编写的原创学习题，并非官方试题或经核实的历年真题。系统实时诊断您的薄弱知识点，自动量身定制针对性强化训练。`
+                  `${questions.length} ข้อ เขียนขึ้นจากตัวบทเพื่อฝึก ไม่ใช่ข้อสอบจริง ข้อที่ตอบผิดจะถูกจับกลุ่มเป็นเรื่อง เพื่อให้เห็นว่าควรกลับไปอ่านตรงไหน`,
+                  `${questions.length} questions written from the text for practice, not past exam papers. Missed questions are grouped by subject so you can see what to reread.`,
+                  `${questions.length}道依据条文编写的练习题，并非历年真题。答错的题按主题归类，让你知道该回去重读哪里。`
                 )}
               </p>
             </div>
@@ -158,16 +157,19 @@ export function PracticeArena() {
           {/* Quick Sub-navigation Bar */}
           <nav className="practice-subnav" aria-label="Practice sub-navigation">
             <Link href="/review/" className="subnav-pill">
-              ⏱ {tr(lang, "ทบทวนตามรอบ (Spaced)", "Spaced Review", "间隔复习")}
+              {tr(lang, "ทบทวนตามรอบ", "Spaced review", "间隔复习")}
             </Link>
             <Link href="/exam/" className="subnav-pill">
-              📝 {tr(lang, "สอบจำลองจับเวลา (Mock Exam)", "Timed Mock Exam", "计时模考")}
+              {tr(lang, "สอบจำลองจับเวลา", "Timed mock exam", "计时模考")}
             </Link>
             <Link href="/flashcards/" className="subnav-pill">
-              🗂 {tr(lang, "การ์ดความจำ (Flashcards)", "Flashcards", "记忆闪卡")}
+              {tr(lang, "การ์ดความจำ", "Flashcards", "记忆闪卡")}
             </Link>
             <Link href="/cheatsheet/" className="subnav-pill">
-              📊 {tr(lang, "สูตร & แผนภาพ (Cheat Sheets)", "Cheat Sheets", "速查公式")}
+              {tr(lang, "สูตรและแผนภาพ", "Cheat sheets", "速查图解")}
+            </Link>
+            <Link href="/games/" className="subnav-pill">
+              {tr(lang, "เกมจับคู่ตัวเลข", "Number games", "数字游戏")}
             </Link>
           </nav>
 
@@ -175,11 +177,11 @@ export function PracticeArena() {
           <section className="adaptive-diagnostic-box">
             <div className="diag-head">
               <h2>
-                🧠 {tr(
+                {tr(
                   lang,
-                  "ระบบตรวจจับและเรียนรู้จุดที่ต้องช่วยเสริมของคุณ",
-                  "What the System Learns You Need Help On",
-                  "系统为您诊断出的待加强薄弱点"
+                  "เรื่องที่คุณพลาดบ่อย",
+                  "Where your answers slip",
+                  "你常出错的主题"
                 )}
               </h2>
               <span className="micro mono">
@@ -201,7 +203,7 @@ export function PracticeArena() {
                     <div className="spot-head">
                       <span className="spot-title font-bold">{topic.title[lang]}</span>
                       <span className="spot-badge-error mono">
-                        ❌ {topic.errorCount} {tr(lang, "ข้อผิด", "missed", "处做错")}
+                        {topic.errorCount} {tr(lang, "ข้อผิด", "missed", "处做错")}
                       </span>
                     </div>
                     <p className="micro spot-desc">{topic.description[lang]}</p>
@@ -214,7 +216,7 @@ export function PracticeArena() {
                         className="btn-drill-spot micro"
                         onClick={() => startTopicDrill(topic)}
                       >
-                        🎯 {tr(lang, "ฝึกซ่อมจุดนี้ทันที", "Drill This Spot", "立即专练此项")} →
+                        {tr(lang, "ฝึกเรื่องนี้", "Practise this", "练这个主题")} →
                       </button>
                     </div>
                   </div>
@@ -223,11 +225,11 @@ export function PracticeArena() {
             ) : (
               <div className="all-clear-notice micro">
                 <span>
-                  ✨ {tr(
+                  {tr(
                     lang,
-                    "ยังไม่มีจุดผิดสะสม! เลือกลองทำชุดข้อสอบแข่งขันเพื่อทดสอบความจำเชิงลึก",
-                    "No accumulated trouble spots yet! Choose a competition drill to test deep recall.",
-                    "暂无明显错题累积！建议选择竞赛专项或情境题目检验深层记忆。"
+                    "ยังไม่มีเรื่องที่พลาดซ้ำ ลองฝึกสักชุด แล้วกลับมาดูที่นี่",
+                    "Nothing you keep missing yet. Try a set, then come back here.",
+                    "还没有反复出错的主题。先练一组，再回来看看。"
                   )}
                 </span>
               </div>
@@ -237,7 +239,7 @@ export function PracticeArena() {
           {/* PRACTICE MODE SELECTOR */}
           <section className="practice-mode-selector">
             <h2>
-              {tr(lang, "เลือกโหมดฝึกทำข้อสอบ", "Choose Your Practice Mode", "选择练习模式")}
+              {tr(lang, "เลือกวิธีฝึก", "Choose how to practise", "选择练习方式")}
             </h2>
 
             <div className="mode-cards-grid">
@@ -251,26 +253,24 @@ export function PracticeArena() {
                   if (e.key === "Enter" || e.key === " ") startSession("competition");
                 }}
               >
-                <div className="mode-badge mono">RECOMMENDED</div>
-                <div className="mode-card-icon">🏛️</div>
                 <h3>
                   {tr(
                     lang,
-                    "ข้อสอบแข่งขันตอบปัญหากฎหมายศาลรัฐธรรมนูญ",
-                    "Constitutional Court Competition Exam",
-                    "宪法法院法律竞赛真题与模拟题"
+                    "แนวแข่งขันตอบปัญหาศาลรัฐธรรมนูญ",
+                    "Constitutional Court quiz-competition style",
+                    "宪法法院知识竞赛风格"
                   )}
                 </h3>
                 <p>
                   {tr(
                     lang,
-                    "30 ข้อคัดสรร: วิธีพิจารณาคดี ม.212/213, ผู้ลงนามรับสนองพระบรมราชโองการ, พระราชกำหนด, และการขัดกันแห่งผลประโยชน์",
-                    "30 curated high-yield questions: Sec 212/213 petitions, royal countersignatures, emergency decrees, and judicial review.",
-                    "30道高频真题：第212/213条审理程序、王室谕令副署、紧急法令审查及利益冲突。"
+                    "30 ข้อที่เขียนขึ้นในแนวการแข่งขัน: การยื่นคำร้อง ม.212/213 ผู้รับสนองพระบรมราชโองการ พระราชกำหนด และการขัดกันแห่งผลประโยชน์",
+                    "30 questions written in the competition style: s.212/213 petitions, royal countersignature, emergency decrees and conflicts of interest.",
+                    "按竞赛风格编写的30道题：第212/213条申请、王室谕令副署、紧急法令及利益冲突。"
                   )}
                 </p>
                 <button className="primary mode-start-btn">
-                  {tr(lang, "เริ่มฝึก 30 ข้อ", "Start 30 Questions", "开始30题专项")} →
+                  {tr(lang, "เริ่ม 30 ข้อ", "Start 30", "开始30题")} →
                 </button>
               </div>
 
@@ -284,25 +284,24 @@ export function PracticeArena() {
                   if (e.key === "Enter" || e.key === " ") startSession("weak");
                 }}
               >
-                <div className="mode-card-icon">🎯</div>
                 <h3>
                   {tr(
                     lang,
-                    "โหมดซ่อมจุดอ่อนส่วนบุคคล",
-                    "Adaptive Personal Weakness Drill",
-                    "个人专属薄弱点强化"
+                    "ข้อที่เคยพลาด",
+                    "What you missed",
+                    "你答错过的题"
                   )}
                 </h3>
                 <p>
                   {tr(
                     lang,
-                    "ระบบดึงเฉพาะข้อที่คุณเคยตอบผิดและหมวดที่ยังไม่แม่นยำมาให้ฝึกซ้ำจนกว่าจะเชี่ยวชาญ",
-                    "Automatically serves past mistakes and unmastered chapters until you reach full recall.",
-                    "系统自动提取您的既往错题及未完全掌握章节，循环训练直至彻底掌握。"
+                    "ข้อที่คุณตอบผิด และหมวดที่ยังไม่ผ่านเกณฑ์ วนกลับมาให้ลองใหม่",
+                    "Questions you got wrong and chapters not yet passed, brought back to try again.",
+                    "你答错的题和尚未达标的章节，再来一次。"
                   )}
                 </p>
                 <button className="mode-start-btn">
-                  {tr(lang, "ซ่อมจุดอ่อน 20 ข้อ", "Drill Weak Spots (20)", "攻克薄弱20题")} →
+                  {tr(lang, "ลองใหม่ 20 ข้อ", "Retry 20", "重练20题")} →
                 </button>
               </div>
 
@@ -316,20 +315,19 @@ export function PracticeArena() {
                   if (e.key === "Enter" || e.key === " ") startSession("sprint");
                 }}
               >
-                <div className="mode-card-icon">⚡</div>
                 <h3>
-                  {tr(lang, "สปรินต์ด่วน 10 ข้อ", "Rapid 10-Question Sprint", "10题极速挑战")}
+                  {tr(lang, "สุ่ม 10 ข้อ", "Ten at random", "随机10题")}
                 </h3>
                 <p>
                   {tr(
                     lang,
-                    "สุ่ม 10 ข้อรวดเร็ว เหมาะสำหรับการฝึกสั้นๆ ระหว่างวัน เฉลยพร้อมสูตรคิดทันที",
-                    "10 fast random questions ideal for quick daily practice with instant algorithmic explanations.",
-                    "随机10道快题，适合碎片化时间练习，附即时算法解析。"
+                    "สิบข้อจากทั้งเล่ม พอดีช่วงพักสั้น ๆ เฉลยพร้อมวิธีคิดหลังตอบทุกข้อ",
+                    "Ten from the whole text, for a short break. Each answer comes with the reasoning.",
+                    "从全文随机抽十题，适合短暂休息时练。每题答后附解题思路。"
                   )}
                 </p>
                 <button className="mode-start-btn">
-                  {tr(lang, "เริ่มสปรินต์", "Start Sprint", "开始极速答题")} →
+                  {tr(lang, "เริ่ม", "Start", "开始")} →
                 </button>
               </div>
 
@@ -343,25 +341,24 @@ export function PracticeArena() {
                   if (e.key === "Enter" || e.key === " ") startSession("real-life");
                 }}
               >
-                <div className="mode-card-icon">🔍</div>
                 <h3>
                   {tr(
                     lang,
-                    "สถานการณ์จริง & การใช้สิทธิประชาชน",
-                    "Real-Life Situations & Citizen Rights",
-                    "现实生活法律案例与公民维权"
+                    "เรื่องในชีวิตจริง",
+                    "Everyday situations",
+                    "日常生活情境"
                   )}
                 </h3>
                 <p>
                   {tr(
                     lang,
-                    "โจทย์ปัญหาประยุกต์: การค้นบ้านโดยไม่มีหมาย, สิทธิฟ้องรัฐ, การรวมกลุ่ม, และหลักความได้สัดส่วน ม.26",
-                    "Scenario-based problem-solving: warrantless searches, suing state agencies, community protests, and Sec 26 proportionality.",
-                    "实用情境题：无令搜查、起诉国家机关不作为、社区环境维权及第26条比例原则。"
+                    "การค้นบ้านโดยไม่มีหมาย การฟ้องหน่วยงานรัฐ การชุมนุม และหลักความได้สัดส่วนตามมาตรา 26",
+                    "Searches without a warrant, suing a state agency, gathering to protest and the s.26 proportionality test.",
+                    "无令搜查、起诉国家机关、集会抗议及第26条比例原则。"
                   )}
                 </p>
                 <button className="mode-start-btn">
-                  {tr(lang, "เริ่มฝึกเคสจริง", "Practice Scenarios", "练习实战案例")} →
+                  {tr(lang, "เริ่ม", "Start", "开始")} →
                 </button>
               </div>
 
@@ -375,13 +372,12 @@ export function PracticeArena() {
                   if (e.key === "Enter" || e.key === " ") startSession("endless");
                 }}
               >
-                <div className="mode-card-icon">♾️</div>
                 <h3>
                   {tr(
                     lang,
-                    `ฝึกไม่จำกัด (${questions.length} ข้อรวด)`,
-                    `Endless Marathon (All ${questions.length})`,
-                    `全题库无尽马拉松（共${questions.length}题）`
+                    `ทั้งคลัง ${questions.length} ข้อ`,
+                    `The whole bank, ${questions.length}`,
+                    `全部${questions.length}题`
                   )}
                 </h3>
                 <p>
@@ -393,22 +389,21 @@ export function PracticeArena() {
                   )}
                 </p>
                 <button className="mode-start-btn">
-                  {tr(lang, "เปิดโหมดไม่จำกัด", "Start Endless", "开启无尽模式")} →
+                  {tr(lang, "เริ่ม", "Start", "开始")} →
                 </button>
               </div>
 
               {/* Specific Chapter Filter */}
               <div className="mode-card chapter-select-mode">
-                <div className="mode-card-icon">📑</div>
                 <h3>
-                  {tr(lang, "เลือกฝึกเจาะจงรายหมวด", "Practice by Specific Chapter", "按具体章节专练")}
+                  {tr(lang, "ทีละหมวด", "One chapter", "按章节")}
                 </h3>
                 <p>
                   {tr(
                     lang,
-                    "เลือกหมวด 1 ถึง 16 หรือบทเฉพาะกาล เพื่อทบทวนเนื้อหาเฉพาะด้าน",
-                    "Pick any specific chapter (1–16 or Transitory Provisions) to focus deeply on that subject.",
-                    "自选第1至16章或过渡条款，深度攻克单章考点。"
+                    "หมวด 1 ถึง 16 หรือบทเฉพาะกาล",
+                    "Chapters 1–16 or the transitory provisions.",
+                    "第1至16章或过渡条款。"
                   )}
                 </p>
                 <div className="chapter-dropdown-row">
@@ -427,7 +422,7 @@ export function PracticeArena() {
                     className="primary"
                     onClick={() => startSession("chapter", selectedChapter)}
                   >
-                    {tr(lang, "ฝึกหมวดนี้", "Drill Chapter", "专练此章")} →
+                    {tr(lang, "ฝึกหมวดนี้", "Practise", "练习本章")} →
                   </button>
                 </div>
               </div>
@@ -439,7 +434,7 @@ export function PracticeArena() {
         <div className="session-result-screen">
           <div className="result-card">
             <h2>
-              🎉 {tr(lang, "เสร็จสิ้นการฝึกฝนรอบนี้!", "Practice Session Completed!", "本轮练习完成！")}
+              {tr(lang, "จบรอบนี้แล้ว", "That's the set", "本轮结束")}
             </h2>
             <div className="result-score-display">
               <span className="mono score-number">
@@ -452,9 +447,9 @@ export function PracticeArena() {
             <p className="micro">
               {tr(
                 lang,
-                "คำตอบของคุณถูกบันทึกลงในสถิติการเรียนรู้ และข้อที่ตอบผิดจะถูกส่งต่อไปยังระบบทบทวนตามรอบและสำรับการ์ดความจำโดยอัตโนมัติ",
-                "Your answers have updated your study profile. Any missed questions have entered your spaced repetition and weakness queues.",
-                "您的作答数据已更新至个人学习画像，错题已自动同步至间隔复习与薄弱练习队列。"
+                "ข้อที่พลาดจะกลับมาให้ลองอีกครั้งในรอบทบทวน",
+                "The ones you missed come back in review.",
+                "答错的题会在复习时再出现。"
               )}
             </p>
 
@@ -463,13 +458,13 @@ export function PracticeArena() {
                 className="primary"
                 onClick={() => startSession(mode, selectedChapter)}
               >
-                ↻ {tr(lang, "ฝึกซ้ำอีกรอบ", "Practice Again", "再练一轮")}
+                ↻ {tr(lang, "อีกรอบ", "Again", "再来一轮")}
               </button>
               <button onClick={() => setIsActive(false)}>
-                ← {tr(lang, "กลับหน้ารวมโหมดฝึก", "Back to Modes", "返回模式选择")}
+                ← {tr(lang, "เลือกวิธีฝึกใหม่", "Choose another way", "换一种方式")}
               </button>
               <Link href="/review/" className="button">
-                ⏱ {tr(lang, "ไปหน้าทบทวน", "Go to Review", "前往复习")} ↗
+                {tr(lang, "ไปหน้าทบทวน", "Go to review", "前往复习")} →
               </Link>
             </div>
           </div>
@@ -564,8 +559,8 @@ export function PracticeArena() {
                 <div className="explanation-head">
                   <span className="font-bold">
                     {selectedChoice === currentQ.answer
-                      ? `✅ ${tr(lang, "ถูกต้องยอดเยี่ยม!", "Correct!", "回答正确！")}`
-                      : `❌ ${tr(
+                      ? tr(lang, "ถูก", "Correct", "正确")
+                      : `${tr(
                           lang,
                           `ยังไม่ถูกต้อง คำตอบที่ถูกคือข้อ ${choiceLetter(lang, currentQ.answer)}`,
                           `Incorrect. The correct answer is (${choiceLetter(lang, currentQ.answer)})`,
@@ -598,14 +593,14 @@ export function PracticeArena() {
                       href={`/notebook/?jump=${s}`}
                       className="link-underlined"
                     >
-                      📖 {tr(lang, `เปิดดู ม.${s} ในสมุดคู่หน้า ↗`, `Open Sec ${s} in Notebook ↗`, `在双页开本中阅读第${s}条 ↗`)}
+                      📖 {tr(lang, `เปิดดู ม.${s} ในสมุดคู่หน้า →`, `Open Sec ${s} in Notebook →`, `在双页开本中阅读第${s}条 →`)}
                     </Link>
                   ))}
                   <Link
                     href={`/flashcards/?sec=${currentQ.sections[0]}`}
                     className="link-underlined"
                   >
-                    🗂 {tr(lang, "เปิดการ์ดความจำ ↗", "Open Flashcard ↗", "打开记忆闪卡 ↗")}
+                    {tr(lang, "เปิดการ์ดความจำ →", "Open flashcard →", "打开记忆闪卡 →")}
                   </Link>
                 </div>
 

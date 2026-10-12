@@ -197,7 +197,6 @@ export function Games() {
   const { lang } = useStudy();
   return (
     <>
-      <span className="page-kicker mono">GAMES · 03</span>
       <h1>{tr(lang, "เกม", "Games", "游戏")}</h1>
       <p>
         {tr(

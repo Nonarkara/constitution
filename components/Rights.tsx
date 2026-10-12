@@ -32,9 +32,6 @@ export function Rights() {
     );
   return (
     <>
-      <div className="page-kicker mono">
-        {tr(lang, "สิทธิของคุณ · 02", "Your rights · 02", "你的权利 · 02")}
-      </div>
       <h1>
         {tr(
           lang,
@@ -66,7 +63,7 @@ export function Rights() {
                 </div>
                 <div className="chapter-actions">
                   <button onClick={() => setOpen(item)}>
-                    {tr(lang, "ลองเดา", "Try it", "试一试")} ↗
+                    {tr(lang, "ลองเดา", "Try it", "试一试")} →
                   </button>
                 </div>
               </article>

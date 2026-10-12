@@ -121,7 +121,7 @@ export function ReadAll() {
 
   return (
     <>
-      <span className="page-kicker mono">THE WHOLE TEXT · 02</span>
+      <span className="page-kicker">{chapterLabel(lang, chapterNumber)}</span>
       <div className="read-head">
         <h1>{chapter.title[lang]}</h1>
         <label className="micro" htmlFor="read-chapter">
@@ -165,7 +165,7 @@ export function ReadAll() {
                 {bookmarked ? tr(lang, "คั่นแล้ว", "Bookmarked", "已收藏") : tr(lang, "คั่นหน้า", "Bookmark", "收藏")}
               </button>
               <Link href={`/section/?n=${s.number}`}>
-                {tr(lang, "ฟังและเทียบภาษา", "Listen & compare", "朗读与对照")} ↗
+                {tr(lang, "ฟังและเทียบภาษา", "Listen & compare", "朗读与对照")} →
               </Link>
             </div>
             <p className="read-text" lang={lang} data-text={s.number} data-read={s.number}>

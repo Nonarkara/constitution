@@ -99,9 +99,6 @@ export function DoublePageReader() {
 
   return (
     <div className="notebook-container">
-      <div className="page-kicker mono">
-        {tr(lang, "สมุดเปิด · 279 มาตรา", "The open notebook · 279 sections", "打开的笔记本 · 279条")}
-      </div>
 
       <header className="notebook-header">
         <div className="intro-copy">
@@ -109,17 +106,17 @@ export function DoublePageReader() {
           <h1>
             {tr(
               lang,
-              "สมุดคู่หน้ารัฐธรรมนูญ\nเปิดอ่าน ไฮไลต์ และจดโน้ต",
-              "Open Notebook Spread:\nRead, Highlight, and Annotate.",
-              "双页开本宪法全书：\n研读、高亮与边注。",
+              "สมุดสองหน้า\nทีละสองมาตรา",
+              "Two pages,\ntwo sections at a time.",
+              "双页笔记本，\n每次两条。",
             )}
           </h1>
           <p>
             {tr(
               lang,
-              "เปิดอ่านรัฐธรรมนูญทั้ง 279 มาตราเสมือนเปิดสมุดสอบจริงบนโต๊ะ ไฮไลต์ข้อความและจดบันทึกช่วยจำ สิ่งที่คุณจดจะถูกส่งต่อไปยังระบบการ์ดความจำและการทบทวนอัตโนมัติ",
-              "Read all 279 sections in an open dual-page desk layout. Highlight text and take margin notes—everything you annotate flows directly into your Flashcard and Review sessions.",
-              "以桌面开本书卷式布局研读全部279条宪法。随手高亮重点并记录边注，您所做的一切笔记都将无缝同步至记忆闪卡与复习系统。",
+              "อ่านทั้ง 279 มาตราเหมือนสมุดเปิดบนโต๊ะ ระบายสีทั้งมาตราตามความหมาย แล้วจดโน้ตที่ขอบ โน้ตจะกลับมาในการ์ดความจำและรอบทบทวน",
+              "Read all 279 sections like a book open on the desk. Colour a whole section by what it means and write in the margin; your notes return in flashcards and review.",
+              "像摊开在桌上的书一样阅读全部279条。按含义给整条上色，在页边写笔记；笔记会出现在闪卡和复习中。",
             )}
           </p>
         </div>
@@ -239,7 +236,7 @@ export function DoublePageReader() {
             )}
           </span>
           <Link href="/flashcards/" className="link-underlined">
-            {tr(lang, "ทบทวนการ์ดความจำจากบันทึกของคุณ ↗", "Review as Flashcards ↗", "以闪卡形式复习 ↗")}
+            {tr(lang, "ทบทวนการ์ดความจำจากบันทึกของคุณ →", "Review as Flashcards →", "以闪卡形式复习 →")}
           </Link>
         </div>
       )}
@@ -339,10 +336,10 @@ export function DoublePageReader() {
 
               <div className="page-actions-row">
                 <Link className="citation" href={`/section/?n=${leftSection.number}`}>
-                  {tr(lang, "ฟังเสียงอ่าน & ดูคำอธิบาย", "Listen & Details", "收听朗读与详查")} ↗
+                  {tr(lang, "ฟังเสียงอ่าน & ดูคำอธิบาย", "Listen & Details", "收听朗读与详查")} →
                 </Link>
                 <Link className="citation" href={`/flashcards/?sec=${leftSection.number}`}>
-                  {tr(lang, "เปิดเป็นการ์ดความจำ", "Open Flashcard", "生成记忆卡")} ↗
+                  {tr(lang, "เปิดเป็นการ์ดความจำ", "Open Flashcard", "生成记忆卡")} →
                 </Link>
               </div>
             </div>
@@ -438,10 +435,10 @@ export function DoublePageReader() {
 
               <div className="page-actions-row">
                 <Link className="citation" href={`/section/?n=${rightSection.number}`}>
-                  {tr(lang, "ฟังเสียงอ่าน & ดูคำอธิบาย", "Listen & Details", "收听朗读与详查")} ↗
+                  {tr(lang, "ฟังเสียงอ่าน & ดูคำอธิบาย", "Listen & Details", "收听朗读与详查")} →
                 </Link>
                 <Link className="citation" href={`/flashcards/?sec=${rightSection.number}`}>
-                  {tr(lang, "เปิดเป็นการ์ดความจำ", "Open Flashcard", "生成记忆卡")} ↗
+                  {tr(lang, "เปิดเป็นการ์ดความจำ", "Open Flashcard", "生成记忆卡")} →
                 </Link>
               </div>
             </div>

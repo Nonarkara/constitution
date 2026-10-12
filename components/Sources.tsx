@@ -6,9 +6,6 @@ export function Sources() {
   const { lang } = useStudy();
   return (
     <>
-      <span className="page-kicker mono">
-        {tr(lang, "อ่านต้นฉบับ · 05", "Read the original · 05", "阅读原文 · 05")}
-      </span>
       <h1>
         {tr(
           lang,

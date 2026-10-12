@@ -184,7 +184,7 @@ function VoteLab() {
           </>
         )}
       </div>
-      <Link href="/section/?n=256">{sectionLabel(lang, 256)} ↗</Link>
+      <Link href="/section/?n=256">{sectionLabel(lang, 256)} →</Link>
     </section>
   );
 }
@@ -386,7 +386,7 @@ export function AmendmentJourney() {
             <p>
               {current.sections.map((n) => (
                 <Link className="citation" key={n} href={`/section/?n=${n}`}>
-                  {sectionLabel(lang, n)} ↗{" "}
+                  {sectionLabel(lang, n)} →{" "}
                 </Link>
               ))}
             </p>
@@ -416,7 +416,7 @@ export function AmendmentJourney() {
                     "Open the official amendment source",
                     "查看正式修正来源",
                   )}{" "}
-                  ↗
+                  →
                 </Link>
                 <h3>
                   {tr(
@@ -506,7 +506,7 @@ export function AmendmentJourney() {
                 <p>{d.body[lang]}</p>
                 {d.sections.map((n) => (
                   <Link className="citation" href={`/section/?n=${n}`} key={n}>
-                    {sectionLabel(lang, n)} ↗{" "}
+                    {sectionLabel(lang, n)} →{" "}
                   </Link>
                 ))}
               </details>
@@ -635,7 +635,7 @@ export function AmendmentJourney() {
                 "Go to your notes",
                 "前往你的笔记",
               )}{" "}
-              ↗
+              →
             </Link>
           </>
         )}

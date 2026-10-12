@@ -88,7 +88,7 @@ export function ReflectionSummary() {
           "Open the story and note",
           "打开故事与笔记",
         )}{" "}
-        ↗
+        →
       </Link>
     </section>
   );

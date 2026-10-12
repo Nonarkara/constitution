@@ -51,9 +51,6 @@ export function Reader() {
     : [];
   return (
     <>
-      <span className="page-kicker mono">
-        {tr(lang, "ห้องอ่าน · 03", "The reading room · 03", "阅读室 · 03")}
-      </span>
       <h1 id="reader-title" tabIndex={-1}>
         {tr(
           lang,
@@ -91,7 +88,7 @@ export function Reader() {
             onChange={(e) => setQuery(e.target.value)}
           />
           <button type="submit">
-            ↗ <span className="sr-only">{labels.search[lang]}</span>
+            → <span className="sr-only">{labels.search[lang]}</span>
           </button>
           <VoiceSearch lang={lang} onText={setQuery} />
         </div>
@@ -111,7 +108,7 @@ export function Reader() {
               <button key={s.number} onClick={() => open(s.number)}>
                 <span className="mono">{s.number}</span>
                 <span>{readingText(s.number, lang).slice(0, 140)}…</span>
-                <span aria-hidden="true">↗</span>
+                <span aria-hidden="true">→</span>
               </button>
             ))}
           </div>
@@ -293,7 +290,7 @@ export function Reader() {
               ← {tr(lang, "ก่อนหน้า", "Previous", "上一条")}
             </button>
             <Link href="/review/">
-              {tr(lang, "ลองฝึกตอบ", "Try practice", "尝试练习")} ↗
+              {tr(lang, "ลองฝึกตอบ", "Try practice", "尝试练习")} →
             </Link>
             <button
               disabled={section.number === 279}

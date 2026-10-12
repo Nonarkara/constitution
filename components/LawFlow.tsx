@@ -110,7 +110,7 @@ export function LawFlow({ amendment = false }: { amendment?: boolean }) {
         {steps[step].body}
       </p>
       <Link href={`/section/?n=${amendment ? 256 : 133}`}>
-        {tr(lang, "กลับไปอ่านตัวบท", "Read the legal text", "阅读原条文")} ↗
+        {tr(lang, "กลับไปอ่านตัวบท", "Read the legal text", "阅读原条文")} →
       </Link>
     </section>
   );

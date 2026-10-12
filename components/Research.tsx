@@ -254,7 +254,7 @@ export function Research() {
             "Try the amendment story",
             "体验修宪故事",
           )}{" "}
-          ↗
+          →
         </Link>{" "}
         ·{" "}
         <Link href="/sources/">
@@ -264,7 +264,7 @@ export function Research() {
             "Legal sources and translations",
             "法律来源与译文",
           )}{" "}
-          ↗
+          →
         </Link>
       </p>
     </article>

@@ -159,7 +159,7 @@ export function Puzzle({
       <div>
         {item.sections.map((n) => (
           <Link className="citation" href={`/section/?n=${n}`} key={n}>
-            {sectionLabel(lang, n)} ↗
+            {sectionLabel(lang, n)} →
           </Link>
         ))}
       </div>
