@@ -3391,3 +3391,9 @@ footer { flex-wrap:wrap; gap:16px; }
 .memory-cue { margin-block:1rem; border-block:1px solid var(--line); padding-block:.75rem; }
 @media(max-width:1024px){ .palace-index { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:480px){ .palace-index button { padding:.75rem; } .palace-picture-small { width:72px; } .palace-room figure,.memory-cue figure { grid-template-columns:1fr; } .palace-room .palace-picture,.memory-cue .palace-picture { max-width:220px; } }
+
+.recall-first,.explain-back { border-block:1px solid var(--line); padding-block:1rem; margin-block:1rem; }
+.recall-first textarea,.explain-back textarea { display:block; width:100%; margin-block:.75rem; padding:.75rem; background:var(--paper); color:var(--ink); border:1px solid var(--edge); font:inherit; }
+.recall-mode { display:flex; align-items:center; gap:.75rem; min-height:44px; }
+.confidence-check { display:flex; flex-wrap:wrap; gap:.75rem; margin-block:1rem; }
+.confidence-check label { display:flex; align-items:center; gap:.5rem; min-height:44px; }

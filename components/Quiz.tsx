@@ -11,6 +11,8 @@ import { sessionSummary } from "@/lib/session";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
 import { MemoryCue } from "./MemoryCue";
+import { RecallFirst, ConfidenceCheck, ExplainBack } from "./LearningCoach";
+import { emptyCalibration, recordCalibration, nextReviewAt, type Confidence } from "@/lib/coach";
 import { Puzzle } from "./Puzzle";
 type Question = (typeof questions)[number];
 
@@ -41,6 +43,11 @@ export function Quiz({
     [order, setOrder] = useState<number[]>(() =>
       fisherYates(opening[0]?.choices.map((_, i) => i) ?? []),
     );
+  const [recallMode, setRecallMode] = useState(true);
+  const [optionsVisible, setOptionsVisible] = useState(false);
+  const [recallDraft, setRecallDraft] = useState("");
+  const [confidence, setConfidence] = useState<Confidence | null>(null);
+  const [calibration, setCalibration] = useState(emptyCalibration);
   const puzzle = lesson[puzzleAt] ?? null;
   const q = list[index];
   const readSections = [
@@ -72,6 +79,12 @@ export function Quiz({
           )}
         </h1>
         <p>{sessionSummary(correct, firstTotal, lang)}</p>
+        {calibration.sure > 0 && <p>{tr(lang, `มั่นใจ ${calibration.sure} ข้อ แต่พลาด ${calibration.sureMissed} ข้อ จุดนี้เหมาะกลับไปถามว่ากฎต่างจากที่คิดตรงไหน`, `High-confidence responses: ${calibration.sure}; incorrect: ${calibration.sureMissed}. Revisit where the rule differed from your expectation.`, `你对${calibration.sure}题很确定，其中${calibration.sureMissed}题答错了。回顾规则与预期不同之处。`)}</p>}
+        {calibration.uncertainCorrect > 0 && <p>{tr(lang, `ไม่มั่นใจแต่ตอบถูก ${calibration.uncertainCorrect} ข้อ ลองอธิบายเหตุผลเพื่อแยกความเข้าใจจากการเดา`, `Correct while unsure: ${calibration.uncertainCorrect}. Explain why to distinguish understanding from a lucky guess.`, `有${calibration.uncertainCorrect}题虽然不确定却答对了。解释理由，以区分理解与猜中。`)}</p>}
+        <p>{tr(lang,"ตอบซ้ำทันทีช่วยแก้ความเข้าใจ แต่ยังไม่พิสูจน์ว่าจำได้หลังเว้นเวลา","An immediate retry helps correct your understanding; it does not yet prove delayed retention.","立即重试有助于纠正理解，但尚不能证明隔一段时间仍能记住。")}</p>
+        {nextReviewAt(progress, list.map(q=>q.id), Date.now()) !== null && <p>{tr(lang,"กลับมาทบทวนเร็วที่สุด:","Earliest next review:","最早下次复习：")} {new Date(nextReviewAt(progress,list.map(q=>q.id),Date.now())!).toLocaleString(lang === "th" ? "th-TH" : lang === "zh" ? "zh-CN" : "en-GB", {timeZone:"Asia/Bangkok",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"})} · {tr(lang,"เวลาไทย","Bangkok time","曼谷时间")}</p>}
+        {missed.length > 0 && <details><summary>{tr(lang,"จุดที่ควรกลับมาอธิบายใหม่","Ideas to explain again","值得重新解释的概念")}</summary><ul>{missed.map(id=>{const item=questions.find(q=>q.id===id);return item?<li key={id}><Link href={`/section/?n=${item.sections[0]}`}>{item.prompt[lang]} →</Link></li>:null;})}</ul></details>}
+        <p><Link href="/review/">{tr(lang,"ทบทวนแบบสลับเรื่อง","Mix topics for review","交错复习不同主题")} →</Link> · <Link href="/memory/">{tr(lang,"เดินบ้านความจำโดยไม่ดูเฉลย","Recall the memory house without answers","不看答案回忆记忆屋")} →</Link></p>
         <button className="primary" onClick={onExit}>
           {tr(lang, "กลับสู่เส้นทาง", "Back to your path", "返回学习路径")} →
         </button>
@@ -142,11 +155,15 @@ export function Quiz({
     const picked = order[choice];
     const ok = picked === q.answer;
     save(recordAnswer(progress, q, ok, Date.now()));
+    if (index < firstTotal) setCalibration(c => recordCalibration(c, confidence, ok));
     if (ok && index < firstTotal) setCorrect((x) => x + 1);
     if (!ok && !retried) setMissed((ids) => (ids.includes(q.id) ? ids : [...ids, q.id]));
     setChecked(true);
   };
   const advance = () => {
+    setOptionsVisible(false);
+    setConfidence(null);
+    setRecallDraft("");
     const more = index < list.length - 1;
     if (!more && !retried && (missed.length > 0 || (choice !== null && order[choice] !== q.answer && !missed.includes(q.id)))) {
       const ids = missed.includes(q.id) || (choice !== null && order[choice] === q.answer) ? missed : [...missed, q.id];
@@ -193,6 +210,8 @@ export function Quiz({
       <h1 id="quiz-heading" tabIndex={-1}>
         {q.prompt[lang]}
       </h1>
+      {!checked && <label className="recall-mode"><input type="checkbox" checked={recallMode} onChange={e=>setRecallMode(e.target.checked)}/>{tr(lang,"ลองจำก่อนเห็นตัวเลือก","Recall before options","看选项前先回忆")}</label>}
+      {recallMode && !optionsVisible && !checked ? <RecallFirst key={index} draft={recallDraft} onDraftChange={setRecallDraft} onReveal={()=>setOptionsVisible(true)}/> : <>
       <fieldset disabled={checked}>
         <legend className="micro">
           {tr(lang, "เลือกคำตอบที่ถูกต้องที่สุด", "Choose the best answer", "选择最合适的答案")}
@@ -232,8 +251,10 @@ export function Quiz({
           );
         })}
       </fieldset>
+      {!checked && <ConfidenceCheck value={confidence} onChange={setConfidence}/>}
+      </>}
       {!checked ? (
-        <button className="primary" disabled={choice === null} onClick={check}>
+        <button className="primary" disabled={choice === null || (recallMode && !optionsVisible)} onClick={check}>
           {tr(lang, "ตรวจคำตอบ", "Check answer", "检查答案")} →
         </button>
       ) : (
@@ -241,7 +262,7 @@ export function Quiz({
           <div className="feedback" role="status">
             <strong>
               {order[choice ?? 0] === q.answer
-                ? tr(lang, "ถูกต้อง เข้าใจจุดนี้แล้ว", "Correct. You’ve got this idea.", "答对了，你理解了这个概念。")
+                ? tr(lang, "ตอบถูก มาดูเหตุผล", "Correct. Now check the reasoning.", "答对了，再核对理由。")
                 : tr(
                     lang,
                     `ยังไม่ใช่ คุณเลือก ${choiceLetter(lang, choice ?? 0)}`,
@@ -250,6 +271,7 @@ export function Quiz({
                   )}
             </strong>
             <p>{q.explanation[lang]}</p>
+            {recallDraft.trim() && <p className="micro">{tr(lang,"ความคิดก่อนเห็นตัวเลือก:","Your thought before the options:","看选项前的想法：")} {recallDraft}</p>}
             {cases
               .filter((item) => item.sections.some((n) => q.sections.includes(n)))
               .map((item) => (
@@ -275,6 +297,7 @@ export function Quiz({
               ))}
             </div>
           </div>
+          <ExplainBack key={index} section={q.sections[0]}/>
           <button className="primary" onClick={advance}>
             {index === list.length - 1 && (retried || missed.length === 0)
               ? tr(lang, "ดูผลรอบนี้", "Finish session", "查看结果")
