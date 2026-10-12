@@ -4,8 +4,10 @@ const AUDIO_CACHE = "constitution-audio-__AUDIO_VERSION__";
 const PRECACHE = /*__PRECACHE__*/ [
   "/",
   "/learn/",
-  "/rights/",
+  "/notebook/",
+  "/flashcards/",
   "/cheatsheet/",
+  "/rights/",
   "/section/",
   "/review/",
   "/sources/",

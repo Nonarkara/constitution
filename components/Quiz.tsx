@@ -18,7 +18,7 @@ export function Quiz({
   queue?: Question[];
   onExit: () => void;
 }) {
-  const { lang, progress, save } = useStudy();
+  const { lang, progress, save, annotations } = useStudy();
   const [list] = useState(
     () => queue ?? questions.filter((q) => q.chapter === chapter),
   );
@@ -212,6 +212,21 @@ export function Quiz({
                   )}
             </strong>
             <p>{q.explanation[lang]}</p>
+            {q.sections.some((n) => annotations[n]?.note) && (
+              <div className="note" style={{ margin: "12px 0", borderLeft: "3px solid var(--accent)" }}>
+                <strong className="micro">
+                  ✍️ {tr(
+                    lang,
+                    "บันทึกช่วยจำของคุณในมาตรานี้:",
+                    "Your personal note for this section:",
+                    "您在相关法条记录的笔记:",
+                  )}
+                </strong>
+                <p style={{ margin: "4px 0 0", fontStyle: "italic" }}>
+                  {q.sections.map((n) => annotations[n]?.note).filter(Boolean).join(" · ")}
+                </p>
+              </div>
+            )}
             <div>
               {q.sections.map((n) => (
                 <Link className="citation" href={`/section/?n=${n}`} key={n}>

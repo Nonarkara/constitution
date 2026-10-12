@@ -1,30 +1,53 @@
 "use client";
 import { StudyArt } from "./StudyArt";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+import Link from "next/link";
 import questions from "@/data/questions.json";
 import { dueQuestions } from "@/lib/learning";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
 import { Quiz } from "./Quiz";
+import { analyzeUserLearning } from "@/lib/adaptive";
+
 export function Review() {
-  const { lang, progress } = useStudy();
+  const { lang, progress, annotations, examTarget } = useStudy();
   const [now, setNow] = useState(0),
     [active, setActive] = useState(false),
-    [mix, setMix] = useState(false);
+    [mode, setMode] = useState<"due" | "mix" | "annotated" | "weak">("due");
+
   useEffect(() => {
     setNow(Date.now());
     const t = setInterval(() => setNow(Date.now()), 30000);
     return () => clearInterval(t);
   }, []);
+
   const due = dueQuestions(questions, progress, now);
+
+  const profile = useMemo(() => {
+    return analyzeUserLearning(questions, progress, annotations, examTarget);
+  }, [progress, annotations, examTarget]);
+
+  const annotatedQuestions = useMemo(() => {
+    const annotatedSecs = new Set(Object.keys(annotations).map(Number));
+    return questions.filter((q) => q.sections.some((s) => annotatedSecs.has(s)));
+  }, [annotations]);
+
+  const weakQuestions = useMemo(() => {
+    const weakChs = new Set(profile.weakestChapters);
+    return questions.filter((q) => weakChs.has(q.chapter));
+  }, [profile.weakestChapters]);
+
+  const activeQueue = useMemo(() => {
+    if (mode === "annotated") return annotatedQuestions.slice(0, 8);
+    if (mode === "weak") return weakQuestions.slice(0, 8);
+    if (mode === "mix") return [...questions].sort(() => Math.random() - 0.5).slice(0, 8);
+    return due.slice(0, 8);
+  }, [mode, due, annotatedQuestions, weakQuestions]);
+
   if (active)
     return (
       <Quiz
-        queue={
-          mix
-            ? [...questions].sort(() => Math.random() - 0.5).slice(0, 8)
-            : due.slice(0, 8)
-        }
+        queue={activeQueue}
         onExit={() => {
           setActive(false);
           setNow(Date.now());
@@ -48,61 +71,92 @@ export function Review() {
         <p>
           {tr(
             lang,
-            "คำถามที่เคยตอบจะกลับมาตามช่วงเวลา ข้อที่พลาดกลับมาเร็ว ข้อที่เข้าใจแล้วเว้นให้นานขึ้น",
-            "Questions return over time. Missed ones return sooner; correct ones get more breathing room.",
-            "学过的题目会按间隔再次出现。错题早点复习，答对的题目间隔更长。",
+            "คำถามที่เคยตอบจะกลับมาตามช่วงเวลา ข้อที่พลาดกลับมาเร็ว ข้อที่เข้าใจแล้วเว้นให้นานขึ้น พร้อมโหมดปรับแต่งเฉพาะสำหรับมาตราที่คุณจดโน้ตไว้",
+            "Questions return over time. Missed ones return sooner; correct ones get more breathing room. Includes tailored sessions for your annotated sections.",
+            "学过的题目会按间隔再次出现。错题早点复习，答对的题目间隔更长。亦可针对您做过边注的法条进行专项自适应温习。",
           )}
         </p>
       </div>
+
       <div className="review-count">
         <strong className="mono">{due.length}</strong>
         <span>
           {tr(lang, "ข้อถึงเวลาทบทวน", "questions due", "题到期复习")}
         </span>
       </div>
-      <button
-        className="primary"
-        disabled={!due.length}
-        onClick={() => {
-          setMix(false);
-          setActive(true);
-        }}
-      >
-        {tr(lang, "ทบทวนที่ถึงเวลา", "Review due questions", "复习到期题目")} →
-      </button>
-      <div className="note">
-        <h2>
-          {tr(
-            lang,
-            "อยากลองหลายหมวด?",
-            "Try a mixed session?",
-            "想练习不同章节？",
-          )}
-        </h2>
-        <p>
-          {tr(
-            lang,
-            "สุ่ม 8 ข้อจากทุกหมวด ไม่ต้องรอคิวทบทวน",
-            "Eight questions across chapters. You don’t have to wait for the review queue.",
-            "从不同章节抽取八题，不用等待复习时间。",
-          )}
-        </p>
+
+      <div className="review-primary-actions">
         <button
+          className="primary"
+          disabled={!due.length}
           onClick={() => {
-            setMix(true);
+            setMode("due");
             setActive(true);
           }}
         >
-          {tr(lang, "เริ่มรอบรวมหมวด", "Start mixed practice", "开始综合练习")}{" "}
-          ↗
+          {tr(lang, "ทบทวนที่ถึงเวลา (Spaced Review)", "Review due questions", "复习到期题目")} →
         </button>
+
+        <Link href="/flashcards/" className="button">
+          🗂 {tr(lang, "เปิดการ์ดความจำ (Flashcards)", "Open Flashcards Deck", "打开记忆闪卡")} ↗
+        </Link>
       </div>
+
+      {/* Adaptive Personalized Study Session */}
+      <div className="note" style={{ marginTop: "24px" }}>
+        <h2>
+          🎯 {tr(
+            lang,
+            "ระบบแนะนำสำหรับคุณโดยเฉพาะ",
+            "Customized for Your Learning Profile",
+            "为您量身定制的专项复习",
+          )}
+        </h2>
+        <p className="micro">{profile.recommendation[lang]}</p>
+
+        <div className="flow-tabs" style={{ marginTop: "14px" }}>
+          {annotatedQuestions.length > 0 && (
+            <button
+              onClick={() => {
+                setMode("annotated");
+                setActive(true);
+              }}
+            >
+              <span className="mono">✍️ {annotatedQuestions.length}</span>
+              {tr(lang, "ทบทวนมาตราที่จดโน้ต", "Review My Annotated Sections", "复习我的笔记法条")}
+            </button>
+          )}
+
+          {weakQuestions.length > 0 && (
+            <button
+              onClick={() => {
+                setMode("weak");
+                setActive(true);
+              }}
+            >
+              <span className="mono">⚡ {profile.weakestChapters.join(", ")}</span>
+              {tr(lang, "ฝึกหมวดที่ต้องเสริมจุดอ่อน", "Strengthen Weak Chapters", "强化薄弱章节专项")}
+            </button>
+          )}
+
+          <button
+            onClick={() => {
+              setMode("mix");
+              setActive(true);
+            }}
+          >
+            <span className="mono">🎲 8</span>
+            {tr(lang, "สุ่ม 8 ข้อรอบรวมหมวด", "Start 8-Question Mixed Practice", "随机8题综合练习")}
+          </button>
+        </div>
+      </div>
+
       <p className="micro">
         {tr(
           lang,
-          `เคยฝึก ${studied} ข้อ • ทบทวนหลังตอบถูกที่ 1, 3, 7 และ 14 วัน`,
-          `You’ve tried ${studied} questions · Correct answers return after 1, 3, 7 and 14 days`,
-          `已练习${studied}题 · 答对后按1、3、7、14天间隔复习`,
+          `เคยฝึก ${studied} ข้อ • มีบันทึกช่วยจำ ${Object.keys(annotations).length} มาตรา • ทบทวนหลังตอบถูกที่ 1, 3, 7 และ 14 วัน`,
+          `You’ve tried ${studied} questions · ${Object.keys(annotations).length} annotated sections · Correct answers return after 1, 3, 7 and 14 days`,
+          `已练习${studied}题 · 已做笔记${Object.keys(annotations).length}条 · 答对后按1、3、7、14天间隔复习`,
         )}
       </p>
     </>

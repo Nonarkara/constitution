@@ -9,6 +9,13 @@ import {
 import { defaultProgress, type Progress } from "@/lib/learning";
 import questions from "@/data/questions.json";
 import { parseProgress } from "@/lib/progress";
+import {
+  defaultAnnotations,
+  loadStoredAnnotations,
+  saveStoredAnnotations,
+  type UserAnnotations,
+} from "@/lib/annotations";
+import type { ExamTarget } from "@/lib/adaptive";
 import { workerMessage, type OfflineStatus } from "@/lib/offline";
 import type { Lang } from "@/lib/i18n";
 type State = {
@@ -16,6 +23,10 @@ type State = {
   setLang: (l: Lang) => void;
   progress: Progress;
   save: (p: Progress) => void;
+  annotations: UserAnnotations;
+  saveAnnotations: (a: UserAnnotations) => void;
+  examTarget: ExamTarget;
+  setExamTarget: (t: ExamTarget) => void;
   ready: boolean;
   storageError: boolean;
   offline: OfflineStatus;
@@ -26,6 +37,8 @@ const Context = createContext<State | null>(null);
 export function Provider({ children }: { children: ReactNode }) {
   const [lang, setL] = useState<Lang>("th"),
     [progress, setP] = useState<Progress>(defaultProgress),
+    [annotations, setA] = useState<UserAnnotations>(defaultAnnotations),
+    [examTarget, setTarget] = useState<ExamTarget>("all"),
     [ready, setReady] = useState(false),
     [storageError, setStorageError] = useState(false),
     [large, setBig] = useState(false);
@@ -44,6 +57,17 @@ export function Provider({ children }: { children: ReactNode }) {
         else setStorageError(true);
       }
       setBig(localStorage.getItem("constitution-large") === "true");
+      setA(loadStoredAnnotations());
+      const savedTarget = localStorage.getItem("constitution-exam-target") as ExamTarget | null;
+      if (
+        savedTarget === "all" ||
+        savedTarget === "ocsc" ||
+        savedTarget === "governor" ||
+        savedTarget === "legal" ||
+        savedTarget === "civic"
+      ) {
+        setTarget(savedTarget);
+      }
     } catch {
       setStorageError(true);
     }
@@ -100,6 +124,20 @@ export function Provider({ children }: { children: ReactNode }) {
       setStorageError(true);
     }
   };
+  const saveAnnotations = (a: UserAnnotations) => {
+    setA(a);
+    if (!saveStoredAnnotations(a)) {
+      setStorageError(true);
+    }
+  };
+  const setExamGoal = (t: ExamTarget) => {
+    setTarget(t);
+    try {
+      localStorage.setItem("constitution-exam-target", t);
+    } catch {
+      setStorageError(true);
+    }
+  };
   const setLarge = (b: boolean) => {
     setBig(b);
     try {
@@ -115,6 +153,10 @@ export function Provider({ children }: { children: ReactNode }) {
         setLang,
         progress,
         save,
+        annotations,
+        saveAnnotations,
+        examTarget,
+        setExamTarget: setExamGoal,
         ready,
         storageError,
         offline,
