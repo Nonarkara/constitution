@@ -25,6 +25,8 @@ The deployable static site is `out/`, served from https://constitution.nonarkara
 - 29 Senate recording links covering every section. Embedded Google Drive players require internet; recording edition has not been independently verified.
 - PWA install on iPad, complete versioned offline shell with local fonts, larger text, progress export/import.
 - Interactive institution, bill and amendment overviews, with textual equivalents and reduced-motion support.
+- 20 trilingual real-life puzzles, one or more per chapter: guess, then a story answer with verbatim Thai quotes and a think-first "why". Never scored. Also browsable on the Your rights shelf.
+- Ask: questions beyond the notebook go to Non-Laws (real statutes and Supreme Court rulings) with the section being read; answers render inline, with an open-in-Non-Laws fallback.
 
 ## Limits
 
