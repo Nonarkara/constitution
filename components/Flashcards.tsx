@@ -6,7 +6,7 @@ import { useStudy } from "./Provider";
 import questions from "@/data/questions.json";
 import { sections, chapters, readingText } from "@/lib/corpus";
 import { tr, sectionLabel, type Lang } from "@/lib/i18n";
-import { analyzeUserLearning, type ExamTarget } from "@/lib/adaptive";
+import { analyzeUserLearning } from "@/lib/adaptive";
 import { StudyArt } from "./StudyArt";
 
 type FlashcardItem = {
@@ -21,7 +21,7 @@ type FlashcardItem = {
 };
 
 export function Flashcards() {
-  const { lang, progress, annotations, examTarget, setExamTarget } = useStudy();
+  const { lang, progress, annotations, examTarget } = useStudy();
   const searchParams = useSearchParams();
 
   // If URL has ?sec=26, jump or filter to that section
@@ -197,23 +197,6 @@ export function Flashcards() {
           <span className="mono font-bold">
             🎯 {tr(lang, "ระบบแนะนำเฉพาะคุณ", "Personalized Recommendation", "系统定制推荐")}
           </span>
-          <div className="exam-target-selector">
-            <label htmlFor="exam-select" className="micro">
-              {tr(lang, "เป้าหมาย:", "Target:", "备考目标:")}
-            </label>
-            <select
-              id="exam-select"
-              value={examTarget}
-              onChange={(e) => setExamTarget(e.target.value as ExamTarget)}
-              className="micro-select"
-            >
-              <option value="all">{tr(lang, "ทั่วไป / ภาพรวม", "General / All", "综合全面")}</option>
-              <option value="ocsc">{tr(lang, "ก.พ. ภาค ก", "OCSC Civil Service", "国家公务员 OCSC")}</option>
-              <option value="governor">{tr(lang, "ปลัดอำเภอ / ปกครอง", "Governor / Administration", "县长行政官")}</option>
-              <option value="legal">{tr(lang, "นิติกร / ศาล / อัยการ", "Legal / Courts / Prosecutor", "法务官/法院检察")}</option>
-              <option value="civic">{tr(lang, "พลเมืองรู้สิทธิ", "Civic Rights", "公民素养")}</option>
-            </select>
-          </div>
         </div>
         <p className="adaptive-text">{profile.recommendation[lang]}</p>
       </section>
@@ -228,8 +211,8 @@ export function Flashcards() {
             setIsFlipped(false);
           }}
         >
-          <span className="mono">85</span>
-          {tr(lang, "คลังข้อสอบทั้งหมด", "All High-Yield Rules", "全题库核心卡")}
+          <span className="mono">{questions.length}</span>
+          {tr(lang, "ข้อฝึกทั้งหมด", "All practice questions", "全部练习题")}
         </button>
 
         <button

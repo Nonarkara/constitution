@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
-import questions from "@/data/questions.json";
+import { questionIndex as questions } from "@/lib/outline";
 import { parseProgress } from "@/lib/progress";
 import { defaultProgress } from "@/lib/learning";
 export function Settings() {

@@ -1,6 +1,6 @@
 "use client";
 import { useStudy } from "./Provider";
-import { meta } from "@/lib/corpus";
+import { meta } from "@/lib/outline";
 import { tr } from "@/lib/i18n";
 export function Sources() {
   const { lang } = useStudy();

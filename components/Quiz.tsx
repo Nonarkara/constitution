@@ -5,22 +5,24 @@ import questions from "@/data/questions.json";
 import cases from "@/data/cases.json";
 import { Puzzle } from "./Puzzle";
 import { sections, chapters, chineseText, readingText } from "@/lib/corpus";
-import { recordAnswer } from "@/lib/learning";
+import { recordAnswer, lessonQueue } from "@/lib/learning";
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
 type Question = (typeof questions)[number];
 export function Quiz({
   chapter,
-  queue,
+  ids,
   onExit,
 }: {
   chapter?: number;
-  queue?: Question[];
+  ids?: string[];
   onExit: () => void;
 }) {
   const { lang, progress, save, annotations } = useStudy();
-  const [list] = useState(
-    () => queue ?? questions.filter((q) => q.chapter === chapter),
+  const [list] = useState<Question[]>(() =>
+    ids
+      ? ids.flatMap((id) => questions.filter((q) => q.id === id))
+      : lessonQueue(questions, progress, chapter ?? 0, Date.now()),
   );
   const [index, setIndex] = useState(0),
     [choice, setChoice] = useState<number | null>(null),

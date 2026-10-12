@@ -120,3 +120,18 @@ test("quiz bank has 85 unique trilingual questions across every chapter and tran
   const temporary = bank.find((q) => q.id === "c17-02")!;
   assert.match(temporary.explanation.en, /period has ended/);
 });
+
+test("a chapter lesson is short and puts due, then new, then missed questions first", async () => {
+  const { lessonQueue } = await import("../lib/learning.ts");
+  const bank = Array.from({ length: 30 }, (_, i) => ({ id: `q${i}`, chapter: 7 }));
+  const now = 1_000_000;
+  const p = defaultProgress();
+  p.questions.q0 = { correct: true, level: 2, due: now + 5 };
+  p.questions.q1 = { correct: true, level: 1, due: now - 5 };
+  p.questions.q2 = { correct: false, level: 0, due: now + 600_000 };
+  const lesson = lessonQueue(bank, p, 7, now);
+  assert.equal(lesson.length, 10);
+  assert.equal(lesson[0].id, "q1");
+  assert.ok(!lesson.some((q) => q.id === "q0"));
+  assert.equal(lessonQueue(bank, p, 3, now).length, 0);
+});

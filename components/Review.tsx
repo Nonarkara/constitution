@@ -2,11 +2,12 @@
 import { StudyArt } from "./StudyArt";
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
-import questions from "@/data/questions.json";
+import { questionIndex as questions } from "@/lib/outline";
 import { dueQuestions } from "@/lib/learning";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
-import { Quiz } from "./Quiz";
+import dynamic from "next/dynamic";
+const Quiz = dynamic(() => import("./Quiz").then((m) => m.Quiz));
 import { analyzeUserLearning } from "@/lib/adaptive";
 
 export function Review() {
@@ -47,7 +48,7 @@ export function Review() {
   if (active)
     return (
       <Quiz
-        queue={activeQueue}
+        ids={activeQueue.map((q) => q.id)}
         onExit={() => {
           setActive(false);
           setNow(Date.now());

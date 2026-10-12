@@ -3,10 +3,10 @@ import { InstitutionMap } from "./InstitutionMap";
 import { StudyArt } from "./StudyArt";
 import { useState } from "react";
 import Link from "next/link";
-import { chapters } from "@/lib/corpus";
+import { chapters, questionIndex as questions } from "@/lib/outline";
 import { chapterMastery } from "@/lib/learning";
-import questions from "@/data/questions.json";
-import { Quiz } from "./Quiz";
+import dynamic from "next/dynamic";
+const Quiz = dynamic(() => import("./Quiz").then((m) => m.Quiz));
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
 export function Learn() {

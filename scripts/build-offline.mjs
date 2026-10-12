@@ -20,6 +20,9 @@ const paths = (await walk(root))
       !path.startsWith(".openai/") &&
       path !== "sw.js" &&
       path !== "404.html" && // the host redirects it to /404/, which is precached
+      // Host config, crawler files and share art: never needed to study offline.
+      !["_headers", "robots.txt", "sitemap.xml", "podcast-cover.png"].includes(path) &&
+      !path.startsWith("opengraph-image") &&
 
       path !== "offline-manifest.json",
   )

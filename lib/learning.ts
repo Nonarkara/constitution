@@ -111,3 +111,24 @@ export function chapterMastery(
     mastered: total > 0 && correct >= required,
   };
 }
+
+/**
+ * A short chapter lesson out of a large bank: questions due for review first,
+ * then ones never tried, then past mistakes. Mastered questions that are not due
+ * stay out, so a 90-question chapter is still a ten-minute sitting.
+ */
+export function lessonQueue<T extends Pick<Question, "id" | "chapter">>(
+  questions: T[],
+  progress: Progress,
+  chapter: number,
+  now: number,
+  size = 10,
+): T[] {
+  const own = questions.filter((q) => q.chapter === chapter);
+  const record = (q: T) => progress.questions[q.id];
+  const due = own.filter((q) => record(q) && record(q).due <= now)
+    .sort((a, b) => record(a).due - record(b).due);
+  const fresh = own.filter((q) => !record(q));
+  const missed = own.filter((q) => record(q) && !record(q).correct && record(q).due > now);
+  return [...due, ...fresh, ...missed].slice(0, size);
+}

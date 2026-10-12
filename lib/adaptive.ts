@@ -1,6 +1,6 @@
 import type { Progress, Question } from "./learning";
 import type { UserAnnotations } from "./annotations";
-import { chapters } from "./corpus";
+import { chapters } from "./outline";
 
 export type ExamTarget = "all" | "ocsc" | "governor" | "legal" | "civic";
 
@@ -26,20 +26,18 @@ export type UserLearningProfile = {
   };
 };
 
+// No exam-frequency weights: without a verified past-paper corpus they would be
+// invented (context.md). Priority comes only from the learner's own answers.
 const EXAM_WEIGHTS: Record<ExamTarget, Record<number, number>> = {
   all: {},
-  // OCSC (ก.พ. ภาค ก): General, King, Rights, Duties, State Duties, Policies, Cabinet
-  ocsc: { 1: 1.5, 3: 2.0, 4: 1.5, 5: 1.8, 6: 1.2, 8: 1.6 },
-  // Governor (ปลัดอำเภอ): Local Administration, Rights, Duties, Cabinet, Maintenance of Peace
-  governor: { 14: 2.5, 3: 1.8, 4: 1.5, 5: 1.5, 8: 1.8, 12: 1.4 },
-  // Legal (นิติกร/ศาล/อัยการ): Parliament, Courts, Const Court, Independent Organs, Amendments
-  legal: { 7: 2.2, 10: 2.0, 11: 2.5, 12: 2.2, 13: 2.0, 15: 2.2 },
-  // Civic: Rights, Liberties, Duties, Sovereignty
-  civic: { 1: 2.0, 3: 2.5, 4: 2.0, 5: 1.5, 14: 1.5 },
+  ocsc: {},
+  governor: {},
+  legal: {},
+  civic: {},
 };
 
 export function analyzeUserLearning(
-  questions: Question[],
+  questions: Pick<Question, "id" | "chapter">[],
   progress: Progress,
   annotations: UserAnnotations,
   examTarget: ExamTarget = "all",

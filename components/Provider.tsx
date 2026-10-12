@@ -7,7 +7,6 @@ import {
   type ReactNode,
 } from "react";
 import { defaultProgress, type Progress } from "@/lib/learning";
-import questions from "@/data/questions.json";
 import { parseProgress } from "@/lib/progress";
 import {
   defaultAnnotations,
@@ -49,12 +48,17 @@ export function Provider({ children }: { children: ReactNode }) {
       if (l === "th" || l === "en" || l === "zh") setL(l);
       const p = localStorage.getItem("constitution-progress");
       if (p) {
-        const parsed = parseProgress(
-          JSON.parse(p),
-          new Set(questions.map((q) => q.id)),
-        );
+        // Load is lenient about question ids so a revised bank never wipes progress;
+        // only import (Settings) is strict. Unreadable data is kept, never overwritten.
+        let parsed: Progress | null = null;
+        try {
+          parsed = parseProgress(JSON.parse(p));
+        } catch {}
         if (parsed) setP(parsed);
-        else setStorageError(true);
+        else {
+          localStorage.setItem(`constitution-progress-backup-${Date.now()}`, p);
+          setStorageError(true);
+        }
       }
       setBig(localStorage.getItem("constitution-large") === "true");
       setA(loadStoredAnnotations());
@@ -103,6 +107,22 @@ export function Provider({ children }: { children: ReactNode }) {
       return () =>
         navigator.serviceWorker.removeEventListener("controllerchange", check);
     }
+  }, []);
+  // Another tab saved: adopt its state instead of overwriting it on our next save.
+  useEffect(() => {
+    const sync = (e: StorageEvent) => {
+      if (e.key === "constitution-progress" && e.newValue) {
+        try {
+          const parsed = parseProgress(JSON.parse(e.newValue));
+          if (parsed) setP(parsed);
+        } catch {}
+      }
+      if (e.key === "constitution-annotations") setA(loadStoredAnnotations());
+      if (e.key === "constitution-lang" && (e.newValue === "th" || e.newValue === "en" || e.newValue === "zh"))
+        setL(e.newValue);
+    };
+    window.addEventListener("storage", sync);
+    return () => window.removeEventListener("storage", sync);
   }, []);
   useEffect(() => {
     document.documentElement.lang = lang;

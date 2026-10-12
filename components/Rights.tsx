@@ -2,7 +2,8 @@
 import { useState } from "react";
 import cases from "@/data/cases.json";
 import { Puzzle, type Case } from "./Puzzle";
-import { Ask } from "./Ask";
+import dynamic from "next/dynamic";
+const Ask = dynamic(() => import("./Ask").then((m) => m.Ask));
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
 export function Rights() {
