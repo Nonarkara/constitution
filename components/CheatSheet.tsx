@@ -30,7 +30,7 @@ export function CheatSheet() {
     {
       id: "emergency" as const,
       title: tr(lang, "แผนผัง พ.ร.ก. ฉุกเฉิน", "Emergency Decrees", "紧急法令"),
-      icon: "⚡",
+      icon: "!",
     },
     {
       id: "rights" as const,
@@ -45,7 +45,7 @@ export function CheatSheet() {
     {
       id: "mnemonics" as const,
       title: tr(lang, "สูตรช่วยจำ & เรื่องเล่า", "Mnemonics & Stories", "记忆口诀"),
-      icon: "💡",
+      icon: "ก",
     },
   ];
 
@@ -428,7 +428,9 @@ export function CheatSheet() {
 
   return (
     <div className="cheatsheet-page">
-      <div className="page-kicker mono">CONSTITUTIONAL ALGORITHMS · CHEAT SHEETS</div>
+      <div className="page-kicker mono">
+        {tr(lang, "สูตรและแผนภาพ", "Cheat sheets and diagrams", "速查表与图解")}
+      </div>
       
       <section className="intro">
         <div className="intro-index mono" aria-hidden="true">
@@ -456,7 +458,10 @@ export function CheatSheet() {
       </section>
 
       {/* Interactive Tabs */}
-      <nav className="flow-tabs cheatsheet-tabs" aria-label="Cheat Sheet Topics">
+      <nav
+        className="flow-tabs cheatsheet-tabs"
+        aria-label={tr(lang, "หัวข้อสูตร", "Formula topics", "公式主题")}
+      >
         {tabs.map((t) => (
           <button
             key={t.id}
@@ -474,7 +479,9 @@ export function CheatSheet() {
         <section className="sheet-section" aria-labelledby="heading-hierarchy">
           <div className="section-heading">
             <div>
-              <span className="mono">TOPIC 01 · LEGAL HIERARCHY</span>
+              <span className="mono">
+                {tr(lang, "หัวข้อ 01 · ลำดับศักดิ์", "01 · Legal hierarchy", "01 · 法律位阶")}
+              </span>
               <h2 id="heading-hierarchy">
                 {tr(lang, "ปิรามิดลำดับศักดิ์ของกฎหมาย (มาตรา 5)", "Pyramid of Legal Hierarchy (Sec 5)", "法律位阶金字塔 (第5条)")}
               </h2>
@@ -510,7 +517,7 @@ export function CheatSheet() {
                 onClick={() => setPyramidLevel(0)}
                 tabIndex={0}
                 role="button"
-                aria-label="Constitution"
+                aria-label={pyramidLevels[0].title}
               />
               <text x="300" y="55" textAnchor="middle" className="svg-label font-bold" pointerEvents="none">
                 1. รัฐธรรมนูญ (ม.5)
@@ -527,7 +534,7 @@ export function CheatSheet() {
                 onClick={() => setPyramidLevel(1)}
                 tabIndex={0}
                 role="button"
-                aria-label="Acts and Decrees"
+                aria-label={pyramidLevels[1].title}
               />
               <text x="300" y="112" textAnchor="middle" className="svg-label" pointerEvents="none">
                 2. พ.ร.ป. / พ.ร.บ. / พ.ร.ก.
@@ -544,7 +551,7 @@ export function CheatSheet() {
                 onClick={() => setPyramidLevel(2)}
                 tabIndex={0}
                 role="button"
-                aria-label="Royal Decrees"
+                aria-label={pyramidLevels[2].title}
               />
               <text x="300" y="172" textAnchor="middle" className="svg-label" pointerEvents="none">
                 3. พระราชกฤษฎีกา (พ.ร.ฎ. ม.175)
@@ -561,7 +568,7 @@ export function CheatSheet() {
                 onClick={() => setPyramidLevel(3)}
                 tabIndex={0}
                 role="button"
-                aria-label="Ministerial Regulations"
+                aria-label={pyramidLevels[3].title}
               />
               <text x="300" y="232" textAnchor="middle" className="svg-label" pointerEvents="none">
                 4. กฎกระทรวง / ประกาศกระทรวง
@@ -578,7 +585,7 @@ export function CheatSheet() {
                 onClick={() => setPyramidLevel(4)}
                 tabIndex={0}
                 role="button"
-                aria-label="Local Ordinances"
+                aria-label={pyramidLevels[4].title}
               />
               <text x="300" y="290" textAnchor="middle" className="svg-label" pointerEvents="none">
                 5. ข้อบัญญัติท้องถิ่น (ม.249–250)
@@ -591,7 +598,9 @@ export function CheatSheet() {
             <h3>{pyramidLevels[pyramidLevel].title}</h3>
             <p>{pyramidLevels[pyramidLevel].desc}</p>
             <div className="formula-box">
-              <span className="mono font-bold">ALGORITHM / 公式:</span>
+              <span className="mono font-bold">
+                {tr(lang, "สูตร", "Formula", "公式")}
+              </span>
               <code>{pyramidLevels[pyramidLevel].formula}</code>
             </div>
             <div className="citations-row">
@@ -610,7 +619,9 @@ export function CheatSheet() {
         <section className="sheet-section" aria-labelledby="heading-amendment">
           <div className="section-heading">
             <div>
-              <span className="mono">TOPIC 02 · AMENDMENT ALGORITHM</span>
+              <span className="mono">
+                {tr(lang, "หัวข้อ 02 · การแก้ไข", "02 · Amendment", "02 · 修宪")}
+              </span>
               <h2 id="heading-amendment">
                 {tr(lang, "ขั้นตอน 3 วาระการแก้ไขรัฐธรรมนูญ (มาตรา 255 & 256)", "The 3-Reading Amendment Algorithm (Sec 255 & 256)", "修宪三读法定算法 (第255与256条)")}
               </h2>
@@ -657,7 +668,9 @@ export function CheatSheet() {
         <section className="sheet-section" aria-labelledby="heading-emergency">
           <div className="section-heading">
             <div>
-              <span className="mono">TOPIC 03 · EMERGENCY DECREE LOGIC GATES</span>
+              <span className="mono">
+                {tr(lang, "หัวข้อ 03 · พ.ร.ก. ฉุกเฉิน", "03 · Emergency decree", "03 · 紧急法令")}
+              </span>
               <h2 id="heading-emergency">
                 {tr(lang, "อัลกอริทึมตรวจสอบ พระราชกำหนด (พ.ร.ก. มาตรา 172)", "Emergency Decree 4-Gate Decision Tree (Sec 172)", "紧急法令四道判定门 (第172条)")}
               </h2>
@@ -739,7 +752,9 @@ export function CheatSheet() {
         <section className="sheet-section" aria-labelledby="heading-rights">
           <div className="section-heading">
             <div>
-              <span className="mono">TOPIC 04 · PROPORTIONALITY SCALE</span>
+              <span className="mono">
+                {tr(lang, "หัวข้อ 04 · ความได้สัดส่วน", "04 · Proportionality", "04 · 比例原则")}
+              </span>
               <h2 id="heading-rights">
                 {tr(lang, "ตราชั่งหลักความได้สัดส่วนในการจำกัดสิทธิ (มาตรา 26)", "The Proportionality Scale for Rights (Sec 26)", "基本权利限制比例原则天平 (第26条)")}
               </h2>
@@ -773,7 +788,7 @@ export function CheatSheet() {
               viewBox="0 0 500 220"
               className="crayon-svg"
               role="img"
-              aria-label="Scale of proportionality"
+              aria-label={tr(lang, "ตาชั่งความได้สัดส่วน", "Scale of proportionality", "比例原则天平")}
             >
               {/* Stand */}
               <line x1="250" y1="40" x2="250" y2="190" stroke="var(--ink)" strokeWidth="4" />
@@ -845,7 +860,9 @@ export function CheatSheet() {
         <section className="sheet-section" aria-labelledby="heading-numbers">
           <div className="section-heading">
             <div>
-              <span className="mono">TOPIC 05 · VITAL NUMBERS</span>
+              <span className="mono">
+                {tr(lang, "หัวข้อ 05 · ตัวเลขสำคัญ", "05 · Numbers worth keeping", "05 · 关键数字")}
+              </span>
               <h2 id="heading-numbers">
                 {tr(lang, "ตัวเลขมหัศจรรย์ในรัฐธรรมนูญที่ออกสอบบ่อย", "Vital Numbers for Civil Service & Bar Exams", "泰国宪法高频关键数字速查")}
               </h2>
@@ -889,7 +906,9 @@ export function CheatSheet() {
         <section className="sheet-section" aria-labelledby="heading-mnemonics">
           <div className="section-heading">
             <div>
-              <span className="mono">TOPIC 06 · MNEMONICS & STORIES</span>
+              <span className="mono">
+                {tr(lang, "หัวข้อ 06 · สูตรช่วยจำ", "06 · Memory hooks", "06 · 记忆钩子")}
+              </span>
               <h2 id="heading-mnemonics">
                 {tr(lang, "สูตรจำ & กลอนช่วยจำ 3 ภาษา", "Memory Anchors & Rhymes", "三语记忆口诀与助记故事")}
               </h2>

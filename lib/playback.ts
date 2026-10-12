@@ -26,6 +26,15 @@ export function createPlaybackCoordinator(cancelBrowser: () => void) {
     },
   };
 }
+/** Clock text for a known length. Zero and NaN stay blank so the player never shows 0:00 / 0:00. */
+export function formatDuration(seconds: number): string | null {
+  if (!Number.isFinite(seconds) || seconds <= 0) return null;
+  const whole = Math.floor(seconds);
+  const minutes = Math.floor(whole / 60);
+  const remain = whole % 60;
+  return `${minutes}:${String(remain).padStart(2, "0")}`;
+}
+
 let coordinator: ReturnType<typeof createPlaybackCoordinator> | null = null;
 export function playback() {
   return (coordinator ??= createPlaybackCoordinator(() => {

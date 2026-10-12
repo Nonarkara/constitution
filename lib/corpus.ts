@@ -46,6 +46,12 @@ export function englishText(n: number): string {
     ""
   );
 }
+/** Body under a heading that already names the section. Drops a repeated Chinese title line. */
+export function sectionBody(n: number, lang: "th" | "en" | "zh"): string {
+  const text = readingText(n, lang);
+  if (lang !== "zh") return text;
+  return text.replace(new RegExp(`^第\\s*${n}\\s*条\\s*`), "");
+}
 export function readingText(n: number, lang: "th" | "en" | "zh"): string {
   return lang === "zh"
     ? chineseText(n)

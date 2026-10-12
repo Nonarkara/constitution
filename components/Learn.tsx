@@ -37,7 +37,9 @@ export function Learn() {
           <Image src="/illustrations/reading.webp" alt="" width={720} height={720} priority sizes="(max-width: 720px) 100vw, 46vw" />
         </figure>
         <div className="hero-copy">
-          <span className="page-kicker mono">YOUR LEARNING PATH · 01</span>
+          <span className="page-kicker mono">
+            {tr(lang, "เส้นทางเรียน · 01", "Your learning path · 01", "学习路径 · 01")}
+          </span>
           <h1>
             {tr(lang, "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ", "One section.\nOne small step.", "一条一条读，\n一点一点懂。")}
           </h1>

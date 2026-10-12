@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import vm from "node:vm";
 import { readFileSync } from "node:fs";
 import ts from "typescript";
+import { formatDuration } from "../lib/playback.ts";
 
 type Tree = { type: string; props: { children?: Tree[]; [key: string]: any } };
 type Slot = { value?: any; current?: any; deps?: unknown[]; cleanup?: () => void };
@@ -60,6 +61,7 @@ function recording(componentSource = source, deferCache = false) {
       };
       if (name === "@/lib/playback") return {
         playback: () => ({ stop() {}, take() {}, release() {} }),
+        formatDuration,
       };
       if (name === "@/lib/offline") return {
         workerMessage: (_worker: unknown, message: { type: string; url: string }) =>
@@ -88,8 +90,21 @@ function recording(componentSource = source, deferCache = false) {
     },
   };
 }
+function walk(tree: Tree | null | undefined, visit: (node: Tree) => void) {
+  if (!tree || typeof tree !== "object" || !tree.props) return;
+  visit(tree);
+  const kids = tree.props.children;
+  const list = Array.isArray(kids) ? kids : kids ? [kids] : [];
+  for (const kid of list) if (kid && typeof kid === "object") walk(kid, visit);
+}
 function saveButton(tree: Tree): Tree {
-  return tree.props.children![2].props.children![1];
+  let found: Tree | undefined;
+  walk(tree, (node) => {
+    if (node.type === "button" && node.props["aria-pressed"] === undefined && node.props.onClick)
+      found = node;
+  });
+  if (!found) throw new Error("save button missing");
+  return found;
 }
 function mounted(componentSource = source) {
   const app = recording(componentSource);

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import cases from "@/data/cases.json";
+import { groupedRights } from "@/lib/rights";
 import { Puzzle, type Case } from "./Puzzle";
 import dynamic from "next/dynamic";
 const Ask = dynamic(() => import("./Ask").then((m) => m.Ask));
@@ -9,6 +10,7 @@ import { tr, labels, sectionLabel } from "@/lib/i18n";
 export function Rights() {
   const { lang } = useStudy();
   const [open, setOpen] = useState<Case | null>(null);
+  const groups = groupedRights(cases);
   if (open)
     return (
       <>
@@ -24,7 +26,9 @@ export function Rights() {
     );
   return (
     <>
-      <div className="page-kicker mono">YOUR RIGHTS · 02</div>
+      <div className="page-kicker mono">
+        {tr(lang, "สิทธิของคุณ · 02", "Your rights · 02", "你的权利 · 02")}
+      </div>
       <h1>
         {tr(
           lang,
@@ -41,26 +45,29 @@ export function Rights() {
           "手机、住所、卡住的许可证、积水的街道。每道题都先请你猜，再打开回答它的条文。",
         )}
       </p>
-      <div className="chapter-route">
-        {cases.map((c) => (
-          <article className="chapter-row" key={c.id}>
-            <div className="route-number mono">
-              {c.chapter === 17 ? "T" : String(c.chapter).padStart(2, "0")}
-            </div>
-            <div className="chapter-info">
-              <span className="micro">
-                {c.sections.map((n) => sectionLabel(lang, n)).join(" · ")}
-              </span>
-              <h3>{c.prompt[lang]}</h3>
-            </div>
-            <div className="chapter-actions">
-              <button onClick={() => setOpen(c)}>
-                {tr(lang, "ลองเดา", "Try it", "试一试")} ↗
-              </button>
-            </div>
-          </article>
-        ))}
-      </div>
+      {groups.map((group) => (
+        <section key={group.id}>
+          <h2>{group.title[lang]}</h2>
+          <div className="chapter-route">
+            {group.items.map(({ n, item }) => (
+              <article className="chapter-row" key={item.id}>
+                <div className="route-number mono">{String(n).padStart(2, "0")}</div>
+                <div className="chapter-info">
+                  <span className="micro">
+                    {item.sections.map((section) => sectionLabel(lang, section)).join(" · ")}
+                  </span>
+                  <h3>{item.prompt[lang]}</h3>
+                </div>
+                <div className="chapter-actions">
+                  <button onClick={() => setOpen(item)}>
+                    {tr(lang, "ลองเดา", "Try it", "试一试")} ↗
+                  </button>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
       <Ask />
     </>
   );

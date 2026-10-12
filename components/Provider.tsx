@@ -32,6 +32,7 @@ type State = {
   ready: boolean;
   storageError: boolean;
   offline: OfflineStatus;
+  online: boolean;
   large: boolean;
   setLarge: (b: boolean) => void;
 };
@@ -46,6 +47,7 @@ export function Provider({ children }: { children: ReactNode }) {
     [storageError, setStorageError] = useState(false),
     [large, setBig] = useState(false);
   const [offline, setOffline] = useState<OfflineStatus>("unavailable");
+  const [online, setOnline] = useState(true);
   useEffect(() => {
     try {
       const l = localStorage.getItem("constitution-lang");
@@ -89,11 +91,18 @@ export function Provider({ children }: { children: ReactNode }) {
       setStorageError(true);
     }
     setReady(true);
+    const syncOnline = () => setOnline(navigator.onLine);
+    syncOnline();
+    window.addEventListener("online", syncOnline);
+    window.addEventListener("offline", syncOnline);
     // Development assets change in place and must never enter the offline cache.
     if (process.env.NODE_ENV === "production") {
       if (!("serviceWorker" in navigator)) {
         setOffline("unsupported");
-        return;
+        return () => {
+          window.removeEventListener("online", syncOnline);
+          window.removeEventListener("offline", syncOnline);
+        };
       }
       setOffline("loading");
       const check = async () => {
@@ -117,9 +126,16 @@ export function Provider({ children }: { children: ReactNode }) {
         .register("/sw.js")
         .then(check)
         .catch(() => setOffline("unavailable"));
-      return () =>
+      return () => {
+        window.removeEventListener("online", syncOnline);
+        window.removeEventListener("offline", syncOnline);
         navigator.serviceWorker.removeEventListener("controllerchange", check);
+      };
     }
+    return () => {
+      window.removeEventListener("online", syncOnline);
+      window.removeEventListener("offline", syncOnline);
+    };
   }, []);
   // Another tab saved: adopt its state instead of overwriting it on our next save.
   useEffect(() => {
@@ -209,6 +225,7 @@ export function Provider({ children }: { children: ReactNode }) {
         ready,
         storageError,
         offline,
+        online,
         large,
         setLarge,
       }}

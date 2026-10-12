@@ -4,6 +4,7 @@ import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { questionIndex as questions } from "@/lib/outline";
 import { dueQuestions } from "@/lib/learning";
+import { mixedPracticeQueue } from "@/lib/shuffle";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
 import dynamic from "next/dynamic";
@@ -41,7 +42,7 @@ export function Review() {
   const activeQueue = useMemo(() => {
     if (mode === "annotated") return annotatedQuestions.slice(0, 8);
     if (mode === "weak") return weakQuestions.slice(0, 8);
-    if (mode === "mix") return [...questions].sort(() => Math.random() - 0.5).slice(0, 8);
+    if (mode === "mix") return mixedPracticeQueue(questions, 8);
     return due.slice(0, 8);
   }, [mode, due, annotatedQuestions, weakQuestions]);
 
@@ -58,7 +59,9 @@ export function Review() {
   const studied = Object.values(progress.questions).length;
   return (
     <>
-      <span className="page-kicker mono">RETURN & REMEMBER · 04</span>
+      <span className="page-kicker mono">
+        {tr(lang, "กลับมาทบทวน · 04", "Return and remember · 04", "复习 · 04")}
+      </span>
       <div className="review-intro">
         <StudyArt scene="review" />
         <h1>
@@ -95,18 +98,18 @@ export function Review() {
             setActive(true);
           }}
         >
-          {tr(lang, "ทบทวนที่ถึงเวลา (Spaced Review)", "Review due questions", "复习到期题目")} →
+          {tr(lang, "ทบทวนที่ถึงเวลา", "Review due questions", "复习到期题目")} →
         </button>
 
         <Link href="/flashcards/" className="button">
-          🗂 {tr(lang, "เปิดการ์ดความจำ (Flashcards)", "Open Flashcards Deck", "打开记忆闪卡")} ↗
+          {tr(lang, "เปิดการ์ดความจำ", "Open the flashcards", "打开记忆闪卡")} ↗
         </Link>
       </div>
 
       {/* Adaptive Personalized Study Session */}
       <div className="note" style={{ marginTop: "24px" }}>
         <h2>
-          🎯 {tr(
+          {tr(
             lang,
             "ระบบแนะนำสำหรับคุณโดยเฉพาะ",
             "Customized for Your Learning Profile",
@@ -123,7 +126,7 @@ export function Review() {
                 setActive(true);
               }}
             >
-              <span className="mono">✍️ {annotatedQuestions.length}</span>
+              <span className="mono">{annotatedQuestions.length}</span>
               {tr(lang, "ทบทวนมาตราที่จดโน้ต", "Review My Annotated Sections", "复习我的笔记法条")}
             </button>
           )}
@@ -135,7 +138,7 @@ export function Review() {
                 setActive(true);
               }}
             >
-              <span className="mono">⚡ {profile.weakestChapters.join(", ")}</span>
+              <span className="mono">{profile.weakestChapters.join(", ")}</span>
               {tr(lang, "ฝึกหมวดที่ต้องเสริมจุดอ่อน", "Strengthen Weak Chapters", "强化薄弱章节专项")}
             </button>
           )}
@@ -146,7 +149,7 @@ export function Review() {
               setActive(true);
             }}
           >
-            <span className="mono">🎲 8</span>
+            <span className="mono">8</span>
             {tr(lang, "สุ่ม 8 ข้อรอบรวมหมวด", "Start 8-Question Mixed Practice", "随机8题综合练习")}
           </button>
         </div>

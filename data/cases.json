@@ -2,16 +2,30 @@
   {
     "id": "supreme-law",
     "chapter": 1,
-    "sections": [5],
+    "sections": [
+      5
+    ],
     "prompt": {
       "th": "ระเบียบของกระทรวงหนึ่งเขียนสิ่งที่รัฐธรรมนูญห้ามไว้ อะไรชนะ",
       "en": "A ministry regulation says something the constitution forbids. Which one wins?",
       "zh": "某部委的规章规定了宪法所禁止的事。哪个说了算？"
     },
     "choices": [
-      { "th": "ระเบียบที่ออกมาใหม่กว่า", "en": "Whichever rule is newer", "zh": "较新的那一条" },
-      { "th": "ระเบียบกระทรวง เพราะเขียนเรื่องนั้นไว้ละเอียดกว่า", "en": "The ministry rule, because it is more detailed", "zh": "部委规章，因为它规定得更具体" },
-      { "th": "รัฐธรรมนูญ ระเบียบที่ขัดหรือแย้งใช้บังคับไม่ได้", "en": "The constitution; a conflicting rule cannot be enforced", "zh": "宪法；与之相抵触的规章不得执行" }
+      {
+        "th": "ระเบียบที่ออกมาใหม่กว่า",
+        "en": "Whichever rule is newer",
+        "zh": "较新的那一条"
+      },
+      {
+        "th": "ระเบียบกระทรวง เพราะเขียนเรื่องนั้นไว้ละเอียดกว่า",
+        "en": "The ministry rule, because it is more detailed",
+        "zh": "部委规章，因为它规定得更具体"
+      },
+      {
+        "th": "รัฐธรรมนูญ ระเบียบที่ขัดหรือแย้งใช้บังคับไม่ได้",
+        "en": "The constitution; a conflicting rule cannot be enforced",
+        "zh": "宪法；与之相抵触的规章不得执行"
+      }
     ],
     "answer": 2,
     "story": {
@@ -24,21 +38,42 @@
       "en": "Without a fixed ranking, every clash between rules becomes a power contest between the offices that wrote them. A ranking lets an ordinary person point at the top rule and say: this one first.",
       "zh": "若没有固定的位阶，每一次规则冲突都会变成制定规则的机关之间的权力较量。有了位阶，普通人就能指着最上面那条说：先看这一条。"
     },
-    "quotes": [{ "section": 5, "th": "รัฐธรรมนูญเป็นกฎหมายสูงสุดของประเทศ" }]
+    "quotes": [
+      {
+        "section": 5,
+        "th": "รัฐธรรมนูญเป็นกฎหมายสูงสุดของประเทศ บทบัญญัติใดของกฎหมาย กฎ หรือข้อบังคับ หรือการกระทำใด ขัดหรือแย้งต่อรัฐธรรมนูญ บทบัญญัติหรือการกระทำนั้นเป็นอันใช้บังคับมิได้",
+        "en": "The Constitution is the supreme law of the State. Any law, rule, regulation or act contrary to or inconsistent with the Constitution shall be unenforceable.",
+        "zh": "宪法是国家的最高法律。任何与宪法相抵触的法律、规则、规章或行为，一律不得执行。"
+      }
+    ]
   },
   {
     "id": "privy-councillor-party",
     "chapter": 2,
-    "sections": [12],
+    "sections": [
+      12
+    ],
     "prompt": {
       "th": "องคมนตรีเป็นสมาชิกพรรคการเมืองได้หรือไม่",
       "en": "Can a Privy Councillor also be a member of a political party?",
       "zh": "枢密院大臣可以同时是政党党员吗？"
     },
     "choices": [
-      { "th": "ได้ เหมือนพลเมืองทั่วไป", "en": "Yes, like any citizen", "zh": "可以，和普通公民一样" },
-      { "th": "ได้ ถ้าพรรคนั้นไม่ได้เป็นรัฐบาล", "en": "Only if the party is not in government", "zh": "只要该党不执政就可以" },
-      { "th": "ไม่ได้ และต้องไม่แสดงการฝักใฝ่พรรคการเมืองใดด้วย", "en": "No, and must not show support for any party either", "zh": "不可以，而且不得表露对任何政党的倾向" }
+      {
+        "th": "ได้ เหมือนพลเมืองทั่วไป",
+        "en": "Yes, like any citizen",
+        "zh": "可以，和普通公民一样"
+      },
+      {
+        "th": "ได้ ถ้าพรรคนั้นไม่ได้เป็นรัฐบาล",
+        "en": "Only if the party is not in government",
+        "zh": "只要该党不执政就可以"
+      },
+      {
+        "th": "ไม่ได้ และต้องไม่แสดงการฝักใฝ่พรรคการเมืองใดด้วย",
+        "en": "No, and must not show support for any party either",
+        "zh": "不可以，而且不得表露对任何政党的倾向"
+      }
     ],
     "answer": 2,
     "story": {
@@ -51,21 +86,42 @@
       "en": "Advice is trusted only when the adviser has no side to win. A rule that stopped at formal membership would let loyalty leak out through every other channel.",
       "zh": "只有当提意见的人没有要赢的一方时，意见才可信。如果规则只管登记在册的党籍，忠诚仍会从其他渠道渗出去。"
     },
-    "quotes": [{ "section": 12, "th": "และต้องไม่แสดงการฝักใฝ่ในพรรคการเมืองใด ๆ" }]
+    "quotes": [
+      {
+        "section": 12,
+        "th": "องคมนตรีต้องไม่เป็นสมาชิกสภาผู้แทนราษฎร สมาชิกวุฒิสภา หรือดำรงตำแหน่งทางการเมืองอื่น ตุลาการศาลรัฐธรรมนูญ ผู้ดำรงตำแหน่งในองค์กรอิสระ พนักงานรัฐวิสาหกิจ เจ้าหน้าที่อื่นของรัฐ หรือสมาชิกหรือเจ้าหน้าที่ของพรรคการเมือง หรือข้าราชการเว้นแต่การเป็นข้าราชการในพระองค์ ในตำแหน่งองคมนตรี และต้องไม่แสดงการฝักใฝ่ในพรรคการเมืองใด ๆ",
+        "en": "A Privy Councillor must not be a member or officer of a political party, and must not show loyalty to any political party.",
+        "zh": "枢密院大臣不得是政党党员或党务人员，也不得表露对任何政党的倾向。"
+      }
+    ]
   },
   {
     "id": "phone-messages",
     "chapter": 3,
-    "sections": [36],
+    "sections": [
+      36
+    ],
     "prompt": {
       "th": "ตำรวจขอเปิดอ่านข้อความในโทรศัพท์ของคุณโดยไม่มีคำสั่งศาลได้หรือไม่",
       "en": "Can the police read the messages on your phone without a court order?",
       "zh": "警察可以在没有法院命令的情况下查看你手机里的消息吗？"
     },
     "choices": [
-      { "th": "ได้ทุกเมื่อที่สงสัย", "en": "Yes, whenever they suspect something", "zh": "可以，只要他们有所怀疑" },
-      { "th": "ไม่ได้เลยไม่ว่ากรณีใด", "en": "Never, under any circumstances", "zh": "任何情况下都不可以" },
-      { "th": "ไม่ได้ เว้นแต่มีคำสั่งหรือหมายศาล หรือมีเหตุอื่นตามที่กฎหมายบัญญัติ", "en": "Not without a court order or warrant, unless another law provides a ground", "zh": "不可以，除非有法院命令或令状，或有法律规定的其他事由" }
+      {
+        "th": "ได้ทุกเมื่อที่สงสัย",
+        "en": "Yes, whenever they suspect something",
+        "zh": "可以，只要他们有所怀疑"
+      },
+      {
+        "th": "ไม่ได้เลยไม่ว่ากรณีใด",
+        "en": "Never, under any circumstances",
+        "zh": "任何情况下都不可以"
+      },
+      {
+        "th": "ไม่ได้ เว้นแต่มีคำสั่งหรือหมายศาล หรือมีเหตุอื่นตามที่กฎหมายบัญญัติ",
+        "en": "Not without a court order or warrant, unless another law provides a ground",
+        "zh": "不可以，除非有法院命令或令状，或有法律规定的其他事由"
+      }
     ],
     "answer": 2,
     "story": {
@@ -79,23 +135,41 @@
       "zh": "需要自证理由的一方承担负担。把负担放在国家一侧，意味着检查必须有一个他人能够审查的理由，通常是法官。"
     },
     "quotes": [
-      { "section": 36, "th": "บุคคลย่อมมีเสรีภาพในการติดต่อสื่อสารถึงกันไม่ว่าในทางใด ๆ" },
-      { "section": 36, "th": "เว้นแต่มีคำสั่งหรือหมายของศาล หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ" }
+      {
+        "section": 36,
+        "th": "การตรวจ การกัก หรือการเปิดเผยข้อมูลที่บุคคลสื่อสารถึงกัน รวมทั้งการกระทำด้วยประการใด ๆ เพื่อให้ล่วงรู้หรือได้มาซึ่งข้อมูลที่บุคคลสื่อสารถึงกันจะกระทำมิได้ เว้นแต่มีคำสั่งหรือหมายของศาล หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ",
+        "en": "Inspecting, holding or disclosing a communication, or doing anything to learn or obtain it, is not permitted except by a court order or warrant, or other grounds provided by law.",
+        "zh": "检查、扣留或泄露通信，或为获知、取得该通信而采取的行为，均不被允许，除非有法院命令或令状，或法律规定的其他事由。"
+      }
     ]
   },
   {
     "id": "home-search",
     "chapter": 3,
-    "sections": [33],
+    "sections": [
+      33
+    ],
     "prompt": {
       "th": "เจ้าหน้าที่มาเคาะประตูขอค้นบ้าน คุณไม่ยินยอม ตามรัฐธรรมนูญแล้วเกิดอะไรต่อ",
       "en": "An official knocks and wants to search your home. You say no. What does the constitution require next?",
       "zh": "有官员敲门要搜查你家，你拒绝了。宪法接下来要求什么？"
     },
     "choices": [
-      { "th": "เข้าได้อยู่ดี เพราะเป็นเจ้าหน้าที่", "en": "They may enter anyway because they are officials", "zh": "他们是官员，照样可以进" },
-      { "th": "การเข้าโดยไม่ยินยอมต้องมีคำสั่งหรือหมายศาล หรือเหตุอื่นตามที่กฎหมายบัญญัติ", "en": "Entry without consent needs a court order or warrant, or another ground set by law", "zh": "未经同意进入，须有法院命令或令状，或法律规定的其他事由" },
-      { "th": "ไม่มีใครเข้าบ้านได้เลยไม่ว่ากรณีใด", "en": "Nobody may ever enter a home", "zh": "任何情况下都没人能进入住宅" }
+      {
+        "th": "เข้าได้อยู่ดี เพราะเป็นเจ้าหน้าที่",
+        "en": "They may enter anyway because they are officials",
+        "zh": "他们是官员，照样可以进"
+      },
+      {
+        "th": "การเข้าโดยไม่ยินยอมต้องมีคำสั่งหรือหมายศาล หรือเหตุอื่นตามที่กฎหมายบัญญัติ",
+        "en": "Entry without consent needs a court order or warrant, or another ground set by law",
+        "zh": "未经同意进入，须有法院命令或令状，或法律规定的其他事由"
+      },
+      {
+        "th": "ไม่มีใครเข้าบ้านได้เลยไม่ว่ากรณีใด",
+        "en": "Nobody may ever enter a home",
+        "zh": "任何情况下都没人能进入住宅"
+      }
     ],
     "answer": 1,
     "story": {
@@ -108,21 +182,42 @@
       "en": "Real emergencies exist: a fire, someone calling for help inside. A constitution that allowed no exception would be ignored. Allowing exceptions only through a written law keeps them countable and checkable.",
       "zh": "紧急情况确实存在，比如火灾，或屋里有人呼救。一部不许任何例外的宪法会被无视；只允许成文法规定的例外，则让例外可以清点、可以核查。"
     },
-    "quotes": [{ "section": 33, "th": "การเข้าไปในเคหสถานโดยปราศจากความยินยอมของผู้ครอบครอง" }]
+    "quotes": [
+      {
+        "section": 33,
+        "th": "การเข้าไปในเคหสถานโดยปราศจากความยินยอมของผู้ครอบครอง หรือการค้นเคหสถาน หรือที่รโหฐานจะกระทำมิได้ เว้นแต่มีคำสั่งหรือหมายของศาลหรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ",
+        "en": "Entering a dwelling without the occupant's consent, or searching a dwelling or private place, shall not be permitted except by a court order or warrant, or other grounds provided by law.",
+        "zh": "未经占有人同意进入住宅，或搜查住宅、私人场所，均不被允许，除非有法院命令或令状，或法律规定的其他事由。"
+      }
+    ]
   },
   {
     "id": "equal-treatment",
     "chapter": 3,
-    "sections": [27],
+    "sections": [
+      27
+    ],
     "prompt": {
       "th": "โครงการของรัฐช่วยเหลือเฉพาะคนพิการ ถือเป็นการเลือกปฏิบัติที่ไม่เป็นธรรมหรือไม่",
       "en": "A state scheme helps only people with disabilities. Is that unjust discrimination?",
       "zh": "一项国家计划只帮助残障人士。这算不公平歧视吗？"
     },
     "choices": [
-      { "th": "ใช่ ทุกคนต้องได้เหมือนกันทุกอย่าง", "en": "Yes, everyone must get exactly the same", "zh": "算，每个人都必须得到完全一样的待遇" },
-      { "th": "ไม่ใช่ มาตรการที่ช่วยให้คนใช้สิทธิได้เท่ากับคนอื่นไม่ถือเป็นการเลือกปฏิบัติที่ไม่เป็นธรรม", "en": "No, measures helping people use their rights on the same basis are not unjust discrimination", "zh": "不算，帮助人们与他人同等行使权利的措施不属于不公平歧视" },
-      { "th": "ไม่ใช่ ถ้าเป็นโครงการชั่วคราว", "en": "Only if the scheme is temporary", "zh": "只有临时计划才不算" }
+      {
+        "th": "ใช่ ทุกคนต้องได้เหมือนกันทุกอย่าง",
+        "en": "Yes, everyone must get exactly the same",
+        "zh": "算，每个人都必须得到完全一样的待遇"
+      },
+      {
+        "th": "ไม่ใช่ มาตรการที่ช่วยให้คนใช้สิทธิได้เท่ากับคนอื่นไม่ถือเป็นการเลือกปฏิบัติที่ไม่เป็นธรรม",
+        "en": "No, measures helping people use their rights on the same basis are not unjust discrimination",
+        "zh": "不算，帮助人们与他人同等行使权利的措施不属于不公平歧视"
+      },
+      {
+        "th": "ไม่ใช่ ถ้าเป็นโครงการชั่วคราว",
+        "en": "Only if the scheme is temporary",
+        "zh": "只有临时计划才不算"
+      }
     ],
     "answer": 1,
     "story": {
@@ -136,23 +231,47 @@
       "zh": "每部法律本来就会区别对待某些人，比如税率级距、投票年龄。这一条并不禁止差别，它禁止的是说不出正当理由的差别。"
     },
     "quotes": [
-      { "section": 27, "th": "ชายและหญิงมีสิทธิเท่าเทียมกัน" },
-      { "section": 27, "th": "ย่อมไม่ถือว่าเป็นการเลือกปฏิบัติโดยไม่เป็นธรรมตามวรรคสาม" }
+      {
+        "section": 27,
+        "th": "ชายและหญิงมีสิทธิเท่าเทียมกัน",
+        "en": "Men and women shall enjoy equal rights.",
+        "zh": "男女享有平等权利。"
+      },
+      {
+        "section": 27,
+        "th": "มาตรการที่รัฐกำหนดขึ้นเพื่อขจัดอุปสรรคหรือส่งเสริมให้บุคคลสามารถใช้สิทธิหรือเสรีภาพได้เช่นเดียวกับบุคคลอื่น หรือเพื่อคุ้มครองหรืออำนวยความสะดวกให้แก่เด็ก สตรี ผู้สูงอายุ คนพิการ หรือผู้ด้อยโอกาส ย่อมไม่ถือว่าเป็นการเลือกปฏิบัติโดยไม่เป็นธรรมตามวรรคสาม",
+        "en": "Measures the state sets to remove obstacles, or to protect or help children, women, the elderly, people with disabilities or the underprivileged, are not unjust discrimination.",
+        "zh": "国家为消除障碍，或为保护、便利儿童、妇女、老年人、残障人士或弱势群体而采取的措施，不视为不公平歧视。"
+      }
     ]
   },
   {
     "id": "peaceful-assembly",
     "chapter": 3,
-    "sections": [44],
+    "sections": [
+      44
+    ],
     "prompt": {
       "th": "เพื่อน ๆ อยากรวมตัวกันในสวนสาธารณะเพื่อคัดค้านโรงงานแห่งใหม่ รัฐธรรมนูญคุ้มครองไหม",
       "en": "Friends want to gather in a park to object to a new factory. Does the constitution protect them?",
       "zh": "朋友们想在公园集会，反对新建一座工厂。宪法保护他们吗？"
     },
     "choices": [
-      { "th": "ไม่ การชุมนุมต้องได้รับอนุญาตจากรัฐก่อนจึงจะถูกกฎหมาย", "en": "No, a gathering is only legal with government approval", "zh": "不保护，集会必须先获政府批准才合法" },
-      { "th": "คุ้มครอง ถ้าชุมนุมโดยสงบและปราศจากอาวุธ และการจำกัดต้องมาจากกฎหมายที่ตราขึ้นเพื่อเหตุที่ระบุไว้", "en": "Yes, if it is peaceful and unarmed; any limit must come from a law made for listed purposes", "zh": "保护，只要和平且不携带武器；任何限制都必须出自为特定目的制定的法律" },
-      { "th": "คุ้มครองโดยไม่มีข้อจำกัดใด ๆ", "en": "Yes, without any limits", "zh": "保护，而且没有任何限制" }
+      {
+        "th": "ไม่ การชุมนุมต้องได้รับอนุญาตจากรัฐก่อนจึงจะถูกกฎหมาย",
+        "en": "No, a gathering is only legal with government approval",
+        "zh": "不保护，集会必须先获政府批准才合法"
+      },
+      {
+        "th": "คุ้มครอง ถ้าชุมนุมโดยสงบและปราศจากอาวุธ และการจำกัดต้องมาจากกฎหมายที่ตราขึ้นเพื่อเหตุที่ระบุไว้",
+        "en": "Yes, if it is peaceful and unarmed; any limit must come from a law made for listed purposes",
+        "zh": "保护，只要和平且不携带武器；任何限制都必须出自为特定目的制定的法律"
+      },
+      {
+        "th": "คุ้มครองโดยไม่มีข้อจำกัดใด ๆ",
+        "en": "Yes, without any limits",
+        "zh": "保护，而且没有任何限制"
+      }
     ],
     "answer": 1,
     "story": {
@@ -165,21 +284,42 @@
       "en": "A crowd in a real place is evidence that people care enough to show up. It is one of the few signals a government cannot easily fake or ignore.",
       "zh": "现实地点里的人群证明人们在乎到愿意亲自到场。这是政府难以伪造、也难以忽视的少数信号之一。"
     },
-    "quotes": [{ "section": 44, "th": "บุคคลย่อมมีเสรีภาพในการชุมนุมโดยสงบและปราศจากอาวุธ" }]
+    "quotes": [
+      {
+        "section": 44,
+        "th": "บุคคลย่อมมีเสรีภาพในการชุมนุมโดยสงบและปราศจากอาวุธ",
+        "en": "A person shall enjoy the liberty to assemble peacefully and without arms.",
+        "zh": "人享有和平且不携带武器的集会自由。"
+      }
+    ]
   },
   {
     "id": "vote-duty",
     "chapter": 4,
-    "sections": [50],
+    "sections": [
+      50
+    ],
     "prompt": {
       "th": "การไปเลือกตั้งเป็นสิทธิหรือหน้าที่",
       "en": "Is voting in an election a right or a duty?",
       "zh": "参加选举投票是权利还是义务？"
     },
     "choices": [
-      { "th": "เป็นสิทธิอย่างเดียว ไม่ไปก็ได้ตามใจ", "en": "Only a right, free to ignore", "zh": "只是权利，不去也随意" },
-      { "th": "เป็นหน้าที่อย่างเดียว ไม่มีสิทธิเลือก", "en": "Only a duty, with no free choice", "zh": "只是义务，没有选择的自由" },
-      { "th": "เป็นทั้งสองอย่าง รัฐธรรมนูญระบุว่าการไปใช้สิทธิเลือกตั้งอย่างอิสระเป็นหน้าที่", "en": "Both: the constitution lists freely exercising the right to vote as a duty", "zh": "两者都是：宪法把自由行使投票权列为一项义务" }
+      {
+        "th": "เป็นสิทธิอย่างเดียว ไม่ไปก็ได้ตามใจ",
+        "en": "Only a right, free to ignore",
+        "zh": "只是权利，不去也随意"
+      },
+      {
+        "th": "เป็นหน้าที่อย่างเดียว ไม่มีสิทธิเลือก",
+        "en": "Only a duty, with no free choice",
+        "zh": "只是义务，没有选择的自由"
+      },
+      {
+        "th": "เป็นทั้งสองอย่าง รัฐธรรมนูญระบุว่าการไปใช้สิทธิเลือกตั้งอย่างอิสระเป็นหน้าที่",
+        "en": "Both: the constitution lists freely exercising the right to vote as a duty",
+        "zh": "两者都是：宪法把自由行使投票权列为一项义务"
+      }
     ],
     "answer": 2,
     "story": {
@@ -192,21 +332,42 @@
       "en": "A democracy where only the angriest people vote is steered by its angriest people. Calling voting a duty is a nudge toward the quiet majority.",
       "zh": "如果只有最愤怒的人去投票，民主就会被最愤怒的人掌舵。把投票称为义务，是在轻轻推一把沉默的大多数。"
     },
-    "quotes": [{ "section": 50, "th": "ไปใช้สิทธิเลือกตั้งหรือลงประชามติอย่างอิสระ" }]
+    "quotes": [
+      {
+        "section": 50,
+        "th": "(๗) ไปใช้สิทธิเลือกตั้งหรือลงประชามติอย่างอิสระโดยคำนึงถึงประโยชน์ส่วนรวมของประเทศเป็นสำคัญ",
+        "en": "A person has the duty to vote in an election or referendum freely, with the common interest of the country foremost.",
+        "zh": "人有义务以国家整体利益为重，自由地参加选举或公投投票。"
+      }
+    ]
   },
   {
     "id": "free-schooling",
     "chapter": 5,
-    "sections": [54],
+    "sections": [
+      54
+    ],
     "prompt": {
       "th": "รัฐต้องจัดการศึกษาที่มีคุณภาพโดยไม่เก็บค่าใช้จ่ายให้เด็กทุกคนกี่ปี",
       "en": "How many years of free, quality education must the state ensure for every child?",
       "zh": "国家必须保证每个儿童接受多少年免费的优质教育？"
     },
     "choices": [
-      { "th": "6 ปี", "en": "6 years", "zh": "6年" },
-      { "th": "9 ปี", "en": "9 years", "zh": "9年" },
-      { "th": "12 ปี ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับ", "en": "12 years, from pre-school to the end of compulsory education", "zh": "12年，从学前一直到义务教育结束" }
+      {
+        "th": "6 ปี",
+        "en": "6 years",
+        "zh": "6年"
+      },
+      {
+        "th": "9 ปี",
+        "en": "9 years",
+        "zh": "9年"
+      },
+      {
+        "th": "12 ปี ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับ",
+        "en": "12 years, from pre-school to the end of compulsory education",
+        "zh": "12年，从学前一直到义务教育结束"
+      }
     ],
     "answer": 2,
     "story": {
@@ -219,21 +380,47 @@
       "en": "Much research suggests that a lot of what supports later learning forms before age six. Starting the count early is cheaper than repairing gaps later.",
       "zh": "大量研究表明，支撑日后学习的许多基础在六岁前就已形成。从早开始计算，比日后再去弥补差距更省力。"
     },
-    "quotes": [{ "section": 54, "th": "รัฐต้องดำเนินการให้เด็กทุกคนได้รับการศึกษาเป็นเวลาสิบสองปี" }]
+    "quotes": [
+      {
+        "section": 54,
+        "th": "รัฐต้องดำเนินการให้เด็กทุกคนได้รับการศึกษาเป็นเวลาสิบสองปี ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับอย่างมีคุณภาพโดยไม่เก็บค่าใช้จ่าย",
+        "en": "The state must ensure every child receives twelve years of quality education, from pre-school to the end of compulsory education, free of charge.",
+        "zh": "国家必须保证每个儿童从学前到义务教育结束，接受十二年优质教育，且不收费。"
+      }
+    ],
+    "hook": {
+      "th": "บันไดสิบสองขั้น จากประตูชั้นอนุบาลถึงห้องสุดท้ายของการศึกษาภาคบังคับ และไม่มีช่องขายตั๋วบนบันได",
+      "en": "Twelve steps from the preschool gate to the last compulsory classroom, and no ticket window on the stair.",
+      "zh": "十二级台阶，从学前的门口到义务教育的最后一间教室，楼梯上没有售票口。"
+    }
   },
   {
     "id": "necessary-laws",
     "chapter": 6,
-    "sections": [77],
+    "sections": [
+      77
+    ],
     "prompt": {
       "th": "กำลังมีการร่างกฎหมายใหม่ที่จะกระทบร้านเล็ก ๆ ของคุณ รัฐธรรมนูญบอกว่ารัฐควรทำอะไรก่อน",
       "en": "A new law being drafted will affect your small shop. What does the constitution say the state should do first?",
       "zh": "一部正在起草的新法律会影响你的小店。宪法说国家应该先做什么？"
     },
     "choices": [
-      { "th": "ไม่ต้องทำอะไร ร่างไปก่อนแล้วค่อยอธิบาย", "en": "Nothing; draft first, explain later", "zh": "什么都不用做，先起草，再解释" },
-      { "th": "รับฟังความคิดเห็นผู้เกี่ยวข้อง วิเคราะห์ผลกระทบ และเปิดเผยผลต่อประชาชน", "en": "Consult the people affected, analyse the impact and publish the results", "zh": "听取相关人员意见，分析影响，并向公众公开结果" },
-      { "th": "จัดลงประชามติทุกครั้ง", "en": "Hold a referendum every time", "zh": "每次都举行公投" }
+      {
+        "th": "ไม่ต้องทำอะไร ร่างไปก่อนแล้วค่อยอธิบาย",
+        "en": "Nothing; draft first, explain later",
+        "zh": "什么都不用做，先起草，再解释"
+      },
+      {
+        "th": "รับฟังความคิดเห็นผู้เกี่ยวข้อง วิเคราะห์ผลกระทบ และเปิดเผยผลต่อประชาชน",
+        "en": "Consult the people affected, analyse the impact and publish the results",
+        "zh": "听取相关人员意见，分析影响，并向公众公开结果"
+      },
+      {
+        "th": "จัดลงประชามติทุกครั้ง",
+        "en": "Hold a referendum every time",
+        "zh": "每次都举行公投"
+      }
     ],
     "answer": 1,
     "story": {
@@ -246,21 +433,48 @@
       "en": "Every law costs the people who must obey it: time, paperwork, fear of getting it wrong. A reminder in the supreme law keeps that cost visible to whoever writes the next one.",
       "zh": "每部法律都要守法者付出代价：时间、文书，以及怕出错的担心。在最高法律里写下提醒，能让下一个立法者始终看得见这份代价。"
     },
-    "quotes": [{ "section": 77, "th": "รัฐพึงจัดให้มีกฎหมายเพียงเท่าที่จำเป็น" }]
+    "quotes": [
+      {
+        "section": 77,
+        "th": "รัฐพึงจัดให้มีกฎหมายเพียงเท่าที่จำเป็น",
+        "en": "The state should have laws only as far as necessary.",
+        "zh": "国家应仅在必要范围内制定法律。"
+      },
+      {
+        "section": 77,
+        "th": "ก่อนการตรากฎหมายทุกฉบับ รัฐพึงจัดให้มีการรับฟังความคิดเห็นของผู้เกี่ยวข้อง",
+        "en": "Before enacting any law, the state should hear from the people affected.",
+        "zh": "每部法律制定前，国家应听取相关人员的意见。"
+      }
+    ]
   },
   {
     "id": "citizen-bill",
     "chapter": 7,
-    "sections": [133],
+    "sections": [
+      133
+    ],
     "prompt": {
       "th": "คุณกับเพื่อนบ้านอยากได้กฎหมายใหม่เรื่องสิทธิ ประชาชนธรรมดาเสนอร่างกฎหมายได้ไหม",
       "en": "You and your neighbours want a new law on a rights issue. Can ordinary voters propose a bill?",
       "zh": "你和邻居们希望就一项权利议题制定新法。普通选民可以提出法案吗？"
     },
     "choices": [
-      { "th": "ไม่ได้ คณะรัฐมนตรีเท่านั้นที่เสนอได้", "en": "No, only the cabinet can propose bills", "zh": "不可以，只有内阁能提出法案" },
-      { "th": "ได้ ผู้มีสิทธิเลือกตั้งไม่น้อยกว่าหนึ่งหมื่นคนเข้าชื่อเสนอร่างกฎหมายเรื่องสิทธิหรือหน้าที่ของรัฐได้", "en": "Yes, at least 10,000 voters can jointly propose a bill on rights or duties of the state", "zh": "可以，至少一万名选民可以联署提出有关权利或国家义务的法案" },
-      { "th": "ได้ ประชาชนคนเดียวก็ยื่นได้", "en": "Yes, any single citizen can submit one", "zh": "可以，任何一位公民都能单独提交" }
+      {
+        "th": "ไม่ได้ คณะรัฐมนตรีเท่านั้นที่เสนอได้",
+        "en": "No, only the cabinet can propose bills",
+        "zh": "不可以，只有内阁能提出法案"
+      },
+      {
+        "th": "ได้ ผู้มีสิทธิเลือกตั้งไม่น้อยกว่าหนึ่งหมื่นคนเข้าชื่อเสนอร่างกฎหมายเรื่องสิทธิหรือหน้าที่ของรัฐได้",
+        "en": "Yes, at least 10,000 voters can jointly propose a bill on rights or duties of the state",
+        "zh": "可以，至少一万名选民可以联署提出有关权利或国家义务的法案"
+      },
+      {
+        "th": "ได้ ประชาชนคนเดียวก็ยื่นได้",
+        "en": "Yes, any single citizen can submit one",
+        "zh": "可以，任何一位公民都能单独提交"
+      }
     ],
     "answer": 1,
     "story": {
@@ -269,25 +483,51 @@
       "zh": "第133条列明谁可以向下议院提出法案：内阁、不少于二十名下议院议员，或不少于一万名选民联署。公民这条路有范围：只能提出第3章权利与自由或第5章国家义务方面的法案，并须依照联署提案法办理。若是财政法案，须经总理认可。一万人听起来很多，直到你数一数本区的聊天群。"
     },
     "why": {
-      "th": "ทำไมจำกัดร่างของประชาชนไว้ที่เรื่องสิทธิและหน้าที่ของรัฐ การอ่านแบบหนึ่งคือ สองหมวดนี้เป็นเรื่องที่ประชาชนเป็นผู้ได้รับความคุ้มครองหรือเป็นผู้ที่รัฐติดค้างอยู่โดยตรง ส่วนเรื่องเงินยังอยู่กับคนที่ต้องรับผิดชอบการใช้จ่าย",
-      "en": "One reading: these two chapters are where the people are the ones protected or owed. Money stays with those who must answer for the spending.",
-      "zh": "一种理解是：这两章正是人民作为受保护者、或国家对其负有义务的领域；而钱的事，留给要为支出负责的人。"
+      "th": "ทางของประชาชนถูกจำกัดไว้ที่หมวดสิทธิและหมวดหน้าที่ของรัฐ เพราะสองหมวดนั้นคือเรื่องที่คนธรรมดาเป็นผู้ได้รับผลโดยตรง ขอบเขตนี้ทำให้เสียงหนึ่งหมื่นคนชี้ไปที่สิทธิของตัวเองได้ชัด ไม่กระจายไปทุกเรื่องที่สภาต้องตรากฎหมาย",
+      "en": "The citizen route is limited to the chapters on rights and on the duties of the state, because those are the chapters where an ordinary person is the one affected. The limit lets ten thousand signatures point at their own rights, instead of at every subject Parliament legislates.",
+      "zh": "公民这条路被限制在权利一章和国家义务一章，因为这两章正是普通人直接承受结果的地方。有了这个范围，一万个签名就能清楚地指向自己的权利，而不是议会要立的每一件事。"
     },
-    "quotes": [{ "section": 133, "th": "ผู้มีสิทธิเลือกตั้งจำนวนไม่น้อยกว่าหนึ่งหมื่นคนเข้าชื่อเสนอกฎหมาย" }]
+    "quotes": [
+      {
+        "section": 133,
+        "th": "(๓) ผู้มีสิทธิเลือกตั้งจำนวนไม่น้อยกว่าหนึ่งหมื่นคนเข้าชื่อเสนอกฎหมายตามหมวด ๓ สิทธิและเสรีภาพของปวงชนชาวไทย หรือหมวด ๕ หน้าที่ของรัฐ",
+        "en": "At least ten thousand voters may jointly propose a bill under the chapters on rights and liberties or on the duties of the state.",
+        "zh": "不少于一万名选民可以联署提出权利与自由或国家义务方面的法案。"
+      }
+    ],
+    "hook": {
+      "th": "หนึ่งหมื่นคนคือประตูร่างกฎหมายธรรมดา ห้าหมื่นคนเป็นอีกประตูหนึ่ง สำหรับการแก้รัฐธรรมนูญ อย่าสลับประตู",
+      "en": "Ten thousand opens the door for an ordinary bill. Fifty thousand is a different door, for amending the constitution. Do not swap the doors.",
+      "zh": "一万是普通法案的门。五万是另一扇门，用来修宪。别把两扇门换错。"
+    }
   },
   {
     "id": "pm-eight-years",
     "chapter": 8,
-    "sections": [158],
+    "sections": [
+      158
+    ],
     "prompt": {
       "th": "คนคนเดียวเป็นนายกรัฐมนตรีได้สิบสองปีไหม ถ้าชนะเรื่อย ๆ",
       "en": "Can one person be Prime Minister for twelve years if they keep winning?",
       "zh": "只要一直胜选，一个人可以当十二年总理吗？"
     },
     "choices": [
-      { "th": "ได้ ตราบใดที่สภายังให้ความเห็นชอบ", "en": "Yes, as long as the House keeps approving them", "zh": "可以，只要下议院一直批准" },
-      { "th": "ไม่ได้ รวมกันแล้วเกินแปดปีไม่ได้ ไม่ว่าจะติดต่อกันหรือไม่", "en": "No, the total is capped at eight years, consecutive or not", "zh": "不可以，累计不得超过八年，不论是否连续" },
-      { "th": "ได้แค่สี่ปีติดกัน แล้วต้องเว้นวรรค", "en": "Only four years in a row, then a break", "zh": "只能连任四年，然后必须间隔" }
+      {
+        "th": "ได้ ตราบใดที่สภายังให้ความเห็นชอบ",
+        "en": "Yes, as long as the House keeps approving them",
+        "zh": "可以，只要下议院一直批准"
+      },
+      {
+        "th": "ไม่ได้ รวมกันแล้วเกินแปดปีไม่ได้ ไม่ว่าจะติดต่อกันหรือไม่",
+        "en": "No, the total is capped at eight years, consecutive or not",
+        "zh": "不可以，累计不得超过八年，不论是否连续"
+      },
+      {
+        "th": "ได้แค่สี่ปีติดกัน แล้วต้องเว้นวรรค",
+        "en": "Only four years in a row, then a break",
+        "zh": "只能连任四年，然后必须间隔"
+      }
     ],
     "answer": 1,
     "story": {
@@ -300,21 +540,47 @@
       "en": "Power that stays in one place long enough reshapes the institutions meant to check it. A clock judges no one. It simply makes turnover certain.",
       "zh": "权力在一处停留得够久，就会重塑本应制衡它的机构。时钟不评判任何人，它只是让更替成为必然。"
     },
-    "quotes": [{ "section": 158, "th": "นายกรัฐมนตรีจะดำรงตำแหน่งรวมกันแล้วเกินแปดปีมิได้" }]
+    "quotes": [
+      {
+        "section": 158,
+        "th": "นายกรัฐมนตรีจะดำรงตำแหน่งรวมกันแล้วเกินแปดปีมิได้ ทั้งนี้ ไม่ว่าจะเป็นการดำรงตำแหน่งติดต่อกันหรือไม่",
+        "en": "A Prime Minister may not hold office for more than eight years in total, whether consecutive or not.",
+        "zh": "总理任职累计不得超过八年，不论是否连续。"
+      }
+    ],
+    "hook": {
+      "th": "นาฬิกาเรือนนี้มีแปดชั่วโมง เมื่อเข็มครบแล้วก็หยุด ไม่ว่าจะเดินติดกันหรือเว้นไป",
+      "en": "This clock has eight hours. When the hand finishes them, it stops, whether they were consecutive or not.",
+      "zh": "这只钟只有八个小时。走完就停，不论那八小时是连着走还是分开走。"
+    }
   },
   {
     "id": "mp-concessions",
     "chapter": 9,
-    "sections": [184],
+    "sections": [
+      184
+    ],
     "prompt": {
       "th": "บริษัทของ ส.ส. คนหนึ่งอยากได้สัมปทานแบบผูกขาดจากรัฐ ทำได้หรือไม่",
       "en": "An MP's company wants an exclusive state concession. Is that allowed?",
       "zh": "某议员的公司想获得国家的独家特许经营权。这样可以吗？"
     },
     "choices": [
-      { "th": "ได้ ถ้าแจ้งให้ทราบ", "en": "Yes, if the MP declares it", "zh": "可以，只要申报" },
-      { "th": "ไม่ได้ ส.ส. ต้องไม่รับหรือแทรกแซงสัมปทานจากรัฐ หรือถือหุ้นในบริษัทที่ได้สัมปทาน ไม่ว่าทางตรงหรือทางอ้อม", "en": "No: MPs may not take or interfere in state concessions, or hold shares in firms that do, directly or indirectly", "zh": "不可以：议员不得接受或干预国家特许经营，也不得持有获得特许的公司股份，无论直接或间接" },
-      { "th": "ได้ ถ้าสัญญามีมูลค่าน้อย", "en": "Yes, if the contract is small", "zh": "可以，只要合同金额小" }
+      {
+        "th": "ได้ ถ้าแจ้งให้ทราบ",
+        "en": "Yes, if the MP declares it",
+        "zh": "可以，只要申报"
+      },
+      {
+        "th": "ไม่ได้ ส.ส. ต้องไม่รับหรือแทรกแซงสัมปทานจากรัฐ หรือถือหุ้นในบริษัทที่ได้สัมปทาน ไม่ว่าทางตรงหรือทางอ้อม",
+        "en": "No: MPs may not take or interfere in state concessions, or hold shares in firms that do, directly or indirectly",
+        "zh": "不可以：议员不得接受或干预国家特许经营，也不得持有获得特许的公司股份，无论直接或间接"
+      },
+      {
+        "th": "ได้ ถ้าสัญญามีมูลค่าน้อย",
+        "en": "Yes, if the contract is small",
+        "zh": "可以，只要合同金额小"
+      }
     ],
     "answer": 1,
     "story": {
@@ -327,21 +593,42 @@
       "en": "A ban that stops at the member's own name is a ban on paperwork, not on the conflict of interest.",
       "zh": "只管议员本人名下的禁令，禁的是文书，而不是利益冲突。"
     },
-    "quotes": [{ "section": 184, "th": "ไม่รับหรือแทรกแซงหรือก้าวก่ายการเข้ารับสัมปทานจากรัฐ" }]
+    "quotes": [
+      {
+        "section": 184,
+        "th": "(๒) ไม่รับหรือแทรกแซงหรือก้าวก่ายการเข้ารับสัมปทานจากรัฐ หน่วยราชการ หน่วยงานของรัฐ หรือรัฐวิสาหกิจ หรือเข้าเป็นคู่สัญญากับรัฐ หน่วยราชการ หน่วยงานของรัฐ หรือรัฐวิสาหกิจอันมีลักษณะ เป็นการผูกขาดตัดตอน หรือเป็นหุ้นส่วนหรือผู้ถือหุ้นในห้างหุ้นส่วนหรือบริษัทที่รับสัมปทานหรือเข้าเป็น คู่สัญญาในลักษณะดังกล่าว ทั้งนี้ ไม่ว่าโดยทางตรงหรือทางอ้อม",
+        "en": "An MP must not receive, interfere in or intervene in a state concession, directly or indirectly.",
+        "zh": "议员不得接受、干预或插手国家特许经营，无论直接或间接。"
+      }
+    ]
   },
   {
     "id": "independent-judges",
     "chapter": 10,
-    "sections": [188],
+    "sections": [
+      188
+    ],
     "prompt": {
       "th": "รัฐมนตรีโทรหาผู้พิพากษาเรื่องคดีที่ยังพิจารณาอยู่ เรื่องนี้ชนกับหลักอะไร",
       "en": "A minister phones a judge about a pending case. What principle does that run into?",
       "zh": "一位部长打电话给法官谈一桩未决案件。这触碰了哪条原则？"
     },
     "choices": [
-      { "th": "ไม่ชนอะไร รัฐมนตรีกำกับศาลได้", "en": "None; ministers supervise courts", "zh": "没有，部长可以监督法院" },
-      { "th": "ผู้พิพากษามีอิสระในการพิจารณาพิพากษาคดีตามรัฐธรรมนูญและกฎหมาย", "en": "Judges are independent in trying cases under the constitution and law", "zh": "法官依宪法和法律独立审判案件" },
-      { "th": "นายกรัฐมนตรีเท่านั้นที่โทรได้", "en": "Only the Prime Minister may call", "zh": "只有总理可以打这个电话" }
+      {
+        "th": "ไม่ชนอะไร รัฐมนตรีกำกับศาลได้",
+        "en": "None; ministers supervise courts",
+        "zh": "没有，部长可以监督法院"
+      },
+      {
+        "th": "ผู้พิพากษามีอิสระในการพิจารณาพิพากษาคดีตามรัฐธรรมนูญและกฎหมาย",
+        "en": "Judges are independent in trying cases under the constitution and law",
+        "zh": "法官依宪法和法律独立审判案件"
+      },
+      {
+        "th": "นายกรัฐมนตรีเท่านั้นที่โทรได้",
+        "en": "Only the Prime Minister may call",
+        "zh": "只有总理可以打这个电话"
+      }
     ],
     "answer": 1,
     "story": {
@@ -350,25 +637,46 @@
       "zh": "第188条只有两句。第一句说，审判案件是法院的权力，须依法并以国王的名义行使。第二句说，法官依宪法和法律独立审判，应迅速、公正、毫无偏见。这里的独立并不是说法官不对任何人负责，而是说案件要依法律和证据裁判，而不是看谁打来了电话。"
     },
     "why": {
-      "th": "ทำไมต้องใส่คำว่า รวดเร็ว ความยุติธรรมที่มาถึงหลังความเสียหายเกิดไปแล้ว ได้เลือกข้างไปแล้วอย่างเงียบ ๆ",
-      "en": "Justice that arrives after the harm is done has quietly picked a side.",
-      "zh": "在损害发生之后才到来的正义，已经悄悄选了边。"
+      "th": "อิสระในการพิพากษาหมายความว่าคดีต้องจบที่กฎหมายและพยานหลักฐาน ไม่ใช่ที่ว่าใครโทรมา ถ้าผู้พิพากษาต้องฟังรัฐมนตรี ศาลก็เป็นแค่สำนักงานของฝ่ายบริหาร คำว่า รวดเร็ว อยู่ในประโยคเดียวกัน แต่เป็นคนละหน้าที่กับการไม่ให้ใครสั่งคดี",
+      "en": "Independence means the case ends on the law and the evidence, not on who telephoned. If a judge must take a minister's call, the court is an office of the executive. The word 'swiftly' sits in the same sentence, and it is a separate duty from the ban on being told how to decide.",
+      "zh": "独立意味着案件止于法律和证据，而不是止于谁打来了电话。如果法官必须听部长的，法院就只是行政机关的一间办公室。“迅速”写在同一句里，它是另一项义务，与不准别人指挥裁判是两回事。"
     },
-    "quotes": [{ "section": 188, "th": "ผู้พิพากษาและตุลาการย่อมมีอิสระในการพิจารณาพิพากษาอรรถคดีตามรัฐธรรมนูญและกฎหมาย" }]
+    "quotes": [
+      {
+        "section": 188,
+        "th": "ผู้พิพากษาและตุลาการย่อมมีอิสระในการพิจารณาพิพากษาอรรถคดีตามรัฐธรรมนูญและกฎหมาย ให้เป็นไปโดยรวดเร็ว เป็นธรรม และปราศจากอคติทั้งปวง",
+        "en": "Judges are independent in trying cases under the constitution and the law, and must act swiftly, fairly and without any bias.",
+        "zh": "法官依宪法和法律独立审判，应迅速、公正、毫无偏见。"
+      }
+    ]
   },
   {
     "id": "constitutional-petition",
     "chapter": 11,
-    "sections": [213],
+    "sections": [
+      213
+    ],
     "prompt": {
       "th": "การกระทำของรัฐละเมิดสิทธิที่รัฐธรรมนูญคุ้มครอง คนธรรมดายื่นเรื่องต่อศาลรัฐธรรมนูญได้ไหม",
       "en": "A state action violates a right the constitution protects. Can an ordinary person go to the Constitutional Court?",
       "zh": "国家的某项行为侵犯了宪法保护的权利。普通人可以向宪法法院申请吗？"
     },
     "choices": [
-      { "th": "ไม่ได้ รัฐสภาเท่านั้นที่ยื่นได้", "en": "No, only parliament can petition", "zh": "不可以，只有国会能申请" },
-      { "th": "ได้ ผู้ถูกละเมิดสิทธิยื่นคำร้องได้ ตามหลักเกณฑ์ในพระราชบัญญัติประกอบรัฐธรรมนูญ", "en": "Yes, a person whose rights are violated may petition, under the organic act's conditions", "zh": "可以，权利受侵犯的人可以依组织法规定的条件提出申请" },
-      { "th": "ได้ แต่ต้องผ่านอัยการสูงสุดเท่านั้น", "en": "Only through the Attorney General", "zh": "可以，但只能通过总检察长" }
+      {
+        "th": "ไม่ได้ รัฐสภาเท่านั้นที่ยื่นได้",
+        "en": "No, only parliament can petition",
+        "zh": "不可以，只有国会能申请"
+      },
+      {
+        "th": "ได้ ผู้ถูกละเมิดสิทธิยื่นคำร้องได้ ตามหลักเกณฑ์ในพระราชบัญญัติประกอบรัฐธรรมนูญ",
+        "en": "Yes, a person whose rights are violated may petition, under the organic act's conditions",
+        "zh": "可以，权利受侵犯的人可以依组织法规定的条件提出申请"
+      },
+      {
+        "th": "ได้ แต่ต้องผ่านอัยการสูงสุดเท่านั้น",
+        "en": "Only through the Attorney General",
+        "zh": "可以，但只能通过总检察长"
+      }
     ],
     "answer": 1,
     "story": {
@@ -381,21 +689,42 @@
       "en": "A right only officials can enforce depends on officials wanting to. A door for the person harmed keeps the promise from being decoration.",
       "zh": "只有官员才能执行的权利，取决于官员愿不愿意。为受害者本人开一扇门，承诺才不只是装饰。"
     },
-    "quotes": [{ "section": 213, "th": "บุคคลซึ่งถูกละเมิดสิทธิหรือเสรีภาพที่รัฐธรรมนูญคุ้มครองไว้มีสิทธิยื่นคำร้อง" }]
+    "quotes": [
+      {
+        "section": 213,
+        "th": "บุคคลซึ่งถูกละเมิดสิทธิหรือเสรีภาพที่รัฐธรรมนูญคุ้มครองไว้มีสิทธิยื่นคำร้อง ต่อศาลรัฐธรรมนูญเพื่อมีคำวินิจฉัยว่าการกระทำนั้นขัดหรือแย้งต่อรัฐธรรมนูญ",
+        "en": "A person whose constitutional rights or liberties are violated may petition the Constitutional Court to rule whether the act is contrary to the constitution.",
+        "zh": "宪法保护的权利或自由受到侵犯的人，有权向宪法法院申请裁决该行为是否违宪。"
+      }
+    ]
   },
   {
     "id": "ombudsman",
     "chapter": 12,
-    "sections": [230],
+    "sections": [
+      230
+    ],
     "prompt": {
       "th": "หน่วยราชการแห่งหนึ่งดองใบอนุญาตของคุณไว้โดยไม่มีเหตุผลชัดเจน องค์กรตามรัฐธรรมนูญองค์กรไหนตรวจเรื่องความไม่เป็นธรรมจากหน่วยงานรัฐ",
       "en": "A government office keeps delaying your permit for no clear reason. Which constitutional body looks into unfair treatment by state agencies?",
       "zh": "某政府部门无故一再拖延你的许可证。哪个宪法机构负责调查国家机关的不公正对待？"
     },
     "choices": [
-      { "th": "คณะกรรมการการเลือกตั้ง", "en": "The Election Commission", "zh": "选举委员会" },
-      { "th": "ผู้ตรวจการแผ่นดิน", "en": "The Ombudsman", "zh": "监察专员" },
-      { "th": "ศาลรัฐธรรมนูญ โดยตรงเป็นที่แรก", "en": "The Constitutional Court, directly and first", "zh": "宪法法院，直接且首先" }
+      {
+        "th": "คณะกรรมการการเลือกตั้ง",
+        "en": "The Election Commission",
+        "zh": "选举委员会"
+      },
+      {
+        "th": "ผู้ตรวจการแผ่นดิน",
+        "en": "The Ombudsman",
+        "zh": "监察专员"
+      },
+      {
+        "th": "ศาลรัฐธรรมนูญ โดยตรงเป็นที่แรก",
+        "en": "The Constitutional Court, directly and first",
+        "zh": "宪法法院，直接且首先"
+      }
     ],
     "answer": 1,
     "story": {
@@ -408,21 +737,42 @@
       "en": "Most unfairness is too small for a lawsuit and too common to ignore. A cheap, informal door catches the problems people would otherwise just endure.",
       "zh": "大多数不公小到不值得打官司，又常见到不能忽视。一扇成本低、不拘形式的门，能接住那些人们原本只会默默忍受的问题。"
     },
-    "quotes": [{ "section": 230, "th": "แสวงหาข้อเท็จจริงเมื่อเห็นว่ามีผู้ได้รับความเดือดร้อนหรือความไม่เป็นธรรม" }]
+    "quotes": [
+      {
+        "section": 230,
+        "th": "(๒) แสวงหาข้อเท็จจริงเมื่อเห็นว่ามีผู้ได้รับความเดือดร้อนหรือความไม่เป็นธรรมอันเนื่องมาจาก การไม่ปฏิบัติตามกฎหมายหรือปฏิบัตินอกเหนือหน้าที่และอำนาจตามกฎหมายของหน่วยงานของรัฐ หรือเจ้าหน้าที่ของรัฐ",
+        "en": "The Ombudsman finds the facts when someone suffers because a state agency or official failed to follow the law or went beyond its powers.",
+        "zh": "当有人因国家机关或官员不依法办事或越权而受害时，监察专员调查事实。"
+      }
+    ]
   },
   {
     "id": "independent-prosecutors",
     "chapter": 13,
-    "sections": [248],
+    "sections": [
+      248
+    ],
     "prompt": {
       "th": "สำนวนคดีของคุณไปถึงพนักงานอัยการ คนมีอำนาจสั่งให้อัยการเลิกคดีได้ไหม",
       "en": "Your case file reaches a public prosecutor. Can a powerful person order the prosecutor to drop it?",
       "zh": "你的案卷到了检察官手里。有权势的人可以命令检察官撤案吗？"
     },
     "choices": [
-      { "th": "ได้ ถ้าตำแหน่งสูงพอ", "en": "Yes, if they are senior enough", "zh": "可以，只要职位够高" },
-      { "th": "ไม่ได้ พนักงานอัยการมีอิสระในการพิจารณาสั่งคดีโดยปราศจากอคติ", "en": "No, prosecutors are independent in deciding cases, without bias", "zh": "不可以，检察官独立、无偏见地决定案件" },
-      { "th": "ตำรวจเท่านั้นที่ยุติคดีได้", "en": "Only the police can drop cases", "zh": "只有警察能撤案" }
+      {
+        "th": "ได้ ถ้าตำแหน่งสูงพอ",
+        "en": "Yes, if they are senior enough",
+        "zh": "可以，只要职位够高"
+      },
+      {
+        "th": "ไม่ได้ พนักงานอัยการมีอิสระในการพิจารณาสั่งคดีโดยปราศจากอคติ",
+        "en": "No, prosecutors are independent in deciding cases, without bias",
+        "zh": "不可以，检察官独立、无偏见地决定案件"
+      },
+      {
+        "th": "ตำรวจเท่านั้นที่ยุติคดีได้",
+        "en": "Only the police can drop cases",
+        "zh": "只有警察能撤案"
+      }
     ],
     "answer": 1,
     "story": {
@@ -431,25 +781,52 @@
       "zh": "在派出所和法庭之间，站着决定是否起诉的检察官。第248条规定，检察官独立审查并决定案件、履行职责，应迅速、公正、毫无偏见，其决定不视为行政命令；检察机关的人事和预算也须独立。法律必须制定明确且普遍适用的措施，防止检察官担任可能使其决定失衡或产生利益冲突的职务，而且不得授权逐案审批。"
     },
     "why": {
-      "th": "ทำไมยืนยันว่าต้องเป็นกติกาทั่วไป ไม่ใช่อนุมัติเป็นกรณี ๆ ไป เพราะ เป็นกรณี ๆ ไป คือวิธีที่ข้อยกเว้นกลายเป็นตลาด",
-      "en": "'Case by case' is how exceptions become a market.",
-      "zh": "“逐案处理”正是例外变成市场的方式。"
+      "th": "ถ้าผู้บังคับบัญชาอนุมัติเป็นรายคดีได้ ข้อยกเว้นจะมีราคา กฎที่ใช้กับพนักงานอัยการทุกคนเหมือนกันทำให้ไม่มีใครขายทางออกทีละเรื่อง อิสระในการสั่งคดีจึงผูกกับการห้ามเปิดช่องรายคดี",
+      "en": "If a superior can approve an exception one file at a time, those exceptions get a price. A rule that binds every prosecutor the same way leaves nothing to sell. Independence in ordering a case is tied to that ban on case-by-case permission.",
+      "zh": "如果上级可以逐案批准例外，例外就会有价钱。一条对每个检察官都一样的规则，让人没有东西可卖。检察官决定案件的独立，系于禁止逐案开口子。"
     },
-    "quotes": [{ "section": 248, "th": "พนักงานอัยการมีอิสระในการพิจารณาสั่งคดี" }]
+    "quotes": [
+      {
+        "section": 248,
+        "th": "พนักงานอัยการมีอิสระในการพิจารณาสั่งคดีและการปฏิบัติหน้าที่ให้เป็นไปโดยรวดเร็ว เที่ยงธรรม และปราศจากอคติทั้งปวง",
+        "en": "Prosecutors are independent in considering and ordering cases, and must act swiftly, fairly and without bias.",
+        "zh": "检察官独立审查并决定案件，应迅速、公正、毫无偏见。"
+      },
+      {
+        "section": 248,
+        "th": "มาตรการดังกล่าวต้องกำหนดให้ชัดแจ้งและใช้เป็นการทั่วไป โดยจะมอบอำนาจให้มีการพิจารณาเป็นกรณี ๆ ไปมิได้",
+        "en": "Those measures must be explicit and of general application. They may not be delegated for case-by-case approval.",
+        "zh": "这些措施必须明确且普遍适用，不得授权逐案审批。"
+      }
+    ]
   },
   {
     "id": "local-petition",
     "chapter": 14,
-    "sections": [254],
+    "sections": [
+      254
+    ],
     "prompt": {
       "th": "สภาท้องถิ่นปล่อยปัญหาน้ำท่วมซอยไว้หลายปี ตามรัฐธรรมนูญ ผู้มีสิทธิเลือกตั้งในท้องถิ่นทำอะไรได้บ้าง",
       "en": "Your local council has ignored a flooding problem for years. What can local voters do under the constitution?",
       "zh": "地方议会多年来对内涝问题置之不理。根据宪法，地方选民能做什么？"
     },
     "choices": [
-      { "th": "ไม่ได้ ต้องรอเลือกตั้งระดับประเทศครั้งหน้า", "en": "Nothing until the next national election", "zh": "什么也做不了，只能等下次全国大选" },
-      { "th": "เข้าชื่อกันเพื่อเสนอข้อบัญญัติท้องถิ่น หรือเพื่อถอดถอนสมาชิกสภาท้องถิ่นหรือผู้บริหารท้องถิ่น", "en": "Sign a joint petition to propose a local ordinance, or to remove a council member or local executive", "zh": "联署提出地方条例，或罢免地方议员或地方行政首长" },
-      { "th": "ร้องเรียนผู้ว่าราชการจังหวัดได้อย่างเดียว", "en": "Only complain to the provincial governor", "zh": "只能向府尹投诉" }
+      {
+        "th": "ไม่ได้ ต้องรอเลือกตั้งระดับประเทศครั้งหน้า",
+        "en": "Nothing until the next national election",
+        "zh": "什么也做不了，只能等下次全国大选"
+      },
+      {
+        "th": "เข้าชื่อกันเพื่อเสนอข้อบัญญัติท้องถิ่น หรือเพื่อถอดถอนสมาชิกสภาท้องถิ่นหรือผู้บริหารท้องถิ่น",
+        "en": "Sign a joint petition to propose a local ordinance, or to remove a council member or local executive",
+        "zh": "联署提出地方条例，或罢免地方议员或地方行政首长"
+      },
+      {
+        "th": "ร้องเรียนผู้ว่าราชการจังหวัดได้อย่างเดียว",
+        "en": "Only complain to the provincial governor",
+        "zh": "只能向府尹投诉"
+      }
     ],
     "answer": 1,
     "story": {
@@ -462,21 +839,42 @@
       "en": "The smaller the government, the more personal its failures, and the better the people affected know exactly whom to hold to account.",
       "zh": "政府越小，失职就越切身，受影响的人也越清楚该向谁问责。"
     },
-    "quotes": [{ "section": 254, "th": "มีสิทธิเข้าชื่อกัน เพื่อเสนอข้อบัญญัติหรือเพื่อถอดถอนสมาชิกสภาท้องถิ่น" }]
+    "quotes": [
+      {
+        "section": 254,
+        "th": "ประชาชนผู้มีสิทธิเลือกตั้งในองค์กรปกครองส่วนท้องถิ่นมีสิทธิเข้าชื่อกัน เพื่อเสนอข้อบัญญัติหรือเพื่อถอดถอนสมาชิกสภาท้องถิ่น หรือผู้บริหารท้องถิ่นได้",
+        "en": "Voters in a local administrative organisation may sign a joint petition to propose a local ordinance, or to remove a local council member or local executive.",
+        "zh": "地方行政组织的选民可以联署提出地方条例，或罢免地方议员、地方行政首长。"
+      }
+    ]
   },
   {
     "id": "unamendable-core",
     "chapter": 15,
-    "sections": [255],
+    "sections": [
+      255
+    ],
     "prompt": {
       "th": "แก้รัฐธรรมนูญเพื่อเปลี่ยนรูปแบบของรัฐได้หรือไม่",
       "en": "Can the constitution be amended to change the form of the state?",
       "zh": "可以通过修宪改变国家形式吗？"
     },
     "choices": [
-      { "th": "ได้ ถ้าเสียงข้างมากมากพอ", "en": "Yes, with a large enough majority", "zh": "可以，只要多数足够大" },
-      { "th": "ไม่ได้ การแก้ไขที่เปลี่ยนการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือเปลี่ยนรูปแบบของรัฐ จะกระทำมิได้", "en": "No, amendments changing the democratic regime with the King as Head of State, or the form of the state, are prohibited", "zh": "不可以，改变以国王为国家元首的民主政体或国家形式的修正被禁止" },
-      { "th": "ได้ ด้วยการลงประชามติอย่างเดียว", "en": "Yes, by referendum alone", "zh": "可以，单凭公投即可" }
+      {
+        "th": "ได้ ถ้าเสียงข้างมากมากพอ",
+        "en": "Yes, with a large enough majority",
+        "zh": "可以，只要多数足够大"
+      },
+      {
+        "th": "ไม่ได้ การแก้ไขที่เปลี่ยนการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือเปลี่ยนรูปแบบของรัฐ จะกระทำมิได้",
+        "en": "No, amendments changing the democratic regime with the King as Head of State, or the form of the state, are prohibited",
+        "zh": "不可以，改变以国王为国家元首的民主政体或国家形式的修正被禁止"
+      },
+      {
+        "th": "ได้ ด้วยการลงประชามติอย่างเดียว",
+        "en": "Yes, by referendum alone",
+        "zh": "可以，单凭公投即可"
+      }
     ],
     "answer": 1,
     "story": {
@@ -489,21 +887,42 @@
       "en": "A lock protects against a temporary majority rewriting the ground everyone stands on. The price is flexibility: whatever is locked must be lived with as written.",
       "zh": "上锁是为了防止一时的多数改写所有人脚下的地基。代价是灵活性：被锁住的内容，只能按原文与之共处。"
     },
-    "quotes": [{ "section": 255, "th": "หรือเปลี่ยนแปลงรูปแบบของรัฐ จะกระทำมิได้" }]
+    "quotes": [
+      {
+        "section": 255,
+        "th": "การแก้ไขเพิ่มเติมรัฐธรรมนูญที่เป็นการเปลี่ยนแปลงการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือเปลี่ยนแปลงรูปแบบของรัฐ จะกระทำมิได้",
+        "en": "An amendment that changes the democratic regime with the King as Head of State, or changes the form of the state, is prohibited.",
+        "zh": "改变以国王为国家元首的民主政体，或改变国家形式的修正，均被禁止。"
+      }
+    ]
   },
   {
     "id": "justice-delay",
     "chapter": 16,
-    "sections": [258],
+    "sections": [
+      258
+    ],
     "prompt": {
       "th": "คดีของคุณยืดเยื้อมาหลายปี รัฐธรรมนูญพูดถึงความล่าช้าในกระบวนการยุติธรรมไว้ไหม",
       "en": "Your court case has dragged on for years. Does the constitution say anything about delays in justice?",
       "zh": "你的案子拖了好几年。宪法对司法拖延有说法吗？"
     },
     "choices": [
-      { "th": "ไม่ เรื่องเวลาเป็นดุลพินิจของเจ้าหน้าที่ทั้งหมด", "en": "No, timing is entirely up to officials", "zh": "没有，时间完全由官员决定" },
-      { "th": "มี แผนปฏิรูปกำหนดให้มีระยะเวลาที่ชัดเจนทุกขั้นตอน และช่วยผู้ขาดแคลนทุนทรัพย์ให้เข้าถึงความยุติธรรม", "en": "Yes, its reform list calls for clear time limits at every stage and help for people without means", "zh": "有，改革清单要求每个环节都有明确时限，并帮助经济困难者获得司法救济" },
-      { "th": "มี ทุกคดีต้องจบภายในหนึ่งปี", "en": "Yes, every case must end within one year", "zh": "有，所有案件必须在一年内结案" }
+      {
+        "th": "ไม่ เรื่องเวลาเป็นดุลพินิจของเจ้าหน้าที่ทั้งหมด",
+        "en": "No, timing is entirely up to officials",
+        "zh": "没有，时间完全由官员决定"
+      },
+      {
+        "th": "มี แผนปฏิรูปกำหนดให้มีระยะเวลาที่ชัดเจนทุกขั้นตอน และช่วยผู้ขาดแคลนทุนทรัพย์ให้เข้าถึงความยุติธรรม",
+        "en": "Yes, its reform list calls for clear time limits at every stage and help for people without means",
+        "zh": "有，改革清单要求每个环节都有明确时限，并帮助经济困难者获得司法救济"
+      },
+      {
+        "th": "มี ทุกคดีต้องจบภายในหนึ่งปี",
+        "en": "Yes, every case must end within one year",
+        "zh": "有，所有案件必须在一年内结案"
+      }
     ],
     "answer": 1,
     "story": {
@@ -516,21 +935,42 @@
       "en": "Plans change with governments. Writing the goals here turns them into a ruler any later government can be measured against.",
       "zh": "计划会随政府更迭而改变。把目标写进这里，就成了一把可以用来衡量此后任何一届政府的尺子。"
     },
-    "quotes": [{ "section": 258, "th": "เพื่อให้ประชาชนได้รับความยุติธรรมโดยไม่ล่าช้า" }]
+    "quotes": [
+      {
+        "section": 258,
+        "th": "ให้มีการกำหนดระยะเวลาดำเนินงานในทุกขั้นตอนของกระบวนการยุติธรรมที่ชัดเจน เพื่อให้ประชาชนได้รับความยุติธรรมโดยไม่ล่าช้า",
+        "en": "Clear time limits at every stage of the justice process, so people receive justice without delay.",
+        "zh": "司法程序的每个环节都规定明确时限，使人民不受拖延地获得正义。"
+      }
+    ]
   },
   {
     "id": "senate-pm-window",
     "chapter": 17,
-    "sections": [272],
+    "sections": [
+      272
+    ],
     "prompt": {
       "th": "สมาชิกวุฒิสภาร่วมลงมติเห็นชอบนายกรัฐมนตรีกับ ส.ส. ได้นานแค่ไหน",
       "en": "For how long did senators vote together with MPs to approve a Prime Minister?",
       "zh": "参议员与下议院议员共同投票批准总理，持续多久？"
     },
     "choices": [
-      { "th": "ตลอดไป", "en": "Permanently", "zh": "永久" },
-      { "th": "ในระหว่างห้าปีแรกนับแต่วันที่มีรัฐสภาชุดแรกตามรัฐธรรมนูญนี้", "en": "During the first five years from the first National Assembly under this constitution", "zh": "自本宪法下第一届国会成立之日起的头五年内" },
-      { "th": "ไม่เคยมีเลย", "en": "Never", "zh": "从来没有" }
+      {
+        "th": "ตลอดไป",
+        "en": "Permanently",
+        "zh": "永久"
+      },
+      {
+        "th": "ในระหว่างห้าปีแรกนับแต่วันที่มีรัฐสภาชุดแรกตามรัฐธรรมนูญนี้",
+        "en": "During the first five years from the first National Assembly under this constitution",
+        "zh": "自本宪法下第一届国会成立之日起的头五年内"
+      },
+      {
+        "th": "ไม่เคยมีเลย",
+        "en": "Never",
+        "zh": "从来没有"
+      }
     ],
     "answer": 1,
     "story": {
@@ -543,6 +983,18 @@
       "en": "A temporary rule written as temporary is easier to accept and easier to end. Without the clock, the scaffolding quietly becomes the building.",
       "zh": "写明是临时的规则，更容易被接受，也更容易结束。没有时钟，脚手架就会悄悄变成楼本身。"
     },
-    "quotes": [{ "section": 272, "th": "ในระหว่างห้าปีแรกนับแต่วันที่มีรัฐสภาชุดแรกตามรัฐธรรมนูญนี้" }]
+    "quotes": [
+      {
+        "section": 272,
+        "th": "ในระหว่างห้าปีแรกนับแต่วันที่มีรัฐสภาชุดแรกตามรัฐธรรมนูญนี้ การให้ความเห็นชอบบุคคลซึ่งสมควรได้รับแต่งตั้งเป็นนายกรัฐมนตรีให้ดำเนินการตามมาตรา ๑๕๙ เว้นแต่ การพิจารณาให้ความเห็นชอบตามมาตรา ๑๕๙ วรรคหนึ่ง ให้กระทำในที่ประชุมร่วมกันของรัฐสภา",
+        "en": "During the first five years from the first National Assembly under this constitution, approval of a Prime Minister was considered at a joint sitting.",
+        "zh": "自本宪法下第一届国会成立之日起的头五年内，总理人选在国会两院联席会议上审议。"
+      }
+    ],
+    "hook": {
+      "th": "นาฬิกาห้าปีเริ่มเดินวันที่รัฐสภาชุดแรกเปิด ตอนนี้เข็มหยุดแล้ว นั่งร้านถูกรื้อ",
+      "en": "A five-year clock started the day the first parliament sat. The hand has stopped. The scaffold is down.",
+      "zh": "五年的钟从第一届国会开会那天开始走。指针已经停了。脚手架拆了。"
+    }
   }
 ]

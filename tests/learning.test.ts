@@ -65,27 +65,29 @@ test("review includes only answered due cards, oldest first, at exact due time",
     ["q0", "q1"],
   );
 });
-test("Bangkok midnight resets energy and advances streak once per day", () => {
+test("Bangkok midnight advances streak once per day and keeps stored energy", () => {
   const before = Date.parse("2026-10-12T16:59:59Z");
   const after = Date.parse("2026-10-12T17:00:00Z");
   assert.equal(bangkokDay(before), "2026-10-12");
   assert.equal(bangkokDay(after), "2026-10-13");
   let p = recordAnswer(defaultProgress(), questions[0], true, before);
-  assert.equal(p.energy, 11);
+  assert.equal(p.energy, 12);
+  assert.equal(p.energyDay, "2026-10-12");
   assert.equal(energyRemaining(p, after), 12);
   p = recordAnswer(p, questions[1], true, after);
-  assert.equal(p.energy, 11);
+  assert.equal(p.energy, 12);
+  assert.equal(p.energyDay, "2026-10-13");
   assert.equal(p.streak, 2);
   p = recordAnswer(p, questions[2], true, after + 1);
   assert.equal(p.streak, 2);
   p = recordAnswer(p, questions[3], true, after + 2 * 86_400_000);
   assert.equal(p.streak, 1);
 });
-test("state is immutable and energy never blocks another answer", () => {
+test("state is immutable and a full day of answers still leaves the stored energy field", () => {
   const original = defaultProgress();
   let p = original;
   for (let i = 0; i < 20; i++) p = recordAnswer(p, questions[0], true, now);
-  assert.equal(p.energy, 0);
+  assert.equal(p.energy, 12);
   assert.deepEqual(original, defaultProgress());
   assert.throws(() => recordAnswer(p, questions[0], true, NaN), RangeError);
 });

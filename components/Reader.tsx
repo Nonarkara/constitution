@@ -7,9 +7,9 @@ import {
   sections,
   chapters,
   searchSections,
-  chineseText,
   chineseSummary,
   readingText,
+  sectionBody,
   englishIsStudyTranslation,
 } from "@/lib/corpus";
 import { useStudy } from "./Provider";
@@ -46,7 +46,9 @@ export function Reader() {
   const section = sections.find((s) => s.number === number);
   return (
     <>
-      <span className="page-kicker mono">THE READING ROOM · 03</span>
+      <span className="page-kicker mono">
+        {tr(lang, "ห้องอ่าน · 03", "The reading room · 03", "阅读室 · 03")}
+      </span>
       <h1 id="reader-title" tabIndex={-1}>
         {tr(
           lang,
@@ -167,14 +169,14 @@ export function Reader() {
               <article key={l} lang={l}>
                 <div className="language-label mono">
                   {l === "th"
-                    ? "ไทย · ต้นฉบับ"
+                    ? tr(lang, "ไทย · ต้นฉบับ", "Thai · original", "泰文 · 原文")
                     : l === "en"
                       ? englishIsStudyTranslation(section.number)
-                        ? "EN · STUDY TRANSLATION"
-                        : "EN · GOVERNMENT TRANSLATION"
-                      : "中文 · 学习译文"}
+                        ? tr(lang, "อังกฤษ · คำแปลเพื่อศึกษา", "English · study translation", "英文 · 学习译文")
+                        : tr(lang, "อังกฤษ · คำแปลทางการ", "English · government translation", "英文 · 政府译文")
+                      : tr(lang, "จีน · คำแปลเพื่อศึกษา", "Chinese · study translation", "中文 · 学习译文")}
                 </div>
-                <p className="law-text">{readingText(section.number, l)}</p>
+                <p className="law-text">{sectionBody(section.number, l)}</p>
                 <Recording section={section.number} lang={l} />
                 <details className="device-speech">
                   <summary>
@@ -198,12 +200,7 @@ export function Reader() {
                     rel="noreferrer"
                     href={`${(l === "en" && englishIsStudyTranslation(section.number) ? section.source.th : section.source[l]).url}#page=${(l === "en" && englishIsStudyTranslation(section.number) ? section.source.th : section.source[l]).pages[0]}`}
                   >
-                    {tr(
-                      lang,
-                      "เปิด PDF ต้นฉบับ หน้า",
-                      "Source PDF, page",
-                      "原始PDF，页",
-                    )}{" "}
+                    {tr(lang, "เปิด PDF ต้นฉบับ หน้า", "Source PDF, page", "原始PDF，页")}{" "}
                     {(l === "en" && englishIsStudyTranslation(section.number)
                       ? section.source.th
                       : section.source[l]
@@ -219,22 +216,41 @@ export function Reader() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      泰文原文 PDF · 第{section.source.th.pages.join(", ")}页 ↗
+                      {tr(
+                        lang,
+                        `PDF ภาษาไทย หน้า ${section.source.th.pages.join(", ")}`,
+                        `Thai PDF, page ${section.source.th.pages.join(", ")}`,
+                        `泰文原文 PDF，第${section.source.th.pages.join(", ")}页`,
+                      )}{" "}
+                      ↗
                     </a>
                   </>
                 )}
                 {l === "zh" && (
                   <details>
-                    <summary>查看简明学习摘要</summary>
+                    <summary>
+                      {tr(lang, "ดูบทสรุปสั้น", "Short study summary", "查看简明学习摘要")}
+                    </summary>
                     <p>{chineseSummary(section.number)}</p>
                   </details>
                 )}
                 {l === "en" && englishIsStudyTranslation(section.number) && (
                   <details>
-                    <summary>Compare original government translation</summary>
+                    <summary>
+                      {tr(
+                        lang,
+                        "เทียบกับคำแปลทางการ",
+                        "Compare the government translation",
+                        "对照政府译文",
+                      )}
+                    </summary>
                     <p className="micro">
-                      Study wording follows the authoritative Thai text; the
-                      original English below is retained for source comparison.
+                      {tr(
+                        lang,
+                        "คำแปลเพื่อเรียนยึดตัวบทภาษาไทย คำแปลภาษาอังกฤษทางการอยู่ด้านล่างเพื่อเทียบ",
+                        "Study wording follows the Thai text. The government English is below for comparison.",
+                        "学习译文以泰文为准。下方保留政府英文译文供对照。",
+                      )}
                     </p>
                     <p className="law-text">{section.en}</p>
                   </details>
