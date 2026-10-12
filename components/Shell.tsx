@@ -2,14 +2,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useStudy } from "./Provider";
-import { energyRemaining } from "@/lib/learning";
-import { useEffect, useState } from "react";
 import { labels, tr, type Lang } from "@/lib/i18n";
 export function Shell({ children }: { children: React.ReactNode }) {
-  const { lang, setLang, progress, storageError, ready } = useStudy();
+  const { lang, setLang, progress, storageError, ready, online } = useStudy();
   const path = usePathname();
-  const [now, setNow] = useState(0);
-  useEffect(() => setNow(Date.now()), [progress]);
   // Five destinations; every other page belongs to one of them for the active state.
   const nav = [
     ["/learn/", labels.learn, ["/", "/learn/"]],
@@ -40,7 +36,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </small>
           </span>
         </Link>
-        <div className="languages" aria-label="Language">
+        <div className="languages" aria-label={tr(lang, "ภาษา", "Language", "语言")}>
           {(["th", "en", "zh"] as Lang[]).map((l) => (
             <button
               key={l}
@@ -71,7 +67,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
             ))}
           </nav>
           <div className="sidebar-note">
-            <span className="mono">TIKKY'S NOTEBOOK</span>
+            <span className="mono">
+              {tr(lang, "สมุดของติ๊กกี้", "Tikky's notebook", "Tikky 的笔记本")}
+            </span>
             <p>
               {tr(
                 lang,
@@ -94,15 +92,21 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </Link>
         </aside>
         <main id="content">
+          {!online && (
+            <p className="notice" role="status">
+              {tr(
+                lang,
+                "คุณกำลังออฟไลน์ หน้าที่บันทึกไว้ยังเปิดได้",
+                "You are offline. Pages saved on this device still open.",
+                "当前离线。已保存在这台设备上的页面仍可打开。",
+              )}
+            </p>
+          )}
           <div className="study-strip micro">
             <span>{progress.xp} XP</span>
             <span>
               {progress.streak}{" "}
               {tr(lang, "วันต่อเนื่อง", "day streak", "天连续学习")}
-            </span>
-            <span>
-              {energyRemaining(progress, now)}/12{" "}
-              {tr(lang, "พลังวันนี้", "daily energy", "今日精力")}
             </span>
           </div>
           {storageError && (
@@ -117,10 +121,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
           )}
           {children}
         </main>
-
       </div>
       <footer>
-        <span>THAILAND · CONSTITUTION 2017</span>
+        <span>
+          {tr(lang, "ประเทศไทย · รัฐธรรมนูญ 2560", "Thailand · Constitution 2017", "泰国 · 2017年宪法")}
+        </span>
         <Link href="/sources/">
           {tr(
             lang,

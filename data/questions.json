@@ -17,26 +17,26 @@
         "zh": "泰国是统一、不可分割的王国"
       },
       {
-        "th": "แบ่งได้ด้วยมติคณะรัฐมนตรี",
-        "en": "The Cabinet may divide it",
-        "zh": "内阁可以决定分割"
+        "th": "แก้รัฐธรรมนูญตามมาตรา 256 แล้วแบ่งได้",
+        "en": "An amendment under the ordinary procedure may divide it",
+        "zh": "按通常修宪程序修改后就可以分割"
       },
       {
-        "th": "แบ่งได้ด้วยมติจังหวัด",
-        "en": "Provinces may divide it",
-        "zh": "各府可以决定分割"
+        "th": "จังหวัดลงมติแยกตัวได้",
+        "en": "A province may secede by its own vote",
+        "zh": "府可以自行表决脱离"
       },
       {
-        "th": "แบ่งได้โดยผู้ว่าราชการจังหวัด",
-        "en": "A governor may divide it",
-        "zh": "府尹可以决定分割"
+        "th": "คณะรัฐมนตรีมีมติแบ่งแยกได้",
+        "en": "The Cabinet may divide the Kingdom by resolution",
+        "zh": "内阁可以决议分割王国"
       }
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 1 กำหนดให้ประเทศไทยเป็นราชอาณาจักรอันหนึ่งอันเดียว จะแบ่งแยกมิได้",
-      "en": "Section 1 establishes Thailand as one indivisible Kingdom.",
-      "zh": "第1条规定泰国为统一、不可分割的王国。"
+      "th": "มาตรา 1 กำหนดให้ประเทศไทยเป็นราชอาณาจักรอันหนึ่งอันเดียว จะแบ่งแยกมิได้ จังหวัด กระทรวง หรือฝูงชน ไม่สามารถแยกประเทศออกเป็นหลายรัฐได้ มาตราแรกปิดข้ออ้างนั้นไว้ก่อนที่กฎหมายฉบับหลังจะเปิดมัน",
+      "en": "Section 1 establishes Thailand as one indivisible Kingdom. A province, a ministry, or a crowd cannot peel the country into several states. The first section closes that argument before a later law can open it.",
+      "zh": "第1条规定泰国为统一、不可分割的王国。 一个府、一个部委或一群人，都不能把国家撕成几个国家。第一条先把这个说法关上，后面的法律开不了它。"
     }
   },
   {
@@ -52,9 +52,9 @@
     },
     "choices": [
       {
-        "th": "องค์กรอิสระเท่านั้น",
-        "en": "Only independent organs",
-        "zh": "仅属于独立机构"
+        "th": "พระมหากษัตริย์แต่เพียงผู้เดียว",
+        "en": "The King alone",
+        "zh": "仅属于国王本人"
       },
       {
         "th": "ปวงชนชาวไทย",
@@ -62,14 +62,14 @@
         "zh": "全体泰国人民"
       },
       {
-        "th": "คณะรัฐมนตรีเท่านั้น",
-        "en": "Only the Cabinet",
-        "zh": "仅属于内阁"
+        "th": "รัฐสภาแต่เพียงผู้เดียว",
+        "en": "The National Assembly alone",
+        "zh": "仅属于国会"
       },
       {
-        "th": "กองทัพเท่านั้น",
-        "en": "Only the armed forces",
-        "zh": "仅属于军队"
+        "th": "คณะรัฐมนตรีแต่เพียงผู้เดียว",
+        "en": "The Council of Ministers alone",
+        "zh": "仅属于内阁"
       }
     ],
     "answer": 1,
@@ -114,9 +114,9 @@
     ],
     "answer": 2,
     "explanation": {
-      "th": "มาตรา 5 ให้รัฐธรรมนูญเป็นกฎหมายสูงสุด บทบัญญัติหรือการกระทำที่ขัดหรือแย้งย่อมใช้บังคับมิได้",
-      "en": "Under section 5, the Constitution is supreme; conflicting provisions or acts are unenforceable.",
-      "zh": "根据第5条，宪法具有最高效力；与之冲突的规定或行为不能施行。"
+      "th": "มาตรา 5 ให้รัฐธรรมนูญเป็นกฎหมายสูงสุด บทบัญญัติหรือการกระทำที่ขัดหรือแย้งย่อมใช้บังคับมิได้ หนังสือเวียนที่ใหม่ว่าไม่ได้อยู่เหนือรัฐธรรมนูญ ถ้าสองฉบับไม่ตรงกัน หน่วยงานต้องทำตามรัฐธรรมนูญ และหนังสือเวียนนั้นใช้บังคับไม่ได้",
+      "en": "Under section 5, the Constitution is supreme; conflicting provisions or acts are unenforceable. A newer circular does not outrank the constitution. If the two disagree, the office follows the constitution and the circular cannot be enforced.",
+      "zh": "根据第5条，宪法具有最高效力；与之冲突的规定或行为不能施行。 更新的内部通知并不能压过宪法。两者不一致时，机关必须按宪法办，那份通知不得执行。"
     }
   },
   {
@@ -137,26 +137,26 @@
         "zh": "人的尊严、权利、自由与平等依据第4条应受保护"
       },
       {
-        "th": "ประเทศไทยสามารถแบ่งแยกเป็นหลายแคว้นอิสระได้",
-        "en": "Thailand may be partitioned into independent regions",
-        "zh": "泰国可以分割为独立的地区"
+        "th": "มาตรา 1 ว่าด้วยอาณาเขต จึงไม่เกี่ยวกับความเสมอภาค",
+        "en": "Section 1 is only about territory, so equality is outside Chapter 1",
+        "zh": "第1条只讲领土，所以平等不在第1章"
       },
       {
-        "th": "ฝ่ายบริหารมีอำนาจเหนือกฎหมายสูงสุด",
-        "en": "The executive branch holds power above the supreme law",
-        "zh": "行政机关拥有高于最高法律的权力"
+        "th": "มาตรา 3 ให้ฝ่ายบริหารจัดลำดับคนตามตำแหน่ง",
+        "en": "Section 3 lets the executive rank people by office",
+        "zh": "第3条允许行政机关按职位给人排序"
       },
       {
-        "th": "การเลือกปฏิบัติกระทำได้เสมอตราบใดที่เป็นประโยชน์ทางการเงินของรัฐ",
-        "en": "Discrimination is always permissible if it benefits state finances",
-        "zh": "只要有利于国家财政，歧视总是被允许的"
+        "th": "ประเพณีการปกครองตามมาตรา 5 ยกเว้นความเสมอภาคได้",
+        "en": "The conventions in section 5 can set equality aside",
+        "zh": "第5条的宪政惯例可以搁置平等"
       }
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 4 กำหนดให้ศักดิ์ศรีความเป็นมนุษย์ สิทธิ เสรีภาพ และความเสมอภาคของบุคคลได้รับความคุ้มครอง และปวงชนชาวไทยย่อมได้รับความคุ้มครองเสมอกัน [สูตรวิเคราะห์: ศักดิ์ศรี + เสมอภาค = รัฐต้องไม่เลือกปฏิบัติ] [เทคนิคช่วยจำ: 4 เสาหลัก = ศักดิ์ศรี สิทธิ เสรีภาพ เสมอภาค]",
-      "en": "Section 4 guarantees that human dignity, rights, liberties and equality shall be protected equally for all Thai people. [Algorithm: Dignity + Equality = Prohibition of arbitrary state discrimination] [Memory Anchor: 4 Pillars of Human Worth].",
-      "zh": "第4条规定人的尊严、权利、自由与平等应受保护，全体泰国人民受宪法平等保护。[算法公式：人的尊严 + 平等保护 = 禁止不公歧视] [记忆口诀：4项核心价值——尊严、权利、自由与平等]。"
+      "th": "มาตรา 4 กำหนดให้ศักดิ์ศรีความเป็นมนุษย์ สิทธิ เสรีภาพ และความเสมอภาคของบุคคลได้รับความคุ้มครอง และปวงชนชาวไทยย่อมได้รับความคุ้มครองเสมอกัน",
+      "en": "Section 4 guarantees that human dignity, rights, liberties and equality shall be protected equally for all Thai people.",
+      "zh": "第4条规定人的尊严、权利、自由与平等应受保护，全体泰国人民受宪法平等保护。。"
     }
   },
   {
@@ -194,9 +194,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 5 บัญญัติว่า เมื่อไม่มีบทบัญญัติแห่งรัฐธรรมนูญนี้บังคับแก่กรณีใด ให้กระทำการนั้นหรือวินิจฉัยกรณีนั้นไปตามประเพณีการปกครองประเทศไทยในระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข [สูตรวิเคราะห์: ม.5 มีสองหลัก คือ รัฐธรรมนูญเป็นกฎหมายสูงสุด สิ่งที่ขัดหรือแย้งใช้บังคับมิได้ และเมื่อไม่มีบทบัญญัติ ให้อุดช่องว่างด้วยประเพณีการปกครอง] [เทคนิคช่วยจำ: ม.5 คุมกฎหมาย ช่องว่างคลายด้วยประเพณี]",
-      "en": "Section 5 provides that where no provision of this Constitution applies, the act or decision follows the constitutional conventions of Thailand under the democratic regime with the King as Head of State. [Algorithm: Section 5 has two rules: the Constitution is supreme and conflicting rules are unenforceable; gaps are filled by constitutional conventions].",
-      "zh": "第5条规定，本宪法没有条款适用时，依以国王为国家元首的民主政体下泰国的宪政惯例行事或裁决。[算法公式：第5条两项原则——宪法至上，冲突规定不能施行；无明文规定时以宪政惯例填补] [记忆口诀：宪法至上，惯例补白]。"
+      "th": "มาตรา 5 บัญญัติว่า เมื่อไม่มีบทบัญญัติแห่งรัฐธรรมนูญนี้บังคับแก่กรณีใด ให้กระทำการนั้นหรือวินิจฉัยกรณีนั้นไปตามประเพณีการปกครองประเทศไทยในระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข",
+      "en": "Section 5 provides that where no provision of this Constitution applies, the act or decision follows the constitutional conventions of Thailand under the democratic regime with the King as Head of State..",
+      "zh": "第5条规定，本宪法没有条款适用时，依以国王为国家元首的民主政体下泰国的宪政惯例行事或裁决。。"
+    },
+    "hook": {
+      "th": "ม.5 คุมกฎหมาย ช่องว่างคลายด้วยประเพณี",
+      "en": "Section 5 has two rules: the Constitution is supreme and conflicting rules are unenforceable; gaps are filled by constitutional conventions",
+      "zh": "宪法至上，惯例补白"
     }
   },
   {
@@ -212,19 +217,19 @@
     },
     "choices": [
       {
-        "th": "ทรงอุปถัมภ์ศาสนาเดียวเท่านั้น",
-        "en": "The King upholds only one religion",
-        "zh": "国王仅保护一种宗教"
+        "th": "พระมหากษัตริย์ทรงเป็นพุทธมามกะ จึงรับรองได้เพียงศาสนาพุทธ",
+        "en": "Because the King is Buddhist, only Buddhism is upheld",
+        "zh": "国王是佛教徒，所以只护持佛教"
       },
       {
-        "th": "ต้องทรงเป็นหัวหน้าพรรคการเมือง",
-        "en": "The King must lead a political party",
-        "zh": "国王必须领导政党"
+        "th": "มาตรา 7 ไม่ได้กล่าวถึงศาสนา",
+        "en": "Section 7 says nothing about religion",
+        "zh": "第7条没有提到宗教"
       },
       {
-        "th": "ต้องทรงเป็นประธานศาลฎีกา",
-        "en": "The King must preside over the Supreme Court",
-        "zh": "国王必须担任最高法院院长"
+        "th": "พระมหากษัตริย์ต้องไม่นับถือศาสนาใด เพื่อทรงเป็นกลาง",
+        "en": "The King must belong to no religion, so as to stay neutral",
+        "zh": "国王不得信仰任何宗教，以保持中立"
       },
       {
         "th": "ทรงเป็นพุทธมามกะและอัครศาสนูปถัมภก",
@@ -234,9 +239,9 @@
     ],
     "answer": 3,
     "explanation": {
-      "th": "มาตรา 7 ระบุทั้งการทรงเป็นพุทธมามกะและการทรงเป็นอัครศาสนูปถัมภก",
-      "en": "Section 7 states that the King is Buddhist and Upholder of religions.",
-      "zh": "第7条同时规定国王信奉佛教，并为各宗教的保护者。"
+      "th": "มาตรา 7 ระบุทั้งการทรงเป็นพุทธมามกะและการทรงเป็นอัครศาสนูปถัมภก พระมหากษัตริย์ทรงเป็นพุทธมามกะ ไม่ได้ทำให้รัฐมีศาสนาเดียว ประโยคเดียวกันบอกว่าทรงเป็นอัครศาสนูปถัมภก ตำแหน่งนี้จึงคุ้มครองมากกว่าหนึ่งศาสนา",
+      "en": "Section 7 states that the King is Buddhist and Upholder of religions. The King being Buddhist does not make the state a one-religion state. The same sentence makes him the upholder of religions, so the office protects more than one faith.",
+      "zh": "第7条同时规定国王信奉佛教，并为各宗教的保护者。 国王是佛教徒，并不使国家只剩一种宗教。同一句还说他护持各宗教，所以这个职位保护的不止一个信仰。"
     }
   },
   {
@@ -274,9 +279,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 10 กำหนดประธานองคมนตรีหนึ่งคน และองคมนตรีอื่นไม่เกินสิบแปดคน รวมไม่เกินสิบเก้าคน",
-      "en": "Section 10 provides for one President and no more than eighteen other Privy Councillors: at most nineteen.",
-      "zh": "第10条规定一名院长及不超过十八名其他枢密顾问，因此最多十九人。"
+      "th": "มาตรา 10 กำหนดประธานองคมนตรีหนึ่งคน และองคมนตรีอื่นไม่เกินสิบแปดคน รวมไม่เกินสิบเก้าคน นับเก้าอี้หัวโต๊ะหนึ่งตัว กับรอบโต๊ะอีกไม่เกินสิบแปด สิบเก้าคือเพดาน ประธานไม่ใช่ที่นั่งที่สิบเก้าที่เพิ่มบนสิบแปด",
+      "en": "Section 10 provides for one President and no more than eighteen other Privy Councillors: at most nineteen. Count the chair at the head and at most eighteen around the table. Nineteen is the ceiling. The President is not a nineteenth seat stacked on top of eighteen.",
+      "zh": "第10条规定一名院长及不超过十八名其他枢密顾问，因此最多十九人。 主位一把椅子，周围最多十八把。十九是上限。院长不是在十八之外再加的第十九个座位。"
+    },
+    "hook": {
+      "th": "โต๊ะกลมตัวหนึ่ง มีเก้าอี้หัวโต๊ะหนึ่งตัว และรอบโต๊ะอีกสิบแปด ถ้านับหัวโต๊ะด้วยได้สิบเก้า",
+      "en": "One round table: a chair at the head, and eighteen around it. Count the head and you have nineteen.",
+      "zh": "一张圆桌：主位一把椅子，周围十八把。把主位算进去，是十九。"
     }
   },
   {
@@ -307,16 +317,16 @@
         "zh": "政党同意即可"
       },
       {
-        "th": "ได้เฉพาะวันหยุด",
-        "en": "Yes, only on holidays",
-        "zh": "仅限假日可以"
+        "th": "ได้ ถ้าไม่รณรงค์หาเสียง",
+        "en": "Yes, if they do not campaign",
+        "zh": "可以，只要不参加竞选活动"
       }
     ],
     "answer": 1,
     "explanation": {
-      "th": "มาตรา 12 ห้ามองคมนตรีเป็นสมาชิกหรือเจ้าหน้าที่ของพรรคการเมือง และห้ามแสดงการฝักใฝ่ในพรรคใด",
-      "en": "Section 12 bars Privy Councillors from party membership or office and from showing allegiance to a party.",
-      "zh": "第12条禁止枢密顾问成为政党成员或工作人员，也禁止表现出对任何政党的偏向。"
+      "th": "มาตรา 12 ห้ามองคมนตรีเป็นสมาชิกหรือเจ้าหน้าที่ของพรรคการเมือง และห้ามแสดงการฝักใฝ่ในพรรคใด องคมนตรีถวายความเห็นต่อพระมหากษัตริย์ บัตรพรรคจะเอาพรรคไปไว้ข้างความเห็นนั้น ข้อห้ามจึงครอบทั้งสมาชิก ตำแหน่งในพรรค และการแสดงความฝักใฝ่",
+      "en": "Section 12 bars Privy Councillors from party membership or office and from showing allegiance to a party. A Privy Councillor advises the King, so a party card would put a party next to that advice. The ban covers membership, party office, and a public show of loyalty.",
+      "zh": "第12条禁止枢密顾问成为政党成员或工作人员，也禁止表现出对任何政党的偏向。 枢密院大臣向国王提供意见，一张党证就会把政党放在那份意见旁边。禁令覆盖党员身份、党内职务，以及公开的倾向。"
     }
   },
   {
@@ -354,9 +364,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 10 บัญญัติว่า พระมหากษัตริย์ทรงเลือกและแต่งตั้งผู้ทรงคุณวุฒิเป็นประธานองคมนตรีคนหนึ่งและองคมนตรีอื่นอีกไม่เกินสิบแปดคน ประกอบเป็นคณะองคมนตรี [สูตรตัวเลข: 1 ประธาน + สูงสุด 18 องคมนตรี = รวมไม่เกิน 19 คน] [เทคนิคช่วยจำ: องคมนตรีรวมไม่เกิน 19 (อย่าสับสนกับ ครม. 36 คน)]",
-      "en": "Section 10 states that the King selects and appoints one President of the Privy Council and not more than eighteen other Privy Councillors. [Formula: 1 President + Max 18 Councillors = Max 19 members].",
-      "zh": "第10条规定国王选任枢密院院长一人及其他枢密院顾问不超过十八人组成枢密院。[计算公式：1位院长 + 最多18位顾问 = 最多19人] [记忆口诀：枢密院上限19人（勿与内阁36人混淆）]。"
+      "th": "มาตรา 10 บัญญัติว่า พระมหากษัตริย์ทรงเลือกและแต่งตั้งผู้ทรงคุณวุฒิเป็นประธานองคมนตรีคนหนึ่งและองคมนตรีอื่นอีกไม่เกินสิบแปดคน ประกอบเป็นคณะองคมนตรี",
+      "en": "Section 10 states that the King selects and appoints one President of the Privy Council and not more than eighteen other Privy Councillors.",
+      "zh": "第10条规定国王选任枢密院院长一人及其他枢密院顾问不超过十八人组成枢密院。。"
+    },
+    "hook": {
+      "th": "สิบแปดที่นั่งรอบโต๊ะ ประธานไม่ได้นั่งอยู่ในสิบแปดนั้น",
+      "en": "Eighteen seats around the table. The President is not one of those eighteen.",
+      "zh": "桌子周围十八个座位。主席不在这十八个里面。"
     }
   },
   {
@@ -394,9 +409,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 16 บัญญัติว่า ในกรณีที่พระมหากษัตริย์ทรงแต่งตั้งผู้สำเร็จราชการแทนพระองค์ ให้ประธานรัฐสภาเป็นผู้ลงนามรับสนองพระบรมราชโองการ [สูตรวิเคราะห์: แต่งตั้งผู้สำเร็จราชการแทนพระองค์ → ประธานรัฐสภาเป็นผู้รับสนองฯ] [เทคนิคช่วยจำ: ผู้สำเร็จราชการ = ประธานรัฐสภารับสนอง]",
-      "en": "Section 16 provides that when the King appoints a Regent, the President of the National Assembly countersigns the Royal Command. [Algorithm: Regent appointment → countersigned by the President of the National Assembly].",
-      "zh": "第16条规定，国王任命摄政时，由国会主席副署王室通令。[算法公式：任命摄政 → 国会主席副署] [记忆口诀：摄政任命，国会主席副署]。"
+      "th": "มาตรา 16 บัญญัติว่า ในกรณีที่พระมหากษัตริย์ทรงแต่งตั้งผู้สำเร็จราชการแทนพระองค์ ให้ประธานรัฐสภาเป็นผู้ลงนามรับสนองพระบรมราชโองการ",
+      "en": "Section 16 provides that when the King appoints a Regent, the President of the National Assembly countersigns the Royal Command..",
+      "zh": "第16条规定，国王任命摄政时，由国会主席副署王室通令。。"
+    },
+    "hook": {
+      "th": "ผู้สำเร็จราชการ = ประธานรัฐสภารับสนอง",
+      "en": "Regent appointment → countersigned by the President of the National Assembly",
+      "zh": "摄政任命，国会主席副署"
     }
   },
   {
@@ -412,14 +432,14 @@
     },
     "choices": [
       {
-        "th": "การสืบราชสันตติวงศ์",
-        "en": "Succession to the throne",
-        "zh": "王位继承"
+        "th": "เลือกปฏิบัติได้ถ้าหน่วยงานให้เหตุผลไว้",
+        "en": "Unequal treatment is allowed if the agency states a reason",
+        "zh": "只要机关说明理由，就可以差别对待"
       },
       {
-        "th": "การตั้งงบประมาณ",
-        "en": "Budget preparation",
-        "zh": "预算编制"
+        "th": "มาตรา 27 ใช้เฉพาะคดีอาญา",
+        "en": "Section 27 applies only in criminal cases",
+        "zh": "第27条只适用于刑事案件"
       },
       {
         "th": "ความเสมอภาคและการไม่เลือกปฏิบัติโดยไม่เป็นธรรม",
@@ -427,16 +447,16 @@
         "zh": "平等及不得不公正歧视"
       },
       {
-        "th": "สิทธิยุบสภา",
-        "en": "The power to dissolve the House",
-        "zh": "解散众议院的权力"
+        "th": "กฎที่บังคับทุกตำแหน่งเหมือนกัน ห้ามผู้หญิงได้",
+        "en": "A rule that binds every post may still exclude women",
+        "zh": "一条适用于所有职位的规则仍可以排除女性"
       }
     ],
     "answer": 2,
     "explanation": {
-      "th": "มาตรา 27 รับรองความเสมอภาคตามกฎหมาย และห้ามการเลือกปฏิบัติโดยไม่เป็นธรรมด้วยเหตุเพศและเหตุอื่นที่ระบุ",
-      "en": "Section 27 guarantees equality before the law and bars unjust discrimination on grounds including sex.",
-      "zh": "第27条保障法律面前的平等，禁止因性别等列明原因而不公正歧视。"
+      "th": "มาตรา 27 รับรองความเสมอภาคตามกฎหมาย และห้ามการเลือกปฏิบัติโดยไม่เป็นธรรมด้วยเหตุเพศและเหตุอื่นที่ระบุ การปฏิเสธบริการเพราะผู้ขอเป็นผู้หญิง คือเรื่องที่มาตรานี้เขียนไว้ กฎที่ใช้กับทุกตำแหน่งเหมือนกัน ก็ยังห้ามกันผู้หญิงออกไป",
+      "en": "Section 27 guarantees equality before the law and bars unjust discrimination on grounds including sex. Refusing a service because the applicant is a woman is the case this section is written for. A rule that binds every post still cannot shut women out.",
+      "zh": "第27条保障法律面前的平等，禁止因性别等列明原因而不公正歧视。 因为申请人是女性就拒绝服务，正是这一条要管的事。一条对所有职位都一样的规则，仍然不能把女性排除在外。"
     }
   },
   {
@@ -452,19 +472,19 @@
     },
     "choices": [
       {
-        "th": "สิทธิแต่งตั้งรัฐมนตรี",
-        "en": "The right to appoint ministers",
-        "zh": "任命部长的权利"
+        "th": "วิจารณ์นโยบายได้เฉพาะข้าราชการ",
+        "en": "Only civil servants may criticise policy",
+        "zh": "只有公务员可以批评政策"
       },
       {
-        "th": "สิทธิออกพระราชกำหนด",
-        "en": "The right to issue emergency decrees",
-        "zh": "颁布紧急法令的权利"
+        "th": "ได้รับความคุ้มครองเฉพาะเมื่อลงหนังสือพิมพ์",
+        "en": "It is protected only when printed in a newspaper",
+        "zh": "只有印在报纸上才受保护"
       },
       {
-        "th": "สิทธิยุบพรรคด้วยตนเอง",
-        "en": "The right to dissolve a party personally",
-        "zh": "自行解散政党的权利"
+        "th": "ได้รับความคุ้มครองเฉพาะช่วงเลือกตั้ง",
+        "en": "It is protected only during an election",
+        "zh": "只有选举期间才受保护"
       },
       {
         "th": "เสรีภาพในการแสดงความคิดเห็น",
@@ -474,9 +494,9 @@
     ],
     "answer": 3,
     "explanation": {
-      "th": "มาตรา 34 รับรองเสรีภาพในการแสดงความคิดเห็น การจำกัดต้องอาศัยกฎหมายเพื่อวัตถุประสงค์ที่มาตรานี้กำหนด",
-      "en": "Section 34 protects expression; restrictions must be imposed by law for the purposes specified in that section.",
-      "zh": "第34条保障表达自由；限制必须依据法律，并服务于该条规定的目的。"
+      "th": "มาตรา 34 รับรองเสรีภาพในการแสดงความคิดเห็น การจำกัดต้องอาศัยกฎหมายเพื่อวัตถุประสงค์ที่มาตรานี้กำหนด วิจารณ์นโยบายในวงสนทนา ในโพสต์ หรือในที่ประชุม คือเสรีภาพนี้ ข้อจำกัดต้องมาจากกฎหมาย เพื่อวัตถุประสงค์ที่มาตรากำหนด ไม่ใช่จากความชอบของหน่วยงาน",
+      "en": "Section 34 protects expression; restrictions must be imposed by law for the purposes specified in that section. Criticising a policy in a conversation, a post, or a meeting is this freedom. A limit has to come from a statute, for a purpose the section names, not from an office's preference.",
+      "zh": "第34条保障表达自由；限制必须依据法律，并服务于该条规定的目的。 在谈话、帖子或会上批评一项政策，就是这项自由。限制必须来自法律，并且是本条写明的目的，而不是机关的喜好。"
     }
   },
   {
@@ -497,26 +517,26 @@
         "zh": "集会自由"
       },
       {
-        "th": "สิทธิแต่งตั้งผู้ว่าราชการ",
-        "en": "The right to appoint governors",
-        "zh": "任命府尹的权利"
+        "th": "ชุมนุมได้เฉพาะในบ้านส่วนตัว",
+        "en": "Assembly is protected only inside a private home",
+        "zh": "集会只在私人住宅内受保护"
       },
       {
-        "th": "สิทธิยกเลิกภาษี",
-        "en": "The right to abolish taxes",
-        "zh": "废除税收的权利"
+        "th": "ต้องได้รับอนุญาตจากตำรวจทุกครั้งก่อนชุมนุม",
+        "en": "A police permit is required before any gathering",
+        "zh": "任何集会之前都必须得到警察许可"
       },
       {
-        "th": "สิทธิเลือกตุลาการโดยตรง",
-        "en": "The right to elect judges directly",
-        "zh": "直接选举法官的权利"
+        "th": "คุ้มครองเฉพาะพรรคการเมืองที่จดทะเบียน",
+        "en": "It protects only a registered political party",
+        "zh": "只保护已登记的政党"
       }
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 44 รับรองเสรีภาพในการชุมนุมโดยสงบและปราศจากอาวุธ โดยมีเงื่อนไขการจำกัดตามที่บัญญัติไว้",
-      "en": "Section 44 protects peaceful, unarmed assembly, subject to its specified conditions for restrictions.",
-      "zh": "第44条保障和平、无武器集会自由，限制须符合该条规定的条件。"
+      "th": "มาตรา 44 รับรองเสรีภาพในการชุมนุมโดยสงบและปราศจากอาวุธ โดยมีเงื่อนไขการจำกัดตามที่บัญญัติไว้ ฝูงชนที่สงบและไม่มีอาวุธอยู่ในเสรีภาพนี้แล้ว การขออนุญาตตำรวจทุกครั้งคือข้อจำกัด และข้อจำกัดต้องมีกฎหมายที่มาตรานี้ต้องการ",
+      "en": "Section 44 protects peaceful, unarmed assembly, subject to its specified conditions for restrictions. A peaceful crowd without weapons is already inside this freedom. A police permit for every gathering is a limit, and a limit needs the statute this section requires.",
+      "zh": "第44条保障和平、无武器集会自由，限制须符合该条规定的条件。 和平且不带武器的人群，已经在这项自由里面。每次都要警察许可，就是限制；限制必须有本条要求的法律。"
     }
   },
   {
@@ -554,9 +574,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 26 กำหนดว่ากฎหมายที่จำกัดสิทธิหรือเสรีภาพต้องเป็นไปตามเงื่อนไขที่รัฐธรรมนูญบัญญัติ หากรัฐธรรมนูญมิได้บัญญัติเงื่อนไขไว้ ต้องไม่ขัดต่อหลักนิติธรรม ไม่เพิ่มภาระหรือจำกัดสิทธิหรือเสรีภาพเกินสมควรแก่เหตุ กระทบต่อศักดิ์ศรีความเป็นมนุษย์มิได้ ต้องระบุเหตุผลความจำเป็นในการจำกัดสิทธิ และต้องมีผลใช้บังคับเป็นการทั่วไป ไม่มุ่งหมายให้ใช้บังคับแก่กรณีใดกรณีหนึ่งหรือบุคคลใดบุคคลหนึ่งเป็นการเจาะจง [สูตรวิเคราะห์: ด่าน ม.26 = ตามเงื่อนไขรัฐธรรมนูญ + นิติธรรม + ไม่เกินสมควรแก่เหตุ + ไม่กระทบศักดิ์ศรี + ระบุเหตุผล + ใช้เป็นการทั่วไป]",
-      "en": "Section 26 requires a rights-restricting law to follow the conditions set in the Constitution; where none are set, it must not violate the rule of law, must not burden or restrict rights beyond what is reasonable, must not affect human dignity, must state the reasons for the restriction, and must apply generally, not to a specific case or person. [Algorithm: Sec 26 gates = constitutional conditions + rule of law + reasonableness + dignity + stated reasons + general application].",
-      "zh": "第26条要求限制权利或自由的法律须符合宪法规定的条件；宪法未规定条件时，不得违反法治原则，不得超出合理限度增加负担或限制权利，不得损害人的尊严，须说明限制的理由与必要性，并须普遍适用，不得专门针对特定个案或个人。[算法公式：第26条关卡 = 宪法条件 + 法治 + 合理限度 + 尊严 + 说明理由 + 普遍适用]。"
+      "th": "มาตรา 26 กำหนดว่ากฎหมายที่จำกัดสิทธิหรือเสรีภาพต้องเป็นไปตามเงื่อนไขที่รัฐธรรมนูญบัญญัติ หากรัฐธรรมนูญมิได้บัญญัติเงื่อนไขไว้ ต้องไม่ขัดต่อหลักนิติธรรม ไม่เพิ่มภาระหรือจำกัดสิทธิหรือเสรีภาพเกินสมควรแก่เหตุ กระทบต่อศักดิ์ศรีความเป็นมนุษย์มิได้ ต้องระบุเหตุผลความจำเป็นในการจำกัดสิทธิ และต้องมีผลใช้บังคับเป็นการทั่วไป ไม่มุ่งหมายให้ใช้บังคับแก่กรณีใดกรณีหนึ่งหรือบุคคลใดบุคคลหนึ่งเป็นการเจาะจง",
+      "en": "Section 26 requires a rights-restricting law to follow the conditions set in the Constitution; where none are set, it must not violate the rule of law, must not burden or restrict rights beyond what is reasonable, must not affect human dignity, must state the reasons for the restriction, and must apply generally, not to a specific case or person..",
+      "zh": "第26条要求限制权利或自由的法律须符合宪法规定的条件；宪法未规定条件时，不得违反法治原则，不得超出合理限度增加负担或限制权利，不得损害人的尊严，须说明限制的理由与必要性，并须普遍适用，不得专门针对特定个案或个人。。"
+    },
+    "hook": {
+      "th": "ด่าน ม.26 = ตามเงื่อนไขรัฐธรรมนูญ + นิติธรรม + ไม่เกินสมควรแก่เหตุ + ไม่กระทบศักดิ์ศรี + ระบุเหตุผล + ใช้เป็นการทั่วไป",
+      "en": "Sec 26 gates = constitutional conditions + rule of law + reasonableness + dignity + stated reasons + general application",
+      "zh": "第26条关卡 = 宪法条件 + 法治 + 合理限度 + 尊严 + 说明理由 + 普遍适用"
     }
   },
   {
@@ -594,9 +619,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 29 ให้สันนิษฐานไว้ก่อนว่าผู้ต้องหาหรือจำเลยไม่มีความผิด และก่อนมีคำพิพากษาอันถึงที่สุดแสดงว่ากระทำความผิด จะปฏิบัติต่อบุคคลนั้นเสมือนเป็นผู้กระทำความผิดมิได้ มาตราเดียวกันยังกำหนดว่าการควบคุมหรือคุมขังทำได้เพียงเท่าที่จำเป็นเพื่อป้องกันการหลบหนี และคำขอประกันต้องได้รับการพิจารณาโดยไม่เรียกหลักประกันเกินควร [สูตรวิเคราะห์: ม.29 = บริสุทธิ์ไว้ก่อนจนคดีถึงที่สุด + ขังเท่าที่จำเป็น + พิจารณาคำขอประกันโดยไม่เรียกหลักประกันเกินควร]",
-      "en": "Section 29 presumes a suspect or defendant innocent; until a final judgment finds guilt, the person may not be treated as an offender. The same section limits detention to what is necessary to prevent escape and requires bail requests to be considered without excessive security. [Algorithm: presumption of innocence + detention only as necessary + bail considered without excessive security].",
-      "zh": "第29条推定嫌疑人或被告人无罪；在终审判决认定有罪之前，不得将其视同罪犯对待。同条还规定羁押仅限于防止逃跑所必需，保释申请须予审查且不得要求过高担保。[算法公式：第29条 = 无罪推定 + 必要限度羁押 + 审查保释且不得要求过高担保]。"
+      "th": "มาตรา 29 ให้สันนิษฐานไว้ก่อนว่าผู้ต้องหาหรือจำเลยไม่มีความผิด และก่อนมีคำพิพากษาอันถึงที่สุดแสดงว่ากระทำความผิด จะปฏิบัติต่อบุคคลนั้นเสมือนเป็นผู้กระทำความผิดมิได้ มาตราเดียวกันยังกำหนดว่าการควบคุมหรือคุมขังทำได้เพียงเท่าที่จำเป็นเพื่อป้องกันการหลบหนี และคำขอประกันต้องได้รับการพิจารณาโดยไม่เรียกหลักประกันเกินควร",
+      "en": "Section 29 presumes a suspect or defendant innocent; until a final judgment finds guilt, the person may not be treated as an offender. The same section limits detention to what is necessary to prevent escape and requires bail requests to be considered without excessive security..",
+      "zh": "第29条推定嫌疑人或被告人无罪；在终审判决认定有罪之前，不得将其视同罪犯对待。同条还规定羁押仅限于防止逃跑所必需，保释申请须予审查且不得要求过高担保。。"
+    },
+    "hook": {
+      "th": "ม.29 = บริสุทธิ์ไว้ก่อนจนคดีถึงที่สุด + ขังเท่าที่จำเป็น + พิจารณาคำขอประกันโดยไม่เรียกหลักประกันเกินควร",
+      "en": "presumption of innocence + detention only as necessary + bail considered without excessive security",
+      "zh": "第29条 = 无罪推定 + 必要限度羁押 + 审查保释且不得要求过高担保"
     }
   },
   {
@@ -612,9 +642,9 @@
     },
     "choices": [
       {
-        "th": "ละเลยกฎหมายเลือกตั้ง",
-        "en": "Ignore election laws",
-        "zh": "无视选举法律"
+        "th": "การไปเลือกตั้งเป็นสิทธิ จึงไม่ไปก็ไม่ผิดหน้าที่",
+        "en": "Voting is only a right, so staying home breaks no duty",
+        "zh": "投票只是权利，所以不去并不违反义务"
       },
       {
         "th": "ไปใช้สิทธิเลือกตั้งโดยคำนึงถึงประโยชน์ส่วนรวม",
@@ -622,9 +652,9 @@
         "zh": "投票时考虑共同利益"
       },
       {
-        "th": "ขายเสียงถ้าไม่มีใครเห็น",
-        "en": "Sell a vote if nobody sees",
-        "zh": "无人看见时出售选票"
+        "th": "ให้หัวคะแนนในพื้นที่ตัดสินให้ก็ได้ ถ้ารักษาความลับบัตร",
+        "en": "A local canvasser may decide the vote, if the ballot stays secret",
+        "zh": "只要选票保密，可以让地方拉票人代为决定"
       },
       {
         "th": "เลือกแทนคนอื่น",
@@ -652,14 +682,14 @@
     },
     "choices": [
       {
-        "th": "ให้ของตอบแทนเพื่อข้ามขั้นตอน",
-        "en": "Pay to bypass procedures",
-        "zh": "付钱绕过程序"
+        "th": "หน้าที่แจ้งการทุจริตมีเฉพาะเจ้าหน้าที่ของรัฐ",
+        "en": "Only a state official has a duty to report corruption",
+        "zh": "只有国家官员有义务举报腐败"
       },
       {
-        "th": "ปกปิดทุจริตทุกกรณี",
-        "en": "Conceal corruption in every case",
-        "zh": "在所有情况下隐瞒腐败"
+        "th": "เป็นคำแนะนำทางศีลธรรม ไม่ใช่หน้าที่ตามรัฐธรรมนูญ",
+        "en": "It is moral advice, not a constitutional duty",
+        "zh": "这是道德劝告，不是宪法义务"
       },
       {
         "th": "ไม่ร่วมมือหรือสนับสนุนการทุจริต",
@@ -674,9 +704,9 @@
     ],
     "answer": 2,
     "explanation": {
-      "th": "มาตรา 50 (10) กำหนดหน้าที่ไม่ร่วมมือหรือสนับสนุนการทุจริตและประพฤติมิชอบทุกรูปแบบ",
-      "en": "Section 50(10) requires citizens not to cooperate with or support any form of corruption or misconduct.",
-      "zh": "第50条第10项规定，不得参与或支持任何形式的腐败或不当行为。"
+      "th": "มาตรา 50 (10) กำหนดหน้าที่ไม่ร่วมมือหรือสนับสนุนการทุจริตและประพฤติมิชอบทุกรูปแบบ การเมินเมื่อคนข้างบ้านจ่ายสินบน คือการร่วมมือที่หน้าที่นี้ห้าม หน้าที่อยู่ที่ตัวคน ไม่ได้อยู่เฉพาะที่เจ้าหน้าที่ผู้รับเงิน",
+      "en": "Section 50(10) requires citizens not to cooperate with or support any form of corruption or misconduct. Looking away while a neighbour pays a bribe is the cooperation this duty forbids. The duty sits on the person, not only on the official who takes the money.",
+      "zh": "第50条第10项规定，不得参与或支持任何形式的腐败或不当行为。 邻居行贿时装作没看见，就是这项义务禁止的配合。义务在每个人身上，不只在收钱的官员身上。"
     }
   },
   {
@@ -697,14 +727,14 @@
         "zh": "在所有情况下都是自愿"
       },
       {
-        "th": "เป็นหน้าที่เฉพาะรัฐมนตรี",
-        "en": "Only ministers have that duty",
-        "zh": "仅部长负有此义务"
+        "th": "รัฐธรรมนูญไม่ได้กล่าวถึงภาษี กฎหมายภาษีเท่านั้นที่กำหนด",
+        "en": "The constitution is silent; only a tax statute can create the duty",
+        "zh": "宪法没有规定，只有税法才能设定这项义务"
       },
       {
-        "th": "ไม่เกี่ยวกับรัฐธรรมนูญ",
-        "en": "The Constitution does not address it",
-        "zh": "宪法没有涉及"
+        "th": "เฉพาะผู้มีรายได้เกินเกณฑ์ที่รัฐธรรมนูญกำหนด",
+        "en": "Only people above an income figure written in the constitution",
+        "zh": "只有收入超过宪法写明数额的人才有义务"
       },
       {
         "th": "เป็นหน้าที่ตามที่กฎหมายบัญญัติ",
@@ -714,9 +744,9 @@
     ],
     "answer": 3,
     "explanation": {
-      "th": "มาตรา 50 (9) กำหนดหน้าที่เสียภาษีอากรตามที่กฎหมายบัญญัติ",
-      "en": "Section 50(9) establishes the duty to pay taxes as prescribed by law.",
-      "zh": "第50条第9项规定依法纳税的义务。"
+      "th": "มาตรา 50 (9) กำหนดหน้าที่เสียภาษีอากรตามที่กฎหมายบัญญัติ รัฐธรรมนูญสร้างหน้าที่ กฎหมายภาษีกำหนดจำนวน การไม่ยื่นแบบไม่ใช่ทางเลือกส่วนตัวที่รัฐธรรมนูญเปิดไว้",
+      "en": "Section 50(9) establishes the duty to pay taxes as prescribed by law. The constitution creates the duty. The tax statute sets the amount. Skipping the return is not a private choice the constitution left open.",
+      "zh": "第50条第9项规定依法纳税的义务。 宪法设定这项义务，税法规定数额。不申报不是宪法留下的私人选择。"
     }
   },
   {
@@ -754,9 +784,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 50 (5) กำหนดให้บุคคลมีหน้าที่รับราชการทหารตามที่กฎหมายบัญญัติ [สูตรวิเคราะห์: มาตรา 50 มีหน้าที่ 10 ประการ: (1) พิทักษ์ชาติ ศาสนา พระมหากษัตริย์ และการปกครองระบอบประชาธิปไตยฯ (2) ป้องกันประเทศ (3) ปฏิบัติตามกฎหมาย (4) การศึกษาภาคบังคับ (5) รับราชการทหาร (6) เคารพสิทธิผู้อื่นและไม่ก่อความแตกแยก (7) ไปเลือกตั้งหรือลงประชามติ (8) อนุรักษ์สิ่งแวดล้อมและมรดกทางวัฒนธรรม (9) เสียภาษี (10) ไม่สนับสนุนการทุจริต]",
-      "en": "Section 50(5) sets the duty to perform military service as provided by law. [Algorithm: Sec 50 lists 10 duties; military service is item 5].",
-      "zh": "第50条第5项规定公民依法服兵役的宪法义务。[算法公式：第50条列明10项公民基本义务，服兵役为第5项]。"
+      "th": "มาตรา 50 (5) กำหนดให้บุคคลมีหน้าที่รับราชการทหารตามที่กฎหมายบัญญัติ",
+      "en": "Section 50(5) sets the duty to perform military service as provided by law..",
+      "zh": "第50条第5项规定公民依法服兵役的宪法义务。。"
+    },
+    "hook": {
+      "th": "มาตรา 50 มีหน้าที่ 10 ประการ: (1) พิทักษ์ชาติ ศาสนา พระมหากษัตริย์ และการปกครองระบอบประชาธิปไตยฯ (2) ป้องกันประเทศ (3) ปฏิบัติตามกฎหมาย (4) การศึกษาภาคบังคับ (5) รับราชการทหาร (6) เคารพสิทธิผู้อื่นและไม่ก่อความแตกแยก (7) ไปเลือกตั้งหรือลงประชามติ (8) อนุรักษ์สิ่งแวดล้อมและมรดกทางวัฒนธรรม (9) เสียภาษี (10) ไม่สนับสนุนการทุจริต",
+      "en": "Sec 50 lists 10 duties; military service is item 5",
+      "zh": "第50条列明10项公民基本义务，服兵役为第5项"
     }
   },
   {
@@ -794,9 +829,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 50 (8) กำหนดให้บุคคลมีหน้าที่ร่วมมือและสนับสนุนการอนุรักษ์และคุ้มครองสิ่งแวดล้อม ทรัพยากรธรรมชาติ ความหลากหลายทางชีวภาพ รวมทั้งมรดกทางวัฒนธรรม [สูตรวิเคราะห์: ป่า + โบราณสถาน → หน้าที่ด้านสิ่งแวดล้อมและมรดกทางวัฒนธรรม]",
-      "en": "Section 50(8) makes it a duty to cooperate in and support the conservation and protection of the environment, natural resources, biodiversity and cultural heritage. [Algorithm: forest + historic site → environment and cultural-heritage duty].",
-      "zh": "第50条第8项规定，人人有义务配合并支持保护环境、自然资源、生物多样性以及文化遗产。[算法公式：森林 + 古迹 → 环境与文化遗产义务]。"
+      "th": "มาตรา 50 (8) กำหนดให้บุคคลมีหน้าที่ร่วมมือและสนับสนุนการอนุรักษ์และคุ้มครองสิ่งแวดล้อม ทรัพยากรธรรมชาติ ความหลากหลายทางชีวภาพ รวมทั้งมรดกทางวัฒนธรรม",
+      "en": "Section 50(8) makes it a duty to cooperate in and support the conservation and protection of the environment, natural resources, biodiversity and cultural heritage..",
+      "zh": "第50条第8项规定，人人有义务配合并支持保护环境、自然资源、生物多样性以及文化遗产。。"
+    },
+    "hook": {
+      "th": "ป่า + โบราณสถาน → หน้าที่ด้านสิ่งแวดล้อมและมรดกทางวัฒนธรรม",
+      "en": "forest + historic site → environment and cultural-heritage duty",
+      "zh": "森林 + 古迹 → 环境与文化遗产义务"
     }
   },
   {
@@ -822,14 +862,14 @@
         "zh": "9年，从中学开始"
       },
       {
-        "th": "เฉพาะมหาวิทยาลัย",
-        "en": "Only university education",
-        "zh": "仅大学教育"
+        "th": "สิบห้าปี จนจบมัธยมศึกษาตอนปลาย",
+        "en": "Fifteen years, through upper secondary school",
+        "zh": "十五年，直到高中毕业"
       },
       {
-        "th": "ตลอดชีวิตโดยไม่มีเงื่อนไข",
-        "en": "Lifelong, without conditions",
-        "zh": "无条件终身免费"
+        "th": "สิบสองปี แต่รัฐเรียกเก็บค่าใช้จ่ายชั้นก่อนวัยเรียนได้",
+        "en": "Twelve years, but the state may charge for pre-school",
+        "zh": "十二年，但学前阶段国家可以收费"
       }
     ],
     "answer": 0,
@@ -837,6 +877,11 @@
       "th": "มาตรา 54 กำหนดให้เด็กทุกคนได้รับการศึกษา 12 ปี ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับอย่างมีคุณภาพโดยไม่เก็บค่าใช้จ่าย",
       "en": "Section 54 requires twelve years of quality, free education for every child, from preschool through compulsory education.",
       "zh": "第54条要求每个儿童从学前至义务教育结束，享有十二年有质量的免费教育。"
+    },
+    "hook": {
+      "th": "บันไดสิบสองขั้น จากประตูชั้นอนุบาลถึงห้องสุดท้ายของการศึกษาภาคบังคับ ไม่มีช่องขายตั๋ว",
+      "en": "Twelve steps from the preschool gate to the last compulsory classroom. No ticket window.",
+      "zh": "十二级台阶，从学前门口到义务教育的最后一间教室。没有售票口。"
     }
   },
   {
@@ -852,9 +897,9 @@
     },
     "choices": [
       {
-        "th": "ปิดข้อมูลผลกระทบเสมอ",
-        "en": "Always conceal impact information",
-        "zh": "始终隐瞒影响信息"
+        "th": "รับฟังชุมชนได้หลังจากเริ่มก่อสร้างแล้ว",
+        "en": "The community may be heard after construction has started",
+        "zh": "可以在开工之后再听取社区意见"
       },
       {
         "th": "ศึกษาและประเมินผลกระทบ พร้อมรับฟังผู้เกี่ยวข้อง",
@@ -867,9 +912,9 @@
         "zh": "无需听取意见，立即开展"
       },
       {
-        "th": "ให้ผู้รับเหมาตัดสินทั้งหมด",
-        "en": "Let the contractor decide everything",
-        "zh": "全部交由承包商决定"
+        "th": "ต้องประเมินผลกระทบเฉพาะโครงการที่ใช้เงินต่างประเทศ",
+        "en": "An impact study is required only for projects using foreign funds",
+        "zh": "只有使用外国资金的项目才必须做影响评估"
       }
     ],
     "answer": 1,
@@ -892,14 +937,14 @@
     },
     "choices": [
       {
-        "th": "ลดช่องทางแจ้งเบาะแสทั้งหมด",
-        "en": "Remove all reporting channels",
-        "zh": "取消全部举报渠道"
+        "th": "สอบสวนได้เมื่อศาลพิพากษาแล้วเท่านั้น",
+        "en": "Investigate only after a court has convicted someone",
+        "zh": "只有法院定罪之后才能调查"
       },
       {
-        "th": "อนุญาตทุจริตเล็กน้อยเสมอ",
-        "en": "Always permit minor corruption",
-        "zh": "始终允许轻微腐败"
+        "th": "ปล่อยให้ ป.ป.ช. จัดการ รัฐไม่มีหน้าที่ให้ความรู้ประชาชน",
+        "en": "Leave it to the NACC; the state has no duty to educate the public",
+        "zh": "交给反贪委员会即可，国家没有教育公众的义务"
       },
       {
         "th": "ให้ความรู้และสนับสนุนประชาชนมีส่วนร่วมป้องกันทุจริต",
@@ -907,9 +952,9 @@
         "zh": "开展教育并支持公众参与预防腐败"
       },
       {
-        "th": "ถือว่าทุจริตเป็นเรื่องส่วนตัว",
-        "en": "Treat corruption as a private matter",
-        "zh": "把腐败视为私人事务"
+        "th": "ลงโทษเจ้าหน้าที่ก็พอ การมีส่วนร่วมของประชาชนไม่ใช่หน้าที่",
+        "en": "Disciplining officials is enough; public participation is not part of the duty",
+        "zh": "处分官员就够了，公众参与不属于这项义务"
       }
     ],
     "answer": 2,
@@ -954,9 +999,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 54 บัญญัติว่า รัฐต้องดำเนินการให้เด็กทุกคนได้รับการศึกษาเป็นเวลาสิบสองปี ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับอย่างมีคุณภาพโดยไม่เก็บค่าใช้จ่าย [สูตรตัวเลข: 12 ปีฟรี = ก่อนวัยเรียน + การศึกษาภาคบังคับ] [เทคนิคช่วยจำ: ม.54 = เรียนฟรี 12 ปี]",
-      "en": "Section 54 obligates the State to provide twelve years of quality education without charge, from pre-school to compulsory education. [Formula: 12 years free education guaranteed by Constitution].",
-      "zh": "第54条规定，国家必须确保每个儿童自学前教育至完成义务教育，接受为期十二年的免费优质教育。[计算公式：12年免费教育 = 学前 + 义务教育] [记忆口诀：第54条 = 12年免费教育]。"
+      "th": "มาตรา 54 บัญญัติว่า รัฐต้องดำเนินการให้เด็กทุกคนได้รับการศึกษาเป็นเวลาสิบสองปี ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับอย่างมีคุณภาพโดยไม่เก็บค่าใช้จ่าย",
+      "en": "Section 54 obligates the State to provide twelve years of quality education without charge, from pre-school to compulsory education..",
+      "zh": "第54条规定，国家必须确保每个儿童自学前教育至完成义务教育，接受为期十二年的免费优质教育。。"
+    },
+    "hook": {
+      "th": "บันไดสิบสองขั้น จากประตูชั้นอนุบาลถึงห้องสุดท้ายของการศึกษาภาคบังคับ ไม่มีช่องขายตั๋ว",
+      "en": "Twelve steps from the preschool gate to the last compulsory classroom. No ticket window.",
+      "zh": "十二级台阶，从学前门口到义务教育的最后一间教室。没有售票口。"
     }
   },
   {
@@ -994,9 +1044,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 55 บัญญัติว่า รัฐต้องดำเนินการให้ประชาชนได้รับบริการสาธารณสุขที่มีประสิทธิภาพอย่างทั่วถึง เสริมสร้างให้ประชาชนมีความรู้พื้นฐานเกี่ยวกับการส่งเสริมสุขภาพและการป้องกันโรค และส่งเสริมการพัฒนาภูมิปัญญาด้านแพทย์แผนไทย บริการดังกล่าวต้องครอบคลุมการส่งเสริมสุขภาพ การควบคุมและป้องกันโรค การรักษาพยาบาล และการฟื้นฟูสุขภาพ และรัฐต้องพัฒนาให้มีคุณภาพและมาตรฐานสูงขึ้นอย่างต่อเนื่อง [สูตรวิเคราะห์: ม.55 = สาธารณสุขทั่วถึง + ความรู้ป้องกันโรค + แพทย์แผนไทย + พัฒนามาตรฐานต่อเนื่อง]",
-      "en": "Section 55 requires the State to provide efficient public health services thoroughly, build basic public knowledge of health promotion and disease prevention, and promote Thai traditional medicine. These services must cover health promotion, disease control and prevention, treatment and rehabilitation, and their quality and standards must be raised continuously. [Algorithm: universal access + prevention knowledge + Thai traditional medicine + continuous improvement].",
-      "zh": "第55条要求国家使人民普遍获得高效的公共卫生服务，增进人民在健康促进与疾病预防方面的基本知识，并促进泰医传统智慧的发展。这些服务须涵盖健康促进、疾病控制与预防、医疗及康复，并须持续提高质量与标准。[算法公式：普遍覆盖 + 预防知识 + 泰医传统 + 持续提升标准]。"
+      "th": "มาตรา 55 บัญญัติว่า รัฐต้องดำเนินการให้ประชาชนได้รับบริการสาธารณสุขที่มีประสิทธิภาพอย่างทั่วถึง เสริมสร้างให้ประชาชนมีความรู้พื้นฐานเกี่ยวกับการส่งเสริมสุขภาพและการป้องกันโรค และส่งเสริมการพัฒนาภูมิปัญญาด้านแพทย์แผนไทย บริการดังกล่าวต้องครอบคลุมการส่งเสริมสุขภาพ การควบคุมและป้องกันโรค การรักษาพยาบาล และการฟื้นฟูสุขภาพ และรัฐต้องพัฒนาให้มีคุณภาพและมาตรฐานสูงขึ้นอย่างต่อเนื่อง",
+      "en": "Section 55 requires the State to provide efficient public health services thoroughly, build basic public knowledge of health promotion and disease prevention, and promote Thai traditional medicine. These services must cover health promotion, disease control and prevention, treatment and rehabilitation, and their quality and standards must be raised continuously..",
+      "zh": "第55条要求国家使人民普遍获得高效的公共卫生服务，增进人民在健康促进与疾病预防方面的基本知识，并促进泰医传统智慧的发展。这些服务须涵盖健康促进、疾病控制与预防、医疗及康复，并须持续提高质量与标准。。"
+    },
+    "hook": {
+      "th": "ม.55 = สาธารณสุขทั่วถึง + ความรู้ป้องกันโรค + แพทย์แผนไทย + พัฒนามาตรฐานต่อเนื่อง",
+      "en": "universal access + prevention knowledge + Thai traditional medicine + continuous improvement",
+      "zh": "普遍覆盖 + 预防知识 + 泰医传统 + 持续提升标准"
     }
   },
   {
@@ -1012,19 +1067,19 @@
     },
     "choices": [
       {
-        "th": "ใช้แทนรัฐธรรมนูญทั้งหมด",
-        "en": "To replace the whole Constitution",
-        "zh": "取代整部宪法"
+        "th": "เพื่อให้คณะรัฐมนตรีบริหารโดยไม่ต้องมีแผนที่เปิดเผย",
+        "en": "So the Cabinet can govern without a published plan",
+        "zh": "以便内阁可以在没有公开计划的情况下施政"
       },
       {
-        "th": "ใช้แทนคำพิพากษา",
-        "en": "To replace court judgments",
-        "zh": "取代法院判决"
+        "th": "เพื่อผูกศาลเวลาตีความกฎหมาย",
+        "en": "To bind the courts when they interpret statutes",
+        "zh": "以便在法院解释法律时约束法院"
       },
       {
-        "th": "ยกเลิกการมีส่วนร่วม",
-        "en": "To end participation",
-        "zh": "终止公众参与"
+        "th": "เพื่อแทนที่พระราชบัญญัติในเรื่องเดียวกัน",
+        "en": "To replace ordinary statutes on the same subject",
+        "zh": "以便取代同一事项上的普通法律"
       },
       {
         "th": "เป็นเป้าหมายการพัฒนาประเทศอย่างยั่งยืน",
@@ -1034,9 +1089,9 @@
     ],
     "answer": 3,
     "explanation": {
-      "th": "มาตรา 65 ให้รัฐพึงจัดยุทธศาสตร์ชาติเป็นเป้าหมายการพัฒนาประเทศอย่างยั่งยืนตามหลักธรรมาภิบาล",
-      "en": "Section 65 calls for a national strategy to guide sustainable development in accordance with good governance.",
-      "zh": "第65条要求国家制定国家战略，依良好治理原则实现可持续发展。"
+      "th": "มาตรา 65 ให้รัฐพึงจัดยุทธศาสตร์ชาติเป็นเป้าหมายการพัฒนาประเทศอย่างยั่งยืนตามหลักธรรมาภิบาล ถ้าไม่มียุทธศาสตร์ที่เปิดเผย แต่ละกระทรวงเล็งคนละทศวรรษได้ ยุทธศาสตร์คือเป้าที่แผนฉบับหลังต้องเรียงให้ตรง",
+      "en": "Section 65 calls for a national strategy to guide sustainable development in accordance with good governance. Without a published strategy, each ministry can aim at a different decade. The strategy is the shared target later plans have to line up with.",
+      "zh": "第65条要求国家制定国家战略，依良好治理原则实现可持续发展。 没有一份公开的战略，每个部都可以瞄准不同的十年。战略是后来的计划必须对齐的同一个目标。"
     }
   },
   {
@@ -1057,14 +1112,14 @@
         "zh": "听取意见并分析影响"
       },
       {
-        "th": "ห้ามประชาชนเห็นร่างทุกกรณี",
-        "en": "Always hide the draft from the public",
-        "zh": "在所有情况下向公众隐瞒草案"
+        "th": "เปิดเผยร่างได้หลังจากประกาศใช้แล้ว",
+        "en": "The draft may be published after it is enacted",
+        "zh": "草案可以在颁布之后再公开"
       },
       {
-        "th": "ออกกฎหมายให้มากที่สุด",
-        "en": "Make as many laws as possible",
-        "zh": "制定尽可能多的法律"
+        "th": "ต้องรับฟังเฉพาะร่างกฎหมายอาญา",
+        "en": "Consultation is required only for a criminal statute",
+        "zh": "只有刑事法律才必须征求意见"
       },
       {
         "th": "ข้ามการประเมินความจำเป็น",
@@ -1107,16 +1162,16 @@
         "zh": "关系任用制度"
       },
       {
-        "th": "จับสลากทุกตำแหน่ง",
-        "en": "A lottery for every post",
-        "zh": "所有职位抽签决定"
+        "th": "ใช้อาวุโสอย่างเดียว โดยไม่ต้องประเมินความสามารถ",
+        "en": "Seniority alone, with no assessment of ability",
+        "zh": "只看年资，不必评估能力"
       }
     ],
     "answer": 1,
     "explanation": {
-      "th": "มาตรา 76 ให้รัฐพัฒนาการบริหารราชการ และใช้ระบบคุณธรรมในการบริหารงานบุคคลของหน่วยงานของรัฐ",
-      "en": "Section 76 calls for effective public administration and a merit system for State personnel management.",
-      "zh": "第76条要求改进公共行政，并在人事管理中采用择优任用制度。"
+      "th": "มาตรา 76 ให้รัฐพัฒนาการบริหารราชการ และใช้ระบบคุณธรรมในการบริหารงานบุคคลของหน่วยงานของรัฐ ตำแหน่งควรตกแก่คนที่ทำงานนั้นได้ ไม่ใช่คนที่รอนานที่สุดหรือคนที่รู้จักรัฐมนตรี นั่นคือเหตุผลของระบบคุณธรรม",
+      "en": "Section 76 calls for effective public administration and a merit system for State personnel management. A post should go to the person who can do the work, not to whoever waited longest or knows the minister. That is what a merit system is for.",
+      "zh": "第76条要求改进公共行政，并在人事管理中采用择优任用制度。 职位应该给做得了那份工作的人，而不是等得最久或认识部长的人。这就是功绩制的理由。"
     }
   },
   {
@@ -1154,9 +1209,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 65 กำหนดให้รัฐพึงจัดให้มียุทธศาสตร์ชาติเป็นเป้าหมายการพัฒนาประเทศอย่างยั่งยืนตามหลักธรรมาภิบาล เพื่อใช้เป็นกรอบในการจัดทำแผนต่าง ๆ ให้สอดคล้องและบูรณาการกัน [สูตรวิเคราะห์: ม.65 = ฐานของยุทธศาสตร์ชาติในหมวดแนวนโยบายแห่งรัฐ]",
-      "en": "Section 65 provides the constitutional basis for the National Strategy as the goal of sustainable development under good governance, serving as the framework for consistent, integrated plans. [Algorithm: Sec 65 = National Strategy foundation].",
-      "zh": "第65条规定国家应制定国家战略，作为依良政善治原则实现国家可持续发展的目标，并作为各类计划协调统一的框架。[算法公式：第65条 = 国家战略基石]。"
+      "th": "มาตรา 65 กำหนดให้รัฐพึงจัดให้มียุทธศาสตร์ชาติเป็นเป้าหมายการพัฒนาประเทศอย่างยั่งยืนตามหลักธรรมาภิบาล เพื่อใช้เป็นกรอบในการจัดทำแผนต่าง ๆ ให้สอดคล้องและบูรณาการกัน",
+      "en": "Section 65 provides the constitutional basis for the National Strategy as the goal of sustainable development under good governance, serving as the framework for consistent, integrated plans..",
+      "zh": "第65条规定国家应制定国家战略，作为依良政善治原则实现国家可持续发展的目标，并作为各类计划协调统一的框架。。"
+    },
+    "hook": {
+      "th": "ม.65 = ฐานของยุทธศาสตร์ชาติในหมวดแนวนโยบายแห่งรัฐ",
+      "en": "Sec 65 = National Strategy foundation",
+      "zh": "第65条 = 国家战略基石"
     }
   },
   {
@@ -1194,9 +1254,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 75 บัญญัติว่า รัฐต้องไม่ประกอบกิจการที่มีลักษณะเป็นการแข่งขันกับเอกชน เว้นแต่กรณีที่มีความจำเป็นเพื่อประโยชน์ในการรักษาความมั่นคงของรัฐ การรักษาผลประโยชน์ส่วนรวม การจัดให้มีสาธารณูปโภค หรือการจัดทำบริการสาธารณะ [สูตรวิเคราะห์: ระบบเศรษฐกิจเสรี → รัฐไม่ลงมาแข่งขันกับเอกชน เว้นแต่มีเหตุจำเป็นตามที่กำหนด]",
-      "en": "Section 75 provides that the State shall not operate any business competing with the private sector, unless necessary to maintain State security, protect the common interest, provide public utilities or deliver public services. [Algorithm: market economy → the State does not compete with private business except for the listed needs].",
-      "zh": "第75条规定，国家不得经营与私营部门相竞争的业务，除非为维护国家安全、维护公共利益、提供公用事业或提供公共服务所必需。[算法公式：市场经济 → 国家不与民争利，法定必要情形除外]。"
+      "th": "มาตรา 75 บัญญัติว่า รัฐต้องไม่ประกอบกิจการที่มีลักษณะเป็นการแข่งขันกับเอกชน เว้นแต่กรณีที่มีความจำเป็นเพื่อประโยชน์ในการรักษาความมั่นคงของรัฐ การรักษาผลประโยชน์ส่วนรวม การจัดให้มีสาธารณูปโภค หรือการจัดทำบริการสาธารณะ",
+      "en": "Section 75 provides that the State shall not operate any business competing with the private sector, unless necessary to maintain State security, protect the common interest, provide public utilities or deliver public services..",
+      "zh": "第75条规定，国家不得经营与私营部门相竞争的业务，除非为维护国家安全、维护公共利益、提供公用事业或提供公共服务所必需。。"
+    },
+    "hook": {
+      "th": "ระบบเศรษฐกิจเสรี → รัฐไม่ลงมาแข่งขันกับเอกชน เว้นแต่มีเหตุจำเป็นตามที่กำหนด",
+      "en": "market economy → the State does not compete with private business except for the listed needs",
+      "zh": "市场经济 → 国家不与民争利，法定必要情形除外"
     }
   },
   {
@@ -1212,14 +1277,14 @@
     },
     "choices": [
       {
-        "th": "สภาท้องถิ่นเท่านั้น",
-        "en": "Only local councils",
-        "zh": "仅地方议会"
+        "th": "มีเพียงสภาผู้แทนราษฎร",
+        "en": "The House of Representatives alone",
+        "zh": "只有众议院"
       },
       {
-        "th": "องคมนตรีและคณะรัฐมนตรี",
-        "en": "The Privy Council and the Cabinet",
-        "zh": "枢密院和内阁"
+        "th": "วุฒิสภาและคณะรัฐมนตรี",
+        "en": "The Senate and the Cabinet",
+        "zh": "参议院和内阁"
       },
       {
         "th": "สภาผู้แทนราษฎรและวุฒิสภา",
@@ -1227,16 +1292,16 @@
         "zh": "众议院和参议院"
       },
       {
-        "th": "คณะรัฐมนตรีและศาล",
-        "en": "The Cabinet and the courts",
-        "zh": "内阁和法院"
+        "th": "สภาผู้แทนราษฎรและศาลรัฐธรรมนูญ",
+        "en": "The House and the Constitutional Court",
+        "zh": "众议院和宪法法院"
       }
     ],
     "answer": 2,
     "explanation": {
-      "th": "มาตรา 79 กำหนดให้รัฐสภาประกอบด้วยสภาผู้แทนราษฎรและวุฒิสภา",
-      "en": "Section 79 establishes Parliament as the House of Representatives and the Senate.",
-      "zh": "第79条规定国会由众议院和参议院组成。"
+      "th": "มาตรา 79 กำหนดให้รัฐสภาประกอบด้วยสภาผู้แทนราษฎรและวุฒิสภา รัฐสภาคือสองห้อง ไม่ใช่คณะรัฐมนตรีและไม่ใช่ศาล ร่างกฎหมายเป็นกฎหมายเมื่อผ่านสองห้องนั้น ตามเงื่อนไขที่มาตราถัดไปกำหนด",
+      "en": "Section 79 establishes Parliament as the House of Representatives and the Senate. Parliament is two rooms, not the cabinet and not the courts. A bill becomes law by passing through those two rooms, on the terms the later sections set.",
+      "zh": "第79条规定国会由众议院和参议院组成。 国会是两间屋子，不是内阁，也不是法院。法案要成为法律，得按后面条文的条件通过这两间屋子。"
     }
   },
   {
@@ -1274,9 +1339,14 @@
     ],
     "answer": 3,
     "explanation": {
-      "th": "มาตรา 83 ที่แก้ไขเพิ่มเติม พ.ศ. 2564 กำหนด ส.ส. รวม 500 คน แบ่งเขต 400 คน และบัญชีรายชื่อ 100 คน",
-      "en": "Section 83 as amended in 2021 provides for 500 MPs: 400 constituency and 100 party-list members.",
-      "zh": "2021年修订后的第83条规定众议员共500名，其中选区400名、政党名单100名。"
+      "th": "มาตรา 83 ที่แก้ไขเพิ่มเติม พ.ศ 2564 กำหนด ส.ส รวม 500 คน แบ่งเขต 400 คน และบัญชีรายชื่อ 100 คน ตัวเลขสามร้อยห้าสิบบวกหนึ่งร้อยห้าสิบคือหนังสือก่อนปี 2564 สภาผู้แทนราษฎรตอนนี้คือสี่ร้อยที่นั่งจากเขต และหนึ่งร้อยชื่อบนบัญชีรายชื่อ",
+      "en": "Section 83 as amended in 2021 provides for 500 MPs: 400 constituency and 100 party-list members. Three hundred and fifty plus one hundred and fifty is the book from before 2021. The House now is four hundred constituency seats and one hundred names on the party list.",
+      "zh": "2021年修订后的第83条规定众议员共500名，其中选区400名、政党名单100名。 三百五十加一百五十是2021年以前的书。现在的众议院是四百个选区席位，加名单上的一百个名字。"
+    },
+    "hook": {
+      "th": "สี่ร้อยบานประตูในเขต และหนึ่งร้อยชื่อบนบัญชีแผ่นเดียว",
+      "en": "Four hundred doors in the constituencies, and one hundred names on a single list.",
+      "zh": "选区里四百扇门，一张名单上一百个名字。"
     }
   },
   {
@@ -1314,9 +1384,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 107 กำหนดวุฒิสภา 200 คน ซึ่งมาจากการเลือกกันเองของบุคคลตามกลุ่มที่กฎหมายกำหนด",
-      "en": "Section 107 provides for 200 Senators selected among persons in legally defined groups.",
-      "zh": "第107条规定参议员200名，由依法划分的各组人员互选产生。"
+      "th": "มาตรา 107 กำหนดวุฒิสภา 200 คน ซึ่งมาจากการเลือกกันเองของบุคคลตามกลุ่มที่กฎหมายกำหนด สองร้อยห้าสิบคือนั่งร้านในบทเฉพาะกาล ห้องที่อยู่ต่อคือสองร้อยคน จากกลุ่มที่กฎหมายกำหนด",
+      "en": "Section 107 provides for 200 Senators selected among persons in legally defined groups. Two hundred and fifty was the scaffold in the transitional chapter. The room that stays holds two hundred, chosen from the groups the law names.",
+      "zh": "第107条规定参议员200名，由依法划分的各组人员互选产生。 两百五十是过渡章里的脚手架。留下来的房间坐两百人，从法律写明的群体中选出。"
+    },
+    "hook": {
+      "th": "ห้องถาวรจุสองร้อยคน สองร้อยห้าสิบคือนั่งร้าน และนั่งร้านถูกรื้อแล้ว",
+      "en": "The permanent room holds two hundred. Two hundred and fifty was the scaffold, and the scaffold came down.",
+      "zh": "永久的房间坐两百人。两百五十是脚手架，脚手架已经拆了。"
     }
   },
   {
@@ -1354,9 +1429,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 120 บัญญัติว่า การประชุมสภาผู้แทนราษฎรและการประชุมวุฒิสภาต้องมีสมาชิกมาประชุมไม่น้อยกว่ากึ่งหนึ่งของจำนวนสมาชิกทั้งหมดเท่าที่มีอยู่ของแต่ละสภาจึงจะเป็นองค์ประชุม เว้นแต่การพิจารณากระทู้ ซึ่งข้อบังคับอาจกำหนดองค์ประชุมเป็นอย่างอื่น ส่วนการลงมติให้ถือเสียงข้างมากเป็นประมาณ [สูตรคำนวณ: องค์ประชุม ≥ สมาชิกที่มีอยู่ ÷ 2] [มติทั่วไป = เสียงข้างมาก]",
-      "en": "Section 120 requires at least half of each House's total existing members for a quorum, except that the rules of procedure may set a different quorum for interpellations; resolutions are decided by majority vote. [Formula: quorum ≥ existing members ÷ 2; ordinary resolution = majority].",
-      "zh": "第120条规定，各议院开会须有不少于现有议员总数半数的议员出席，方达到法定人数；但审议质询时，议事规则可另行规定。决议以多数票决定。[公式：法定人数 ≥ 现有议员 ÷ 2；普通决议 = 多数决]。"
+      "th": "มาตรา 120 บัญญัติว่า การประชุมสภาผู้แทนราษฎรและการประชุมวุฒิสภาต้องมีสมาชิกมาประชุมไม่น้อยกว่ากึ่งหนึ่งของจำนวนสมาชิกทั้งหมดเท่าที่มีอยู่ของแต่ละสภาจึงจะเป็นองค์ประชุม เว้นแต่การพิจารณากระทู้ ซึ่งข้อบังคับอาจกำหนดองค์ประชุมเป็นอย่างอื่น ส่วนการลงมติให้ถือเสียงข้างมากเป็นประมาณ",
+      "en": "Section 120 requires at least half of each House's total existing members for a quorum, except that the rules of procedure may set a different quorum for interpellations; resolutions are decided by majority vote..",
+      "zh": "第120条规定，各议院开会须有不少于现有议员总数半数的议员出席，方达到法定人数；但审议质询时，议事规则可另行规定。决议以多数票决定。。"
+    },
+    "hook": {
+      "th": "คนในห้องต้องมาครึ่งหนึ่ง ไม่งั้นการประชุมยังไม่เริ่ม",
+      "en": "Half the people in the room, or the sitting does not begin.",
+      "zh": "房间里的人要到一半，会议才开始。"
     }
   },
   {
@@ -1395,9 +1475,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 133 กำหนดว่า ร่างพระราชบัญญัติที่ ส.ส. ไม่น้อยกว่ายี่สิบคน หรือผู้มีสิทธิเลือกตั้งไม่น้อยกว่าหนึ่งหมื่นคนเป็นผู้เสนอ หากเป็นร่างพระราชบัญญัติเกี่ยวด้วยการเงิน จะเสนอได้ก็ต่อเมื่อมีคำรับรองของนายกรัฐมนตรี ส่วนมาตรา 134 นิยามร่างการเงิน (ภาษีอากร เงินแผ่นดินและการโอนงบประมาณ การกู้เงินหรือค้ำประกัน และเงินตรา) และหากสงสัยว่าร่างใดเป็นร่างการเงิน ให้ที่ประชุมร่วมกันของประธานสภาผู้แทนราษฎรและประธานคณะกรรมาธิการสามัญทุกคณะเป็นผู้วินิจฉัย [สูตรวิเคราะห์: ร่างการเงินจาก ส.ส. หรือประชาชน → ต้องมีคำรับรองของนายกฯ]",
-      "en": "Section 133 provides that a money bill proposed by at least twenty MPs or by at least ten thousand eligible voters may be introduced only with the Prime Minister's endorsement. Section 134 defines money bills (taxes, State funds and budget transfers, loans and guarantees, currency); if there is doubt, a joint meeting of the Speaker of the House and the chairs of all standing committees decides. [Algorithm: money bill from MPs or voters → PM endorsement required].",
-      "zh": "第133条规定，由不少于二十名众议员或不少于一万名有选举权者提出的法案，若属财政法案，须有总理的认可证明方可提出。第134条界定财政法案（税收、国家资金与预算转移、借款与担保、货币）；如有疑义，由众议院议长与全体常设委员会主席联席会议裁决。[算法公式：众议员或民众提出的财政法案 → 须总理认可]。"
+      "th": "มาตรา 133 กำหนดว่า ร่างพระราชบัญญัติที่ ส.ส. ไม่น้อยกว่ายี่สิบคน หรือผู้มีสิทธิเลือกตั้งไม่น้อยกว่าหนึ่งหมื่นคนเป็นผู้เสนอ หากเป็นร่างพระราชบัญญัติเกี่ยวด้วยการเงิน จะเสนอได้ก็ต่อเมื่อมีคำรับรองของนายกรัฐมนตรี ส่วนมาตรา 134 นิยามร่างการเงิน (ภาษีอากร เงินแผ่นดินและการโอนงบประมาณ การกู้เงินหรือค้ำประกัน และเงินตรา) และหากสงสัยว่าร่างใดเป็นร่างการเงิน ให้ที่ประชุมร่วมกันของประธานสภาผู้แทนราษฎรและประธานคณะกรรมาธิการสามัญทุกคณะเป็นผู้วินิจฉัย",
+      "en": "Section 133 provides that a money bill proposed by at least twenty MPs or by at least ten thousand eligible voters may be introduced only with the Prime Minister's endorsement. Section 134 defines money bills (taxes, State funds and budget transfers, loans and guarantees, currency); if there is doubt, a joint meeting of the Speaker of the House and the chairs of all standing committees decides..",
+      "zh": "第133条规定，由不少于二十名众议员或不少于一万名有选举权者提出的法案，若属财政法案，须有总理的认可证明方可提出。第134条界定财政法案（税收、国家资金与预算转移、借款与担保、货币）；如有疑义，由众议院议长与全体常设委员会主席联席会议裁决。。"
+    },
+    "hook": {
+      "th": "ร่างการเงินจาก ส.ส. หรือประชาชน → ต้องมีคำรับรองของนายกฯ",
+      "en": "money bill from MPs or voters → PM endorsement required",
+      "zh": "众议员或民众提出的财政法案 → 须总理认可"
     }
   },
   {
@@ -1423,9 +1508,9 @@
         "zh": "一名总理及最多35名其他部长"
       },
       {
-        "th": "นายกรัฐมนตรีสองคน",
-        "en": "Two Prime Ministers",
-        "zh": "两名总理"
+        "th": "นายกรัฐมนตรีหนึ่งคน และรัฐมนตรีอื่นรวมกันไม่เกินสามสิบห้าคนนับนายกรัฐมนตรีด้วย",
+        "en": "One Prime Minister, and at most thirty-five ministers including the Prime Minister",
+        "zh": "一名总理，部长连总理在内不超过三十五人"
       },
       {
         "th": "รัฐมนตรีอื่นไม่จำกัดจำนวน",
@@ -1435,9 +1520,14 @@
     ],
     "answer": 1,
     "explanation": {
-      "th": "มาตรา 158 กำหนดนายกรัฐมนตรีหนึ่งคน และรัฐมนตรีอื่นไม่เกิน 35 คน รวมไม่เกิน 36 คน",
-      "en": "Section 158 provides for one Prime Minister and no more than 35 other ministers, at most 36 in total.",
-      "zh": "第158条规定一名总理及不超过35名其他部长，总数最多36人。"
+      "th": "มาตรา 158 กำหนดนายกรัฐมนตรีหนึ่งคน และรัฐมนตรีอื่นไม่เกิน 35 คน รวมไม่เกิน 36 คน นับเก้าอี้นายกรัฐมนตรี แล้วอีกไม่เกินสามสิบห้า สามสิบหกคนในห้องคือเพดาน แปดปีเป็นนาฬิกาอีกเรือนหนึ่งของนายกรัฐมนตรีคนเดียว",
+      "en": "Section 158 provides for one Prime Minister and no more than 35 other ministers, at most 36 in total. Count the Prime Minister's chair, then at most thirty-five more. Thirty-six people in the room is the ceiling. Eight years is a separate clock on the Prime Minister alone.",
+      "zh": "第158条规定一名总理及不超过35名其他部长，总数最多36人。 先数总理的椅子，再加最多三十五把。房间里三十六个人是上限。八年是另一只钟，只记在总理一个人身上。"
+    },
+    "hook": {
+      "th": "เก้าอี้นายกหนึ่งตัว แล้วอีกสามสิบห้าตัว นับเก้าอี้ที่เพิ่ม ไม่ใช่จำนวนคนทั้งหมด",
+      "en": "One chair for the Prime Minister, then thirty-five more. Count the extra chairs, not the whole room.",
+      "zh": "总理一把椅子，然后再加三十五把。数多出来的椅子，不要数满屋子的人。"
     }
   },
   {
@@ -1475,9 +1565,14 @@
     ],
     "answer": 2,
     "explanation": {
-      "th": "มาตรา 160 (2) กำหนดให้รัฐมนตรีมีอายุไม่ต่ำกว่า 35 ปี และยังต้องผ่านคุณสมบัติอื่นด้วย",
-      "en": "Section 160(2) sets a minimum age of 35; other qualifications must also be met.",
-      "zh": "第160条第2项规定部长须年满35岁，且还须符合其他资格条件。"
+      "th": "มาตรา 160 (2) กำหนดให้รัฐมนตรีมีอายุไม่ต่ำกว่า 35 ปี และยังต้องผ่านคุณสมบัติอื่นด้วย สามสิบห้าคือวันเกิดของรัฐมนตรี ยี่สิบห้าคือวันเกิดของ ส.ส คนอายุสามสิบสี่ยังเข้าสภาได้ แต่ยังเด็กไปสำหรับคณะรัฐมนตรี",
+      "en": "Section 160(2) sets a minimum age of 35; other qualifications must also be met. Thirty-five is the minister's birthday. Twenty-five is the MP's. A 34-year-old may sit in the House and still be too young for the cabinet.",
+      "zh": "第160条第2项规定部长须年满35岁，且还须符合其他资格条件。 三十五是部长的生日，二十五是议员的生日。三十四岁的人可以进众议院，对内阁来说仍然太年轻。"
+    },
+    "hook": {
+      "th": "รัฐมนตรีรอถึงสามสิบห้า ส.ส. มาได้ตั้งแต่อายุยี่สิบห้า อย่าสลับวันเกิด",
+      "en": "A minister waits until 35. An MP may arrive at 25. Do not swap the birthdays.",
+      "zh": "部长要等到三十五岁。议员二十五岁就可以来。别把两个生日换错。"
     }
   },
   {
@@ -1498,14 +1593,14 @@
         "zh": "仅参议院"
       },
       {
-        "th": "ศาลปกครอง",
-        "en": "The Administrative Court",
-        "zh": "行政法院"
+        "th": "ที่ประชุมร่วมกันของสองสภา",
+        "en": "A joint sitting of both Houses",
+        "zh": "两院联席会议"
       },
       {
-        "th": "ผู้ว่าราชการจังหวัดทั้งหมด",
-        "en": "All provincial governors",
-        "zh": "全体府尹"
+        "th": "พระมหากษัตริย์ โดยไม่ต้องมีมติสภา",
+        "en": "The King, with no House resolution",
+        "zh": "国王，无需议院决议"
       },
       {
         "th": "สภาผู้แทนราษฎร",
@@ -1515,9 +1610,9 @@
     ],
     "answer": 3,
     "explanation": {
-      "th": "มาตรา 159 ให้สภาผู้แทนราษฎรลงคะแนนโดยเปิดเผย และต้องเห็นชอบมากกว่ากึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่",
-      "en": "Section 159 requires an open vote in the House and approval by more than half of its existing members.",
-      "zh": "第159条要求众议院公开表决，赞成票须超过现有议员总数的一半。"
+      "th": "มาตรา 159 ให้สภาผู้แทนราษฎรลงคะแนนโดยเปิดเผย และต้องเห็นชอบมากกว่ากึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่ เมื่อหน้าต่างห้าปีปิดแล้ว วุฒิสภาไม่มาร่วมโหวตนี้ กฎถาวรคือลงคะแนนเปิดเผย และได้เสียงมากกว่ากึ่งหนึ่งของ ส.ส ที่มีอยู่",
+      "en": "Section 159 requires an open vote in the House and approval by more than half of its existing members. After the five-year window closed, the Senate does not join this vote. The permanent rule is an open vote, and more than half of the existing members of the House.",
+      "zh": "第159条要求众议院公开表决，赞成票须超过现有议员总数的一半。 五年的窗口关上之后，参议院不再参加这次投票。永久的规则是公开表决，并得到现有众议员的过半数。"
     }
   },
   {
@@ -1555,9 +1650,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 158 บัญญัติว่า พระมหากษัตริย์ทรงแต่งตั้งนายกรัฐมนตรีและรัฐมนตรีอื่นอีกไม่เกินสามสิบห้าคนประกอบเป็นคณะรัฐมนตรี และมาตราเดียวกันกำหนดว่านายกรัฐมนตรีจะดำรงตำแหน่งรวมกันแล้วเกินแปดปีมิได้ [สูตรตัวเลข: 1 นายก + ไม่เกิน 35 รัฐมนตรี = ครม. ไม่เกิน 36 คน, นายกฯ รวมไม่เกิน 8 ปี] [เทคนิคช่วยจำ: 36 ครม. แปดปีนายก]",
-      "en": "Section 158 provides for the Prime Minister plus up to 35 other ministers (at most 36 members). The same section limits the Prime Minister's total time in office to 8 years. [Formula: 1 PM + max 35 ministers = max 36; PM total term ≤ 8 years].",
-      "zh": "第158条规定，内阁由总理1人及其他部长不超过35人组成（最多36人）；同条规定总理累计任职不得超过8年。[计算公式：1总理 + 最多35部长 = 内阁最多36人；总理累计任期上限8年] [记忆口诀：内阁36人，总理8年顶]。"
+      "th": "มาตรา 158 บัญญัติว่า พระมหากษัตริย์ทรงแต่งตั้งนายกรัฐมนตรีและรัฐมนตรีอื่นอีกไม่เกินสามสิบห้าคนประกอบเป็นคณะรัฐมนตรี และมาตราเดียวกันกำหนดว่านายกรัฐมนตรีจะดำรงตำแหน่งรวมกันแล้วเกินแปดปีมิได้",
+      "en": "Section 158 provides for the Prime Minister plus up to 35 other ministers (at most 36 members). The same section limits the Prime Minister's total time in office to 8 years..",
+      "zh": "第158条规定，内阁由总理1人及其他部长不超过35人组成（最多36人）；同条规定总理累计任职不得超过8年。。"
+    },
+    "hook": {
+      "th": "36 ครม. แปดปีนายก",
+      "en": "1 PM + max 35 ministers = max 36; PM total term ≤ 8 years",
+      "zh": "内阁36人，总理8年顶"
     }
   },
   {
@@ -1595,9 +1695,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 172 กำหนดให้คณะรัฐมนตรีเสนอพระราชกำหนดต่อรัฐสภาเพื่อพิจารณาโดยไม่ชักช้าในการประชุมรัฐสภาคราวต่อไป หากอยู่นอกสมัยประชุมและการรอจะเป็นการชักช้า ต้องเรียกประชุมสมัยวิสามัญ ถ้าสภาผู้แทนราษฎรและวุฒิสภาอนุมัติ (หรือวุฒิสภาไม่อนุมัติแต่สภาผู้แทนราษฎรยืนยันด้วยคะแนนเสียงมากกว่ากึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่) พระราชกำหนดมีผลใช้บังคับเป็นพระราชบัญญัติต่อไป ถ้าไม่อนุมัติ พระราชกำหนดตกไป แต่ไม่กระทบกิจการที่ได้เป็นไปในระหว่างใช้บังคับ [สูตรวิเคราะห์: พ.ร.ก. = ฉุกเฉินจำเป็นรีบด่วน + ใช้บังคับได้ทันที + ต้องเสนอรัฐสภาโดยไม่ชักช้า]",
-      "en": "Section 172 requires the Cabinet to submit the Emergency Decree to Parliament without delay at its next sitting; if Parliament is out of session and waiting would cause delay, an extraordinary session must be convened. If both Houses approve (or the Senate rejects but the House reaffirms by more than half of its existing members), it continues in force as an Act; if not approved, it lapses without affecting acts done while it was in force. [Algorithm: emergency decree → in force at once → submit to Parliament without delay].",
-      "zh": "第172条要求内阁在下次国会会议时不延误地将紧急法令提交国会审议；若在闭会期间且等待会造成延误，须召开特别会议。两院批准（或参议院不批准但众议院以超过现有议员半数的票数确认）则继续作为法律施行；未获批准则失效，但不影响施行期间已进行的事项。[算法公式：紧急法令 → 立即施行 → 不延误地提交国会]。"
+      "th": "มาตรา 172 กำหนดให้คณะรัฐมนตรีเสนอพระราชกำหนดต่อรัฐสภาเพื่อพิจารณาโดยไม่ชักช้าในการประชุมรัฐสภาคราวต่อไป หากอยู่นอกสมัยประชุมและการรอจะเป็นการชักช้า ต้องเรียกประชุมสมัยวิสามัญ ถ้าสภาผู้แทนราษฎรและวุฒิสภาอนุมัติ (หรือวุฒิสภาไม่อนุมัติแต่สภาผู้แทนราษฎรยืนยันด้วยคะแนนเสียงมากกว่ากึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่) พระราชกำหนดมีผลใช้บังคับเป็นพระราชบัญญัติต่อไป ถ้าไม่อนุมัติ พระราชกำหนดตกไป แต่ไม่กระทบกิจการที่ได้เป็นไปในระหว่างใช้บังคับ",
+      "en": "Section 172 requires the Cabinet to submit the Emergency Decree to Parliament without delay at its next sitting; if Parliament is out of session and waiting would cause delay, an extraordinary session must be convened. If both Houses approve (or the Senate rejects but the House reaffirms by more than half of its existing members), it continues in force as an Act; if not approved, it lapses without affecting acts done while it was in force..",
+      "zh": "第172条要求内阁在下次国会会议时不延误地将紧急法令提交国会审议；若在闭会期间且等待会造成延误，须召开特别会议。两院批准（或参议院不批准但众议院以超过现有议员半数的票数确认）则继续作为法律施行；未获批准则失效，但不影响施行期间已进行的事项。。"
+    },
+    "hook": {
+      "th": "พ.ร.ก. = ฉุกเฉินจำเป็นรีบด่วน + ใช้บังคับได้ทันที + ต้องเสนอรัฐสภาโดยไม่ชักช้า",
+      "en": "emergency decree → in force at once → submit to Parliament without delay",
+      "zh": "紧急法令 → 立即施行 → 不延误地提交国会"
     }
   },
   {
@@ -1618,24 +1723,24 @@
         "zh": "利益冲突"
       },
       {
-        "th": "การปกครองส่วนท้องถิ่น",
-        "en": "Local administration",
-        "zh": "地方行政"
+        "th": "หมวดคณะรัฐมนตรี เพราะรัฐมนตรีเป็นผู้อนุมัติสัมปทาน",
+        "en": "The Council of Ministers chapter, because ministers approve concessions",
+        "zh": "内阁一章，因为特许由部长批准"
       },
       {
-        "th": "พระมหากษัตริย์",
-        "en": "The King",
-        "zh": "国王"
+        "th": "รัฐธรรมนูญไม่ได้เขียนไว้ มีแต่ประมวลกฎหมายอาญา",
+        "en": "The constitution is silent; only the criminal code applies",
+        "zh": "宪法没有规定，只有刑法适用"
       },
       {
-        "th": "บททั่วไปเท่านั้น",
-        "en": "General provisions only",
-        "zh": "仅总则"
+        "th": "องค์กรอิสระเท่านั้น เพราะ ป.ป.ช. ตรวจทีหลัง",
+        "en": "Only the independent organs, because the NACC looks afterwards",
+        "zh": "只有独立机构，因为反贪委员会事后才查"
       }
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 184 ในหมวด 9 วางข้อห้ามเกี่ยวกับผลประโยชน์ของ ส.ส. และ ส.ว. รวมถึงสัมปทานรัฐตามเงื่อนไขของมาตรานี้",
+      "th": "มาตรา 184 ในหมวด 9 วางข้อห้ามเกี่ยวกับผลประโยชน์ของ ส.ส และ ส.ว รวมถึงสัมปทานรัฐตามเงื่อนไขของมาตรานี้",
       "en": "Section 184 in Chapter 9 restricts MPs’ and Senators’ interests, including State concessions under its specified conditions.",
       "zh": "第9章第184条限制众议员与参议员的利益关系，包括该条规定的国家特许经营。"
     }
@@ -1653,9 +1758,9 @@
     },
     "choices": [
       {
-        "th": "เป็นอำนาจประจำของ ส.ส.",
-        "en": "It is a routine power of MPs",
-        "zh": "这是众议员的日常权力"
+        "th": "ทำได้ถ้าเจ้าหน้าที่คนนั้นขอให้โยกย้ายเอง",
+        "en": "Allowed when the official asked for the transfer",
+        "zh": "如果该官员自己请求调动，就可以"
       },
       {
         "th": "ห้ามใช้สถานะก้าวก่ายการบรรจุ แต่งตั้ง หรือโยกย้าย",
@@ -1663,19 +1768,19 @@
         "zh": "不得利用议员身份干预录用、任命或调动"
       },
       {
-        "th": "ทำได้เสมอเมื่อเป็น ส.ส.",
-        "en": "MPs may always do this",
-        "zh": "众议员始终可以这样做"
+        "th": "ทำได้ถ้า ส.ส. คนนั้นเป็นรัฐมนตรีและทำในฐานะนั้น",
+        "en": "Allowed if that MP is also a minister acting in that office",
+        "zh": "如果该议员同时是部长并以此身份行事，就可以"
       },
       {
-        "th": "ทำได้ถ้าไม่เขียนเป็นหนังสือ",
-        "en": "Allowed if not put in writing",
-        "zh": "不留下书面记录即可"
+        "th": "ห้ามเฉพาะการบรรจุ ไม่ห้ามการโยกย้าย",
+        "en": "The ban covers appointment, not transfer",
+        "zh": "禁令只覆盖任命，不包括调动"
       }
     ],
     "answer": 1,
     "explanation": {
-      "th": "มาตรา 185 ห้าม ส.ส. และ ส.ว. ใช้สถานะก้าวก่ายหรือแทรกแซงเพื่อประโยชน์ตน ผู้อื่น หรือพรรค รวมถึงเรื่องบุคลากรที่ระบุ",
+      "th": "มาตรา 185 ห้าม ส.ส และ ส.ว ใช้สถานะก้าวก่ายหรือแทรกแซงเพื่อประโยชน์ตน ผู้อื่น หรือพรรค รวมถึงเรื่องบุคลากรที่ระบุ",
       "en": "Section 185 bars MPs and Senators from using their status to interfere for their own, another’s or a party’s benefit, including the listed personnel matters.",
       "zh": "第185条禁止议员为本人、他人或政党利益利用身份干预事务，包括该条列明的人事事项。"
     }
@@ -1755,9 +1860,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 184 (2) ห้าม ส.ส. และ ส.ว. รับหรือแทรกแซงหรือก้าวก่ายการเข้ารับสัมปทานจากรัฐ หน่วยราชการ หน่วยงานของรัฐ หรือรัฐวิสาหกิจ หรือเข้าเป็นคู่สัญญากับหน่วยงานเหล่านั้นอันมีลักษณะเป็นการผูกขาดตัดตอน รวมถึงการเป็นหุ้นส่วนหรือผู้ถือหุ้นในกิจการที่ทำเช่นนั้น ไม่ว่าโดยทางตรงหรือทางอ้อม [สูตรวิเคราะห์: ม.184 = (1) ห้ามดำรงตำแหน่งในหน่วยงานรัฐ (2) ห้ามรับหรือแทรกแซงสัมปทานและสัญญาผูกขาด (3) ห้ามรับประโยชน์พิเศษ (4) ห้ามแทรกแซงสื่อมวลชน]",
-      "en": "Section 184(2) bars MPs and Senators from receiving or interfering in concessions from the State, government agencies or State enterprises, or entering contracts with them of a monopolistic character, including as partners or shareholders in firms doing so, directly or indirectly. [Algorithm: Sec 184 = (1) no State posts (2) no concessions or monopolistic contracts (3) no special benefits (4) no interference with the media].",
-      "zh": "第184条第2项禁止众议员和参议员直接或间接接受或干预国家、政府机关、国家机构或国有企业的特许经营，或与其订立具有垄断性质的合同，包括在从事此类行为的企业中担任合伙人或股东。[算法公式：第184条 = (1)不得在国家机构任职 (2)不得涉足特许经营与垄断合同 (3)不得收受特殊利益 (4)不得干预媒体]。"
+      "th": "มาตรา 184 (2) ห้าม ส.ส. และ ส.ว. รับหรือแทรกแซงหรือก้าวก่ายการเข้ารับสัมปทานจากรัฐ หน่วยราชการ หน่วยงานของรัฐ หรือรัฐวิสาหกิจ หรือเข้าเป็นคู่สัญญากับหน่วยงานเหล่านั้นอันมีลักษณะเป็นการผูกขาดตัดตอน รวมถึงการเป็นหุ้นส่วนหรือผู้ถือหุ้นในกิจการที่ทำเช่นนั้น ไม่ว่าโดยทางตรงหรือทางอ้อม",
+      "en": "Section 184(2) bars MPs and Senators from receiving or interfering in concessions from the State, government agencies or State enterprises, or entering contracts with them of a monopolistic character, including as partners or shareholders in firms doing so, directly or indirectly..",
+      "zh": "第184条第2项禁止众议员和参议员直接或间接接受或干预国家、政府机关、国家机构或国有企业的特许经营，或与其订立具有垄断性质的合同，包括在从事此类行为的企业中担任合伙人或股东。。"
+    },
+    "hook": {
+      "th": "ม.184 = (1) ห้ามดำรงตำแหน่งในหน่วยงานรัฐ (2) ห้ามรับหรือแทรกแซงสัมปทานและสัญญาผูกขาด (3) ห้ามรับประโยชน์พิเศษ (4) ห้ามแทรกแซงสื่อมวลชน",
+      "en": "Sec 184 = (1) no State posts (2) no concessions or monopolistic contracts (3) no special benefits (4) no interference with the media",
+      "zh": "第184条 = (1)不得在国家机构任职 (2)不得涉足特许经营与垄断合同 (3)不得收受特殊利益 (4)不得干预媒体"
     }
   },
   {
@@ -1795,9 +1905,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 187 บัญญัติว่า รัฐมนตรีต้องไม่เป็นหรือคงไว้ซึ่งความเป็นหุ้นส่วนหรือผู้ถือหุ้นในห้างหุ้นส่วนหรือบริษัทตามจำนวนที่กฎหมายบัญญัติ หากประสงค์จะได้รับประโยชน์ต่อไป ต้องแจ้งประธานกรรมการ ป.ป.ช. ภายในสามสิบวันนับแต่วันที่ได้รับแต่งตั้ง และโอนหุ้นให้แก่นิติบุคคลซึ่งจัดการทรัพย์สินเพื่อประโยชน์ของผู้อื่น โดยรัฐมนตรีจะเข้าไปเกี่ยวข้องกับการบริหารจัดการหุ้นนั้นมิได้ ข้อห้ามนี้ใช้กับคู่สมรสและบุตรที่ยังไม่บรรลุนิติภาวะด้วย [สูตรวิเคราะห์: รมต. ห้ามถือหุ้น → ข้อยกเว้น: แจ้ง ป.ป.ช. ภายใน 30 วัน + โอนให้นิติบุคคลจัดการแทน (ลักษณะคล้าย blind trust)]",
-      "en": "Section 187 bars ministers from being or remaining partners or shareholders in partnerships or companies to the extent set by law. A minister who wishes to keep the benefit must notify the NACC President within 30 days of appointment and transfer the shares to a juristic person managing assets for others, and may not take part in managing them. The rule also covers the spouse and minor children. [Algorithm: shareholding ban → exception: notify the NACC within 30 days + transfer to a manager, similar to a blind trust].",
-      "zh": "第187条规定，部长不得在法律规定的数额范围内担任或继续担任合伙企业的合伙人或公司股东。若希望继续获得收益，须自任命之日起30日内通知国家反腐败委员会主席，并将股份转让给为他人管理资产的法人，部长不得参与该股份的管理。此规定亦适用于配偶及未成年子女。[算法公式：部长持股禁令 → 例外：30日内通知 + 交由法人管理（类似盲目信托）]。"
+      "th": "มาตรา 187 บัญญัติว่า รัฐมนตรีต้องไม่เป็นหรือคงไว้ซึ่งความเป็นหุ้นส่วนหรือผู้ถือหุ้นในห้างหุ้นส่วนหรือบริษัทตามจำนวนที่กฎหมายบัญญัติ หากประสงค์จะได้รับประโยชน์ต่อไป ต้องแจ้งประธานกรรมการ ป.ป.ช. ภายในสามสิบวันนับแต่วันที่ได้รับแต่งตั้ง และโอนหุ้นให้แก่นิติบุคคลซึ่งจัดการทรัพย์สินเพื่อประโยชน์ของผู้อื่น โดยรัฐมนตรีจะเข้าไปเกี่ยวข้องกับการบริหารจัดการหุ้นนั้นมิได้ ข้อห้ามนี้ใช้กับคู่สมรสและบุตรที่ยังไม่บรรลุนิติภาวะด้วย",
+      "en": "Section 187 bars ministers from being or remaining partners or shareholders in partnerships or companies to the extent set by law. A minister who wishes to keep the benefit must notify the NACC President within 30 days of appointment and transfer the shares to a juristic person managing assets for others, and may not take part in managing them. The rule also covers the spouse and minor children..",
+      "zh": "第187条规定，部长不得在法律规定的数额范围内担任或继续担任合伙企业的合伙人或公司股东。若希望继续获得收益，须自任命之日起30日内通知国家反腐败委员会主席，并将股份转让给为他人管理资产的法人，部长不得参与该股份的管理。此规定亦适用于配偶及未成年子女。。"
+    },
+    "hook": {
+      "th": "รมต. ห้ามถือหุ้น → ข้อยกเว้น: แจ้ง ป.ป.ช. ภายใน 30 วัน + โอนให้นิติบุคคลจัดการแทน (ลักษณะคล้าย blind trust)",
+      "en": "shareholding ban → exception: notify the NACC within 30 days + transfer to a manager, similar to a blind trust",
+      "zh": "部长持股禁令 → 例外：30日内通知 + 交由法人管理（类似盲目信托）"
     }
   },
   {
@@ -1813,19 +1928,19 @@
     },
     "choices": [
       {
-        "th": "ระบบบัญชีรายชื่อ",
-        "en": "The party-list system",
-        "zh": "政党名单制度"
+        "th": "รัฐมนตรีสั่งการเจ้าหน้าที่ของรัฐได้ทุกคน รวมทั้งผู้พิพากษา",
+        "en": "A minister may direct any state official, including a judge",
+        "zh": "部长可以指挥任何国家官员，包括法官"
       },
       {
-        "th": "การเลือกตั้งท้องถิ่น",
-        "en": "Local elections",
-        "zh": "地方选举"
+        "th": "อิสระมีเฉพาะตุลาการศาลรัฐธรรมนูญ",
+        "en": "Independence belongs only to Constitutional Court judges",
+        "zh": "独立只属于宪法法院法官"
       },
       {
-        "th": "การสืบราชสมบัติ",
-        "en": "Royal succession",
-        "zh": "王位继承"
+        "th": "ผู้พิพากษาต้องทำตามคำสั่งเป็นหนังสือของรัฐมนตรีว่าการกระทรวงยุติธรรม",
+        "en": "A judge must follow a written order from the Minister of Justice",
+        "zh": "法官必须服从司法部长的书面命令"
       },
       {
         "th": "ความเป็นอิสระในการพิจารณาพิพากษา",
@@ -1835,9 +1950,9 @@
     ],
     "answer": 3,
     "explanation": {
-      "th": "มาตรา 188 ให้ผู้พิพากษาและตุลาการมีอิสระในการพิจารณาพิพากษาอรรถคดีตามรัฐธรรมนูญและกฎหมาย",
-      "en": "Section 188 guarantees judges’ independence in adjudication in accordance with the Constitution and law.",
-      "zh": "第188条保障法官依据宪法及法律独立审判。"
+      "th": "มาตรา 188 ให้ผู้พิพากษาและตุลาการมีอิสระในการพิจารณาพิพากษาอรรถคดีตามรัฐธรรมนูญและกฎหมาย ถ้ารัฐมนตรีโทรสั่งผลคดีได้ ศาลก็เป็นเพียงสำนักงานของฝ่ายบริหาร คดีต้องจบที่รัฐธรรมนูญ กฎหมาย และพยานหลักฐาน",
+      "en": "Section 188 guarantees judges’ independence in adjudication in accordance with the Constitution and law. If a minister can telephone the result, the court is an office of the executive. The case has to end on the constitution, the statute, and the evidence.",
+      "zh": "第188条保障法官依据宪法及法律独立审判。 如果部长可以打电话决定结果，法院就只是行政机关的一间办公室。案件必须止于宪法、法律和证据。"
     }
   },
   {
@@ -1858,19 +1973,19 @@
         "zh": "普通法院"
       },
       {
-        "th": "ศาลรัฐธรรมนูญทุกกรณี",
-        "en": "Always the Constitutional Court",
-        "zh": "一律由宪法法院"
+        "th": "ศาลปกครองรับทุกคดีที่ศาลอื่นไม่รับ",
+        "en": "The Administrative Courts hear every case other courts decline",
+        "zh": "其他法院不受理的案件都归行政法院"
       },
       {
-        "th": "ศาลทหารทุกกรณี",
-        "en": "Always the Military Courts",
-        "zh": "一律由军事法院"
+        "th": "ศาลทหาร เมื่อหน่วยงานของรัฐเป็นคู่ความ",
+        "en": "The Military Courts, whenever a state agency is a party",
+        "zh": "只要国家机关是当事人，就归军事法院"
       },
       {
-        "th": "สภาท้องถิ่น",
-        "en": "Local councils",
-        "zh": "地方议会"
+        "th": "ศาลรัฐธรรมนูญ เพราะเป็นศาลสูงสุด",
+        "en": "The Constitutional Court, because it is the highest court",
+        "zh": "宪法法院，因为它是最高法院"
       }
     ],
     "answer": 0,
@@ -1893,9 +2008,9 @@
     },
     "choices": [
       {
-        "th": "รัฐสภาทำหน้าที่ศาล",
-        "en": "Parliament acts as a court",
-        "zh": "国会充当法院"
+        "th": "ศาลยุติธรรม เพราะมีเขตอำนาจทั่วไปเหนือทุกข้อพิพาท",
+        "en": "The Courts of Justice, because they hear every dispute",
+        "zh": "司法法院，因为它们审理一切争议"
       },
       {
         "th": "ศาลปกครองตามเงื่อนไขเขตอำนาจ",
@@ -1903,14 +2018,14 @@
         "zh": "行政法院，须符合管辖规定"
       },
       {
-        "th": "ศาลทหารเสมอ",
-        "en": "Always Military Courts",
-        "zh": "始终由军事法院"
+        "th": "ศาลรัฐธรรมนูญ เพราะมีหน่วยงานของรัฐเกี่ยวข้อง",
+        "en": "The Constitutional Court, because a state agency is involved",
+        "zh": "宪法法院，因为涉及国家机关"
       },
       {
-        "th": "คณะรัฐมนตรีทำหน้าที่ศาล",
-        "en": "The Cabinet acts as a court",
-        "zh": "内阁充当法院"
+        "th": "ผู้ตรวจการแผ่นดินชี้ขาดมีผลเป็นคำพิพากษา",
+        "en": "The Ombudsman decides the dispute with the force of a judgment",
+        "zh": "监察专员的决定具有判决效力"
       }
     ],
     "answer": 1,
@@ -1955,9 +2070,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 188 บัญญัติว่า การพิจารณาพิพากษาอรรถคดีเป็นอำนาจของศาล ซึ่งต้องดำเนินการให้เป็นไปตามกฎหมายและในพระปรมาภิไธยพระมหากษัตริย์ และผู้พิพากษาและตุลาการมีอิสระในการพิจารณาพิพากษาให้เป็นไปโดยรวดเร็ว เป็นธรรม และปราศจากอคติทั้งปวง [สูตรวิเคราะห์: ม.188 = อำนาจตุลาการเป็นของศาล + ในพระปรมาภิไธย + ผู้พิพากษาอิสระ]",
-      "en": "Section 188 makes adjudication the power of the courts, exercised in accordance with law and in the name of the King; judges are independent and must decide promptly, fairly and without bias. [Algorithm: Sec 188 = judicial power of the courts + in the King's name + independent judges].",
-      "zh": "第188条规定，审判案件是法院的权力，须依法律并以国王的名义进行；法官独立审判，须迅速、公正且不带任何偏见。[算法公式：第188条 = 审判权属于法院 + 以国王名义 + 法官独立]。"
+      "th": "มาตรา 188 บัญญัติว่า การพิจารณาพิพากษาอรรถคดีเป็นอำนาจของศาล ซึ่งต้องดำเนินการให้เป็นไปตามกฎหมายและในพระปรมาภิไธยพระมหากษัตริย์ และผู้พิพากษาและตุลาการมีอิสระในการพิจารณาพิพากษาให้เป็นไปโดยรวดเร็ว เป็นธรรม และปราศจากอคติทั้งปวง",
+      "en": "Section 188 makes adjudication the power of the courts, exercised in accordance with law and in the name of the King; judges are independent and must decide promptly, fairly and without bias..",
+      "zh": "第188条规定，审判案件是法院的权力，须依法律并以国王的名义进行；法官独立审判，须迅速、公正且不带任何偏见。。"
+    },
+    "hook": {
+      "th": "ม.188 = อำนาจตุลาการเป็นของศาล + ในพระปรมาภิไธย + ผู้พิพากษาอิสระ",
+      "en": "Sec 188 = judicial power of the courts + in the King's name + independent judges",
+      "zh": "第188条 = 审判权属于法院 + 以国王名义 + 法官独立"
     }
   },
   {
@@ -1995,9 +2115,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 196 บัญญัติว่า การบริหารงานบุคคลเกี่ยวกับผู้พิพากษาศาลยุติธรรมต้องมีความเป็นอิสระ และดำเนินการโดยคณะกรรมการตุลาการศาลยุติธรรม (ก.ต.) ซึ่งประกอบด้วยประธานศาลฎีกาเป็นประธาน กรรมการผู้ทรงคุณวุฒิซึ่งเป็นข้าราชการตุลาการในแต่ละชั้นศาล และผู้ทรงคุณวุฒิที่ไม่เป็นหรือเคยเป็นข้าราชการตุลาการไม่เกินสองคน [สูตรวิเคราะห์: อิสระของตุลาการ → บริหารงานบุคคลผ่าน ก.ต. ไม่ใช่ฝ่ายบริหาร]",
-      "en": "Section 196 requires personnel administration of Court of Justice judges to be independent and carried out by the Judicial Commission of the Courts of Justice, chaired by the President of the Supreme Court, with qualified judicial officials from each level of court and up to two qualified persons who are not and have never been judicial officials. [Algorithm: judicial independence → personnel run by the Judicial Commission, not the executive].",
-      "zh": "第196条规定，司法法院法官的人事管理须保持独立，由司法法院司法委员会负责；该委员会由最高法院院长任主席，成员包括各级法院的司法官员代表，以及不超过两名非现任或前任司法官员的专业人士。[算法公式：司法独立 → 法官人事由司法委员会而非行政机关管理]。"
+      "th": "มาตรา 196 บัญญัติว่า การบริหารงานบุคคลเกี่ยวกับผู้พิพากษาศาลยุติธรรมต้องมีความเป็นอิสระ และดำเนินการโดยคณะกรรมการตุลาการศาลยุติธรรม (ก.ต.) ซึ่งประกอบด้วยประธานศาลฎีกาเป็นประธาน กรรมการผู้ทรงคุณวุฒิซึ่งเป็นข้าราชการตุลาการในแต่ละชั้นศาล และผู้ทรงคุณวุฒิที่ไม่เป็นหรือเคยเป็นข้าราชการตุลาการไม่เกินสองคน",
+      "en": "Section 196 requires personnel administration of Court of Justice judges to be independent and carried out by the Judicial Commission of the Courts of Justice, chaired by the President of the Supreme Court, with qualified judicial officials from each level of court and up to two qualified persons who are not and have never been judicial officials..",
+      "zh": "第196条规定，司法法院法官的人事管理须保持独立，由司法法院司法委员会负责；该委员会由最高法院院长任主席，成员包括各级法院的司法官员代表，以及不超过两名非现任或前任司法官员的专业人士。。"
+    },
+    "hook": {
+      "th": "อิสระของตุลาการ → บริหารงานบุคคลผ่าน ก.ต. ไม่ใช่ฝ่ายบริหาร",
+      "en": "judicial independence → personnel run by the Judicial Commission, not the executive",
+      "zh": "司法独立 → 法官人事由司法委员会而非行政机关管理"
     }
   },
   {
@@ -2035,9 +2160,9 @@
     ],
     "answer": 2,
     "explanation": {
-      "th": "มาตรา 200 กำหนดศาลรัฐธรรมนูญประกอบด้วยตุลาการเก้าคน",
-      "en": "Section 200 provides for nine Constitutional Court judges.",
-      "zh": "第200条规定宪法法院由九名法官组成。"
+      "th": "มาตรา 200 กำหนดศาลรัฐธรรมนูญประกอบด้วยตุลาการเก้าคน เก้าที่นั่ง ไม่ใช่ฝูงชน และไม่ใช่ผู้พิพากษาคนเดียว คดีรัฐธรรมนูญตัดสินโดยองค์คณะนี้",
+      "en": "Section 200 provides for nine Constitutional Court judges. Nine seats, not a crowd and not a single judge. A constitutional case is decided by that bench.",
+      "zh": "第200条规定宪法法院由九名法官组成。 九个座位，不是一群人，也不是一位法官。宪法案件由这个合议庭决定。"
     }
   },
   {
@@ -2053,14 +2178,14 @@
     },
     "choices": [
       {
-        "th": "คณะกรรมการการเลือกตั้ง",
-        "en": "The Election Commission",
-        "zh": "选举委员会"
+        "th": "ศาลปกครองสูงสุด",
+        "en": "The Supreme Administrative Court",
+        "zh": "最高行政法院"
       },
       {
-        "th": "สภาจังหวัด",
-        "en": "A provincial council",
-        "zh": "府级议会"
+        "th": "ประธานศาลฎีกา",
+        "en": "The President of the Supreme Court",
+        "zh": "最高法院院长"
       },
       {
         "th": "กรมบัญชีกลาง",
@@ -2156,9 +2281,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 200 กำหนดให้ศาลรัฐธรรมนูญประกอบด้วยตุลาการศาลรัฐธรรมนูญจำนวนเก้าคน และมาตรา 207 บัญญัติให้มีวาระการดำรงตำแหน่งเจ็ดปีนับแต่วันที่พระมหากษัตริย์ทรงแต่งตั้ง และดำรงตำแหน่งได้เพียงวาระเดียว [สูตรตัวเลข: ศาล รธน. = 9 คน, วาระ 7 ปี, วาระเดียว] [เทคนิคช่วยจำ: เก้าตุลาการ เจ็ดปีเดี่ยว]",
-      "en": "Section 200 establishes a bench of 9 Constitutional Court judges. Section 207 sets a single 7-year term counted from the date of royal appointment. [Formula: 9 judges, 7-year term, single term only].",
-      "zh": "第200条规定宪法法院由9名法官组成；第207条规定任期7年，自国王任命之日起算，且只能担任一届。[数字公式：宪法法院 = 9名法官，7年任期，单任制] [记忆口诀：九位法官，七年单任]。"
+      "th": "มาตรา 200 กำหนดให้ศาลรัฐธรรมนูญประกอบด้วยตุลาการศาลรัฐธรรมนูญจำนวนเก้าคน และมาตรา 207 บัญญัติให้มีวาระการดำรงตำแหน่งเจ็ดปีนับแต่วันที่พระมหากษัตริย์ทรงแต่งตั้ง และดำรงตำแหน่งได้เพียงวาระเดียว",
+      "en": "Section 200 establishes a bench of 9 Constitutional Court judges. Section 207 sets a single 7-year term counted from the date of royal appointment..",
+      "zh": "第200条规定宪法法院由9名法官组成；第207条规定任期7年，自国王任命之日起算，且只能担任一届。。"
+    },
+    "hook": {
+      "th": "เก้าเก้าอี้ วาระเดียวเจ็ดปี และเก้าอี้นั้นไม่เวียนกลับมา",
+      "en": "Nine chairs, one term of seven years, and the chair does not come around again.",
+      "zh": "九把椅子，一届七年，这把椅子不再轮回来。"
     }
   },
   {
@@ -2196,9 +2326,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 212 บัญญัติว่า ในการที่ศาลจะใช้บทบัญญัติแห่งกฎหมายบังคับแก่คดีใด ถ้าศาลเห็นเองหรือคู่ความโต้แย้งพร้อมด้วยเหตุผลว่าบทบัญญัตินั้นขัดหรือแย้งต่อรัฐธรรมนูญ และยังไม่มีคำวินิจฉัยของศาลรัฐธรรมนูญในส่วนที่เกี่ยวกับบทบัญญัตินั้น ให้ศาลส่งความเห็นต่อศาลรัฐธรรมนูญเพื่อวินิจฉัย ระหว่างนั้นศาลพิจารณาต่อไปได้แต่ต้องรอการพิพากษาคดีไว้ชั่วคราว [สูตรวิเคราะห์: คดีในศาล → กฎหมายที่จะใช้น่าสงสัยว่าขัด รธน. → ส่งศาล รธน. + พิจารณาต่อได้แต่รอการพิพากษา]",
-      "en": "Section 212: when a court is to apply a legal provision and the court itself, or a party with reasons, considers it unconstitutional, and the Constitutional Court has not yet ruled on that provision, the court refers its opinion to the Constitutional Court. Meanwhile it may continue the proceedings but must suspend judgment. [Algorithm: doubtful statute in a pending case → refer to the Constitutional Court + continue hearing but suspend judgment].",
-      "zh": "第212条规定：法院适用某法律条款时，若法院自行认为或当事人附理由主张该条款违宪，且宪法法院尚未就该条款作出裁决，法院应将意见送交宪法法院裁决；在此期间可继续审理，但须暂缓作出判决。[算法公式：审理中的法律疑似违宪 → 送交宪法法院 + 继续审理但暂缓判决]。"
+      "th": "มาตรา 212 บัญญัติว่า ในการที่ศาลจะใช้บทบัญญัติแห่งกฎหมายบังคับแก่คดีใด ถ้าศาลเห็นเองหรือคู่ความโต้แย้งพร้อมด้วยเหตุผลว่าบทบัญญัตินั้นขัดหรือแย้งต่อรัฐธรรมนูญ และยังไม่มีคำวินิจฉัยของศาลรัฐธรรมนูญในส่วนที่เกี่ยวกับบทบัญญัตินั้น ให้ศาลส่งความเห็นต่อศาลรัฐธรรมนูญเพื่อวินิจฉัย ระหว่างนั้นศาลพิจารณาต่อไปได้แต่ต้องรอการพิพากษาคดีไว้ชั่วคราว",
+      "en": "Section 212: when a court is to apply a legal provision and the court itself, or a party with reasons, considers it unconstitutional, and the Constitutional Court has not yet ruled on that provision, the court refers its opinion to the Constitutional Court. Meanwhile it may continue the proceedings but must suspend judgment..",
+      "zh": "第212条规定：法院适用某法律条款时，若法院自行认为或当事人附理由主张该条款违宪，且宪法法院尚未就该条款作出裁决，法院应将意见送交宪法法院裁决；在此期间可继续审理，但须暂缓作出判决。。"
+    },
+    "hook": {
+      "th": "คดีในศาล → กฎหมายที่จะใช้น่าสงสัยว่าขัด รธน. → ส่งศาล รธน. + พิจารณาต่อได้แต่รอการพิพากษา",
+      "en": "doubtful statute in a pending case → refer to the Constitutional Court + continue hearing but suspend judgment",
+      "zh": "审理中的法律疑似违宪 → 送交宪法法院 + 继续审理但暂缓判决"
     }
   },
   {
@@ -2236,7 +2371,7 @@
     ],
     "answer": 1,
     "explanation": {
-      "th": "มาตรา 224 กำหนดหน้าที่และอำนาจของ กกต. ในการจัดหรือดำเนินการและควบคุมการเลือกตั้งและประชามติให้สุจริตเที่ยงธรรมตามที่บัญญัติ",
+      "th": "มาตรา 224 กำหนดหน้าที่และอำนาจของ กกต ในการจัดหรือดำเนินการและควบคุมการเลือกตั้งและประชามติให้สุจริตเที่ยงธรรมตามที่บัญญัติ",
       "en": "Section 224 gives the Election Commission duties to organise or conduct and supervise elections and referendums fairly as specified.",
       "zh": "第224条规定选举委员会依条款组织或实施并监督选举及公投，确保诚实公正。"
     }
@@ -2254,14 +2389,14 @@
     },
     "choices": [
       {
-        "th": "ออกกฎหมายเอง",
-        "en": "Enact laws themselves",
-        "zh": "自行制定法律"
+        "th": "สั่งลงโทษทางอาญาหน่วยงานนั้น",
+        "en": "Impose a criminal sentence on the agency",
+        "zh": "对该机关处以刑罚"
       },
       {
-        "th": "แต่งตั้งนายกรัฐมนตรี",
-        "en": "Appoint the Prime Minister",
-        "zh": "任命总理"
+        "th": "ยกเลิกคำสั่งของหน่วยงานได้เอง",
+        "en": "Cancel the agency's order themselves",
+        "zh": "自行撤销该机关的命令"
       },
       {
         "th": "แสวงหาข้อเท็จจริงและเสนอแก้ไขตามหน้าที่",
@@ -2269,9 +2404,9 @@
         "zh": "依职权查明事实并建议改正"
       },
       {
-        "th": "พิพากษาจำคุกโดยตรง",
-        "en": "Directly sentence people to prison",
-        "zh": "直接判处监禁"
+        "th": "ฟ้องคดีแทนประชาชนในศาลปกครอง",
+        "en": "Sue on the citizen's behalf in the Administrative Court",
+        "zh": "代表公民向行政法院起诉"
       }
     ],
     "answer": 2,
@@ -2316,7 +2451,7 @@
     ],
     "answer": 3,
     "explanation": {
-      "th": "มาตรา 234 กำหนดหน้าที่ไต่สวนของ ป.ป.ช. รวมถึงข้อกล่าวหาเจ้าหน้าที่รัฐร่ำรวยผิดปกติตามเงื่อนไขที่บัญญัติ",
+      "th": "มาตรา 234 กำหนดหน้าที่ไต่สวนของ ป.ป.ช รวมถึงข้อกล่าวหาเจ้าหน้าที่รัฐร่ำรวยผิดปกติตามเงื่อนไขที่บัญญัติ",
       "en": "Section 234 assigns the NACC investigative duties including allegations of unusual wealth against State officials under its conditions.",
       "zh": "第234条规定国家反腐败委员会的调查职责，包括依规定调查国家工作人员异常富有的指控。"
     }
@@ -2361,9 +2496,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "หมวด 12 ประกอบด้วย 5 องค์กรอิสระ: (1) คณะกรรมการการเลือกตั้ง (กกต. 7 คน), (2) ผู้ตรวจการแผ่นดิน (3 คน), (3) คณะกรรมการป้องกันและปราบปรามการทุจริตแห่งชาติ (ป.ป.ช. 9 คน), (4) คณะกรรมการตรวจเงินแผ่นดิน (คตง. 7 คน) และ (5) คณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม. 7 คน) [สูตรตัวเลข: 5 องค์กรอิสระ มีจำนวนกรรมการคือ 7-3-9-7-7]",
-      "en": "Chapter 12 establishes five Independent Organs: Election Commission (7), Ombudsmen (3), NACC (9), State Audit Commission (7), and NHRC (7). [Formula: 5 Independent Organs with counts 7-3-9-7-7].",
-      "zh": "第12章设立了五大独立机构：选举委员会（7人）、监察员（3人）、国家反腐败委员会（9人）、国家审计委员会（7人）和国家人权委员会（7人）。[数字公式：5大独立机构，人数口诀：7-3-9-7-7]。"
+      "th": "หมวด 12 ประกอบด้วย 5 องค์กรอิสระ: (1) คณะกรรมการการเลือกตั้ง (กกต 7 คน), (2) ผู้ตรวจการแผ่นดิน (3 คน), (3) คณะกรรมการป้องกันและปราบปรามการทุจริตแห่งชาติ (ป.ป.ช 9 คน), (4) คณะกรรมการตรวจเงินแผ่นดิน (คตง 7 คน) และ (5) คณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม 7 คน)",
+      "en": "Chapter 12 establishes five Independent Organs: Election Commission (7), Ombudsmen (3), NACC (9), State Audit Commission (7), and NHRC (7).",
+      "zh": "第12章设立了五大独立机构：选举委员会（7人）、监察员（3人）、国家反腐败委员会（9人）、国家审计委员会（7人）和国家人权委员会（7人）。。"
+    },
+    "hook": {
+      "th": "ห้าบานประตูในทางเดินองค์กรอิสระ: เลือกตั้ง ผู้ตรวจการ ป.ป.ช. ตรวจเงินแผ่นดิน สิทธิมนุษยชน",
+      "en": "Five doors along the independent corridor: elections, ombudsman, corruption, audit, human rights.",
+      "zh": "独立机构走廊上五扇门：选举、监察、反贪、审计、人权。"
     }
   },
   {
@@ -2402,9 +2542,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 228 กำหนดให้ผู้ตรวจการแผ่นดินมีจำนวนสามคน และมาตรา 230 กำหนดอำนาจหน้าที่ในการแสวงหาข้อเท็จจริงเมื่อมีการไม่ปฏิบัติตามกฎหมาย หรือปฏิบัตินอกเหนือหน้าที่ หรือสร้างความเดือดร้อนเกินสมควรแก่ประชาชน [สูตรตัวเลข: ผู้ตรวจการแผ่นดิน = 3 คน เยียวยาความเดือดร้อนประชาชน]",
-      "en": "Section 228 provides for 3 Ombudsmen; Section 230 empowers them to investigate maladministration, failure to enforce laws, or unreasonable hardship caused to citizens. [Formula: 3 Ombudsmen redress citizen grievances].",
-      "zh": "第228条规定监察员设3人；第230条规定其职责是调查国家机关不依法作为、越权或不合理地给民众造成困扰的行为。[数字公式：监察员3人，专管公职人员行政不当与民众困扰]。"
+      "th": "มาตรา 228 กำหนดให้ผู้ตรวจการแผ่นดินมีจำนวนสามคน และมาตรา 230 กำหนดอำนาจหน้าที่ในการแสวงหาข้อเท็จจริงเมื่อมีการไม่ปฏิบัติตามกฎหมาย หรือปฏิบัตินอกเหนือหน้าที่ หรือสร้างความเดือดร้อนเกินสมควรแก่ประชาชน",
+      "en": "Section 228 provides for 3 Ombudsmen; Section 230 empowers them to investigate maladministration, failure to enforce laws, or unreasonable hardship caused to citizens.",
+      "zh": "第228条规定监察员设3人；第230条规定其职责是调查国家机关不依法作为、越权或不合理地给民众造成困扰的行为。。"
+    },
+    "hook": {
+      "th": "สามคนที่เคาน์เตอร์ ไม่ใช่ฝูงชน",
+      "en": "Three people at the counter, not a crowd.",
+      "zh": "柜台后面三个人，不是一群人。"
     }
   },
   {
@@ -2425,26 +2570,26 @@
         "zh": "独立、及时、公正且不抱偏见"
       },
       {
-        "th": "ทำตามผู้มีอิทธิพลเสมอ",
-        "en": "Always follow influential people",
-        "zh": "始终听从有势力者"
+        "th": "ทำตามคำสั่งผู้บังคับบัญชาในทุกสำนวน",
+        "en": "Follow a superior's instruction on every file",
+        "zh": "每份案卷都服从上级指示"
       },
       {
-        "th": "คำนึงถึงพรรคการเมืองก่อน",
-        "en": "Put party interests first",
-        "zh": "优先考虑政党利益"
+        "th": "ปรึกษารัฐมนตรีเจ้าสังกัดก่อนสั่งคดี",
+        "en": "Consult the minister in charge before ordering the case",
+        "zh": "决定案件前先咨询主管部长"
       },
       {
-        "th": "รับของตอบแทนก่อนสั่งคดี",
-        "en": "Accept a reward before deciding",
-        "zh": "决定前收取报酬"
+        "th": "สั่งตามความเห็นของพนักงานสอบสวนเสมอ",
+        "en": "Always order whatever the investigator recommends",
+        "zh": "始终按侦查人员的意见作出决定"
       }
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 248 รับรองความเป็นอิสระของพนักงานอัยการในการพิจารณาสั่งคดีและปฏิบัติหน้าที่โดยรวดเร็ว เที่ยงธรรม และปราศจากอคติ",
-      "en": "Section 248 protects prosecutorial independence and requires prompt, fair, unbiased performance.",
-      "zh": "第248条保障检察官独立处理案件，并要求及时、公正且无偏见地履职。"
+      "th": "มาตรา 248 รับรองความเป็นอิสระของพนักงานอัยการในการพิจารณาสั่งคดีและปฏิบัติหน้าที่โดยรวดเร็ว เที่ยงธรรม และปราศจากอคติ คำสั่งของอัยการไม่ใช่การช่วยเหลือพนักงานสอบสวนหรือรัฐมนตรี อิสระหมายความว่าสำนวนจบที่พยานหลักฐาน ทำโดยเร็ว และไม่มีฝักใฝ่",
+      "en": "Section 248 protects prosecutorial independence and requires prompt, fair, unbiased performance. The prosecutor's order is not a favour for the investigator or the minister. Independence means the file ends on the evidence, promptly and without a side.",
+      "zh": "第248条保障检察官独立处理案件，并要求及时、公正且无偏见地履职。 检察官的决定不是给侦查人员或部长的人情。独立意味着案卷止于证据，并且迅速、不偏袒。"
     }
   },
   {
@@ -2562,9 +2707,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 248 บัญญัติว่า พนักงานอัยการมีอิสระในการพิจารณาสั่งคดีและการปฏิบัติหน้าที่ให้เป็นไปโดยรวดเร็ว เที่ยงธรรม และปราศจากอคติทั้งปวง และไม่ให้ถือว่าเป็นคำสั่งทางปกครอง [สูตรวิเคราะห์: อัยการ = อิสระในการสั่งคดี + ไม่ใช่คำสั่งทางปกครอง]",
-      "en": "Section 248 makes public prosecutors independent in deciding cases and performing their duties promptly, fairly and without bias, and provides that these decisions are not deemed administrative orders. [Algorithm: prosecutor = independent case decisions + not administrative orders].",
-      "zh": "第248条规定，检察官在决定案件及履行职责时享有独立性，须迅速、公正且不带偏见，且此类决定不视为行政命令。[算法公式：检察官 = 独立决定案件 + 不属行政命令]。"
+      "th": "มาตรา 248 บัญญัติว่า พนักงานอัยการมีอิสระในการพิจารณาสั่งคดีและการปฏิบัติหน้าที่ให้เป็นไปโดยรวดเร็ว เที่ยงธรรม และปราศจากอคติทั้งปวง และไม่ให้ถือว่าเป็นคำสั่งทางปกครอง",
+      "en": "Section 248 makes public prosecutors independent in deciding cases and performing their duties promptly, fairly and without bias, and provides that these decisions are not deemed administrative orders..",
+      "zh": "第248条规定，检察官在决定案件及履行职责时享有独立性，须迅速、公正且不带偏见，且此类决定不视为行政命令。。"
+    },
+    "hook": {
+      "th": "อัยการ = อิสระในการสั่งคดี + ไม่ใช่คำสั่งทางปกครอง",
+      "en": "prosecutor = independent case decisions + not administrative orders",
+      "zh": "检察官 = 独立决定案件 + 不属行政命令"
     }
   },
   {
@@ -2602,9 +2752,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 248 บัญญัติว่า การบริหารงานบุคคลเกี่ยวกับพนักงานอัยการต้องดำเนินการโดยคณะกรรมการอัยการ ซึ่งอย่างน้อยต้องประกอบด้วยประธานกรรมการที่ไม่เป็นพนักงานอัยการ และผู้ทรงคุณวุฒิที่ได้รับเลือกจากพนักงานอัยการ โดยต้องมีผู้ที่ไม่เป็นหรือเคยเป็นพนักงานอัยการอย่างน้อยสองคน [สูตรเปรียบเทียบ: ผู้พิพากษาศาลยุติธรรม → ก.ต., พนักงานอัยการ → ก.อ.]",
-      "en": "Section 248 requires personnel administration of public prosecutors to be carried out by the Public Prosecution Commission, which must at least include a chair who is not a prosecutor and qualified members elected by prosecutors, at least two of whom are not and have never been prosecutors. [Comparison: Court of Justice judges → Judicial Commission; prosecutors → Public Prosecution Commission].",
-      "zh": "第248条规定，检察官的人事管理须由检察委员会负责；该委员会至少须包括一名非检察官的主席，以及由检察官选出的专业人士，其中至少两人从未担任过检察官。[对比：司法法院法官 → 司法委员会；检察官 → 检察委员会]。"
+      "th": "มาตรา 248 บัญญัติว่า การบริหารงานบุคคลเกี่ยวกับพนักงานอัยการต้องดำเนินการโดยคณะกรรมการอัยการ ซึ่งอย่างน้อยต้องประกอบด้วยประธานกรรมการที่ไม่เป็นพนักงานอัยการ และผู้ทรงคุณวุฒิที่ได้รับเลือกจากพนักงานอัยการ โดยต้องมีผู้ที่ไม่เป็นหรือเคยเป็นพนักงานอัยการอย่างน้อยสองคน",
+      "en": "Section 248 requires personnel administration of public prosecutors to be carried out by the Public Prosecution Commission, which must at least include a chair who is not a prosecutor and qualified members elected by prosecutors, at least two of whom are not and have never been prosecutors..",
+      "zh": "第248条规定，检察官的人事管理须由检察委员会负责；该委员会至少须包括一名非检察官的主席，以及由检察官选出的专业人士，其中至少两人从未担任过检察官。。"
+    },
+    "hook": {
+      "th": "ผู้พิพากษาศาลยุติธรรม → ก.ต., พนักงานอัยการ → ก.อ.",
+      "en": "Court of Justice judges → Judicial Commission; prosecutors → Public Prosecution Commission",
+      "zh": "司法法院法官 → 司法委员会；检察官 → 检察委员会"
     }
   },
   {
@@ -2620,19 +2775,19 @@
     },
     "choices": [
       {
-        "th": "คณะรัฐมนตรีต้องทำเองทุกเรื่อง",
-        "en": "The Cabinet must do everything itself",
-        "zh": "一切必须由内阁亲自办理"
+        "th": "ส่วนท้องถิ่นทำได้เฉพาะงานที่ส่วนกลางมอบให้เป็นครั้ง ๆ",
+        "en": "Local bodies may act only when the centre assigns each task",
+        "zh": "地方机构只能在中央逐项交办时行事"
       },
       {
-        "th": "ห้ามองค์กรปกครองส่วนท้องถิ่น",
-        "en": "Local government is prohibited",
-        "zh": "禁止地方政府"
+        "th": "นโยบายท้องถิ่นต้องตรงกับมติคณะรัฐมนตรีทุกข้อ",
+        "en": "Local policy must match every Cabinet resolution",
+        "zh": "地方政策必须与内阁的每一项决议一致"
       },
       {
-        "th": "องค์กรท้องถิ่นเป็นรัฐเอกราช",
-        "en": "Local bodies are sovereign states",
-        "zh": "地方机构是主权国家"
+        "th": "องค์กรปกครองส่วนท้องถิ่นเป็นรัฐอิสระในจังหวัดของตน",
+        "en": "Each local body is a sovereign state inside its province",
+        "zh": "每个地方机构在其府内是主权国家"
       },
       {
         "th": "การปกครองตนเองตามเจตนารมณ์ประชาชนในท้องถิ่น",
@@ -2642,9 +2797,9 @@
     ],
     "answer": 3,
     "explanation": {
-      "th": "มาตรา 249 ให้จัดการปกครองส่วนท้องถิ่นตามหลักการปกครองตนเองตามเจตนารมณ์ของประชาชนและตามรูปแบบที่กฎหมายกำหนด",
-      "en": "Section 249 provides for local self-government according to residents’ wishes and forms prescribed by law.",
-      "zh": "第249条规定依居民意愿及法律规定的形式实行地方自治。"
+      "th": "มาตรา 249 ให้จัดการปกครองส่วนท้องถิ่นตามหลักการปกครองตนเองตามเจตนารมณ์ของประชาชนและตามรูปแบบที่กฎหมายกำหนด ซอยน้ำท่วมเป็นเรื่องของพื้นที่ มาตรานี้คือเหตุผลที่องค์กรท้องถิ่นทำตามความต้องการของคนในพื้นที่ได้ ในรูปแบบที่กฎหมายกำหนด โดยไม่ต้องรอให้กระทรวงสังเกตเห็น",
+      "en": "Section 249 provides for local self-government according to residents’ wishes and forms prescribed by law. A flooded lane is a local fact. This section is why a local body may act on what the residents want, in the form the statute gives it, without waiting for a ministry to notice.",
+      "zh": "第249条规定依居民意愿及法律规定的形式实行地方自治。 积水的巷子是当地的事实。这一条说明地方机构可以按居民的意愿、以法律规定的形式行事，而不必等部委注意到。"
     }
   },
   {
@@ -2665,19 +2820,19 @@
         "zh": "通过选举"
       },
       {
-        "th": "จับสลากทั้งหมด",
-        "en": "Entirely by lottery",
-        "zh": "全部抽签"
+        "th": "แต่งตั้งโดยผู้ว่าราชการจังหวัด",
+        "en": "Appointed by the provincial governor",
+        "zh": "由府尹任命"
       },
       {
-        "th": "แต่งตั้งโดยเอกชน",
-        "en": "Appointment by private firms",
-        "zh": "由私人企业任命"
+        "th": "คัดเลือกโดยสภาท้องถิ่นจากบัญชีของกระทรวง",
+        "en": "Chosen by the local council from a ministry list",
+        "zh": "由地方议会从部委名单中挑选"
       },
       {
-        "th": "รับตำแหน่งโดยมรดก",
-        "en": "By inheritance",
-        "zh": "世袭"
+        "th": "เลือกตั้งทางอ้อมผ่านกำนันและผู้ใหญ่บ้าน",
+        "en": "Indirectly elected through village and subdistrict heads",
+        "zh": "通过村长和区长间接选举"
       }
     ],
     "answer": 0,
@@ -2700,9 +2855,9 @@
     },
     "choices": [
       {
-        "th": "ไม่ต้องรายงานผล",
-        "en": "Never report results",
-        "zh": "无需报告结果"
+        "th": "เปิดเผยเฉพาะเมื่องบปีนั้นปิดแล้ว",
+        "en": "Disclose the accounts only after that budget year has closed",
+        "zh": "只在该预算年度结束后才公开账目"
       },
       {
         "th": "เปิดเผยข้อมูลและจัดกลไกให้ประชาชนมีส่วนร่วม",
@@ -2710,14 +2865,14 @@
         "zh": "公开信息并建立公众参与机制"
       },
       {
-        "th": "ปิดข้อมูลการใช้เงินทุกกรณี",
-        "en": "Always conceal spending",
-        "zh": "在所有情况下隐瞒支出"
+        "th": "เปิดเผยต่อสภาท้องถิ่นก็พอ ไม่ต้องให้ประชาชนเห็น",
+        "en": "Reporting to the local council is enough; residents need not see it",
+        "zh": "向地方议会报告即可，居民不必看到"
       },
       {
-        "th": "เปิดเฉพาะผู้บริจาค",
-        "en": "Disclose only to donors",
-        "zh": "仅向捐赠者公开"
+        "th": "เปิดเผยเฉพาะผู้ที่ขอเป็นหนังสือ",
+        "en": "Disclose only to a person who asks in writing",
+        "zh": "只向书面提出请求的人公开"
       }
     ],
     "answer": 1,
@@ -2763,9 +2918,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 249 ให้จัดการปกครองส่วนท้องถิ่นตามหลักแห่งการปกครองตนเองตามเจตนารมณ์ของประชาชนในท้องถิ่น และการจัดตั้งในรูปแบบใดให้คำนึงถึงเจตนารมณ์ของประชาชนและความสามารถในการปกครองตนเองด้านรายได้ จำนวนและความหนาแน่นของประชากร และพื้นที่ ส่วนมาตรา 250 ให้องค์กรปกครองส่วนท้องถิ่นมีหน้าที่ดูแลและจัดทำบริการสาธารณะเพื่อประโยชน์ของประชาชนในท้องถิ่น และมีอิสระในการบริหาร การเงินและการคลัง [สูตรวิเคราะห์: ม.249-250 = ท้องถิ่นปกครองตนเอง + บริการสาธารณะเพื่อคนในท้องถิ่น]",
-      "en": "Section 249 organises local government on the principle of self-government according to the will of local people; the form chosen must consider that will and the capacity for self-government in revenue, population size and density, and area. Section 250 gives local bodies duties to provide public services for local people and autonomy in administration and finance. [Algorithm: local administration → self-government + local public services].",
-      "zh": "第249条规定依当地居民意愿实行地方自治；设立何种形式须考虑居民意愿及其在收入、人口数量与密度、面积方面的自治能力。第250条规定地方机构负责为当地居民提供公共服务，并在行政与财政方面享有自主权。[算法公式：第249-250条 = 地方自治 + 本地公共服务]。"
+      "th": "มาตรา 249 ให้จัดการปกครองส่วนท้องถิ่นตามหลักแห่งการปกครองตนเองตามเจตนารมณ์ของประชาชนในท้องถิ่น และการจัดตั้งในรูปแบบใดให้คำนึงถึงเจตนารมณ์ของประชาชนและความสามารถในการปกครองตนเองด้านรายได้ จำนวนและความหนาแน่นของประชากร และพื้นที่ ส่วนมาตรา 250 ให้องค์กรปกครองส่วนท้องถิ่นมีหน้าที่ดูแลและจัดทำบริการสาธารณะเพื่อประโยชน์ของประชาชนในท้องถิ่น และมีอิสระในการบริหาร การเงินและการคลัง",
+      "en": "Section 249 organises local government on the principle of self-government according to the will of local people; the form chosen must consider that will and the capacity for self-government in revenue, population size and density, and area. Section 250 gives local bodies duties to provide public services for local people and autonomy in administration and finance..",
+      "zh": "第249条规定依当地居民意愿实行地方自治；设立何种形式须考虑居民意愿及其在收入、人口数量与密度、面积方面的自治能力。第250条规定地方机构负责为当地居民提供公共服务，并在行政与财政方面享有自主权。。"
+    },
+    "hook": {
+      "th": "ม.249-250 = ท้องถิ่นปกครองตนเอง + บริการสาธารณะเพื่อคนในท้องถิ่น",
+      "en": "local administration → self-government + local public services",
+      "zh": "第249-250条 = 地方自治 + 本地公共服务"
     }
   },
   {
@@ -2803,9 +2963,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 252 บัญญัติว่า สมาชิกสภาท้องถิ่นต้องมาจากการเลือกตั้ง ส่วนผู้บริหารท้องถิ่นให้มาจากการเลือกตั้งหรือมาจากความเห็นชอบของสภาท้องถิ่น หรือในกรณีองค์กรปกครองส่วนท้องถิ่นรูปแบบพิเศษ จะให้มาโดยวิธีอื่นก็ได้ แต่ต้องคำนึงถึงการมีส่วนร่วมของประชาชน [สูตรวิเคราะห์: ประชาธิปไตยท้องถิ่น → สภาท้องถิ่นมาจากการเลือกตั้งเสมอ ผู้บริหารยึดโยงกับประชาชน]",
-      "en": "Section 252 requires local council members to be elected; local executives are elected or approved by the local council, and in special forms of local government may be chosen by another method that still considers public participation. [Algorithm: local democracy → councils always elected; executives linked to the people].",
-      "zh": "第252条规定地方议员必须经选举产生；地方行政首长经选举或经地方议会同意产生，特殊形式的地方机构可采用其他方式，但须考虑民众参与。[算法公式：地方民主 → 议会必经选举，行政首长须与民意相连]。"
+      "th": "มาตรา 252 บัญญัติว่า สมาชิกสภาท้องถิ่นต้องมาจากการเลือกตั้ง ส่วนผู้บริหารท้องถิ่นให้มาจากการเลือกตั้งหรือมาจากความเห็นชอบของสภาท้องถิ่น หรือในกรณีองค์กรปกครองส่วนท้องถิ่นรูปแบบพิเศษ จะให้มาโดยวิธีอื่นก็ได้ แต่ต้องคำนึงถึงการมีส่วนร่วมของประชาชน",
+      "en": "Section 252 requires local council members to be elected; local executives are elected or approved by the local council, and in special forms of local government may be chosen by another method that still considers public participation..",
+      "zh": "第252条规定地方议员必须经选举产生；地方行政首长经选举或经地方议会同意产生，特殊形式的地方机构可采用其他方式，但须考虑民众参与。。"
+    },
+    "hook": {
+      "th": "ประชาธิปไตยท้องถิ่น → สภาท้องถิ่นมาจากการเลือกตั้งเสมอ ผู้บริหารยึดโยงกับประชาชน",
+      "en": "local democracy → councils always elected; executives linked to the people",
+      "zh": "地方民主 → 议会必经选举，行政首长须与民意相连"
     }
   },
   {
@@ -2821,14 +2986,14 @@
     },
     "choices": [
       {
-        "th": "ทำได้ด้วยมติจังหวัด",
-        "en": "A province may approve it",
-        "zh": "一府同意即可"
+        "th": "ทำได้ถ้าเสียงรัฐสภาถึงสามในห้า",
+        "en": "Yes, if parliament reaches three-fifths",
+        "zh": "可以，只要国会达到五分之三"
       },
       {
-        "th": "ไม่มีข้อจำกัดใด",
-        "en": "There are no restrictions",
-        "zh": "没有任何限制"
+        "th": "ทำได้ถ้าผ่านประชามติ",
+        "en": "Yes, if a referendum approves it",
+        "zh": "可以，只要公投通过"
       },
       {
         "th": "แก้ไขเช่นนั้นมิได้",
@@ -2836,9 +3001,9 @@
         "zh": "禁止此类修正"
       },
       {
-        "th": "ทำได้ด้วยเสียงรัฐมนตรีคนเดียว",
-        "en": "One minister may approve it",
-        "zh": "一位部长同意即可"
+        "th": "ทำได้ถ้าไม่แตะหมวดพระมหากษัตริย์",
+        "en": "Yes, if the chapter on the King is left untouched",
+        "zh": "可以，只要不动国王那一章"
       }
     ],
     "answer": 2,
@@ -2883,9 +3048,14 @@
     ],
     "answer": 3,
     "explanation": {
-      "th": "มาตรา 256 (1) เปิดให้ประชาชนผู้มีสิทธิเลือกตั้งไม่น้อยกว่า 50,000 คนเข้าชื่อเสนอแก้ไขตามกฎหมาย",
-      "en": "Section 256(1) allows at least 50,000 eligible voters to submit an amendment proposal under the petition law.",
-      "zh": "第256条第1项允许至少50,000名有选举权者依联署法律提出修宪案。"
+      "th": "มาตรา 256 (1) เปิดให้ประชาชนผู้มีสิทธิเลือกตั้งไม่น้อยกว่า 50,000 คนเข้าชื่อเสนอแก้ไขตามกฎหมาย หนึ่งหมื่นชื่อเปิดประตูร่างกฎหมายธรรมดาที่เกี่ยวกับสิทธิ ห้าหมื่นชื่อเป็นอีกประตู สำหรับการแก้รัฐธรรมนูญ อย่าสลับประตู",
+      "en": "Section 256(1) allows at least 50,000 eligible voters to submit an amendment proposal under the petition law. Ten thousand signatures open an ordinary bill about rights. Fifty thousand is the other door, the one for amending the constitution. Do not swap the doors.",
+      "zh": "第256条第1项允许至少50,000名有选举权者依联署法律提出修宪案。 一万个签名打开的是关于权利的普通法案。五万是另一扇门，用来修宪。别把两扇门换错。"
+    },
+    "hook": {
+      "th": "แก้รัฐธรรมนูญใช้ห้าเท่าของหนึ่งหมื่นคนที่เสนอร่างกฎหมายธรรมดา",
+      "en": "Amending the constitution takes five times the ten thousand who can propose an ordinary bill.",
+      "zh": "修宪要的人数，是提出普通法案那一万的五倍。"
     }
   },
   {
@@ -2923,9 +3093,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 256 (2) ให้รัฐสภาพิจารณาร่างรัฐธรรมนูญแก้ไขเพิ่มเติมเป็นสามวาระ โดยแต่ละวาระมีเงื่อนไขตามมาตรานี้",
-      "en": "Section 256(2) requires three readings, each subject to the conditions set out in that section.",
-      "zh": "第256条第2项要求三读，各读须符合该条规定的条件。"
+      "th": "มาตรา 256 (2) ให้รัฐสภาพิจารณาร่างรัฐธรรมนูญแก้ไขเพิ่มเติมเป็นสามวาระ โดยแต่ละวาระมีเงื่อนไขตามมาตรานี้ ผ่านห้องสามครั้ง วาระหลักการ วาระรายมาตรา แล้วจึงลงมติ แต่ละวาระมีเสียงของมันเอง การนั่งครั้งเดียวไม่ใช่การแก้ไขเพิ่มเติม",
+      "en": "Section 256(2) requires three readings, each subject to the conditions set out in that section. Three times through the room: the principle, the detail, then the final vote. Each reading has its own majority. One sitting is not an amendment.",
+      "zh": "第256条第2项要求三读，各读须符合该条规定的条件。 过三遍房间：原则、逐条、然后终局表决。每一读有自己的多数。开一次会不是修宪。"
+    },
+    "hook": {
+      "th": "ผ่านห้องสามครั้ง: หลักการ รายละเอียด แล้วจึงลงมติสุดท้าย",
+      "en": "Three times through the room: the principle, the detail, then the final vote.",
+      "zh": "过三遍房间：原则、细节，然后终局表决。"
     }
   },
   {
@@ -2963,9 +3138,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 255 บัญญัติว่า การแก้ไขเพิ่มเติมรัฐธรรมนูญที่เป็นการเปลี่ยนแปลงการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือเปลี่ยนแปลงรูปแบบของรัฐ จะกระทำมิได้ [สูตรวิเคราะห์: ขอบเขตการแก้ รธน. → ห้ามเปลี่ยนระบอบ และห้ามเปลี่ยนรูปแบบของรัฐ] [เทคนิคช่วยจำ: ม.255 ล็อกสองสิ่ง: ระบอบประชาธิปไตยฯ และรูปแบบของรัฐ]",
-      "en": "Section 255 sets an absolute limit on amendments: changing the democratic regime with the King as Head of State, or changing the form of the State, is prohibited. [Algorithm: amendment ban = regime + form of the State].",
-      "zh": "第255条设立了修宪的绝对界限：凡改变以国王为国家元首的民主政体或改变国家形式的宪法修正，一概不得进行。[算法公式：第255条双重红线 = 政体 + 国家形式]。"
+      "th": "มาตรา 255 บัญญัติว่า การแก้ไขเพิ่มเติมรัฐธรรมนูญที่เป็นการเปลี่ยนแปลงการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือเปลี่ยนแปลงรูปแบบของรัฐ จะกระทำมิได้",
+      "en": "Section 255 sets an absolute limit on amendments: changing the democratic regime with the King as Head of State, or changing the form of the State, is prohibited..",
+      "zh": "第255条设立了修宪的绝对界限：凡改变以国王为国家元首的民主政体或改变国家形式的宪法修正，一概不得进行。。"
+    },
+    "hook": {
+      "th": "ม.255 ล็อกสองสิ่ง: ระบอบประชาธิปไตยฯ และรูปแบบของรัฐ",
+      "en": "amendment ban = regime + form of the State",
+      "zh": "第255条双重红线 = 政体 + 国家形式"
     }
   },
   {
@@ -3003,9 +3183,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 256 (8) กำหนดว่า หากร่างแก้ไขเพิ่มเติมเป็นการแก้ไขหมวด 1 หมวด 2 หรือหมวด 15 หรือเรื่องคุณสมบัติหรือลักษณะต้องห้ามของผู้ดำรงตำแหน่ง หรือหน้าที่และอำนาจของศาลหรือองค์กรอิสระ ต้องจัดให้มีการออกเสียงประชามติ และเมื่อผลประชามติเห็นชอบจึงดำเนินการนำขึ้นทูลเกล้าทูลกระหม่อมถวายต่อไป [สูตรวิเคราะห์: แก้หมวด 1, 2, 15 คุณสมบัติผู้ดำรงตำแหน่ง หรืออำนาจศาล/องค์กรอิสระ = ต้องผ่านประชามติก่อนทูลเกล้าฯ]",
-      "en": "Section 256(8) requires a referendum when an amendment concerns Chapter 1 (General Provisions), Chapter 2 (the King), Chapter 15 (Amendment), the qualifications or prohibitions of office holders, or the powers of courts or independent organs; only if the referendum approves does the draft go forward to the King. [Algorithm: Ch 1, 2, 15, office-holder qualifications or court/independent-organ powers → mandatory referendum].",
-      "zh": "第256条第8项规定，修宪案涉及第1章（总则）、第2章（国王）、第15章（宪法修正）、任职者的资格或禁止条件，或法院与独立机构的职权时，须举行全民公决；公投赞成后方可呈请国王。[算法公式：第1、2、15章、任职资格或法院/独立机构职权 → 强制公投]。"
+      "th": "มาตรา 256 (8) กำหนดว่า หากร่างแก้ไขเพิ่มเติมเป็นการแก้ไขหมวด 1 หมวด 2 หรือหมวด 15 หรือเรื่องคุณสมบัติหรือลักษณะต้องห้ามของผู้ดำรงตำแหน่ง หรือหน้าที่และอำนาจของศาลหรือองค์กรอิสระ ต้องจัดให้มีการออกเสียงประชามติ และเมื่อผลประชามติเห็นชอบจึงดำเนินการนำขึ้นทูลเกล้าทูลกระหม่อมถวายต่อไป",
+      "en": "Section 256(8) requires a referendum when an amendment concerns Chapter 1 (General Provisions), Chapter 2 (the King), Chapter 15 (Amendment), the qualifications or prohibitions of office holders, or the powers of courts or independent organs; only if the referendum approves does the draft go forward to the King..",
+      "zh": "第256条第8项规定，修宪案涉及第1章（总则）、第2章（国王）、第15章（宪法修正）、任职者的资格或禁止条件，或法院与独立机构的职权时，须举行全民公决；公投赞成后方可呈请国王。。"
+    },
+    "hook": {
+      "th": "แก้หมวด 1, 2, 15 คุณสมบัติผู้ดำรงตำแหน่ง หรืออำนาจศาล/องค์กรอิสระ = ต้องผ่านประชามติก่อนทูลเกล้าฯ",
+      "en": "Ch 1, 2, 15, office-holder qualifications or court/independent-organ powers → mandatory referendum",
+      "zh": "第1、2、15章、任职资格或法院/独立机构职权 → 强制公投"
     }
   },
   {
@@ -3021,9 +3206,9 @@
     },
     "choices": [
       {
-        "th": "ยกเลิกการพัฒนาอย่างยั่งยืน",
-        "en": "Abandon sustainable development",
-        "zh": "放弃可持续发展"
+        "th": "เร่งการเติบโตทางเศรษฐกิจก่อนความสงบเรียบร้อย",
+        "en": "Put economic growth ahead of a peaceful order",
+        "zh": "把经济增长放在和平秩序之前"
       },
       {
         "th": "สังคมสงบ เป็นธรรม และมีโอกาสทัดเทียม",
@@ -3031,14 +3216,14 @@
         "zh": "和平、公正且机会平等的社会"
       },
       {
-        "th": "เพิ่มอภิสิทธิ์ของกลุ่มเดียว",
-        "en": "Increase one group’s privileges",
-        "zh": "增加单一群体的特权"
+        "th": "คงสิทธิพิเศษของกลุ่มที่ใช้อำนาจอยู่",
+        "en": "Keep the privileges of the group already in office",
+        "zh": "维持现任掌权群体的特权"
       },
       {
-        "th": "ลดโอกาสประชาชน",
-        "en": "Reduce public opportunities",
-        "zh": "减少民众机会"
+        "th": "ลดช่องทางที่ประชาชนตรวจสอบรัฐ",
+        "en": "Narrow the ways the public can check the state",
+        "zh": "缩小公众监督国家的途径"
       }
     ],
     "answer": 1,
@@ -3061,14 +3246,14 @@
     },
     "choices": [
       {
-        "th": "การยกเลิกโรงเรียนทั้งหมด",
-        "en": "Closing every school",
-        "zh": "关闭所有学校"
+        "th": "การต่างประเทศ",
+        "en": "Foreign affairs",
+        "zh": "外交"
       },
       {
-        "th": "การห้ามบริการสาธารณะ",
-        "en": "Prohibiting public services",
-        "zh": "禁止公共服务"
+        "th": "การคลัง",
+        "en": "Public finance",
+        "zh": "财政"
       },
       {
         "th": "กระบวนการยุติธรรม",
@@ -3076,16 +3261,16 @@
         "zh": "司法程序"
       },
       {
-        "th": "การตั้งอาณานิคม",
-        "en": "Colonial expansion",
-        "zh": "殖民扩张"
+        "th": "การท่องเที่ยว",
+        "en": "Tourism",
+        "zh": "旅游"
       }
     ],
     "answer": 2,
     "explanation": {
       "th": "มาตรา 258 ระบุหลายด้าน รวมการเมือง การบริหารราชการ กฎหมาย กระบวนการยุติธรรม การศึกษา และเศรษฐกิจ",
-      "en": "Section 258 lists areas including politics, administration, law, justice, education and the economy.",
-      "zh": "第258条列明政治、行政、法律、司法、教育及经济等改革领域。"
+      "en": "Section 258 lists areas including politics, administration, law, justice, education and the economy. Justice sits on the list with politics, administration, law, education, and the economy. A reform plan that skips the courts has left out a heading this section wrote down.",
+      "zh": "第258条列明政治、行政、法律、司法、教育及经济等改革领域。 司法和政制、行政、法律、教育、经济写在同一张清单上。改革计划若跳过法院，就是漏掉本条写下的一个标题。"
     }
   },
   {
@@ -3101,19 +3286,19 @@
     },
     "choices": [
       {
-        "th": "เป้าหมายโดยไม่มีการวัดผล",
-        "en": "Goals without measurement",
-        "zh": "只有目标，没有衡量"
+        "th": "เป้าหมายและหน่วยงานรับผิดชอบ โดยไม่ต้องมีตัวชี้วัด",
+        "en": "Goals and a responsible agency, with no measure",
+        "zh": "目标和负责机关，不需要衡量指标"
       },
       {
-        "th": "ปิดแผนต่อประชาชน",
-        "en": "Plans hidden from the public",
-        "zh": "向公众隐瞒计划"
+        "th": "ระยะเวลา แต่ไม่ต้องเปิดให้ประชาชนมีส่วนร่วม",
+        "en": "A timeframe, but no public participation",
+        "zh": "有时限，但不必让公众参与"
       },
       {
-        "th": "ไม่ต้องมีขั้นตอน",
-        "en": "No procedures",
-        "zh": "无需程序"
+        "th": "การมีส่วนร่วม แต่ไม่ต้องมีกำหนดเวลาทำให้เสร็จ",
+        "en": "Participation, but no deadline for finishing",
+        "zh": "有参与，但不必规定完成期限"
       },
       {
         "th": "การมีส่วนร่วม การวัดผล และระยะเวลาดำเนินการ",
@@ -3163,9 +3348,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 258 ง. กำหนดการปฏิรูปด้านกระบวนการยุติธรรม รวมถึงการปรับปรุงระบบการสอบสวนคดีอาญาให้มีการตรวจสอบถ่วงดุลระหว่างพนักงานสอบสวนกับพนักงานอัยการ และการแก้ไขกฎหมายเกี่ยวกับหน้าที่ อำนาจ และภารกิจของตำรวจ รวมทั้งการบริหารงานบุคคลของข้าราชการตำรวจตามระบบคุณธรรม [สูตรวิเคราะห์: ม.258 ง. = ปฏิรูปกระบวนการยุติธรรมและตำรวจ]",
-      "en": "Part D of section 258 sets justice-process reform, including criminal investigation with checks and balances between inquiry officers and prosecutors, and amending laws on police duties, powers and missions and on police personnel administration under a merit system. [Algorithm: Sec 258 D = justice process and police reform].",
-      "zh": "第258条丁部分规定司法程序改革，包括改进刑事侦查制度，使侦查人员与检察官之间相互制衡，以及修改有关警察职责、权力与任务及警察人事管理（依择优制度）的法律。[算法公式：第258条丁 = 司法程序与警察改革]。"
+      "th": "มาตรา 258 ง. กำหนดการปฏิรูปด้านกระบวนการยุติธรรม รวมถึงการปรับปรุงระบบการสอบสวนคดีอาญาให้มีการตรวจสอบถ่วงดุลระหว่างพนักงานสอบสวนกับพนักงานอัยการ และการแก้ไขกฎหมายเกี่ยวกับหน้าที่ อำนาจ และภารกิจของตำรวจ รวมทั้งการบริหารงานบุคคลของข้าราชการตำรวจตามระบบคุณธรรม",
+      "en": "Part D of section 258 sets justice-process reform, including criminal investigation with checks and balances between inquiry officers and prosecutors, and amending laws on police duties, powers and missions and on police personnel administration under a merit system..",
+      "zh": "第258条丁部分规定司法程序改革，包括改进刑事侦查制度，使侦查人员与检察官之间相互制衡，以及修改有关警察职责、权力与任务及警察人事管理（依择优制度）的法律。。"
+    },
+    "hook": {
+      "th": "ม.258 ง. = ปฏิรูปกระบวนการยุติธรรมและตำรวจ",
+      "en": "Sec 258 D = justice process and police reform",
+      "zh": "第258条丁 = 司法程序与警察改革"
     }
   },
   {
@@ -3203,9 +3393,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 261 กำหนดให้การปฏิรูปด้านการศึกษามีคณะกรรมการที่มีความเป็นอิสระคณะหนึ่งซึ่งคณะรัฐมนตรีแต่งตั้ง ทำหน้าที่ศึกษาและจัดทำข้อเสนอแนะและร่างกฎหมายที่เกี่ยวข้องเพื่อเสนอคณะรัฐมนตรี มาตรานี้กำหนดให้แต่งตั้งภายในหกสิบวันนับแต่วันประกาศใช้รัฐธรรมนูญ และให้ทำงานแล้วเสร็จภายในสองปีนับแต่วันที่ได้รับแต่งตั้ง กรอบเวลาดังกล่าวสิ้นสุดแล้ว [สูตรวิเคราะห์: ปฏิรูปการศึกษา = คณะกรรมการอิสระที่ ครม. ตั้ง → ข้อเสนอและร่างกฎหมาย → ครม.]",
-      "en": "Section 261 provides that education reform is handled by an independent committee appointed by the Cabinet, which studies the issues and prepares recommendations and draft laws for the Cabinet. The section required the appointment within sixty days of promulgation and completion within two years of appointment; those timeframes have ended. [Algorithm: education reform = independent committee appointed by the Cabinet → recommendations and draft laws → Cabinet].",
-      "zh": "第261条规定，教育改革由内阁任命的一个独立委员会负责研究，并拟订相关建议和法律草案提交内阁。该条要求在宪法颁布后六十日内任命委员会，并自任命之日起两年内完成工作；上述期限均已届满。[算法公式：教育改革 = 内阁任命的独立委员会 → 建议与法律草案 → 内阁]。"
+      "th": "มาตรา 261 กำหนดให้การปฏิรูปด้านการศึกษามีคณะกรรมการที่มีความเป็นอิสระคณะหนึ่งซึ่งคณะรัฐมนตรีแต่งตั้ง ทำหน้าที่ศึกษาและจัดทำข้อเสนอแนะและร่างกฎหมายที่เกี่ยวข้องเพื่อเสนอคณะรัฐมนตรี มาตรานี้กำหนดให้แต่งตั้งภายในหกสิบวันนับแต่วันประกาศใช้รัฐธรรมนูญ และให้ทำงานแล้วเสร็จภายในสองปีนับแต่วันที่ได้รับแต่งตั้ง กรอบเวลาดังกล่าวสิ้นสุดแล้ว",
+      "en": "Section 261 provides that education reform is handled by an independent committee appointed by the Cabinet, which studies the issues and prepares recommendations and draft laws for the Cabinet. The section required the appointment within sixty days of promulgation and completion within two years of appointment; those timeframes have ended..",
+      "zh": "第261条规定，教育改革由内阁任命的一个独立委员会负责研究，并拟订相关建议和法律草案提交内阁。该条要求在宪法颁布后六十日内任命委员会，并自任命之日起两年内完成工作；上述期限均已届满。。"
+    },
+    "hook": {
+      "th": "ปฏิรูปการศึกษา = คณะกรรมการอิสระที่ ครม. ตั้ง → ข้อเสนอและร่างกฎหมาย → ครม.",
+      "en": "education reform = independent committee appointed by the Cabinet → recommendations and draft laws → Cabinet",
+      "zh": "教育改革 = 内阁任命的独立委员会 → 建议与法律草案 → 内阁"
     }
   },
   {
@@ -3247,6 +3442,11 @@
       "th": "มาตรา 269 กำหนดให้วุฒิสภาชุดแรกในวาระเริ่มแรกมีสมาชิก 250 คน และมีอายุห้าปีนับแต่วันที่มีพระบรมราชโองการแต่งตั้ง ซึ่งช่วงเวลาดังกล่าวสิ้นสุดแล้ว ส่วนบทหลักมาตรา 107 กำหนดให้วุฒิสภามีสมาชิก 200 คน",
       "en": "Section 269 established the first transitional Senate of 250 members for five years from royal appointment; that period has ended. Section 107 provides for 200 Senators under the permanent rules.",
       "zh": "第269条设立首届250人的过渡参议院，任期自国王任命起五年，该期限已届满；正式条款第107条规定参议员200人。"
+    },
+    "hook": {
+      "th": "สองร้อยห้าสิบคนมีเฉพาะตอนนั่งร้านยังตั้ง ตัวเลขถาวรคือสองร้อย",
+      "en": "Two hundred and fifty only while the scaffold stood. The permanent number is two hundred.",
+      "zh": "两百五十只在脚手架还在的时候。永久的数字是两百。"
     }
   },
   {
@@ -3278,9 +3478,9 @@
         "zh": "是永久权力"
       },
       {
-        "th": "ใช่ แต่เฉพาะวันอาทิตย์",
-        "en": "Yes, but only on Sundays",
-        "zh": "是，但仅限星期日"
+        "th": "ยังใช้ได้ ถ้านายกรัฐมนตรีมาจากบัญชีที่พรรคแจ้งไว้",
+        "en": "It still applies when the Prime Minister comes from a party's list",
+        "zh": "如果总理来自政党提交的名单，这项规定仍然有效"
       }
     ],
     "answer": 1,
@@ -3288,6 +3488,11 @@
       "th": "มาตรา 272 เป็นข้อยกเว้นชั่วคราวห้าปี ระยะเวลานั้นสิ้นสุดแล้ว การทบทวนบทหลักให้ดูมาตรา 159 ซึ่งเป็นมติของสภาผู้แทนราษฎร",
       "en": "Section 272 created a five-year exception whose period has ended. The permanent rule in section 159 uses approval by the House of Representatives.",
       "zh": "第272条设立五年过渡例外，该期限已届满。正式规则第159条规定由众议院表决同意。"
+    },
+    "hook": {
+      "th": "นาฬิกาห้าปีเริ่มวันที่รัฐสภาชุดแรกเปิด ตอนนี้เข็มหยุดแล้ว",
+      "en": "A five-year clock started when the first parliament sat. The hand has stopped.",
+      "zh": "五年的钟从第一届国会开会那天开始走。指针已经停了。"
     }
   },
   {
@@ -3303,14 +3508,14 @@
     },
     "choices": [
       {
-        "th": "เปลี่ยนเป็นคณะรัฐมนตรี",
-        "en": "It became the Cabinet",
-        "zh": "转为内阁"
+        "th": "พ้นจากตำแหน่งทั้งคณะเมื่อรัฐธรรมนูญใช้บังคับ",
+        "en": "The whole council left office when this constitution took effect",
+        "zh": "本宪法生效时全体卸任"
       },
       {
-        "th": "เปลี่ยนเป็นศาลรัฐธรรมนูญ",
-        "en": "It became the Constitutional Court",
-        "zh": "转为宪法法院"
+        "th": "อยู่ต่อได้เฉพาะประธานองคมนตรี",
+        "en": "Only the President of the Privy Council continued",
+        "zh": "只有枢密院主席留任"
       },
       {
         "th": "เป็นคณะองคมนตรีตามรัฐธรรมนูญนี้ต่อไป",
@@ -3318,16 +3523,16 @@
         "zh": "继续作为本宪法下的枢密院"
       },
       {
-        "th": "สิ้นสุดทันทีทั้งหมด",
-        "en": "It immediately ceased entirely",
-        "zh": "立即全部终止"
+        "th": "ต้องแต่งตั้งใหม่ภายในหกสิบวัน",
+        "en": "A new council had to be appointed within sixty days",
+        "zh": "必须在六十日内重新任命"
       }
     ],
     "answer": 2,
     "explanation": {
       "th": "มาตรา 262 ให้คณะองคมนตรีที่ดำรงตำแหน่งก่อนวันประกาศใช้เป็นคณะองคมนตรีตามรัฐธรรมนูญนี้",
-      "en": "Section 262 continued the Privy Council serving before promulgation as the Council under this Constitution.",
-      "zh": "第262条规定颁布前任职的枢密院继续作为本宪法下的枢密院。"
+      "en": "Section 262 continued the Privy Council serving before promulgation as the Council under this Constitution. The council already sitting did not have to leave office on the day this constitution took effect. It continued, and a fresh appointment within sixty days was not required.",
+      "zh": "第262条规定颁布前任职的枢密院继续作为本宪法下的枢密院。 已经在任的枢密院不必在本宪法生效那天全体卸任。它继续任职，也没有必须在六十日内重新任命的规定。"
     }
   },
   {
@@ -3366,9 +3571,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 269 กำหนดให้ในวาระเริ่มแรกวุฒิสภาประกอบด้วยสมาชิก 250 คน ซึ่งพระมหากษัตริย์ทรงแต่งตั้งตามที่ คสช. ถวายคำแนะนำ และมีอายุห้าปี ซึ่งสิ้นสุดแล้ว แตกต่างจากบทหลักมาตรา 107 ที่กำหนดให้มี ส.ว. 200 คน มาจากการเลือกกันเองของบุคคลในกลุ่มต่าง ๆ ของสังคม [สูตรตัวเลข: ส.ว. บทเฉพาะกาล 250 คน 5 ปี (สิ้นสุดแล้ว) → บทหลัก 200 คน (ม.107)]",
-      "en": "Section 269 created a 250-member Senate for the initial five-year period, appointed by the King on the NCPO's advice; that period has ended. Section 107 provides for 200 Senators selected among themselves by persons from diverse groups in society. [Formula: transitional Senate = 250 members (5 years, ended) → permanent Senate = 200 members (Sec 107)].",
-      "zh": "第269条规定最初五年的过渡参议院由250人组成，由国王依全国维持和平秩序委员会的建议任命；该期限已届满。第107条规定参议员200人，由社会各类群体人员互选产生。[数字公式：过渡期参议员 = 250人（5年，已届满） → 正式制度 = 200人（第107条）]。"
+      "th": "มาตรา 269 กำหนดให้ในวาระเริ่มแรกวุฒิสภาประกอบด้วยสมาชิก 250 คน ซึ่งพระมหากษัตริย์ทรงแต่งตั้งตามที่ คสช. ถวายคำแนะนำ และมีอายุห้าปี ซึ่งสิ้นสุดแล้ว แตกต่างจากบทหลักมาตรา 107 ที่กำหนดให้มี ส.ว. 200 คน มาจากการเลือกกันเองของบุคคลในกลุ่มต่าง ๆ ของสังคม",
+      "en": "Section 269 created a 250-member Senate for the initial five-year period, appointed by the King on the NCPO's advice; that period has ended. Section 107 provides for 200 Senators selected among themselves by persons from diverse groups in society..",
+      "zh": "第269条规定最初五年的过渡参议院由250人组成，由国王依全国维持和平秩序委员会的建议任命；该期限已届满。第107条规定参议员200人，由社会各类群体人员互选产生。。"
+    },
+    "hook": {
+      "th": "สองร้อยห้าสิบคนมีเฉพาะตอนนั่งร้านยังตั้ง ตัวเลขถาวรคือสองร้อย",
+      "en": "Two hundred and fifty only while the scaffold stood. The permanent number is two hundred.",
+      "zh": "两百五十只在脚手架还在的时候。永久的数字是两百。"
     }
   },
   {
@@ -3406,9 +3616,14 @@
     ],
     "answer": 0,
     "explanation": {
-      "th": "มาตรา 279 บัญญัติให้บรรดาประกาศ คำสั่ง และการกระทำของ คสช. หรือหัวหน้า คสช. ที่ใช้บังคับอยู่ในวันก่อนวันประกาศใช้รัฐธรรมนูญ หรือที่ออกใช้บังคับต่อมาตามที่รัฐธรรมนูญกำหนด เป็นการชอบด้วยรัฐธรรมนูญนี้และกฎหมาย และมีผลใช้บังคับต่อไป การยกเลิกหรือแก้ไขให้ตราเป็นพระราชบัญญัติ เว้นแต่ประกาศหรือคำสั่งที่เป็นการใช้อำนาจทางบริหาร ให้ยกเลิกหรือแก้ไขโดยคำสั่งนายกรัฐมนตรีหรือมติคณะรัฐมนตรี [สูตรวิเคราะห์: ม.279 = รับรองความชอบของประกาศ/คำสั่ง คสช. + ยกเลิกด้วย พ.ร.บ. หรือคำสั่งฝ่ายบริหารแล้วแต่ลักษณะ]",
-      "en": "Section 279 deems announcements, orders and acts of the NCPO or its head that were in force before promulgation (or later issued as the Constitution allowed) constitutional and lawful, and keeps them in force. Repeal or amendment must be by an Act, except that those of an executive nature may be repealed or amended by a Prime Minister's order or a Cabinet resolution. [Algorithm: Sec 279 = validates NCPO orders + repeal by Act or executive order depending on type].",
-      "zh": "第279条规定，全国维持和平秩序委员会及其主席在宪法颁布前已施行（或依宪法规定其后发布）的公告、命令与行为，视为符合本宪法及法律并继续有效。其废止或修改须制定法律为之；但属于行使行政权的公告或命令，可由总理命令或内阁决议废止或修改。[算法公式：第279条 = 确认合法性 + 依性质以法律或行政命令废止]。"
+      "th": "มาตรา 279 บัญญัติให้บรรดาประกาศ คำสั่ง และการกระทำของ คสช. หรือหัวหน้า คสช. ที่ใช้บังคับอยู่ในวันก่อนวันประกาศใช้รัฐธรรมนูญ หรือที่ออกใช้บังคับต่อมาตามที่รัฐธรรมนูญกำหนด เป็นการชอบด้วยรัฐธรรมนูญนี้และกฎหมาย และมีผลใช้บังคับต่อไป การยกเลิกหรือแก้ไขให้ตราเป็นพระราชบัญญัติ เว้นแต่ประกาศหรือคำสั่งที่เป็นการใช้อำนาจทางบริหาร ให้ยกเลิกหรือแก้ไขโดยคำสั่งนายกรัฐมนตรีหรือมติคณะรัฐมนตรี",
+      "en": "Section 279 deems announcements, orders and acts of the NCPO or its head that were in force before promulgation (or later issued as the Constitution allowed) constitutional and lawful, and keeps them in force. Repeal or amendment must be by an Act, except that those of an executive nature may be repealed or amended by a Prime Minister's order or a Cabinet resolution..",
+      "zh": "第279条规定，全国维持和平秩序委员会及其主席在宪法颁布前已施行（或依宪法规定其后发布）的公告、命令与行为，视为符合本宪法及法律并继续有效。其废止或修改须制定法律为之；但属于行使行政权的公告或命令，可由总理命令或内阁决议废止或修改。。"
+    },
+    "hook": {
+      "th": "ม.279 = รับรองความชอบของประกาศ/คำสั่ง คสช. + ยกเลิกด้วย พ.ร.บ. หรือคำสั่งฝ่ายบริหารแล้วแต่ลักษณะ",
+      "en": "Sec 279 = validates NCPO orders + repeal by Act or executive order depending on type",
+      "zh": "第279条 = 确认合法性 + 依性质以法律或行政命令废止"
     }
   },
   {

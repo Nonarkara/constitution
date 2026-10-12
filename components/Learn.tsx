@@ -1,5 +1,4 @@
 "use client";
-import { InstitutionMap } from "./InstitutionMap";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
@@ -37,7 +36,9 @@ export function Learn() {
           <Image src="/illustrations/reading.webp" alt="" width={720} height={720} priority sizes="(max-width: 720px) 100vw, 46vw" />
         </figure>
         <div className="hero-copy">
-          <span className="page-kicker mono">YOUR LEARNING PATH · 01</span>
+          <span className="page-kicker mono">
+            {tr(lang, "เส้นทางเรียน · 01", "Your learning path · 01", "学习路径 · 01")}
+          </span>
           <h1>
             {tr(lang, "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ", "One section.\nOne small step.", "一条一条读，\n一点一点懂。")}
           </h1>
@@ -147,28 +148,6 @@ export function Learn() {
           );
         })}
       </div>
-      <div className="note" style={{ margin: "24px 0" }}>
-        <strong>
-          {tr(
-            lang,
-            "ต้องการตัวช่วยจำและอัลกอริทึมการคิด?",
-            "Need memory aids and algorithmic formulas?",
-            "需要助记口诀与逻辑判定公式？",
-          )}
-        </strong>
-        <p>
-          {tr(
-            lang,
-            "เรียนรู้ผ่านแผนภาพปิรามิดลำดับศักดิ์กฎหมาย, ขั้นตอน 3 วาระแก้ รธน., ตราชั่งความได้สัดส่วน ม.26 และตัวเลขสำคัญใน รธน.",
-            "Explore legal hierarchy pyramids, 3-reading amendment flows, proportionality scales, and vital numbers.",
-            "探索法律位阶金字塔、修宪三读流程、比例原则天平与高频关键数字速查表。",
-          )}
-        </p>
-        <Link href="/cheatsheet/">
-          {tr(lang, "เปิดหน้าสรุปสูตร & แผนภาพ", "Open Cheat Sheets & Diagrams", "打开速查表与图解")} ↗
-        </Link>
-      </div>
-      <InstitutionMap />
       <div className="note">
         <strong>
           {tr(

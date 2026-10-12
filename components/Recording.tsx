@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { tr, type Lang } from "@/lib/i18n";
-import { playback } from "@/lib/playback";
+import { formatDuration, playback } from "@/lib/playback";
 import { workerMessage } from "@/lib/offline";
 export function Recording({ section, lang }: { section: number; lang: Lang }) {
   const audio = useRef<HTMLAudioElement>(null),
@@ -9,7 +9,10 @@ export function Recording({ section, lang }: { section: number; lang: Lang }) {
   const [status, setStatus] = useState<"idle" | "saving" | "saved" | "error">(
       "idle",
     ),
-    [failed, setFailed] = useState(false);
+    [failed, setFailed] = useState(false),
+    [playing, setPlaying] = useState(false),
+    [duration, setDuration] = useState<number | null>(null),
+    [current, setCurrent] = useState(0);
   const url = `/audio/${lang}/${String(section).padStart(3, "0")}.mp3`;
   const resource = useRef(url), request = useRef(0);
   resource.current = url;
@@ -32,6 +35,9 @@ export function Recording({ section, lang }: { section: number; lang: Lang }) {
       }
     };
     setFailed(false);
+    setPlaying(false);
+    setDuration(null);
+    setCurrent(0);
     void refresh();
     kit?.addEventListener("controllerchange", refresh);
     return () => {
@@ -60,27 +66,67 @@ export function Recording({ section, lang }: { section: number; lang: Lang }) {
       if (current()) setStatus("error");
     }
   };
+  const length = formatDuration(duration ?? 0);
+  const place = formatDuration(current) ?? (length ? "0:00" : null);
+  const toggle = () => {
+    const el = audio.current;
+    if (!el) return;
+    if (playing) {
+      el.pause();
+      return;
+    }
+    playback().take(owner.current, () => el.pause());
+    void el.play().catch(() => setFailed(true));
+  };
   return (
     <div className="recorded-audio">
       <span className="micro">
         {tr(lang, "เสียงอ่านมาตรานี้", "Recorded section reading", "本条录音")}
       </span>
+      <div className="audio-play">
+        <button type="button" aria-pressed={playing} onClick={toggle}>
+          {playing
+            ? tr(lang, `หยุดฟังมาตรา ${section}`, `Stop section ${section}`, `停止第${section}条`)
+            : tr(lang, `ฟังมาตรา ${section}`, `Listen to section ${section}`, `收听第${section}条`)}
+        </button>
+        <span className="mono">
+          {length && place ? `${place} / ${length}` : tr(lang, "ความยาวจะขึ้นเมื่อไฟล์พร้อม", "Length appears when the file is ready", "文件就绪后显示时长")}
+        </span>
+      </div>
+      {length && (
+        <input
+          type="range"
+          min={0}
+          max={duration ?? 0}
+          step={0.1}
+          value={Math.min(current, duration ?? 0)}
+          aria-label={tr(lang, "ตำแหน่งในไฟล์เสียง", "Position in the recording", "录音进度")}
+          onChange={(e) => {
+            const next = Number(e.target.value);
+            if (audio.current) audio.current.currentTime = next;
+            setCurrent(next);
+          }}
+        />
+      )}
       <audio
         ref={audio}
         src={url}
-        controls
-        preload="none"
-        aria-label={tr(
-          lang,
-          `ฟังมาตรา ${section}`,
-          `Listen to section ${section}`,
-          `收听第${section}条`,
-        )}
-        onPlay={() =>
-          playback().take(owner.current, () => audio.current?.pause())
-        }
-        onEnded={() => playback().release(owner.current)}
-        onPause={() => playback().release(owner.current)}
+        preload="metadata"
+        onLoadedMetadata={() => setDuration(audio.current?.duration ?? null)}
+        onDurationChange={() => setDuration(audio.current?.duration ?? null)}
+        onTimeUpdate={() => setCurrent(audio.current?.currentTime ?? 0)}
+        onPlay={() => {
+          setPlaying(true);
+          playback().take(owner.current, () => audio.current?.pause());
+        }}
+        onEnded={() => {
+          setPlaying(false);
+          playback().release(owner.current);
+        }}
+        onPause={() => {
+          setPlaying(false);
+          playback().release(owner.current);
+        }}
         onError={() => setFailed(true)}
       />
       <div className="audio-actions">

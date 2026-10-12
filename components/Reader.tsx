@@ -1,5 +1,4 @@
 "use client";
-import { StudyArt } from "./StudyArt";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -7,9 +6,9 @@ import {
   sections,
   chapters,
   searchSections,
-  chineseText,
   chineseSummary,
   readingText,
+  sectionBody,
   englishIsStudyTranslation,
 } from "@/lib/corpus";
 import { useStudy } from "./Provider";
@@ -17,10 +16,8 @@ import { tr, labels, sectionLabel, type Lang } from "@/lib/i18n";
 import { Recording } from "./Recording";
 import { Speech } from "./Speech";
 import { VoiceSearch } from "./VoiceSearch";
-import audio from "@/data/audio.json";
-import { InstitutionMap } from "./InstitutionMap";
-import { LawFlow } from "./LawFlow";
 import { Ask } from "./Ask";
+import cases from "@/data/cases.json";
 const senateAudio =
   "https://www.senate.go.th/view/1/รายละเอียดข่าว/13564/TH-TH";
 export function Reader() {
@@ -40,13 +37,15 @@ export function Reader() {
     document.getElementById("reader-title")?.focus();
   };
   const results = searchSections(query);
-  const track = audio.find(
-    (a) => number !== null && number >= a.from && number <= a.to,
-  );
   const section = sections.find((s) => s.number === number);
+  const cited = section
+    ? cases.filter((item) => item.sections.includes(section.number))
+    : [];
   return (
     <>
-      <span className="page-kicker mono">THE READING ROOM · 03</span>
+      <span className="page-kicker mono">
+        {tr(lang, "ห้องอ่าน · 03", "The reading room · 03", "阅读室 · 03")}
+      </span>
       <h1 id="reader-title" tabIndex={-1}>
         {tr(
           lang,
@@ -167,14 +166,14 @@ export function Reader() {
               <article key={l} lang={l}>
                 <div className="language-label mono">
                   {l === "th"
-                    ? "ไทย · ต้นฉบับ"
+                    ? tr(lang, "ไทย · ต้นฉบับ", "Thai · original", "泰文 · 原文")
                     : l === "en"
                       ? englishIsStudyTranslation(section.number)
-                        ? "EN · STUDY TRANSLATION"
-                        : "EN · GOVERNMENT TRANSLATION"
-                      : "中文 · 学习译文"}
+                        ? tr(lang, "อังกฤษ · คำแปลเพื่อศึกษา", "English · study translation", "英文 · 学习译文")
+                        : tr(lang, "อังกฤษ · คำแปลทางการ", "English · government translation", "英文 · 政府译文")
+                      : tr(lang, "จีน · คำแปลเพื่อศึกษา", "Chinese · study translation", "中文 · 学习译文")}
                 </div>
-                <p className="law-text">{readingText(section.number, l)}</p>
+                <p className="law-text">{sectionBody(section.number, l)}</p>
                 <Recording section={section.number} lang={l} />
                 <details className="device-speech">
                   <summary>
@@ -198,12 +197,7 @@ export function Reader() {
                     rel="noreferrer"
                     href={`${(l === "en" && englishIsStudyTranslation(section.number) ? section.source.th : section.source[l]).url}#page=${(l === "en" && englishIsStudyTranslation(section.number) ? section.source.th : section.source[l]).pages[0]}`}
                   >
-                    {tr(
-                      lang,
-                      "เปิด PDF ต้นฉบับ หน้า",
-                      "Source PDF, page",
-                      "原始PDF，页",
-                    )}{" "}
+                    {tr(lang, "เปิด PDF ต้นฉบับ หน้า", "Source PDF, page", "原始PDF，页")}{" "}
                     {(l === "en" && englishIsStudyTranslation(section.number)
                       ? section.source.th
                       : section.source[l]
@@ -219,22 +213,41 @@ export function Reader() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      泰文原文 PDF · 第{section.source.th.pages.join(", ")}页 ↗
+                      {tr(
+                        lang,
+                        `PDF ภาษาไทย หน้า ${section.source.th.pages.join(", ")}`,
+                        `Thai PDF, page ${section.source.th.pages.join(", ")}`,
+                        `泰文原文 PDF，第${section.source.th.pages.join(", ")}页`,
+                      )}{" "}
+                      ↗
                     </a>
                   </>
                 )}
                 {l === "zh" && (
                   <details>
-                    <summary>查看简明学习摘要</summary>
+                    <summary>
+                      {tr(lang, "ดูบทสรุปสั้น", "Short study summary", "查看简明学习摘要")}
+                    </summary>
                     <p>{chineseSummary(section.number)}</p>
                   </details>
                 )}
                 {l === "en" && englishIsStudyTranslation(section.number) && (
                   <details>
-                    <summary>Compare original government translation</summary>
+                    <summary>
+                      {tr(
+                        lang,
+                        "เทียบกับคำแปลทางการ",
+                        "Compare the government translation",
+                        "对照政府译文",
+                      )}
+                    </summary>
                     <p className="micro">
-                      Study wording follows the authoritative Thai text; the
-                      original English below is retained for source comparison.
+                      {tr(
+                        lang,
+                        "คำแปลเพื่อเรียนยึดตัวบทภาษาไทย คำแปลภาษาอังกฤษทางการอยู่ด้านล่างเพื่อเทียบ",
+                        "Study wording follows the Thai text. The government English is below for comparison.",
+                        "学习译文以泰文为准。下方保留政府英文译文供对照。",
+                      )}
                     </p>
                     <p className="law-text">{section.en}</p>
                   </details>
@@ -242,105 +255,23 @@ export function Reader() {
               </article>
             ))}
           </div>
-          <div className="podcast-links">
-            {(["th", "en", "zh"] as Lang[]).map((l) => (
-              <a className="button" key={l} href={`/podcast/${l}.xml`}>
-                {tr(lang, "พอดแคสต์", "Podcast feed", "播客订阅")} ·{" "}
-                {l.toUpperCase()} ↗
-              </a>
-            ))}
-          </div>
-          <div className="audio-note">
-            <StudyArt scene="listening" compact />
-            <strong>
+          {cited.map((item) => (
+            <div className="reading-excerpt" key={item.id}>
+              <p>{item.story[lang]}</p>
+              <p>{item.why[lang]}</p>
+            </div>
+          ))}
+          <p className="micro">
+            <a href={senateAudio} target="_blank" rel="noreferrer">
               {tr(
                 lang,
-                "เสียงอ่านของวุฒิสภา",
-                "Official Senate recordings",
-                "参议院官方录音",
-              )}
-            </strong>
-            <p className="micro">
-              {tr(
-                lang,
-                "29 ตอนในภาษาไทยจากวุฒิสภา ยังไม่ได้ยืนยันฉบับของเสียงอ่าน ตรวจมาตราแก้ไข 83, 86 และ 91 กับข้อความไทยปัจจุบัน",
-                "29 Thai audio episodes from the Senate, the recording edition has not been independently verified. Check amended sections 83, 86 and 91 against the current Thai text.",
-                "参议院提供29集泰文录音，录音版本尚未独立核实。第83、86、91条请对照现行泰文修订文本。",
-              )}
-            </p>
-            <details className="audio-player">
-              <summary>
-                {tr(
-                  lang,
-                  `เปิดเสียงอ่าน ${track?.title ?? ""}`,
-                  `Play sections ${track?.from}–${track?.to}`,
-                  `播放第${track?.from}至${track?.to}条录音`,
-                )}
-              </summary>
-              {track && (
-                <iframe
-                  key={track.id}
-                  src={track.url}
-                  title={track.title}
-                  loading="lazy"
-                  allow="autoplay"
-                  width="100%"
-                  height="110"
-                />
-              )}
-              <p className="micro">
-                {tr(
-                  lang,
-                  "เสียงภาษาไทยจาก Google Drive ของวุฒิสภา ต้องใช้อินเทอร์เน็ต",
-                  "Thai audio hosted on the Senate’s Google Drive. Requires internet.",
-                  "泰文录音托管于参议院Google Drive，需要网络。",
-                )}
-              </p>
-            </details>
-            <a
-              className="button"
-              target="_blank"
-              rel="noreferrer"
-              href={senateAudio}
-            >
-              {tr(
-                lang,
-                "เลือกตอนและฟัง",
-                "Choose an episode and listen",
-                "选择一集收听",
+                "เสียงอ่านชุดของวุฒิสภา เปิดที่เว็บวุฒิสภา",
+                "The Senate’s own recordings open on the Senate site",
+                "参议院的录音在参议院网站上打开",
               )}{" "}
               ↗
             </a>
-          </div>
-          {[3, 79, 158, 188, 215].includes(section.number) && (
-            <InstitutionMap />
-          )}
-          {[133, 134, 136, 145, 256].includes(section.number) && (
-            <LawFlow amendment={section.number === 256} />
-          )}
-          {[5, 26, 83, 107, 120, 158, 172, 175, 188, 200, 215, 222, 255, 256].includes(section.number) && (
-            <div className="note" style={{ marginTop: "20px" }}>
-              <strong>
-                {tr(
-                  lang,
-                  "สูตรวิเคราะห์ & แผนภาพดินสอสีสำหรับมาตรานี้",
-                  "Formulas & Crayon Diagrams for this Section",
-                  "本条相关算法公式与蜡笔图解",
-                )}
-              </strong>
-              <p className="micro">
-                {tr(
-                  lang,
-                  "ทำความเข้าใจโครงสร้างอำนาจ ขั้นตอนกฎหมาย และตัวเลขสำคัญผ่านแผนภาพสรุปสูตร",
-                  "Understand powers, procedures, and vital numbers through visual cheat sheets.",
-                  "通过图解与判定树清晰掌握权力结构、法定程序与高频考点。",
-                )}
-              </p>
-              <Link href="/cheatsheet/">
-                {tr(lang, "เปิดหน้าสรุปสูตร & แผนภาพ", "Open Cheat Sheets & Diagrams", "打开速查表与图解")} ↗
-              </Link>
-            </div>
-          )}
+          </p>
           <div className="reader-navigation">
             <button
               disabled={section.number === 1}

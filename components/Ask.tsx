@@ -6,19 +6,31 @@ import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
 import {
   ASK_ORIGIN,
-  askLanguage,
+  askRequest,
   classify,
+  consentCopy,
   deepLink,
+  friendlyAskError,
+  groundedLabel,
   localConstitution,
+  looksLikeProviderError,
+  outcomeError,
   pollDelay,
   POLL_LIMIT,
+  presentAnswer,
+  readGrounded,
+  readSources,
+  showGroundedMark,
+  studyDisclaimer,
 } from "@/lib/ask";
 
 type Statute = { cite?: string; law?: string; section?: string; text?: string };
 type Deka = { caseId?: string; year?: string; headnote?: string; url?: string };
 type Answer = {
   answer: string;
-  confidence?: string;
+  grounded?: boolean;
+  sources?: { title?: string; url?: string }[];
+  final?: { grounded?: boolean; sources?: { title?: string; url?: string }[] };
   appendix?: { disclaimer?: string; statutes?: Statute[]; deka?: Deka[] } | null;
 };
 type State =
@@ -43,36 +55,21 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
 
   async function ask() {
     const mine = ++run.current;
-    if (!navigator.onLine)
-      return fail(
-        tr(
-          lang,
-          "ตอนนี้ออฟไลน์ คำถามยังอยู่ตรงนี้ ถามได้เมื่อกลับมาออนไลน์",
-          "You're offline. Your question stays here; ask when you're back online.",
-          "当前离线。问题会留在这里，恢复联网后再问。",
-        ),
-      );
+    if (!navigator.onLine) return fail(friendlyAskError("offline", lang));
     setState({ kind: "waiting", position: 0 });
     let res: Response;
     try {
       res = await fetch(`${ASK_ORIGIN}/api/laws`, {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          question,
-          intensity: "direct",
-          language: askLanguage(lang),
-          consent: true,
-          ...(sections.length ? { constitution: sections.slice(0, 5) } : {}),
-        }),
+        body: JSON.stringify(askRequest(question, lang, sections)),
       });
     } catch {
-      return fail(tr(lang, "ติดต่อ Non-Laws ไม่ได้", "Couldn't reach Non-Laws.", "无法连接 Non-Laws。"));
+      return fail(friendlyAskError("unreachable", lang));
     }
     const body = await res.json().catch(() => ({}));
     const outcome = classify(res.status, body);
-    if (outcome === "refused") return fail(String(body.message ?? ""), false);
-    if (outcome !== "accepted") return fail(String(body.error ?? `HTTP ${res.status}`));
+    if (outcome !== "accepted") return fail(outcomeError(outcome, lang));
     for (let attempt = 0; attempt < POLL_LIMIT; attempt++) {
       await new Promise((r) => setTimeout(r, pollDelay(attempt)));
       if (run.current !== mine) return;
@@ -80,21 +77,41 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
         const poll = await fetch(`${ASK_ORIGIN}/api/ask/${encodeURIComponent(body.id)}`);
         const job = await poll.json();
         if (run.current !== mine) return;
-        if (!poll.ok || job.error) return fail(String(job.error ?? `HTTP ${poll.status}`));
-        if (job.status === "done") return setState({ kind: "done", result: job });
+        if (!poll.ok || job.error) {
+          const raw = String(job.error ?? "");
+          return fail(friendlyAskError(looksLikeProviderError(raw) ? "rate" : "lost", lang));
+        }
+        if (job.status === "done") {
+          if (looksLikeProviderError(String(job.answer ?? "")))
+            return fail(friendlyAskError("rate", lang));
+          return setState({ kind: "done", result: job });
+        }
         setState({ kind: "waiting", position: Number(job.position) || 0 });
       } catch {
-        return fail(tr(lang, "คำตอบหายระหว่างทาง", "The answer was lost on the way back.", "答案在返回途中丢失。"));
+        return fail(friendlyAskError("lost", lang));
       }
     }
-    fail(tr(lang, "รอนานเกินไป", "This is taking too long.", "等待时间过长。"));
+    fail(friendlyAskError("timeout", lang));
   }
 
   const open = (
-    <a href={deepLink(question, sections)} target="_blank" rel="noopener noreferrer">
+    <a
+      href={deepLink(question, sections)}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={tr(
+        lang,
+        "เปิดคำถามนี้ใน Non-Laws",
+        "Open this question in Non-Laws",
+        "在 Non-Laws 中打开此问题",
+      )}
+    >
       {tr(lang, "เปิดใน Non-Laws", "Open in Non-Laws", "在 Non-Laws 中打开")} ↗
     </a>
   );
+  const presented =
+    state.kind === "done" ? presentAnswer(state.result.answer, readSources(state.result)) : null;
+  const grounded = state.kind === "done" && showGroundedMark({ grounded: readGrounded(state.result) });
   const appendix = state.kind === "done" ? state.result.appendix : null;
   const ours = localConstitution(appendix?.statutes);
   const others = (appendix?.statutes ?? []).filter((s) => !s.cite?.startsWith("รธน."));
@@ -133,13 +150,13 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
       <label className="ask-consent micro">
         <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
         <span>
-          {tr(
-            lang,
-            "ส่งคำถามนี้ไปที่ Non-Laws (nonwriter.nonarkara.org) เพื่อเขียนคำตอบ อย่าใส่ชื่อจริงหรือเลขประจำตัว",
-            "Send this question to Non-Laws at nonwriter.nonarkara.org to write the answer. Leave out real names and ID numbers.",
-            "将此问题发送至 Non-Laws（nonwriter.nonarkara.org）生成答案。请勿填写真实姓名或证件号码。",
-          )}{" "}
-          <a href={`${ASK_ORIGIN}/#fineprint`} target="_blank" rel="noopener noreferrer">
+          {consentCopy(lang)}{" "}
+          <a
+            href={`${ASK_ORIGIN}/#fineprint`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={tr(lang, "ข้อตกลงของ Non-Laws", "Non-Laws fine print", "Non-Laws 说明")}
+          >
             {tr(lang, "ข้อตกลง", "Fine print", "说明")} ↗
           </a>
         </span>
@@ -158,15 +175,30 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
         {state.kind === "error" && (
           <div className="feedback">
             <p>{state.message}</p>
-            {state.link && open}
+            <button type="button" onClick={ask} disabled={!consent || length < 8}>
+              {tr(lang, "ลองอีกครั้ง", "Try again", "再试一次")}
+            </button>
           </div>
         )}
       </div>
       {state.kind === "done" && (
         <div className="ask-answer">
-          <p className="ask-text">{state.result.answer}</p>
-          {state.result.confidence && (
-            <p className="micro">{state.result.confidence.split("\n")[0]}</p>
+          <p className="ask-text">{presented?.text}</p>
+          {grounded && <p className="micro">{groundedLabel(lang)}</p>}
+          {(presented?.sources.length ?? 0) > 0 && (
+            <ol className="ask-sources">
+              {presented?.sources.map((source) => (
+                <li key={source.n} value={source.n}>
+                  {source.url ? (
+                    <a href={source.url} target="_blank" rel="noopener noreferrer nofollow">
+                      [{source.n}] {source.title} ↗
+                    </a>
+                  ) : (
+                    <>[{source.n}] {source.title}</>
+                  )}
+                </li>
+              ))}
+            </ol>
           )}
           {ours.map((n) => (
             <div className="reading-excerpt" key={`c${n}`}>
@@ -199,10 +231,7 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
               {d.headnote ? ` · ${d.headnote.slice(0, 240)}` : ""}
             </p>
           ))}
-          <p className="micro">
-            {appendix?.disclaimer ? `${appendix.disclaimer} · ` : ""}
-            {tr(lang, "สื่อการเรียน ไม่ใช่คำแนะนำทางกฎหมาย", "Study material, not legal advice.", "学习材料，并非法律意见。")}
-          </p>
+          <p className="micro">{studyDisclaimer(lang)}</p>
         </div>
       )}
       <p className="micro">{open}</p>

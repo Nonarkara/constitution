@@ -25,7 +25,9 @@ export function Settings() {
   };
   return (
     <>
-      <span className="page-kicker mono">MAKE YOURSELF AT HOME</span>
+      <span className="page-kicker mono">
+        {tr(lang, "ทำให้เป็นห้องของคุณ", "Make yourself at home", "把这里调成你的房间")}
+      </span>
       <h1>
         {tr(
           lang,
@@ -87,6 +89,17 @@ export function Settings() {
           />
           {tr(lang, "ตัวอักษรใหญ่", "Larger text", "大字模式")}
         </label>
+        <p>
+          {tr(
+            lang,
+            "ตัวอักษรทั้งเล่มใหญ่ขึ้นบนเครื่องนี้",
+            "Text across the notebook gets larger on this device.",
+            "这台设备上，整本笔记的字都会变大。",
+          )}
+        </p>
+      </div>
+      <div className="source-card">
+        <h2>{tr(lang, "ค้นด้วยเสียง", "Search by voice", "语音搜索")}</h2>
         <p>
           {tr(
             lang,

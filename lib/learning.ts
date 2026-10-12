@@ -7,6 +7,8 @@ export type Question = {
   choices: Localized[];
   answer: number;
   explanation: Localized;
+  /** Memory-palace line for a pure number, age, term or count. */
+  hook?: Localized;
 };
 export type QuestionProgress = { correct: boolean; level: number; due: number };
 export type Progress = {
@@ -33,7 +35,7 @@ export function defaultProgress(): Progress {
     energyDay: null,
   };
 }
-/** Energy is a daily pacing indicator; zero energy never prevents study. */
+/** Kept so saved progress still round-trips. Answering no longer spends it. */
 export function energyRemaining(progress: Progress, now: number): number {
   return progress.energyDay === bangkokDay(now)
     ? progress.energy
@@ -78,7 +80,9 @@ export function recordAnswer(
     xp: progress.xp + (correct && (!previous?.correct || eligible) ? 10 : 0),
     streak,
     lastStudyDay: day,
-    energy: Math.max(0, energyRemaining(progress, now) - 1),
+    // Kept so saved progress still round-trips. It is no longer spent:
+    // a counter that fell on every answer looked like a penalty and changed nothing.
+    energy: energyRemaining(progress, now),
     energyDay: day,
   };
 }

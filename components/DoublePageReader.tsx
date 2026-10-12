@@ -6,6 +6,7 @@ import {
   sections,
   chapters,
   readingText,
+  sectionBody,
   chineseText,
   englishText,
   englishIsStudyTranslation,
@@ -96,7 +97,9 @@ export function DoublePageReader() {
 
   return (
     <div className="notebook-container">
-      <div className="page-kicker mono">THE OPEN NOTEBOOK · 279 SECTIONS</div>
+      <div className="page-kicker mono">
+        {tr(lang, "สมุดเปิด · 279 มาตรา", "The open notebook · 279 sections", "打开的笔记本 · 279条")}
+      </div>
 
       <header className="notebook-header">
         <div className="intro-copy">
@@ -121,7 +124,10 @@ export function DoublePageReader() {
       </header>
 
       {/* Toolbar */}
-      <section className="notebook-controls" aria-label="Notebook Controls">
+      <section
+        className="notebook-controls"
+        aria-label={tr(lang, "ควบคุมสมุด", "Notebook controls", "笔记本控制")}
+      >
         <div className="spread-navigation">
           <button onClick={prevSpread} disabled={leftSecNum <= 1}>
             ← {tr(lang, "คู่หน้าก่อนหน้า", "Previous Spread", "上一对页")}
@@ -140,7 +146,7 @@ export function DoublePageReader() {
         </div>
 
         {/* Highlighter Tool Palette */}
-        <div className="highlighter-palette" aria-label="Highlighter color">
+        <div className="highlighter-palette" aria-label={tr(lang, "สีไฮไลต์", "Highlight colour", "高亮颜色")}>
           <span className="micro font-bold">
             {tr(lang, "สีไฮไลต์:", "Highlighter:", "高亮颜色:")}
           </span>
@@ -172,11 +178,16 @@ export function DoublePageReader() {
               const ch = chapters.find((c) => c.number === Number(e.target.value));
               if (ch) jumpTo(ch.start);
             }}
-            aria-label="Jump to chapter"
+            aria-label={tr(lang, "กระโดดไปหมวด", "Jump to a chapter", "跳到章节")}
           >
             {chapters.map((c) => (
               <option key={c.number} value={c.number}>
-                {c.number === 17 ? "T" : `Ch ${c.number}`}: {c.title[lang]} (ม.{c.start}–{c.end})
+                {tr(
+                  lang,
+                  `${c.number === 17 ? "บทเฉพาะกาล" : `หมวด ${c.number}`} · ${c.title.th} · ม.${c.start}–${c.end}`,
+                  `${c.number === 17 ? "Transitory" : `Chapter ${c.number}`} · ${c.title.en} · ss. ${c.start}–${c.end}`,
+                  `${c.number === 17 ? "过渡" : `第${c.number}章`} · ${c.title.zh} · 第${c.start}–${c.end}条`,
+                )}
               </option>
             ))}
           </select>
@@ -218,7 +229,7 @@ export function DoublePageReader() {
       {totalAnnotated > 0 && (
         <div className="annotation-banner micro">
           <span>
-            ✍️ {tr(
+            {tr(
               lang,
               `คุณได้ไฮไลต์หรือจดโน้ตไว้แล้ว ${totalAnnotated} มาตรา`,
               `You have highlighted or annotated ${totalAnnotated} sections.`,
@@ -232,7 +243,10 @@ export function DoublePageReader() {
       )}
 
       {/* THE TWO-PAGE OPEN SPREAD */}
-      <main className="open-spread-book" aria-label="Open Constitution Book Spread">
+      <main
+        className="open-spread-book"
+        aria-label={tr(lang, "สมุดรัฐธรรมนูญเปิดสองหน้า", "Open constitution spread", "打开的宪法对页")}
+      >
         {/* Book Spine Center Marker */}
         <div className="book-spine" aria-hidden="true">
           <div className="spine-crease" />
@@ -254,9 +268,10 @@ export function DoublePageReader() {
                 <button
                   className="mini-highlight-btn"
                   onClick={() => handleHighlightToggle(leftSection.number)}
-                  title="Toggle highlight"
+                  aria-pressed={Boolean(annotations[leftSection.number]?.highlight)}
+                  aria-label={tr(lang, "สลับไฮไลต์", "Toggle highlight", "切换高亮")}
                 >
-                  🖍 {annotations[leftSection.number]?.highlight
+                  {annotations[leftSection.number]?.highlight
                     ? tr(lang, "ลบไฮไลต์", "Remove Highlight", "取消高亮")
                     : tr(lang, "ไฮไลต์", "Highlight", "高亮此条")}
                 </button>
@@ -282,12 +297,16 @@ export function DoublePageReader() {
               {viewCompare && (
                 <div className="compare-box">
                   <div className="compare-block" lang="en">
-                    <span className="mono micro">ENGLISH</span>
+                    <span className="mono micro">
+                      {tr(lang, "อังกฤษ", "English", "英文")}
+                    </span>
                     <p>{readingText(leftSection.number, "en")}</p>
                   </div>
                   <div className="compare-block" lang="zh">
-                    <span className="mono micro">CHINESE (学习译文)</span>
-                    <p>{readingText(leftSection.number, "zh")}</p>
+                    <span className="mono micro">
+                      {tr(lang, "จีน · คำแปลเพื่อเรียน", "Chinese · study translation", "中文 · 学习译文")}
+                    </span>
+                    <p>{sectionBody(leftSection.number, "zh")}</p>
                   </div>
                 </div>
               )}
@@ -296,7 +315,7 @@ export function DoublePageReader() {
               <div className="margin-note-box">
                 <div className="note-box-head">
                   <label htmlFor={`note-${leftSection.number}`} className="micro font-bold">
-                    ✍️ {tr(lang, "บันทึกช่วยจำริมขอบ:", "Margin Note:", "边注与学习笔记:")}
+                    {tr(lang, "บันทึกช่วยจำริมขอบ", "Margin note", "边注")}
                   </label>
                   {savedNoteStatus[leftSection.number] && (
                     <span className="micro text-saved mono">✓ {tr(lang, "บันทึกแล้ว", "Saved", "已保存")}</span>
@@ -348,9 +367,10 @@ export function DoublePageReader() {
                 <button
                   className="mini-highlight-btn"
                   onClick={() => handleHighlightToggle(rightSection.number)}
-                  title="Toggle highlight"
+                  aria-pressed={Boolean(annotations[rightSection.number]?.highlight)}
+                  aria-label={tr(lang, "สลับไฮไลต์", "Toggle highlight", "切换高亮")}
                 >
-                  🖍 {annotations[rightSection.number]?.highlight
+                  {annotations[rightSection.number]?.highlight
                     ? tr(lang, "ลบไฮไลต์", "Remove Highlight", "取消高亮")
                     : tr(lang, "ไฮไลต์", "Highlight", "高亮此条")}
                 </button>
@@ -376,12 +396,16 @@ export function DoublePageReader() {
               {viewCompare && (
                 <div className="compare-box">
                   <div className="compare-block" lang="en">
-                    <span className="mono micro">ENGLISH</span>
+                    <span className="mono micro">
+                      {tr(lang, "อังกฤษ", "English", "英文")}
+                    </span>
                     <p>{readingText(rightSection.number, "en")}</p>
                   </div>
                   <div className="compare-block" lang="zh">
-                    <span className="mono micro">CHINESE (学习译文)</span>
-                    <p>{readingText(rightSection.number, "zh")}</p>
+                    <span className="mono micro">
+                      {tr(lang, "จีน · คำแปลเพื่อเรียน", "Chinese · study translation", "中文 · 学习译文")}
+                    </span>
+                    <p>{sectionBody(rightSection.number, "zh")}</p>
                   </div>
                 </div>
               )}
@@ -390,7 +414,7 @@ export function DoublePageReader() {
               <div className="margin-note-box">
                 <div className="note-box-head">
                   <label htmlFor={`note-${rightSection.number}`} className="micro font-bold">
-                    ✍️ {tr(lang, "บันทึกช่วยจำริมขอบ:", "Margin Note:", "边注与学习笔记:")}
+                    {tr(lang, "บันทึกช่วยจำริมขอบ", "Margin note", "边注")}
                   </label>
                   {savedNoteStatus[rightSection.number] && (
                     <span className="micro text-saved mono">✓ {tr(lang, "บันทึกแล้ว", "Saved", "已保存")}</span>

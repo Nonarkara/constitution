@@ -164,11 +164,13 @@ export function Flashcards() {
 
   return (
     <div className="flashcards-page">
-      <div className="page-kicker mono">SELF-PACED REVISION · FLASHCARDS</div>
+      <div className="page-kicker mono">
+        {tr(lang, "ทบทวนตามจังหวะ · การ์ดความจำ", "Self-paced revision · flashcards", "按自己的节奏 · 记忆闪卡")}
+      </div>
 
       <header className="intro">
         <div className="intro-index mono" aria-hidden="true">
-          🗂
+          ก
         </div>
         <div className="intro-copy">
           <StudyArt scene="listening" compact />
@@ -195,14 +197,17 @@ export function Flashcards() {
       <section className="adaptive-profile-card">
         <div className="adaptive-head">
           <span className="mono font-bold">
-            🎯 {tr(lang, "ระบบแนะนำเฉพาะคุณ", "Personalized Recommendation", "系统定制推荐")}
+            {tr(lang, "ระบบแนะนำเฉพาะคุณ", "For you", "为你推荐")}
           </span>
         </div>
         <p className="adaptive-text">{profile.recommendation[lang]}</p>
       </section>
 
       {/* Deck Selector Tabs */}
-      <nav className="flow-tabs flashcard-deck-tabs" aria-label="Deck Selector">
+      <nav
+        className="flow-tabs flashcard-deck-tabs"
+        aria-label={tr(lang, "เลือกสำรับ", "Choose a deck", "选择卡组")}
+      >
         <button
           aria-pressed={deckType === "all"}
           onClick={() => {
@@ -235,7 +240,7 @@ export function Flashcards() {
             setIsFlipped(false);
           }}
         >
-          <span className="mono">⚡</span>
+          <span className="mono">{profile.weakestChapters.length}</span>
           {tr(lang, "หมวดที่ต้องเสริมจุดอ่อน", "Weak Chapters Deck", "攻克薄弱章节卡")}
         </button>
       </nav>
@@ -274,10 +279,15 @@ export function Flashcards() {
         <section className="flashcard-arena">
           <div className="flashcard-meta-bar micro">
             <span className="mono">
-              CARD {currentIndex + 1} / {deck.length}
+              {tr(
+                lang,
+                `ใบที่ ${currentIndex + 1} / ${deck.length}`,
+                `Card ${currentIndex + 1} / ${deck.length}`,
+                `第 ${currentIndex + 1} / ${deck.length} 张`,
+              )}
             </span>
             <span>
-              ✅ {masteredCards.size} {tr(lang, "จำได้แล้ว", "Mastered", "已掌握")} · ❌{" "}
+              {masteredCards.size} {tr(lang, "จำได้แล้ว", "Mastered", "已掌握")} ·{" "}
               {needReviewCards.size} {tr(lang, "ต้องทวนซ้ำ", "Needs Review", "需复习")}
             </span>
           </div>
@@ -286,7 +296,7 @@ export function Flashcards() {
             value={currentIndex + 1}
             max={deck.length}
             className="flashcard-progress"
-            aria-label="Flashcard progress"
+            aria-label={tr(lang, "ความคืบหน้าการ์ด", "Card progress", "闪卡进度")}
           />
 
           {/* THE FLIPPABLE CARD */}
@@ -301,7 +311,12 @@ export function Flashcards() {
                 setIsFlipped((prev) => !prev);
               }
             }}
-            aria-label="Flashcard. Press space or enter to flip."
+            aria-label={tr(
+              lang,
+              "การ์ดความจำ กดเว้นวรรคหรือ Enter เพื่อพลิก",
+              "Flashcard. Press space or enter to flip.",
+              "记忆闪卡。按空格或回车翻转。",
+            )}
           >
             <div className="flashcard-inner">
               {/* CARD FRONT */}
@@ -344,7 +359,9 @@ export function Flashcards() {
                 <div className="card-back-scroll">
                   {/* Verbatim Law */}
                   <div className="back-law-excerpt">
-                    <span className="mono micro text-accent">VERBATIM LAW:</span>
+                    <span className="mono micro text-accent">
+                      {tr(lang, "ตัวบท", "The text", "原文")}
+                    </span>
                     <p lang="th" className="law-text-compact">
                       {currentCard.backLaw.th}
                     </p>
@@ -353,7 +370,9 @@ export function Flashcards() {
                   {/* Formula / Explanation */}
                   {currentCard.formula && (
                     <div className="back-formula-box micro">
-                      <span className="mono font-bold">ALGORITHM & REASONING:</span>
+                      <span className="mono font-bold">
+                        {tr(lang, "เหตุผล", "Why", "为什么")}
+                      </span>
                       <p>{currentCard.formula[lang]}</p>
                     </div>
                   )}
@@ -361,7 +380,9 @@ export function Flashcards() {
                   {/* User Personal Margin Note */}
                   {currentCard.sections.some((s) => annotations[s]?.note) && (
                     <div className="user-note-callout micro">
-                      <span className="mono font-bold text-accent">✍️ บันทึกช่วยจำของคุณ:</span>
+                      <span className="mono font-bold text-accent">
+                        {tr(lang, "บันทึกช่วยจำของคุณ", "Your note", "你的笔记")}
+                      </span>
                       <p>
                         {currentCard.sections
                           .map((s) => annotations[s]?.note)
@@ -393,7 +414,7 @@ export function Flashcards() {
           {/* User Self-Rating Controls */}
           <div className="flashcard-rating-actions">
             <button className="rating-btn btn-wrong" onClick={markNeedReview}>
-              ❌ {tr(lang, "ยังจำไม่ได้", "Need Review", "还需强化")}
+              {tr(lang, "ยังจำไม่ได้", "Need review", "还需强化")}
             </button>
             <button
               className="rating-btn btn-flip"
@@ -402,7 +423,7 @@ export function Flashcards() {
               ↻ {isFlipped ? tr(lang, "คำถาม", "Prompt", "正面") : tr(lang, "เฉลย", "Answer", "背面")}
             </button>
             <button className="rating-btn btn-right primary" onClick={markMastered}>
-              ✅ {tr(lang, "จำได้แม่นยำ", "Mastered", "已掌握")}
+              {tr(lang, "จำได้แม่นยำ", "Mastered", "已掌握")}
             </button>
           </div>
 
