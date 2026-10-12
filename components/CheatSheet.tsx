@@ -170,9 +170,9 @@ export function CheatSheet() {
       title: tr(lang, "ผู้มีสิทธิเสนอร่าง (มาตรา 256(1))", "Who May Propose (Sec 256(1))", "提案主体 (第256条第1项)"),
       rule: tr(
         lang,
-        "1. คณะรัฐมนตรี (ครม.)\n2. ส.ส. ไม่น้อยกว่า 1/5 ของจำนวน ส.ส. ทั้งหมด (100 คน จาก 500 คน)\n3. ส.ส. + ส.ว. ไม่น้อยกว่า 1/5 ของสมาชิกรัฐสภาทั้งหมด (140 คน จาก 700 คน)\n4. ประชาชนผู้มีสิทธิเลือกตั้งไม่น้อยกว่า 50,000 คน (เข้าชื่อเสนอกฎหมาย)",
-        "1. Council of Ministers (Cabinet)\n2. MPs not less than 1/5 of House (100 of 500)\n3. MPs + Senators not less than 1/5 of Parliament (140 of 700)\n4. Eligible voters not less than 50,000 persons",
-        "1. 内阁\n2. 众议员不少于众议院议员总数五分之一（500人中的100人）\n3. 众议员与参议员联合不少于国会议员总数五分之一（700人中的140人）\n4. 选民不少于五万人联署",
+        "1. คณะรัฐมนตรี (ครม.)\n2. ส.ส. ไม่น้อยกว่า 1/5 ของจำนวน ส.ส. เท่าที่มีอยู่\n3. ส.ส. และ ส.ว. ร่วมกันไม่น้อยกว่า 1/5 ของสมาชิกทั้งสองสภาเท่าที่มีอยู่\n4. ประชาชนผู้มีสิทธิเลือกตั้งไม่น้อยกว่า 50,000 คน\nตัวอย่างเมื่อครบ 500 ส.ส. และ 200 ส.ว.: ข้อ 2 ต้องมี 100 คน; ข้อ 3 ต้องมี 140 คน",
+        "1. Council of Ministers (Cabinet)\n2. MPs numbering at least 1/5 of existing House members\n3. MPs and Senators jointly numbering at least 1/5 of existing members of both Houses\n4. At least 50,000 eligible voters\nWith all 500 House and 200 Senate seats filled: route 2 needs 100 MPs; route 3 needs 140 joint signatories.",
+        "1. 内阁\n2. 不少于现有众议员总数五分之一的众议员\n3. 众议员与参议员联合，不少于两院现有议员总数五分之一\n4. 不少于五万名有选举权的公民联署\n以500名众议员、200名参议员全部在任为例：第2项需100人；第3项需140人。",
       ),
       tag: "ม.256(1)",
     },
@@ -181,9 +181,9 @@ export function CheatSheet() {
       title: tr(lang, "วาระที่ 1: ขั้นรับหลักการ (มาตรา 256(3))", "Reading 1: Acceptance (Sec 256(3))", "第一读：接受原则 (第256条第3项)"),
       rule: tr(
         lang,
-        "ลงคะแนนแบบเรียกชื่อ:\n• ต้องได้เสียงเห็นชอบไม่น้อยกว่า 'กึ่งหนึ่ง' ของสมาชิกทั้งสองสภา (≥ 350 จาก 700 เสียง)\n• และ 'ต้องมี ส.ว. เห็นชอบด้วยไม่น้อยกว่า 1/3' ของ ส.ว. ทั้งหมด (≥ 67 จาก 200 เสียง)",
-        "Roll-call vote required:\n• Must obtain not less than half of total members of both Houses (≥ 350 of 700)\n• MUST include not less than 1/3 of total Senators (≥ 67 of 200)",
-        "记名点名表决：\n• 必须获得国会两院议员总数过半数赞成（700票中至少350票）\n• 且赞成票中必须包含不少于参议员总数的三分之一（200票中至少67票）",
+        "ลงคะแนนแบบเรียกชื่อ:\n• เสียงเห็นชอบไม่น้อยกว่ากึ่งหนึ่งของสมาชิกทั้งสองสภาเท่าที่มีอยู่\n• ในจำนวนนี้ต้องมี ส.ว. เห็นชอบไม่น้อยกว่า 1/3 ของ ส.ว. เท่าที่มีอยู่\nตัวอย่างเมื่อครบ 700 คน และ ส.ว. ครบ 200 คน: ≥ 350 เสียง และ ส.ว. ≥ 67 เสียง",
+        "Roll-call vote:\n• At least half of existing members of both Houses must approve\n• Those votes must include at least 1/3 of existing Senators\nWith all 700 seats and all 200 Senate seats filled: ≥ 350 votes, including ≥ 67 Senators.",
+        "记名点名表决：\n• 赞成票不少于两院现有议员总数的半数\n• 其中须有不少于现有参议员总数三分之一的参议员赞成\n以两院700席、参议院200席全部在任为例：≥ 350票，其中参议员≥ 67票。",
       ),
       tag: "ล็อก ส.ว. 1/3",
     },
@@ -214,9 +214,9 @@ export function CheatSheet() {
       title: tr(lang, "วาระที่ 3: ขั้นเห็นชอบ (มาตรา 256(6))", "Reading 3: Final Approval (Sec 256(6))", "第三读：最终通过 (第256条第6项)"),
       rule: tr(
         lang,
-        "เงื่อนไข 3 ชั้น (Triple Lock):\n1. เสียงเห็นชอบเกินกึ่งหนึ่งของสองสภา (≥ 350 เสียง)\n2. ส.ว. เห็นชอบด้วยไม่น้อยกว่า 1/3 (≥ 67 เสียง)\n3. ส.ส. จากพรรคที่ไม่มี รมต. และไม่มีประธาน/รองประธานสภา (พรรคฝ่ายค้าน) เห็นชอบด้วยไม่น้อยกว่า 20%",
-        "Triple Lock Formula:\n1. Over half of both Houses (≥ 350)\n2. At least 1/3 of Senate (≥ 67)\n3. At least 20% of MPs from parties without Cabinet ministers or Speaker/Deputy Speakers",
-        "三重锁门槛（Triple Lock）：\n1. 国会两院总数过半数赞成（≥ 350票）\n2. 参议员总数三分之一以上赞成（≥ 67票）\n3. 无内阁成员且无正副议长所属政党（在野党）众议员中至少20%赞成",
+        "เงื่อนไข 3 ชั้น (Triple Lock):\n1. เสียงเห็นชอบมากกว่ากึ่งหนึ่งของสมาชิกทั้งสองสภาเท่าที่มีอยู่\n2. ในจำนวนนี้มี ส.ว. เห็นชอบไม่น้อยกว่า 1/3 ของ ส.ว. เท่าที่มีอยู่\n3. มี ส.ส. จากพรรคที่สมาชิกไม่ได้เป็นรัฐมนตรี ประธานสภาผู้แทนราษฎร หรือรองประธานสภาผู้แทนราษฎร เห็นชอบไม่น้อยกว่า 20% ของ ส.ส. จากทุกพรรคดังกล่าวรวมกัน\nตัวอย่างเมื่อครบ 700 คน และ ส.ว. ครบ 200 คน: ≥ 351 เสียง และ ส.ว. ≥ 67 เสียง",
+        "Triple Lock:\n1. More than half of existing members of both Houses must approve\n2. Those votes must include at least 1/3 of existing Senators\n3. At least 20% of the combined MPs of all parties whose members hold none of these offices must approve: minister, House President or House Vice-President\nWith all 700 seats and all 200 Senate seats filled: ≥ 351 votes, including ≥ 67 Senators.",
+        "三重锁门槛：\n1. 赞成票须超过两院现有议员总数的半数\n2. 其中须有不少于现有参议员总数三分之一的参议员赞成\n3. 对于没有成员担任部长、众议院议长或副议长的各政党，须有这些政党众议员合计总数至少20%赞成\n以两院700席、参议院200席全部在任为例：≥ 351票，其中参议员≥ 67票。",
       ),
       tag: "ล็อก 3 ชั้น",
     },
@@ -225,9 +225,9 @@ export function CheatSheet() {
       title: tr(lang, "ด่านประชามติบังคับ (มาตรา 256(8))", "Mandatory Referendum Gate (Sec 256(8))", "强制公投关卡 (第256条第8项)"),
       rule: tr(
         lang,
-        "หากเป็นการแก้ไข:\n• หมวด 1 บททั่วไป\n• หมวด 2 พระมหากษัตริย์\n• หมวด 15 การแก้ไขเพิ่มเติมรัฐธรรมนูญ\n• เรื่องเกี่ยวกับคุณสมบัติ/อำนาจหน้าที่ของศาลหรือองค์กรอิสระ\n⟹ ต้องจัดให้มีการออกเสียงประชามติก่อนนำขึ้นทูลเกล้าฯ!",
-        "Mandatory Referendum triggered if amending:\n• Chapter 1 (General Provisions)\n• Chapter 2 (The King)\n• Chapter 15 (Amendments)\n• Powers, qualifications or duties of Courts or Independent Organs\n⟹ MUST pass a public referendum before Royal Assent!",
-        "修改下列事项必须进行全民公决：\n• 第1章 总则\n• 第2章 国王\n• 第15章 宪法修改\n• 法院或独立机构的资格、权限与职责\n⟹ 呈请御准前必须先由全民公投通过！",
+        "ต้องจัดประชามติหากแก้ไข:\n• หมวด 1 บททั่วไป หมวด 2 พระมหากษัตริย์ หรือหมวด 15 การแก้ไขเพิ่มเติมรัฐธรรมนูญ\n• คุณสมบัติหรือลักษณะต้องห้ามของผู้ดำรงตำแหน่งต่าง ๆ ตามรัฐธรรมนูญ\n• หน้าที่หรืออำนาจของศาลหรือองค์กรอิสระ\n• เรื่องที่ทำให้ศาลหรือองค์กรอิสระไม่อาจปฏิบัติตามหน้าที่หรืออำนาจได้\nต้องได้รับความเห็นชอบจากประชามติก่อนดำเนินการตามมาตรา 256(7)",
+        "A referendum is required for amendments to:\n• Chapter 1, Chapter 2 or Chapter 15\n• Qualifications or disqualifications of holders of any constitutional office\n• Duties or powers of Courts or Independent Organs\n• Matters preventing Courts or Independent Organs from performing their duties or exercising their powers\nReferendum approval is required before proceeding under section 256(7).",
+        "修改下列事项必须进行全民公投：\n• 第1章、第2章或第15章\n• 宪法规定的各类公职人员的任职资格或禁止任职情形\n• 法院或独立机构的职责或权限\n• 导致法院或独立机构无法履行职责或行使权限的事项\n须经公投通过，方可依第256条第7项继续办理。",
       ),
       tag: "ประชามติ",
     },
@@ -238,9 +238,20 @@ export function CheatSheet() {
         lang,
         "การแก้ไขเพิ่มเติมรัฐธรรมนูญที่มีผลเป็นการ:\n1. เปลี่ยนแปลงการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือ\n2. เปลี่ยนแปลงรูปแบบของรัฐ (ราชอาณาจักรอันหนึ่งอันเดียว จะแบ่งแยกมิได้)\n⟹ 'จะกระทำมิได้เด็ดขาด' (เป็นโมฆะและดำเนินมิได้)",
         "Absolute Prohibition:\nAmendments having the effect of:\n1. Changing the democratic regime with the King as Head of State, or\n2. Changing the unitary form of the Kingdom\n⟹ STRICTLY FORBIDDEN under all circumstances.",
-        "绝对禁止修改的事项：\n修改宪法产生下列效果之一的：\n1. 改变以国王为国家元首的民主政体，或\n2. 改变国家形式（不可分割的统一步王国）\n⟹ 绝对不可进行（自始无效）。",
+        "绝对禁止修改的事项：\n修改宪法产生下列效果之一的：\n1. 改变以国王为国家元首的民主政体，或\n2. 改变国家形式（不可分割的统一王国）\n⟹ 绝对不可进行（自始无效）。",
       ),
       tag: "ห้ามแก้เด็ดขาด",
+    },
+    {
+      step: "08",
+      title: tr(lang, "ก่อนนำขึ้นทูลเกล้าฯ (มาตรา 256(7)–(9))", "Before Royal Submission (Sec 256(7)–(9))", "呈请御准之前 (第256条第7至9项)"),
+      rule: tr(
+        lang,
+        "หลังวาระที่ 3 ให้รอไว้ 15 วัน แล้วจึงนำร่างขึ้นทูลเกล้าฯ ตามมาตรา 256(7) โดยนำมาตรา 81 มาใช้โดยอนุโลม\nหากเข้าเงื่อนไขมาตรา 256(8) ต้องได้รับความเห็นชอบจากประชามติก่อนดำเนินการตาม (7)\nหากมีคำร้องตามมาตรา 256(9) ห้ามนำร่างขึ้นทูลเกล้าฯ ระหว่างศาลรัฐธรรมนูญพิจารณา",
+        "After Reading 3 approval, wait 15 days before presenting the draft to the King under section 256(7), applying section 81 mutatis mutandis.\nIf section 256(8) applies, referendum approval is required before proceeding under (7).\nIf a petition under section 256(9) is pending, the draft cannot be presented while the Constitutional Court considers it.",
+        "第三读通过后，须等待15日，再依第256条第7项呈请国王御准，并准用第81条。\n若符合第256条第8项，须先经公投通过，方可依第7项办理。\n若有第256条第9项的申请，在宪法法院审理期间不得呈请御准。",
+      ),
+      tag: "ม.256(7)–(9)",
     },
   ];
 
@@ -619,9 +630,9 @@ export function CheatSheet() {
           <p className="micro">
             {tr(
               lang,
-              "รัฐธรรมนูญ พ.ศ. 2560 เป็นรัฐธรรมนูญแบบแก้ไขยาก มีระบบ 'Triple Lock' ล็อกเสียง ส.ว. และ ส.ส. ฝ่ายค้าน",
-              "The 2017 Constitution is rigid: featuring a 'Triple Lock' mechanism requiring Senate approval and non-government MP thresholds.",
-              "2017年宪法属于强刚性宪法，设置了必须达到参议员与在野党特定比例的“三重锁门槛”。",
+              "รัฐธรรมนูญ พ.ศ. 2560 เป็นรัฐธรรมนูญแบบแก้ไขยาก มีระบบ 'Triple Lock' กำหนดเสียง ส.ว. และ ส.ส. จากพรรคตามเงื่อนไขมาตรา 256(6)",
+              "The 2017 Constitution is rigid: featuring a 'Triple Lock' mechanism requiring Senate approval and qualifying-party MP thresholds under section 256(6).",
+              "2017年宪法属于强刚性宪法，设置了必须达到参议员与符合第256条第6项条件的政党众议员特定比例的“三重锁门槛”。",
             )}
           </p>
 
@@ -644,8 +655,8 @@ export function CheatSheet() {
           <div className="flow-detail card-selected" key={flowStep}>
             <h3>{amendmentSteps[flowStep].title}</h3>
             <pre className="step-rule-text">{amendmentSteps[flowStep].rule}</pre>
-            <Link className="citation" href="/section/?n=256">
-              {sectionLabel(lang, 256)} ↗
+            <Link className="citation" href={`/section/?n=${flowStep === 6 ? 255 : 256}`}>
+              {sectionLabel(lang, flowStep === 6 ? 255 : 256)} ↗
             </Link>
           </div>
         </section>

@@ -49,8 +49,8 @@ The app pairs **strict civic typography** (IBM Plex Sans Thai, Source Sans 3, Je
 - **Vital Exam Numbers:** Instant lookup for 500 MPs, 200 Senators, 36 Cabinet members, 8-year PM limit, 19 Privy Councillors, 9 Constitutional Court judges, and the 7-3-9-7-7 Independent Organ counts.
 - **Mnemonic Stories & Rhymes:** Trilingual memory rhymes that anchor complex numbers into everyday analogies.
 
-### 3. Expanded 85-Question Practice Bank (`/learn/` & `/review/`)
-- 5 unique trilingual questions for **every single chapter** (16 chapters + transitional provisions).
+### 3. 454-Question Practice Bank (`/learn/` & `/review/`)
+- 454 trilingual study questions covering **every section**, including 30 competition practice questions (16 chapters + transitional provisions).
 - Each question includes:
   - Scenario-based prompt in TH, EN, ZH.
   - Four distinct choices.
@@ -104,23 +104,28 @@ $$\text{Conflict}(\text{Law}, \text{Constitution}) \implies \text{Law} = \text{V
 │  PROPOSAL    │ ──> │ READING 1: ACCEPTANCE│ ──> │ READING 2: SECTIONS  │
 │ Cabinet /    │     │ ≥ 1/2 of both Houses │     │ Simple Majority of   │
 │ 1/5 MPs /    │     │ AND ≥ 1/3 of Senate  │     │ votes cast           │
-│ 50,000 Voters│     │ (≥ 67 of 200 Senators)     └──────────┬───────────┘
+│ Joint 1/5 /  │     │ (≥ 67 of 200)        │     └──────────┬───────────┘
+│ 50,000 Voters│     │                      │                │
 └──────────────┘     └──────────────────────┘                │
                                                        WAIT 15 DAYS
                                                              │
 ┌──────────────┐     ┌──────────────────────┐     ┌──────────▼───────────┐
 │ ROYAL ASSENT │ <── │  MANDATORY REFERENDUM│ <── │ READING 3: APPROVAL  │
-│ PM submits   │     │ Triggered if Ch 1, 2,│     │ ≥ 1/2 of both Houses │
-│ within 15 d  │     │ 15 or Court/Organ    │     │ AND ≥ 1/3 of Senate  │
-└──────────────┘     │ powers are altered!  │     │ AND ≥ 20% Non-Gov MPs│
+│ PM submits   │     │ Required when the   │     │ > 1/2 of both Houses │
+│ after 15 d   │     │ conditions in       │     │ AND ≥ 1/3 of Senate  │
+└──────────────┘     │ section 256(8) apply │     │ AND ≥ 20% eligible MPs│
                      └──────────────────────┘     └──────────────────────┘
 ```
 
 $$\text{Reading 1} = \left(\text{Total} \ge \frac{1}{2}\right) \land \left(\text{Senate} \ge \frac{1}{3}\right)$$
 
-$$\text{Reading 3} = \left(\text{Total} \ge \frac{1}{2}\right) \land \left(\text{Senate} \ge \frac{1}{3}\right) \land \left(\text{Opposition MPs} \ge 20\%\right)$$
+$$\text{Reading 3} = \left(\text{Total} > \frac{1}{2}\right) \land \left(\text{Senate} \ge \frac{1}{3}\right) \land \left(\text{Qualifying-party MPs} \ge 20\%\right)$$
 
 ---
+
+All proposal and voting fractions use **existing members**, not nominal seats. The joint proposal route requires MPs and Senators together numbering at least one fifth of existing members of both Houses. With all 500 House seats and 200 Senate seats filled, the proposal thresholds are 100 MPs or 140 joint signatories; Reading 1 needs at least 350 votes and Reading 3 needs at least 351, each including at least 67 Senators. The 20% threshold uses the combined MPs of all parties whose members hold no minister, House President or House Vice-President office.
+
+Section 256(8) requires referendum approval for amendments to Chapters 1, 2 or 15; qualifications or disqualifications of holders of any constitutional office; duties or powers of Courts or Independent Organs; or matters preventing those bodies from performing their duties or exercising their powers. Approval must precede proceeding under (7). After final approval, section 256(7) requires a **second 15-day wait** before presentation to the King, applying section 81 mutatis mutandis. A pending section 256(9) petition blocks presentation while the Constitutional Court considers it.
 
 ### Algorithm 3: Emergency Decrees (พระราชกำหนด - มาตรา 172)
 ```
@@ -196,7 +201,7 @@ npm run build && wrangler deploy
 │   └── StudyArt.tsx      # Crayon Scene Artwork Display
 ├── data/
 │   ├── constitution.json # Authoritative Bilingual Corpus (279 Sections)
-│   ├── questions.json    # 85 Trilingual Practice Questions with Formulas
+│   ├── questions.json    # 454 Trilingual Practice Questions with Formulas
 │   ├── cases.json        # 20 Verbatim Life Puzzles
 │   └── translations/     # Detailed Chinese & English Study Overlays
 ├── lib/
