@@ -1,0 +1,358 @@
+import type { Text } from "./i18n";
+const t = (th: string, en: string, zh: string): Text => ({ th, en, zh });
+export const palace = [
+  {
+    chapter: 1,
+    atlas: 1,
+    panel: 0,
+    number: "1",
+    sections: [1],
+    meaning: t(
+      "ราชอาณาจักรอันหนึ่งอันเดียว แบ่งแยกมิได้",
+      "One indivisible Kingdom",
+      "一个不可分割的王国",
+    ),
+    joke: t(
+      "เป็ดดึงจิ๊กซอว์จนเหนื่อย แต่ชิ้นเดียวก็ยังเป็นชิ้นเดียว",
+      "The duck keeps tugging at the puzzle. One piece is still one piece.",
+      "鸭子拼命拉拼图，可一整块仍是一整块。",
+    ),
+    check: t(
+      "เสียงส่วนใหญ่ทำให้แบ่งรัฐได้เองไหม?",
+      "Can majority support alone divide the State?",
+      "仅凭多数支持就能分割国家吗？",
+    ),
+  },
+  {
+    chapter: 2,
+    atlas: 1,
+    panel: 1,
+    number: "§6",
+    sections: [6],
+    meaning: t(
+      "เลขมาตรา: พระมหากษัตริย์ทรงอยู่ในฐานะอันเป็นที่เคารพสักการะ ผู้ใดจะละเมิดมิได้",
+      "Section number: the King is enthroned in a position of revered worship and shall not be violated",
+      "条号：国王处于受尊崇的地位，不得侵犯",
+    ),
+    joke: t(
+      "ร่มใหญ่คุ้มหนังสือ ร่มนกเล็กนิดเดียว ดูร่มแล้วจำบทคุ้มครอง ไม่ใช่อำนาจของร่มจริง",
+      "A big umbrella shelters the book; the sparrow’s umbrella barely shelters its beak. Recall constitutional protection, not literal umbrella powers.",
+      "大伞护着书，小鸟的伞只遮得住嘴。记住宪法保护，别把伞当成真实权力。",
+    ),
+    check: t(
+      "ภาพช่วยจำต่างจากตัวบทอย่างไร?",
+      "How does a memory picture differ from the legal text?",
+      "记忆图像与法律条文有何区别？",
+    ),
+  },
+  {
+    chapter: 3,
+    atlas: 1,
+    panel: 2,
+    number: "§44",
+    sections: [34, 44],
+    meaning: t(
+      "เลขมาตรา: ชุมนุมโดยสงบและปราศจากอาวุธ มีเงื่อนไขจำกัดโดยกฎหมาย",
+      "Section number: peaceful, unarmed assembly, subject to lawful restrictions",
+      "条号：和平、非武装集会，受依法限制的条件约束",
+    ),
+    joke: t(
+      "เป็ดมีฟองคำพูดใหญ่ที่สุด แต่ไม่ได้เสียงลงมติเพิ่มสักเสียง",
+      "The duck has the biggest speech bubble. It still gets no extra parliamentary votes.",
+      "鸭子的对话框最大，却没有因此多一张议会票。",
+    ),
+    check: t(
+      "ไม่ชอบความเห็นของเขา เท่ากับเขาไม่มีสิทธิหรือไม่?",
+      "Does disliking someone’s view remove their rights?",
+      "不喜欢某人的观点，就会取消他的权利吗？",
+    ),
+  },
+  {
+    chapter: 4,
+    atlas: 1,
+    panel: 3,
+    number: "§50",
+    sections: [50],
+    meaning: t(
+      "เลขมาตรา: หน้าที่ของประชาชน รวมถึงเคารพกฎหมายและช่วยดูแลสิ่งแวดล้อม",
+      "Section number: civic duties include obeying law and helping conserve the environment",
+      "条号：公民义务包括守法与协助保护环境",
+    ),
+    joke: t(
+      "หมวกเป็ดใหญ่กว่ารถเสียอีก หน้าที่เริ่มจากเรื่องใกล้ตัว ไม่ต้องแต่งตัวเป็นฮีโร่",
+      "The duck’s helmet is bigger than its bike. Duties start nearby; no superhero costume required.",
+      "鸭子的头盔比车还大。履行义务从身边开始，不用穿英雄服。",
+    ),
+    check: t(
+      "ยกตัวอย่างหน้าที่หนึ่งอย่างที่ทำได้วันนี้",
+      "Name one duty you can carry out today.",
+      "说出一项今天就能履行的义务。",
+    ),
+  },
+  {
+    chapter: 5,
+    atlas: 2,
+    panel: 0,
+    number: "12",
+    sections: [54],
+    meaning: t(
+      "12 ปี: ก่อนวัยเรียนจนจบการศึกษาภาคบังคับอย่างมีคุณภาพ โดยไม่เก็บค่าใช้จ่าย ไม่ใช่คำรับรองว่ามหาวิทยาลัยฟรีทั้งหมด",
+      "12 years: quality education from preschool through compulsory schooling without charge; not a promise of universally free university",
+      "12年：从学前到义务教育结束的优质免费教育；不等于所有大学教育都免费",
+    ),
+    joke: t(
+      "เต่าหิ้วกระเป๋าใหญ่จนเดินช้า หนังสือหนักไม่ได้ทำให้จำได้เร็ว",
+      "The turtle’s huge schoolbag slows it down. Heavier books do not make faster memories.",
+      "乌龟的大书包拖慢了脚步。书越重，记得可不一定越快。",
+    ),
+    check: t(
+      "12 ปีเริ่มและจบช่วงไหน?",
+      "Where do those 12 years begin and end?",
+      "这12年从哪个阶段开始，到哪里结束？",
+    ),
+  },
+  {
+    chapter: 6,
+    atlas: 2,
+    panel: 1,
+    number: "§77",
+    sections: [77],
+    meaning: t(
+      "เลขมาตรา: ฟังผู้เกี่ยวข้อง วิเคราะห์ผลกระทบ เปิดเผยผลก่อนตรากฎหมาย",
+      "Section number: consult, analyse impacts and disclose results before legislation",
+      "条号：立法前征求意见、分析影响并公开结果",
+    ),
+    joke: t(
+      "เป็ดเอาเก้าอี้ยักษ์มาฟัง กฎหมายต้องฟังคนที่ได้รับผลกระทบ ไม่ใช่เก้าอี้ที่ใหญ่ที่สุด",
+      "The duck brings a giant chair. Listen to people affected, not whoever owns the biggest seat.",
+      "鸭子搬来巨大的椅子。要听受影响的人，不是椅子最大的那位。",
+    ),
+    check: t(
+      "การรับฟังแปลว่าทุกคำขอต้องได้รับอนุมัติไหม?",
+      "Does consultation mean every request must be approved?",
+      "征求意见是否意味着每项请求都须批准？",
+    ),
+  },
+  {
+    chapter: 7,
+    atlas: 2,
+    panel: 2,
+    number: "400 + 100 / 200",
+    sections: [83, 107],
+    meaning: t(
+      "ส.ส. เขต 400 + บัญชีรายชื่อ 100; ส.ว. 200 ตามตัวบทปัจจุบัน ที่นั่งตามกฎหมายไม่เท่ากับสมาชิกเท่าที่มีอยู่เสมอ",
+      "400 constituency + 100 party-list MPs; 200 senators under the current text. Statutory seats need not equal existing membership",
+      "现行条文：400名选区议员＋100名政党名单议员；200名参议员。法定席位不一定等于现有成员人数",
+    ),
+    joke: t(
+      "เก้าอี้ใหญ่ผ่านประตูเล็กไม่ได้ เหมือนเอาตัวเลขของสภาหนึ่งไปใส่เกณฑ์อีกสภา",
+      "The big chair will not fit the small door. Neither will one chamber’s numbers fit the other’s rules.",
+      "大椅子过不了小门；一院的数字也不能塞进另一院的规则。",
+    ),
+    check: t(
+      "ถ้ามีที่นั่งว่าง เกณฑ์เสียงต้องนับอะไร?",
+      "If seats are vacant, what does the voting rule count?",
+      "有空缺席位时，票数门槛按什么计算？",
+    ),
+  },
+  {
+    chapter: 8,
+    atlas: 2,
+    panel: 3,
+    number: "1 + ≤35",
+    sections: [158],
+    meaning: t(
+      "นายกรัฐมนตรี 1 คน และรัฐมนตรีอื่นอีกไม่เกิน 35 คน",
+      "One Prime Minister and no more than 35 other ministers",
+      "一名总理及不超过35名其他部长",
+    ),
+    joke: t(
+      "แมวโผล่จากกาน้ำชา แต่ไม่ได้ตำแหน่งรัฐมนตรีเพิ่ม กาหนึ่งใบและถ้วยไม่เกิน 35 ใบ",
+      "A cat pops out of the kettle. It does not create an extra ministerial seat. One kettle, at most 35 cups.",
+      "猫从茶壶钻出来，也不会增加部长名额。一把壶，最多35只杯。",
+    ),
+    check: t(
+      "35 รวมตัวนายกรัฐมนตรีแล้วหรือยัง?",
+      "Does 35 already include the Prime Minister?",
+      "35人是否已经包含总理？",
+    ),
+  },
+  {
+    chapter: 9,
+    atlas: 3,
+    panel: 0,
+    number: "§184",
+    sections: [184],
+    meaning: t(
+      "เลขมาตรา: ข้อห้ามการขัดกันแห่งผลประโยชน์ อ่านชนิดผลประโยชน์และบุคคลที่อยู่ในเกณฑ์",
+      "Section number: conflicts-of-interest prohibitions; check the benefit and persons covered",
+      "条号：利益冲突的禁止规定；须核对利益类型及适用人员",
+    ),
+    joke: t(
+      "กระเป๋าสตางค์เจอแม่เหล็ก แต่โต๊ะสาธารณะไม่ควรเอนตามแรงเงิน",
+      "The wallet meets a magnet. A public desk should not lean toward private money.",
+      "钱包遇到磁铁，公共办公桌却不该向私人利益倾斜。",
+    ),
+    check: t(
+      "ใครได้ประโยชน์ส่วนตัวจากการตัดสินใจนี้?",
+      "Who gains privately from this decision?",
+      "这个决定让谁获得私人利益？",
+    ),
+  },
+  {
+    chapter: 10,
+    atlas: 3,
+    panel: 1,
+    number: "§188",
+    sections: [188],
+    meaning: t(
+      "เลขมาตรา: ผู้พิพากษาและตุลาการมีอิสระในการพิจารณาพิพากษาตามรัฐธรรมนูญและกฎหมาย",
+      "Section number: judicial independence in adjudication under the Constitution and law",
+      "条号：法官依宪法与法律独立审判",
+    ),
+    joke: t(
+      "แมวเติมบิสกิตบนตาชั่งไม่ได้ คำพิพากษาไม่ควรหนักตามขนมของคนข้างโต๊ะ",
+      "The cat cannot tip the scale with a biscuit. Judgments should not be weighed by treats from the sidelines.",
+      "猫不能拿饼干压天平。判决不该随旁人送的零食倾斜。",
+    ),
+    check: t(
+      "ความเป็นอิสระกับการไม่ต้องทำตามกฎหมายเหมือนกันไหม?",
+      "Is independence the same as freedom from the law?",
+      "独立是否等于不受法律约束？",
+    ),
+  },
+  {
+    chapter: 11,
+    atlas: 3,
+    panel: 2,
+    number: "9 / 7 / 1",
+    sections: [200, 207],
+    meaning: t(
+      "ตุลาการศาลรัฐธรรมนูญ 9 คน วาระ 7 ปี เพียงวาระเดียว",
+      "Nine Constitutional Court judges; seven-year terms; one term only",
+      "宪法法院9名法官，任期7年，只能任一届",
+    ),
+    joke: t(
+      "แมวยกค้อนใหญ่กว่าเก้าอี้ แต่น้ำหนักค้อนไม่ได้เพิ่มจำนวนตุลาการหรือวาระ",
+      "The cat’s gavel is larger than its chair. A heavier gavel adds neither judges nor years.",
+      "猫的法槌比椅子还大。法槌更重，也不会增加法官人数或任期。",
+    ),
+    check: t(
+      "9 คือจำนวนคนหรือจำนวนปี? แล้ว 7 คืออะไร?",
+      "Is nine people or years? What does seven mean?",
+      "9是人数还是年数？7又是什么？",
+    ),
+  },
+  {
+    chapter: 12,
+    atlas: 3,
+    panel: 3,
+    number: "5",
+    sections: [222, 228, 232, 238, 246],
+    meaning: t(
+      "5 กลุ่มในหมวดนี้: กกต. ผู้ตรวจการแผ่นดิน ป.ป.ช. การตรวจเงินแผ่นดิน และ กสม. ไม่ใช่กรรมการองค์กรละ 5 คน",
+      "Five categories here: Election Commission, Ombudsmen, NACC, State Audit and NHRC—not five members in each organ",
+      "本章五类：选举委员会、监察专员、反腐委员会、国家审计、人权委员会；不是每个机关五名成员",
+    ),
+    joke: t(
+      "นกมองกล้องกลับด้านหนึ่งตัว ภาพเล็กไม่แปลว่าตรวจเสร็จแล้ว แต่ละกล่องมีหน้าที่ต่างกัน",
+      "One bird holds binoculars backwards. A tiny view is not a finished audit; each booth has a different job.",
+      "一只鸟把望远镜拿反了。看见小小一片不代表审查完毕；每个观察亭职责不同。",
+    ),
+    check: t(
+      "5 หมายถึงประเภทองค์กรหรือจำนวนกรรมการ?",
+      "Does five count organ categories or commissioners?",
+      "5表示机关类别，还是委员人数？",
+    ),
+  },
+  {
+    chapter: 13,
+    atlas: 4,
+    panel: 0,
+    number: "§248",
+    sections: [248],
+    meaning: t(
+      "เลขมาตรา: องค์กรอัยการและความเป็นอิสระในการพิจารณาสั่งคดีตามกฎหมาย",
+      "Section number: the State Attorney organ and independent case decisions under law",
+      "条号：检察机关及依法独立作出案件决定",
+    ),
+    joke: t(
+      "เป็ดหิ้วหนังสือใหญ่กว่าตัว การสั่งคดีต้องใช้กฎหมาย ไม่ใช่แข่งขนาดหนังสือ",
+      "The duck carries a book bigger than itself. Case decisions need law, not a contest for the largest book.",
+      "鸭子举着比自己还大的书。案件决定要依法，不是比谁的书最大。",
+    ),
+    check: t(
+      "อัยการกับศาลทำหน้าที่เดียวกันไหม?",
+      "Do prosecutors and courts have the same role?",
+      "检察官与法院的职责相同吗？",
+    ),
+  },
+  {
+    chapter: 14,
+    atlas: 4,
+    panel: 1,
+    number: "§249",
+    sections: [249],
+    meaning: t(
+      "เลขมาตรา: การปกครองส่วนท้องถิ่นตามหลักปกครองตนเอง ตามเจตนารมณ์ประชาชนในท้องถิ่น",
+      "Section number: local self-government according to local people’s wishes",
+      "条号：依当地居民意愿实行地方自治",
+    ),
+    joke: t(
+      "แมวโบกทางให้จักรยาน แต่หมวกจิ๋วไม่ได้แต่งตั้งให้เป็นเจ้าหน้าที่ ท้องถิ่นมีฐานกฎหมาย",
+      "A cat directs bicycles. A tiny hat is not an appointment; local government has a legal basis.",
+      "猫指挥自行车；小帽子不是任命书。地方政府也有法律依据。",
+    ),
+    check: t(
+      "ปกครองตนเองในท้องถิ่นเท่ากับแยกประเทศหรือไม่?",
+      "Is local self-government the same as secession?",
+      "地方自治是否等于脱离国家？",
+    ),
+  },
+  {
+    chapter: 15,
+    atlas: 4,
+    panel: 2,
+    number: "50,000 / 15 + 15",
+    sections: [256],
+    meaning: t(
+      "ผู้มีสิทธิเลือกตั้ง 50,000 คนเสนอร่างได้; รอ 15 วันหลังวาระสอง และอีก 15 วันหลังวาระสุดท้าย ไม่ใช่ทั้งกระบวนการเสร็จใน 30 วัน",
+      "50,000 eligible voters may propose; wait 15 days after second reading and another 15 after final approval—not a 30-day completion guarantee",
+      "50,000名选民可提案；二读后等15天，终读通过后再等15天；不是保证30天完成",
+    ),
+    joke: t(
+      "เป็ดใช้กล้วยแทนกุญแจ เปิดไม่ได้ กุญแจเสียงสภากับนาฬิการอสองช่วงมีหน้าที่จริง",
+      "The duck tries a banana as a key. No luck. Parliamentary keys and the two waiting clocks do actual work.",
+      "鸭子拿香蕉当钥匙，打不开。议会票数钥匙和两段等待时钟各有作用。",
+    ),
+    check: t(
+      "50,000 ชื่อทำให้ร่างผ่านทันทีหรือแค่เสนอได้?",
+      "Do 50,000 signatures enact the draft or allow its proposal?",
+      "50,000个签名会立即通过草案，还是只能提出？",
+    ),
+  },
+  {
+    chapter: 16,
+    atlas: 4,
+    panel: 3,
+    number: "7+",
+    sections: [258],
+    meaning: t(
+      "ปฏิรูปอย่างน้อยใน 7 ด้านที่ระบุ รวมด้านอื่น ๆ ไม่ใช่รับรองผลสำเร็จใน 7 วัน",
+      "Reform in at least the seven listed areas, including “other areas”—not success guaranteed in seven days",
+      "至少在所列七方面改革，包括“其他方面”；不是保证七天成功",
+    ),
+    joke: t(
+      "เป็ดใส่หมวกช่างใหญ่ไปซ่อมสะพานเล็ก แผนปฏิรูปต้องดูงานและผล ไม่ใช่ขนาดหมวก",
+      "The duck repairs a tiny bridge under a huge hard hat. Judge reform by work and results, not hat size.",
+      "鸭子戴着大安全帽修小桥。评价改革看工作与成果，不看帽子大小。",
+    ),
+    check: t(
+      "ด้านปฏิรูปทั้ง 7 เป็นรายการปิดตายหรือมีด้านอื่นด้วย?",
+      "Are the seven reform areas a closed list or does it include other areas?",
+      "七项改革是封闭清单，还是包含其他方面？",
+    ),
+  },
+];
+export const palaceFor = (chapter: number) =>
+  palace.find((p) => p.chapter === chapter);

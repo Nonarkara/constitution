@@ -3376,3 +3376,18 @@ footer { flex-wrap:wrap; gap:16px; }
 .civic-resources { border-top: 3px solid var(--ink); margin-top: 2rem; padding-top: 1rem; }
 .civic-resources li { margin-block: .75rem; }
 @media(max-width:1024px) { .civic-rooms { grid-template-columns: repeat(2,minmax(0,1fr)); } .civic-rooms button { padding: .75rem; } }
+
+/* A four-scene atlas is cropped in the viewport, leaving original artwork intact. */
+.palace-picture { display:block; position:relative; width:100%; aspect-ratio:3/4; overflow:hidden; }
+.palace-picture img { position:absolute; top:0; width:400%; max-width:none; height:100%; object-fit:fill; filter:var(--art); }
+.palace-picture-small { width:88px; flex-shrink:0; }
+.palace-index { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); margin-block:1.5rem; border-top:3px solid var(--ink); }
+.palace-index button { display:flex; flex-direction:column; align-items:flex-start; text-align:left; gap:.5rem; padding:1rem; background:transparent; border:0; border-bottom:1px solid var(--line); }
+.palace-index button[aria-pressed="true"] { background:var(--accent-wash); outline:2px solid var(--accent-deep); outline-offset:-2px; }
+.palace-index span:last-child { font-size:var(--micro); }
+.palace-room { border-top:3px solid var(--ink); padding-top:1rem; max-width:760px; }
+.palace-room figure,.memory-cue figure { display:grid; grid-template-columns:minmax(100px,1fr) minmax(0,2fr); gap:1rem; margin:1rem 0; align-items:center; }
+.palace-number { font-family:"JetBrains Mono",monospace; font-size:var(--display); line-height:1.2; display:block; overflow-wrap:anywhere; }
+.memory-cue { margin-block:1rem; border-block:1px solid var(--line); padding-block:.75rem; }
+@media(max-width:1024px){ .palace-index { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:480px){ .palace-index button { padding:.75rem; } .palace-picture-small { width:72px; } .palace-room figure,.memory-cue figure { grid-template-columns:1fr; } .palace-room .palace-picture,.memory-cue .palace-picture { max-width:220px; } }

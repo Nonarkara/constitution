@@ -62,7 +62,7 @@ export function CivicNotebook() {
       </p>
       <figure className="civic-panorama">
         <Image
-          src="/illustrations/civic-palace.webp"
+          src="/illustrations/civic-palace-pastel.webp"
           alt={tr(
             lang,
             "ติ๊กกี้เดินผ่านประตู โต๊ะบัตรเลือกตั้ง จัตุรัส และโต๊ะเงิน สี่จุดช่วยจำ",
@@ -224,6 +224,17 @@ export function CivicNotebook() {
             "ทดลองเสียงแก้ไขและต้นทุน",
             "Explore amendment votes and costs",
             "探索修宪票数与成本",
+          )}{" "}
+          →
+        </Link>
+      </p>
+      <p>
+        <Link href="/memory/">
+          {tr(
+            lang,
+            "ไปบ้านความจำครบ 16 หมวด",
+            "Visit the memory house for all sixteen chapters",
+            "走进涵盖十六章的记忆屋",
           )}{" "}
           →
         </Link>

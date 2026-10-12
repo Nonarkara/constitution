@@ -13,7 +13,7 @@ export function StudyArt({
       aria-hidden="true"
     >
       <Image
-        src={`/illustrations/${scene}.webp`}
+        src={`/illustrations/${scene}-pastel.webp`}
         alt=""
         width={720}
         height={720}

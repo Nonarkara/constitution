@@ -10,6 +10,7 @@ import { choiceLetter, fisherYates } from "@/lib/shuffle";
 import { sessionSummary } from "@/lib/session";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
+import { MemoryCue } from "./MemoryCue";
 import { Puzzle } from "./Puzzle";
 type Question = (typeof questions)[number];
 
@@ -255,6 +256,7 @@ export function Quiz({
                 <p key={item.id}>{item.why[lang]}</p>
               ))}
             {"hook" in q && q.hook ? <p className="micro">{q.hook[lang]}</p> : null}
+            <MemoryCue chapter={q.chapter}/>
             {q.sections.some((n) => annotations[n]?.note) && (
               <div className="note" style={{ margin: "12px 0", borderLeft: "3px solid var(--accent)" }}>
                 <strong className="micro">

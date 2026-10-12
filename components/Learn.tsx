@@ -6,6 +6,7 @@ import { chapters, questionIndex as questions } from "@/lib/outline";
 import { chapterMastery } from "@/lib/learning";
 import dynamic from "next/dynamic";
 const Quiz = dynamic(() => import("./Quiz").then((m) => m.Quiz));
+import { PalacePicture } from "./MemoryCue";
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
 import { sectionSignals, stateOf, type Signals } from "@/lib/knowledge";
@@ -48,10 +49,10 @@ export function Learn() {
   return (
     <>
       {/* One dominant element: the drawing and the next step read as a single block. */}
-      <div className="civic-shortcuts"><Link href="/civic/">{tr(lang,"ตรวจคำสัญญา","Check the promise","核查承诺")} →</Link><Link href="/amend/">{tr(lang, "ถ้าเราอยากแก้รัฐธรรมนูญ", "If we want to amend it", "如果我们想修宪")} →</Link><Link href="/news/">{tr(lang, "ข่าวสั้น", "Headlines", "新闻标题")} →</Link></div>
+      <div className="civic-shortcuts"><Link href="/memory/">{tr(lang,"บ้านความจำ 16 ห้อง","16-room memory house","十六间记忆屋")} →</Link><Link href="/civic/">{tr(lang,"ตรวจคำสัญญา","Check the promise","核查承诺")} →</Link><Link href="/amend/">{tr(lang, "ถ้าเราอยากแก้รัฐธรรมนูญ", "If we want to amend it", "如果我们想修宪")} →</Link><Link href="/news/">{tr(lang, "ข่าวสั้น", "Headlines", "新闻标题")} →</Link></div>
       <section className="hero">
         <figure className="hero-art" aria-hidden="true">
-          <Image src="/illustrations/reading.webp" alt="" width={720} height={720} priority sizes="(max-width: 720px) 100vw, 46vw" />
+          <Image src="/illustrations/reading-pastel.webp" alt="" width={720} height={720} priority sizes="(max-width: 720px) 100vw, 46vw" />
         </figure>
         <div className="hero-copy">
           <h1>
@@ -133,6 +134,7 @@ export function Learn() {
                   )}
                 </span>
                 <h3>{c.title[lang]}</h3>
+                {c.number<=16&&<Link href={`/memory/#room-${c.number}`} aria-label={tr(lang,"ภาพช่วยจำหมวดนี้","This chapter’s memory picture","本章记忆图像")}><PalacePicture chapter={c.number} small/></Link>}
                 <Stations start={c.start} end={c.end} signals={signals} />
                 <div className="mastery-line" aria-label={`${m.percent}%`}>
                   <span style={{ transform: `scaleX(${m.percent / 100})` }} />

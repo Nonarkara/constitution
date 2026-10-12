@@ -7,6 +7,7 @@ import { choiceLetter, fisherYates } from "@/lib/shuffle";
 import { quoteFrame } from "@/lib/quotes";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
+import { MemoryCue } from "./MemoryCue";
 import { RuleDiagram } from "./RuleDiagram";
 export type Case = (typeof cases)[number];
 
@@ -96,6 +97,7 @@ export function Puzzle({
           <br />
           {item.choices[item.answer][lang]}
         </p>
+        <MemoryCue chapter={item.chapter} />
         <RuleDiagram id={item.id} />
         <p>{item.story[lang]}</p>
         <p>{item.why[lang]}</p>
