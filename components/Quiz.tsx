@@ -249,7 +249,12 @@ export function Quiz({
                   )}
             </strong>
             <p>{q.explanation[lang]}</p>
-            {"hook" in q && q.hook ? <p>{q.hook[lang]}</p> : null}
+            {cases
+              .filter((item) => item.sections.some((n) => q.sections.includes(n)))
+              .map((item) => (
+                <p key={item.id}>{item.why[lang]}</p>
+              ))}
+            {"hook" in q && q.hook ? <p className="micro">{q.hook[lang]}</p> : null}
             {q.sections.some((n) => annotations[n]?.note) && (
               <div className="note" style={{ margin: "12px 0", borderLeft: "3px solid var(--accent)" }}>
                 <strong className="micro">

@@ -189,6 +189,20 @@ test("the rights shelf is a life index, and every puzzle is still on the path", 
   assert.equal(seen.size, cases.length);
 });
 
+test("explanations stay in prose, and the reading room does not open a raw feed", () => {
+  const raw = readFileSync(new URL("../data/questions.json", import.meta.url), "utf8");
+  const reader = readFileSync(new URL("../components/Reader.tsx", import.meta.url), "utf8");
+  for (const tag of ["Algorithm:", "Formula:", "สูตรวิเคราะห์", "算法公式"]) {
+    assert.equal(raw.includes(tag), false, tag);
+  }
+  assert.equal(reader.includes("/podcast/"), false);
+  assert.equal(reader.includes("drive.google.com"), false);
+  assert.equal(reader.includes("<iframe"), false);
+  const kingdom = JSON.parse(raw).find((item: { id: string }) => item.id === "c01-01");
+  assert.ok(kingdom.explanation.en.length > 120);
+  assert.match(kingdom.explanation.th, /แบ่งแยกมิได้/);
+});
+
 test("memorisation traps have a hook, and joke answers are gone", () => {
   const jokes = [
     "Yes, only on holidays",

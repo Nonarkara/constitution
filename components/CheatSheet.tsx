@@ -499,21 +499,13 @@ export function CheatSheet() {
               role="img"
               aria-label={tr(lang, "แผนภาพปิรามิดลำดับศักดิ์ของกฎหมาย", "Legal hierarchy pyramid diagram", "法律位阶金字塔图")}
             >
-              <defs>
-                <filter id="crayon-filter" x="-5%" y="-5%" width="110%" height="110%">
-                  <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise" />
-                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
-                </filter>
-              </defs>
-
               {/* Tier 1: Constitution (Top) */}
               <polygon
                 points="300,20 220,75 380,75"
-                fill={pyramidLevel === 0 ? "var(--accent)" : "#fef3c7"}
+                fill={pyramidLevel === 0 ? "var(--accent)" : "var(--paper)"}
                 stroke="var(--ink)"
                 strokeWidth={pyramidLevel === 0 ? 3 : 1.5}
-                filter="url(#crayon-filter)"
-                className="pyramid-tier"
+ className="pyramid-tier"
                 onClick={() => setPyramidLevel(0)}
                 tabIndex={0}
                 role="button"
@@ -526,11 +518,10 @@ export function CheatSheet() {
               {/* Tier 2: Organic Acts, Acts, Decrees */}
               <polygon
                 points="220,77 380,77 440,135 160,135"
-                fill={pyramidLevel === 1 ? "var(--accent)" : "#ffedd5"}
+                fill={pyramidLevel === 1 ? "var(--accent)" : "var(--wash)"}
                 stroke="var(--ink)"
                 strokeWidth={pyramidLevel === 1 ? 3 : 1.5}
-                filter="url(#crayon-filter)"
-                className="pyramid-tier"
+ className="pyramid-tier"
                 onClick={() => setPyramidLevel(1)}
                 tabIndex={0}
                 role="button"
@@ -543,11 +534,10 @@ export function CheatSheet() {
               {/* Tier 3: Royal Decrees */}
               <polygon
                 points="160,137 440,137 500,195 100,195"
-                fill={pyramidLevel === 2 ? "var(--accent)" : "#fef9c3"}
+                fill={pyramidLevel === 2 ? "var(--accent)" : "var(--paper)"}
                 stroke="var(--ink)"
                 strokeWidth={pyramidLevel === 2 ? 3 : 1.5}
-                filter="url(#crayon-filter)"
-                className="pyramid-tier"
+ className="pyramid-tier"
                 onClick={() => setPyramidLevel(2)}
                 tabIndex={0}
                 role="button"
@@ -560,11 +550,10 @@ export function CheatSheet() {
               {/* Tier 4: Ministerial Regs */}
               <polygon
                 points="100,197 500,197 550,255 50,255"
-                fill={pyramidLevel === 3 ? "var(--accent)" : "#f3f4f6"}
+                fill={pyramidLevel === 3 ? "var(--accent)" : "var(--wash)"}
                 stroke="var(--ink)"
                 strokeWidth={pyramidLevel === 3 ? 3 : 1.5}
-                filter="url(#crayon-filter)"
-                className="pyramid-tier"
+ className="pyramid-tier"
                 onClick={() => setPyramidLevel(3)}
                 tabIndex={0}
                 role="button"
@@ -577,11 +566,10 @@ export function CheatSheet() {
               {/* Tier 5: Local Ordinances (Base) */}
               <polygon
                 points="50,257 550,257 590,310 10,310"
-                fill={pyramidLevel === 4 ? "var(--accent)" : "#e5e7eb"}
+                fill={pyramidLevel === 4 ? "var(--accent)" : "var(--paper)"}
                 stroke="var(--ink)"
                 strokeWidth={pyramidLevel === 4 ? 3 : 1.5}
-                filter="url(#crayon-filter)"
-                className="pyramid-tier"
+ className="pyramid-tier"
                 onClick={() => setPyramidLevel(4)}
                 tabIndex={0}
                 role="button"
@@ -801,13 +789,13 @@ export function CheatSheet() {
                   {/* Left Pan: State Interest */}
                   <line x1="100" y1="70" x2="60" y2="130" stroke="var(--ink)" strokeWidth="1.5" />
                   <line x1="100" y1="70" x2="140" y2="130" stroke="var(--ink)" strokeWidth="1.5" />
-                  <rect x="50" y="130" width="100" height="20" fill="#fef3c7" stroke="var(--ink)" />
+                  <rect x="50" y="130" width="100" height="20" fill="var(--paper)" stroke="var(--ink)" />
                   <text x="100" y="145" textAnchor="middle" className="svg-label">ประโยชน์สาธารณะ</text>
 
                   {/* Right Pan: Personal Rights */}
                   <line x1="400" y1="70" x2="360" y2="130" stroke="var(--ink)" strokeWidth="1.5" />
                   <line x1="400" y1="70" x2="440" y2="130" stroke="var(--ink)" strokeWidth="1.5" />
-                  <rect x="350" y="130" width="100" height="20" fill="#fef3c7" stroke="var(--ink)" />
+                  <rect x="350" y="130" width="100" height="20" fill="var(--paper)" stroke="var(--ink)" />
                   <text x="400" y="145" textAnchor="middle" className="svg-label">สิทธิเสรีภาพ</text>
                 </>
               )}
