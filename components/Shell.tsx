@@ -3,9 +3,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useStudy } from "./Provider";
 import { labels, tr, type Lang } from "@/lib/i18n";
+import { SWATCH, THEMES, THEME_NAME } from "@/lib/theme";
+import { useTheme } from "@/lib/use-theme";
 export function Shell({ children }: { children: React.ReactNode }) {
   const { lang, setLang, progress, storageError, ready, online } = useStudy();
   const path = usePathname();
+  const theme = useTheme();
   // Five destinations; every other page belongs to one of them for the active state.
   const nav = [
     ["/learn/", labels.learn, ["/", "/learn/"]],
@@ -36,6 +39,22 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </small>
           </span>
         </Link>
+        <div className="header-controls">
+        <div className="themes" role="group" aria-label={tr(lang, "สีหน้าจอ", "Screen colours", "屏幕配色")}>
+          {/* Each swatch is the theme itself: its paper, its ink. */}
+          {THEMES.map((t) => (
+            <button
+              key={t}
+              aria-pressed={theme.shown === t}
+              aria-label={THEME_NAME[t][lang]}
+              title={THEME_NAME[t][lang]}
+              style={{ background: SWATCH[t].paper, color: SWATCH[t].ink }}
+              onClick={() => theme.choose(t)}
+            >
+              <span aria-hidden="true">{{ th: "ก", en: "A", zh: "文" }[lang]}</span>
+            </button>
+          ))}
+        </div>
         <div className="languages" aria-label={tr(lang, "ภาษา", "Language", "语言")}>
           {(["th", "en", "zh"] as Lang[]).map((l) => (
             <button
@@ -48,6 +67,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
               {{ th: "ไทย", en: "EN", zh: "中文" }[l]}
             </button>
           ))}
+        </div>
         </div>
       </header>
       <div className="app-grid">

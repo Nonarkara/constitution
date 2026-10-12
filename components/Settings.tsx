@@ -6,6 +6,8 @@ import { questionIndex as questions } from "@/lib/outline";
 import { createBackup, parseBackup } from "@/lib/backup";
 import { REFLECTION_KEY } from "@/lib/amendment";
 import { defaultProgress } from "@/lib/learning";
+import { THEMES, THEME_NAME, type ThemeChoice } from "@/lib/theme";
+import { useTheme } from "@/lib/use-theme";
 export function Settings() {
   const {
     lang,
@@ -19,6 +21,7 @@ export function Settings() {
     annotations,
     saveAnnotations,
   } = useStudy();
+  const theme = useTheme();
   const [confirm, setConfirm] = useState(false),
     [message, setMessage] = useState("");
   const download = () => {
@@ -135,6 +138,23 @@ export function Settings() {
             "ตัวอักษรทั้งเล่มใหญ่ขึ้นบนเครื่องนี้",
             "Text across the notebook gets larger on this device.",
             "这台设备上，整本笔记的字都会变大。",
+          )}
+        </p>
+        <fieldset className="theme-choices">
+          <legend>{tr(lang, "สีหน้าจอ", "Screen colours", "屏幕配色")}</legend>
+          {(["auto", ...THEMES] as ThemeChoice[]).map((t) => (
+            <label className="setting-label" key={t}>
+              <input type="radio" name="theme" checked={theme.choice === t} onChange={() => theme.choose(t)} />
+              {THEME_NAME[t][lang]}
+            </label>
+          ))}
+        </fieldset>
+        <p>
+          {tr(
+            lang,
+            "กลางคืนใช้โหมดกลางคืนหรือถนอมสายตา แสงจะไม่แยงตา ตามอุปกรณ์จะเปลี่ยนเองตามการตั้งค่าของเครื่อง",
+            "At night, Dark or Mild is easier on the eyes. Match device follows this device's own setting.",
+            "夜里用深色或柔和模式更护眼。“跟随设备”会按本机设置自动切换。",
           )}
         </p>
       </div>

@@ -813,25 +813,25 @@ export function CheatSheet() {
 
               {scaleFactor === "excess" && (
                 <>
-                  <line x1="100" y1="110" x2="400" y2="30" stroke="#dc2626" strokeWidth="4" />
+                  <line x1="100" y1="110" x2="400" y2="30" stroke="var(--bad-line)" strokeWidth="4" />
                   {/* Left Pan lower: Excessive State intervention */}
                   <line x1="100" y1="110" x2="60" y2="170" stroke="var(--ink)" strokeWidth="1.5" />
                   <line x1="100" y1="110" x2="140" y2="170" stroke="var(--ink)" strokeWidth="1.5" />
-                  <rect x="50" y="170" width="100" height="20" fill="#fecaca" stroke="var(--ink)" />
+                  <rect x="50" y="170" width="100" height="20" fill="var(--bad-wash)" stroke="var(--ink)" />
                   <text x="100" y="185" textAnchor="middle" className="svg-label">{tr(lang, "รัฐแทรกแซงล้นเกิน", "Excessive intervention", "过度干预")}</text>
 
                   {/* Right Pan elevated */}
                   <line x1="400" y1="30" x2="360" y2="90" stroke="var(--ink)" strokeWidth="1.5" />
                   <line x1="400" y1="30" x2="440" y2="90" stroke="var(--ink)" strokeWidth="1.5" />
-                  <rect x="350" y="90" width="100" height="20" fill="#fee2e2" stroke="var(--ink)" />
+                  <rect x="350" y="90" width="100" height="20" fill="var(--bad-wash)" stroke="var(--ink)" />
                   <text x="400" y="105" textAnchor="middle" className="svg-label">{tr(lang, "สิทธิถูกลิดรอนเกินเหตุ", "Excessive restriction", "过度限制")}</text>
                 </>
               )}
 
               {scaleFactor === "core" && (
                 <>
-                  <line x1="100" y1="130" x2="400" y2="10" stroke="#991b1b" strokeWidth="4" />
-                  <text x="250" y="30" textAnchor="middle" fill="#991b1b" className="svg-label font-bold">
+                  <line x1="100" y1="130" x2="400" y2="10" stroke="var(--bad)" strokeWidth="4" />
+                  <text x="250" y="30" textAnchor="middle" fill="var(--bad)" className="svg-label font-bold">
                     {tr(lang, "ต้องไม่กระทบศักดิ์ศรีความเป็นมนุษย์", "Must respect human dignity", "不得损害人的尊严")}
                   </text>
                 </>

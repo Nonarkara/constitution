@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Provider } from "@/components/Provider";
 import { Shell } from "@/components/Shell";
+import { themeScript } from "@/lib/theme";
 import "./globals.css";
 const description =
   "อ่านรัฐธรรมนูญ พ.ศ. 2560 ครบ 279 มาตรา ไฮไลต์ จดโน้ต ฟัง ฝึกตอบ และทบทวน เป็นภาษาไทย อังกฤษ และจีน · Read, highlight, listen to and practise the Thai Constitution in Thai, English and Chinese.";
@@ -35,7 +36,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="th">
+    <html lang="th" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         <Provider>
           <Shell>{children}</Shell>
