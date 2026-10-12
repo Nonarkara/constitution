@@ -1,6 +1,6 @@
 "use client";
 import { InstitutionMap } from "./InstitutionMap";
-import { StudyArt } from "./StudyArt";
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { chapters, questionIndex as questions } from "@/lib/outline";
@@ -31,20 +31,15 @@ export function Learn() {
     );
   return (
     <>
-      <div className="page-kicker mono">YOUR LEARNING PATH · 01</div>
-      <section className="intro">
-        <div className="intro-index mono" aria-hidden="true">
-          ๑
-        </div>
-        <div className="intro-copy">
-          <StudyArt scene="reading" />
+      {/* One dominant element: the drawing and the next step read as a single block. */}
+      <section className="hero">
+        <figure className="hero-art" aria-hidden="true">
+          <Image src="/illustrations/reading.webp" alt="" width={720} height={720} priority sizes="(max-width: 720px) 100vw, 46vw" />
+        </figure>
+        <div className="hero-copy">
+          <span className="page-kicker mono">YOUR LEARNING PATH · 01</span>
           <h1>
-            {tr(
-              lang,
-              "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ",
-              "One section.\nOne small step.",
-              "一条一条读，\n一点一点懂。",
-            )}
+            {tr(lang, "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ", "One section.\nOne small step.", "一条一条读，\n一点一点懂。")}
           </h1>
           <p>
             {tr(
@@ -54,25 +49,22 @@ export function Learn() {
               "不必一天记住全部。先读懂一个概念，再用练习检验理解。",
             )}
           </p>
-          <button
-            className="primary"
-            disabled={!ready}
-            onClick={() => setChapter(next.number)}
-          >
-            {tr(
-              lang,
-              "เริ่มบทเรียนสั้น ๆ",
-              "Start a short lesson",
-              "开始一节短课",
-            )}{" "}
+          <button className="primary hero-cta" disabled={!ready} onClick={() => setChapter(next.number)}>
+            <span>
+              <span className="hero-cta-label">
+                {tr(lang, "บทเรียนต่อไป", "Next lesson", "下一课")} ·{" "}
+                {next.number === 17 ? tr(lang, "บทเฉพาะกาล", "Transitory", "过渡条款") : `${labels.chapter[lang]} ${next.number}`}
+              </span>
+              <span className="hero-cta-title">{next.title[lang]}</span>
+            </span>
             <span aria-hidden="true">→</span>
           </button>
           <p className="micro">
             {tr(
               lang,
-              "เริ่มจากโจทย์ในชีวิตจริง • แล้วอ่านกฎหมาย • ไม่จำกัดเวลา",
-              "A real-life puzzle first · then the law · No timer",
-              "先做生活题 · 再读法条 · 不限时",
+              "โจทย์ชีวิตจริง 1 ข้อ • อ่านตัวบท • ฝึกตอบ 10 ข้อ • ไม่จับเวลา",
+              "One real-life puzzle · the law · ten questions · no timer",
+              "一道生活题 · 读法条 · 十道练习 · 不限时",
             )}
           </p>
         </div>

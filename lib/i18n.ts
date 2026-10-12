@@ -5,6 +5,10 @@ export const tr = (lang: Lang, th: string, en: string, zh: string) =>
 export const labels = {
   title: { th: "รัฐธรรมนูญ", en: "The Constitution", zh: "泰国宪法" },
   learn: { th: "เส้นทางเรียน", en: "Learn", zh: "学习路径" },
+  read: { th: "อ่านทั้งฉบับ", en: "Read", zh: "阅读全文" },
+  practice: { th: "ฝึกตอบ", en: "Practice", zh: "练习" },
+  notes: { th: "บันทึกของคุณ", en: "Your notes", zh: "你的笔记" },
+  library: { th: "ห้องสมุด", en: "Library", zh: "资料库" },
   notebook: {
     th: "สมุดคู่หน้า 279 มาตรา",
     en: "Double-page notebook",

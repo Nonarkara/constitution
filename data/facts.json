@@ -1,0 +1,22 @@
+[
+  { "id": "mps", "section": 83, "proof": "ห้าร้อยคน", "label": { "th": "สมาชิกสภาผู้แทนราษฎรทั้งหมด", "en": "Members of the House", "zh": "下议院议员总数" }, "value": { "th": "500 คน (เขต 400 + บัญชีรายชื่อ 100)", "en": "500 (400 constituency + 100 list)", "zh": "500人（选区400 + 名单100）" } },
+  { "id": "senators", "section": 107, "proof": "สองร้อยคน", "label": { "th": "สมาชิกวุฒิสภา", "en": "Senators", "zh": "参议员" }, "value": { "th": "200 คน", "en": "200", "zh": "200人" } },
+  { "id": "ministers", "section": 158, "proof": "สามสิบห้าคน", "label": { "th": "รัฐมนตรีอื่นนอกจากนายกรัฐมนตรี", "en": "Ministers besides the PM", "zh": "总理以外的部长" }, "value": { "th": "ไม่เกิน 35 คน", "en": "Up to 35", "zh": "不超过35人" } },
+  { "id": "pm-cap", "section": 158, "proof": "แปดปี", "label": { "th": "นายกรัฐมนตรีดำรงตำแหน่งรวมกัน", "en": "PM's total time in office", "zh": "总理累计任期" }, "value": { "th": "ไม่เกิน 8 ปี", "en": "No more than 8 years", "zh": "不超过8年" } },
+  { "id": "court-judges", "section": 200, "proof": "เก้าคน", "label": { "th": "ตุลาการศาลรัฐธรรมนูญ", "en": "Constitutional Court judges", "zh": "宪法法院法官" }, "value": { "th": "9 คน", "en": "9", "zh": "9人" } },
+  { "id": "court-term", "section": 207, "proof": "เจ็ดปี", "label": { "th": "วาระตุลาการศาลรัฐธรรมนูญ", "en": "Constitutional Court term", "zh": "宪法法院法官任期" }, "value": { "th": "7 ปี วาระเดียว", "en": "7 years, one term", "zh": "7年，仅一任" } },
+  { "id": "ec", "section": 222, "proof": "เจ็ดคน", "label": { "th": "กรรมการการเลือกตั้ง", "en": "Election Commissioners", "zh": "选举委员" }, "value": { "th": "7 คน", "en": "7", "zh": "7人" } },
+  { "id": "ombudsmen", "section": 228, "proof": "สามคน", "label": { "th": "ผู้ตรวจการแผ่นดิน", "en": "Ombudsmen", "zh": "监察专员" }, "value": { "th": "3 คน", "en": "3", "zh": "3人" } },
+  { "id": "nacc", "section": 232, "proof": "เก้าคน", "label": { "th": "กรรมการ ป.ป.ช.", "en": "NACC commissioners", "zh": "国家反贪委员" }, "value": { "th": "9 คน", "en": "9", "zh": "9人" } },
+  { "id": "nhrc", "section": 246, "proof": "เจ็ดคน", "label": { "th": "กรรมการสิทธิมนุษยชนแห่งชาติ", "en": "Human Rights commissioners", "zh": "国家人权委员" }, "value": { "th": "7 คน", "en": "7", "zh": "7人" } },
+  { "id": "citizen-bill", "section": 133, "proof": "หนึ่งหมื่นคน", "label": { "th": "ประชาชนเข้าชื่อเสนอกฎหมาย", "en": "Voters to propose a bill", "zh": "联署提出法案的选民" }, "value": { "th": "อย่างน้อย 10,000 คน", "en": "At least 10,000", "zh": "至少10,000人" } },
+  { "id": "mp-bill", "section": 133, "proof": "ยี่สิบคน", "label": { "th": "ส.ส. เสนอร่างพระราชบัญญัติ", "en": "MPs to introduce a bill", "zh": "提出法案的下议院议员" }, "value": { "th": "อย่างน้อย 20 คน", "en": "At least 20", "zh": "至少20人" } },
+  { "id": "amend-petition", "section": 256, "proof": "ห้าหมื่นคน", "label": { "th": "ประชาชนเข้าชื่อเสนอแก้รัฐธรรมนูญ", "en": "Voters to propose an amendment", "zh": "联署提出修宪的选民" }, "value": { "th": "อย่างน้อย 50,000 คน", "en": "At least 50,000", "zh": "至少50,000人" } },
+  { "id": "school", "section": 54, "proof": "สิบสองปี", "label": { "th": "การศึกษาโดยไม่เก็บค่าใช้จ่าย", "en": "Free education", "zh": "免费教育" }, "value": { "th": "12 ปี", "en": "12 years", "zh": "12年" } },
+  { "id": "house-term", "section": 99, "proof": "สี่ปี", "label": { "th": "อายุสภาผู้แทนราษฎร", "en": "Term of the House", "zh": "下议院任期" }, "value": { "th": "4 ปี", "en": "4 years", "zh": "4年" } },
+  { "id": "senate-term", "section": 109, "proof": "ห้าปี", "label": { "th": "อายุวุฒิสภา", "en": "Term of the Senate", "zh": "参议院任期" }, "value": { "th": "5 ปี", "en": "5 years", "zh": "5年" } },
+  { "id": "voting-age", "section": 95, "proof": "สิบแปดปี", "label": { "th": "อายุผู้มีสิทธิเลือกตั้ง", "en": "Voting age", "zh": "选民年龄" }, "value": { "th": "ไม่ต่ำกว่า 18 ปี", "en": "18 or older", "zh": "年满18岁" } },
+  { "id": "mp-age", "section": 97, "proof": "ยี่สิบห้าปี", "label": { "th": "อายุผู้สมัคร ส.ส.", "en": "Minimum age of an MP", "zh": "下议院议员最低年龄" }, "value": { "th": "25 ปี", "en": "25", "zh": "25岁" } },
+  { "id": "senator-age", "section": 108, "proof": "สี่สิบปี", "label": { "th": "อายุผู้สมัคร ส.ว.", "en": "Minimum age of a senator", "zh": "参议员最低年龄" }, "value": { "th": "40 ปี", "en": "40", "zh": "40岁" } },
+  { "id": "minister-age", "section": 160, "proof": "สามสิบห้าปี", "label": { "th": "อายุรัฐมนตรี", "en": "Minimum age of a minister", "zh": "部长最低年龄" }, "value": { "th": "35 ปี", "en": "35", "zh": "35岁" } }
+]

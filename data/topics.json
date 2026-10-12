@@ -1,0 +1,2480 @@
+[
+  {
+    "id": "indivisible-kingdom",
+    "topic": {
+      "th": "ประเทศไทยแบ่งแยกไม่ได้",
+      "en": "Thailand as one indivisible kingdom",
+      "zh": "统一不可分割的王国"
+    },
+    "sections": [
+      1,
+      249
+    ]
+  },
+  {
+    "id": "form-of-government",
+    "topic": {
+      "th": "ระบอบการปกครอง ประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข",
+      "en": "Form of government: democracy with the King as Head of State",
+      "zh": "政体：以国王为国家元首的民主政体"
+    },
+    "sections": [
+      2,
+      5,
+      49,
+      255
+    ]
+  },
+  {
+    "id": "sovereignty",
+    "topic": {
+      "th": "อำนาจอธิปไตยเป็นของประชาชน",
+      "en": "Sovereignty belongs to the people",
+      "zh": "主权属于人民"
+    },
+    "sections": [
+      3
+    ]
+  },
+  {
+    "id": "rule-of-law",
+    "topic": {
+      "th": "หลักนิติธรรม",
+      "en": "Rule of law",
+      "zh": "法治"
+    },
+    "sections": [
+      3,
+      26
+    ]
+  },
+  {
+    "id": "human-dignity",
+    "topic": {
+      "th": "ศักดิ์ศรีความเป็นมนุษย์",
+      "en": "Human dignity",
+      "zh": "人的尊严"
+    },
+    "sections": [
+      4,
+      26
+    ]
+  },
+  {
+    "id": "supreme-law",
+    "topic": {
+      "th": "รัฐธรรมนูญเป็นกฎหมายสูงสุด",
+      "en": "Constitution as the supreme law",
+      "zh": "宪法是最高法律"
+    },
+    "sections": [
+      5
+    ]
+  },
+  {
+    "id": "king-status",
+    "topic": {
+      "th": "พระมหากษัตริย์ สถานะและการละเมิดมิได้",
+      "en": "The King: status and inviolability",
+      "zh": "国王的地位与不可侵犯"
+    },
+    "sections": [
+      6
+    ]
+  },
+  {
+    "id": "privy-council",
+    "topic": {
+      "th": "องคมนตรี",
+      "en": "Privy Council",
+      "zh": "枢密院"
+    },
+    "sections": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      262
+    ]
+  },
+  {
+    "id": "regent",
+    "topic": {
+      "th": "ผู้สำเร็จราชการแทนพระองค์",
+      "en": "Regent",
+      "zh": "摄政"
+    },
+    "sections": [
+      16,
+      17,
+      18,
+      19,
+      22,
+      23,
+      156
+    ]
+  },
+  {
+    "id": "royal-succession",
+    "topic": {
+      "th": "การสืบราชสมบัติ",
+      "en": "Succession to the Throne",
+      "zh": "王位继承"
+    },
+    "sections": [
+      20,
+      21,
+      22,
+      156
+    ]
+  },
+  {
+    "id": "royal-prerogatives",
+    "topic": {
+      "th": "พระราชอำนาจของพระมหากษัตริย์",
+      "en": "Royal prerogatives",
+      "zh": "国王的权力"
+    },
+    "sections": [
+      9,
+      103,
+      171,
+      172,
+      175,
+      176,
+      177,
+      178,
+      179
+    ]
+  },
+  {
+    "id": "limiting-rights",
+    "topic": {
+      "th": "สิทธิเสรีภาพทั่วไปและการจำกัดสิทธิ",
+      "en": "Rights in general and their limits",
+      "zh": "权利总则及其限制"
+    },
+    "sections": [
+      25,
+      26
+    ]
+  },
+  {
+    "id": "equality-before-law",
+    "topic": {
+      "th": "ความเสมอภาคต่อหน้ากฎหมาย",
+      "en": "Equality before the law",
+      "zh": "法律面前人人平等"
+    },
+    "sections": [
+      4,
+      27
+    ]
+  },
+  {
+    "id": "gender-equality",
+    "topic": {
+      "th": "ชายและหญิงมีสิทธิเท่าเทียมกัน",
+      "en": "Equal rights of men and women",
+      "zh": "男女平等"
+    },
+    "sections": [
+      27,
+      71,
+      90
+    ]
+  },
+  {
+    "id": "discrimination",
+    "topic": {
+      "th": "การเลือกปฏิบัติโดยไม่เป็นธรรม",
+      "en": "Unjust discrimination",
+      "zh": "不公正歧视"
+    },
+    "sections": [
+      27,
+      68,
+      76
+    ]
+  },
+  {
+    "id": "disability",
+    "topic": {
+      "th": "คนพิการ",
+      "en": "Persons with disabilities",
+      "zh": "残障人士"
+    },
+    "sections": [
+      27,
+      71,
+      128
+    ]
+  },
+  {
+    "id": "life-and-body",
+    "topic": {
+      "th": "สิทธิในชีวิตและร่างกาย",
+      "en": "Right to life and person",
+      "zh": "生命与人身权"
+    },
+    "sections": [
+      28
+    ]
+  },
+  {
+    "id": "arrest-detention",
+    "topic": {
+      "th": "การจับกุมและคุมขัง",
+      "en": "Arrest and detention",
+      "zh": "逮捕与拘禁"
+    },
+    "sections": [
+      28,
+      29,
+      125
+    ]
+  },
+  {
+    "id": "torture",
+    "topic": {
+      "th": "การทรมานและการลงโทษที่โหดร้าย",
+      "en": "Torture and cruel punishment",
+      "zh": "酷刑与残忍刑罚"
+    },
+    "sections": [
+      28
+    ]
+  },
+  {
+    "id": "search",
+    "topic": {
+      "th": "การค้นตัวและค้นบ้าน",
+      "en": "Searches of persons and homes",
+      "zh": "搜查人身与住宅"
+    },
+    "sections": [
+      28,
+      33
+    ]
+  },
+  {
+    "id": "criminal-defendant-rights",
+    "topic": {
+      "th": "สิทธิผู้ต้องหาและจำเลยในคดีอาญา",
+      "en": "Rights of suspects and defendants",
+      "zh": "犯罪嫌疑人与被告人的权利"
+    },
+    "sections": [
+      29
+    ]
+  },
+  {
+    "id": "bail",
+    "topic": {
+      "th": "การประกันตัว",
+      "en": "Bail",
+      "zh": "保释"
+    },
+    "sections": [
+      29
+    ]
+  },
+  {
+    "id": "presumption-of-innocence",
+    "topic": {
+      "th": "ข้อสันนิษฐานว่าบริสุทธิ์",
+      "en": "Presumption of innocence",
+      "zh": "无罪推定"
+    },
+    "sections": [
+      29
+    ]
+  },
+  {
+    "id": "self-incrimination",
+    "topic": {
+      "th": "การไม่ให้ถ้อยคำเป็นปฏิปักษ์ต่อตนเอง",
+      "en": "Right not to incriminate oneself",
+      "zh": "不得强迫自证其罪"
+    },
+    "sections": [
+      29
+    ]
+  },
+  {
+    "id": "forced-labour",
+    "topic": {
+      "th": "การเกณฑ์แรงงาน",
+      "en": "Forced labour",
+      "zh": "强迫劳动"
+    },
+    "sections": [
+      30
+    ]
+  },
+  {
+    "id": "religion",
+    "topic": {
+      "th": "ศาสนา",
+      "en": "Religion",
+      "zh": "宗教"
+    },
+    "sections": [
+      7,
+      27,
+      31,
+      50,
+      67
+    ]
+  },
+  {
+    "id": "buddhism",
+    "topic": {
+      "th": "พระพุทธศาสนา",
+      "en": "Buddhism",
+      "zh": "佛教"
+    },
+    "sections": [
+      7,
+      67
+    ]
+  },
+  {
+    "id": "privacy",
+    "topic": {
+      "th": "ความเป็นอยู่ส่วนตัว เกียรติยศ ชื่อเสียง",
+      "en": "Privacy, dignity and reputation",
+      "zh": "隐私、尊严与名誉"
+    },
+    "sections": [
+      32
+    ]
+  },
+  {
+    "id": "personal-data",
+    "topic": {
+      "th": "ข้อมูลส่วนบุคคล",
+      "en": "Personal data",
+      "zh": "个人资料"
+    },
+    "sections": [
+      32
+    ]
+  },
+  {
+    "id": "free-expression",
+    "topic": {
+      "th": "เสรีภาพในการแสดงความคิดเห็น",
+      "en": "Freedom of expression",
+      "zh": "言论自由"
+    },
+    "sections": [
+      34
+    ]
+  },
+  {
+    "id": "academic-freedom",
+    "topic": {
+      "th": "เสรีภาพทางวิชาการ",
+      "en": "Academic freedom",
+      "zh": "学术自由"
+    },
+    "sections": [
+      34
+    ]
+  },
+  {
+    "id": "press-media",
+    "topic": {
+      "th": "สื่อมวลชนและเสรีภาพในการเสนอข่าว",
+      "en": "Press and media freedom",
+      "zh": "媒体与新闻自由"
+    },
+    "sections": [
+      35,
+      184
+    ]
+  },
+  {
+    "id": "censorship",
+    "topic": {
+      "th": "การตรวจข่าวก่อนเผยแพร่",
+      "en": "Censorship",
+      "zh": "新闻审查"
+    },
+    "sections": [
+      35,
+      36
+    ]
+  },
+  {
+    "id": "media-ownership",
+    "topic": {
+      "th": "เจ้าของสื่อและการแทรกแซงสื่อ",
+      "en": "Media ownership and interference",
+      "zh": "媒体所有权与干预媒体"
+    },
+    "sections": [
+      35,
+      98,
+      184
+    ]
+  },
+  {
+    "id": "phone-communication",
+    "topic": {
+      "th": "โทรศัพท์และการสื่อสาร",
+      "en": "Phone and private communication",
+      "zh": "电话与通讯自由"
+    },
+    "sections": [
+      36
+    ]
+  },
+  {
+    "id": "property",
+    "topic": {
+      "th": "กรรมสิทธิ์ทรัพย์สินและมรดก",
+      "en": "Property and inheritance",
+      "zh": "财产与继承"
+    },
+    "sections": [
+      37
+    ]
+  },
+  {
+    "id": "expropriation",
+    "topic": {
+      "th": "การเวนคืนที่ดิน",
+      "en": "Expropriation of land",
+      "zh": "征收土地"
+    },
+    "sections": [
+      37
+    ]
+  },
+  {
+    "id": "travel-residence",
+    "topic": {
+      "th": "การเดินทางและการเลือกถิ่นที่อยู่",
+      "en": "Travel and choice of residence",
+      "zh": "迁徙与居住自由"
+    },
+    "sections": [
+      38
+    ]
+  },
+  {
+    "id": "nationality-deportation",
+    "topic": {
+      "th": "สัญชาติไทยและการเนรเทศ",
+      "en": "Thai nationality and deportation",
+      "zh": "泰国国籍与驱逐出境"
+    },
+    "sections": [
+      39
+    ]
+  },
+  {
+    "id": "occupation",
+    "topic": {
+      "th": "เสรีภาพในการประกอบอาชีพ",
+      "en": "Freedom of occupation",
+      "zh": "职业自由"
+    },
+    "sections": [
+      40
+    ]
+  },
+  {
+    "id": "monopoly",
+    "topic": {
+      "th": "การผูกขาดและการแข่งขันทางการค้า",
+      "en": "Monopolies and fair competition",
+      "zh": "垄断与公平竞争"
+    },
+    "sections": [
+      40,
+      75
+    ]
+  },
+  {
+    "id": "government-information",
+    "topic": {
+      "th": "การเข้าถึงข้อมูลข่าวสารของรัฐ",
+      "en": "Access to government information",
+      "zh": "获取政府信息"
+    },
+    "sections": [
+      41,
+      59,
+      258
+    ]
+  },
+  {
+    "id": "complain-to-state",
+    "topic": {
+      "th": "ร้องเรียนหน่วยงานรัฐ",
+      "en": "Complaints to state agencies",
+      "zh": "向国家机关投诉"
+    },
+    "sections": [
+      41,
+      43,
+      230
+    ]
+  },
+  {
+    "id": "sue-state",
+    "topic": {
+      "th": "ฟ้องหน่วยงานรัฐ",
+      "en": "Suing a state agency",
+      "zh": "起诉国家机关"
+    },
+    "sections": [
+      41,
+      197
+    ]
+  },
+  {
+    "id": "association",
+    "topic": {
+      "th": "การรวมกลุ่ม สมาคม และสหภาพ",
+      "en": "Associations and unions",
+      "zh": "结社与工会"
+    },
+    "sections": [
+      42
+    ]
+  },
+  {
+    "id": "cooperatives",
+    "topic": {
+      "th": "สหกรณ์",
+      "en": "Cooperatives",
+      "zh": "合作社"
+    },
+    "sections": [
+      42,
+      75,
+      258
+    ]
+  },
+  {
+    "id": "community-rights",
+    "topic": {
+      "th": "สิทธิชุมชน",
+      "en": "Community rights",
+      "zh": "社区权利"
+    },
+    "sections": [
+      41,
+      43,
+      57,
+      58
+    ]
+  },
+  {
+    "id": "local-culture",
+    "topic": {
+      "th": "ศิลปวัฒนธรรมและภูมิปัญญาท้องถิ่น",
+      "en": "Culture and local wisdom",
+      "zh": "文化与地方智慧"
+    },
+    "sections": [
+      43,
+      57,
+      70
+    ]
+  },
+  {
+    "id": "assembly",
+    "topic": {
+      "th": "การชุมนุม",
+      "en": "Public assembly",
+      "zh": "集会自由"
+    },
+    "sections": [
+      44
+    ]
+  },
+  {
+    "id": "forming-party",
+    "topic": {
+      "th": "การตั้งพรรคการเมือง",
+      "en": "Forming a political party",
+      "zh": "组建政党"
+    },
+    "sections": [
+      45
+    ]
+  },
+  {
+    "id": "consumer-rights",
+    "topic": {
+      "th": "สิทธิผู้บริโภค",
+      "en": "Consumer rights",
+      "zh": "消费者权利"
+    },
+    "sections": [
+      46,
+      60,
+      61
+    ]
+  },
+  {
+    "id": "healthcare",
+    "topic": {
+      "th": "สิทธิรับบริการสาธารณสุข",
+      "en": "Right to healthcare",
+      "zh": "医疗卫生服务权"
+    },
+    "sections": [
+      47,
+      55,
+      258
+    ]
+  },
+  {
+    "id": "free-healthcare-poor",
+    "topic": {
+      "th": "รักษาพยาบาลฟรีสำหรับผู้ยากไร้",
+      "en": "Free healthcare for the poor",
+      "zh": "贫困者免费医疗"
+    },
+    "sections": [
+      47
+    ]
+  },
+  {
+    "id": "mothers",
+    "topic": {
+      "th": "สิทธิของมารดาก่อนและหลังคลอด",
+      "en": "Mothers before and after childbirth",
+      "zh": "产妇权利"
+    },
+    "sections": [
+      48
+    ]
+  },
+  {
+    "id": "elderly",
+    "topic": {
+      "th": "สิทธิผู้สูงอายุ",
+      "en": "Rights of the elderly",
+      "zh": "老年人权利"
+    },
+    "sections": [
+      27,
+      48,
+      71,
+      128
+    ]
+  },
+  {
+    "id": "the-poor",
+    "topic": {
+      "th": "ผู้ยากไร้และผู้ด้อยโอกาส",
+      "en": "The poor and underprivileged",
+      "zh": "贫困者与弱势群体"
+    },
+    "sections": [
+      27,
+      47,
+      48,
+      54,
+      68,
+      71
+    ]
+  },
+  {
+    "id": "overthrowing-government",
+    "topic": {
+      "th": "การล้มล้างการปกครอง",
+      "en": "Attempts to overthrow the regime",
+      "zh": "推翻政体"
+    },
+    "sections": [
+      49
+    ]
+  },
+  {
+    "id": "citizen-duties",
+    "topic": {
+      "th": "หน้าที่ของประชาชน",
+      "en": "Duties of the people",
+      "zh": "人民的义务"
+    },
+    "sections": [
+      50
+    ]
+  },
+  {
+    "id": "military-service",
+    "topic": {
+      "th": "การรับราชการทหาร",
+      "en": "Military service",
+      "zh": "服兵役"
+    },
+    "sections": [
+      50
+    ]
+  },
+  {
+    "id": "voting-duty",
+    "topic": {
+      "th": "หน้าที่ไปเลือกตั้ง",
+      "en": "Duty to vote",
+      "zh": "投票的义务"
+    },
+    "sections": [
+      50
+    ]
+  },
+  {
+    "id": "taxes",
+    "topic": {
+      "th": "ภาษี",
+      "en": "Taxes",
+      "zh": "税收"
+    },
+    "sections": [
+      50,
+      62,
+      134,
+      174,
+      250,
+      258
+    ]
+  },
+  {
+    "id": "disasters",
+    "topic": {
+      "th": "ภัยพิบัติและสาธารณภัย",
+      "en": "Disasters and public calamity",
+      "zh": "灾害与公共灾难"
+    },
+    "sections": [
+      30,
+      50,
+      172
+    ]
+  },
+  {
+    "id": "enforcing-state-duties",
+    "topic": {
+      "th": "การเร่งรัดให้รัฐทำหน้าที่",
+      "en": "Making the State perform its duties",
+      "zh": "督促国家履行职责"
+    },
+    "sections": [
+      51
+    ]
+  },
+  {
+    "id": "national-security",
+    "topic": {
+      "th": "ความมั่นคงของรัฐ",
+      "en": "National security",
+      "zh": "国家安全"
+    },
+    "sections": [
+      52
+    ]
+  },
+  {
+    "id": "armed-forces",
+    "topic": {
+      "th": "ทหาร",
+      "en": "The military",
+      "zh": "军队"
+    },
+    "sections": [
+      8,
+      50,
+      52,
+      176,
+      177,
+      180,
+      199
+    ]
+  },
+  {
+    "id": "free-education",
+    "topic": {
+      "th": "การศึกษาฟรี",
+      "en": "Free education",
+      "zh": "免费教育"
+    },
+    "sections": [
+      54,
+      258
+    ]
+  },
+  {
+    "id": "early-childhood",
+    "topic": {
+      "th": "การดูแลเด็กเล็กก่อนวัยเรียน",
+      "en": "Early childhood care",
+      "zh": "学前儿童照顾"
+    },
+    "sections": [
+      54,
+      258
+    ]
+  },
+  {
+    "id": "education",
+    "topic": {
+      "th": "การศึกษา",
+      "en": "Education",
+      "zh": "教育"
+    },
+    "sections": [
+      50,
+      54,
+      250,
+      258,
+      261
+    ]
+  },
+  {
+    "id": "teachers",
+    "topic": {
+      "th": "ครู",
+      "en": "Teachers",
+      "zh": "教师"
+    },
+    "sections": [
+      258
+    ]
+  },
+  {
+    "id": "public-health-services",
+    "topic": {
+      "th": "ระบบสาธารณสุขและการป้องกันโรค",
+      "en": "Public health and disease prevention",
+      "zh": "公共卫生与疾病预防"
+    },
+    "sections": [
+      55
+    ]
+  },
+  {
+    "id": "thai-traditional-medicine",
+    "topic": {
+      "th": "การแพทย์แผนไทย",
+      "en": "Thai traditional medicine",
+      "zh": "泰国传统医学"
+    },
+    "sections": [
+      55
+    ]
+  },
+  {
+    "id": "utilities",
+    "topic": {
+      "th": "สาธารณูปโภค น้ำ ไฟ และค่าบริการ",
+      "en": "Public utilities and fees",
+      "zh": "公用事业与收费"
+    },
+    "sections": [
+      56
+    ]
+  },
+  {
+    "id": "environment",
+    "topic": {
+      "th": "สิ่งแวดล้อม",
+      "en": "Environment",
+      "zh": "环境"
+    },
+    "sections": [
+      43,
+      50,
+      57,
+      58,
+      258
+    ]
+  },
+  {
+    "id": "natural-resources",
+    "topic": {
+      "th": "ทรัพยากรธรรมชาติและความหลากหลายทางชีวภาพ",
+      "en": "Natural resources and biodiversity",
+      "zh": "自然资源与生物多样性"
+    },
+    "sections": [
+      43,
+      50,
+      57,
+      58
+    ]
+  },
+  {
+    "id": "impact-assessment",
+    "topic": {
+      "th": "การประเมินผลกระทบและการรับฟังความเห็นโครงการ",
+      "en": "Impact assessment and public hearings on projects",
+      "zh": "项目影响评估与公众听证"
+    },
+    "sections": [
+      58
+    ]
+  },
+  {
+    "id": "frequencies",
+    "topic": {
+      "th": "คลื่นความถี่ วิทยุ โทรทัศน์ และ กสทช.",
+      "en": "Frequencies, broadcasting and the NBTC",
+      "zh": "频率、广播电视与国家广播电信委员会"
+    },
+    "sections": [
+      60,
+      274
+    ]
+  },
+  {
+    "id": "public-debt",
+    "topic": {
+      "th": "วินัยการเงินการคลังและหนี้สาธารณะ",
+      "en": "Fiscal discipline and public debt",
+      "zh": "财政纪律与公共债务"
+    },
+    "sections": [
+      62,
+      140,
+      142
+    ]
+  },
+  {
+    "id": "anti-corruption",
+    "topic": {
+      "th": "การป้องกันและปราบปรามการทุจริต",
+      "en": "Fighting corruption",
+      "zh": "预防和打击腐败"
+    },
+    "sections": [
+      50,
+      63,
+      232,
+      234,
+      235,
+      244,
+      258
+    ]
+  },
+  {
+    "id": "directive-principles",
+    "topic": {
+      "th": "แนวนโยบายแห่งรัฐ",
+      "en": "Directive principles of State policies",
+      "zh": "国家政策指导原则"
+    },
+    "sections": [
+      64,
+      162
+    ]
+  },
+  {
+    "id": "national-strategy",
+    "topic": {
+      "th": "ยุทธศาสตร์ชาติ",
+      "en": "National strategy",
+      "zh": "国家战略"
+    },
+    "sections": [
+      65,
+      142,
+      162,
+      270,
+      275
+    ]
+  },
+  {
+    "id": "foreign-relations",
+    "topic": {
+      "th": "การต่างประเทศ",
+      "en": "Foreign relations",
+      "zh": "对外关系"
+    },
+    "sections": [
+      66,
+      178
+    ]
+  },
+  {
+    "id": "justice-access",
+    "topic": {
+      "th": "การเข้าถึงกระบวนการยุติธรรมและความช่วยเหลือทางกฎหมาย",
+      "en": "Access to justice and legal aid",
+      "zh": "获得司法救济与法律援助"
+    },
+    "sections": [
+      68,
+      258
+    ]
+  },
+  {
+    "id": "science-technology",
+    "topic": {
+      "th": "วิทยาศาสตร์ เทคโนโลยี และนวัตกรรม",
+      "en": "Science, technology and innovation",
+      "zh": "科学、技术与创新"
+    },
+    "sections": [
+      69,
+      258
+    ]
+  },
+  {
+    "id": "ethnic-groups",
+    "topic": {
+      "th": "กลุ่มชาติพันธุ์",
+      "en": "Ethnic groups",
+      "zh": "族群"
+    },
+    "sections": [
+      70
+    ]
+  },
+  {
+    "id": "family",
+    "topic": {
+      "th": "ครอบครัว",
+      "en": "Family",
+      "zh": "家庭"
+    },
+    "sections": [
+      32,
+      71
+    ]
+  },
+  {
+    "id": "children-youth",
+    "topic": {
+      "th": "เด็กและเยาวชน",
+      "en": "Children and youth",
+      "zh": "儿童与青少年"
+    },
+    "sections": [
+      27,
+      54,
+      71,
+      128
+    ]
+  },
+  {
+    "id": "women",
+    "topic": {
+      "th": "สตรี",
+      "en": "Women",
+      "zh": "妇女"
+    },
+    "sections": [
+      27,
+      71,
+      128
+    ]
+  },
+  {
+    "id": "housing",
+    "topic": {
+      "th": "ที่อยู่อาศัย",
+      "en": "Housing",
+      "zh": "住房"
+    },
+    "sections": [
+      71
+    ]
+  },
+  {
+    "id": "sports",
+    "topic": {
+      "th": "กีฬา",
+      "en": "Sport",
+      "zh": "体育"
+    },
+    "sections": [
+      71
+    ]
+  },
+  {
+    "id": "land",
+    "topic": {
+      "th": "ที่ดิน",
+      "en": "Land",
+      "zh": "土地"
+    },
+    "sections": [
+      37,
+      72,
+      73,
+      258
+    ]
+  },
+  {
+    "id": "town-planning",
+    "topic": {
+      "th": "ผังเมือง",
+      "en": "Town planning",
+      "zh": "城市规划"
+    },
+    "sections": [
+      72
+    ]
+  },
+  {
+    "id": "water",
+    "topic": {
+      "th": "ทรัพยากรน้ำ",
+      "en": "Water resources",
+      "zh": "水资源"
+    },
+    "sections": [
+      72,
+      258
+    ]
+  },
+  {
+    "id": "energy",
+    "topic": {
+      "th": "พลังงาน",
+      "en": "Energy",
+      "zh": "能源"
+    },
+    "sections": [
+      72
+    ]
+  },
+  {
+    "id": "farmers",
+    "topic": {
+      "th": "เกษตรกร",
+      "en": "Farmers",
+      "zh": "农民"
+    },
+    "sections": [
+      73
+    ]
+  },
+  {
+    "id": "labour",
+    "topic": {
+      "th": "แรงงานและการมีงานทำ",
+      "en": "Labour and employment",
+      "zh": "劳动与就业"
+    },
+    "sections": [
+      74,
+      258
+    ]
+  },
+  {
+    "id": "savings-old-age",
+    "topic": {
+      "th": "การออมเพื่อยามชราและประกันสังคม",
+      "en": "Old-age savings and social security",
+      "zh": "养老储蓄与社会保障"
+    },
+    "sections": [
+      74
+    ]
+  },
+  {
+    "id": "economy",
+    "topic": {
+      "th": "ระบบเศรษฐกิจ",
+      "en": "The economy",
+      "zh": "经济制度"
+    },
+    "sections": [
+      75,
+      258
+    ]
+  },
+  {
+    "id": "civil-service",
+    "topic": {
+      "th": "ระบบราชการและระบบคุณธรรม",
+      "en": "Civil service and merit system",
+      "zh": "公务员制度与功绩制"
+    },
+    "sections": [
+      76,
+      251,
+      258
+    ]
+  },
+  {
+    "id": "fewer-laws",
+    "topic": {
+      "th": "กฎหมายเท่าที่จำเป็นและการรับฟังความเห็นก่อนออกกฎหมาย",
+      "en": "Only necessary laws; consultation before law-making",
+      "zh": "仅制定必要法律及立法前听取意见"
+    },
+    "sections": [
+      77,
+      258
+    ]
+  },
+  {
+    "id": "public-participation",
+    "topic": {
+      "th": "การมีส่วนร่วมของประชาชน",
+      "en": "Public participation",
+      "zh": "公众参与"
+    },
+    "sections": [
+      43,
+      57,
+      58,
+      65,
+      78,
+      253,
+      259
+    ]
+  },
+  {
+    "id": "national-assembly",
+    "topic": {
+      "th": "รัฐสภา",
+      "en": "National Assembly",
+      "zh": "国会"
+    },
+    "sections": [
+      79,
+      80,
+      81
+    ]
+  },
+  {
+    "id": "house-composition",
+    "topic": {
+      "th": "จำนวนและที่มาของ ส.ส.",
+      "en": "Make-up of the House of Representatives",
+      "zh": "众议院的组成"
+    },
+    "sections": [
+      83,
+      86,
+      90,
+      91
+    ]
+  },
+  {
+    "id": "constituency-mp",
+    "topic": {
+      "th": "ส.ส. แบบแบ่งเขต",
+      "en": "Constituency MPs",
+      "zh": "选区议员"
+    },
+    "sections": [
+      83,
+      85,
+      86,
+      87
+    ]
+  },
+  {
+    "id": "party-list-mp",
+    "topic": {
+      "th": "ส.ส. บัญชีรายชื่อ",
+      "en": "Party-list MPs",
+      "zh": "政党名单议员"
+    },
+    "sections": [
+      83,
+      90,
+      91
+    ]
+  },
+  {
+    "id": "ballots",
+    "topic": {
+      "th": "บัตรเลือกตั้งและการลงคะแนนลับ",
+      "en": "Ballots and secret voting",
+      "zh": "选票与秘密投票"
+    },
+    "sections": [
+      83,
+      85
+    ]
+  },
+  {
+    "id": "vote-no",
+    "topic": {
+      "th": "การลงคะแนนไม่เลือกผู้ใด",
+      "en": "Voting for no candidate",
+      "zh": "投\"不选任何人\"票"
+    },
+    "sections": [
+      85,
+      92
+    ]
+  },
+  {
+    "id": "re-election",
+    "topic": {
+      "th": "การเลือกตั้งใหม่และเลือกตั้งซ่อม",
+      "en": "Re-runs and by-elections",
+      "zh": "重新选举与补选"
+    },
+    "sections": [
+      92,
+      93,
+      94,
+      105
+    ]
+  },
+  {
+    "id": "who-can-vote",
+    "topic": {
+      "th": "ผู้มีสิทธิเลือกตั้ง",
+      "en": "Who can vote",
+      "zh": "谁有选举权"
+    },
+    "sections": [
+      95
+    ]
+  },
+  {
+    "id": "barred-from-voting",
+    "topic": {
+      "th": "ผู้ถูกห้ามใช้สิทธิเลือกตั้ง",
+      "en": "Who may not vote",
+      "zh": "不得行使选举权者"
+    },
+    "sections": [
+      96
+    ]
+  },
+  {
+    "id": "mp-candidates",
+    "topic": {
+      "th": "คุณสมบัติผู้สมัคร ส.ส.",
+      "en": "Who can run for MP",
+      "zh": "众议员候选人资格"
+    },
+    "sections": [
+      87,
+      97,
+      98
+    ]
+  },
+  {
+    "id": "house-term",
+    "topic": {
+      "th": "อายุสภาผู้แทนราษฎร",
+      "en": "Term of the House",
+      "zh": "众议院任期"
+    },
+    "sections": [
+      99
+    ]
+  },
+  {
+    "id": "mp-leaving-office",
+    "topic": {
+      "th": "การพ้นจากตำแหน่ง ส.ส.",
+      "en": "When an MP loses their seat",
+      "zh": "众议员资格终止"
+    },
+    "sections": [
+      82,
+      101,
+      105
+    ]
+  },
+  {
+    "id": "switching-parties",
+    "topic": {
+      "th": "ส.ส. ลาออกหรือถูกขับจากพรรค",
+      "en": "MPs leaving or expelled from a party",
+      "zh": "众议员退党或被开除"
+    },
+    "sections": [
+      101
+    ]
+  },
+  {
+    "id": "dissolution",
+    "topic": {
+      "th": "การยุบสภา",
+      "en": "Dissolution of the House",
+      "zh": "解散众议院"
+    },
+    "sections": [
+      101,
+      103,
+      151
+    ]
+  },
+  {
+    "id": "general-election",
+    "topic": {
+      "th": "การเลือกตั้งทั่วไป",
+      "en": "General election",
+      "zh": "大选"
+    },
+    "sections": [
+      102,
+      103,
+      104
+    ]
+  },
+  {
+    "id": "opposition",
+    "topic": {
+      "th": "ฝ่ายค้านและผู้นำฝ่ายค้าน",
+      "en": "The Opposition and its leader",
+      "zh": "反对党及其领袖"
+    },
+    "sections": [
+      106,
+      155
+    ]
+  },
+  {
+    "id": "senate",
+    "topic": {
+      "th": "วุฒิสภา",
+      "en": "The Senate",
+      "zh": "参议院"
+    },
+    "sections": [
+      107,
+      109,
+      110,
+      111,
+      113
+    ]
+  },
+  {
+    "id": "senate-selection",
+    "topic": {
+      "th": "ที่มาของ ส.ว.",
+      "en": "How senators are chosen",
+      "zh": "参议员的产生"
+    },
+    "sections": [
+      107,
+      269
+    ]
+  },
+  {
+    "id": "senator-qualifications",
+    "topic": {
+      "th": "คุณสมบัติและลักษณะต้องห้ามของ ส.ว.",
+      "en": "Who can be a senator",
+      "zh": "参议员资格与禁止情形"
+    },
+    "sections": [
+      108,
+      112
+    ]
+  },
+  {
+    "id": "speakers",
+    "topic": {
+      "th": "ประธานสภาและรองประธานสภา",
+      "en": "Speakers and deputy speakers",
+      "zh": "议长与副议长"
+    },
+    "sections": [
+      80,
+      116,
+      117,
+      118,
+      119
+    ]
+  },
+  {
+    "id": "quorum-voting",
+    "topic": {
+      "th": "องค์ประชุมและการลงมติ",
+      "en": "Quorum and voting",
+      "zh": "法定人数与表决"
+    },
+    "sections": [
+      120
+    ]
+  },
+  {
+    "id": "parliament-sessions",
+    "topic": {
+      "th": "สมัยประชุมรัฐสภา",
+      "en": "Parliamentary sessions",
+      "zh": "国会会期"
+    },
+    "sections": [
+      121,
+      122,
+      123
+    ]
+  },
+  {
+    "id": "parliamentary-privilege",
+    "topic": {
+      "th": "เอกสิทธิ์ของสมาชิกรัฐสภา",
+      "en": "Parliamentary privilege",
+      "zh": "议员言论特权"
+    },
+    "sections": [
+      124,
+      163
+    ]
+  },
+  {
+    "id": "mp-arrest",
+    "topic": {
+      "th": "การจับกุม ส.ส. และ ส.ว.",
+      "en": "Arresting MPs and senators",
+      "zh": "逮捕议员"
+    },
+    "sections": [
+      125
+    ]
+  },
+  {
+    "id": "committees",
+    "topic": {
+      "th": "คณะกรรมาธิการ",
+      "en": "Parliamentary committees",
+      "zh": "议会委员会"
+    },
+    "sections": [
+      128,
+      129,
+      137
+    ]
+  },
+  {
+    "id": "organic-acts",
+    "topic": {
+      "th": "พระราชบัญญัติประกอบรัฐธรรมนูญ",
+      "en": "Organic Acts",
+      "zh": "组织法"
+    },
+    "sections": [
+      130,
+      131,
+      132,
+      267
+    ]
+  },
+  {
+    "id": "law-making",
+    "topic": {
+      "th": "การตรากฎหมาย",
+      "en": "How a law is made",
+      "zh": "立法程序"
+    },
+    "sections": [
+      81,
+      133,
+      136,
+      137,
+      145,
+      146
+    ]
+  },
+  {
+    "id": "citizen-proposed-laws",
+    "topic": {
+      "th": "ประชาชนเข้าชื่อเสนอกฎหมาย",
+      "en": "Citizens proposing laws",
+      "zh": "公民联名提案立法"
+    },
+    "sections": [
+      128,
+      133,
+      135,
+      256
+    ]
+  },
+  {
+    "id": "money-bills",
+    "topic": {
+      "th": "ร่างกฎหมายเกี่ยวกับการเงิน",
+      "en": "Money bills",
+      "zh": "财政法案"
+    },
+    "sections": [
+      133,
+      134
+    ]
+  },
+  {
+    "id": "senate-withholding",
+    "topic": {
+      "th": "วุฒิสภายับยั้งร่างกฎหมาย",
+      "en": "Senate withholding a bill",
+      "zh": "参议院搁置法案"
+    },
+    "sections": [
+      137,
+      138,
+      139,
+      271
+    ]
+  },
+  {
+    "id": "budget",
+    "topic": {
+      "th": "งบประมาณ",
+      "en": "The budget",
+      "zh": "预算"
+    },
+    "sections": [
+      140,
+      141,
+      142,
+      143,
+      144
+    ]
+  },
+  {
+    "id": "royal-assent",
+    "topic": {
+      "th": "การทูลเกล้าฯ ร่างกฎหมายและพระราชวินิจฉัย",
+      "en": "Royal assent to bills",
+      "zh": "法案呈请国王签署"
+    },
+    "sections": [
+      81,
+      145,
+      146
+    ]
+  },
+  {
+    "id": "bill-constitutionality",
+    "topic": {
+      "th": "การตรวจร่างกฎหมายว่าขัดรัฐธรรมนูญ",
+      "en": "Checking whether a bill is constitutional",
+      "zh": "审查法案是否合宪"
+    },
+    "sections": [
+      132,
+      148,
+      149,
+      210
+    ]
+  },
+  {
+    "id": "interpellation",
+    "topic": {
+      "th": "กระทู้ถาม",
+      "en": "Questions to ministers",
+      "zh": "质询"
+    },
+    "sections": [
+      150
+    ]
+  },
+  {
+    "id": "no-confidence",
+    "topic": {
+      "th": "การอภิปรายไม่ไว้วางใจ",
+      "en": "No-confidence debate",
+      "zh": "不信任辩论"
+    },
+    "sections": [
+      151,
+      154,
+      170
+    ]
+  },
+  {
+    "id": "general-debate",
+    "topic": {
+      "th": "การอภิปรายทั่วไปโดยไม่ลงมติ",
+      "en": "General debate without a vote",
+      "zh": "不表决的一般辩论"
+    },
+    "sections": [
+      152,
+      153,
+      154,
+      155,
+      165
+    ]
+  },
+  {
+    "id": "joint-sitting",
+    "topic": {
+      "th": "การประชุมร่วมกันของรัฐสภา",
+      "en": "Joint sitting of Parliament",
+      "zh": "两院联席会议"
+    },
+    "sections": [
+      155,
+      156,
+      157
+    ]
+  },
+  {
+    "id": "cabinet",
+    "topic": {
+      "th": "คณะรัฐมนตรี",
+      "en": "The Cabinet",
+      "zh": "内阁"
+    },
+    "sections": [
+      158,
+      164,
+      167
+    ]
+  },
+  {
+    "id": "pm-selection",
+    "topic": {
+      "th": "การเลือกนายกรัฐมนตรี",
+      "en": "Choosing the Prime Minister",
+      "zh": "总理的产生"
+    },
+    "sections": [
+      88,
+      89,
+      159,
+      272
+    ]
+  },
+  {
+    "id": "pm-term-limit",
+    "topic": {
+      "th": "นายกรัฐมนตรี วาระ ๘ ปี",
+      "en": "Prime Minister's 8-year limit",
+      "zh": "总理任期八年限制"
+    },
+    "sections": [
+      158
+    ]
+  },
+  {
+    "id": "minister-qualifications",
+    "topic": {
+      "th": "คุณสมบัติของรัฐมนตรี",
+      "en": "Who can be a minister",
+      "zh": "部长资格"
+    },
+    "sections": [
+      160
+    ]
+  },
+  {
+    "id": "policy-statement",
+    "topic": {
+      "th": "การแถลงนโยบาย",
+      "en": "Government policy statement",
+      "zh": "施政声明"
+    },
+    "sections": [
+      162,
+      164
+    ]
+  },
+  {
+    "id": "referendum",
+    "topic": {
+      "th": "การออกเสียงประชามติ",
+      "en": "Referendum",
+      "zh": "公民投票"
+    },
+    "sections": [
+      50,
+      166,
+      224,
+      256
+    ]
+  },
+  {
+    "id": "cabinet-leaving-office",
+    "topic": {
+      "th": "คณะรัฐมนตรีพ้นจากตำแหน่ง",
+      "en": "When the Cabinet leaves office",
+      "zh": "内阁离职"
+    },
+    "sections": [
+      167,
+      168
+    ]
+  },
+  {
+    "id": "caretaker-government",
+    "topic": {
+      "th": "รัฐบาลรักษาการ",
+      "en": "Caretaker government",
+      "zh": "看守政府"
+    },
+    "sections": [
+      168,
+      169
+    ]
+  },
+  {
+    "id": "minister-removal",
+    "topic": {
+      "th": "การพ้นจากตำแหน่งของรัฐมนตรี",
+      "en": "When a minister leaves office",
+      "zh": "部长离职"
+    },
+    "sections": [
+      170,
+      171
+    ]
+  },
+  {
+    "id": "emergency-decree",
+    "topic": {
+      "th": "พระราชกำหนด",
+      "en": "Emergency Decrees",
+      "zh": "紧急法令"
+    },
+    "sections": [
+      172,
+      173,
+      174
+    ]
+  },
+  {
+    "id": "royal-decree",
+    "topic": {
+      "th": "พระราชกฤษฎีกา",
+      "en": "Royal Decrees",
+      "zh": "王室法令"
+    },
+    "sections": [
+      175
+    ]
+  },
+  {
+    "id": "martial-law",
+    "topic": {
+      "th": "กฎอัยการศึก",
+      "en": "Martial law",
+      "zh": "戒严"
+    },
+    "sections": [
+      176
+    ]
+  },
+  {
+    "id": "war",
+    "topic": {
+      "th": "การประกาศสงคราม",
+      "en": "Declaring war",
+      "zh": "宣战"
+    },
+    "sections": [
+      177
+    ]
+  },
+  {
+    "id": "treaties",
+    "topic": {
+      "th": "หนังสือสัญญาและข้อตกลงระหว่างประเทศ",
+      "en": "Treaties and international agreements",
+      "zh": "条约与国际协定"
+    },
+    "sections": [
+      178
+    ]
+  },
+  {
+    "id": "pardon",
+    "topic": {
+      "th": "การพระราชทานอภัยโทษ",
+      "en": "Royal pardon",
+      "zh": "赦免"
+    },
+    "sections": [
+      179
+    ]
+  },
+  {
+    "id": "countersignature",
+    "topic": {
+      "th": "ผู้รับสนองพระบรมราชโองการ",
+      "en": "Countersigning royal acts",
+      "zh": "副署"
+    },
+    "sections": [
+      11,
+      158,
+      182
+    ]
+  },
+  {
+    "id": "salaries",
+    "topic": {
+      "th": "เงินเดือนและประโยชน์ตอบแทนของผู้ดำรงตำแหน่ง",
+      "en": "Salaries of office-holders",
+      "zh": "公职人员薪酬"
+    },
+    "sections": [
+      183
+    ]
+  },
+  {
+    "id": "conflict-of-interest",
+    "topic": {
+      "th": "การขัดกันแห่งผลประโยชน์",
+      "en": "Conflict of interest",
+      "zh": "利益冲突"
+    },
+    "sections": [
+      184,
+      185,
+      186,
+      187
+    ]
+  },
+  {
+    "id": "minister-shareholding",
+    "topic": {
+      "th": "รัฐมนตรีถือหุ้นในบริษัท",
+      "en": "Ministers holding company shares",
+      "zh": "部长持有公司股份"
+    },
+    "sections": [
+      187
+    ]
+  },
+  {
+    "id": "courts",
+    "topic": {
+      "th": "ศาล",
+      "en": "The courts",
+      "zh": "法院"
+    },
+    "sections": [
+      188,
+      189,
+      190,
+      191
+    ]
+  },
+  {
+    "id": "judicial-independence",
+    "topic": {
+      "th": "ความเป็นอิสระของผู้พิพากษา",
+      "en": "Judicial independence",
+      "zh": "司法独立"
+    },
+    "sections": [
+      188,
+      193,
+      196,
+      198
+    ]
+  },
+  {
+    "id": "court-jurisdiction",
+    "topic": {
+      "th": "ข้อขัดแย้งเรื่องอำนาจระหว่างศาล",
+      "en": "Disputes over which court decides",
+      "zh": "法院管辖权争议"
+    },
+    "sections": [
+      192
+    ]
+  },
+  {
+    "id": "courts-of-justice",
+    "topic": {
+      "th": "ศาลยุติธรรม",
+      "en": "Courts of Justice",
+      "zh": "普通法院"
+    },
+    "sections": [
+      194,
+      196
+    ]
+  },
+  {
+    "id": "politicians-trials",
+    "topic": {
+      "th": "การดำเนินคดีอาญานักการเมือง",
+      "en": "Criminal trials of politicians",
+      "zh": "政治人物刑事审判"
+    },
+    "sections": [
+      195,
+      235
+    ]
+  },
+  {
+    "id": "administrative-court",
+    "topic": {
+      "th": "ศาลปกครอง",
+      "en": "Administrative Courts",
+      "zh": "行政法院"
+    },
+    "sections": [
+      197,
+      198,
+      231
+    ]
+  },
+  {
+    "id": "military-court",
+    "topic": {
+      "th": "ศาลทหาร",
+      "en": "Military Courts",
+      "zh": "军事法院"
+    },
+    "sections": [
+      199
+    ]
+  },
+  {
+    "id": "constitutional-court",
+    "topic": {
+      "th": "ศาลรัฐธรรมนูญ",
+      "en": "Constitutional Court",
+      "zh": "宪法法院"
+    },
+    "sections": [
+      200,
+      210,
+      211
+    ]
+  },
+  {
+    "id": "constitutional-court-judges",
+    "topic": {
+      "th": "ตุลาการศาลรัฐธรรมนูญ ที่มาและวาระ",
+      "en": "Constitutional Court judges: selection and term",
+      "zh": "宪法法院法官的产生与任期"
+    },
+    "sections": [
+      200,
+      201,
+      202,
+      203,
+      204,
+      207,
+      208
+    ]
+  },
+  {
+    "id": "unconstitutional-laws",
+    "topic": {
+      "th": "กฎหมายที่ขัดรัฐธรรมนูญ",
+      "en": "Unconstitutional laws",
+      "zh": "违宪法律"
+    },
+    "sections": [
+      5,
+      210,
+      212
+    ]
+  },
+  {
+    "id": "petition-constitutional-court",
+    "topic": {
+      "th": "ประชาชนยื่นคำร้องต่อศาลรัฐธรรมนูญ",
+      "en": "Individuals petitioning the Constitutional Court",
+      "zh": "个人向宪法法院申请"
+    },
+    "sections": [
+      49,
+      213
+    ]
+  },
+  {
+    "id": "independent-organs",
+    "topic": {
+      "th": "องค์กรอิสระ",
+      "en": "Independent organs",
+      "zh": "独立机构"
+    },
+    "sections": [
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221
+    ]
+  },
+  {
+    "id": "ethical-standards",
+    "topic": {
+      "th": "มาตรฐานทางจริยธรรม",
+      "en": "Ethical standards",
+      "zh": "道德标准"
+    },
+    "sections": [
+      76,
+      219,
+      235,
+      276
+    ]
+  },
+  {
+    "id": "election-commission",
+    "topic": {
+      "th": "คณะกรรมการการเลือกตั้ง (กกต.)",
+      "en": "Election Commission",
+      "zh": "选举委员会"
+    },
+    "sections": [
+      222,
+      223,
+      224,
+      225,
+      226,
+      227
+    ]
+  },
+  {
+    "id": "election-fraud",
+    "topic": {
+      "th": "การทุจริตการเลือกตั้งและใบแดง",
+      "en": "Election fraud and disqualification",
+      "zh": "选举舞弊与取消资格"
+    },
+    "sections": [
+      85,
+      224,
+      225,
+      226
+    ]
+  },
+  {
+    "id": "ombudsman",
+    "topic": {
+      "th": "ผู้ตรวจการแผ่นดิน",
+      "en": "Ombudsmen",
+      "zh": "监察专员"
+    },
+    "sections": [
+      228,
+      229,
+      230,
+      231
+    ]
+  },
+  {
+    "id": "nacc",
+    "topic": {
+      "th": "คณะกรรมการ ป.ป.ช.",
+      "en": "National Anti-Corruption Commission",
+      "zh": "国家反腐败委员会"
+    },
+    "sections": [
+      232,
+      233,
+      234,
+      235,
+      236,
+      237
+    ]
+  },
+  {
+    "id": "asset-declaration",
+    "topic": {
+      "th": "การแสดงบัญชีทรัพย์สินและหนี้สิน",
+      "en": "Asset declarations",
+      "zh": "资产申报"
+    },
+    "sections": [
+      234,
+      235
+    ]
+  },
+  {
+    "id": "state-audit",
+    "topic": {
+      "th": "การตรวจเงินแผ่นดิน",
+      "en": "State audit",
+      "zh": "国家审计"
+    },
+    "sections": [
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245
+    ]
+  },
+  {
+    "id": "human-rights-commission",
+    "topic": {
+      "th": "คณะกรรมการสิทธิมนุษยชนแห่งชาติ",
+      "en": "National Human Rights Commission",
+      "zh": "国家人权委员会"
+    },
+    "sections": [
+      246,
+      247
+    ]
+  },
+  {
+    "id": "human-rights",
+    "topic": {
+      "th": "สิทธิมนุษยชน",
+      "en": "Human rights",
+      "zh": "人权"
+    },
+    "sections": [
+      230,
+      246,
+      247
+    ]
+  },
+  {
+    "id": "prosecutors",
+    "topic": {
+      "th": "อัยการ",
+      "en": "Public prosecutors",
+      "zh": "检察官"
+    },
+    "sections": [
+      248
+    ]
+  },
+  {
+    "id": "local-government",
+    "topic": {
+      "th": "ท้องถิ่น",
+      "en": "Local government",
+      "zh": "地方政府"
+    },
+    "sections": [
+      249,
+      250,
+      251,
+      252,
+      253,
+      254
+    ]
+  },
+  {
+    "id": "local-services",
+    "topic": {
+      "th": "บริการสาธารณะของท้องถิ่น",
+      "en": "Local public services",
+      "zh": "地方公共服务"
+    },
+    "sections": [
+      250
+    ]
+  },
+  {
+    "id": "local-revenue",
+    "topic": {
+      "th": "รายได้และภาษีของท้องถิ่น",
+      "en": "Local revenue and taxes",
+      "zh": "地方收入与税收"
+    },
+    "sections": [
+      250
+    ]
+  },
+  {
+    "id": "local-elections",
+    "topic": {
+      "th": "การเลือกตั้งท้องถิ่น",
+      "en": "Local elections",
+      "zh": "地方选举"
+    },
+    "sections": [
+      252
+    ]
+  },
+  {
+    "id": "local-recall",
+    "topic": {
+      "th": "การเข้าชื่อเสนอข้อบัญญัติและถอดถอนผู้บริหารท้องถิ่น",
+      "en": "Local petitions and recall",
+      "zh": "地方联名提案与罢免"
+    },
+    "sections": [
+      254
+    ]
+  },
+  {
+    "id": "constitutional-amendment",
+    "topic": {
+      "th": "การแก้ไขรัฐธรรมนูญ",
+      "en": "Amending the Constitution",
+      "zh": "修改宪法"
+    },
+    "sections": [
+      255,
+      256
+    ]
+  },
+  {
+    "id": "national-reform",
+    "topic": {
+      "th": "การปฏิรูปประเทศ",
+      "en": "National reform",
+      "zh": "国家改革"
+    },
+    "sections": [
+      257,
+      258,
+      259,
+      270
+    ]
+  },
+  {
+    "id": "police-reform",
+    "topic": {
+      "th": "การปฏิรูปตำรวจ",
+      "en": "Police reform",
+      "zh": "警察改革"
+    },
+    "sections": [
+      258,
+      260
+    ]
+  },
+  {
+    "id": "justice-reform",
+    "topic": {
+      "th": "การปฏิรูปกระบวนการยุติธรรม",
+      "en": "Justice reform",
+      "zh": "司法程序改革"
+    },
+    "sections": [
+      258,
+      260
+    ]
+  },
+  {
+    "id": "education-reform",
+    "topic": {
+      "th": "การปฏิรูปการศึกษา",
+      "en": "Education reform",
+      "zh": "教育改革"
+    },
+    "sections": [
+      258,
+      261
+    ]
+  },
+  {
+    "id": "digital-government",
+    "topic": {
+      "th": "รัฐบาลดิจิทัลและฐานข้อมูลภาครัฐ",
+      "en": "Digital government and shared state data",
+      "zh": "数字政府与政府数据整合"
+    },
+    "sections": [
+      258
+    ]
+  },
+  {
+    "id": "procurement",
+    "topic": {
+      "th": "การจัดซื้อจัดจ้างภาครัฐ",
+      "en": "Public procurement",
+      "zh": "政府采购"
+    },
+    "sections": [
+      258
+    ]
+  },
+  {
+    "id": "waste",
+    "topic": {
+      "th": "การจัดการขยะ",
+      "en": "Waste management",
+      "zh": "垃圾管理"
+    },
+    "sections": [
+      258
+    ]
+  },
+  {
+    "id": "health-security",
+    "topic": {
+      "th": "หลักประกันสุขภาพและแพทย์ประจำครอบครัว",
+      "en": "Health security and family doctors",
+      "zh": "健康保障与家庭医生"
+    },
+    "sections": [
+      258
+    ]
+  },
+  {
+    "id": "transitory-provisions",
+    "topic": {
+      "th": "บทเฉพาะกาล",
+      "en": "Transitory provisions",
+      "zh": "过渡条款"
+    },
+    "sections": [
+      262,
+      263,
+      264,
+      265,
+      269,
+      279
+    ]
+  },
+  {
+    "id": "first-senate",
+    "topic": {
+      "th": "ส.ว. แต่งตั้งชุดแรก ๒๕๐ คน",
+      "en": "The first 250 appointed senators",
+      "zh": "首届250名任命参议员"
+    },
+    "sections": [
+      269,
+      270,
+      271,
+      272
+    ]
+  },
+  {
+    "id": "ncpo",
+    "topic": {
+      "th": "คณะรักษาความสงบแห่งชาติ (คสช.)",
+      "en": "National Council for Peace and Order",
+      "zh": "全国维持和平秩序委员会"
+    },
+    "sections": [
+      265,
+      269,
+      279
+    ]
+  },
+  {
+    "id": "interim-legislature",
+    "topic": {
+      "th": "สภานิติบัญญัติแห่งชาติ",
+      "en": "National Legislative Assembly",
+      "zh": "国家立法议会"
+    },
+    "sections": [
+      263,
+      267,
+      274,
+      277,
+      278
+    ]
+  },
+  {
+    "id": "first-election",
+    "topic": {
+      "th": "การเลือกตั้งครั้งแรกตามรัฐธรรมนูญนี้",
+      "en": "First election under this Constitution",
+      "zh": "本宪法下的首次选举"
+    },
+    "sections": [
+      267,
+      268
+    ]
+  }
+]

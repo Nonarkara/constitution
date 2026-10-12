@@ -5,13 +5,15 @@ import { tr } from "@/lib/i18n";
 import { questionIndex as questions } from "@/lib/outline";
 import { parseProgress } from "@/lib/progress";
 import { defaultProgress } from "@/lib/learning";
+import { parseMarks } from "@/lib/marks";
+import { parseAnnotations } from "@/lib/annotations";
 export function Settings() {
-  const { lang, progress, save, large, setLarge, offline } = useStudy();
+  const { lang, progress, save, large, setLarge, offline, marks, saveMarks, annotations, saveAnnotations } = useStudy();
   const [confirm, setConfirm] = useState(false),
     [message, setMessage] = useState("");
   const download = () => {
     const url = URL.createObjectURL(
-      new Blob([JSON.stringify({ version: 1, progress }, null, 2)], {
+      new Blob([JSON.stringify({ version: 2, progress, marks, annotations }, null, 2)], {
         type: "application/json",
       }),
     );
@@ -108,7 +110,7 @@ export function Settings() {
         </p>
         <div className="settings-actions">
           <button onClick={download}>
-            {tr(lang, "ส่งออกความก้าวหน้า", "Export progress", "导出进度")}
+            {tr(lang, "ส่งออกความก้าวหน้าและบันทึก", "Export progress and notes", "导出进度与笔记")}
           </button>
           <label className="button">
             {tr(lang, "นำเข้าความก้าวหน้า", "Import progress", "导入进度")}
@@ -125,8 +127,13 @@ export function Settings() {
                     d.progress,
                     new Set(questions.map((q) => q.id)),
                   );
-                  if (d.version !== 1 || !p) throw new Error("invalid");
+                  if ((d.version !== 1 && d.version !== 2) || !p) throw new Error("invalid");
+                  // Version 2 also carries highlights, notes and bookmarks.
+                  const m = d.version === 2 ? parseMarks(d.marks) : null;
+                  const a = d.version === 2 ? parseAnnotations(d.annotations) : null;
                   save(p);
+                  if (m) saveMarks(m);
+                  if (a) saveAnnotations(a);
                   setMessage(
                     tr(
                       lang,

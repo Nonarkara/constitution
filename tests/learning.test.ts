@@ -90,33 +90,15 @@ test("state is immutable and energy never blocks another answer", () => {
   assert.throws(() => recordAnswer(p, questions[0], true, NaN), RangeError);
 });
 
-test("quiz bank has 85 unique trilingual questions across every chapter and transitional provisions", async () => {
+test("the question bank covers every section with complete trilingual questions", async () => {
   const { readFile } = await import("node:fs/promises");
-  const bank = JSON.parse(
-    await readFile(new URL("../data/questions.json", import.meta.url), "utf8"),
-  ) as import("../lib/learning.ts").Question[];
-  assert.equal(bank.length, 85);
-  assert.equal(new Set(bank.map((q) => q.id)).size, bank.length);
-  for (let chapter = 1; chapter <= 17; chapter++)
-    assert.equal(bank.filter((q) => q.chapter === chapter).length, 5);
-  for (const q of bank) {
-    assert.equal(q.choices.length, 4);
-    assert.ok(Number.isInteger(q.answer) && q.answer >= 0 && q.answer < 4);
-    assert.ok(
-      q.sections.length > 0 &&
-        q.sections.every((s) => Number.isInteger(s) && s >= 1 && s <= 279),
-    );
-    for (const language of ["th", "en", "zh"] as const) {
-      assert.ok(q.prompt[language].trim());
-      assert.ok(q.explanation[language].trim());
-      assert.equal(new Set(q.choices.map((c) => c[language])).size, 4);
-      for (const choice of q.choices) assert.ok(choice[language].trim());
-    }
-  }
+  const read = async (path: string) => JSON.parse(await readFile(new URL(path, import.meta.url), "utf8"));
+  const bank = (await read("../data/questions.json")) as import("../lib/learning.ts").Question[];
+  const { checkQuestions } = await import("../scripts/validate-questions.mjs");
+  assert.deepEqual(checkQuestions(bank, await read("../data/constitution.json")), []);
+  assert.ok(bank.length >= 400);
   const amended = bank.find((q) => q.id === "c07-02")!;
-  assert.match(amended.choices[amended.answer].th, /400.*100/);
-  assert.match(amended.choices[amended.answer].en, /400.*100/);
-  assert.match(amended.choices[amended.answer].zh, /400.*100/);
+  for (const l of ["th", "en", "zh"] as const) assert.match(amended.choices[amended.answer][l], /400.*100/);
   const temporary = bank.find((q) => q.id === "c17-02")!;
   assert.match(temporary.explanation.en, /period has ended/);
 });

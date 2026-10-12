@@ -10,15 +10,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
   const path = usePathname();
   const [now, setNow] = useState(0);
   useEffect(() => setNow(Date.now()), [progress]);
+  // Five destinations; every other page belongs to one of them for the active state.
   const nav = [
-    ["/learn/", labels.learn],
-    ["/notebook/", labels.notebook],
-    ["/flashcards/", labels.flashcards],
-    ["/cheatsheet/", labels.cheatsheet],
-    ["/rights/", labels.rights],
-    ["/section/", labels.search],
-    ["/review/", labels.review],
-    ["/sources/", labels.sources],
+    ["/learn/", labels.learn, ["/", "/learn/"]],
+    ["/read/", labels.read, ["/read/", "/section/", "/notebook/"]],
+    ["/practice/", labels.practice, ["/practice/", "/review/", "/exam/", "/flashcards/", "/games/"]],
+    ["/notes/", labels.notes, ["/notes/"]],
+    ["/library/", labels.library, ["/library/", "/bible/", "/rights/", "/cheatsheet/", "/topics/", "/glossary/", "/palace/", "/sources/", "/settings/"]],
   ] as const;
   return (
     <>
@@ -59,10 +57,10 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <div className="app-grid">
         <aside className="sidebar">
           <nav aria-label={tr(lang, "เมนูหลัก", "Main navigation", "主导航")}>
-            {nav.map(([href, title], i) => (
+            {nav.map(([href, title, match], i) => (
               <Link
-                aria-current={path === href ? "page" : undefined}
-                className={path === href ? "nav-active" : ""}
+                aria-current={(match as readonly string[]).includes(path) ? "page" : undefined}
+                className={(match as readonly string[]).includes(path) ? "nav-active" : ""}
                 key={href}
                 href={href}
               >
@@ -119,55 +117,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           )}
           {children}
         </main>
-        <aside className="margin">
-          <span className="mono">STUDY RECORD</span>
-          <div className="stat">
-            <strong className="mono">{progress.xp}</strong>
-            <span>{tr(lang, "แต้มฝึกฝน", "Practice XP", "练习积分")}</span>
-          </div>
-          <div className="stat">
-            <strong className="mono">{progress.streak}</strong>
-            <span>
-              {tr(lang, "วันต่อเนื่อง", "Day streak", "连续学习天数")}
-            </span>
-          </div>
-          <div className="stat">
-            <strong className="mono">{energyRemaining(progress, now)}</strong>
-            <span>
-              {tr(
-                lang,
-                "พลังวันนี้ • ยังเรียนต่อได้เสมอ",
-                "Daily energy · You can always keep studying",
-                "今日精力 · 仍可继续学习",
-              )}
-            </span>
-          </div>
-          <p className="micro">
-            {tr(
-              lang,
-              "ความก้าวหน้าอยู่บนเครื่องนี้ เริ่มใหม่ได้เสมอ ไม่ต้องรีบ",
-              "Progress lives on this device. You can always start again. Take your time.",
-              "进度保存在此设备上。随时可以重新开始，慢慢来。",
-            )}
-          </p>
-          <div className="margin-rule" />
-          <p>
-            {tr(
-              lang,
-              "อ่าน → ลองตอบ → กลับมาทบทวน",
-              "Read → Recall → Return",
-              "阅读 → 回忆 → 复习",
-            )}
-          </p>
-          <p className="micro">
-            {tr(
-              lang,
-              "ไม่ใช่ข้อสอบจริง ทุกคำตอบมีมาตราให้กลับไปอ่าน",
-              "Original practice questions. Each answer points back to the law.",
-              "原创练习题，每题均附相关法条。",
-            )}
-          </p>
-        </aside>
+
       </div>
       <footer>
         <span>THAILAND · CONSTITUTION 2017</span>

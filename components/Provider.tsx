@@ -15,6 +15,7 @@ import {
   type UserAnnotations,
 } from "@/lib/annotations";
 import type { ExamTarget } from "@/lib/adaptive";
+import { MARKS_KEY, emptyMarks, parseMarks, type Marks } from "@/lib/marks";
 import { workerMessage, type OfflineStatus } from "@/lib/offline";
 import type { Lang } from "@/lib/i18n";
 type State = {
@@ -24,6 +25,8 @@ type State = {
   save: (p: Progress) => void;
   annotations: UserAnnotations;
   saveAnnotations: (a: UserAnnotations) => void;
+  marks: Marks;
+  saveMarks: (m: Marks) => void;
   examTarget: ExamTarget;
   setExamTarget: (t: ExamTarget) => void;
   ready: boolean;
@@ -37,6 +40,7 @@ export function Provider({ children }: { children: ReactNode }) {
   const [lang, setL] = useState<Lang>("th"),
     [progress, setP] = useState<Progress>(defaultProgress),
     [annotations, setA] = useState<UserAnnotations>(defaultAnnotations),
+    [marks, setM] = useState<Marks>(emptyMarks),
     [examTarget, setTarget] = useState<ExamTarget>("all"),
     [ready, setReady] = useState(false),
     [storageError, setStorageError] = useState(false),
@@ -62,6 +66,15 @@ export function Provider({ children }: { children: ReactNode }) {
       }
       setBig(localStorage.getItem("constitution-large") === "true");
       setA(loadStoredAnnotations());
+      const storedMarks = localStorage.getItem(MARKS_KEY);
+      if (storedMarks) {
+        let parsedMarks: Marks | null = null;
+        try {
+          parsedMarks = parseMarks(JSON.parse(storedMarks));
+        } catch {}
+        if (parsedMarks) setM(parsedMarks);
+        else localStorage.setItem(`${MARKS_KEY}-backup-${Date.now()}`, storedMarks);
+      }
       const savedTarget = localStorage.getItem("constitution-exam-target") as ExamTarget | null;
       if (
         savedTarget === "all" ||
@@ -118,6 +131,12 @@ export function Provider({ children }: { children: ReactNode }) {
         } catch {}
       }
       if (e.key === "constitution-annotations") setA(loadStoredAnnotations());
+      if (e.key === MARKS_KEY && e.newValue) {
+        try {
+          const parsedMarks = parseMarks(JSON.parse(e.newValue));
+          if (parsedMarks) setM(parsedMarks);
+        } catch {}
+      }
       if (e.key === "constitution-lang" && (e.newValue === "th" || e.newValue === "en" || e.newValue === "zh"))
         setL(e.newValue);
     };
@@ -150,6 +169,14 @@ export function Provider({ children }: { children: ReactNode }) {
       setStorageError(true);
     }
   };
+  const saveMarks = (m: Marks) => {
+    setM(m);
+    try {
+      localStorage.setItem(MARKS_KEY, JSON.stringify(m));
+    } catch {
+      setStorageError(true);
+    }
+  };
   const setExamGoal = (t: ExamTarget) => {
     setTarget(t);
     try {
@@ -175,6 +202,8 @@ export function Provider({ children }: { children: ReactNode }) {
         save,
         annotations,
         saveAnnotations,
+        marks,
+        saveMarks,
         examTarget,
         setExamTarget: setExamGoal,
         ready,

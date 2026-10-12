@@ -1,0 +1,2566 @@
+[
+ {
+  "id": "supreme-law",
+  "term": {
+   "th": "กฎหมายสูงสุด",
+   "en": "supreme law",
+   "zh": "最高法律"
+  },
+  "match": {
+   "th": [
+    "กฎหมายสูงสุด"
+   ],
+   "en": [
+    "supreme law"
+   ],
+   "zh": [
+    "最高法律"
+   ]
+  },
+  "def": {
+   "th": "รัฐธรรมนูญอยู่เหนือกฎหมายอื่นทั้งหมด กฎหมาย กฎ ข้อบังคับ หรือการกระทำใดที่ขัดหรือแย้งต่อรัฐธรรมนูญจะใช้บังคับไม่ได้",
+   "en": "The Constitution ranks above every other law. Any law, rule, regulation or act that is contrary to or inconsistent with it is unenforceable.",
+   "zh": "宪法高于其他一切法律。任何与宪法相抵触的法律、规则、条例或行为均不能施行。"
+  },
+  "sections": [
+   5
+  ]
+ },
+ {
+  "id": "sovereign-power",
+  "term": {
+   "th": "อำนาจอธิปไตย",
+   "en": "sovereign power",
+   "zh": "主权"
+  },
+  "match": {
+   "th": [
+    "อำนาจอธิปไตย"
+   ],
+   "en": [
+    "Sovereign power"
+   ],
+   "zh": [
+    "主权"
+   ]
+  },
+  "def": {
+   "th": "อำนาจสูงสุดในการปกครองประเทศ ซึ่งรัฐธรรมนูญกำหนดว่าเป็นของปวงชนชาวไทย พระมหากษัตริย์ทรงใช้อำนาจนี้ทางรัฐสภา คณะรัฐมนตรี และศาล",
+   "en": "The supreme power to govern the country. The Constitution says it belongs to the Thai people, and the King exercises it through the National Assembly, the Council of Ministers and the Courts.",
+   "zh": "治理国家的最高权力。宪法规定主权属于泰国人民，由国王通过国会、内阁和法院行使。"
+  },
+  "sections": [
+   3
+  ]
+ },
+ {
+  "id": "democratic-regime-king-head",
+  "term": {
+   "th": "ระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข",
+   "en": "democratic regime of government with the King as Head of State",
+   "zh": "以国王为国家元首的民主政体"
+  },
+  "match": {
+   "th": [
+    "ประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข",
+    "ประชาธิปไตยอันมีพระมหากษัตริย์ ทรงเป็นประมุข",
+    "ประชาธิปไตย อันมีพระมหากษัตริย์ทรงเป็นประมุข"
+   ],
+   "en": [
+    "democratic regime of government with the King as Head of State"
+   ],
+   "zh": [
+    "国王为国家元首的民主政体"
+   ]
+  },
+  "def": {
+   "th": "รูปแบบการปกครองของประเทศไทยตามรัฐธรรมนูญ ห้ามใช้สิทธิเสรีภาพเพื่อล้มล้าง และห้ามแก้ไขรัฐธรรมนูญเพื่อเปลี่ยนแปลงระบอบนี้",
+   "en": "The form of government the Constitution establishes for Thailand. Rights may not be used to overthrow it, and no constitutional amendment may change it.",
+   "zh": "宪法为泰国确立的政体。不得利用权利与自由推翻该政体，也不得以修宪方式改变该政体。"
+  },
+  "sections": [
+   2,
+   49,
+   255
+  ]
+ },
+ {
+  "id": "constitutional-convention",
+  "term": {
+   "th": "ประเพณีการปกครอง",
+   "en": "constitutional convention",
+   "zh": "宪政惯例"
+  },
+  "match": {
+   "th": [
+    "ประเพณีการปกครอง"
+   ],
+   "en": [
+    "constitutional convention"
+   ],
+   "zh": [
+    "宪政惯例"
+   ]
+  },
+  "def": {
+   "th": "แนวปฏิบัติในการปกครองที่ใช้ตัดสินเรื่องที่รัฐธรรมนูญไม่ได้เขียนไว้ โดยต้องเป็นไปตามระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข",
+   "en": "Established governing practice used to decide a matter the Constitution does not cover, in line with the democratic regime with the King as Head of State.",
+   "zh": "宪法未作规定时用以处理问题的治理惯例，须符合以国王为国家元首的民主政体。"
+  },
+  "sections": [
+   5
+  ]
+ },
+ {
+  "id": "rule-of-law",
+  "term": {
+   "th": "หลักนิติธรรม",
+   "en": "rule of law",
+   "zh": "法治"
+  },
+  "match": {
+   "th": [
+    "หลักนิติธรรม"
+   ],
+   "en": [
+    "rule of law"
+   ],
+   "zh": [
+    "法治"
+   ]
+  },
+  "def": {
+   "th": "หลักที่ให้ทุกองค์กรของรัฐทำงานภายใต้กฎหมาย และกฎหมายที่จำกัดสิทธิเสรีภาพต้องไม่ขัดต่อหลักนี้",
+   "en": "The principle that every state body acts under the law. A law that restricts rights and liberties must not violate it.",
+   "zh": "一切国家机关依法行事的原则。限制权利与自由的法律不得违背这一原则。"
+  },
+  "sections": [
+   3,
+   26
+  ]
+ },
+ {
+  "id": "human-dignity",
+  "term": {
+   "th": "ศักดิ์ศรีความเป็นมนุษย์",
+   "en": "human dignity",
+   "zh": "人的尊严"
+  },
+  "match": {
+   "th": [
+    "ศักดิ์ศรีความเป็นมนุษย์"
+   ],
+   "en": [
+    "human dignity"
+   ],
+   "zh": [
+    "人的尊严"
+   ]
+  },
+  "def": {
+   "th": "คุณค่าของความเป็นคนที่รัฐธรรมนูญคุ้มครอง กฎหมายที่จำกัดสิทธิเสรีภาพจะกระทบศักดิ์ศรีนี้ไม่ได้",
+   "en": "The worth of every person, which the Constitution protects. A law restricting rights and liberties may not affect it.",
+   "zh": "宪法保护的人之为人的价值。限制权利与自由的法律不得损害人的尊严。"
+  },
+  "sections": [
+   4,
+   26
+  ]
+ },
+ {
+  "id": "privy-council",
+  "term": {
+   "th": "คณะองคมนตรี",
+   "en": "Privy Council",
+   "zh": "枢密院"
+  },
+  "match": {
+   "th": [
+    "คณะองคมนตรี",
+    "องคมนตรี"
+   ],
+   "en": [
+    "Privy Council",
+    "Privy Councillor"
+   ],
+   "zh": [
+    "枢密院"
+   ]
+  },
+  "def": {
+   "th": "คณะบุคคลที่พระมหากษัตริย์ทรงเลือกและทรงแต่งตั้ง ประกอบด้วยประธานองคมนตรีและองคมนตรีอื่นไม่เกินสิบแปดคน มีหน้าที่ถวายความเห็นต่อพระมหากษัตริย์ในพระราชกรณียกิจที่ทรงปรึกษา",
+   "en": "A body chosen and appointed by the King: a President and no more than eighteen Privy Councillors. It gives the King advice on matters he consults it about.",
+   "zh": "由国王遴选任命的机构，由枢密院主席和不超过十八名枢密大臣组成，就国王咨询的事务提供意见。"
+  },
+  "sections": [
+   10,
+   12,
+   17
+  ]
+ },
+ {
+  "id": "regent",
+  "term": {
+   "th": "ผู้สำเร็จราชการแทนพระองค์",
+   "en": "Regent",
+   "zh": "摄政"
+  },
+  "match": {
+   "th": [
+    "ผู้สำเร็จราชการแทนพระองค์"
+   ],
+   "en": [
+    "Regent"
+   ],
+   "zh": [
+    "摄政"
+   ]
+  },
+  "def": {
+   "th": "ผู้ทำหน้าที่แทนพระมหากษัตริย์ในเวลาที่ไม่ประทับในราชอาณาจักรหรือทรงบริหารพระราชภาระไม่ได้ พระมหากษัตริย์จะทรงแต่งตั้งหรือไม่ก็ได้",
+   "en": "A person who acts in place of the King when he is absent from the Kingdom or unable to perform his functions. The King may or may not appoint one.",
+   "zh": "国王不在国内或不能履行职务时代行其职责的人。国王可以任命，也可以不任命。"
+  },
+  "sections": [
+   16,
+   17,
+   18,
+   19
+  ]
+ },
+ {
+  "id": "palace-law-succession",
+  "term": {
+   "th": "กฎมณเฑียรบาลว่าด้วยการสืบราชสันตติวงศ์",
+   "en": "Palace Law on Succession",
+   "zh": "王位继承宫廷法"
+  },
+  "match": {
+   "th": [
+    "กฎมณเฑียรบาลว่าด้วยการสืบราชสันตติวงศ์",
+    "กฎมณเฑียรบาล",
+    "การสืบราชสันตติวงศ์"
+   ],
+   "en": [
+    "Palace Law on Succession",
+    "Palace Law"
+   ],
+   "zh": [
+    "王位继承"
+   ]
+  },
+  "def": {
+   "th": "กฎหมายเฉพาะว่าด้วยการสืบราชสมบัติ พ.ศ. ๒๔๖๗ การแก้ไขเป็นพระราชอำนาจของพระมหากษัตริย์ และรัฐสภามีหน้าที่รับทราบ",
+   "en": "The special law of 1924 on royal succession. Amending it is the King's prerogative; the National Assembly is informed of the change.",
+   "zh": "1924年关于王位继承的专门法律。修改该法属国王的特权，国会只需知悉。"
+  },
+  "sections": [
+   20,
+   21
+  ]
+ },
+ {
+  "id": "countersignature",
+  "term": {
+   "th": "การรับสนองพระบรมราชโองการ",
+   "en": "countersignature of a Royal Command",
+   "zh": "副署"
+  },
+  "match": {
+   "th": [
+    "รับสนองพระบรมราชโองการ"
+   ],
+   "en": [
+    "countersign"
+   ],
+   "zh": [
+    "副署"
+   ]
+  },
+  "def": {
+   "th": "การที่ผู้มีหน้าที่ตามรัฐธรรมนูญลงนามกำกับพระบรมราชโองการเกี่ยวกับราชการแผ่นดิน ผู้ลงนามเป็นผู้รับผิดชอบต่อการนั้น",
+   "en": "The signature that an office-holder named in the Constitution adds to a Royal Command on state affairs. The countersigner takes responsibility for it.",
+   "zh": "宪法规定的人员在国王涉及国务的王命上联署签名，由副署人对此负责。"
+  },
+  "sections": [
+   11,
+   158,
+   182
+  ]
+ },
+ {
+  "id": "royal-prerogative",
+  "term": {
+   "th": "พระราชอำนาจ",
+   "en": "royal prerogative",
+   "zh": "国王特权"
+  },
+  "match": {
+   "th": [
+    "พระราชอำนาจ"
+   ],
+   "en": [
+    "Prerogative"
+   ],
+   "zh": [
+    "王室特权",
+    "国王特权"
+   ]
+  },
+  "def": {
+   "th": "อำนาจที่รัฐธรรมนูญถวายแด่พระมหากษัตริย์ เช่น การยุบสภา การตราพระราชกำหนด การประกาศสงคราม และการพระราชทานอภัยโทษ",
+   "en": "Powers the Constitution vests in the King, such as dissolving the House, issuing Emergency Decrees, declaring war and granting pardons.",
+   "zh": "宪法赋予国王的权力，例如解散众议院、颁布紧急法令、宣战和赦免。"
+  },
+  "sections": [
+   9,
+   103,
+   177,
+   179
+  ]
+ },
+ {
+  "id": "government-gazette",
+  "term": {
+   "th": "ราชกิจจานุเบกษา",
+   "en": "Government Gazette",
+   "zh": "政府公报"
+  },
+  "match": {
+   "th": [
+    "ราชกิจจานุเบกษา"
+   ],
+   "en": [
+    "Government Gazette"
+   ],
+   "zh": [
+    "政府公报"
+   ]
+  },
+  "def": {
+   "th": "สิ่งพิมพ์ทางการของรัฐที่ใช้ประกาศกฎหมายและประกาศสำคัญ กฎหมายส่วนใหญ่เริ่มใช้บังคับเมื่อประกาศในราชกิจจานุเบกษาแล้ว",
+   "en": "The official state publication for laws and major announcements. Most laws take effect once published in it.",
+   "zh": "国家公布法律和重要公告的官方出版物。大多数法律在政府公报上公布后生效。"
+  },
+  "sections": [
+   65,
+   81,
+   103
+  ]
+ },
+ {
+  "id": "bill",
+  "term": {
+   "th": "ร่างพระราชบัญญัติ",
+   "en": "bill",
+   "zh": "法律草案"
+  },
+  "match": {
+   "th": [
+    "ร่างพระราชบัญญัติ"
+   ],
+   "en": [
+    "bill"
+   ],
+   "zh": [
+    "法律草案"
+   ]
+  },
+  "def": {
+   "th": "ร่างกฎหมายที่เสนอต่อสภาผู้แทนราษฎรก่อน ผ่านวุฒิสภา แล้วนำขึ้นทูลเกล้าทูลกระหม่อมถวายเพื่อทรงลงพระปรมาภิไธยเป็นพระราชบัญญัติ",
+   "en": "A draft law. It goes first to the House of Representatives, then the Senate, and is then presented to the King for signature to become an Act.",
+   "zh": "法律的草案。先提交众议院，再经参议院审议，然后呈请国王签署成为法律。"
+  },
+  "sections": [
+   81,
+   133,
+   136,
+   145
+  ]
+ },
+ {
+  "id": "organic-act",
+  "term": {
+   "th": "พระราชบัญญัติประกอบรัฐธรรมนูญ",
+   "en": "Organic Act",
+   "zh": "组织法"
+  },
+  "match": {
+   "th": [
+    "พระราชบัญญัติประกอบรัฐธรรมนูญ"
+   ],
+   "en": [
+    "Organic Act"
+   ],
+   "zh": [
+    "组织法"
+   ]
+  },
+  "def": {
+   "th": "กฎหมายที่ขยายรายละเอียดของรัฐธรรมนูญในเรื่องสำคัญ เช่น การเลือกตั้ง พรรคการเมือง ศาลรัฐธรรมนูญ และองค์กรอิสระ รัฐสภาพิจารณาในที่ประชุมร่วมกัน แล้วส่งให้ศาลฎีกา ศาลรัฐธรรมนูญ หรือองค์กรอิสระที่เกี่ยวข้องให้ความเห็นก่อนนำขึ้นทูลเกล้าฯ",
+   "en": "A law that fills in the details of the Constitution on key matters such as elections, political parties, the Constitutional Court and the independent organs. The National Assembly considers it in a joint sitting, then sends it to the Supreme Court, the Constitutional Court or the relevant independent organ for comment before it goes to the King.",
+   "zh": "对宪法重要事项作出具体规定的法律，例如选举、政党、宪法法院和独立机构。由国会联席会议审议，再送最高法院、宪法法院或相关独立机构提出意见，然后呈请国王签署。"
+  },
+  "sections": [
+   130,
+   131,
+   132
+  ]
+ },
+ {
+  "id": "money-bill",
+  "term": {
+   "th": "ร่างพระราชบัญญัติเกี่ยวด้วยการเงิน",
+   "en": "money bill",
+   "zh": "财政法案"
+  },
+  "match": {
+   "th": [
+    "ร่างพระราชบัญญัติเกี่ยวด้วยการเงิน"
+   ],
+   "en": [
+    "money bill"
+   ],
+   "zh": [
+    "财政法案"
+   ]
+  },
+  "def": {
+   "th": "ร่างกฎหมายเรื่องภาษีหรืออากร การจัดสรรหรือจ่ายเงินแผ่นดิน การกู้เงินหรือค้ำประกัน หรือเงินตรา ถ้า ส.ส. หรือประชาชนเป็นผู้เสนอ ต้องมีคำรับรองของนายกรัฐมนตรี",
+   "en": "A bill on taxes or duties, the allocation or spending of state funds, borrowing or guarantees, or currency. If MPs or citizens propose one, it needs the Prime Minister's endorsement.",
+   "zh": "涉及税收、国家资金的分配与支出、借款或担保、货币的法律草案。由众议员或民众提出的，须经总理认可。"
+  },
+  "sections": [
+   133,
+   134
+  ]
+ },
+ {
+  "id": "annual-appropriations-act",
+  "term": {
+   "th": "พระราชบัญญัติงบประมาณรายจ่ายประจำปี",
+   "en": "Annual Appropriations Act",
+   "zh": "年度支出预算法"
+  },
+  "match": {
+   "th": [
+    "พระราชบัญญัติงบประมาณรายจ่ายประจำปี",
+    "งบประมาณรายจ่าย"
+   ],
+   "en": [
+    "Annual Appropriations",
+    "expenditure estimates"
+   ],
+   "zh": [
+    "年度支出预算",
+    "支出预算"
+   ]
+  },
+  "def": {
+   "th": "กฎหมายงบประมาณที่กำหนดว่ารัฐจะใช้จ่ายเงินเท่าใดในแต่ละปี ถ้าออกไม่ทัน ให้ใช้งบประมาณของปีก่อนไปพลาง",
+   "en": "The budget law that sets how much the state may spend each year. If it is not enacted in time, the previous year's budget applies in the meantime.",
+   "zh": "规定国家每年支出的预算法律。如未能按时通过，暂时沿用上一年度的预算。"
+  },
+  "sections": [
+   140,
+   141,
+   143,
+   144
+  ]
+ },
+ {
+  "id": "budget-motion-amendment",
+  "term": {
+   "th": "การแปรญัตติ",
+   "en": "motion to amend a bill",
+   "zh": "法案修正动议"
+  },
+  "match": {
+   "th": [
+    "แปรญัตติ"
+   ],
+   "en": [
+    "submit a motion reducing or abridging"
+   ],
+   "zh": [
+    "删减支出的修正",
+    "减少或删减支出"
+   ]
+  },
+  "def": {
+   "th": "การขอแก้ไขร่างกฎหมายระหว่างพิจารณา ในร่างงบประมาณ ส.ส. ขอลดรายจ่ายได้ แต่ห้ามแปรญัตติเพื่อให้ตนมีส่วนในการใช้งบประมาณ",
+   "en": "A proposal to change a bill while it is being considered. On the budget bill, MPs may propose cuts, but may not arrange amendments that give them a hand in spending the money.",
+   "zh": "在审议法案期间提出修改。审议预算法案时，众议员可提议削减支出，但不得借修正案使自己参与预算的使用。"
+  },
+  "sections": [
+   144
+  ]
+ },
+ {
+  "id": "fiscal-discipline",
+  "term": {
+   "th": "วินัยการเงินการคลัง",
+   "en": "financial and fiscal discipline",
+   "zh": "财政纪律"
+  },
+  "match": {
+   "th": [
+    "วินัยการเงินการคลัง"
+   ],
+   "en": [
+    "fiscal discipline"
+   ],
+   "zh": [
+    "财政纪律"
+   ]
+  },
+  "def": {
+   "th": "กติกาให้รัฐใช้จ่ายเงินอย่างรับผิดชอบและยั่งยืน รัฐต้องมีกฎหมายว่าด้วยวินัยการเงินการคลังเพื่อให้ฐานะการคลังมั่นคง",
+   "en": "Rules that make the state spend money responsibly and sustainably. The state must have a law on financial and fiscal discipline to keep public finances stable.",
+   "zh": "要求国家负责任、可持续地使用资金的规则。国家须制定财政纪律法，以维持财政稳健。"
+  },
+  "sections": [
+   62,
+   140,
+   142
+  ]
+ },
+ {
+  "id": "emergency-decree",
+  "term": {
+   "th": "พระราชกำหนด",
+   "en": "Emergency Decree",
+   "zh": "紧急法令"
+  },
+  "match": {
+   "th": [
+    "พระราชกำหนด"
+   ],
+   "en": [
+    "Emergency Decree"
+   ],
+   "zh": [
+    "紧急法令"
+   ]
+  },
+  "def": {
+   "th": "กฎหมายที่พระมหากษัตริย์ทรงตราได้ในกรณีฉุกเฉินจำเป็นเร่งด่วนตามที่คณะรัฐมนตรีเห็น มีผลอย่างพระราชบัญญัติ แต่ต้องเสนอรัฐสภาอนุมัติโดยไม่ชักช้า ถ้าไม่อนุมัติก็ตกไป",
+   "en": "A law the King may issue in an urgent emergency, as judged by the Council of Ministers. It has the force of an Act but must go to the National Assembly for approval without delay; if not approved, it lapses.",
+   "zh": "在内阁认为存在紧急必要的情形时由国王颁布的法令，具有法律效力，但须立即提交国会审议；不获批准即失效。"
+  },
+  "sections": [
+   172,
+   173,
+   174
+  ]
+ },
+ {
+  "id": "royal-decree",
+  "term": {
+   "th": "พระราชกฤษฎีกา",
+   "en": "Royal Decree",
+   "zh": "王室法令"
+  },
+  "match": {
+   "th": [
+    "พระราชกฤษฎีกา"
+   ],
+   "en": [
+    "Royal Decree"
+   ],
+   "zh": [
+    "王室法令",
+    "皇家法令"
+   ]
+  },
+  "def": {
+   "th": "กฎหมายที่พระมหากษัตริย์ทรงตราได้โดยไม่ขัดต่อกฎหมาย ใช้ในเรื่องเช่นการยุบสภาและการให้มีการเลือกตั้งทั่วไป",
+   "en": "A decree the King may issue so long as it does not contravene the law. It is used for matters such as dissolving the House and calling a general election.",
+   "zh": "国王在不违反法律的前提下颁布的法令，用于解散众议院、举行大选等事项。"
+  },
+  "sections": [
+   102,
+   103,
+   175
+  ]
+ },
+ {
+  "id": "martial-law",
+  "term": {
+   "th": "กฎอัยการศึก",
+   "en": "martial law",
+   "zh": "戒严法"
+  },
+  "match": {
+   "th": [
+    "กฎอัยการศึก"
+   ],
+   "en": [
+    "martial law"
+   ],
+   "zh": [
+    "戒严"
+   ]
+  },
+  "def": {
+   "th": "พระราชอำนาจในการประกาศใช้และยกเลิกกฎอัยการศึก ตามลักษณะและวิธีการที่กฎหมายว่าด้วยกฎอัยการศึกกำหนด",
+   "en": "The King's power to declare and lift martial law, in the manner set by the martial law statute.",
+   "zh": "国王依戒严法规定的条件和方式宣布及解除戒严的权力。"
+  },
+  "sections": [
+   176
+  ]
+ },
+ {
+  "id": "treaty",
+  "term": {
+   "th": "หนังสือสัญญา",
+   "en": "treaty",
+   "zh": "条约"
+  },
+  "match": {
+   "th": [
+    "หนังสือสัญญา"
+   ],
+   "en": [
+    "treaty"
+   ],
+   "zh": [
+    "条约"
+   ]
+  },
+  "def": {
+   "th": "ข้อตกลงกับต่างประเทศหรือองค์การระหว่างประเทศ ฉบับที่เปลี่ยนแปลงอาณาเขตหรือมีผลกระทบสูงต่อประเทศต้องได้รับความเห็นชอบจากรัฐสภา",
+   "en": "An agreement with another country or an international organisation. One that changes Thai territory or has wide impact on the country needs National Assembly approval.",
+   "zh": "与外国或国际组织缔结的协议。改变领土或对国家有重大影响的条约须经国会同意。"
+  },
+  "sections": [
+   178
+  ]
+ },
+ {
+  "id": "declaration-of-war",
+  "term": {
+   "th": "การประกาศสงคราม",
+   "en": "declaration of war",
+   "zh": "宣战"
+  },
+  "match": {
+   "th": [
+    "ประกาศสงคราม"
+   ],
+   "en": [
+    "declare war"
+   ],
+   "zh": [
+    "宣战"
+   ]
+  },
+  "def": {
+   "th": "พระราชอำนาจที่ใช้ได้เมื่อรัฐสภาให้ความเห็นชอบด้วยคะแนนเสียงไม่น้อยกว่าสองในสามของสมาชิกทั้งหมดเท่าที่มีอยู่",
+   "en": "A royal prerogative that may be used only with National Assembly approval by at least two-thirds of all existing members.",
+   "zh": "国王的权力，须经国会现有议员总数三分之二以上同意方可行使。"
+  },
+  "sections": [
+   177
+  ]
+ },
+ {
+  "id": "royal-pardon",
+  "term": {
+   "th": "พระราชทานอภัยโทษ",
+   "en": "pardon",
+   "zh": "赦免"
+  },
+  "match": {
+   "th": [
+    "พระราชทานอภัยโทษ"
+   ],
+   "en": [
+    "pardon"
+   ],
+   "zh": [
+    "赦免"
+   ]
+  },
+  "def": {
+   "th": "พระราชอำนาจในการยกโทษหรือลดโทษแก่ผู้ต้องโทษ",
+   "en": "The King's power to remit or reduce the punishment of a convicted person.",
+   "zh": "国王免除或减轻受刑人刑罚的权力。"
+  },
+  "sections": [
+   179
+  ]
+ },
+ {
+  "id": "national-assembly",
+  "term": {
+   "th": "รัฐสภา",
+   "en": "National Assembly",
+   "zh": "国会"
+  },
+  "match": {
+   "th": [
+    "รัฐสภา"
+   ],
+   "en": [
+    "National Assembly"
+   ],
+   "zh": [
+    "国会"
+   ]
+  },
+  "def": {
+   "th": "ฝ่ายนิติบัญญัติ ประกอบด้วยสภาผู้แทนราษฎรและวุฒิสภา ประธานสภาผู้แทนราษฎรเป็นประธานรัฐสภา",
+   "en": "The legislature, made up of the House of Representatives and the Senate. The President of the House serves as President of the National Assembly.",
+   "zh": "立法机关，由众议院和参议院组成。众议院议长担任国会主席。"
+  },
+  "sections": [
+   79,
+   80
+  ]
+ },
+ {
+  "id": "house-of-representatives",
+  "term": {
+   "th": "สภาผู้แทนราษฎร",
+   "en": "House of Representatives",
+   "zh": "众议院"
+  },
+  "match": {
+   "th": [
+    "สภาผู้แทนราษฎร"
+   ],
+   "en": [
+    "House of Representatives"
+   ],
+   "zh": [
+    "众议院"
+   ]
+  },
+  "def": {
+   "th": "สภาที่มาจากการเลือกตั้ง มีสมาชิกห้าร้อยคน จากเขตเลือกตั้งสี่ร้อยคนและจากบัญชีรายชื่อหนึ่งร้อยคน อายุสภาสี่ปี",
+   "en": "The elected chamber: 500 members, 400 from constituencies and 100 from party lists, with a four-year term.",
+   "zh": "民选议院，共500名议员，其中400名来自选区，100名来自政党名单，任期四年。"
+  },
+  "sections": [
+   83,
+   99
+  ]
+ },
+ {
+  "id": "senate",
+  "term": {
+   "th": "วุฒิสภา",
+   "en": "Senate",
+   "zh": "参议院"
+  },
+  "match": {
+   "th": [
+    "วุฒิสภา"
+   ],
+   "en": [
+    "Senate"
+   ],
+   "zh": [
+    "参议院"
+   ]
+  },
+  "def": {
+   "th": "สภาที่สอง มีสมาชิกสองร้อยคนซึ่งเลือกกันเองจากกลุ่มอาชีพและความเชี่ยวชาญ วาระห้าปี ในวาระเริ่มแรกมีสมาชิกสองร้อยห้าสิบคนที่มาจากการแต่งตั้ง",
+   "en": "The second chamber: 200 members who choose among themselves from occupational and expertise groups, for a five-year term. In the initial period it had 250 appointed members.",
+   "zh": "第二院，由200名在各职业与专业群体中互选产生的议员组成，任期五年。过渡初期则由250名任命议员组成。"
+  },
+  "sections": [
+   107,
+   109,
+   269
+  ]
+ },
+ {
+  "id": "joint-sitting",
+  "term": {
+   "th": "การประชุมร่วมกันของรัฐสภา",
+   "en": "joint sitting of the National Assembly",
+   "zh": "两院联席会议"
+  },
+  "match": {
+   "th": [
+    "ประชุมร่วมกันของรัฐสภา",
+    "ประชุมร่วมกัน"
+   ],
+   "en": [
+    "joint sitting"
+   ],
+   "zh": [
+    "联席会议"
+   ]
+  },
+  "def": {
+   "th": "การประชุมที่ ส.ส. และ ส.ว. ประชุมด้วยกัน ใช้ในเรื่องที่รัฐธรรมนูญกำหนด เช่น การแถลงนโยบาย การประกาศสงคราม และการแก้ไขเพิ่มเติมรัฐธรรมนูญ",
+   "en": "A sitting of MPs and senators together, used for matters the Constitution lists, such as the policy statement, a declaration of war and constitutional amendment.",
+   "zh": "众议员与参议员共同举行的会议，用于宪法列明的事项，例如施政声明、宣战和修宪。"
+  },
+  "sections": [
+   156,
+   157
+  ]
+ },
+ {
+  "id": "session",
+  "term": {
+   "th": "สมัยประชุม",
+   "en": "session",
+   "zh": "会期"
+  },
+  "match": {
+   "th": [
+    "สมัยประชุมสามัญ",
+    "สมัยประชุม"
+   ],
+   "en": [
+    "ordinary session",
+    "extraordinary session",
+    "session"
+   ],
+   "zh": [
+    "会期"
+   ]
+  },
+  "def": {
+   "th": "ช่วงเวลาที่รัฐสภาเปิดประชุม ปีหนึ่งมีสมัยประชุมสามัญสองสมัย สมัยละหนึ่งร้อยยี่สิบวัน และอาจเรียกประชุมสมัยวิสามัญได้เมื่อจำเป็น",
+   "en": "The period when the National Assembly sits. There are two ordinary sessions a year of 120 days each, and an extraordinary session may be called when needed.",
+   "zh": "国会开会的期间。每年有两个常会期，每期120天，必要时可召开特别会期。"
+  },
+  "sections": [
+   121,
+   122,
+   123
+  ]
+ },
+ {
+  "id": "quorum",
+  "term": {
+   "th": "องค์ประชุม",
+   "en": "quorum",
+   "zh": "法定人数"
+  },
+  "match": {
+   "th": [
+    "องค์ประชุม"
+   ],
+   "en": [
+    "quorum"
+   ],
+   "zh": [
+    "法定人数"
+   ]
+  },
+  "def": {
+   "th": "จำนวนสมาชิกขั้นต่ำที่ต้องมาประชุมจึงจะประชุมได้ ปกติต้องไม่น้อยกว่ากึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่",
+   "en": "The minimum number of members who must attend for a sitting to proceed, normally at least half of all existing members.",
+   "zh": "会议得以进行所需的最低出席人数，通常不少于现有议员总数的一半。"
+  },
+  "sections": [
+   120
+  ]
+ },
+ {
+  "id": "committee",
+  "term": {
+   "th": "คณะกรรมาธิการ",
+   "en": "committee (of a House)",
+   "zh": "委员会"
+  },
+  "match": {
+   "th": [
+    "คณะกรรมาธิการสามัญ",
+    "คณะกรรมาธิการวิสามัญ",
+    "คณะกรรมาธิการร่วมกัน",
+    "กรรมาธิการ"
+   ],
+   "en": [
+    "standing committee",
+    "ad hoc committee",
+    "joint committee"
+   ],
+   "zh": [
+    "常设委员会",
+    "特别委员会",
+    "联合委员会"
+   ]
+  },
+  "def": {
+   "th": "คณะบุคคลที่สภาตั้งขึ้นเพื่อพิจารณาร่างกฎหมายหรือศึกษาสอบหาข้อเท็จจริง มีทั้งคณะกรรมาธิการสามัญ วิสามัญ และคณะกรรมาธิการร่วมกันของสองสภา",
+   "en": "A group a House sets up to examine bills, investigate or study matters. There are standing committees, ad hoc committees and joint committees of both Houses.",
+   "zh": "议院为审议法案、调查或研究事项而设立的小组，包括常设委员会、特别委员会和两院联合委员会。"
+  },
+  "sections": [
+   129,
+   137
+  ]
+ },
+ {
+  "id": "motion",
+  "term": {
+   "th": "ญัตติ",
+   "en": "motion",
+   "zh": "动议"
+  },
+  "match": {
+   "th": [],
+   "en": [
+    "motion"
+   ],
+   "zh": [
+    "动议"
+   ]
+  },
+  "def": {
+   "th": "ข้อเสนอที่สมาชิกยื่นต่อที่ประชุมเพื่อให้พิจารณาหรือลงมติ เช่น ญัตติขอเปิดอภิปรายทั่วไป หรือญัตติขอแก้ไขเพิ่มเติมรัฐธรรมนูญ",
+   "en": "A proposal members put to a sitting for consideration or a vote, such as a motion for a general debate or a motion to amend the Constitution.",
+   "zh": "议员向会议提出、供审议或表决的提议，例如一般辩论动议或修宪动议。"
+  },
+  "sections": [
+   151,
+   152,
+   256
+  ]
+ },
+ {
+  "id": "no-confidence-debate",
+  "term": {
+   "th": "ญัตติขอเปิดอภิปรายไม่ไว้วางใจ",
+   "en": "no-confidence debate",
+   "zh": "不信任辩论"
+  },
+  "match": {
+   "th": [
+    "ไม่ไว้วางใจ"
+   ],
+   "en": [
+    "no-confidence"
+   ],
+   "zh": [
+    "不信任"
+   ]
+  },
+  "def": {
+   "th": "การที่ ส.ส. ไม่น้อยกว่าหนึ่งในห้าเข้าชื่อขอเปิดอภิปรายทั่วไปเพื่อลงมติไม่ไว้วางใจรัฐมนตรีรายบุคคลหรือทั้งคณะ มติไม่ไว้วางใจต้องได้เสียงเกินกึ่งหนึ่งของ ส.ส. ทั้งหมดเท่าที่มีอยู่ และระหว่างนั้นจะยุบสภาไม่ได้",
+   "en": "At least one-fifth of MPs may move a general debate to pass a vote of no confidence in one minister or the whole Cabinet. The vote needs more than half of all existing MPs, and the House cannot be dissolved while the motion is pending.",
+   "zh": "不少于五分之一的众议员可提出一般辩论动议，对个别部长或全体内阁进行不信任表决。不信任决议须获现有众议员总数过半数支持，其间不得解散众议院。"
+  },
+  "sections": [
+   151,
+   170
+  ]
+ },
+ {
+  "id": "general-debate",
+  "term": {
+   "th": "การเปิดอภิปรายทั่วไป",
+   "en": "general debate",
+   "zh": "一般辩论"
+  },
+  "match": {
+   "th": [
+    "ญัตติขอเปิดอภิปรายทั่วไป",
+    "อภิปรายทั่วไป"
+   ],
+   "en": [
+    "general debate"
+   ],
+   "zh": [
+    "一般辩论"
+   ]
+  },
+  "def": {
+   "th": "การอภิปรายในสภาเพื่อตรวจสอบการทำงานของคณะรัฐมนตรี อาจมีการลงมติไม่ไว้วางใจ หรือเป็นการซักถามและเสนอแนะโดยไม่มีการลงมติก็ได้",
+   "en": "A debate in a House to scrutinise the Council of Ministers. It may end in a no-confidence vote, or be held only to question and advise, without a vote.",
+   "zh": "在议院中监督内阁工作的辩论，可以进行不信任表决，也可以只质询、提出建议而不表决。"
+  },
+  "sections": [
+   151,
+   152,
+   153
+  ]
+ },
+ {
+  "id": "interpellation",
+  "term": {
+   "th": "กระทู้ถาม",
+   "en": "interpellation",
+   "zh": "质询"
+  },
+  "match": {
+   "th": [
+    "กระทู้ถาม"
+   ],
+   "en": [
+    "interpellation"
+   ],
+   "zh": [
+    "质询"
+   ]
+  },
+  "def": {
+   "th": "คำถามที่ ส.ส. หรือ ส.ว. ตั้งถามรัฐมนตรีเกี่ยวกับงานในหน้าที่ ด้วยวาจาหรือเป็นหนังสือ รัฐมนตรีอาจไม่ตอบได้ถ้าคณะรัฐมนตรีเห็นว่าเรื่องนั้นยังไม่ควรเปิดเผยเพราะเกี่ยวกับความปลอดภัยหรือประโยชน์สำคัญของแผ่นดิน",
+   "en": "A question, oral or written, that an MP or senator puts to a minister about the minister's work. The minister may decline to answer if the Cabinet considers the matter should not yet be disclosed for reasons of safety or vital national interests.",
+   "zh": "众议员或参议员就部长职责以口头或书面形式向其提出的问题。如内阁认为该事项涉及国家安全或重大利益而暂不宜公开，部长可不作答。"
+  },
+  "sections": [
+   150
+  ]
+ },
+ {
+  "id": "parliamentary-privilege",
+  "term": {
+   "th": "เอกสิทธิ์",
+   "en": "parliamentary privilege",
+   "zh": "议员言论特权"
+  },
+  "match": {
+   "th": [
+    "เอกสิทธิ์"
+   ],
+   "en": [
+    "absolutely privileged"
+   ],
+   "zh": [
+    "免责特权"
+   ]
+  },
+  "def": {
+   "th": "ความคุ้มครองให้สมาชิกพูด แสดงความเห็น หรือลงคะแนนในที่ประชุมได้โดยไม่ถูกฟ้อง แต่ไม่คุ้มครองถ้อยคำที่ถ่ายทอดออกนอกรัฐสภาแล้วเป็นความผิดหรือละเมิดผู้อื่นที่ไม่ใช่รัฐมนตรีหรือสมาชิก",
+   "en": "Protection that lets members speak, give opinions or vote in a sitting without being sued. It does not cover broadcast words that reach outside Parliament and are an offence against, or violate, someone who is not a minister or member.",
+   "zh": "议员在会议中发言、表达意见或投票不受追诉的保护；但若言论经广播传到国会以外，并构成对非部长、非议员之人的犯罪或侵权，则不受保护。"
+  },
+  "sections": [
+   124
+  ]
+ },
+ {
+  "id": "arrest-immunity",
+  "term": {
+   "th": "ความคุ้มกันระหว่างสมัยประชุม",
+   "en": "immunity from arrest during session",
+   "zh": "会期内免于逮捕"
+  },
+  "match": {
+   "th": [
+    "ห้ามมิให้จับ"
+   ],
+   "en": [
+    "shall be arrested, detained or summoned by a warrant"
+   ],
+   "zh": [
+    "不得逮捕"
+   ]
+  },
+  "def": {
+   "th": "ในระหว่างสมัยประชุม ห้ามจับ คุมขัง หรือเรียก ส.ส. หรือ ส.ว. ไปสอบสวนในฐานะผู้ต้องหาคดีอาญา เว้นแต่สภาอนุญาตหรือจับขณะกระทำความผิด",
+   "en": "During a session, an MP or senator may not be arrested, detained or summoned as a criminal suspect unless their House consents or they are caught in the act.",
+   "zh": "会期内，非经所属议院许可或现行犯，不得以刑事犯罪嫌疑人身份逮捕、拘押或传唤众议员或参议员。"
+  },
+  "sections": [
+   125
+  ]
+ },
+ {
+  "id": "dissolution",
+  "term": {
+   "th": "การยุบสภา",
+   "en": "dissolution of the House",
+   "zh": "解散众议院"
+  },
+  "match": {
+   "th": [
+    "ยุบสภาผู้แทนราษฎร",
+    "ยุบสภา"
+   ],
+   "en": [
+    "dissolution of the House of Representatives",
+    "dissolve the House of Representatives"
+   ],
+   "zh": [
+    "解散众议院"
+   ]
+  },
+  "def": {
+   "th": "พระราชอำนาจในการสิ้นสุดสภาผู้แทนราษฎรก่อนครบวาระ เพื่อให้มีการเลือกตั้งทั่วไปใหม่ ทำโดยพระราชกฤษฎีกา และยุบได้ครั้งเดียวในเหตุการณ์เดียวกัน",
+   "en": "The King's power to end the House of Representatives before its term so that a new general election is held. It is done by Royal Decree, only once for the same reason.",
+   "zh": "国王在众议院任期届满前将其解散、重新举行大选的权力，以王室法令为之，同一事由只能解散一次。"
+  },
+  "sections": [
+   101,
+   103,
+   151
+  ]
+ },
+ {
+  "id": "general-election",
+  "term": {
+   "th": "การเลือกตั้งทั่วไป",
+   "en": "general election",
+   "zh": "大选"
+  },
+  "match": {
+   "th": [
+    "การเลือกตั้งทั่วไป",
+    "เลือกตั้งทั่วไป"
+   ],
+   "en": [
+    "general election"
+   ],
+   "zh": [
+    "大选"
+   ]
+  },
+  "def": {
+   "th": "การเลือกตั้ง ส.ส. ทั้งสภาพร้อมกัน เมื่อสภาครบวาระหรือถูกยุบ",
+   "en": "An election of the whole House of Representatives at once, held when the House's term ends or it is dissolved.",
+   "zh": "众议院任期届满或被解散时，同时选出全体众议员的选举。"
+  },
+  "sections": [
+   102,
+   103
+  ]
+ },
+ {
+  "id": "constituency",
+  "term": {
+   "th": "เขตเลือกตั้ง",
+   "en": "constituency",
+   "zh": "选区"
+  },
+  "match": {
+   "th": [
+    "แบบแบ่งเขตเลือกตั้ง",
+    "เขตเลือกตั้ง"
+   ],
+   "en": [
+    "constituency"
+   ],
+   "zh": [
+    "选区"
+   ]
+  },
+  "def": {
+   "th": "พื้นที่ที่ผู้มีสิทธิเลือกตั้งเลือก ส.ส. ได้หนึ่งคน ทั้งประเทศมีสี่ร้อยเขต แบ่งตามสัดส่วนจำนวนราษฎรในแต่ละจังหวัด",
+   "en": "An area whose voters elect one MP. There are 400 nationwide, allocated by each province's population.",
+   "zh": "选民选出一名众议员的地区。全国共400个，按各府人口比例划分。"
+  },
+  "sections": [
+   83,
+   86
+  ]
+ },
+ {
+  "id": "party-list",
+  "term": {
+   "th": "บัญชีรายชื่อ",
+   "en": "party list",
+   "zh": "政党名单"
+  },
+  "match": {
+   "th": [
+    "แบบบัญชีรายชื่อ",
+    "บัญชีรายชื่อ"
+   ],
+   "en": [
+    "party list"
+   ],
+   "zh": [
+    "政党名单"
+   ]
+  },
+  "def": {
+   "th": "รายชื่อผู้สมัครที่พรรคการเมืองจัดลำดับไว้ ส.ส. บัญชีรายชื่อหนึ่งร้อยคนแบ่งตามสัดส่วนคะแนนที่แต่ละพรรคได้ทั้งประเทศจากบัตรเลือกตั้งอีกใบหนึ่ง",
+   "en": "A ranked list of candidates submitted by a political party. The 100 party-list MPs are shared out according to each party's nationwide vote on a separate ballot.",
+   "zh": "政党提交的排序候选人名单。100名名单制议员按各政党在另一张选票上的全国得票比例分配。"
+  },
+  "sections": [
+   83,
+   90,
+   91
+  ]
+ },
+ {
+  "id": "pm-candidate-list",
+  "term": {
+   "th": "รายชื่อผู้ที่พรรคเสนอเป็นนายกรัฐมนตรี",
+   "en": "party's prime-ministerial nominees",
+   "zh": "政党总理人选名单"
+  },
+  "match": {
+   "th": [
+    "ซึ่งพรรคการเมืองนั้นมีมติว่าจะเสนอ",
+    "บัญชีรายชื่อที่พรรคการเมืองแจ้งไว้"
+   ],
+   "en": [
+    "endorsed by resolution of the political party"
+   ],
+   "zh": [
+    "拟向众议院提议"
+   ]
+  },
+  "def": {
+   "th": "ก่อนเลือกตั้ง พรรคการเมืองแจ้งรายชื่อบุคคลที่จะเสนอเป็นนายกรัฐมนตรีได้ไม่เกินสามคน สภาจะเลือกนายกรัฐมนตรีจากรายชื่อเหล่านี้ของพรรคที่มี ส.ส. ไม่น้อยกว่าร้อยละห้า",
+   "en": "Before an election a party may name up to three people it will propose as Prime Minister. The House chooses the Prime Minister from these lists of parties holding at least 5% of seats.",
+   "zh": "选举前，政党可申报不超过三名总理人选。众议院从拥有不少于百分之五席位的政党名单中选出总理。"
+  },
+  "sections": [
+   88,
+   159
+  ]
+ },
+ {
+  "id": "political-party",
+  "term": {
+   "th": "พรรคการเมือง",
+   "en": "political party",
+   "zh": "政党"
+  },
+  "match": {
+   "th": [
+    "พรรคการเมือง"
+   ],
+   "en": [
+    "political party",
+    "political parties",
+    "Political Parties"
+   ],
+   "zh": [
+    "政党"
+   ]
+  },
+  "def": {
+   "th": "กลุ่มบุคคลที่รวมตัวกันตามกฎหมายเพื่อส่งผู้สมัครรับเลือกตั้งและเสนอนโยบาย ผู้สมัคร ส.ส. ต้องเป็นสมาชิกพรรคการเมือง",
+   "en": "A group of people organised under the law to field candidates and offer policies. A candidate for MP must be a party member.",
+   "zh": "依法组成、推举候选人并提出政策的团体。众议员候选人必须是政党成员。"
+  },
+  "sections": [
+   45,
+   90,
+   97
+  ]
+ },
+ {
+  "id": "eligible-voter",
+  "term": {
+   "th": "ผู้มีสิทธิเลือกตั้ง",
+   "en": "person having the right to vote",
+   "zh": "有选举权者"
+  },
+  "match": {
+   "th": [
+    "ผู้มีสิทธิเลือกตั้ง",
+    "สิทธิเลือกตั้ง"
+   ],
+   "en": [
+    "right to vote"
+   ],
+   "zh": [
+    "选举权"
+   ]
+  },
+  "def": {
+   "th": "ผู้มีสัญชาติไทยอายุไม่ต่ำกว่าสิบแปดปีในวันเลือกตั้ง และมีคุณสมบัติอื่นตามที่รัฐธรรมนูญกำหนด การไปใช้สิทธิเลือกตั้งเป็นหน้าที่ของปวงชนชาวไทย",
+   "en": "A Thai national aged at least 18 on election day who meets the other conditions in the Constitution. Voting is a duty of the Thai people.",
+   "zh": "在选举日年满十八岁并符合宪法其他条件的泰国国籍人。参加选举投票是泰国人民的义务。"
+  },
+  "sections": [
+   50,
+   95,
+   96
+  ]
+ },
+ {
+  "id": "qualifications-prohibitions",
+  "term": {
+   "th": "คุณสมบัติและลักษณะต้องห้าม",
+   "en": "qualifications and prohibitions",
+   "zh": "资格与禁止情形"
+  },
+  "match": {
+   "th": [
+    "ลักษณะต้องห้าม"
+   ],
+   "en": [
+    "qualifications",
+    "prohibitions"
+   ],
+   "zh": [
+    "禁止情形",
+    "资格"
+   ]
+  },
+  "def": {
+   "th": "เงื่อนไขที่ผู้ดำรงตำแหน่งต้องมี และเหตุที่ทำให้ดำรงตำแหน่งไม่ได้ เช่น ถูกตัดสินจำคุก ต้องคำพิพากษาว่าทุจริต หรือฝ่าฝืนมาตรฐานทางจริยธรรมอย่างร้ายแรง",
+   "en": "The conditions a person must meet to hold office, and the grounds that bar them, such as a prison sentence, a corruption judgment or a serious ethics breach.",
+   "zh": "担任职务须具备的条件，以及不得任职的情形，例如被判监禁、因腐败被判决或严重违反道德标准。"
+  },
+  "sections": [
+   97,
+   98,
+   160
+  ]
+ },
+ {
+  "id": "membership-termination",
+  "term": {
+   "th": "การสิ้นสุดสมาชิกภาพ",
+   "en": "termination of membership",
+   "zh": "议员资格终止"
+  },
+  "match": {
+   "th": [],
+   "en": [],
+   "zh": [
+    "资格终止"
+   ]
+  },
+  "def": {
+   "th": "เหตุที่ทำให้ ส.ส. หรือ ส.ว. พ้นจากตำแหน่ง เช่น สภาครบวาระหรือถูกยุบ ตาย ลาออก ขาดคุณสมบัติ หรือ ส.ส. ลาออกจากพรรคการเมืองที่สังกัด",
+   "en": "The grounds on which an MP or senator leaves office, such as the end or dissolution of the House, death, resignation, loss of qualifications, or an MP leaving their party.",
+   "zh": "众议员或参议员离职的事由，例如议院届满或解散、死亡、辞职、丧失资格，或众议员退出所属政党。"
+  },
+  "sections": [
+   82,
+   101,
+   111
+  ]
+ },
+ {
+  "id": "referendum",
+  "term": {
+   "th": "การออกเสียงประชามติ",
+   "en": "referendum",
+   "zh": "公民投票"
+  },
+  "match": {
+   "th": [
+    "ประชามติ"
+   ],
+   "en": [
+    "referendum"
+   ],
+   "zh": [
+    "公民投票"
+   ]
+  },
+  "def": {
+   "th": "การให้ประชาชนลงคะแนนตัดสินเรื่องใดเรื่องหนึ่งโดยตรง คณะรัฐมนตรีขอให้จัดได้ และการแก้ไขรัฐธรรมนูญบางเรื่องต้องผ่านประชามติก่อน",
+   "en": "A direct public vote on a question. The Council of Ministers may call one, and some constitutional amendments must pass one first.",
+   "zh": "由人民直接投票决定某一事项。内阁可请求举行；部分修宪事项须先经公民投票。"
+  },
+  "sections": [
+   50,
+   166,
+   256
+  ]
+ },
+ {
+  "id": "citizen-petition",
+  "term": {
+   "th": "การเข้าชื่อเสนอกฎหมาย",
+   "en": "public initiative to propose a law",
+   "zh": "公民联名提案"
+  },
+  "match": {
+   "th": [
+    "เข้าชื่อเสนอกฎหมาย"
+   ],
+   "en": [
+    "submit a petition to introduce a bill"
+   ],
+   "zh": [
+    "依人民提案法律",
+    "依人民提出法案法律"
+   ]
+  },
+  "def": {
+   "th": "สิทธิของผู้มีสิทธิเลือกตั้งไม่น้อยกว่าหนึ่งหมื่นคนที่จะเข้าชื่อเสนอร่างกฎหมายเรื่องสิทธิเสรีภาพหรือหน้าที่ของรัฐ และไม่น้อยกว่าห้าหมื่นคนเพื่อเสนอแก้ไขรัฐธรรมนูญ",
+   "en": "The right of at least 10,000 voters to jointly propose a bill on rights and liberties or duties of the State, and of at least 50,000 voters to propose a constitutional amendment.",
+   "zh": "不少于一万名选民可联名提出涉及权利与自由或国家职责的法案；不少于五万名选民可联名提出修宪。"
+  },
+  "sections": [
+   133,
+   256
+  ]
+ },
+ {
+  "id": "council-of-ministers",
+  "term": {
+   "th": "คณะรัฐมนตรี",
+   "en": "Council of Ministers (Cabinet)",
+   "zh": "内阁"
+  },
+  "match": {
+   "th": [
+    "คณะรัฐมนตรี"
+   ],
+   "en": [
+    "Council of Ministers"
+   ],
+   "zh": [
+    "内阁"
+   ]
+  },
+  "def": {
+   "th": "ฝ่ายบริหาร ประกอบด้วยนายกรัฐมนตรีและรัฐมนตรีอื่นไม่เกินสามสิบห้าคน มีหน้าที่บริหารราชการแผ่นดินตามหลักความรับผิดชอบร่วมกัน",
+   "en": "The executive: the Prime Minister and no more than 35 other ministers, who administer the state under the principle of collective responsibility.",
+   "zh": "行政机关，由总理和不超过35名其他部长组成，依集体负责原则管理国家行政。"
+  },
+  "sections": [
+   158,
+   164
+  ]
+ },
+ {
+  "id": "prime-minister",
+  "term": {
+   "th": "นายกรัฐมนตรี",
+   "en": "Prime Minister",
+   "zh": "总理"
+  },
+  "match": {
+   "th": [
+    "นายกรัฐมนตรี"
+   ],
+   "en": [
+    "Prime Minister"
+   ],
+   "zh": [
+    "总理"
+   ]
+  },
+  "def": {
+   "th": "หัวหน้าคณะรัฐมนตรี พระมหากษัตริย์ทรงแต่งตั้งจากผู้ที่สภาผู้แทนราษฎรให้ความเห็นชอบ ดำรงตำแหน่งรวมกันไม่เกินแปดปี",
+   "en": "Head of the Council of Ministers, appointed by the King from the person approved by the House of Representatives. No one may hold the office for more than eight years in total.",
+   "zh": "内阁首脑，由国王从众议院同意的人选中任命，任职累计不得超过八年。"
+  },
+  "sections": [
+   158,
+   159,
+   160
+  ]
+ },
+ {
+  "id": "policy-statement",
+  "term": {
+   "th": "การแถลงนโยบาย",
+   "en": "policy statement",
+   "zh": "施政声明"
+  },
+  "match": {
+   "th": [
+    "แถลงนโยบาย"
+   ],
+   "en": [
+    "policies to the National Assembly"
+   ],
+   "zh": [
+    "施政"
+   ]
+  },
+  "def": {
+   "th": "คณะรัฐมนตรีใหม่ต้องแถลงนโยบายต่อรัฐสภาภายในสิบห้าวันนับแต่เข้ารับหน้าที่ โดยต้องสอดคล้องกับหน้าที่ของรัฐ แนวนโยบายแห่งรัฐ และยุทธศาสตร์ชาติ และไม่มีการลงมติ",
+   "en": "A new Council of Ministers must state its policies to the National Assembly within 15 days of taking office, consistent with the duties of the State, the directive principles and the national strategy. There is no vote.",
+   "zh": "新内阁须在就职后15日内向国会发表施政声明，内容须符合国家职责、国家政策指导原则和国家战略，不进行表决。"
+  },
+  "sections": [
+   162
+  ]
+ },
+ {
+  "id": "caretaker-cabinet",
+  "term": {
+   "th": "คณะรัฐมนตรีรักษาการ",
+   "en": "caretaker Council of Ministers",
+   "zh": "看守内阁"
+  },
+  "match": {
+   "th": [
+    "อยู่ปฏิบัติหน้าที่ต่อไป"
+   ],
+   "en": [
+    "outgoing Council of Ministers"
+   ],
+   "zh": [
+    "离职内阁"
+   ]
+  },
+  "def": {
+   "th": "คณะรัฐมนตรีที่พ้นจากตำแหน่งแล้วแต่ยังอยู่ปฏิบัติหน้าที่จนกว่าคณะใหม่จะเข้ารับหน้าที่ และถ้าพ้นเพราะยุบสภา ต้องไม่ทำสิ่งที่ผูกพันรัฐบาลชุดต่อไปตามข้อห้ามในรัฐธรรมนูญ",
+   "en": "A Council of Ministers that has left office but stays on until the new one takes over. If it left because the House was dissolved, it must observe the Constitution's limits on binding the next government.",
+   "zh": "已离职但继续履职至新内阁就任的内阁。若因解散众议院而离职，须遵守宪法限制，不得作出约束下届政府的行为。"
+  },
+  "sections": [
+   168,
+   169
+  ]
+ },
+ {
+  "id": "opposition-leader",
+  "term": {
+   "th": "ผู้นำฝ่ายค้านในสภาผู้แทนราษฎร",
+   "en": "Leader of the Opposition",
+   "zh": "反对党领袖"
+  },
+  "match": {
+   "th": [
+    "ผู้นำฝ่ายค้านในสภาผู้แทนราษฎร"
+   ],
+   "en": [
+    "Leader of the Opposition"
+   ],
+   "zh": [
+    "反对党领袖"
+   ]
+  },
+  "def": {
+   "th": "หัวหน้าพรรคการเมืองที่ไม่มีสมาชิกเป็นรัฐมนตรีและมี ส.ส. มากที่สุด พระมหากษัตริย์ทรงแต่งตั้ง",
+   "en": "The leader of the largest party with no members in the Cabinet, appointed by the King.",
+   "zh": "无成员担任部长且众议员人数最多之政党的领袖，由国王任命。"
+  },
+  "sections": [
+   106
+  ]
+ },
+ {
+  "id": "president-national-assembly",
+  "term": {
+   "th": "ประธานรัฐสภา",
+   "en": "President of the National Assembly",
+   "zh": "国会主席"
+  },
+  "match": {
+   "th": [
+    "ประธานรัฐสภา"
+   ],
+   "en": [
+    "President of the National Assembly"
+   ],
+   "zh": [
+    "国会主席"
+   ]
+  },
+  "def": {
+   "th": "ประธานสภาผู้แทนราษฎรเป็นประธานรัฐสภาโดยตำแหน่ง ถ้าไม่มีหรือไม่อาจปฏิบัติหน้าที่ได้ ประธานวุฒิสภาทำหน้าที่แทน",
+   "en": "The President of the House of Representatives holds this office by virtue of position; the President of the Senate acts in his place when needed.",
+   "zh": "众议院议长当然担任国会主席；其缺位或不能履职时，由参议院议长代行。"
+  },
+  "sections": [
+   80
+  ]
+ },
+ {
+  "id": "conflict-of-interest",
+  "term": {
+   "th": "การขัดกันแห่งผลประโยชน์",
+   "en": "conflict of interest",
+   "zh": "利益冲突"
+  },
+  "match": {
+   "th": [
+    "การขัดกันแห่งผลประโยชน์"
+   ],
+   "en": [
+    "conflict of interest"
+   ],
+   "zh": [
+    "利益冲突"
+   ]
+  },
+  "def": {
+   "th": "สถานการณ์ที่ประโยชน์ส่วนตัวขัดกับหน้าที่ต่อส่วนรวม รัฐธรรมนูญห้าม ส.ส. ส.ว. และรัฐมนตรี เช่น รับสัมปทานจากรัฐ หรือก้าวก่ายการบรรจุแต่งตั้งข้าราชการ",
+   "en": "A situation where private gain clashes with public duty. The Constitution bars MPs, senators and ministers from, for example, holding state concessions or interfering in civil-service appointments.",
+   "zh": "个人利益与公共职责相冲突的情形。宪法禁止众议员、参议员和部长例如取得国家特许权或干预公务员任用。"
+  },
+  "sections": [
+   184,
+   185,
+   186,
+   187
+  ]
+ },
+ {
+  "id": "political-office-holder",
+  "term": {
+   "th": "ผู้ดำรงตำแหน่งทางการเมือง",
+   "en": "holder of a political position",
+   "zh": "政治职位担任者"
+  },
+  "match": {
+   "th": [
+    "ผู้ดำรงตำแหน่งทางการเมือง",
+    "ตำแหน่งทางการเมือง"
+   ],
+   "en": [
+    "political position"
+   ],
+   "zh": [
+    "政治职位"
+   ]
+  },
+  "def": {
+   "th": "ผู้ดำรงตำแหน่งเช่นนายกรัฐมนตรี รัฐมนตรี ส.ส. ส.ว. และผู้บริหารท้องถิ่น ต้องแสดงทรัพย์สินและหนี้สิน และถูกตรวจสอบการทุจริตโดย ป.ป.ช.",
+   "en": "Office-holders such as the Prime Minister, ministers, MPs, senators and local executives. They must declare assets and liabilities and are subject to corruption checks by the NACC.",
+   "zh": "担任总理、部长、众议员、参议员及地方行政首长等职位者，须申报资产与负债，并接受国家反腐败委员会的腐败审查。"
+  },
+  "sections": [
+   234,
+   235
+  ]
+ },
+ {
+  "id": "ethical-standards",
+  "term": {
+   "th": "มาตรฐานทางจริยธรรม",
+   "en": "ethical standards",
+   "zh": "道德标准"
+  },
+  "match": {
+   "th": [
+    "มาตรฐานทางจริยธรรม"
+   ],
+   "en": [
+    "ethical standards"
+   ],
+   "zh": [
+    "道德标准"
+   ]
+  },
+  "def": {
+   "th": "หลักความประพฤติที่ศาลรัฐธรรมนูญและองค์กรอิสระร่วมกันกำหนด ใช้กับตุลาการ ผู้ดำรงตำแหน่งในองค์กรอิสระ และ ส.ส. ส.ว. คณะรัฐมนตรี การฝ่าฝืนร้ายแรงอาจถูกตัดสิทธิ",
+   "en": "Codes of conduct jointly set by the Constitutional Court and the independent organs, applying to their own members and to MPs, senators and the Cabinet. A serious breach can lead to disqualification.",
+   "zh": "由宪法法院和独立机构共同制定的行为准则，适用于其自身成员及众议员、参议员和内阁。严重违反可被剥夺资格。"
+  },
+  "sections": [
+   219,
+   234,
+   235
+  ]
+ },
+ {
+  "id": "unusual-wealth",
+  "term": {
+   "th": "ร่ำรวยผิดปกติ",
+   "en": "unusual wealth",
+   "zh": "异常富有"
+  },
+  "match": {
+   "th": [
+    "ร่ำรวยผิดปกติ"
+   ],
+   "en": [
+    "unusually wealthy"
+   ],
+   "zh": [
+    "异常富有"
+   ]
+  },
+  "def": {
+   "th": "การมีทรัพย์สินเพิ่มขึ้นมากผิดปกติโดยอธิบายที่มาไม่ได้ ป.ป.ช. ไต่สวนผู้ดำรงตำแหน่งทางการเมืองในเรื่องนี้และส่งศาลฎีกาได้",
+   "en": "An abnormal increase in assets that cannot be explained. The NACC may investigate holders of political positions for it and take the case to the Supreme Court.",
+   "zh": "资产异常增加且无法说明来源。国家反腐败委员会可就此调查政治职位担任者并移送最高法院。"
+  },
+  "sections": [
+   234,
+   235
+  ]
+ },
+ {
+  "id": "asset-declaration",
+  "term": {
+   "th": "การแสดงบัญชีทรัพย์สินและหนี้สิน",
+   "en": "declaration of assets and liabilities",
+   "zh": "资产与负债申报"
+  },
+  "match": {
+   "th": [
+    "ทรัพย์สินและหนี้สิน"
+   ],
+   "en": [
+    "assets and liabilities"
+   ],
+   "zh": [
+    "资产与负债"
+   ]
+  },
+  "def": {
+   "th": "ผู้ดำรงตำแหน่งทางการเมืองต้องยื่นบัญชีแสดงรายการทรัพย์สินและหนี้สินของตน คู่สมรส และบุตรที่ยังไม่บรรลุนิติภาวะต่อ ป.ป.ช.",
+   "en": "Holders of political positions must file statements of the assets and liabilities of themselves, their spouses and minor children with the NACC.",
+   "zh": "政治职位担任者须向国家反腐败委员会申报本人、配偶及未成年子女的资产与负债。"
+  },
+  "sections": [
+   234
+  ]
+ },
+ {
+  "id": "revoke-candidacy-right",
+  "term": {
+   "th": "การเพิกถอนสิทธิสมัครรับเลือกตั้ง",
+   "en": "revocation of the right to stand for election",
+   "zh": "撤销参选权"
+  },
+  "match": {
+   "th": [
+    "เพิกถอนสิทธิสมัครรับเลือกตั้ง"
+   ],
+   "en": [
+    "right to stand for election"
+   ],
+   "zh": [
+    "参选权"
+   ]
+  },
+  "def": {
+   "th": "โทษที่ศาลสั่งตัดสิทธิไม่ให้สมัครรับเลือกตั้ง เช่น เมื่อทุจริตการเลือกตั้ง หรือผู้ดำรงตำแหน่งทางการเมืองฝ่าฝืนมาตรฐานทางจริยธรรมอย่างร้ายแรง",
+   "en": "A court order barring a person from standing for election, for example for electoral fraud or for a serious ethics breach by a holder of a political position.",
+   "zh": "法院剥夺某人参选资格的处分，例如因选举舞弊，或政治职位担任者严重违反道德标准。"
+  },
+  "sections": [
+   226,
+   235
+  ]
+ },
+ {
+  "id": "judge",
+  "term": {
+   "th": "ผู้พิพากษาและตุลาการ",
+   "en": "judges",
+   "zh": "法官"
+  },
+  "match": {
+   "th": [
+    "ผู้พิพากษาและตุลาการ"
+   ],
+   "en": [
+    "judge"
+   ],
+   "zh": [
+    "法官"
+   ]
+  },
+  "def": {
+   "th": "ผู้มีอำนาจพิจารณาพิพากษาอรรถคดี ต้องเป็นอิสระ พิจารณาคดีให้ถูกต้อง รวดเร็ว และเป็นธรรมตามรัฐธรรมนูญและกฎหมาย และในพระปรมาภิไธยพระมหากษัตริย์",
+   "en": "Those with power to try and decide cases. They must be independent and decide cases correctly, promptly and fairly under the Constitution and the law, in the name of the King.",
+   "zh": "审判案件的人员。须独立行使职权，依宪法和法律正确、迅速、公正地审判，并以国王的名义作出判决。"
+  },
+  "sections": [
+   188,
+   190,
+   191
+  ]
+ },
+ {
+  "id": "courts-of-justice",
+  "term": {
+   "th": "ศาลยุติธรรม",
+   "en": "Courts of Justice",
+   "zh": "普通法院"
+  },
+  "match": {
+   "th": [
+    "ศาลยุติธรรม"
+   ],
+   "en": [
+    "Courts of Justice"
+   ],
+   "zh": [
+    "普通法院"
+   ]
+  },
+  "def": {
+   "th": "ศาลที่มีอำนาจพิจารณาพิพากษาคดีทั้งปวง เว้นแต่คดีที่รัฐธรรมนูญหรือกฎหมายกำหนดให้อยู่ในอำนาจของศาลอื่น มีศาลฎีกาเป็นศาลสูงสุด",
+   "en": "The courts with power to try all cases except those the Constitution or law assigns to another court. The Supreme Court is at their head.",
+   "zh": "有权审理一切案件的法院，宪法或法律划归其他法院的案件除外，以最高法院为最高审级。"
+  },
+  "sections": [
+   194,
+   196
+  ]
+ },
+ {
+  "id": "supreme-court-political-division",
+  "term": {
+   "th": "แผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมืองในศาลฎีกา",
+   "en": "Criminal Division for Persons Holding Political Positions of the Supreme Court",
+   "zh": "最高法院政治职位担任者刑事庭"
+  },
+  "match": {
+   "th": [
+    "แผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมือง"
+   ],
+   "en": [
+    "Criminal Division for Persons Holding Political Positions"
+   ],
+   "zh": [
+    "最高法院政治职务人员刑事庭"
+   ]
+  },
+  "def": {
+   "th": "แผนกในศาลฎีกาที่พิจารณาคดีที่ผู้ดำรงตำแหน่งทางการเมืองถูกกล่าวหาว่าร่ำรวยผิดปกติหรือทุจริตต่อหน้าที่ รวมทั้งคดีฝ่าฝืนมาตรฐานทางจริยธรรมอย่างร้ายแรง",
+   "en": "A division of the Supreme Court that tries holders of political positions accused of unusual wealth or corruption in office, and cases of serious ethics breaches.",
+   "zh": "最高法院内专门审理政治职位担任者被控异常富有或渎职腐败案件，以及严重违反道德标准案件的庭。"
+  },
+  "sections": [
+   195,
+   235
+  ]
+ },
+ {
+  "id": "administrative-court",
+  "term": {
+   "th": "ศาลปกครอง",
+   "en": "Administrative Court",
+   "zh": "行政法院"
+  },
+  "match": {
+   "th": [
+    "ศาลปกครอง"
+   ],
+   "en": [
+    "Administrative Court"
+   ],
+   "zh": [
+    "行政法院"
+   ]
+  },
+  "def": {
+   "th": "ศาลที่พิจารณาคดีพิพาทระหว่างหน่วยงานของรัฐหรือเจ้าหน้าที่ของรัฐกับเอกชน หรือระหว่างหน่วยงานของรัฐด้วยกัน อันเกิดจากการใช้อำนาจทางปกครอง",
+   "en": "The court for disputes arising from administrative power, between a state agency or official and a private person, or between state agencies.",
+   "zh": "审理因行使行政权力而产生的、国家机关或公职人员与私人之间或国家机关之间纠纷的法院。"
+  },
+  "sections": [
+   197,
+   198
+  ]
+ },
+ {
+  "id": "constitutional-court",
+  "term": {
+   "th": "ศาลรัฐธรรมนูญ",
+   "en": "Constitutional Court",
+   "zh": "宪法法院"
+  },
+  "match": {
+   "th": [
+    "ศาลรัฐธรรมนูญ"
+   ],
+   "en": [
+    "Constitutional Court"
+   ],
+   "zh": [
+    "宪法法院"
+   ]
+  },
+  "def": {
+   "th": "ศาลที่มีตุลาการเก้าคน วาระเจ็ดปี วินิจฉัยว่ากฎหมายหรือร่างกฎหมายชอบด้วยรัฐธรรมนูญหรือไม่ และปัญหาเรื่องหน้าที่และอำนาจขององค์กรตามรัฐธรรมนูญ คำวินิจฉัยเด็ดขาดและผูกพันทุกองค์กร",
+   "en": "A court of nine judges serving seven-year terms. It decides whether laws or bills are constitutional and disputes over the powers of constitutional bodies. Its decisions are final and bind all state bodies.",
+   "zh": "由九名法官组成、任期七年的法院，裁决法律或法律草案是否合宪，以及宪法机关的职权争议。其裁决为终局，对所有国家机关具有约束力。"
+  },
+  "sections": [
+   200,
+   210,
+   211
+  ]
+ },
+ {
+  "id": "unconstitutional",
+  "term": {
+   "th": "ขัดหรือแย้งต่อรัฐธรรมนูญ",
+   "en": "contrary to or inconsistent with the Constitution",
+   "zh": "违反或抵触宪法"
+  },
+  "match": {
+   "th": [
+    "ขัดหรือแย้งต่อรัฐธรรมนูญ"
+   ],
+   "en": [
+    "contrary to or inconsistent with the Constitution"
+   ],
+   "zh": [
+    "抵触宪法"
+   ]
+  },
+  "def": {
+   "th": "ไม่สอดคล้องกับรัฐธรรมนูญ บทบัญญัติหรือการกระทำนั้นใช้บังคับไม่ได้ และผู้ถูกละเมิดสิทธิอาจยื่นคำร้องต่อศาลรัฐธรรมนูญได้ตามเงื่อนไขที่กฎหมายกำหนด",
+   "en": "In conflict with the Constitution. Such a provision or act is unenforceable, and a person whose rights are violated may petition the Constitutional Court under conditions set by law.",
+   "zh": "与宪法不一致。此类规定或行为不能施行，权利受侵害者可依法定条件向宪法法院提出申请。"
+  },
+  "sections": [
+   5,
+   212,
+   213
+  ]
+ },
+ {
+  "id": "independent-organ",
+  "term": {
+   "th": "องค์กรอิสระ",
+   "en": "Independent Organ",
+   "zh": "独立机构"
+  },
+  "match": {
+   "th": [
+    "องค์กรอิสระ"
+   ],
+   "en": [
+    "Independent Organ"
+   ],
+   "zh": [
+    "独立机构"
+   ]
+  },
+  "def": {
+   "th": "องค์กรที่ตั้งขึ้นให้ทำหน้าที่อย่างเป็นอิสระตามรัฐธรรมนูญและกฎหมาย มีห้าองค์กร คือ กกต. ผู้ตรวจการแผ่นดิน ป.ป.ช. คตง. และ กสม.",
+   "en": "Bodies set up to work independently under the Constitution and the law. There are five: the Election Commission, the Ombudsmen, the NACC, the State Audit Commission and the National Human Rights Commission.",
+   "zh": "依宪法和法律独立履职的机构，共五个：选举委员会、监察专员、国家反腐败委员会、国家审计委员会和国家人权委员会。"
+  },
+  "sections": [
+   215,
+   216,
+   219
+  ]
+ },
+ {
+  "id": "selection-committee",
+  "term": {
+   "th": "คณะกรรมการสรรหา",
+   "en": "Selection Committee",
+   "zh": "遴选委员会"
+  },
+  "match": {
+   "th": [
+    "คณะกรรมการสรรหา"
+   ],
+   "en": [
+    "Selection Committee"
+   ],
+   "zh": [
+    "遴选委员会"
+   ]
+  },
+  "def": {
+   "th": "คณะบุคคลที่ทำหน้าที่คัดเลือกผู้สมควรเป็นตุลาการศาลรัฐธรรมนูญหรือกรรมการในองค์กรอิสระ ก่อนเสนอให้วุฒิสภาให้ความเห็นชอบ",
+   "en": "A panel that picks candidates for Constitutional Court judges or members of the independent organs, before the Senate gives its approval.",
+   "zh": "负责遴选宪法法院法官或独立机构成员人选，再提交参议院同意的小组。"
+  },
+  "sections": [
+   203,
+   217
+  ]
+ },
+ {
+  "id": "election-commission",
+  "term": {
+   "th": "คณะกรรมการการเลือกตั้ง",
+   "en": "Election Commission",
+   "zh": "选举委员会"
+  },
+  "match": {
+   "th": [
+    "คณะกรรมการการเลือกตั้ง"
+   ],
+   "en": [
+    "Election Commission"
+   ],
+   "zh": [
+    "选举委员会"
+   ]
+  },
+  "def": {
+   "th": "องค์กรอิสระที่มีกรรมการเจ็ดคน วาระเจ็ดปี จัดหรือดูแลการเลือกตั้งและการออกเสียงประชามติให้สุจริตและเที่ยงธรรม",
+   "en": "An independent organ of seven commissioners with seven-year terms. It conducts or supervises elections and referendums so that they are honest and fair.",
+   "zh": "由七名委员组成、任期七年的独立机构，负责举办或监督选举和公民投票，确保诚实公正。"
+  },
+  "sections": [
+   222,
+   224,
+   225
+  ]
+ },
+ {
+  "id": "ombudsman",
+  "term": {
+   "th": "ผู้ตรวจการแผ่นดิน",
+   "en": "Ombudsman",
+   "zh": "监察专员"
+  },
+  "match": {
+   "th": [
+    "ผู้ตรวจการแผ่นดิน"
+   ],
+   "en": [
+    "Ombudsmen",
+    "Ombudsman"
+   ],
+   "zh": [
+    "监察专员"
+   ]
+  },
+  "def": {
+   "th": "องค์กรอิสระสามคน รับเรื่องเมื่อประชาชนเดือดร้อนหรือไม่ได้รับความเป็นธรรมจากหน่วยงานของรัฐ แสวงหาข้อเท็จจริง และเสนอแนะให้แก้ไขกฎหรือขั้นตอนที่สร้างภาระเกินควร",
+   "en": "An independent organ of three people. It looks into cases where the public suffers hardship or unfairness from state agencies and recommends changes to rules or procedures that burden people unduly.",
+   "zh": "由三人组成的独立机构，调查民众因国家机关而遭受困扰或不公的情况，并建议修改造成过度负担的规则或程序。"
+  },
+  "sections": [
+   228,
+   230,
+   231
+  ]
+ },
+ {
+  "id": "nacc",
+  "term": {
+   "th": "คณะกรรมการป้องกันและปราบปรามการทุจริตแห่งชาติ",
+   "en": "National Anti-Corruption Commission",
+   "zh": "国家反腐败委员会"
+  },
+  "match": {
+   "th": [
+    "คณะกรรมการป้องกันและปราบปรามการทุจริตแห่งชาติ"
+   ],
+   "en": [
+    "National Anti-Corruption Commission"
+   ],
+   "zh": [
+    "国家反腐败委员会"
+   ]
+  },
+  "def": {
+   "th": "องค์กรอิสระที่มีกรรมการเก้าคน ไต่สวนการทุจริตต่อหน้าที่และการร่ำรวยผิดปกติของผู้ดำรงตำแหน่งทางการเมืองและเจ้าหน้าที่ของรัฐ และตรวจบัญชีทรัพย์สินและหนี้สิน",
+   "en": "An independent organ of nine commissioners. It investigates corruption and unusual wealth among holders of political positions and state officials, and checks their asset declarations.",
+   "zh": "由九名委员组成的独立机构，调查政治职位担任者和公职人员的渎职腐败与异常富有，并审查资产申报。"
+  },
+  "sections": [
+   232,
+   234,
+   235
+  ]
+ },
+ {
+  "id": "state-audit-commission",
+  "term": {
+   "th": "คณะกรรมการตรวจเงินแผ่นดิน",
+   "en": "State Audit Commission",
+   "zh": "国家审计委员会"
+  },
+  "match": {
+   "th": [
+    "คณะกรรมการตรวจเงินแผ่นดิน",
+    "ผู้ว่าการตรวจเงินแผ่นดิน"
+   ],
+   "en": [
+    "State Audit Commission",
+    "Auditor-General"
+   ],
+   "zh": [
+    "国家审计委员会",
+    "审计长"
+   ]
+  },
+  "def": {
+   "th": "องค์กรอิสระที่มีกรรมการเจ็ดคน กำหนดหลักเกณฑ์การตรวจเงินแผ่นดิน โดยมีผู้ว่าการตรวจเงินแผ่นดินเป็นผู้ตรวจสอบการใช้จ่ายเงินของรัฐ",
+   "en": "An independent organ of seven commissioners that sets public-audit rules, with the Auditor-General carrying out audits of state spending.",
+   "zh": "由七名委员组成的独立机构，制定国家审计规则，由审计长负责审计国家资金的使用。"
+  },
+  "sections": [
+   238,
+   240,
+   241
+  ]
+ },
+ {
+  "id": "nhrc",
+  "term": {
+   "th": "คณะกรรมการสิทธิมนุษยชนแห่งชาติ",
+   "en": "National Human Rights Commission",
+   "zh": "国家人权委员会"
+  },
+  "match": {
+   "th": [
+    "คณะกรรมการสิทธิมนุษยชนแห่งชาติ"
+   ],
+   "en": [
+    "National Human Rights Commission"
+   ],
+   "zh": [
+    "国家人权委员会"
+   ]
+  },
+  "def": {
+   "th": "องค์กรอิสระที่มีกรรมการเจ็ดคน ตรวจสอบและรายงานการละเมิดสิทธิมนุษยชน เสนอแนวทางแก้ไข และชี้แจงรายงานสถานการณ์สิทธิมนุษยชนที่ไม่ถูกต้อง",
+   "en": "An independent organ of seven commissioners. It examines and reports on human rights violations, proposes remedies and corrects inaccurate reports on Thailand's human rights situation.",
+   "zh": "由七名委员组成的独立机构，调查并报告侵犯人权行为，提出纠正办法，并澄清有关泰国人权状况的不实报告。"
+  },
+  "sections": [
+   246,
+   247
+  ]
+ },
+ {
+  "id": "state-attorney-organ",
+  "term": {
+   "th": "องค์กรอัยการ",
+   "en": "State Attorney Organ",
+   "zh": "检察机关"
+  },
+  "match": {
+   "th": [
+    "องค์กรอัยการ",
+    "พนักงานอัยการ"
+   ],
+   "en": [
+    "State Attorney Organ"
+   ],
+   "zh": [
+    "检察机关",
+    "检察官"
+   ]
+  },
+  "def": {
+   "th": "องค์กรของพนักงานอัยการ ซึ่งสั่งคดีและปฏิบัติหน้าที่อย่างเป็นอิสระ เที่ยงธรรม และไม่ถือเป็นการปฏิบัติตามคำสั่งทางบริหาร",
+   "en": "The organ of public prosecutors. They decide on cases and act independently and fairly, and doing so is not treated as carrying out executive orders.",
+   "zh": "检察官组成的机关。检察官独立、公正地审查和决定案件，此类行为不视为执行行政命令。"
+  },
+  "sections": [
+   248
+  ]
+ },
+ {
+  "id": "local-administrative-organisation",
+  "term": {
+   "th": "องค์กรปกครองส่วนท้องถิ่น",
+   "en": "local administrative organisation",
+   "zh": "地方自治组织"
+  },
+  "match": {
+   "th": [
+    "องค์กรปกครองส่วนท้องถิ่น"
+   ],
+   "en": [
+    "local administrative organisation"
+   ],
+   "zh": [
+    "地方自治组织"
+   ]
+  },
+  "def": {
+   "th": "หน่วยปกครองที่ประชาชนในท้องถิ่นบริหารเอง เช่น เทศบาลและองค์การบริหารส่วนตำบล ทำบริการสาธารณะเพื่อคนในพื้นที่ สมาชิกสภาท้องถิ่นมาจากการเลือกตั้ง",
+   "en": "Self-governing local units such as municipalities and subdistrict administrations. They provide public services for local people, and local councils are elected.",
+   "zh": "由当地人民自治的行政单位，例如市政府和区行政机构，为当地居民提供公共服务；地方议会议员由选举产生。"
+  },
+  "sections": [
+   249,
+   250,
+   252
+  ]
+ },
+ {
+  "id": "constitutional-amendment",
+  "term": {
+   "th": "การแก้ไขเพิ่มเติมรัฐธรรมนูญ",
+   "en": "amendment of the Constitution",
+   "zh": "宪法修正"
+  },
+  "match": {
+   "th": [
+    "การแก้ไขเพิ่มเติมรัฐธรรมนูญ",
+    "ร่างรัฐธรรมนูญแก้ไขเพิ่มเติม"
+   ],
+   "en": [
+    "amendment to the Constitution"
+   ],
+   "zh": [
+    "修宪",
+    "宪法修正"
+   ]
+  },
+  "def": {
+   "th": "การเปลี่ยนแปลงตัวบทรัฐธรรมนูญ ต้องผ่านรัฐสภาสามวาระด้วยเสียงสนับสนุนตามเงื่อนไขที่กำหนด บางเรื่องต้องผ่านประชามติ และห้ามเปลี่ยนระบอบการปกครองหรือรูปแบบของรัฐ",
+   "en": "A change to the text of the Constitution. It must pass three readings in the National Assembly with the specified support; some subjects also need a referendum; and it may not change the regime or the form of the State.",
+   "zh": "修改宪法条文。须在国会三读并获规定的支持票数；部分事项还须经公民投票；不得改变政体或国家形式。"
+  },
+  "sections": [
+   255,
+   256
+  ]
+ },
+ {
+  "id": "national-strategy",
+  "term": {
+   "th": "ยุทธศาสตร์ชาติ",
+   "en": "national strategy",
+   "zh": "国家战略"
+  },
+  "match": {
+   "th": [
+    "ยุทธศาสตร์ชาติ"
+   ],
+   "en": [
+    "National Strategy",
+    "national strategy"
+   ],
+   "zh": [
+    "国家战略"
+   ]
+  },
+  "def": {
+   "th": "เป้าหมายการพัฒนาประเทศระยะยาวที่รัฐต้องจัดทำ เป็นกรอบให้แผนต่าง ๆ สอดคล้องกัน คณะรัฐมนตรีต้องแถลงนโยบายและจัดงบประมาณให้สอดคล้องกับยุทธศาสตร์ชาติ",
+   "en": "The long-term national development goal the state must set, as a framework that keeps plans consistent. The Cabinet's policies and the budget must be consistent with it.",
+   "zh": "国家须制定的长期发展目标，作为各项计划相互协调的框架。内阁施政声明和预算须与国家战略一致。"
+  },
+  "sections": [
+   65,
+   142,
+   162,
+   275
+  ]
+ },
+ {
+  "id": "national-reform",
+  "term": {
+   "th": "การปฏิรูปประเทศ",
+   "en": "national reform",
+   "zh": "国家改革"
+  },
+  "match": {
+   "th": [
+    "แผนการปฏิรูปประเทศ",
+    "ปฏิรูปประเทศ"
+   ],
+   "en": [
+    "national reform",
+    "National Reform"
+   ],
+   "zh": [
+    "国家改革"
+   ]
+  },
+  "def": {
+   "th": "การปรับปรุงประเทศตามหมวด ๑๖ ในด้านการเมือง การบริหารราชการแผ่นดิน กฎหมาย กระบวนการยุติธรรม การศึกษา เศรษฐกิจ และด้านอื่น ตามกฎหมายว่าด้วยแผนและขั้นตอนการดำเนินการปฏิรูปประเทศ",
+   "en": "The reform programme of Chapter 16 covering politics, public administration, law, the justice process, education, the economy and other areas, carried out under the law on national reform plans and procedures.",
+   "zh": "第十六章规定的国家改革，涵盖政治、国家行政、法律、司法程序、教育、经济及其他领域，依国家改革计划与程序法实施。"
+  },
+  "sections": [
+   257,
+   258,
+   259
+  ]
+ },
+ {
+  "id": "sufficiency-economy",
+  "term": {
+   "th": "ปรัชญาของเศรษฐกิจพอเพียง",
+   "en": "Sufficiency Economy Philosophy",
+   "zh": "适足经济哲学"
+  },
+  "match": {
+   "th": [
+    "เศรษฐกิจพอเพียง"
+   ],
+   "en": [
+    "sufficiency economy"
+   ],
+   "zh": [
+    "适足经济"
+   ]
+  },
+  "def": {
+   "th": "หลักการที่รัฐธรรมนูญใช้เป็นแนวทางการพัฒนาเศรษฐกิจและเป้าหมายการปฏิรูป เน้นความพอประมาณ ความมีเหตุผล และภูมิคุ้มกัน",
+   "en": "A philosophy the Constitution uses to guide economic development and the goals of reform, stressing moderation, reasonableness and resilience.",
+   "zh": "宪法用以指导经济发展和改革目标的理念，强调适度、合理和抗风险能力。"
+  },
+  "sections": [
+   75,
+   257
+  ]
+ },
+ {
+  "id": "state-duties",
+  "term": {
+   "th": "หน้าที่ของรัฐ",
+   "en": "duties of the State",
+   "zh": "国家的职责"
+  },
+  "match": {
+   "th": [
+    "หน้าที่ของรัฐ"
+   ],
+   "en": [
+    "duties of the State"
+   ],
+   "zh": [
+    "国家的职责"
+   ]
+  },
+  "def": {
+   "th": "สิ่งที่หมวด ๕ บังคับให้รัฐต้องทำ ประชาชนและชุมชนมีสิทธิติดตามและเร่งรัดให้รัฐปฏิบัติตาม",
+   "en": "What Chapter 5 obliges the State to do. People and communities have the right to follow up and press the State to carry these duties out.",
+   "zh": "第五章要求国家必须履行的事项。人民和社区有权跟进并督促国家履行。"
+  },
+  "sections": [
+   51,
+   162
+  ]
+ },
+ {
+  "id": "directive-principles",
+  "term": {
+   "th": "แนวนโยบายแห่งรัฐ",
+   "en": "directive principles of State policies",
+   "zh": "国家政策指导原则"
+  },
+  "match": {
+   "th": [
+    "แนวนโยบายแห่งรัฐ"
+   ],
+   "en": [
+    "directive principles"
+   ],
+   "zh": [
+    "国家政策指导原则"
+   ]
+  },
+  "def": {
+   "th": "แนวทางในหมวด ๖ ที่รัฐพึงดำเนินการในการตรากฎหมายและกำหนดนโยบาย ต่างจากหน้าที่ของรัฐตรงที่เป็นแนวทาง ไม่ใช่หน้าที่ที่ประชาชนเร่งรัดได้โดยตรง",
+   "en": "The guidelines in Chapter 6 that the State should follow when making laws and policy. Unlike the duties of the State, they are guidance rather than duties people can directly enforce.",
+   "zh": "第六章所列、国家在立法和制定政策时应遵循的方针。与国家职责不同，它们是指导原则，而非人民可直接督促履行的义务。"
+  },
+  "sections": [
+   64,
+   162
+  ]
+ },
+ {
+  "id": "state-agency",
+  "term": {
+   "th": "หน่วยงานของรัฐ",
+   "en": "State agency",
+   "zh": "国家机关"
+  },
+  "match": {
+   "th": [
+    "หน่วยงานของรัฐ"
+   ],
+   "en": [
+    "State agency",
+    "State agencies"
+   ],
+   "zh": [
+    "国家机关"
+   ]
+  },
+  "def": {
+   "th": "ส่วนราชการ รัฐวิสาหกิจ และหน่วยงานอื่นของรัฐ ต้องปฏิบัติหน้าที่ตามรัฐธรรมนูญ กฎหมาย และหลักนิติธรรม และประชาชนฟ้องให้รับผิดได้",
+   "en": "Government offices, state enterprises and other public bodies. They must act under the Constitution, the law and the rule of law, and people can sue them for liability.",
+   "zh": "政府部门、国有企业及其他国家机构，须依宪法、法律和法治原则履职，人民可起诉其承担责任。"
+  },
+  "sections": [
+   3,
+   41
+  ]
+ },
+ {
+  "id": "court-warrant",
+  "term": {
+   "th": "หมายของศาล",
+   "en": "court warrant",
+   "zh": "法院令状"
+  },
+  "match": {
+   "th": [
+    "หมายของศาล"
+   ],
+   "en": [
+    "warrant issued by the Court"
+   ],
+   "zh": [
+    "法院令状",
+    "令状"
+   ]
+  },
+  "def": {
+   "th": "คำสั่งศาลที่จำเป็นก่อนจับ คุมขัง หรือค้นตัวบุคคลหรือเคหสถาน เว้นแต่มีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ",
+   "en": "A court order needed before arresting, detaining or searching a person or entering a dwelling, unless the law provides another ground.",
+   "zh": "逮捕、拘禁、搜查人身或进入住宅前所需的法院命令，法律另有规定的除外。"
+  },
+  "sections": [
+   28,
+   33
+  ]
+ },
+ {
+  "id": "presumption-of-innocence",
+  "term": {
+   "th": "ข้อสันนิษฐานว่าไม่มีความผิด",
+   "en": "presumption of innocence",
+   "zh": "无罪推定"
+  },
+  "match": {
+   "th": [
+    "สันนิษฐานไว้ก่อนว่า"
+   ],
+   "en": [
+    "presumed innocent"
+   ],
+   "zh": [
+    "推定"
+   ]
+  },
+  "def": {
+   "th": "ในคดีอาญา ต้องถือว่าผู้ต้องหาหรือจำเลยไม่มีความผิด จนกว่าจะมีคำพิพากษาอันถึงที่สุดว่ากระทำความผิด",
+   "en": "In a criminal case, a suspect or defendant must be treated as innocent until a final judgment finds them guilty.",
+   "zh": "在刑事案件中，犯罪嫌疑人或被告人在终局判决认定有罪之前，应被推定为无罪。"
+  },
+  "sections": [
+   29
+  ]
+ },
+ {
+  "id": "public-interest",
+  "term": {
+   "th": "ประโยชน์สาธารณะ",
+   "en": "public interest",
+   "zh": "公共利益"
+  },
+  "match": {
+   "th": [
+    "ประโยชน์สาธารณะ"
+   ],
+   "en": [
+    "public interest"
+   ],
+   "zh": [
+    "公共利益"
+   ]
+  },
+  "def": {
+   "th": "ประโยชน์ของส่วนรวม ซึ่งรัฐธรรมนูญยอมให้ใช้เป็นเหตุจำกัดสิทธิบางอย่างได้ เช่น การเวนคืนอสังหาริมทรัพย์ หรือการเปิดเผยข้อมูลส่วนบุคคล",
+   "en": "The common good, which the Constitution accepts as a reason to limit some rights, such as expropriating immovable property or disclosing personal data.",
+   "zh": "社会整体的利益。宪法允许以此为由限制某些权利，例如征收不动产或公开个人资料。"
+  },
+  "sections": [
+   32,
+   37,
+   40
+  ]
+ },
+ {
+  "id": "expropriation",
+  "term": {
+   "th": "การเวนคืนอสังหาริมทรัพย์",
+   "en": "expropriation of immovable property",
+   "zh": "征收不动产"
+  },
+  "match": {
+   "th": [
+    "เวนคืน"
+   ],
+   "en": [
+    "expropriation"
+   ],
+   "zh": [
+    "征收"
+   ]
+  },
+  "def": {
+   "th": "การที่รัฐบังคับเอาที่ดินหรืออสังหาริมทรัพย์ของเอกชนไปใช้เพื่อกิจการสาธารณะตามที่กฎหมายกำหนด โดยต้องจ่ายค่าทดแทนที่เป็นธรรมภายในเวลาอันสมควร",
+   "en": "The State compulsorily taking private land or immovable property for public purposes set by law, paying fair compensation within a reasonable time.",
+   "zh": "国家依法为公共事业强制取得私人土地或不动产，并须在合理期限内给予公平补偿。"
+  },
+  "sections": [
+   37
+  ]
+ },
+ {
+  "id": "ncpo",
+  "term": {
+   "th": "คณะรักษาความสงบแห่งชาติ (คสช.)",
+   "en": "National Council for Peace and Order (NCPO)",
+   "zh": "全国维持和平秩序委员会"
+  },
+  "match": {
+   "th": [
+    "คณะรักษาความสงบแห่งชาติ"
+   ],
+   "en": [
+    "National Council for Peace and Order"
+   ],
+   "zh": [
+    "全国维持和平秩序委员会"
+   ]
+  },
+  "def": {
+   "th": "คณะที่ใช้อำนาจปกครองประเทศก่อนรัฐธรรมนูญนี้ บทเฉพาะกาลให้ คสช. อยู่ทำหน้าที่จนคณะรัฐมนตรีชุดใหม่เข้ารับหน้าที่ ให้ถวายคำแนะนำแต่งตั้ง ส.ว. ชุดแรก และรับรองว่าประกาศ คำสั่ง และการกระทำของ คสช. ชอบด้วยรัฐธรรมนูญ",
+   "en": "The body that governed before this Constitution. The transitory provisions kept it in place until the new Cabinet took office, had it advise on appointing the first Senate, and declared its announcements, orders and acts lawful and constitutional.",
+   "zh": "本宪法施行前执掌国家权力的机构。过渡条款规定其在新内阁就任前继续履职，由其建议任命首届参议院，并确认其公告、命令和行为合法且合宪。"
+  },
+  "sections": [
+   265,
+   269,
+   279
+  ]
+ },
+ {
+  "id": "national-legislative-assembly",
+  "term": {
+   "th": "สภานิติบัญญัติแห่งชาติ",
+   "en": "National Legislative Assembly",
+   "zh": "国家立法议会"
+  },
+  "match": {
+   "th": [
+    "สภานิติบัญญัติแห่งชาติ"
+   ],
+   "en": [
+    "National Legislative Assembly"
+   ],
+   "zh": [
+    "国家立法议会"
+   ]
+  },
+  "def": {
+   "th": "สภาที่ตั้งขึ้นตามรัฐธรรมนูญฉบับชั่วคราว พ.ศ. ๒๕๕๗ ทำหน้าที่รัฐสภาไปจนกว่าจะมีสภาผู้แทนราษฎรและวุฒิสภาตามรัฐธรรมนูญนี้",
+   "en": "The legislature created under the 2014 Interim Constitution. It served as the National Assembly until the House and Senate under this Constitution were in place.",
+   "zh": "依2014年临时宪法设立的立法机构，在本宪法规定的众议院和参议院成立前代行国会职能。"
+  },
+  "sections": [
+   263
+  ]
+ },
+ {
+  "id": "transitory-provisions",
+  "term": {
+   "th": "บทเฉพาะกาล",
+   "en": "transitory provisions",
+   "zh": "过渡条款"
+  },
+  "match": {
+   "th": [
+    "ในวาระเริ่มแรก"
+   ],
+   "en": [
+    "initial period"
+   ],
+   "zh": [
+    "初始期间"
+   ]
+  },
+  "def": {
+   "th": "บทบัญญัติท้ายรัฐธรรมนูญ (มาตรา ๒๖๒ ถึง ๒๗๙) ที่ใช้ในช่วงเปลี่ยนผ่าน มักเขียนว่า \"ในวาระเริ่มแรก\" เช่น วุฒิสภาแต่งตั้งสองร้อยห้าสิบคนในห้าปีแรก",
+   "en": "The closing provisions (Sections 262 to 279) that apply during the changeover, often marked \"in the initial period\", such as the 250 appointed senators of the first five years.",
+   "zh": "宪法末尾适用于过渡期的条款（第262条至第279条），常以\"初期\"标示，例如最初五年由250名任命参议员组成的参议院。"
+  },
+  "sections": [
+   263,
+   269,
+   271,
+   272
+  ]
+ }
+]
