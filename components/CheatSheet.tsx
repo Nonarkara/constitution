@@ -295,9 +295,9 @@ export function CheatSheet() {
       title: tr(lang, "ปี: วาระรวมสูงสุดของนายกรัฐมนตรี", "Years: PM Term Limit", "总理任期累计上限（年）"),
       detail: tr(
         lang,
-        "นายกรัฐมนตรีจะดำรงตำแหน่งรวมกันแล้วเกิน 8 ปีมิได้ ไม่ว่าจะเป็นการดำรงตำแหน่งติดต่อกันหรือไม่ (ม.158 วรรคสี่)",
-        "The Prime Minister shall not hold office for a total aggregate period of more than 8 years, whether consecutive or not (Sec 158 p.4).",
-        "总理累计在任时间不得超过8年，不论是否连续任职（第158条第4款）。",
+        "นายกรัฐมนตรีดำรงตำแหน่งรวมกันเกิน 8 ปีมิได้ ไม่ว่าจะติดต่อกันหรือไม่ แต่ไม่นับระยะเวลาที่อยู่ปฏิบัติหน้าที่ต่อไปหลังพ้นจากตำแหน่ง (ม.158 วรรคสี่)",
+        "The PM may serve at most 8 years in total, consecutive or not. Time continuing to perform duties after vacating office is excluded (Sec 158 paragraph 4).",
+        "总理累计任期不得超过8年，不论是否连续任职；离任后继续履行职责的期间不计入（第158条第4款）。",
       ),
       sections: [158],
     },
@@ -361,9 +361,9 @@ export function CheatSheet() {
       title: tr(lang, "สัดส่วนยื่นไม่ไว้วางใจ (ม.151)", "No-Confidence Motion Ratio", "不信任案动议比例"),
       detail: tr(
         lang,
-        "ส.ส. ไม่น้อยกว่า 1/5 (100 คน) เข้าชื่อเสนอญัตติขอเปิดอภิปรายทั่วไปเพื่อลงมติไม่ไว้วางใจนายกฯ หรือรัฐมนตรี (มติผ่านต้องได้ > 250 เสียง)",
-        "Not less than 1/5 of House (100 MPs) may submit a motion of no-confidence. Requires over half (>250) of existing MPs to pass (Sec 151).",
-        "不少于众议院五分之一（100人）众议员可联署动议对总理或部长进行不信任辩论与表决（通过须全体议员过半数即>250票）。",
+        "ส.ส. ไม่น้อยกว่า 1/5 ของ ส.ส. เท่าที่มีอยู่ เสนอญัตติไม่ไว้วางใจรัฐมนตรีรายบุคคลหรือ ครม. ทั้งคณะได้ มติไม่ไว้วางใจต้องมากกว่ากึ่งหนึ่งของ ส.ส. เท่าที่มีอยู่ (เมื่อครบ 500 คน: เสนอ ≥ 100 คน; มติ ≥ 251 เสียง)",
+        "At least 1/5 of existing MPs may propose no-confidence in an individual minister or the Cabinet as a whole. Adoption needs more than half of existing MPs. With all 500 seats filled: ≥ 100 sponsors and ≥ 251 votes (Sec 151).",
+        "不少于现有众议员总数五分之一可提出对单个部长或全体内阁的不信任案。通过须超过现有众议员总数半数；500席全部在任时，需至少100人提案、251票赞成（第151条）。",
       ),
       sections: [151],
     },
@@ -425,13 +425,13 @@ export function CheatSheet() {
         lang,
         "ฉุกเฉินจำเป็น สี่กรณีมั่นคง ตราส่งสภาทันใด ถ้าไม่เห็นชอบตกไป",
         "Urgent necessity, four security grounds, immediate parliamentary review, lapses if rejected.",
-        "事出紧急难拖延，四大安全立出台，下次国会即刻送，若遭否决即失效。",
+        "事出紧急难拖延，四大安全立出台，下次国会即刻送，不准公告次日失效。",
       ),
       story: tr(
         lang,
-        "ครม. ไม่สามารถออก พ.ร.ก. ตามใจชอบได้ ต้องผ่าน 4 ด่าน: 1) ฉุกเฉินจำเป็นหลีกเลี่ยงไม่ได้ 2) เข้า 4 เหตุ (มั่นคงชาติ/ปลอดภัยสาธารณะ/เศรษฐกิจ/ภัยพิบัติ) 3) เข้าสภาคราวประชุมถัดไป 4) ส.ส./ส.ว. 1/5 ส่งศาล รธน. ได้ก่อนสภาลงมติ",
-        "The Cabinet cannot issue decrees arbitrarily. Four strict tests: 1) Inevitable urgency, 2) Four statutory grounds (national security, public safety, economic stability, natural disaster), 3) Immediate next session review, 4) 1/5 MPs/Senators may certify to Constitutional Court before vote.",
-        "内阁绝不可随意发布紧急法令，须通过四大关卡：1) 迫切且不可避免的紧急需要，2) 四大限定理由之一（国家安全、公共安全、国家经济安全、公共灾难），3) 下次国会立即审查，4) 五分之一议员可在表决前送交宪法法院审查是否紧急。",
+        "ครม. ไม่สามารถออก พ.ร.ก. ตามใจชอบได้ ต้องผ่าน 4 ด่าน: 1) ฉุกเฉินจำเป็นหลีกเลี่ยงไม่ได้ 2) เข้า 4 เหตุ (มั่นคงชาติ/ปลอดภัยสาธารณะ/เศรษฐกิจ/ภัยพิบัติ) 3) เข้าสภาคราวประชุมถัดไป 4) สมาชิกอย่างน้อย 1/5 ของสภานั้นเท่าที่มีอยู่เสนอผ่านประธานสภาให้ศาลตรวจเหตุ 4 ประการตาม ม.172 วรรคหนึ่งก่อนอนุมัติ",
+        "The Cabinet cannot issue decrees arbitrarily. Four strict tests: 1) Inevitable urgency, 2) Four statutory grounds (national security, public safety, economic stability, public calamity), 3) Immediate next session review, 4) At least 1/5 of existing members of either House may refer, through its President before approval, the four purposes in Sec 172 paragraph 1 to the Court.",
+        "内阁绝不可随意发布紧急法令，须通过四大关卡：1) 迫切且不可避免的紧急需要，2) 四大限定理由之一（国家安全、公共安全、国家经济安全、公共灾难），3) 下次国会立即审查，4) 任一院现有议员至少五分之一可在批准前经本院议长提交宪法法院，审查第172条第1款四项目的。",
       ),
       sections: [172, 173],
     },
@@ -460,9 +460,9 @@ export function CheatSheet() {
           <p>
             {tr(
               lang,
-              "ทำข้อสอบและเข้าใจโครงสร้างอำนาจอย่างแม่นยำ ไม่ต้องท่องจำแบบสับสน ด้วยแผนภาพสไตล์ดินสอสี สูตรเงื่อนไข และตัวเลขสำคัญที่ออกสอบบ่อยที่สุด",
+              "ทำข้อสอบและเข้าใจโครงสร้างอำนาจอย่างแม่นยำ ไม่ต้องท่องจำแบบสับสน ด้วยแผนภาพสไตล์ดินสอสี สูตรเงื่อนไข และตัวเลขสำคัญในรัฐธรรมนูญ",
               "Master constitutional architecture with precision. No confusing rote memorization: explore crayon diagrams, logic gates, and vital exam numbers.",
-              "告别死记硬背与概念混淆。通过温润的蜡笔手绘图解、逻辑判定树与高频考点速查表，清晰透视宪制架构。",
+              "告别死记硬背与概念混淆。通过温润的蜡笔手绘图解、逻辑判定树与关键数字速查表，清晰透视宪制架构。",
             )}
           </p>
         </div>
@@ -683,57 +683,57 @@ export function CheatSheet() {
               <p>
                 {tr(
                   lang,
-                  "เพื่อประโยชน์ในอันที่จะรักษาความปลอดภัยของประเทศ ความปลอดภัยสาธารณะ ความมั่นคงทางเศรษฐกิจ หรือป้องปัดภัยพิบัติสาธารณะ",
-                  "In order to preserve national security, public safety, national economic stability, or avert public calamity.",
-                  "为了维护国家安全、公共安全、国家经济安全或防范公共灾难。",
+                  "ต้องเพื่อรักษาความปลอดภัยของประเทศ ความปลอดภัยสาธารณะ ความมั่นคงทางเศรษฐกิจ หรือป้องปัดภัยพิบัติสาธารณะ และ ครม. ต้องเห็นว่าเป็นกรณีฉุกเฉินที่มีความจำเป็นรีบด่วนอันมิอาจหลีกเลี่ยงได้ (ม.172 วรรคหนึ่ง–สอง)",
+                  "The purpose must be national or public safety, national economic security, or averting public calamity. The Cabinet must consider it an unavoidable emergency of necessity and urgency (Sec 172 paragraphs 1–2).",
+                  "目的须为维护国家安全、公共安全、国家经济安全或防范公共灾难，且内阁须认定属于不可避免、必要且紧迫的紧急情况（第172条第1至2款）。",
                 )}
               </p>
             </div>
 
-            <div className="tree-arrow mono">↓ PASS 1 ∧ PASS 2</div>
+            <div className="tree-arrow mono">{tr(lang, "↓ ครบทั้งเหตุและความจำเป็นรีบด่วน", "↓ PURPOSE AND URGENT NECESSITY", "↓ 目的与紧急必要性均满足")}</div>
 
             <div className="tree-step">
               <span className="mono tree-badge">GATE 2</span>
-              <h4>{tr(lang, "คณะรัฐมนตรีตรา พ.ร.ก.", "Cabinet Enacts Decree", "内阁发布紧急法令")}</h4>
+              <h4>{tr(lang, "พระมหากษัตริย์ทรงตรา พ.ร.ก.", "The King Issues the Decree", "国王颁布紧急法令")}</h4>
               <p>
                 {tr(
                   lang,
-                  "มีผลบังคับใช้เป็นกฎหมายทันที มีศักดิ์เทียบเท่าพระราชบัญญัติ",
-                  "Becomes enforceable immediately with the force of an Act of Parliament.",
-                  "立即生效执行，具有法律同等效力。",
+                  "พระมหากษัตริย์ทรงตราพระราชกำหนดเมื่อ ครม. เห็นว่าเข้าเงื่อนไขข้างต้น พระราชกำหนดมีผลใช้บังคับดังเช่นพระราชบัญญัติ",
+                  "The King may issue the decree when the Cabinet considers the conditions above satisfied. It has the force of an Act.",
+                  "在内阁认定符合上述条件时，国王可颁布紧急法令，其效力与法律相同。",
                 )}
               </p>
             </div>
 
-            <div className="tree-arrow mono">↓ SUBMIT NEXT SESSION</div>
+            <div className="tree-arrow mono">{tr(lang, "↓ ตรวจโดยศาลก่อนอนุมัติ หากมีคำร้อง", "↓ OPTIONAL CHECK BEFORE APPROVAL", "↓ 批准前的可选司法审查")}</div>
 
             <div className="tree-step">
               <span className="mono tree-badge">GATE 3</span>
-              <h4>{tr(lang, "ด่านสภาตรวจสอบ (ม.172 ว.3)", "Parliamentary Approval Gate", "国会审查批准门")}</h4>
-              <p>
-                {tr(
-                  lang,
-                  "เสนอต่อรัฐสภาโดยไม่ชักช้าในคราวประชุมถัดไป:\n• ถ้ารัฐสภา 'อนุมัติ' ⟹ มีผลเป็น พระราชบัญญัติ (พ.ร.บ.) ถาวรต่อไป\n• ถ้ารัฐสภา 'ไม่อนุมัติ' ⟹ พ.ร.ก. นั้น 'เป็นอันตกไป' (แต่ไม่กระทบกิจการที่ทำไปแล้ว)",
-                  "Submitted to Parliament without delay:\n• Approved ⟹ Permanently valid as an Act\n• Rejected ⟹ Decree lapses immediately (without affecting past valid transactions)",
-                  "下次会议时不延误地提交国会：\n• 批准 ⟹ 成为永久有效法律\n• 否决 ⟹ 该法令即刻失效（但不影响此前已执行的行为）",
-                )}
-              </p>
-            </div>
-
-            <div className="tree-arrow mono">↓ JUDICIAL CHECK</div>
-
-            <div className="tree-step">
-              <span className="mono tree-badge">GATE 4</span>
               <h4>{tr(lang, "ศาลรัฐธรรมนูญตรวจสอบ (ม.173)", "Constitutional Court Check (Sec 173)", "宪法法院审查 (第173条)")}</h4>
               <p>
                 {tr(
                   lang,
-                  "ก่อนที่สภาจะลงมติ ส.ส. หรือ ส.ว. ไม่น้อยกว่า 1/5 ของแต่ละสภา เข้าชื่อเสนอประธานสภา ส่งเรื่องให้ 'ศาลรัฐธรรมนูญ' วินิจฉัยความจำเป็นรีบด่วนได้ หากขัด พ.ร.ก. ตกไปทันที",
-                  "Before the vote, not less than 1/5 of MPs or Senators may petition the Court to rule on whether the decree truly meets the emergency conditions.",
-                  "在表决前，不少于五分之一众议员或参议员可联名送交宪法法院，裁决该法令是否真正具备法定紧急必要条件。",
+                  "ก่อนสภานั้นอนุมัติ สมาชิกไม่น้อยกว่า 1/5 ของสมาชิกเท่าที่มีอยู่ของสภานั้นเข้าชื่อเสนอความเห็นต่อประธานสภาว่า พ.ร.ก. ไม่เป็นไปตาม ม.172 วรรคหนึ่ง (เหตุ 4 ประการ) ประธานส่งศาลรัฐธรรมนูญภายใน 3 วัน และรอการพิจารณาของสภาจนได้รับคำวินิจฉัย\nศาลวินิจฉัยภายใน 60 วัน หากวินิจฉัยว่าไม่เป็นไปตามวรรคหนึ่งด้วยเสียงไม่น้อยกว่า 2/3 ของตุลาการเท่าที่มีอยู่ พ.ร.ก. ไม่มีผลใช้บังคับมาแต่ต้น ต่างจากการไม่อนุมัติของสภา",
+                  "Before that House approves, at least 1/5 of its existing members may submit an opinion to its President alleging failure to meet Sec 172 paragraph 1 (the four purposes). The President refers it to the Court within 3 days; parliamentary consideration pauses until the decision is notified.\nThe Court decides within 60 days. A finding of noncompliance needs at least 2/3 of existing judges and makes the decree ineffective from the outset, unlike parliamentary disapproval.",
+                  "在本院批准之前，不少于该院现有议员五分之一可向本院议长提出意见，认为法令不符合第172条第1款（四项目的）。议长须在3日内提交宪法法院，国会暂停审议，直至收到裁决通知。\n法院须在60日内裁决。认定不符合第1款须获现有法官至少三分之二赞成，法令自始无效，与国会不批准的后果不同。",
                 )}
               </p>
             </div>
+            <div className="tree-arrow mono">{tr(lang, "↓ เสนอสภาคราวประชุมถัดไปโดยไม่ชักช้า", "↓ SUBMIT NEXT SITTING WITHOUT DELAY", "↓ 下次会议毫不迟延地提交")}</div>
+
+            <div className="tree-step">
+              <span className="mono tree-badge">GATE 4</span>
+              <h4>{tr(lang, "ด่านสภาตรวจสอบ (ม.172 ว.3)", "Parliamentary Approval Gate", "国会审查批准门")}</h4>
+              <p>
+                {tr(
+                  lang,
+                  "ครม. เสนอต่อรัฐสภาโดยไม่ชักช้าในคราวประชุมถัดไป หากรอเปิดสมัยประชุมสามัญจะล่าช้า ต้องเรียกประชุมวิสามัญ\n• สองสภาอนุมัติ หรือ ส.ว. ไม่อนุมัติแต่ ส.ส. ยืนยันมากกว่ากึ่งหนึ่งของ ส.ส. เท่าที่มีอยู่ ⟹ ยังคงมีผลใช้บังคับเป็น พ.ร.บ. ต่อไป\n• ส.ส. ไม่อนุมัติ หรือ ส.ว. ไม่อนุมัติและ ส.ส. ยืนยันไม่เกินกึ่งหนึ่ง ⟹ พ.ร.ก. ตกไป การไม่อนุมัติมีผลวันถัดจากวันประกาศในราชกิจจานุเบกษา ไม่กระทบกิจการที่ทำระหว่างใช้บังคับ กฎหมายเดิมที่ถูกแก้ไขหรือยกเลิกกลับมีผลตาม ม.172 วรรคสี่",
+                  "The Cabinet submits the decree without delay at the next sitting; an extraordinary session is required if waiting for an ordinary session would cause delay.\n• Both Houses approve, or the Senate rejects but the House reaffirms by more than half of existing MPs: it continues with the force of an Act.\n• The House rejects, or the Senate rejects and House reaffirmation is not more than half: the decree lapses. Disapproval takes effect the day after Gazette publication. Acts done during enforcement remain unaffected; laws amended or repealed revive under Sec 172 paragraph 4.",
+                  "内阁须在下次国会会议中毫不迟延地提交；若等待常会会造成延误，须召集特别会议。\n• 两院均批准，或参议院否决后众议院以超过现有众议员半数再次确认：继续具有法律效力。\n• 众议院否决，或参议院否决且众议院再次确认未超过半数：法令失效。不批准自刊登政府公报的次日起生效，不影响实施期间已作出的行为；被修改或废止的原法律依第172条第4款恢复效力。",
+                )}
+              </p>
+            </div>
+
           </div>
           <div className="citations-row">
             <Link className="citation" href="/section/?n=172">
@@ -766,7 +766,7 @@ export function CheatSheet() {
                 aria-pressed={scaleFactor === "balance"}
                 onClick={() => setScaleFactor("balance")}
               >
-                {tr(lang, "1. ได้สัดส่วน (ชอบด้วย รธน.)", "1. Balanced (Constitutional)", "1. 符合比例（合宪）")}
+                {tr(lang, "1. ไม่เกินสมควรแก่เหตุ", "1. No disproportionate restriction", "1. 限制不过度")}
               </button>
               <button
                 aria-pressed={scaleFactor === "excess"}
@@ -778,7 +778,7 @@ export function CheatSheet() {
                 aria-pressed={scaleFactor === "core"}
                 onClick={() => setScaleFactor("core")}
               >
-                {tr(lang, "3. กระทบสาระสำคัญ (โมฆะ)", "3. Core Impairment (Void)", "3. 侵及本质（无效）")}
+                {tr(lang, "3. กระทบศักดิ์ศรีความเป็นมนุษย์", "3. Human dignity affected", "3. 损害人的尊严")}
               </button>
             </div>
 
@@ -801,13 +801,13 @@ export function CheatSheet() {
                   <line x1="100" y1="70" x2="60" y2="130" stroke="var(--ink)" strokeWidth="1.5" />
                   <line x1="100" y1="70" x2="140" y2="130" stroke="var(--ink)" strokeWidth="1.5" />
                   <rect x="50" y="130" width="100" height="20" fill="var(--paper)" stroke="var(--ink)" />
-                  <text x="100" y="145" textAnchor="middle" className="svg-label">ประโยชน์สาธารณะ</text>
+                  <text x="100" y="145" textAnchor="middle" className="svg-label">{tr(lang, "ประโยชน์สาธารณะ", "Public interest", "公共利益")}</text>
 
                   {/* Right Pan: Personal Rights */}
                   <line x1="400" y1="70" x2="360" y2="130" stroke="var(--ink)" strokeWidth="1.5" />
                   <line x1="400" y1="70" x2="440" y2="130" stroke="var(--ink)" strokeWidth="1.5" />
                   <rect x="350" y="130" width="100" height="20" fill="var(--paper)" stroke="var(--ink)" />
-                  <text x="400" y="145" textAnchor="middle" className="svg-label">สิทธิเสรีภาพ</text>
+                  <text x="400" y="145" textAnchor="middle" className="svg-label">{tr(lang, "สิทธิเสรีภาพ", "Rights and liberties", "权利与自由")}</text>
                 </>
               )}
 
@@ -818,13 +818,13 @@ export function CheatSheet() {
                   <line x1="100" y1="110" x2="60" y2="170" stroke="var(--ink)" strokeWidth="1.5" />
                   <line x1="100" y1="110" x2="140" y2="170" stroke="var(--ink)" strokeWidth="1.5" />
                   <rect x="50" y="170" width="100" height="20" fill="#fecaca" stroke="var(--ink)" />
-                  <text x="100" y="185" textAnchor="middle" className="svg-label">รัฐแทรกแซงล้นเกิน</text>
+                  <text x="100" y="185" textAnchor="middle" className="svg-label">{tr(lang, "รัฐแทรกแซงล้นเกิน", "Excessive intervention", "过度干预")}</text>
 
                   {/* Right Pan elevated */}
                   <line x1="400" y1="30" x2="360" y2="90" stroke="var(--ink)" strokeWidth="1.5" />
                   <line x1="400" y1="30" x2="440" y2="90" stroke="var(--ink)" strokeWidth="1.5" />
                   <rect x="350" y="90" width="100" height="20" fill="#fee2e2" stroke="var(--ink)" />
-                  <text x="400" y="105" textAnchor="middle" className="svg-label">สิทธิถูกลิดรอนเกินเหตุ</text>
+                  <text x="400" y="105" textAnchor="middle" className="svg-label">{tr(lang, "สิทธิถูกลิดรอนเกินเหตุ", "Excessive restriction", "过度限制")}</text>
                 </>
               )}
 
@@ -832,19 +832,20 @@ export function CheatSheet() {
                 <>
                   <line x1="100" y1="130" x2="400" y2="10" stroke="#991b1b" strokeWidth="4" />
                   <text x="250" y="30" textAnchor="middle" fill="#991b1b" className="svg-label font-bold">
-                    กระทบกระเทือนสาระสำคัญ = ตกไปทันที!
+                    {tr(lang, "ต้องไม่กระทบศักดิ์ศรีความเป็นมนุษย์", "Must respect human dignity", "不得损害人的尊严")}
                   </text>
                 </>
               )}
             </svg>
 
             <div className="formula-box">
-              <span className="mono font-bold">THE 4-PILLAR PROPORTIONALITY TEST (มาตรา 26):</span>
+              <span className="mono font-bold">{tr(lang, "เงื่อนไขตามมาตรา 26", "Section 26 safeguards", "第26条保障条件")}</span>
+              <p>{tr(lang, "ตาชั่งแสดงเฉพาะเรื่องความได้สัดส่วน ต้องตรวจเงื่อนไขอื่นของมาตรา 26 ด้วย", "The scale illustrates proportionality alone. The other section 26 conditions must also be checked.", "天平仅说明比例问题，还须检查第26条的其他条件。")}</p>
               <ol className="proportionality-list">
-                <li><strong>1. ฐานทางกฎหมาย (Legal Basis):</strong> ต้องจำกัดโดยบทบัญญัติแห่งกฎหมายระดับ พ.ร.บ. ตามเงื่อนไขที่ รธน. กำหนด</li>
-                <li><strong>2. แก่นแท้แห่งสิทธิ (Essential Substance):</strong> ต้องไม่กระทบกระเทือนสาระสำคัญแห่งสิทธิหรือเสรีภาพนั้น</li>
-                <li><strong>3. ความทั่วไป (Generality):</strong> ต้องไม่มุ่งหมายให้ใช้บังคับแก่กรณีใดกรณีหนึ่งหรือแก่บุคคลใดบุคคลหนึ่งเป็นการเจาะจง</li>
-                <li><strong>4. ความได้สัดส่วน (Proportionality Test):</strong> เหมาะสมแก่เป้าหมาย ∧ จำเป็นยิ่งยวด (เลือกมาตรการที่กระทบสิทธิน้อยที่สุด) ∧ ได้สัดส่วนพอสมควรแก่เหตุ</li>
+                <li>{tr(lang, "กฎหมายที่จำกัดสิทธิหรือเสรีภาพต้องเป็นไปตามเงื่อนไขที่รัฐธรรมนูญบัญญัติ", "A law restricting rights or liberties must comply with the conditions provided by the Constitution.", "限制权利或自由的法律，须符合宪法规定的条件。")}</li>
+                <li>{tr(lang, "หากรัฐธรรมนูญไม่ได้บัญญัติเงื่อนไขไว้ กฎหมายนั้นต้องไม่ขัดหลักนิติธรรม ไม่เพิ่มภาระหรือจำกัดสิทธิเสรีภาพเกินสมควรแก่เหตุ และไม่กระทบศักดิ์ศรีความเป็นมนุษย์", "Where the Constitution provides no conditions, the law must respect the rule of law, impose no disproportionate burden or restriction, and not affect human dignity.", "宪法未规定条件时，法律不得违反法治原则，不得过度增加负担或限制权利自由，亦不得损害人的尊严。")}</li>
+                <li>{tr(lang, "ในกรณีดังกล่าวต้องระบุเหตุผลและความจำเป็นในการจำกัดสิทธิและเสรีภาพไว้ด้วย", "In that case, reasons and necessity for the restriction must also be specified.", "在上述情况下，还须说明限制权利与自由的理由和必要性。")}</li>
+                <li>{tr(lang, "กฎหมายต้องใช้บังคับเป็นการทั่วไป ไม่มุ่งหมายแก่กรณีใดหรือบุคคลใดเป็นการเจาะจง", "The law must apply generally, rather than target a particular case or person.", "法律须普遍适用，不得专门针对某个案件或个人。")}</li>
               </ol>
             </div>
             <Link className="citation" href="/section/?n=26">
@@ -863,7 +864,7 @@ export function CheatSheet() {
                 {tr(lang, "หัวข้อ 05 · ตัวเลขสำคัญ", "05 · Numbers worth keeping", "05 · 关键数字")}
               </span>
               <h2 id="heading-numbers">
-                {tr(lang, "ตัวเลขมหัศจรรย์ในรัฐธรรมนูญที่ออกสอบบ่อย", "Vital Numbers for Civil Service & Bar Exams", "泰国宪法高频关键数字速查")}
+                {tr(lang, "ตัวเลขสำคัญในรัฐธรรมนูญ", "Vital Numbers for Civil Service & Bar Exams", "泰国宪法关键数字速查")}
               </h2>
             </div>
           </div>

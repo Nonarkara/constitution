@@ -45,3 +45,45 @@ test("all three teaching languages preserve section 256's distinct vote boundari
   assert.match(third[1], /More than half/);
   assert.match(third[2], /超过.*半数/);
 });
+
+const translations: string[][] = [];
+function collect(node: ts.Node) {
+  if (ts.isCallExpression(node) && node.expression.getText(source) === "tr") {
+    const args = node.arguments.slice(1);
+    if (args.length === 3 && args.every(ts.isStringLiteral)) {
+      translations.push(args.map(arg => (arg as ts.StringLiteral).text));
+    }
+  }
+  ts.forEachChild(node, collect);
+}
+collect(source);
+
+test("decree summaries distinguish prospective disapproval from invalidity from inception", () => {
+  const approval = translations.find(row => row[1].startsWith("The Cabinet submits the decree"))!;
+  const court = translations.find(row => row[1].startsWith("Before that House approves"))!;
+  assert.ok(approval && court);
+  const prospective = [/วันถัดจากวันประกาศ/, /day after Gazette publication/, /次日起生效/];
+  const retrospective = [/ไม่มีผลใช้บังคับมาแต่ต้น/, /ineffective from the outset/, /自始无效/];
+  const reviewGrounds = [/ม\.172 วรรคหนึ่ง/, /Sec 172 paragraph 1/, /第172条第1款/];
+  for (let i = 0; i < 3; i++) {
+    assert.match(approval[i], prospective[i]);
+    assert.match(court[i], retrospective[i]);
+    assert.match(court[i], reviewGrounds[i]);
+  }
+});
+
+test("section 26 safeguards are present in each learner language", () => {
+  const law = translations.find(row => row[1].startsWith("Where the Constitution provides no conditions"))!;
+  const reasons = translations.find(row => row[1].startsWith("In that case, reasons and necessity"))!;
+  const generality = translations.find(row => row[1].startsWith("The law must apply generally"))!;
+  assert.ok(law && reasons && generality);
+  assert.match(law[0], /หลักนิติธรรม.*เกินสมควรแก่เหตุ.*ศักดิ์ศรีความเป็นมนุษย์/);
+  assert.match(law[1], /rule of law.*disproportionate.*human dignity/);
+  assert.match(law[2], /法治.*过度.*尊严/);
+  assert.match(reasons[0], /เหตุผลและความจำเป็น/);
+  assert.match(reasons[1], /reasons and necessity/);
+  assert.match(reasons[2], /理由和必要性/);
+  assert.match(generality[0], /ทั่วไป/);
+  assert.match(generality[1], /generally/);
+  assert.match(generality[2], /普遍适用/);
+});

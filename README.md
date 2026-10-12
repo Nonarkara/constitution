@@ -45,7 +45,7 @@ The app pairs **strict civic typography** (IBM Plex Sans Thai, Source Sans 3, Je
 - **Legal Hierarchy Pyramid (มาตรา 5):** Interactive crayon pyramid showing Constitution > Organic Acts/Acts/Emergency Decrees > Royal Decrees > Ministerial Regs > Local Ordinances.
 - **The 3-Reading Amendment Algorithm (มาตรา 255 & 256):** Visual flowchart with the "Triple Lock" conditions and mandatory referendum trigger.
 - **Emergency Decree 4-Gate Decision Tree (มาตรา 172 & 173):** Clear step-by-step logic gates for executive decree validity and parliamentary review.
-- **Proportionality Scale for Rights (มาตรา 26):** Visual balance test checking legal basis, essential core, non-singularity, and proportionality stricto sensu.
+- **Proportionality Scale for Rights (มาตรา 26):** Interactive scale illustrating proportionality, alongside constitutional conditions, rule of law, human dignity, reasons and necessity, and general application.
 - **Vital Exam Numbers:** Instant lookup for 500 MPs, 200 Senators, 36 Cabinet members, 8-year PM limit, 19 Privy Councillors, 9 Constitutional Court judges, and the 7-3-9-7-7 Independent Organ counts.
 - **Mnemonic Stories & Rhymes:** Trilingual memory rhymes that anchor complex numbers into everyday analogies.
 
@@ -138,7 +138,7 @@ Section 256(8) requires referendum approval for amendments to Chapters 1, 2 or 1
          • Economic Stability      • Public Calamity
                                   │
                 ┌─────────────────▼─────────────────┐
-                │      Cabinet Enacts Decree        │
+                │       King Issues Decree         │
                 │    (Immediate Force of an Act)    │
                 └─────────────────┬─────────────────┘
                                   │
@@ -149,12 +149,16 @@ Section 256(8) requires referendum approval for amendments to Chapters 1, 2 or 1
                         [APPROVED] [REJECTED]
                            /             \
              ┌─────────────────┐     ┌─────────────────┐
-             │Permanent Law Act│     │ LAPSES (Void for│
+             │Force of an Act │     │ LAPSES (Void for│
              │     (พ.ร.บ.)     │     │     future)     │
              └─────────────────┘     └─────────────────┘
 ```
 
 ---
+
+Section 172 parliamentary disapproval takes effect the day after Gazette publication, preserving acts done during enforcement. Approval means the decree continues with the force of an Act; Senate rejection may be overridden by more than half of existing MPs. If waiting for an ordinary session would delay consideration, an extraordinary session must be convened.
+
+The optional section 173 referral occurs **before the referring House approves**: at least one fifth of its existing members submits an opinion through its President. Review concerns section 172 **paragraph one** (the four permitted purposes), rather than paragraph two's urgent-necessity assessment. Referral is within three days, the Court decides within sixty days, and parliamentary consideration pauses pending notification. A finding of noncompliance requires at least two thirds of existing judges and makes the decree ineffective from the outset, unlike parliamentary rejection.
 
 ## 🏃 Quick Start & Development
 

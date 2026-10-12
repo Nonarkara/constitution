@@ -1,0 +1,11 @@
+# Decree and rights summaries — 12 October 2026
+
+A bounded source audit of the remaining teaching diagrams confirmed defects that the corpus validator could not detect. The sources were sections 26, 151–152, 158 and 172–173 in the authoritative corpus; the independent reviewer also checked section 173 directly in the Thai PDF on page 50.
+
+The decree panel now distinguishes the four permitted purposes in section 172 paragraph one from the Cabinet's urgent-necessity assessment in paragraph two. It identifies the King as issuing authority, places the optional court referral before approval, explains referral/decision deadlines and the two-thirds existing-judge threshold, and distinguishes invalidity from inception from parliamentary disapproval effective the day after Gazette publication. It also explains Senate rejection/House reaffirmation, extraordinary sessions and revival of amended or repealed laws. The Chinese mnemonic has the same Gazette-next-day timing.
+
+The rights scale retains its interactions and drawing but illustrates proportionality without declaring that balance alone proves constitutionality. The section 26 list now states the current Constitution's conditions: constitutional requirements; otherwise rule of law, no disproportionate burden/restriction, human dignity and reasons/necessity; and general application. All list items and scale labels are localized in TH/EN/ZH. It no longer attributes an older Constitution's essential-core formula to section 26.
+
+The no-confidence fact uses existing-member denominators and labels 100 sponsors/251 votes as full-500-seat examples. The PM eight-year fact includes the exception for continued duties after vacating office. Matching README summaries were corrected, and unsupported exam-frequency superlatives were removed from the touched reference surface.
+
+Full verification passed 55 tests, corpus/translation/case/question validation and TypeScript. New regression checks inspect actual localized teaching strings for decree effects, review grounds and section 26 safeguards. Independent review found one retained Chinese mnemonic conflict, which was corrected. This audit covers these summaries; it does not certify every educational statement or actual iPad/microphone behavior.
