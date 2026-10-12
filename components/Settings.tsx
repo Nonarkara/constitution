@@ -3,30 +3,70 @@ import { useState } from "react";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
 import { questionIndex as questions } from "@/lib/outline";
-import { parseProgress } from "@/lib/progress";
+import { createBackup, parseBackup } from "@/lib/backup";
+import { REFLECTION_KEY } from "@/lib/amendment";
 import { defaultProgress } from "@/lib/learning";
-import { parseMarks } from "@/lib/marks";
-import { parseAnnotations } from "@/lib/annotations";
 export function Settings() {
-  const { lang, progress, save, large, setLarge, offline, marks, saveMarks, annotations, saveAnnotations } = useStudy();
+  const {
+    lang,
+    progress,
+    save,
+    large,
+    setLarge,
+    offline,
+    marks,
+    saveMarks,
+    annotations,
+    saveAnnotations,
+  } = useStudy();
   const [confirm, setConfirm] = useState(false),
     [message, setMessage] = useState("");
   const download = () => {
-    const url = URL.createObjectURL(
-      new Blob([JSON.stringify({ version: 2, progress, marks, annotations }, null, 2)], {
-        type: "application/json",
-      }),
-    );
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "constitution-progress.json";
-    a.click();
-    URL.revokeObjectURL(url);
+    try {
+      const backup = createBackup(
+        progress,
+        marks,
+        annotations,
+        localStorage.getItem(REFLECTION_KEY),
+      );
+      const url = URL.createObjectURL(
+        new Blob([JSON.stringify(backup, null, 2)], {
+          type: "application/json",
+        }),
+      );
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "constitution-progress.json";
+      a.click();
+      URL.revokeObjectURL(url);
+      setMessage(
+        tr(
+          lang,
+          "ส่งออกแล้ว รวมบันทึกแก้รัฐธรรมนูญ",
+          "Exported, including the amendment reflection.",
+          "已导出，包含修宪思考笔记。",
+        ),
+      );
+    } catch {
+      setMessage(
+        tr(
+          lang,
+          "ส่งออกไม่สำเร็จ อ่านบันทึกในเครื่องไม่ได้ ข้อมูลเดิมยังอยู่",
+          "Export failed: saved notes could not be read. Existing data is preserved.",
+          "导出失败：无法读取设备笔记，原数据仍保留。",
+        ),
+      );
+    }
   };
   return (
     <>
       <span className="page-kicker mono">
-        {tr(lang, "ทำให้เป็นห้องของคุณ", "Make yourself at home", "把这里调成你的房间")}
+        {tr(
+          lang,
+          "ทำให้เป็นห้องของคุณ",
+          "Make yourself at home",
+          "把这里调成你的房间",
+        )}
       </span>
       <h1>
         {tr(
@@ -123,7 +163,12 @@ export function Settings() {
         </p>
         <div className="settings-actions">
           <button onClick={download}>
-            {tr(lang, "ส่งออกความก้าวหน้าและบันทึก", "Export progress and notes", "导出进度与笔记")}
+            {tr(
+              lang,
+              "ส่งออกความก้าวหน้าและบันทึก",
+              "Export progress and notes",
+              "导出进度与笔记",
+            )}
           </button>
           <label className="button">
             {tr(lang, "นำเข้าความก้าวหน้า", "Import progress", "导入进度")}
@@ -136,17 +181,33 @@ export function Settings() {
                 if (!f) return;
                 try {
                   const d = JSON.parse(await f.text());
-                  const p = parseProgress(
-                    d.progress,
+                  const imported = parseBackup(
+                    d,
                     new Set(questions.map((q) => q.id)),
                   );
-                  if ((d.version !== 1 && d.version !== 2) || !p) throw new Error("invalid");
-                  // Version 2 also carries highlights, notes and bookmarks.
-                  const m = d.version === 2 ? parseMarks(d.marks) : null;
-                  const a = d.version === 2 ? parseAnnotations(d.annotations) : null;
-                  save(p);
-                  if (m) saveMarks(m);
-                  if (a) saveAnnotations(a);
+                  if (!imported) throw new Error("invalid");
+                  // Old backups have no reflection field: keep the existing note.
+                  // Store this separately saved record first; a storage failure must
+                  // not report success or replace the rest of the user's progress.
+                  if (imported.reflection !== undefined) {
+                    const old = localStorage.getItem(REFLECTION_KEY);
+                    if (old !== null)
+                      localStorage.setItem(
+                        `${REFLECTION_KEY}-backup-${Date.now()}`,
+                        old,
+                      );
+                    if (imported.reflection === null)
+                      localStorage.removeItem(REFLECTION_KEY);
+                    else
+                      localStorage.setItem(
+                        REFLECTION_KEY,
+                        JSON.stringify(imported.reflection),
+                      );
+                  }
+                  save(imported.progress);
+                  if (imported.marks) saveMarks(imported.marks);
+                  if (imported.annotations)
+                    saveAnnotations(imported.annotations);
                   setMessage(
                     tr(
                       lang,
