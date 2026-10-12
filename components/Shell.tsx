@@ -13,6 +13,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   const nav = [
     ["/learn/", labels.learn],
     ["/rights/", labels.rights],
+    ["/cheatsheet/", labels.cheatsheet],
     ["/section/", labels.search],
     ["/review/", labels.review],
     ["/sources/", labels.sources],

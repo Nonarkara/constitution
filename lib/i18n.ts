@@ -6,6 +6,11 @@ export const labels = {
   title: { th: "รัฐธรรมนูญ", en: "The Constitution", zh: "泰国宪法" },
   learn: { th: "เส้นทางเรียน", en: "Learn", zh: "学习路径" },
   rights: { th: "สิทธิของคุณ", en: "Your rights", zh: "你的权利" },
+  cheatsheet: {
+    th: "สรุปสูตร & แผนภาพ",
+    en: "Cheat sheets & diagrams",
+    zh: "速查表与图解",
+  },
   search: { th: "ค้นมาตรา", en: "Find a section", zh: "查找条文" },
   review: { th: "ทบทวน", en: "Review", zh: "复习" },
   sources: { th: "แหล่งอ้างอิง", en: "Sources", zh: "资料来源" },

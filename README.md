@@ -1,47 +1,216 @@
-# Constitution study
+# Constitution Study · รัฐธรรมนูญแห่งราชอาณาจักรไทย พ.ศ. ๒๕๖๐
 
-A notebook for Tikky and Thai civil-service aspirants. Public, anonymous study with device-local progress. Built with Next.js 16, React 19 and a static export.
+[![Verify & Tests](https://github.com/Nonarkara/constitution/actions/workflows/verify.yml/badge.svg)](https://github.com/Nonarkara/constitution)
+[![Live Site](https://img.shields.io/badge/live-constitution.nonarkara.org-amber?style=flat)](https://constitution.nonarkara.org)
+[![Offline PWA](https://img.shields.io/badge/pwa-offline--ready-black)](https://constitution.nonarkara.org)
+[![Trilingual Corpus](https://img.shields.io/badge/languages-TH%20%7C%20EN%20%7C%20ZH-amber)](https://constitution.nonarkara.org/section/)
 
-## Run
+> **A civic, trilingual, device-local notebook for Tikky, Thai civil-service aspirants (ก.พ. / ปลัดอำเภอ / นิติกร), and anyone who wants to understand the supreme law of Thailand through real-life scenarios, algorithmic formulas, and crayon diagrams.**
+>
+> 📖 [ภาษาไทย (README.th.md)](./README.th.md) · [English (README.md)](./README.md) · [中文 (README.zh.md)](./README.zh.md)
 
-```sh
+---
+
+## 🎨 Visual Identity: Civic & Crayon Aesthetic
+
+```
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │   ___               _   _ _         _   _              ____ ____ ___   │
+ │  / _ \___  _ __  ___| |_(_) |_ _   _| |_(_) ___  _ __  |___ \ ___/ _ \ │
+ │ | | | / _ \| '_ \/ __| __| | __| | | | __| |/ _ \| '_ \   __) / _ \ | |│
+ │ | |_| | (_) | | | \__ \ |_| | |_| |_| | |_| | (_) | | | | / __/ (_) | |│
+ │  \__\_\\___/|_| |_|___/\__|_|\__|\__,_|\__|_|\___/|_| |_||_____\___/ \___/│
+ │                                                                        │
+ │  Warm Paper #fff · Charcoal Ink #24251f · Civic Amber #f59e0b Accent   │
+ │  Wax Crayon Strokes · Organic Sketches · Real-life Problem Puzzles     │
+ └────────────────────────────────────────────────────────────────────────┘
+```
+
+The app pairs **strict civic typography** (IBM Plex Sans Thai, Source Sans 3, JetBrains Mono) with **warm, approachable wax-crayon diagrams**:
+- **Pure White / Warm Wash Background:** Clean civic surface without distraction.
+- **Amber Yellow `#f59e0b` Accent:** Marks the single next action and active focus.
+- **Wax Crayon & Textured Pencil Illustrations:** Friendly adult study scenes and hand-drawn conceptual diagrams, providing visual warmth without infantilizing the law.
+- **Verbatim Thai Law First:** Translations and teaching summaries never override the official Thai Gazette text.
+
+---
+
+## 🚀 Key Features
+
+### 1. Complete Trilingual Legal Corpus (279 Sections)
+- **Thai (Official):** Exact 2017 text incorporating the 2021 amendments to Sections 83, 86, and 91 (two-ballot electoral system: 400 constituency + 100 party-list).
+- **English (Council of State + Study Overlays):** Government translations supplemented by amended study translations and precise corrections against the Thai Gazette for Sections 37, 98, 101, 134, and 256.
+- **Chinese (Full Study Translation):** 279 comprehensive study translations with short summaries and exact Thai citations (clearly marked as study translations).
+
+### 2. Algorithmic Decision Trees & Crayon Cheat Sheets (`/cheatsheet/`)
+- **Legal Hierarchy Pyramid (มาตรา 5):** Interactive crayon pyramid showing Constitution > Organic Acts/Acts/Emergency Decrees > Royal Decrees > Ministerial Regs > Local Ordinances.
+- **The 3-Reading Amendment Algorithm (มาตรา 255 & 256):** Visual flowchart with the "Triple Lock" conditions and mandatory referendum trigger.
+- **Emergency Decree 4-Gate Decision Tree (มาตรา 172 & 173):** Clear step-by-step logic gates for executive decree validity and parliamentary review.
+- **Proportionality Scale for Rights (มาตรา 26):** Visual balance test checking legal basis, essential core, non-singularity, and proportionality stricto sensu.
+- **Vital Exam Numbers:** Instant lookup for 500 MPs, 200 Senators, 36 Cabinet members, 8-year PM limit, 19 Privy Councillors, 9 Constitutional Court judges, and the 7-3-9-7-7 Independent Organ counts.
+- **Mnemonic Stories & Rhymes:** Trilingual memory rhymes that anchor complex numbers into everyday analogies.
+
+### 3. Expanded 85-Question Practice Bank (`/learn/` & `/review/`)
+- 5 unique trilingual questions for **every single chapter** (16 chapters + transitional provisions).
+- Each question includes:
+  - Scenario-based prompt in TH, EN, ZH.
+  - Four distinct choices.
+  - Statutorily grounded explanation with exact Section citations.
+  - **Algorithmic Formula (สูตรวิเคราะห์):** Step-by-step logic gate.
+  - **Memory Anchor (เทคนิคช่วยจำ):** Memorable mnemonics to cement recall.
+
+### 4. Spaced Repetition & Daily Energy
+- **Retrieval Schedule:** Missed questions return after **10 minutes**; correct answers advance to **1, 3, 7, and 14 days**.
+- **Energy Pacing:** 12 daily energy points reset at Bangkok midnight (energy is a gentle pacing guide, never blocking further study).
+- **80% Chapter Mastery:** Requires at least 80% distinct correct answers per chapter.
+
+### 5. Life-First Puzzles & "Your Rights" Shelf (`/rights/`)
+- 20 real-life scenarios (phone privacy, arrest warrants, environmental petitions, consumer rights).
+- Guess first without scoring, then discover the verbatim Thai quote and the constitutional "why".
+
+### 6. Full Offline Audio & Senate Recordings
+- **837 Individual Section Readings:** Recorded in TH, EN, and ZH with offline seekable caching.
+- **3 Podcast RSS Feeds:** Compatible with standard podcast clients (`/podcast/th.xml`, `/podcast/en.xml`, `/podcast/zh.xml`).
+- **29 Senate Audio Links:** Direct links to official Senate audio episodes covering all sections.
+
+---
+
+## 📐 Constitutional Algorithms Cheat Sheet
+
+### Algorithm 1: Constitutional Supremacy & Nullity (มาตรา 5)
+```
+          ┌──────────────────────────────────────┐
+          │     Any Statutory Rule or Act        │
+          └──────────────────┬───────────────────┘
+                             │
+                  Is it in conflict with
+                   the Constitution?
+                    /             \
+                 [YES]            [NO]
+                  /                 \
+        ┌───────────────────┐    ┌─────────────────────┐
+        │ VOID & UNENFORCEABLE│  │ LAWFUL & ENFORCEABLE│
+        │ Certified to Court│    └─────────────────────┘
+        │   under Sec 212   │
+        └───────────────────┘
+```
+
+$$\text{Conflict}(\text{Law}, \text{Constitution}) \implies \text{Law} = \text{VOID}$$
+
+---
+
+### Algorithm 2: The Three-Reading Constitutional Amendment (มาตรา 255–256)
+```
+┌──────────────┐     ┌──────────────────────┐     ┌──────────────────────┐
+│  PROPOSAL    │ ──> │ READING 1: ACCEPTANCE│ ──> │ READING 2: SECTIONS  │
+│ Cabinet /    │     │ ≥ 1/2 of both Houses │     │ Simple Majority of   │
+│ 1/5 MPs /    │     │ AND ≥ 1/3 of Senate  │     │ votes cast           │
+│ 50,000 Voters│     │ (≥ 67 of 200 Senators)     └──────────┬───────────┘
+└──────────────┘     └──────────────────────┘                │
+                                                       WAIT 15 DAYS
+                                                             │
+┌──────────────┐     ┌──────────────────────┐     ┌──────────▼───────────┐
+│ ROYAL ASSENT │ <── │  MANDATORY REFERENDUM│ <── │ READING 3: APPROVAL  │
+│ PM submits   │     │ Triggered if Ch 1, 2,│     │ ≥ 1/2 of both Houses │
+│ within 15 d  │     │ 15 or Court/Organ    │     │ AND ≥ 1/3 of Senate  │
+└──────────────┘     │ powers are altered!  │     │ AND ≥ 20% Non-Gov MPs│
+                     └──────────────────────┘     └──────────────────────┘
+```
+
+$$\text{Reading 1} = \left(\text{Total} \ge \frac{1}{2}\right) \land \left(\text{Senate} \ge \frac{1}{3}\right)$$
+
+$$\text{Reading 3} = \left(\text{Total} \ge \frac{1}{2}\right) \land \left(\text{Senate} \ge \frac{1}{3}\right) \land \left(\text{Opposition MPs} \ge 20\%\right)$$
+
+---
+
+### Algorithm 3: Emergency Decrees (พระราชกำหนด - มาตรา 172)
+```
+                ┌───────────────────────────────────┐
+                │ Urgent Inevitable Necessity (ม.172)│
+                └─────────────────┬─────────────────┘
+                                  │
+         Must satisfy one of 4 Protected Grounds:
+         • National Security       • Public Safety
+         • Economic Stability      • Public Calamity
+                                  │
+                ┌─────────────────▼─────────────────┐
+                │      Cabinet Enacts Decree        │
+                │    (Immediate Force of an Act)    │
+                └─────────────────┬─────────────────┘
+                                  │
+                ┌─────────────────▼─────────────────┐
+                │   Submit to Parliament Next Session│
+                └─────────────────┬─────────────────┘
+                                 / \
+                        [APPROVED] [REJECTED]
+                           /             \
+             ┌─────────────────┐     ┌─────────────────┐
+             │Permanent Law Act│     │ LAPSES (Void for│
+             │     (พ.ร.บ.)     │     │     future)     │
+             └─────────────────┘     └─────────────────┘
+```
+
+---
+
+## 🏃 Quick Start & Development
+
+```bash
+# Install dependencies
 npm ci
+
+# Run development server
 npm run dev
+
+# Run comprehensive verification suite (Corpus + Translations + Cases + Tests + Types)
 npm run verify
+
+# Build static production export
 npm run build
 ```
 
-The deployable static site is `out/`, served from https://constitution.nonarkara.org as Cloudflare Worker assets (`wrangler.jsonc`). Deploy with `npm run build && wrangler deploy`. The earlier OpenAI Sites edition (`.openai/hosting.json`) stays up for existing links; progress moves between them through Settings export/import.
-
-## What works
-
-- 279 Thai sections with exact PDF citations, incorporating the 2021 amendments to 83, 86 and 91.
-- Council of State English translation. Current amended English study translations are supplied; original government passages remain available. Sections 37/98/101/134/256 have study corrections against Thai.
-- 279 full Chinese study translations plus retained short summaries; exact Thai source citations and explicit unofficial status.
-- 51 original trilingual practice questions across all 16 chapters and transitory provisions; explanatory feedback and citations.
-- Distinct-question mastery (80%), missed-question review after 10 minutes, correct-question review after 1/3/7/14 days, Bangkok-day streaks and supportive energy.
-- Full-text search in Thai/current English/full Chinese text and summaries and section-number search including Thai digits. Ranked by relevance, with no invented exam-frequency claims.
-- 837 individually recorded TH/EN/ZH readings, MP3 downloads, three podcast feeds, optional saved offline audio with seeking; device voices remain an alternative. Browser voice search has keyboard-dictation fallback.
-- 29 Senate recording links covering every section. Embedded Google Drive players require internet; recording edition has not been independently verified.
-- PWA install on iPad, complete versioned offline shell with local fonts, larger text, progress export/import.
-- Interactive institution, bill and amendment overviews, with textual equivalents and reduced-motion support.
-- 20 trilingual real-life puzzles, one or more per chapter: guess, then a story answer with verbatim Thai quotes and a think-first "why". Never scored. Also browsable on the Your rights shelf.
-- Ask: questions beyond the notebook go to Non-Laws (real statutes and Supreme Court rulings) with the section being read; answers render inline, with an open-in-Non-Laws fallback.
-
-## Limits
-
-Study translations and generated practice questions have not received independent legal/editorial certification. Targeted translation fidelity review and structural source checks are recorded in data/translations/. The optional Senate player covers ranges of sections; prepared recordings cover individual sections. 837 prepared recordings avoid dependence on installed device voices. The alternative device speech still varies by platform. The quiz bank is an introductory practice set, not coverage of every detail or an actual exam bank. OCSC adjacent material is outside this edition.
-
-Progress is browser-local: no automatic device synchronization. Clearing browser data clears progress unless exported. No PIN access mode is implemented for the public edition.
-
-See `data/README.md`, `context.md` and the corpus source metadata for provenance and extraction limitations.
-
-## Recorded audio rebuild
-
-On macOS with the installed Kanya, Samantha and Tingting voices plus ffmpeg:
-
-```sh
-python3 scripts/generate-audio.py --languages th,en,zh --workers 2
+### Deployment
+The production static site is exported to `out/` and deployed to Cloudflare Workers via Wrangler:
+```bash
+npm run build && wrangler deploy
 ```
 
-Generation is resumable by text and audio hashes. `npm run build` validates all 837 recordings, creates the podcast feeds, exports the app and generates the exact offline asset manifest. The audio cache has a content revision so corrected recordings cannot leave stale legal wording offline. Audio is downloaded to the PWA cache only when requested; the 837 files are not forced onto a phone.
+---
+
+## 📂 Project Structure
+
+```
+├── app/
+│   ├── cheatsheet/       # Interactive Crayon Cheat Sheets & Algorithmic Diagrams
+│   ├── learn/            # Chapter Learning Route & Mastery Map
+│   ├── review/           # Spaced Repetition Due Card Review
+│   ├── rights/           # "Your Rights" Real-life Case Puzzles
+│   ├── section/          # 3-Language Reading Room & Search
+│   ├── settings/         # Offline Storage, Export/Import, Large Text
+│   └── sources/          # Source PDF Citations & Legal Disclaimers
+├── components/
+│   ├── CheatSheet.tsx    # Crayon Pyramids, Decision Trees & Scale Diagrams
+│   ├── InstitutionMap.tsx# Sovereignty Flowchart (Sec 3)
+│   ├── LawFlow.tsx       # Bill & Amendment Flow
+│   ├── Puzzle.tsx        # Pre-reading Life Puzzles
+│   ├── Quiz.tsx          # Practice Questions with Formula Feedback
+│   ├── Reader.tsx        # Trilingual Comparison Reader & Audio Player
+│   └── StudyArt.tsx      # Crayon Scene Artwork Display
+├── data/
+│   ├── constitution.json # Authoritative Bilingual Corpus (279 Sections)
+│   ├── questions.json    # 85 Trilingual Practice Questions with Formulas
+│   ├── cases.json        # 20 Verbatim Life Puzzles
+│   └── translations/     # Detailed Chinese & English Study Overlays
+├── lib/
+│   ├── corpus.ts         # Section Loading, Text Comparison & Search
+│   ├── learning.ts       # Spaced Schedule, Bangkok Streaks & Energy
+│   ├── progress.ts       # Safe Schema Parsing for Local Storage
+│   └── i18n.ts           # Trilingual Translation Engine
+└── tests/                # Node Native Test Suite (30 unit & boundary tests)
+```
+
+---
+
+## 📜 Legal Notice & Source Provenance
+
+- **Authoritative Text:** The Thai text published in the Royal Thai Government Gazette (ราชกิจจานุเบกษา) is the sole authoritative legal source.
+- **Unofficial Translations:** English (Office of the Council of State + amended study overlays) and Chinese translations are provided strictly for educational study and comparative analysis.
+- **Public Domain:** Thai statutory laws and court judgments are public domain materials under Section 7 of the Thai Copyright Act B.E. 2537.

@@ -120,6 +120,86 @@
     }
   },
   {
+    "id": "c01-04",
+    "chapter": 1,
+    "sections": [
+      4
+    ],
+    "prompt": {
+      "th": "หากมีหน่วยงานรัฐออกคำสั่งเลือกปฏิบัติต่อบุคคลโดยไม่เป็นธรรม ขัดต่อหลักการพื้นฐานใดในหมวด 1?",
+      "en": "If a state agency issues an order unfairly discriminating against persons, which fundamental principle in Chapter 1 is violated?",
+      "zh": "如果政府部门下令对特定人员进行不公正歧视，违反了第1章哪项基本原则？"
+    },
+    "choices": [
+      {
+        "th": "ศักดิ์ศรีความเป็นมนุษย์ สิทธิ เสรีภาพ และความเสมอภาค ย่อมได้รับความคุ้มครองตามมาตรา 4",
+        "en": "Human dignity, rights, liberties and equality shall be protected under section 4",
+        "zh": "人的尊严、权利、自由与平等依据第4条应受保护"
+      },
+      {
+        "th": "ประเทศไทยสามารถแบ่งแยกเป็นหลายแคว้นอิสระได้",
+        "en": "Thailand may be partitioned into independent regions",
+        "zh": "泰国可以分割为独立的地区"
+      },
+      {
+        "th": "ฝ่ายบริหารมีอำนาจเหนือกฎหมายสูงสุด",
+        "en": "The executive branch holds power above the supreme law",
+        "zh": "行政机关拥有高于最高法律的权力"
+      },
+      {
+        "th": "การเลือกปฏิบัติกระทำได้เสมอตราบใดที่เป็นประโยชน์ทางการเงินของรัฐ",
+        "en": "Discrimination is always permissible if it benefits state finances",
+        "zh": "只要有利于国家财政，歧视总是被允许的"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 4 กำหนดให้ศักดิ์ศรีความเป็นมนุษย์ สิทธิ เสรีภาพ และความเสมอภาคของบุคคลได้รับความคุ้มครอง และปวงชนชาวไทยย่อมได้รับความคุ้มครองเสมอกัน [สูตรวิเคราะห์: ศักดิ์ศรี + เสมอภาค = รัฐต้องไม่เลือกปฏิบัติ] [เทคนิคช่วยจำ: 4 เสาหลัก = ศักดิ์ศรี สิทธิ เสรีภาพ เสมอภาค]",
+      "en": "Section 4 guarantees that human dignity, rights, liberties and equality shall be protected equally for all Thai people. [Algorithm: Dignity + Equality = Prohibition of arbitrary state discrimination] [Memory Anchor: 4 Pillars of Human Worth].",
+      "zh": "第4条规定人的尊严、权利、自由与平等应受保护，全体泰国人民受宪法平等保护。[算法公式：人的尊严 + 平等保护 = 禁止不公歧视] [记忆口诀：4项核心价值——尊严、权利、自由与平等]。"
+    }
+  },
+  {
+    "id": "c01-05",
+    "chapter": 1,
+    "sections": [
+      5
+    ],
+    "prompt": {
+      "th": "เมื่อไม่มีบทบัญญัติแห่งรัฐธรรมนูญนี้บังคับแก่กรณีใด ให้วินิจฉัยกรณีนั้นอย่างไรตามมาตรา 5 วรรคสอง?",
+      "en": "When no provision of this Constitution applies to a case, how shall it be decided under section 5, paragraph two?",
+      "zh": "当本宪法没有明文条款适用于某种情况时，依第5条第2款应如何裁决？"
+    },
+    "choices": [
+      {
+        "th": "วินิจฉัยไปตามประเพณีการปกครองประเทศไทยในระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข",
+        "en": "Decide according to the constitutional conventions of Thailand under the democratic regime with the King as Head of State",
+        "zh": "依以国王为国家元首的民主政体下泰国的宪政惯例裁决"
+      },
+      {
+        "th": "ให้นายกรัฐมนตรีใช้อำนาจเด็ดขาดออกคำสั่งโดยไม่ต้องอ้างอิงหลักการใด",
+        "en": "The Prime Minister exercises arbitrary power without reference to any principle",
+        "zh": "由总理行使专断权力发布命令，无需参考任何原则"
+      },
+      {
+        "th": "ให้พักการพิจารณาคดีไว้ไม่มีกำหนดจนกว่าจะมีรัฐธรรมนูญฉบับใหม่",
+        "en": "Suspend the proceedings indefinitely until a new constitution is enacted",
+        "zh": "无限期中止诉讼程序，直到制定新宪法"
+      },
+      {
+        "th": "ให้ใช้กฎหมายของต่างประเทศมาแทนที่โดยอัตโนมัติ",
+        "en": "Automatically substitute foreign national statutes",
+        "zh": "自动适用外国法律代替"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 5 วรรคสอง บัญญัติว่า เมื่อไม่มีบทบัญญัติแห่งรัฐธรรมนูญนี้บังคับแก่กรณีใด ให้กระทำการนั้นหรือวินิจฉัยกรณีนั้นไปตามประเพณีการปกครองประเทศไทยในระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข [สูตรวิเคราะห์: ม.5 ว.1 รธน.สูงสุดขัดไม่ได้, ม.5 ว.2 ไร้บทบัญญัติใช้อุดช่องว่างด้วยประเพณีการปกครอง] [เทคนิคช่วยจำ: ม.5 คุมกฎหมาย ช่องว่างคลายด้วยประเพณี]",
+      "en": "Section 5 paragraph two directs that silence in the constitutional text is resolved by constitutional conventions under the democratic regime with the King as Head of State. [Algorithm: Sec 5 p.1 = Supremacy, p.2 = Constitutional conventions fill gaps].",
+      "zh": "第5条第2款规定，宪法未明文规定时，依据以国王为国家元首的民主政体下泰国的宪政惯例行事或裁决。[算法公式：第5条第1款宪法最高，第2款惯例填补漏洞] [记忆口诀：宪法至上，惯例补白]。"
+    }
+  },
+  {
     "id": "c02-01",
     "chapter": 2,
     "sections": [
@@ -237,6 +317,86 @@
       "th": "มาตรา 12 ห้ามองคมนตรีเป็นสมาชิกหรือเจ้าหน้าที่ของพรรคการเมือง และห้ามแสดงการฝักใฝ่ในพรรคใด",
       "en": "Section 12 bars Privy Councillors from party membership or office and from showing allegiance to a party.",
       "zh": "第12条禁止枢密顾问成为政党成员或工作人员，也禁止表现出对任何政党的偏向。"
+    }
+  },
+  {
+    "id": "c02-04",
+    "chapter": 2,
+    "sections": [
+      10
+    ],
+    "prompt": {
+      "th": "คณะองคมนตรีตามมาตรา 10 ประกอบด้วยประธานองคมนตรีหนึ่งคน และองคมนตรีอื่นอีกจำนวนเท่าใด?",
+      "en": "Under section 10, the Privy Council consists of one President and how many other Privy Councillors?",
+      "zh": "依据第10条，枢密院由一名枢密院院长和多少名枢密院顾问组成？"
+    },
+    "choices": [
+      {
+        "th": "ไม่เกินสิบแปดคน",
+        "en": "Not more than eighteen persons",
+        "zh": "不超过十八人"
+      },
+      {
+        "th": "ไม่เกินสามสิบห้าคน",
+        "en": "Not more than thirty-five persons",
+        "zh": "不超过三十五人"
+      },
+      {
+        "th": "ไม่เกินยี่สิบห้าคน",
+        "en": "Not more than twenty-five persons",
+        "zh": "不超过二十五人"
+      },
+      {
+        "th": "ไม่จำกัดจำนวนขึ้นอยู่กับมติคณะรัฐมนตรี",
+        "en": "No limit, depending on Cabinet resolution",
+        "zh": "人数不限，由内阁决议决定"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 10 บัญญัติว่า พระมหากษัตริย์ทรงเลือกและแต่งตั้งผู้ทรงคุณวุฒิเป็นประธานองคมนตรีคนหนึ่งและองคมนตรีอื่นอีกไม่เกินสิบแปดคน ประกอบเป็นคณะองคมนตรี [สูตรตัวเลข: 1 ประธาน + สูงสุด 18 องคมนตรี = รวมไม่เกิน 19 คน] [เทคนิคช่วยจำ: องคมนตรีรวมไม่เกิน 19 (อย่าสับสนกับ ครม. 36 คน)]",
+      "en": "Section 10 states that the King selects and appoints one President of the Privy Council and not more than eighteen other Privy Councillors. [Formula: 1 President + Max 18 Councillors = Max 19 members].",
+      "zh": "第10条规定国王选任枢密院院长一人及其他枢密院顾问不超过十八人组成枢密院。[计算公式：1位院长 + 最多18位顾问 = 最多19人] [记忆口诀：枢密院上限19人（勿与内阁36人混淆）]。"
+    }
+  },
+  {
+    "id": "c02-05",
+    "chapter": 2,
+    "sections": [
+      16
+    ],
+    "prompt": {
+      "th": "เมื่อพระมหากษัตริย์จะทรงแต่งตั้งผู้สำเร็จราชการแทนพระองค์ตามมาตรา 16 ผู้ใดเป็นผู้ลงนามรับสนองพระบรมราชโองการ?",
+      "en": "When the King appoints a Regent under section 16, who countersigns the Royal Command?",
+      "zh": "国王依第16条任命摄政王时，由谁副署王室通令？"
+    },
+    "choices": [
+      {
+        "th": "ประธานรัฐสภา",
+        "en": "President of the National Assembly",
+        "zh": "国会主席"
+      },
+      {
+        "th": "นายกรัฐมนตรี",
+        "en": "Prime Minister",
+        "zh": "总理"
+      },
+      {
+        "th": "ประธานศาลฎีกา",
+        "en": "President of the Supreme Court",
+        "zh": "最高法院院长"
+      },
+      {
+        "th": "ประธานศาลรัฐธรรมนูญ",
+        "en": "President of the Constitutional Court",
+        "zh": "宪法法院院长"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 16 วรรคหนึ่ง บัญญัติให้ประธานรัฐสภาเป็นผู้ลงนามรับสนองพระบรมราชโองการแต่งตั้งผู้สำเร็จราชการแทนพระองค์ [สูตรวิเคราะห์: การตั้งผู้สำเร็จราชการแทนพระองค์เป็นเรื่องประมุขของรัฐ $\\rightarrow$ ประธานรัฐสภา (ผู้นำสภานิติบัญญัติสองสภา) เป็นผู้รับสนองฯ] [เทคนิคช่วยจำ: ผู้สำเร็จราชการ = ประธานรัฐสภารับสนอง]",
+      "en": "Section 16 paragraph one designates the President of the National Assembly as the counter-signatory for the Royal Command appointing a Regent. [Algorithm: Regent appointment $\\rightarrow$ Countersigned by President of the National Assembly].",
+      "zh": "第16条第1款规定由国会主席副署任命摄政王的王室通令。[算法公式：摄政任命 $\\rightarrow$ 国会主席副署] [记忆口诀：摄政重大，国会主席副署]。"
     }
   },
   {
@@ -360,6 +520,86 @@
     }
   },
   {
+    "id": "c03-04",
+    "chapter": 3,
+    "sections": [
+      26
+    ],
+    "prompt": {
+      "th": "การตรากฎหมายที่มีผลเป็นการจำกัดสิทธิหรือเสรีภาพของบุคคลตามมาตรา 26 ต้องเป็นไปตามเงื่อนไขสำคัญใด?",
+      "en": "Enacting a law that restricts personal rights or liberties under section 26 must satisfy which vital condition?",
+      "zh": "依据第26条，制定限制个人权利或自由的法律必须符合哪项关键条件？"
+    },
+    "choices": [
+      {
+        "th": "ต้องไม่กระทบกระเทือนสาระสำคัญแห่งสิทธิและต้องไม่มุ่งหมายให้ใช้บังคับแก่กรณีใดกรณีหนึ่ง",
+        "en": "Must not affect the essential substance of rights and not be intended to apply to a specific individual case",
+        "zh": "不得损害权利的核心实质，且不得专门针对特定个案"
+      },
+      {
+        "th": "สามารถจำกัดได้ตามความพอใจของเจ้าหน้าที่ผู้บังคับใช้กฎหมาย",
+        "en": "May be restricted at the arbitrary discretion of enforcement officers",
+        "zh": "可由执法人员随意裁量限制"
+      },
+      {
+        "th": "ต้องยกเลิกสิทธินั้นเป็นการถาวรเพื่อความสะดวกของรัฐ",
+        "en": "Must abolish the right permanently for administrative convenience",
+        "zh": "必须永久废除该权利以便于国家行政管理"
+      },
+      {
+        "th": "จำกัดได้เฉพาะบุคคลที่มีอายุเกินหกสิบปีเท่านั้น",
+        "en": "May only restrict persons over sixty years of age",
+        "zh": "只能限制六十岁以上的人员"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 26 บัญญัติหลักความได้สัดส่วน: กฎหมายจำกัดสิทธิต้องเป็นไปตามเงื่อนไขที่รัฐธรรมนูญบัญญัติ ต้องไม่กระทบกระเทือนสาระสำคัญแห่งสิทธิหรือเสรีภาพ และต้องไม่มุ่งหมายให้ใช้บังคับแก่กรณีใดกรณีหนึ่งหรือบุคคลใดบุคคลหนึ่งเป็นการเจาะจง [สูตรวิเคราะห์: 4 ด่าน ม.26 = ฐานกม. + ไม่กระทบสาระสำคัญ + ไม่เจาะจงบุคคล + ได้สัดส่วนพอสมควรแก่เหตุ]",
+      "en": "Section 26 sets the Proportionality Test: rights restriction must have constitutional statutory basis, must not undermine the essential substance of the right, must not target a specific person/case, and must be proportionate. [Algorithm: 4-Gate Proportionality Test].",
+      "zh": "第26条确立了比例原则：限制权利的法律不得损害权利的核心实质，不得针对特定个人或个案，并须符合比例原则。[算法公式：第26条四道关卡 = 法律依据 + 不损核心实质 + 不针对个案 + 符合比例原则]。"
+    }
+  },
+  {
+    "id": "c03-05",
+    "chapter": 3,
+    "sections": [
+      29
+    ],
+    "prompt": {
+      "th": "ในคดีอาญา มาตรา 29 วรรคสอง ให้สันนิษฐานไว้ก่อนว่าผู้ต้องหาหรือจำเลยเป็นอย่างไร?",
+      "en": "In criminal cases, what does section 29 paragraph two presume regarding a suspect or defendant?",
+      "zh": "在刑事案件中，第29条第2款对嫌疑人或被告人作何推定？"
+    },
+    "choices": [
+      {
+        "th": "สันนิษฐานไว้ก่อนว่าไม่มีความผิด และก่อนมีคำพิพากษาถึงที่สุดจะปฏิบัติต่อบุคคลเสมือนเป็นผู้กระทำความผิดมิได้",
+        "en": "Presumed innocent; before a final judgment, they shall not be treated as a convict",
+        "zh": "推定为无罪；在作出终审判决前，不得视同犯罪分子对待"
+      },
+      {
+        "th": "สันนิษฐานไว้ก่อนว่ามีความผิดจนกว่าจะหาเงินมาประกันตัวได้",
+        "en": "Presumed guilty until bail money is deposited",
+        "zh": "推定为有罪，直至交纳保释金"
+      },
+      {
+        "th": "สันนิษฐานว่าต้องถูกคุมขังไว้ก่อนเสมอโดยไม่มีสิทธิขอปล่อยชั่วคราว",
+        "en": "Presumed to be detained without any right to temporary release",
+        "zh": "推定必须关押，无权申请保释"
+      },
+      {
+        "th": "สันนิษฐานว่าคำให้การของเจ้าหน้าที่ถูกต้องเสมอโดยไม่ต้องสืบพยาน",
+        "en": "Presumed that officer testimony is always irrebuttably true",
+        "zh": "推定执法人员证词绝对正确无需举证"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 29 วรรคสอง บัญญัติหลักสันนิษฐานไว้ก่อนว่าเป็นผู้บริสุทธิ์ (Presumption of Innocence) และวรรคสามกำหนดว่าการควบคุมหรือคุมขังให้ทำได้เท่าที่จำเป็นเพื่อป้องกันมิให้หลบหนี [สูตรวิเคราะห์: ม.29 = บริสุทธิ์ไว้ก่อนจนกว่าจะถึงที่สุด + ขังเท่าที่จำเป็น + ปล่อยชั่วคราวเป็นหลัก]",
+      "en": "Section 29 paragraph two establishes the Presumption of Innocence: a suspect or defendant is presumed innocent until proven guilty by a final judgment. [Algorithm: Presumption of innocence + Proportional detention + Bail as default].",
+      "zh": "第29条第2款确立了无罪推定原则（Presumption of Innocence）：在终审判决前推定无罪，不得作为犯罪分子对待。[算法公式：第29条 = 无罪推定 + 必要限度关押 + 保释为原则]。"
+    }
+  },
+  {
     "id": "c04-01",
     "chapter": 4,
     "sections": [
@@ -477,6 +717,86 @@
       "th": "มาตรา 50 (9) กำหนดหน้าที่เสียภาษีอากรตามที่กฎหมายบัญญัติ",
       "en": "Section 50(9) establishes the duty to pay taxes as prescribed by law.",
       "zh": "第50条第9项规定依法纳税的义务。"
+    }
+  },
+  {
+    "id": "c04-04",
+    "chapter": 4,
+    "sections": [
+      50
+    ],
+    "prompt": {
+      "th": "ข้อใดเป็น 'หน้าที่ของปวงชนชาวไทย' ตามที่บัญญัติไว้ในมาตรา 50(5)?",
+      "en": "Which of the following is a duty of the Thai people under section 50(5)?",
+      "zh": "依据第50条第5项，下列哪项属于泰国人民的义务？"
+    },
+    "choices": [
+      {
+        "th": "รับราชการทหารตามที่กฎหมายบัญญัติ",
+        "en": "Serve in the armed forces as provided by law",
+        "zh": "依法服兵役"
+      },
+      {
+        "th": "บริจาคทรัพย์สินให้พรรคการเมืองทุกปี",
+        "en": "Donate property to political parties annually",
+        "zh": "每年向政党捐赠财产"
+      },
+      {
+        "th": "เข้าร่วมชุมนุมสาธารณะทุกครั้งที่มีการจัด",
+        "en": "Attend every public rally organized in the locality",
+        "zh": "参加当地举办的每次集会"
+      },
+      {
+        "th": "ทำงานให้กับหน่วยงานรัฐโดยไม่รับค่าตอบแทน",
+        "en": "Work for government agencies without remuneration",
+        "zh": "无偿为国家机关工作"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 50(5) กำหนดหน้าที่ของปวงชนชาวไทยในการรับราชการทหารตามที่กฎหมายบัญญัติ [สูตรวิเคราะห์: มาตรา 50 บัญญัติหน้าที่ 10 ประการ: (1) ชาติศาสน์กษัตริย์ (2) เคารพกฎหมาย (3) ไม่ละเมิดสิทธิผู้อื่น (4) ศึกษาภาคบังคับ (5) ทหาร (6) เคารพความซื่อสัตย์ (7) ไปเลือกตั้ง (8) ร่วมมือสิ่งแวดล้อม (9) เสียภาษี (10) ไม่ทุจริต]",
+      "en": "Section 50(5) specifies the duty to undergo military service as provided by law. [Algorithm: Sec 50 lists 10 fundamental civic duties].",
+      "zh": "第50条第5项规定公民依法服兵役的宪法义务。[算法公式：第50条列明10项公民基本义务，服兵役为第5项]。"
+    }
+  },
+  {
+    "id": "c04-05",
+    "chapter": 4,
+    "sections": [
+      50
+    ],
+    "prompt": {
+      "th": "หากบุคคลไม่ไปใช้สิทธิเลือกตั้งหรือไม่ไปลงประชามติโดยไม่มีเหตุอันสมควร รัฐธรรมนูญมาตรา 50(7) กำหนดผลไว้อย่างไร?",
+      "en": "If a person fails to vote or participate in a referendum without justifiable reason, what does section 50(7) prescribe?",
+      "zh": "如果公民无正当理由不参加选举或公投，第50条第7项规定了何种后果？"
+    },
+    "choices": [
+      {
+        "th": "ย่อมถูกจำกัดสิทธิบางประการตามที่กฎหมายบัญญัติ",
+        "en": "Shall be subject to restriction of certain rights as provided by law",
+        "zh": "将依法受到某些权利的限制"
+      },
+      {
+        "th": "ถูกเพิกถอนสัญชาติไทยทันทีโดยคำสั่งเจ้าหน้าที่",
+        "en": "Thai nationality revoked immediately by administrative order",
+        "zh": "由官员直接下令立即撤销泰国国籍"
+      },
+      {
+        "th": "ต้องโทษจำคุกอย่างน้อยหนึ่งปีโดยไม่มีการรอลงอาญา",
+        "en": "Imprisoned for at least one year without probation",
+        "zh": "处一年以上有期徒刑且不得缓刑"
+      },
+      {
+        "th": "ถูกริบทรัพย์สินทั้งหมดเข้าเป็นของแผ่นดิน",
+        "en": "All personal property confiscated to the state",
+        "zh": "个人全部财产没收归国有"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 50(7) บัญญัติให้การไปใช้สิทธิเลือกตั้งหรือลงประชามติเป็นหน้าที่ ผู้ไม่ไปใช้สิทธิโดยไม่มีเหตุอันสมควร ย่อมถูกจำกัดสิทธิบางประการตามที่กฎหมายบัญญัติ (เช่น สิทธิสมัครรับเลือกตั้ง หรือสิทธิเข้าชื่อเสนอกฎหมาย) [สูตรวิเคราะห์: หน้าที่ไปเลือกตั้ง $\\rightarrow$ ไม่ไปเสียสิทธิทางการเมืองตามกฎหมายบัญญัติ]",
+      "en": "Section 50(7) establishes voting as a civic duty; failure to vote without justifiable cause results in statutory restrictions on specified political rights. [Algorithm: Non-voting $\\rightarrow$ Statutory limitation of political rights].",
+      "zh": "第50条第7项规定投票不仅是权利也是义务；无正当理由不投票者，依法受到某些政治权利的限制（如参选资格等）。[算法公式：不履行投票义务 $\\rightarrow$ 依法限制特定权利]。"
     }
   },
   {
@@ -600,6 +920,86 @@
     }
   },
   {
+    "id": "c05-04",
+    "chapter": 5,
+    "sections": [
+      54
+    ],
+    "prompt": {
+      "th": "รัฐต้องดำเนินการให้เด็กทุกคนได้รับการศึกษาเป็นเวลาอย่างน้อยกี่ปีโดยไม่เก็บค่าใช้จ่ายตามมาตรา 54?",
+      "en": "Under section 54, the State must ensure that all children receive quality education for at least how many years without charge?",
+      "zh": "依据第54条，国家必须确保所有儿童免费接受至少多少年的优质教育？"
+    },
+    "choices": [
+      {
+        "th": "สิบสองปี ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับ",
+        "en": "Twelve years, from pre-school until completion of compulsory education",
+        "zh": "十二年，从学前至义务教育结束"
+      },
+      {
+        "th": "หกปี เฉพาะระดับประถมศึกษาเท่านั้น",
+        "en": "Six years, only primary education",
+        "zh": "六年，仅限小学阶段"
+      },
+      {
+        "th": "เก้าปี เฉพาะมัธยมศึกษาตอนต้น",
+        "en": "Nine years, only lower secondary",
+        "zh": "九年，仅至初中阶段"
+      },
+      {
+        "th": "สิบหกปี จนจบระดับปริญญาตรี",
+        "en": "Sixteen years, until bachelor's degree completion",
+        "zh": "十六年，直到大学本科毕业"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 54 บัญญัติว่า รัฐต้องดำเนินการให้เด็กทุกคนได้รับการศึกษาเป็นเวลาสิบสองปี ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับอย่างมีคุณภาพโดยไม่เก็บค่าใช้จ่าย [สูตรตัวเลข: รัฐธรรมนูญการันตี 12 ปีฟรีมีคุณภาพ = ก่อนวัยเรียน + ภาคบังคับ] [เทคนิคช่วยจำ: ม.54 สี่ห้า = การศึกษา 12 ปีฟรี]",
+      "en": "Section 54 obligates the State to provide twelve years of quality education without charge, from pre-school to compulsory education. [Formula: 12 years free education guaranteed by Constitution].",
+      "zh": "第54条规定，国家必须确保每个儿童自学前教育至完成义务教育，接受为期十二年的免费优质教育。[计算公式：宪法保障12年免费教育 = 学前 + 义务教育] [记忆口诀：54条款，12年免费教育]。"
+    }
+  },
+  {
+    "id": "c05-05",
+    "chapter": 5,
+    "sections": [
+      55
+    ],
+    "prompt": {
+      "th": "หน้าที่ของรัฐด้านสาธารณสุขตามมาตรา 55 กำหนดให้ประชาชนได้รับบริการในลักษณะใด?",
+      "en": "Under section 55, what is the State's duty regarding public health services for the people?",
+      "zh": "依据第55条，国家在公共卫生方面对人民承担何种职责？"
+    },
+    "choices": [
+      {
+        "th": "ได้รับการบริการสาธารณสุขที่มีประสิทธิภาพอย่างทั่วถึง และส่งเสริมให้มีความรู้ในการป้องกันโรค",
+        "en": "Receive efficient public health services comprehensively, with education on disease prevention",
+        "zh": "普及获得高效公共卫生服务，并获得预防疾病的健康知识"
+      },
+      {
+        "th": "ประชาชนต้องจ่ายเงินสดเต็มจำนวนก่อนรับการรักษาฉุกเฉินทุกกรณี",
+        "en": "Citizens must pay cash in full before receiving emergency treatment in all cases",
+        "zh": "公民在任何情况下接受急救前必须全额现金预付"
+      },
+      {
+        "th": "รัฐมีหน้าที่เฉพาะในเขตกรุงเทพมหานครเท่านั้น",
+        "en": "The State is only responsible within Bangkok metropolitan area",
+        "zh": "国家仅对曼谷地区的公共卫生负责"
+      },
+      {
+        "th": "ให้เอกชนเป็นผู้รับผิดชอบดูแลระบบสาธารณสุขทั้งหมดโดยรัฐไม่กำกับ",
+        "en": "Delegate all healthcare solely to private entities without state oversight",
+        "zh": "完全由私营机构负责医疗系统，国家不加监管"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 55 บัญญัติว่า รัฐต้องดำเนินการให้ประชาชนได้รับการบริการสาธารณสุขที่มีประสิทธิภาพอย่างทั่วถึง เสริมสร้างให้ประชาชนมีความรู้ขั้นพื้นฐานเกี่ยวกับการส่งเสริมสุขภาพและการป้องกันโรค และคุ้มครองสถานพยาบาล [สูตรวิเคราะห์: ม.55 = สาธารณสุขทั่วถึง + ป้องกันโรค + ควบคุมมาตรฐาน]",
+      "en": "Section 55 mandates efficient, comprehensive public health services, public health education, disease prevention, and hospital standard regulation. [Algorithm: Universal health access + Prevention + Standard regulation].",
+      "zh": "第55条规定国家必须使人民普遍获得高效的公共卫生服务，促进健康与疾病预防知识，并规范医疗标准。[算法公式：普遍覆盖 + 预防为主 + 质量保障]。"
+    }
+  },
+  {
     "id": "c06-01",
     "chapter": 6,
     "sections": [
@@ -717,6 +1117,86 @@
       "th": "มาตรา 76 ให้รัฐพัฒนาการบริหารราชการ และใช้ระบบคุณธรรมในการบริหารงานบุคคลของหน่วยงานของรัฐ",
       "en": "Section 76 calls for effective public administration and a merit system for State personnel management.",
       "zh": "第76条要求改进公共行政，并在人事管理中采用择优任用制度。"
+    }
+  },
+  {
+    "id": "c06-04",
+    "chapter": 6,
+    "sections": [
+      65
+    ],
+    "prompt": {
+      "th": "รัฐพึงจัดให้มียุทธศาสตร์ชาติเป็นเป้าหมายการพัฒนาประเทศอย่างยั่งยืนตามหลักธรรมาภิบาลตามมาตราใดในหมวด 6?",
+      "en": "Under which section in Chapter 6 should the State provide a National Strategy as a sustainable development goal?",
+      "zh": "依据第6章哪一条，国家应制定国家战略，作为在良政善治原则下国家可持续发展的目标？"
+    },
+    "choices": [
+      {
+        "th": "มาตรา 65",
+        "en": "Section 65",
+        "zh": "第65条"
+      },
+      {
+        "th": "มาตรา 70",
+        "en": "Section 70",
+        "zh": "第70条"
+      },
+      {
+        "th": "มาตรา 77",
+        "en": "Section 77",
+        "zh": "第77条"
+      },
+      {
+        "th": "มาตรา 64",
+        "en": "Section 64",
+        "zh": "第64条"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 65 เป็นฐานแห่งแนวนโยบายที่กำหนดให้รัฐพึงจัดให้มียุทธศาสตร์ชาติเป็นเป้าหมายการพัฒนาประเทศอย่างยั่งยืนตามหลักธรรมาภิบาลเพื่อใช้เป็นกรอบในการจัดทำแผนต่างๆ ให้สอดคล้องกัน [สูตรวิเคราะห์: ม.65 = ฐานยุทธศาสตร์ชาติ 20 ปี ในหมวดแนวนโยบายแห่งรัฐ]",
+      "en": "Section 65 provides the constitutional basis for the 20-Year National Strategy to guide sustainable national development and administrative coordination. [Algorithm: Sec 65 = National Strategy Foundation].",
+      "zh": "第65条规定国家应制定国家战略，作为国家可持续发展的长远目标，是泰国20年国家战略法的宪法渊源。[算法公式：第65条 = 国家发展战略基石]。"
+    }
+  },
+  {
+    "id": "c06-05",
+    "chapter": 6,
+    "sections": [
+      75
+    ],
+    "prompt": {
+      "th": "ตามมาตรา 75 วรรคสอง รัฐต้องไม่กระทำการใดในระบบเศรษฐกิจ เว้นแต่มีความจำเป็นเพื่อความมั่นคงหรือประโยชน์สาธารณะ?",
+      "en": "Under section 75 paragraph two, what must the State not do in the economic system unless necessary for security or public interest?",
+      "zh": "依据第75条第2款，国家在经济系统中不得从事何种行为（除非出于国家安全或公共利益所必需）？"
+    },
+    "choices": [
+      {
+        "th": "ต้องไม่ประกอบกิจการที่มีลักษณะเป็นการแข่งขันกับเอกชน",
+        "en": "Must not engage in an enterprise that competes with private businesses",
+        "zh": "不得经营与私营企业相竞争的企业"
+      },
+      {
+        "th": "ต้องไม่จัดเก็บภาษีอากรจากประชาชน",
+        "en": "Must not levy any taxes from citizens",
+        "zh": "不得向公民征税"
+      },
+      {
+        "th": "ต้องไม่สนับสนุนการค้าและการลงทุนระหว่างประเทศ",
+        "en": "Must not support international trade or foreign investment",
+        "zh": "不得支持国际贸易或外国投资"
+      },
+      {
+        "th": "ต้องไม่เปิดให้เอกชนเข้ามามีส่วนร่วมในการพัฒนาโครงสร้างพื้นฐาน",
+        "en": "Must not permit private participation in infrastructure development",
+        "zh": "不得允许私营资本参与基础设施建设"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 75 วรรคสอง บัญญัติว่า รัฐต้องไม่ประกอบกิจการที่มีลักษณะเป็นการแข่งขันกับเอกชน เว้นแต่มีความจำเป็นเพื่อประโยชน์ในการรักษาความมั่นคงของรัฐ การรักษาผลประโยชน์ส่วนรวม หรือการจัดให้มีสาธารณูปโภค [สูตรวิเคราะห์: ระบบเศรษฐกิจเสรี $\\rightarrow$ รัฐเป็นผู้กำกับดูแล ไม่ลงมาแย่งแข่งค้าขายกับเอกชน]",
+      "en": "Section 75 paragraph two establishes free market principles: the State shall not operate businesses in competition with the private sector, barring national security, public utilities, or vital public interests. [Algorithm: Market economy $\\rightarrow$ State regulates, does not compete with private sector].",
+      "zh": "第75条第2款确立了市场自由竞争原则：国家不得经营与私企竞争的业务，除非出于国家安全、公用事业或重大公共利益需要。[算法公式：市场经济原则 $\\rightarrow$ 国家监管引导，不与民争利]。"
     }
   },
   {
@@ -840,6 +1320,86 @@
     }
   },
   {
+    "id": "c07-04",
+    "chapter": 7,
+    "sections": [
+      120
+    ],
+    "prompt": {
+      "th": "การประชุมสภาผู้แทนราษฎรหรือวุฒิสภา ต้องมีสมาชิกมาประชุมกี่คนจึงจะเป็นองค์ประชุมตามมาตรา 120?",
+      "en": "Under section 120, what constitutes a quorum for meetings of the House of Representatives or the Senate?",
+      "zh": "依据第120条，众议院或参议院开会须有多少议员出席方达到法定人数（องค์ประชุม）？"
+    },
+    "choices": [
+      {
+        "th": "ไม่น้อยกว่ากึ่งหนึ่งของจำนวนสมาชิกทั้งหมดเท่าที่มีอยู่ของแต่ละสภา",
+        "en": "Not less than one-half of the total existing members of each House",
+        "zh": "不少于各议院现有议员总数的半数"
+      },
+      {
+        "th": "ไม่น้อยกว่าหนึ่งในสามของจำนวนสมาชิกทั้งหมด",
+        "en": "Not less than one-third of the total members",
+        "zh": "不少于全体议员总数的三分之一"
+      },
+      {
+        "th": "ไม่น้อยกว่าสองในสามของจำนวนสมาชิกทั้งหมด",
+        "en": "Not less than two-thirds of the total members",
+        "zh": "不少于全体议员总数的三分之二"
+      },
+      {
+        "th": "อย่างน้อยหนึ่งร้อยคนโดยไม่คำนึงถึงจำนวนสมาชิกทั้งหมด",
+        "en": "At least one hundred members regardless of total membership",
+        "zh": "至少一百人，不论议员总数多少"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 120 วรรคหนึ่ง บัญญัติว่า การประชุมสภาผู้แทนราษฎรและการประชุมวุฒิสภา ต้องมีสมาชิกมาประชุมไม่น้อยกว่ากึ่งหนึ่งของจำนวนสมาชิกทั้งหมดเท่าที่มีอยู่ของแต่ละสภา จึงจะเป็นองค์ประชุม [สูตรคำนวณ: องค์ประชุมสภา = สมาชิกที่มีอยู่ $\\div$ 2] [มติทั่วไป = เสียงข้างมากของผู้ลงคะแนน]",
+      "en": "Section 120 paragraph one requires a quorum of not less than half the total existing members of each House. Resolutions are passed by a majority of votes cast. [Formula: Quorum = Existing Members $\\div$ 2; Ordinary Resolution = Majority of votes cast].",
+      "zh": "第120条第1款规定，各议院法定开会人数不得少于现有议员总数的半数（กึ่งหนึ่ง）。决议以出席并投票者的过半数票通过。[公式：法定开会人数 = 现有议员 $\\div$ 2；普通决议 = 过半数表决]。"
+    }
+  },
+  {
+    "id": "c07-05",
+    "chapter": 7,
+    "sections": [
+      134
+    ],
+    "prompt": {
+      "th": "ร่างพระราชบัญญัติเกี่ยวด้วยการเงินจะเสนอต่อสภาผู้แทนราษฎรได้ ก็ต่อเมื่อมีสิ่งใดตามมาตรา 133 วรรคสอง และ 134?",
+      "en": "A money bill can only be introduced to the House of Representatives if it possesses what under section 133 paragraph two and 134?",
+      "zh": "依据第133条第2款和第134条，财政法案（Money Bill）在提交众议院之前必须具备什么？"
+    },
+    "choices": [
+      {
+        "th": "มีคำรับรองของนายกรัฐมนตรี",
+        "en": "The Prime Minister's endorsement",
+        "zh": "总理的批准/签署证明"
+      },
+      {
+        "th": "มีมติเอกฉันท์ของศาลฎีกา",
+        "en": "A unanimous resolution from the Supreme Court",
+        "zh": "最高法院的一致裁决"
+      },
+      {
+        "th": "มีลายมือชื่อของประชาชนอย่างน้อยหนึ่งล้านคน",
+        "en": "Signatures of at least one million eligible voters",
+        "zh": "至少一百万名公民的联署签名"
+      },
+      {
+        "th": "ผ่านความเห็นชอบจากผู้ว่าการธนาคารแห่งประเทศไทย",
+        "en": "Approval from the Governor of the Bank of Thailand",
+        "zh": "泰国央行行长的批准"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 133 วรรคสอง กำหนดว่า ร่างพระราชบัญญัติเกี่ยวด้วยการเงินจะเสนอได้ก็ต่อเมื่อมีคำรับรองของนายกรัฐมนตรี และหากสงสัยว่าร่างใดเป็นร่างการเงิน ให้เป็นอำนาจของประธานสภาผู้แทนราษฎรหรือที่ประชุมร่วมกันวินิจฉัยตามมาตรา 134 [สูตรวิเคราะห์: ร่างการเงิน $\\rightarrow$ นายกฯ ต้องเซ็นรับรอง (เพื่อรักษาวินัยการคลังของฝ่ายบริหาร)]",
+      "en": "Section 133 paragraph two mandates that money bills require the endorsement of the Prime Minister before parliamentary introduction. Section 134 governs dispute resolution. [Algorithm: Money Bill Gate $\\rightarrow$ Endorsed by PM].",
+      "zh": "第133条第2款规定，财政法案只有在取得总理的签署证明后方可提交众议院审议。[算法公式：财政法案 = 必须取得总理证明以确保财政预算纪律]。"
+    }
+  },
+  {
     "id": "c08-01",
     "chapter": 8,
     "sections": [
@@ -957,6 +1517,86 @@
       "th": "มาตรา 159 ให้สภาผู้แทนราษฎรลงคะแนนโดยเปิดเผย และต้องเห็นชอบมากกว่ากึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่",
       "en": "Section 159 requires an open vote in the House and approval by more than half of its existing members.",
       "zh": "第159条要求众议院公开表决，赞成票须超过现有议员总数的一半。"
+    }
+  },
+  {
+    "id": "c08-04",
+    "chapter": 8,
+    "sections": [
+      158
+    ],
+    "prompt": {
+      "th": "คณะรัฐมนตรีประกอบด้วยนายกรัฐมนตรีหนึ่งคน และรัฐมนตรีอื่นอีกไม่เกินกี่คนตามมาตรา 158 วรรคหนึ่ง?",
+      "en": "Under section 158 paragraph one, the Council of Ministers consists of the Prime Minister and not more than how many other ministers?",
+      "zh": "依据第158条第1款，内阁由总理一人及不超过多少名其他部长组成？"
+    },
+    "choices": [
+      {
+        "th": "ไม่เกินสามสิบห้าคน (รวมนายกรัฐมนตรีเป็นไม่เกิน 36 คน)",
+        "en": "Not more than thirty-five persons (max 36 including the PM)",
+        "zh": "不超过三十五人（包含总理在内最多36人）"
+      },
+      {
+        "th": "ไม่เกินยี่สิบคน",
+        "en": "Not more than twenty persons",
+        "zh": "不超过二十人"
+      },
+      {
+        "th": "ไม่เกินห้าสิบคน",
+        "en": "Not more than fifty persons",
+        "zh": "不超过五十人"
+      },
+      {
+        "th": "ไม่จำกัดจำนวนขึ้นอยู่กับจำนวนกระทรวง",
+        "en": "No limit, depending on the number of ministries",
+        "zh": "人数不限，视部委数量而定"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 158 วรรคหนึ่ง บัญญัติว่า พระมหากษัตริย์ทรงแต่งตั้งนายกรัฐมนตรีคนหนึ่งและรัฐมนตรีอื่นอีกไม่เกินสามสิบห้าคน ประกอบเป็นคณะรัฐมนตรี และวรรคสี่กำหนดว่านายกรัฐมนตรีจะดำรงตำแหน่งรวมกันแล้วเกินแปดปีมิได้ [สูตรตัวเลข: 1 นายก + $\\le 35$ รัฐมนตรี = ครม. สูงสุด 36 คน, วาระนายกฯ รวมไม่เกิน 8 ปี] [เทคนิคช่วยจำ: 36 ครม. แปดปีนายก]",
+      "en": "Section 158 paragraph one sets Cabinet size: 1 Prime Minister plus up to 35 ministers (maximum 36 members). Paragraph 4 limits the PM's total aggregate term to 8 years. [Formula: 1 PM + Max 35 Ministers = Max 36 Cabinet members; PM term limit $\\le 8$ years].",
+      "zh": "第158条第1款规定，内阁由总理1人及其他部长不超过35人组成（内阁总数最多36人）；第4款规定总理任期累计不得超过8年。[计算公式：1总理 + 最多35部长 = 内阁最多36人；总理任期上限8年] [记忆口诀：内阁36人，总理8年顶]。"
+    }
+  },
+  {
+    "id": "c08-05",
+    "chapter": 8,
+    "sections": [
+      172
+    ],
+    "prompt": {
+      "th": "เมื่อคณะรัฐมนตรีตราพระราชกำหนด (พ.ร.ก.) ตามมาตรา 172 ในกรณีฉุกเฉินแล้ว ต้องดำเนินการอย่างไรต่อไปในขั้นตอนรัฐสภา?",
+      "en": "After the Cabinet enacts an Emergency Decree under section 172, what must happen next in Parliament?",
+      "zh": "当内阁依据第172条在紧急情况下发布紧急法令（พ.ร.ก.）后，国会下一步必须如何处理？"
+    },
+    "choices": [
+      {
+        "th": "ต้องเสนอพระราชกำหนดนั้นต่อรัฐสภาเพื่อพิจารณาโดยไม่ชักช้าในคราวประชุมถัดไป",
+        "en": "Must submit the Emergency Decree to Parliament for consideration without delay at the next session",
+        "zh": "必须在下次会议时不延误地提交国会审议"
+      },
+      {
+        "th": "ไม่ต้องเสนอรัฐสภาอีกเพราะถือเป็นอำนาจเด็ดขาดของฝ่ายบริหาร",
+        "en": "Does not need parliamentary submission as it is the executive's absolute power",
+        "zh": "无需再提交国会，因属于行政机关的专有权力"
+      },
+      {
+        "th": "รอเสนอรัฐสภาเมื่อพ้นกำหนดห้าปีไปแล้ว",
+        "en": "Wait until five years have passed before submitting to Parliament",
+        "zh": "等待满五年后再提交国会"
+      },
+      {
+        "th": "ต้องจัดให้มีการออกเสียงประชามติของประชาชนทั้งประเทศทุกกรณี",
+        "en": "Must hold a nationwide referendum in all cases",
+        "zh": "在任何情况下都必须举行全民公决"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 172 วรรคสาม กำหนดว่า ในการประชุมรัฐสภาคราวต่อไป ให้คณะรัฐมนตรีเสนอพระราชกำหนดนั้นต่อรัฐสภาเพื่อพิจารณาโดยไม่ชักช้า ถ้ารัฐสภาอนุมัติจะมีผลเป็นพระราชบัญญัติต่อไป ถ้าไม่อนุมัติจะตกไปแต่ไม่กระทบกิจการที่ทำไปแล้ว [สูตรวิเคราะห์: พ.ร.ก. = จำเป็นรีบด่วน + ตราได้ทันที + ต้องเข้าสภาอนุมัติคราวประชุมถัดไปทันที]",
+      "en": "Section 172 paragraph three obligates the Cabinet to submit the Emergency Decree to Parliament without delay at the subsequent session. Approval converts it into an Act; disapproval causes it to lapse without retroactively nullifying past valid actions. [Algorithm: Emergency decree $\\rightarrow$ Enacted $\\rightarrow$ Immediate parliamentary approval gate].",
+      "zh": "第172条第3款规定，内阁必须在下次国会会议时不延误地提交该法令审议。国会批准则具有法律效力；国会否决则失效，但不影响已执行的行为。[算法公式：紧急法令 = 紧急必要发布 $\\rightarrow$ 下次国会立即审查批准]。"
     }
   },
   {
@@ -1080,6 +1720,86 @@
     }
   },
   {
+    "id": "c09-04",
+    "chapter": 9,
+    "sections": [
+      184
+    ],
+    "prompt": {
+      "th": "เพื่อป้องกันการขัดกันแห่งผลประโยชน์ มาตรา 184(2) ห้าม ส.ส. และ ส.ว. กระทำการใดเกี่ยวกับสัญญาของรัฐ?",
+      "en": "To prevent conflicts of interest, what does section 184(2) prohibit MPs and Senators from doing regarding government contracts?",
+      "zh": "为防止利益冲突，第184条第2项禁止众议员和参议员从事有关国家合同的何种行为？"
+    },
+    "choices": [
+      {
+        "th": "ไม่รับหรือถือสัมปทานจากรัฐ หรือเข้าเป็นคู่สัญญากับรัฐในลักษณะผูกขาดตัดตอน",
+        "en": "Not hold concessions from the State, or enter into state contracts with monopolistic character",
+        "zh": "不得接受或持有国家特许权，或与国家签订具有垄断性质的合同"
+      },
+      {
+        "th": "ห้ามใช้บริการขนส่งสาธารณะของรัฐ",
+        "en": "Prohibited from using state public transportation",
+        "zh": "禁止乘坐国家公共交通工具"
+      },
+      {
+        "th": "ห้ามมีบัญชีเงินฝากในธนาคารพาณิชย์",
+        "en": "Prohibited from maintaining accounts in commercial banks",
+        "zh": "禁止在商业银行开立存款账户"
+      },
+      {
+        "th": "ห้ามซื้อสินค้าอุปโภคบริโภคที่ผลิตในประเทศไทย",
+        "en": "Prohibited from purchasing consumer goods produced in Thailand",
+        "zh": "禁止购买泰国境内生产的日用品"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 184(2) ห้าม ส.ส. และ ส.ว. รับหรือถือสัมปทานจากรัฐ หน่วยราชการ หน่วยงานของรัฐ หรือรัฐวิสาหกิจ หรือเข้าเป็นคู่สัญญากับรัฐอันมีลักษณะเป็นการผูกขาดตัดตอน ไม่ว่าโดยทางตรงหรือทางอ้อม [สูตรวิเคราะห์: หมวด 9 ม.184 = ห้ามถือสัมปทาน ห้ามแทรกแซงข้าราชการ ห้ามรับเงินพิเศษ]",
+      "en": "Section 184(2) forbids MPs and Senators from holding concessions or entering into monopolistic contracts with the State directly or indirectly. [Algorithm: Conflict of Interest $\\rightarrow$ Absolute prohibition on government concessions and monopolies].",
+      "zh": "第184条第2项禁止众议员和参议员直接或间接收受或持有国家特许权，或与政府机关或国企签订具有垄断性质的合同。[算法公式：第184条 = 严禁持有国家特许合同与垄断经营]。"
+    }
+  },
+  {
+    "id": "c09-05",
+    "chapter": 9,
+    "sections": [
+      187
+    ],
+    "prompt": {
+      "th": "รัฐมนตรีต้องไม่เป็นหุ้นส่วนหรือผู้ถือหุ้นในบริษัทตามมาตรา 187 เว้นแต่กรณีใด?",
+      "en": "Under section 187, a Minister must not be a partner or shareholder in a company, except in which case?",
+      "zh": "依据第187条，部长不得为合伙企业的合伙人或公司的股东，但在何种情况下例外？"
+    },
+    "choices": [
+      {
+        "th": "แจ้ง ป.ป.ช. และโอนหุ้นให้นิติบุคคลจัดการตามกฎหมายว่าด้วยการจัดการหุ้นของรัฐมนตรี",
+        "en": "Informing the NACC and transferring shares to a juristic person under the ministerial blind trust law",
+        "zh": "通知国家反腐败委员会（NACC），并依法将股票转让给法人盲信托管理"
+      },
+      {
+        "th": "โอนหุ้นทั้งหมดให้บุตรที่ยังไม่บรรลุนิติภาวะถือแทนโดยไม่ต้องแจ้งใคร",
+        "en": "Transferring all shares to minor children without informing anyone",
+        "zh": "直接将所有股票转让给未成年子女代持，无需通知任何人"
+      },
+      {
+        "th": "เปลี่ยนชื่อบริษัทเป็นชื่อตนเองเพื่อความโปร่งใส",
+        "en": "Renaming the company after themselves for transparency",
+        "zh": "将公司直接改用本人名字以示公开透明"
+      },
+      {
+        "th": "ถือหุ้นได้ไม่จำกัดจำนวนหากเป็นบริษัทในตลาดหลักทรัพย์",
+        "en": "Holding unlimited shares as long as the company is publicly traded",
+        "zh": "只要是上市公司即可无限制持有股票"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 187 บัญญัติว่า รัฐมนตรีต้องไม่เป็นหุ้นส่วนหรือผู้ถือหุ้นในห้างหุ้นส่วนหรือบริษัท เว้นแต่จะแจ้งประธาน ป.ป.ช. ทราบภายในสามสิบวัน และโอนหุ้นให้นิติบุคคลจัดการทรัพย์สินเพื่อประโยชน์ของรัฐมนตรีตามกฎหมายว่าด้วยการจัดการหุ้นส่วนและหุ้นของรัฐมนตรี [สูตรวิเคราะห์: รมต. ห้ามถือหุ้น $\\rightarrow$ ข้อยกเว้น: แจ้ง ป.ป.ช. ภายใน 30 วัน + เข้า Blind Trust]",
+      "en": "Section 187 bars Ministers from holding corporate shares unless they notify the NACC within 30 days and place their shares in a qualified management trust under the ministerial shareholding law. [Algorithm: Ministerial shareholding prohibition $\\rightarrow$ Blind Trust exception].",
+      "zh": "第187条规定部长不得持有合伙或公司股份；若欲保留收益，须在30日内书面通知国家反腐败委员会主席，并将股权转让给法人盲信托（Blind Trust）托管。[算法公式：部长持股禁令 $\\rightarrow$ 30日内申报 + 盲信托托管]。"
+    }
+  },
+  {
     "id": "c10-01",
     "chapter": 10,
     "sections": [
@@ -1197,6 +1917,86 @@
       "th": "มาตรา 197 กำหนดอำนาจศาลปกครองในข้อพิพาทเกี่ยวกับการใช้อำนาจทางปกครองหรือกิจการทางปกครองตามเงื่อนไขที่บัญญัติ",
       "en": "Section 197 assigns Administrative Courts disputes concerning administrative powers or activities within its stated jurisdiction.",
       "zh": "第197条规定行政法院依其管辖条件审理涉及行政权或行政活动的争议。"
+    }
+  },
+  {
+    "id": "c10-04",
+    "chapter": 10,
+    "sections": [
+      188
+    ],
+    "prompt": {
+      "th": "ศาลตามรัฐธรรมนูญ พ.ศ. 2560 แบ่งออกเป็นศาลประเภทใดบ้างตามมาตรา 188 วรรคสอง?",
+      "en": "Under section 188 paragraph two, what types of courts exist in the Kingdom?",
+      "zh": "依据第188条第2款，2017年宪法下的法院分为哪几类法院？"
+    },
+    "choices": [
+      {
+        "th": "ศาลยุติธรรม ศาลปกครอง ศาลทหาร และศาลรัฐธรรมนูญ",
+        "en": "Courts of Justice, Administrative Courts, Military Courts, and the Constitutional Court",
+        "zh": "普通司法法院、行政法院、军事法院与宪法法院"
+      },
+      {
+        "th": "ศาลจังหวัด ศาลแขวง ศาลประจำตำบล และศาลหมู่บ้าน",
+        "en": "Provincial Courts, District Courts, Sub-district Courts, and Village Courts",
+        "zh": "府法院、县法院、区法院与村法院"
+      },
+      {
+        "th": "ศาลพาณิชย์ ศาลการเงิน ศาลอุตสาหกรรม และศาลเอกชน",
+        "en": "Commercial Courts, Financial Courts, Industrial Courts, and Private Courts",
+        "zh": "商业法院、金融法院、工业法院与私人法院"
+      },
+      {
+        "th": "ศาลมีเพียงศาลเดียวคือศาลฎีกา",
+        "en": "Only one court exists: the Supreme Court",
+        "zh": "泰国只有唯一的法院即最高法院"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 188 วรรคสอง บัญญัติว่า บรรดาศาลทั้งหลายจะตั้งขึ้นได้ก็แต่โดยพระราชบัญญัติ ศาลมี 4 ประเภท ได้แก่ ศาลยุติธรรม ศาลปกครอง ศาลทหาร และศาลรัฐธรรมนูญ (ซึ่งมีบทบัญญัติเฉพาะในหมวด 11) [สูตรวิเคราะห์: 4 ระบบศาลไทย = ยุติธรรม + ปกครอง + ทหาร + ศาลรัฐธรรมนูญ] [เทคนิคช่วยจำ: สี่เสาศาลหลักแห่งความยุติธรรม]",
+      "en": "Section 188 paragraph two recognizes Courts of Justice, Administrative Courts, and Military Courts (with the Constitutional Court detailed in Chapter 11). [Algorithm: 4 Court Pillars = Justice + Administrative + Military + Constitutional].",
+      "zh": "第188条第2款规定法院由法律设立，司法体系包括司法法院、行政法院、军事法院及宪法法院（详见第11章）。[算法公式：泰国四大法院体系 = 普通司法法院 + 行政法院 + 军事法院 + 宪法法院]。"
+    }
+  },
+  {
+    "id": "c10-05",
+    "chapter": 10,
+    "sections": [
+      196
+    ],
+    "prompt": {
+      "th": "การบริหารงานบุคคล การแต่งตั้ง และการเลื่อนตำแหน่งของผู้พิพากษาศาลยุติธรรม ดำเนินการผ่านองค์กรใดตามมาตรา 196?",
+      "en": "Under section 196, through which body is personnel administration, appointment and promotion of Judges of the Courts of Justice conducted?",
+      "zh": "依据第196条，普通司法法院法官的人事行政、任命与晋升是通过哪一机构进行的？"
+    },
+    "choices": [
+      {
+        "th": "คณะกรรมการตุลาการศาลยุติธรรม (ก.ต.)",
+        "en": "Judicial Commission of the Courts of Justice (ก.ต.)",
+        "zh": "司法法院司法官员委员会（ก.ต.）"
+      },
+      {
+        "th": "คณะรัฐมนตรี",
+        "en": "The Council of Ministers",
+        "zh": "内阁"
+      },
+      {
+        "th": "กระทรวงมหาดไทย",
+        "en": "Ministry of Interior",
+        "zh": "内政部"
+      },
+      {
+        "th": "คณะกรรมการป้องกันและปราบปรามการทุจริตแห่งชาติ",
+        "en": "National Anti-Corruption Commission",
+        "zh": "国家反腐败委员会"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 196 บัญญัติว่า การบริหารงานบุคคลเกี่ยวกับผู้พิพากษาศาลยุติธรรมต้องมีความเป็นอิสระ และดำเนินการโดยคณะกรรมการตุลาการศาลยุติธรรม (ก.ต.) ซึ่งประกอบด้วยประธานศาลฎีกาและกรรมการผู้ทรงคุณวุฒิที่เป็นข้าราชการตุลาการ [สูตรวิเคราะห์: อิสระตุลาการ $\\rightarrow$ บริหารงานบุคคลผ่าน ก.ต. ปราศจากการแทรกแซงจากฝ่ายบริหาร]",
+      "en": "Section 196 ensures judicial independence by vesting personnel administration, promotion, and disciplinary action of Judges in the Judicial Commission of the Courts of Justice. [Algorithm: Judicial Independence $\\rightarrow$ Administered by Judicial Commission (ก.ต.)].",
+      "zh": "第196条保障司法独立，规定司法法院法官的人事行政由司法官员委员会（ก.ต.）负责，免受行政权干预。[算法公式：司法独立原则 $\\rightarrow$ 法官人事由司法官员委员会（ก.ต.）自主管理]。"
     }
   },
   {
@@ -1320,6 +2120,87 @@
     }
   },
   {
+    "id": "c11-04",
+    "chapter": 11,
+    "sections": [
+      200,
+      201
+    ],
+    "prompt": {
+      "th": "ตุลาการศาลรัฐธรรมนูญมีจำนวนกี่คน และมีวาระการดำรงตำแหน่งกี่ปีตามมาตรา 200 และ 201?",
+      "en": "Under sections 200 and 201, how many Constitutional Court judges are there and how long is their term?",
+      "zh": "依据第200条和第201条，宪法法院法官共有几人？任期为多少年？"
+    },
+    "choices": [
+      {
+        "th": "เก้าคน วาระเจ็ดปี ดำรงตำแหน่งได้วาระเดียว",
+        "en": "Nine judges, seven-year term, single term only",
+        "zh": "九人，任期七年，只能连任一届（不得连任）"
+      },
+      {
+        "th": "เจ็ดคน วาระเก้าปี ดำรงตำแหน่งได้ไม่จำกัดวาระ",
+        "en": "Seven judges, nine-year term, unlimited terms",
+        "zh": "七人，任期九年，无任期限制"
+      },
+      {
+        "th": "สิบห้าคน วาระสี่ปี ดำรงตำแหน่งได้สองวาระ",
+        "en": "Fifteen judges, four-year term, up to two terms",
+        "zh": "十五人，任期四年，最多连任两届"
+      },
+      {
+        "th": "ห้าคน วาระห้าปี ตามมติสภาผู้แทนราษฎร",
+        "en": "Five judges, five-year term, based on House resolution",
+        "zh": "五人，任期五年，依众议院决议而定"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 200 กำหนดให้ศาลรัฐธรรมนูญประกอบด้วยตุลาการศาลรัฐธรรมนูญจำนวนเก้าคน และมาตรา 201 บัญญัติให้มีวาระการดำรงตำแหน่งเจ็ดปีนับแต่วันที่พระมหากษัตริย์ทรงแต่งตั้ง และดำรงตำแหน่งได้เพียงวาระเดียว [สูตรตัวเลข: ศาล รธน. = 9 คน, วาระ 7 ปี, วาระเดียวจบ] [เทคนิคช่วยจำ: เก้าตุลาการ เจ็ดปีเดี่ยว]",
+      "en": "Section 200 establishes a bench of 9 Constitutional Court judges. Section 201 sets a single term of 7 years. [Formula: 9 Judges, 7-Year Term, Single Term Only].",
+      "zh": "第200条规定宪法法院由9名法官组成；第201条规定任期为7年，自任命之日起算，且只能担任一届（不得连任）。[数字公式：宪法法院 = 9名法官，7年任期，单任制] [记忆口诀：九位法官，七年单任]。"
+    }
+  },
+  {
+    "id": "c11-05",
+    "chapter": 11,
+    "sections": [
+      212
+    ],
+    "prompt": {
+      "th": "ในระหว่างการพิจารณาคดีของศาล หากศาลหรือคู่ความเห็นว่าบทบัญญัติแห่งกฎหมายขัดต่อรัฐธรรมนูญ ให้ดำเนินการอย่างไรตามมาตรา 212?",
+      "en": "During court proceedings, if a court or litigant contends that a legal provision is unconstitutional, what procedure applies under section 212?",
+      "zh": "在法院审理案件过程中，若法院或当事人认为适用的法律条款违反宪法，依第212条应如何处理？"
+    },
+    "choices": [
+      {
+        "th": "ศาลรอการพิพากษาคดีไว้ชั่วคราวแล้วส่งความเห็นไปยังศาลรัฐธรรมนูญเพื่อวินิจฉัย",
+        "en": "The court stays the adjudication temporarily and refers the opinion to the Constitutional Court for a ruling",
+        "zh": "法院中止案件裁决，将意见提交宪法法院裁决"
+      },
+      {
+        "th": "ศาลมีอำนาจฉีกกฎหมายนั้นทิ้งได้ทันทีโดยไม่ต้องส่งศาลรัฐธรรมนูญ",
+        "en": "The court tears up the law immediately without referring to the Constitutional Court",
+        "zh": "法院可直接宣布该法律作废，无需提交宪法法院"
+      },
+      {
+        "th": "ให้ยกฟ้องคดีนั้นทันทีและห้ามคู่ความฟ้องร้องอีกตลอดไป",
+        "en": "Dismiss the entire lawsuit immediately with prejudice",
+        "zh": "立即驳回起诉并永久禁止当事人再次起诉"
+      },
+      {
+        "th": "ส่งเรื่องให้นายกรัฐมนตรีเป็นผู้วินิจฉัยชี้ขาดแทนศาล",
+        "en": "Refer the matter to the Prime Minister for final arbitration",
+        "zh": "将争议提交总理代为裁决"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 212 บัญญัติว่า ในการที่ศาลจะใช้บทบัญญัติแห่งกฎหมายบังคับแก่คดีใด ถ้าศาลเห็นเองหรือคู่ความโต้แย้งโดยมีเหตุผลว่าบทบัญญัตินั้นขัดหรือแย้งต่อรัฐธรรมนูญ และยังไม่มีคำวินิจฉัยของศาลรัฐธรรมนูญ ให้ศาลรอการพิพากษาคดีไว้ชั่วคราวและส่งความเห็นต่อศาลรัฐธรรมนูญเพื่อวินิจฉัย [สูตรวิเคราะห์: คดีในศาล $\\rightarrow$ กฎหมายต้องสงสัยขัด รธน. $\\rightarrow$ พักคดี + ส่งศาล รธน. ชี้ขาด]",
+      "en": "Section 212 allows judicial review during trial: the presiding court stays the case and certifies the question to the Constitutional Court if the statute is alleged to be unconstitutional. [Algorithm: Interlocutory referral $\\rightarrow$ Stay proceedings + Submit to Constitutional Court].",
+      "zh": "第212条规定了附带违宪审查机制：审理法院若自身发现或经当事人合理抗辩法律条款违宪，且宪法法院尚未裁决过的，审理法院应中止审理，将意见送交宪法法院裁决。[算法公式：诉讼中审查 $\\rightarrow$ 中止审理 + 送交宪法法院]。"
+    }
+  },
+  {
     "id": "c12-01",
     "chapter": 12,
     "sections": [
@@ -1437,6 +2318,92 @@
       "th": "มาตรา 234 กำหนดหน้าที่ไต่สวนของ ป.ป.ช. รวมถึงข้อกล่าวหาเจ้าหน้าที่รัฐร่ำรวยผิดปกติตามเงื่อนไขที่บัญญัติ",
       "en": "Section 234 assigns the NACC investigative duties including allegations of unusual wealth against State officials under its conditions.",
       "zh": "第234条规定国家反腐败委员会的调查职责，包括依规定调查国家工作人员异常富有的指控。"
+    }
+  },
+  {
+    "id": "c12-04",
+    "chapter": 12,
+    "sections": [
+      215,
+      222,
+      228,
+      232,
+      238,
+      246
+    ],
+    "prompt": {
+      "th": "องค์กรอิสระตามรัฐธรรมนูญแห่งราชอาณาจักรไทย พ.ศ. 2560 ในหมวด 12 ประกอบด้วยกี่องค์กร?",
+      "en": "How many Independent Organs are established under Chapter 12 of the 2017 Constitution?",
+      "zh": "依据2017年宪法第12章，宪法共设立了多少个独立机构（องค์กรอิสระ）？"
+    },
+    "choices": [
+      {
+        "th": "ห้าองค์กร (กกต., ผู้ตรวจการแผ่นดิน, ป.ป.ช., คตง., กสม.)",
+        "en": "Five organs (EC, Ombudsman, NACC, State Audit Commission, NHRC)",
+        "zh": "五个机构（选举委员会、监察员、反贪委、审计委、人权委）"
+      },
+      {
+        "th": "สามองค์กรเท่านั้น",
+        "en": "Three organs only",
+        "zh": "仅三个机构"
+      },
+      {
+        "th": "เจ็ดองค์กร",
+        "en": "Seven organs",
+        "zh": "七个机构"
+      },
+      {
+        "th": "สิบองค์กร",
+        "en": "Ten organs",
+        "zh": "十个机构"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "หมวด 12 ประกอบด้วย 5 องค์กรอิสระ: (1) คณะกรรมการการเลือกตั้ง (กกต. 7 คน), (2) ผู้ตรวจการแผ่นดิน (3 คน), (3) คณะกรรมการป้องกันและปราบปรามการทุจริตแห่งชาติ (ป.ป.ช. 9 คน), (4) คณะกรรมการตรวจเงินแผ่นดิน (คตง. 7 คน) และ (5) คณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม. 7 คน) [สูตรตัวเลข: 5 องค์กรอิสระ มีจำนวนกรรมการคือ 7-3-9-7-7]",
+      "en": "Chapter 12 establishes five Independent Organs: Election Commission (7), Ombudsmen (3), NACC (9), State Audit Commission (7), and NHRC (7). [Formula: 5 Independent Organs with counts 7-3-9-7-7].",
+      "zh": "第12章设立了五大独立机构：选举委员会（7人）、监察员（3人）、国家反腐败委员会（9人）、国家审计委员会（7人）和国家人权委员会（7人）。[数字公式：5大独立机构，人数口诀：7-3-9-7-7]。"
+    }
+  },
+  {
+    "id": "c12-05",
+    "chapter": 12,
+    "sections": [
+      228,
+      230
+    ],
+    "prompt": {
+      "th": "ผู้ตรวจการแผ่นดินมีจำนวนกี่คน และมีหน้าที่สำคัญในเรื่องใดตามมาตรา 228 และ 230?",
+      "en": "Under sections 228 and 230, how many Ombudsmen are there and what is their primary duty?",
+      "zh": "依据第228条和第230条，监察员共有几人？其核心职责是什么？"
+    },
+    "choices": [
+      {
+        "th": "สามคน มีหน้าที่แสวงหาข้อเท็จจริงเมื่อเจ้าหน้าที่รัฐไม่ปฏิบัติตามกฎหมายหรือก่อความเดือดร้อนแก่ประชาชน",
+        "en": "Three persons; investigating when state officials fail to comply with law or cause grievance to citizens",
+        "zh": "三人；负责调查国家公职人员违法或给民众造成困扰的申诉"
+      },
+      {
+        "th": "เก้าคน มีหน้าที่ตรวจสอบงบประมาณของกองทัพเท่านั้น",
+        "en": "Nine persons; auditing military budgets exclusively",
+        "zh": "九人；仅负责审计军队预算"
+      },
+      {
+        "th": "หนึ่งคน ทำหน้าที่เป็นทนายความให้แก่นายกรัฐมนตรี",
+        "en": "One person; acting as personal attorney to the Prime Minister",
+        "zh": "一人；作为总理的个人辩护律师"
+      },
+      {
+        "th": "ห้าคน มีหน้าที่จัดพิมพ์เอกสารราชกิจจานุเบกษา",
+        "en": "Five persons; publishing the Government Gazette",
+        "zh": "五人；负责排版印刷政府公报"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 228 กำหนดให้ผู้ตรวจการแผ่นดินมีจำนวนสามคน และมาตรา 230 กำหนดอำนาจหน้าที่ในการแสวงหาข้อเท็จจริงเมื่อมีการไม่ปฏิบัติตามกฎหมาย หรือปฏิบัตินอกเหนือหน้าที่ หรือสร้างความเดือดร้อนเกินสมควรแก่ประชาชน [สูตรตัวเลข: ผู้ตรวจการแผ่นดิน = 3 คน เยียวยาความเดือดร้อนประชาชน]",
+      "en": "Section 228 provides for 3 Ombudsmen; Section 230 empowers them to investigate maladministration, failure to enforce laws, or unreasonable hardship caused to citizens. [Formula: 3 Ombudsmen redress citizen grievances].",
+      "zh": "第228条规定监察员设3人；第230条规定其职责是调查国家机关不依法作为、越权或不合理地给民众造成困扰的行为。[数字公式：监察员3人，专管公职人员行政不当与民众困扰]。"
     }
   },
   {
@@ -1560,6 +2527,86 @@
     }
   },
   {
+    "id": "c13-04",
+    "chapter": 13,
+    "sections": [
+      248
+    ],
+    "prompt": {
+      "th": "ตามมาตรา 248 วรรคสอง พนักงานอัยการมีอิสระในการปฏิบัติหน้าที่ตามหลักการใด?",
+      "en": "Under section 248 paragraph two, on what principle are public prosecutors independent in discharging their duties?",
+      "zh": "依据第248条第2款，检察官行使职权依据何种独立原则？"
+    },
+    "choices": [
+      {
+        "th": "มีอิสระในการพิจารณาสั่งคดีและการปฏิบัติหน้าที่ให้เป็นไปตามรัฐธรรมนูญและกฎหมายโดยเที่ยงธรรม",
+        "en": "Independent in considering orders on cases and performing duties under the Constitution and law with impartiality",
+        "zh": "独立审查并决定案件，依宪法和法律公正履职"
+      },
+      {
+        "th": "ต้องฟังคำสั่งและฟ้องคดีตามที่ฝ่ายการเมืองสั่งการเสมอ",
+        "en": "Must obey political directives on prosecution in all matters",
+        "zh": "必须绝对服从政治人物的指令提起诉讼"
+      },
+      {
+        "th": "สั่งคดีตามการลงคะแนนเสียงของประชาชนในพื้นที่",
+        "en": "Decide prosecutions based on local public opinion polls",
+        "zh": "根据当地民众的投票结果决定是否起诉"
+      },
+      {
+        "th": "พนักงานอัยการไม่มีอำนาจสั่งไม่ฟ้องคดีในทุกกรณี",
+        "en": "Public prosecutors have no power to issue non-prosecution orders under any circumstances",
+        "zh": "在任何情况下检察官均无权做出不起诉决定"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 248 วรรคสอง บัญญัติว่า พนักงานอัยการมีอิสระในการพิจารณาสั่งคดีและการปฏิบัติหน้าที่ให้เป็นไปตามรัฐธรรมนูญและกฎหมายโดยเที่ยงธรรม และหากเห็นว่าการฟ้องคดีจะไม่เป็นประโยชน์แก่สาธารณชน จะสั่งไม่ฟ้องก็ได้ตามที่กฎหมายบัญญัติ [สูตรวิเคราะห์: องค์กรอัยการ = อิสระในการสั่งคดี + ยึดความเที่ยงธรรมและประโยชน์สาธารณะ]",
+      "en": "Section 248 paragraph two establishes prosecutorial independence in reviewing cases and exercising discretion impartially under the law, including non-prosecution for public interest where authorized by law. [Algorithm: Prosecutorial independence $\\rightarrow$ Impartiality + Public interest].",
+      "zh": "第248条第2款规定检察官在审查决断案件及履职时享有独立性，须依宪法和法律公正行事；若认为起诉不符合公共利益，可依法作出不起诉决定。[算法公式：检察机关 = 独立起诉裁量权 + 公正与公共利益原则]。"
+    }
+  },
+  {
+    "id": "c13-05",
+    "chapter": 13,
+    "sections": [
+      248
+    ],
+    "prompt": {
+      "th": "การบริหารงานบุคคลและการแต่งตั้งพนักงานอัยการ ดำเนินการผ่านองค์กรใดตามมาตรา 248 วรรคสาม?",
+      "en": "Under section 248 paragraph three, through which body is personnel administration of public prosecutors conducted?",
+      "zh": "依据第248条第3款，检察官的人事行政与任命是通过哪一机构进行的？"
+    },
+    "choices": [
+      {
+        "th": "คณะกรรมการอัยการ (ก.อ.)",
+        "en": "Public Prosecution Commission (ก.อ.)",
+        "zh": "检察官员委员会（ก.อ.）"
+      },
+      {
+        "th": "รัฐสภา",
+        "en": "The National Assembly",
+        "zh": "国会"
+      },
+      {
+        "th": "คณะกรรมการป้องกันและปราบปรามการทุจริตแห่งชาติ",
+        "en": "National Anti-Corruption Commission",
+        "zh": "国家反腐败委员会"
+      },
+      {
+        "th": "กระทรวงยุติธรรม",
+        "en": "Ministry of Justice",
+        "zh": "司法部"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 248 วรรคสาม บัญญัติว่า การบริหารงานบุคคล การแต่งตั้ง และการเลื่อนตำแหน่งของพนักงานอัยการ ต้องมีความเป็นอิสระและดำเนินการผ่านคณะกรรมการอัยการ (ก.อ.) [สูตรเปรียบเทียบ: ผู้พิพากษาศาลยุติธรรม $\\rightarrow$ ก.ต., พนักงานอัยการ $\\rightarrow$ ก.อ.]",
+      "en": "Section 248 paragraph three requires prosecutorial personnel administration and appointments to be independently handled through the Public Prosecution Commission (ก.อ.). [Comparison: Judges $\\rightarrow$ ก.ต.; Prosecutors $\\rightarrow$ ก.อ.].",
+      "zh": "第248条第3款规定检察官的人事管理、任命和晋升须具备独立性，并通过检察官员委员会（ก.อ.）进行。[对比公式：法官人事 $\\rightarrow$ ก.ต.；检察官人事 $\\rightarrow$ ก.อ.]。"
+    }
+  },
+  {
     "id": "c14-01",
     "chapter": 14,
     "sections": [
@@ -1677,6 +2724,87 @@
       "th": "มาตรา 253 ให้เปิดเผยข้อมูลและรายงานผลการดำเนินงานแก่ประชาชน พร้อมกลไกให้ประชาชนมีส่วนร่วมตามที่กำหนด",
       "en": "Section 253 requires public disclosure of information and performance reports, with mechanisms for participation as specified.",
       "zh": "第253条要求向公众公开信息及工作报告，并依规定建立参与机制。"
+    }
+  },
+  {
+    "id": "c14-04",
+    "chapter": 14,
+    "sections": [
+      249,
+      250
+    ],
+    "prompt": {
+      "th": "การจัดตั้งองค์กรปกครองส่วนท้องถิ่นตามมาตรา 249 ให้เป็นไปตามหลักการสำคัญใด?",
+      "en": "Under section 249, on which key principle is local administration organized?",
+      "zh": "依据第249条，地方行政组织的设立遵循哪一核心原则？"
+    },
+    "choices": [
+      {
+        "th": "หลักการปกครองตนเองตามเจตนารมณ์ของประชาชนในท้องถิ่น และความเป็นอิสระในการกำหนดนโยบาย",
+        "en": "Self-governance according to the will of the local population and autonomy in policymaking",
+        "zh": "依据当地民众意愿实行地方自治原则，并在政策制定上享有自主权"
+      },
+      {
+        "th": "การรวมอำนาจทั้งหมดเข้าสู่ส่วนกลางโดยห้ามท้องถิ่นมีงบประมาณของตนเอง",
+        "en": "Complete centralization of power, prohibiting local budgets",
+        "zh": "权力完全高度集中于中央，禁止地方拥有自身预算"
+      },
+      {
+        "th": "การแต่งตั้งข้าราชการส่วนกลางไปเป็นผู้บริหารท้องถิ่นตลอดชีพ",
+        "en": "Appointing central bureaucrats as local administrators for life",
+        "zh": "由中央委派官员终身担任地方行政长官"
+      },
+      {
+        "th": "ให้ยกเลิกองค์กรปกครองส่วนท้องถิ่นทั้งหมดทั่วประเทศ",
+        "en": "Abolishing all local administrative organizations nationwide",
+        "zh": "在全国范围内废除所有地方行政机构"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 249 บัญญัติว่า การจัดตั้งองค์กรปกครองส่วนท้องถิ่นให้คำนึงถึงเจตนารมณ์ของประชาชนในท้องถิ่นและความสามารถในการปกครองตนเอง และมาตรา 250 ให้มีหน้าที่ดูแลและจัดทำบริการสาธารณะและกิจกรรมสาธารณะเพื่อประโยชน์ของคนในท้องถิ่น [สูตรวิเคราะห์: ม.249-250 = ท้องถิ่นปกครองตนเอง + บริการสาธารณะเพื่อคนในท้องถิ่น]",
+      "en": "Section 249 establishes local self-governance according to the will of local inhabitants; Section 250 provides administrative, fiscal, and public service autonomy. [Algorithm: Local administration $\\rightarrow$ Self-governance + Public service delivery].",
+      "zh": "第249条确立了依当地居民意愿实行地方自治与自我治理能力的原则；第250条保障其公共服务与财政自主权。[算法公式：第249-250条 = 地方自治 + 本地公共服务]。"
+    }
+  },
+  {
+    "id": "c14-05",
+    "chapter": 14,
+    "sections": [
+      252
+    ],
+    "prompt": {
+      "th": "สมาชิกสภาท้องถิ่นและผู้บริหารท้องถิ่นต้องได้มาโดยวิธีใดเป็นหลักตามมาตรา 252?",
+      "en": "Under section 252, how are members of local assemblies and local administrators primarily acquired?",
+      "zh": "依据第252条，地方议会议员及地方行政长官原则上应通过何种方式产生？"
+    },
+    "choices": [
+      {
+        "th": "มาจากการเลือกตั้งโดยตรงของประชาชน",
+        "en": "Direct election by the people",
+        "zh": "由民众直接选举产生"
+      },
+      {
+        "th": "มาจากการจับสลากโดยเจ้าหน้าที่กระทรวงมหาดไทย",
+        "en": "Lottery draw by Ministry of Interior officials",
+        "zh": "由内政部官员抽签决定"
+      },
+      {
+        "th": "มาจากการแต่งตั้งโดยคณะรัฐมนตรีทุกตำแหน่ง",
+        "en": "Appointment by the Cabinet for all positions",
+        "zh": "所有职位全部由内阁直接任命"
+      },
+      {
+        "th": "มาจากการสืบทอดทางตระกูล",
+        "en": "Hereditary succession within families",
+        "zh": "家族世袭继承"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 252 บัญญัติว่า สมาชิกสภาท้องถิ่นต้องมาจากการเลือกตั้ง และผู้บริหารท้องถิ่นให้มาจากการเลือกตั้งหรือมาจากความเห็นชอบของสภาท้องถิ่น [สูตรวิเคราะห์: ประชาธิปไตยท้องถิ่น $\\rightarrow$ สภาท้องถิ่นและผู้บริหารต้องยึดโยงกับประชาชนผ่านการเลือกตั้ง]",
+      "en": "Section 252 mandates that local assembly members shall be elected, and local administrators shall be elected or appointed with the approval of the local assembly. [Algorithm: Local democracy $\\rightarrow$ Direct mandate through local elections].",
+      "zh": "第252条规定地方议会议员必须由选举产生；地方行政长官须由选举产生或由地方议会同意产生。[算法公式：地方民主 = 地方议会与长官源自选举直接民意授权]。"
     }
   },
   {
@@ -1800,6 +2928,86 @@
     }
   },
   {
+    "id": "c15-04",
+    "chapter": 15,
+    "sections": [
+      255
+    ],
+    "prompt": {
+      "th": "การแก้ไขเพิ่มเติมรัฐธรรมนูญที่มีผลเป็นการเปลี่ยนแปลงเรื่องใดต่อไปนี้ 'จะกระทำมิได้เด็ดขาด' ตามมาตรา 255?",
+      "en": "Under section 255, an amendment that has the effect of changing what is strictly prohibited?",
+      "zh": "依据第255条，修改宪法若产生何种变更效果是“绝对禁止进行”的？"
+    },
+    "choices": [
+      {
+        "th": "การเปลี่ยนแปลงการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือเปลี่ยนแปลงรูปแบบของรัฐ",
+        "en": "Changing the democratic regime with the King as Head of State or changing the form of the State",
+        "zh": "改变以国王为国家元首的民主政体，或改变国家形式（单一王国）"
+      },
+      {
+        "th": "การแก้ไขจำนวนสมาชิกสภาผู้แทนราษฎร",
+        "en": "Changing the number of Members of the House of Representatives",
+        "zh": "修改众议院议员的人数"
+      },
+      {
+        "th": "การเพิ่มจำนวนกระทรวงในฝ่ายบริหาร",
+        "en": "Increasing the number of government ministries",
+        "zh": "增加行政部门的部委数量"
+      },
+      {
+        "th": "การปรับปรุงกฎหมายภาษีอากรให้ทันสมัย",
+        "en": "Updating taxation laws to modern standards",
+        "zh": "更新税收法规使其现代化"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 255 บัญญัติข้อห้ามเด็ดขาด: 'การแก้ไขเพิ่มเติมรัฐธรรมนูญที่เป็นการเปลี่ยนแปลงการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือเปลี่ยนแปลงรูปแบบของรัฐ จะกระทำมิได้' [สูตรวิเคราะห์: ขอบเขตสูงสุดของการแก้ รธน. $\\rightarrow$ ห้ามเปลี่ยนระบอบ ห้ามแบ่งแยกรูปแบบรัฐราชอาณาจักร] [เทคนิคช่วยจำ: ม.255 ล็อกสองสิ่ง: ระบอบประชาธิปไตยฯ และ รูปแบบของรัฐ]",
+      "en": "Section 255 creates an absolute substantive limit on constitutional amendments: changing the democratic regime with the King as Head of State or changing the unitary state form is strictly forbidden. [Algorithm: Absolute amendment ban = Democratic regime & Unitary state form].",
+      "zh": "第255条设立了修宪的绝对实体界限：“任何导致改变以国王为国家元首的民主政体、或改变国家形式的宪法修正案，一概不得进行。” [算法公式：第255条双重红线 = 绝对禁止变动政体与国家结构形式]。"
+    }
+  },
+  {
+    "id": "c15-05",
+    "chapter": 15,
+    "sections": [
+      256
+    ],
+    "prompt": {
+      "th": "หากมีการแก้ไขเพิ่มเติมรัฐธรรมนูญในหมวด 1, หมวด 2, หมวด 15 หรือเรื่องเกี่ยวกับคุณสมบัติของศาล/องค์กรอิสระ มาตรา 256(8) กำหนดเงื่อนไขพิเศษใดก่อนนำขึ้นทูลเกล้าฯ?",
+      "en": "If amending Chapter 1, Chapter 2, Chapter 15, or qualifications of Courts/Independent Organs, what special requirement applies under section 256(8)?",
+      "zh": "若修改第1章、第2章、第15章，或涉及法院/独立机构职权资格，第256条第8项规定了何种特殊法定程序？"
+    },
+    "choices": [
+      {
+        "th": "ต้องจัดให้มีการออกเสียงประชามติของประชาชน และผลประชามติต้องเห็นชอบด้วย",
+        "en": "Must be submitted to a public referendum and approved by the referendum",
+        "zh": "必须举行全民公决并获得公投赞成通过"
+      },
+      {
+        "th": "ต้องได้รับความเห็นชอบจากองค์การสหประชาชาติ",
+        "en": "Must receive approval from the United Nations",
+        "zh": "必须获得联合国批准"
+      },
+      {
+        "th": "ต้องให้นายกรัฐมนตรีลงมติเห็นชอบเป็นเอกฉันท์แต่เพียงผู้เดียว",
+        "en": "Must be endorsed solely and unanimously by the Prime Minister",
+        "zh": "必须由总理一人独自做出一致赞成决定"
+      },
+      {
+        "th": "นำขึ้นทูลเกล้าฯ ได้ทันทีโดยไม่ต้องรอเวลาหรือฟังเสียงประชาชน",
+        "en": "Submit for royal assent immediately without any waiting period or public consultation",
+        "zh": "立即呈请御准，无需等待或听取公众意见"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 256(8) กำหนดว่า หากร่างแก้ไขเพิ่มเติมเป็นการแก้ไขหมวด 1 หมวด 2 หรือหมวด 15 หรือเรื่องเกี่ยวกับคุณสมบัติหรือลักษณะต้องห้ามของผู้ดำรงตำแหน่ง หรือหน้าที่และอำนาจของศาลหรือองค์กรอิสระ ต้องจัดให้มีการออกเสียงประชามติก่อนนำขึ้นทูลเกล้าฯ [สูตรวิเคราะห์: แก้หมวด 1, 2, 15 หรือตัดอำนาจศาล/องค์กรอิสระ = ประชามติบังคับก่อนทูลเกล้าฯ]",
+      "en": "Section 256(8) triggers a mandatory referendum if amending Chapter 1 (General), Chapter 2 (King), Chapter 15 (Amendments), or the powers/qualifications of Courts or Independent Organs. [Algorithm: Mandatory Referendum Trigger = Ch 1, 2, 15 or Court/Independent Organ Powers].",
+      "zh": "第256条第8项规定，若修宪案涉及第1章、第2章、第15章，或修改法院/独立机构的资格与职权，在呈请御准前必须先举行全民公决并获通过。[算法公式：第256条第8项 = 涉及第1、2、15章或司法/独立机构职权时，强制启动全民公决]。"
+    }
+  },
+  {
     "id": "c16-01",
     "chapter": 16,
     "sections": [
@@ -1917,6 +3125,87 @@
       "th": "มาตรา 259 กำหนดองค์ประกอบขั้นต่ำของกฎหมายแผนและขั้นตอนปฏิรูป รวมการมีส่วนร่วม การวัดผล และระยะเวลา",
       "en": "Section 259 sets minimum elements for reform-plan legislation, including participation, measurement and timeframes.",
       "zh": "第259条规定改革计划法律的最低内容，包括参与、衡量及期限。"
+    }
+  },
+  {
+    "id": "c16-04",
+    "chapter": 16,
+    "sections": [
+      258
+    ],
+    "prompt": {
+      "th": "หมวด 16 การปฏิรูปประเทศ มาตรา 258 ง. กำหนดเป้าหมายปฏิรูปในด้านใดที่ระบุถึงการปรับปรุงโครงสร้างของตำรวจ?",
+      "en": "In Chapter 16 (National Reform), section 258(d) targets reform in which field, explicitly addressing police restructuring?",
+      "zh": "在第16章（国家改革）中，第258条第(d)项针对哪个领域设立了明确涉及警察体制重构的改革目标？"
+    },
+    "choices": [
+      {
+        "th": "ด้านกระบวนการยุติธรรม",
+        "en": "The justice system",
+        "zh": "司法与执法程序领域"
+      },
+      {
+        "th": "ด้านการค้าระหว่างประเทศ",
+        "en": "International commerce",
+        "zh": "国际贸易领域"
+      },
+      {
+        "th": "ด้านการบินพลเรือน",
+        "en": "Civil aviation",
+        "zh": "民用航空领域"
+      },
+      {
+        "th": "ด้านการท่องเที่ยวทางน้ำ",
+        "en": "Marine tourism",
+        "zh": "水上旅游领域"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 258 ง. กำหนดการปฏิรูปประเทศด้านกระบวนการยุติธรรม โดยระบุให้ปรับปรุงการสอบสวนคดีอาญาและปรับปรุงโครงสร้าง อำนาจหน้าที่ และการบริหารงานบุคคลของสำนักงานตำรวจแห่งชาติ [สูตรวิเคราะห์: ม.258 ง. = ปฏิรูปกระบวนการยุติธรรมและตำรวจ]",
+      "en": "Section 258(d) designates the justice process reform, explicitly mandating criminal investigation reform and restructuring of the Royal Thai Police. [Algorithm: Sec 258(d) = Justice Process & Police Reform].",
+      "zh": "第258条第(d)项规定了司法执法程序领域的改革，明确要求改革刑事侦查程序及重构泰国国家警察总署的机构与人事体制。[算法公式：第258条(d) = 司法程序与警察体制改革]。"
+    }
+  },
+  {
+    "id": "c16-05",
+    "chapter": 16,
+    "sections": [
+      259,
+      261
+    ],
+    "prompt": {
+      "th": "การดำเนินการปฏิรูปประเทศตามหมวด 16 มีกลไกสำคัญใดในการขับเคลื่อนและติดตามผลตามมาตรา 259 และ 261?",
+      "en": "What key mechanism drives and monitors National Reform under Chapter 16 (sections 259 and 261)?",
+      "zh": "依据第16章（第259条及261条），推动和监测国家改革的关键法定机制是什么？"
+    },
+    "choices": [
+      {
+        "th": "จัดทำแผนการปฏิรูปประเทศและมีคณะกรรมการปฏิรูปประเทศแต่ละด้านขับเคลื่อน",
+        "en": "Formulating a National Reform Plan driven by sectoral National Reform Committees",
+        "zh": "制定国家改革计划，并由各领域的国家改革委员会协同推动实施"
+      },
+      {
+        "th": "รอให้เกิดคดีความในศาลแล้วค่อยปฏิรูปเป็นรายกรณี",
+        "en": "Wait for lawsuits in court before reforming on a case-by-case basis",
+        "zh": "等待法院发生诉讼后，再按个案逐步改革"
+      },
+      {
+        "th": "มอบหมายให้องค์กรเอกชนต่างชาติเป็นผู้รับผิดชอบการปฏิรูป",
+        "en": "Assigning foreign private entities sole responsibility for reform",
+        "zh": "全权委托外国私人机构负责改革"
+      },
+      {
+        "th": "กำหนดให้ไม่มีการประเมินผลการปฏิรูปใดๆ ทั้งสิ้น",
+        "en": "Mandating that no evaluation of reform outcomes shall take place",
+        "zh": "规定对任何改革成效不做任何评估"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 259 และ 261 กำหนดให้การปฏิรูปประเทศมีกฎหมายกำหนดขั้นตอนและแผนการปฏิรูปประเทศ โดยมีคณะกรรมการปฏิรูปประเทศแต่ละด้านทำหน้าที่จัดทำแผนและขับเคลื่อนให้เกิดผลสัมฤทธิ์ [สูตรวิเคราะห์: หมวด 16 = แผนปฏิรูปประเทศ + คณะกรรมการปฏิรูปรายด้าน + ติดตามประเมินผล]",
+      "en": "Sections 259 and 261 require statutory reform plans and sectoral Reform Committees to drive, evaluate, and implement measurable national reforms. [Algorithm: Reform Plan + Sectoral Committees + Periodic Evaluation].",
+      "zh": "第259条与第261条规定通过制定国家改革计划并设立各领域国家改革委员会，依法推进并接受成效评估。[算法公式：第16章 = 改革方案 + 专项委员会 + 定期跟踪评估]。"
     }
   },
   {
@@ -2038,6 +3327,86 @@
       "th": "มาตรา 262 ให้คณะองคมนตรีที่ดำรงตำแหน่งก่อนวันประกาศใช้เป็นคณะองคมนตรีตามรัฐธรรมนูญนี้",
       "en": "Section 262 continued the Privy Council serving before promulgation as the Council under this Constitution.",
       "zh": "第262条规定颁布前任职的枢密院继续作为本宪法下的枢密院。"
+    }
+  },
+  {
+    "id": "c17-04",
+    "chapter": 17,
+    "sections": [
+      269
+    ],
+    "prompt": {
+      "th": "ในวาระเริ่มแรก 5 ปีตามบทเฉพาะกาล มาตรา 269 วุฒิสภามีจำนวนสมาชิกกี่คน ซึ่งแตกต่างจากจำนวนปกติในมาตรา 107?",
+      "en": "During the initial 5-year transitional period under section 269, how many Senators were there, differing from the standard number in section 107?",
+      "zh": "在过渡条款第269条规定的最初5年过渡期内，参议院共有多少名参议员（不同于第107条的标准人数）？"
+    },
+    "choices": [
+      {
+        "th": "สองร้อยห้าสิบคน (250 คน)",
+        "en": "Two hundred and fifty persons (250 members)",
+        "zh": "二百五十人（250人）"
+      },
+      {
+        "th": "หนึ่งร้อยคน (100 คน)",
+        "en": "One hundred persons (100 members)",
+        "zh": "一百人（100人）"
+      },
+      {
+        "th": "ห้าร้อยคน (500 คน)",
+        "en": "Five hundred persons (500 members)",
+        "zh": "五百人（500人）"
+      },
+      {
+        "th": "เจ็ดสิบคน (70 คน)",
+        "en": "Seventy persons (70 members)",
+        "zh": "七十人（70人）"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 269 กำหนดให้ในวาระเริ่มแรก 5 ปี วุฒิสภาประกอบด้วยสมาชิกจำนวน 250 คน ซึ่งพระมหากษัตริย์ทรงแต่งตั้งตามการถวายคำแนะนำของ คสช. แตกต่างจากระบบปกติในมาตรา 107 ที่กำหนดให้มี ส.ว. จำนวน 200 คนจากการเลือกกันเองของผู้ทรงคุณวุฒิ 20 กลุ่มอาชีพ [สูตรตัวเลข: ส.ว. บทเฉพาะกาล 250 คน 5 ปี $\\rightarrow$ ปัจจุบันสิ้นสุดวาระแล้ว สู่ระบบปกติ 200 คน (ม.107)]",
+      "en": "Section 269 created a 250-member Senate during the initial 5-year period. After the transition expired, the Senate reverted to 200 members selected from 20 occupational groups under section 107. [Formula: Transitional Senate = 250 members (5 yrs) $\\rightarrow$ Permanent Senate = 200 members (Sec 107)].",
+      "zh": "第269条规定最初5年过渡期参议员为250人；过渡期结束后，参议院恢复为第107条规定的20个专业群体互选产生的200人体制。[数字公式：过渡期参议员 = 250人（满5年已届满） $\\rightarrow$ 现行常态体制 = 200人（第107条）]。"
+    }
+  },
+  {
+    "id": "c17-05",
+    "chapter": 17,
+    "sections": [
+      279
+    ],
+    "prompt": {
+      "th": "มาตรา 279 ซึ่งเป็นมาตราสุดท้ายของบทเฉพาะกาล บัญญัติเกี่ยวกับบรรดาประกาศ คำสั่ง และการกระทำของ คสช. ไว้อย่างไร?",
+      "en": "What does section 279, the final transitional section, provide regarding NCPO announcements, orders, and acts?",
+      "zh": "作为过渡条款最后一项的第279条，对全国维持和平秩序委员会（NCPO）的公告、命令及行为作何规定？"
+    },
+    "choices": [
+      {
+        "th": "ให้มีผลใช้บังคับต่อไปและชอบด้วยรัฐธรรมนูญและกฎหมาย จนกว่าจะมีกฎหมายแก้ไขเพิ่มเติมหรือยกเลิก",
+        "en": "Remain in force and be deemed constitutional and lawful until amended or repealed by law",
+        "zh": "继续有效并视为合宪合法，直至依法予以修改或废除"
+      },
+      {
+        "th": "ให้เป็นโมฆะทั้งหมดทันทีตั้งแต่วันประกาศใช้รัฐธรรมนูญ",
+        "en": "Deemed completely void immediately upon promulgation of the Constitution",
+        "zh": "自宪法颁布之日起立即全部归于无效"
+      },
+      {
+        "th": "ให้มีผลบังคับเฉพาะในเขตจังหวัดทหารบกเท่านั้น",
+        "en": "Apply only within army district zones",
+        "zh": "仅在陆军防区范围内有效"
+      },
+      {
+        "th": "กำหนดให้ยกเลิกภายในสามสิบวันโดยไม่ต้องออกกฎหมาย",
+        "en": "Mandate automatic expiration within thirty days without any statute",
+        "zh": "规定三十天内自动失效，无需另行立法"
+      }
+    ],
+    "answer": 0,
+    "explanation": {
+      "th": "มาตรา 279 บัญญัติให้บรรดาประกาศ คำสั่ง และการกระทำของ คสช. หรือของหัวหน้า คสช. ยังคงมีผลบังคับใช้ต่อไป และให้ถือว่าชอบด้วยรัฐธรรมนูญนี้และชอบด้วยกฎหมาย จนกว่าจะมีการแก้ไขเพิ่มเติมหรือยกเลิกโดยกฎหมาย [สูตรวิเคราะห์: ม.279 = บทรับรองความชอบของประกาศ/คำสั่ง คสช. จนกว่าจะถูกแก้หรือยกเลิกตามขั้นตอนนิติบัญญัติ]",
+      "en": "Section 279 validates NCPO announcements, orders, and acts as constitutional and lawful until specifically amended or repealed by an Act. [Algorithm: Transitional validation clause $\\rightarrow$ Enforceable until legislative repeal].",
+      "zh": "第279条规定，NCPO及其主席发布的一切公告、命令或行为继续有效，并视为合宪合法，直至通过法律程序加以修改或废止。[算法公式：第279条过渡确认条款 $\\rightarrow$ 在立法机关正式修改或废止前持续合法有效]。"
     }
   }
 ]

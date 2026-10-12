@@ -318,6 +318,29 @@ export function Reader() {
           {[133, 134, 136, 145, 256].includes(section.number) && (
             <LawFlow amendment={section.number === 256} />
           )}
+          {[5, 26, 83, 107, 120, 158, 172, 175, 188, 200, 215, 222, 255, 256].includes(section.number) && (
+            <div className="note" style={{ marginTop: "20px" }}>
+              <strong>
+                {tr(
+                  lang,
+                  "สูตรวิเคราะห์ & แผนภาพดินสอสีสำหรับมาตรานี้",
+                  "Formulas & Crayon Diagrams for this Section",
+                  "本条相关算法公式与蜡笔图解",
+                )}
+              </strong>
+              <p className="micro">
+                {tr(
+                  lang,
+                  "ทำความเข้าใจโครงสร้างอำนาจ ขั้นตอนกฎหมาย และตัวเลขสำคัญผ่านแผนภาพสรุปสูตร",
+                  "Understand powers, procedures, and vital numbers through visual cheat sheets.",
+                  "通过图解与判定树清晰掌握权力结构、法定程序与高频考点。",
+                )}
+              </p>
+              <Link href="/cheatsheet/">
+                {tr(lang, "เปิดหน้าสรุปสูตร & แผนภาพ", "Open Cheat Sheets & Diagrams", "打开速查表与图解")} ↗
+              </Link>
+            </div>
+          )}
           <div className="reader-navigation">
             <button
               disabled={section.number === 1}

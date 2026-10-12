@@ -90,15 +90,15 @@ test("state is immutable and energy never blocks another answer", () => {
   assert.throws(() => recordAnswer(p, questions[0], true, NaN), RangeError);
 });
 
-test("quiz bank has 51 unique trilingual questions across every chapter and transitional provisions", async () => {
+test("quiz bank has 85 unique trilingual questions across every chapter and transitional provisions", async () => {
   const { readFile } = await import("node:fs/promises");
   const bank = JSON.parse(
     await readFile(new URL("../data/questions.json", import.meta.url), "utf8"),
   ) as import("../lib/learning.ts").Question[];
-  assert.equal(bank.length, 51);
+  assert.equal(bank.length, 85);
   assert.equal(new Set(bank.map((q) => q.id)).size, bank.length);
   for (let chapter = 1; chapter <= 17; chapter++)
-    assert.equal(bank.filter((q) => q.chapter === chapter).length, 3);
+    assert.equal(bank.filter((q) => q.chapter === chapter).length, 5);
   for (const q of bank) {
     assert.equal(q.choices.length, 4);
     assert.ok(Number.isInteger(q.answer) && q.answer >= 0 && q.answer < 4);
