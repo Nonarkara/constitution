@@ -1,4 +1,5 @@
 "use client";
+import { ReflectionSummary } from "./ReflectionSummary";
 import { useState } from "react";
 import Link from "next/link";
 import { chapters, readingText, sections } from "@/lib/corpus";
@@ -33,6 +34,7 @@ export function Notes() {
           `${marks.marks.length}处标记 · ${marks.bookmarks.length}条收藏 · 保存在本设备，可在“设备设置”中备份。`,
         )}
       </p>
+      <ReflectionSummary/>
       <label className="micro" htmlFor="notes-chapter">
         {tr(lang, "กรองตามหมวด", "Filter by chapter", "按章节筛选")}
       </label>
@@ -52,7 +54,7 @@ export function Notes() {
 
       {empty && (
         <div className="note">
-          <strong>{tr(lang, "ยังไม่มีบันทึก", "Nothing marked yet", "还没有笔记")}</strong>
+          <strong>{tr(lang, "ยังไม่มีบันทึกมาตรา", "No section notes yet", "尚无法条笔记")}</strong>
           <p>
             {tr(
               lang,

@@ -11,6 +11,9 @@ export default function Page() {
         zh: "理解整个体系：你的权利、索引和术语表。",
       }}
       items={[
+        { href: "/amend/", mark: "A", title: { th: "ถ้าเราอยากแก้รัฐธรรมนูญ", en: "If we want to amend it", zh: "如果我们想修宪" }, text: { th: "เรื่องสมมติ ประตูจริง และคำตอบของคุณเอง", en: "A fictional story, real gates and your own reflection", zh: "虚构故事、真实门槛与你自己的思考" } },
+        { href: "/news/", mark: "N", title: { th: "ข่าวสั้นหนึ่งแก้ว", en: "A cup of headlines", zh: "一杯新闻标题" }, text: { th: "หัวข่าวกฎหมายไทย พร้อมนับคำใน 7 วัน", en: "Thai-law headlines and keyword counts over 7 days", zh: "泰国法律标题与7天关键词计数" } },
+        { href: "/research/", mark: "R", title: { th: "ทำไมผมสร้างสมุดเล่มนี้", en: "Why I built this notebook", zh: "我为何做这本笔记" }, text: { th: "Dr. Non: จุดประสงค์ วิธีเรียน และการทดสอบ", en: "Dr. Non: purpose, learning methods and testing", zh: "Dr. Non：目的、学习方法与测试" } },
         { href: "/rights/", mark: "R", title: { th: "สิทธิของคุณ", en: "Your rights", zh: "你的权利" }, text: { th: "โจทย์ชีวิตจริง เดาก่อนแล้วเปิดตัวบท", en: "Real-life puzzles: guess, then open the law", zh: "生活题：先猜，再看条文" } },
         { href: "/topics/", mark: "I", title: { th: "ดัชนีเรื่อง", en: "Subject index", zh: "主题索引" }, text: { th: "หาตามเรื่องในชีวิต เช่น ภาษี การชุมนุม การศึกษา", en: "Look things up the everyday way: tax, assembly, schooling", zh: "按生活话题查找：税收、集会、教育" } },
         { href: "/glossary/", mark: "G", title: { th: "อภิธานศัพท์", en: "Glossary", zh: "术语表" }, text: { th: "ศัพท์กฎหมายที่เจอในตัวบท อธิบายด้วยภาษาง่าย", en: "Legal terms from the text, in plain words", zh: "条文中的法律术语，用平实的话解释" } },

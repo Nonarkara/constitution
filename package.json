@@ -7,18 +7,20 @@
     "build": "node scripts/build-indexes.mjs && node scripts/validate-translations.mjs && node scripts/validate-cases.mjs && node scripts/validate-questions.mjs && node scripts/build-podcasts.mjs && next build --webpack && node scripts/build-offline.mjs",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
-    "verify": "node scripts/build-indexes.mjs && node scripts/validate-corpus.mjs && node scripts/validate-translations.mjs && node scripts/validate-cases.mjs && node scripts/validate-questions.mjs && npm test && npm run typecheck"
+    "verify": "node scripts/build-indexes.mjs && node scripts/validate-corpus.mjs && node scripts/validate-translations.mjs && node scripts/validate-cases.mjs && node scripts/validate-questions.mjs && npm test && npm run typecheck",
+    "news:harvest": "node --experimental-strip-types scripts/harvest-news.mjs"
   },
   "dependencies": {
+    "fast-xml-parser": "^5.11.2",
     "next": "^16.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "typescript": "^5.9.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0"
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.9.0"
   },
   "type": "module"
 }

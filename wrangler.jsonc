@@ -1,11 +1,33 @@
-// Static export served as Worker assets: `npm run build && wrangler deploy`.
 {
   "name": "constitution",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./out",
     "html_handling": "auto-trailing-slash",
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
   },
-  "routes": [{ "pattern": "constitution.nonarkara.org", "custom_domain": true }]
+  "routes": [
+    {
+      "pattern": "constitution.nonarkara.org",
+      "custom_domain": true
+    }
+  ],
+  "main": "worker/index.ts",
+  "d1_databases": [
+    {
+      "binding": "NEWS",
+      "database_name": "constitution-headlines",
+      "database_id": "0390c2c2-8151-4442-80c5-71e5a399e704",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "0 */6 * * *"
+    ]
+  }
 }

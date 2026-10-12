@@ -12,7 +12,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
     ["/read/", labels.read, ["/read/", "/section/", "/notebook/"]],
     ["/practice/", labels.practice, ["/practice/", "/review/", "/exam/", "/flashcards/", "/games/"]],
     ["/notes/", labels.notes, ["/notes/"]],
-    ["/library/", labels.library, ["/library/", "/bible/", "/rights/", "/cheatsheet/", "/topics/", "/glossary/", "/palace/", "/sources/", "/settings/"]],
+    ["/library/", labels.library, ["/library/", "/amend/", "/news/", "/research/", "/bible/", "/rights/", "/cheatsheet/", "/topics/", "/glossary/", "/palace/", "/sources/", "/settings/"]],
   ] as const;
   return (
     <>
@@ -123,6 +123,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         </main>
       </div>
       <footer>
+        <Link href="/research/">Dr. Non Arkaraprasertkul · {tr(lang, "ที่มาของสมุด", "About this notebook", "关于这本笔记")}</Link>
         <span>
           {tr(lang, "ประเทศไทย · รัฐธรรมนูญ 2560", "Thailand · Constitution 2017", "泰国 · 2017年宪法")}
         </span>

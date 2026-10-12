@@ -223,3 +223,13 @@ npm run build && wrangler deploy
 - **Authoritative Text:** The Thai text published in the Royal Thai Government Gazette (ราชกิจจานุเบกษา) is the sole authoritative legal source.
 - **Unofficial Translations:** English (Office of the Council of State + amended study overlays) and Chinese translations are provided strictly for educational study and comparative analysis.
 - **Public Domain:** Thai statutory laws and court judgments are public domain materials under Section 7 of the Thai Copyright Act B.E. 2537.
+
+## Civic learning, headlines and research
+
+- `/amend/`: a fictional amendment journey, recall checks, vacancy-aware vote lab, opportunity costs and private, downloadable reflection.
+- `/news/`: headline-only publisher RSS collection, D1 persistence, six-hour harvesting and transparent7-day keyword counts. Full stories open at their publisher; article bodies are not stored.
+- `/research/`: Dr. Non Arkaraprasertkul's purpose, learning research, design hypotheses and testing limits. Tikky may be an imagined companion.
+
+The Worker now serves `/api/news` with the `NEWS` D1 binding; learning pages remain static/offline. `wrangler d1 migrations apply constitution-headlines --remote` applies the new schema. `npm run news:harvest` refreshes the build snapshot and prepares `.openai/news-seed.sql`; `wrangler d1 execute constitution-headlines --remote --file .openai/news-seed.sql` can seed it. Deployment config schedules the harvester every6 hours. Reflections never go to this database and have their own download in the journey.
+
+See `docs/civic-expansion-plan.md` and `docs/civic-expansion-verification.md` for scope and evidence. Native iPad/microphone and learner outcomes still require human testing.

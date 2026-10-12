@@ -31,3 +31,13 @@ Live: https://constitution.nonarkara.org (Cloudflare Worker static assets, `wran
 Each chapter lesson opens with a real-life puzzle from `data/cases.json` (20 cases, every chapter): guess first, then a story answer, verbatim Thai quotes and a think-first "why". Pretesting and elaborative interrogation; guesses are never scored or stored, so mastery and spaced review stay pure retrieval. `scripts/validate-cases.mjs` blocks any quote that is not byte-identical to `constitution.json`. The same cases form the Your rights shelf (`/rights/`).
 
 Ask (`components/Ask.tsx`) sends questions the notebook cannot answer to Non-Laws (nonwriter.nonarkara.org, `/api/laws` + `/api/ask/:id`, CORS allow-listed for this origin). Only section numbers travel; the Non-Writer quotes its own vendored copy (`server/ask/constitution-th.json`, refresh with `npm run constitution <path>` there), and this app re-renders constitution rows from its own corpus. Fallback is `#laws?q=…&s=…`, a fragment that never reaches a server log.
+
+## Civic expansion — 12 October 2026
+
+`/amend/` is a fictional Senate-qualification proposal through the real255/256 gates: short reading, retrieval, vacancy-aware vote lab, referendum limits, opportunity-cost exercise and private reflection. Opinions earn no XP. Reflection has its own versioned local key and JSON export; Notes links back to it. Doorways/clocks are memory cues, not claims of proven learning efficacy.
+
+`/news/` is a headline-only bulletin, harvested from fixed Matichon politics/constitution-tag and The Active/ThaiPBS RSSfeeds into Cloudflare D1. WorkerGET `/api/news`, cron every6 hours; publisher bodies are never stored. At most200 headlines shown,90-day history,7-day distinct-title keyword counts. Snapshot survives partial source failure. Native publisher language is retained. Source health and dates are visible; no public mutation endpoint.
+
+`/research/` gives Dr. Non Arkaraprasertkul's purpose and design/testing account. Tikky may be an imagined narrative companion. Published learning research, design hypotheses, automated checks and future human/iPad testing are distinct. The actual legal text establishes institutions; their fairness or value remains a question for readers.
+
+Design reference: the existing exam notebook and a newspaper's ruled bulletin. Story path, headline rows and research prose are different layouts because they support different tasks. Moderate variance, low motion, medium story density/high bulletin density. All earned diagrams preserved; phone360 px/tablet768 px checked.
