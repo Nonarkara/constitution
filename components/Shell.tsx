@@ -10,7 +10,7 @@ import { questionIndex } from "@/lib/outline";
 import { dueQuestions } from "@/lib/learning";
 import { knowSummary, sectionSignals } from "@/lib/knowledge";
 export function Shell({ children }: { children: React.ReactNode }) {
-  const { lang, setLang, progress, storageError, ready, online, marks, annotations, read } = useStudy();
+  const { lang, setLang, progress, storageError, ready, online, marks, annotations, read, large, setLarge } = useStudy();
   const path = usePathname();
   const theme = useTheme();
   // What she knows, not points: counted from her own reading, marks and answers.
@@ -52,18 +52,32 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </span>
         </Link>
         <div className="header-controls">
-        <div className="themes" role="group" aria-label={tr(lang, "สีหน้าจอ", "Screen colours", "屏幕配色")}>
-          {/* Each swatch is the theme itself: its paper, its ink. */}
+        <div className="themes" role="group" aria-label={tr(lang, "ขนาดตัวอักษรและสีหน้าจอ", "Text size and screen colours", "字号与屏幕配色")}>
+          <button
+            type="button"
+            aria-pressed={large}
+            aria-label={tr(lang, "ขนาดตัวอักษร", "Text size", "字号")}
+            title={tr(lang, "ขนาดตัวอักษร", "Text size", "字号")}
+            onClick={() => setLarge(!large)}
+          >
+            {tr(lang, "ขนาด", "Size", "字号")}
+          </button>
           {THEMES.map((t) => (
             <button
               key={t}
+              type="button"
               aria-pressed={theme.shown === t}
-              aria-label={THEME_NAME[t][lang]}
+              aria-label={tr(
+                lang,
+                `สีหน้าจอ ${THEME_NAME[t].th}`,
+                `Theme: ${THEME_NAME[t].en}`,
+                `配色：${THEME_NAME[t].zh}`,
+              )}
               title={THEME_NAME[t][lang]}
               style={{ background: SWATCH[t].paper, color: SWATCH[t].ink }}
               onClick={() => theme.choose(t)}
             >
-              <span aria-hidden="true">{{ th: "ก", en: "A", zh: "文" }[lang]}</span>
+              {THEME_NAME[t][lang]}
             </button>
           ))}
         </div>

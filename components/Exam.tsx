@@ -11,6 +11,7 @@ import { Quiz } from "./Quiz";
 import { recordAnswer } from "@/lib/learning";
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
+import { enNoun } from "@/lib/grammar";
 
 type Question = (typeof questions)[number];
 const FORMATS = papers;
@@ -152,7 +153,7 @@ export function Exam() {
             `正确率${Math.round((result.right / paper.list.length) * 100)}%。错题及解析、条文见下方。`,
           )}
         </p>
-        <p>{tr(lang, `ตอบผิด ${result.wrong} ข้อ · ยังไม่ตอบ ${result.blanks} ข้อ`, `${result.wrong} wrong answers · ${result.blanks} unanswered`, `答错${result.wrong}题 · 未答${result.blanks}题`)}</p>
+        <p>{tr(lang, `ตอบผิด ${result.wrong} ข้อ · ยังไม่ตอบ ${result.blanks} ข้อ`, `${enNoun(result.wrong, "wrong answer", "wrong answers")} · ${enNoun(result.blanks, "unanswered item", "unanswered items")}`, `答错${result.wrong}题 · 未答${result.blanks}题`)}</p>
         <table className="exam-table">
           <thead>
             <tr>

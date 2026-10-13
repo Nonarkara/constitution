@@ -1,4 +1,5 @@
 import { amendmentThresholds } from "./amendment.ts";
+import { enNoun, formatCount } from "./grammar.ts";
 import type { Question } from "./learning";
 export const DRILL_COUNT = 4230;
 export const DRILL_FAMILIES = 10;
@@ -23,6 +24,33 @@ export const drillNames = [
   t("รายชื่อที่ยังขาด", "Missing petition signatures", "还缺多少联署"),
   t("เก้าอี้รัฐมนตรี", "Ministerial seats", "部长席位"),
 ];
+/** Neighbours in a family are 97 steps apart, so a round of five is not +1 MP. */
+export function drillSpread(seed: number) {
+  return (seed * 97) % 423;
+}
+export function drillMembership(seed: number) {
+  const spread = drillSpread(seed);
+  return {
+    spread,
+    H: 72 + spread,
+    S: 40 + (spread % 161),
+    E: 10 + (spread % 60),
+  };
+}
+export function petitionGap(seed: number) {
+  const spread = drillSpread(seed);
+  const amendment = spread % 2 === 0;
+  const need = amendment ? 50_000 : 10_000;
+  const have = amendment ? 8_000 + spread * 90 : 1_000 + spread * 20;
+  return { amendment, need, have, missing: need - have };
+}
+export function ministerialRemoval(seed: number) {
+  const spread = drillSpread(seed);
+  const have = 15 + (spread % 21);
+  const remove = 1 + Math.floor(spread / 21);
+  const add = 35 - have + remove;
+  return { have, add, remove };
+}
 export const drillId = (i: number) => `drill-${String(i).padStart(4, "0")}`;
 export const drillIds = () =>
   Array.from({ length: DRILL_COUNT }, (_, i) => drillId(i));
@@ -31,9 +59,7 @@ export function makeDrill(i: number): Question {
     throw new RangeError("Invalid drill");
   const family = Math.floor(i / 423),
     seed = i % 423,
-    H = 72 + seed,
-    S = 40 + (seed % 161),
-    E = 10 + (seed % 70);
+    { H, S, E } = drillMembership(seed);
   const a = amendmentThresholds(H, S, E),
     total = H + S;
   let value = 0,
@@ -202,39 +228,39 @@ export function makeDrill(i: number): Question {
       explanation,
     };
   } else if (family === 8) {
-    const amendment = seed % 2 === 0,
-      need = amendment ? 50000 : 10000,
-      have = amendment
-        ? 10000 + ((seed * 89) % 39000)
-        : 3000 + ((seed * 17) % 6900);
-    value = need - have;
+    const gap = petitionGap(seed),
+      amendment = gap.amendment,
+      need = gap.need,
+      have = gap.have;
+    value = gap.missing;
     sections = amendment ? [256] : [133];
     chapter = amendment ? 15 : 7;
     prompt = t(
-      `สมมติมีผู้มีสิทธิเลือกตั้งเข้าชื่อ ${have} คน เพื่อเสนอ${amendment ? "ร่างแก้รัฐธรรมนูญ" : "ร่างกฎหมายเรื่องในหมวด 3 หรือ 5 ตามเงื่อนไข"} ยังขาดอย่างน้อยกี่ชื่อ?`,
-      `Fiction: ${have} eligible voters sign ${amendment ? "an amendment proposal" : "a qualifying Chapter 3 or 5 bill"}. How many more signatures are needed?`,
-      `假设已有${have}名选民联署${amendment ? "修宪提案" : "符合条件的第3或5章法案"}，至少还缺多少签名？`,
+      `สมมติมีผู้มีสิทธิเลือกตั้งเข้าชื่อ ${formatCount(have)} คน เพื่อเสนอ${amendment ? "ร่างแก้รัฐธรรมนูญ" : "ร่างกฎหมายเรื่องในหมวด 3 หรือ 5 ตามเงื่อนไข"} ยังขาดอย่างน้อยกี่ชื่อ?`,
+      `Fiction: ${formatCount(have)} eligible voters sign ${amendment ? "an amendment proposal" : "a qualifying Chapter 3 or 5 bill"}. How many more signatures are needed?`,
+      `假设已有${formatCount(have)}名选民联署${amendment ? "修宪提案" : "符合条件的第3或5章法案"}，至少还缺多少签名？`,
     );
     explanation = t(
-      `เกณฑ์ ${need} คน ลบที่มี ${have} = ยังขาด ${value} การครบชื่อเปิดทางให้เสนอ ไม่รับรองว่าผ่าน ${amendment ? "" : "ร่างกฎหมายการเงินยังต้องมีคำรับรองจากนายกรัฐมนตรี"}`,
-      `Threshold ${need} minus ${have} = ${value} more. Enough signatures allow a proposal, not guaranteed passage. ${amendment ? "" : "A money bill also needs the Prime Minister's endorsement."}`,
-      `门槛${need}减去已有${have}，还缺${value}。联署达标只能提案，不保证通过。${amendment ? "" : "财政法案还须总理认可。"}`,
+      `เกณฑ์ ${formatCount(need)} คน ลบที่มี ${formatCount(have)} = ยังขาด ${formatCount(value)} การครบชื่อเปิดทางให้เสนอ ไม่รับรองว่าผ่าน ${amendment ? "" : "ร่างกฎหมายการเงินยังต้องมีคำรับรองจากนายกรัฐมนตรี"}`,
+      `Threshold ${formatCount(need)} minus ${formatCount(have)} = ${formatCount(value)} more. Enough signatures allow a proposal, not guaranteed passage. ${amendment ? "" : "A money bill also needs the Prime Minister's endorsement."}`,
+      `门槛${formatCount(need)}减去已有${formatCount(have)}，还缺${formatCount(value)}。联署达标只能提案，不保证通过。${amendment ? "" : "财政法案还须总理认可。"}`,
     );
   } else {
     sections = [158];
     chapter = 8;
-    const have = 20 + (seed % 16),
-      add = 1 + Math.floor(seed / 16);
-    value = Math.max(0, have + add - 35);
+    const seats = ministerialRemoval(seed),
+      have = seats.have,
+      add = seats.add;
+    value = seats.remove;
     prompt = t(
-      `สมมติมีรัฐมนตรีอื่นนอกจากนายกรัฐมนตรี ${have} คน อยากเพิ่มอีก ${add} คน ต้องลดจากจำนวนที่เสนออย่างน้อยกี่คนเพื่อไม่เกินเพดาน?`,
-      `Fiction: ${have} ministers besides the PM, with ${add} more proposed. How many must be removed from the proposal to stay within the cap?`,
-      `假设总理之外已有${have}名部长，拟再加${add}名，至少须从拟议总数中减去多少人才能不超上限？`,
+      `สมมติมีรัฐมนตรีอื่นนอกจากนายกรัฐมนตรี ${formatCount(have)} คน อยากเพิ่มอีก ${formatCount(add)} คน ต้องลดจากจำนวนที่เสนออย่างน้อยกี่คนเพื่อไม่เกินเพดาน?`,
+      `Fiction: ${enNoun(have, "minister", "ministers")} besides the PM, with ${formatCount(add)} more proposed. How many must be removed from the proposal to stay within the cap?`,
+      `假设总理之外已有${formatCount(have)}名部长，拟再加${formatCount(add)}名，至少须从拟议总数中减去多少人才能不超上限？`,
     );
     explanation = t(
-      `มาตรา 158 ให้มีรัฐมนตรีอื่นไม่เกิน 35 คน ${have}+${add}=${have + add} จึงต้องลดอย่างน้อย ${value} คน อย่านับนายกรัฐมนตรีปนใน 35 และยังมีเงื่อนไขแต่งตั้งอื่น`,
-      `Section 158 permits at most 35 other ministers. ${have}+${add}=${have + add}; remove at least ${value}. The PM is outside this 35, and other appointment conditions still apply.`,
-      `第158条允许最多35名其他部长。${have}+${add}=${have + add}，至少须减少${value}人。总理不计入这35人，其他任命条件仍须满足。`,
+      `มาตรา 158 ให้มีรัฐมนตรีอื่นไม่เกิน 35 คน ${formatCount(have)}+${formatCount(add)}=${formatCount(have + add)} จึงต้องลดอย่างน้อย ${formatCount(value)} คน อย่านับนายกรัฐมนตรีปนใน 35 และยังมีเงื่อนไขแต่งตั้งอื่น นี่ไม่ใช่เพดาน 8 ปี`,
+      `Section 158 permits at most 35 other ministers. ${formatCount(have)}+${formatCount(add)}=${formatCount(have + add)}; remove at least ${formatCount(value)}. The PM is outside this 35, and other appointment conditions still apply. This is not the eight-year limit.`,
+      `第158条允许最多35名其他部长。${formatCount(have)}+${formatCount(add)}=${formatCount(have + add)}，至少须减少${formatCount(value)}人。总理不计入这35人，其他任命条件仍须满足。这不是八年上限。`,
     );
   }
   const values = [value, value + 1, Math.max(0, value - 1), value + 2];
@@ -248,10 +274,10 @@ export function makeDrill(i: number): Question {
     prompt,
     choices: values.map((n) =>
       family < 4
-        ? t(`${n} เสียง`, `${n} votes`, `${n}票`)
+        ? t(`${formatCount(n)} เสียง`, enNoun(n, "vote", "votes"), `${formatCount(n)}票`)
         : family === 8
-          ? t(`${n} ชื่อ`, `${n} signatures`, `${n}个签名`)
-          : t(`${n} คน`, `${n} people`, `${n}人`),
+          ? t(`${formatCount(n)} ชื่อ`, enNoun(n, "signature", "signatures"), `${formatCount(n)}个签名`)
+          : t(`${formatCount(n)} คน`, enNoun(n, "person", "people"), `${formatCount(n)}人`),
     ),
     answer,
     explanation,

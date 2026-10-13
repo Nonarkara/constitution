@@ -10,7 +10,13 @@ vm.runInNewContext(ts.transpileModule(readFileSync(new URL("../lib/adaptive.ts",
 }).outputText, {
   module: adaptiveModule, exports: adaptiveModule.exports,
   require: (name: string) => {
-    if (name === "./outline") return JSON.parse(readFileSync(new URL("../data/outline.json", import.meta.url), "utf8"));
+    if (name === "./outline" || name === "../data/outline.json") {
+      const data = JSON.parse(readFileSync(new URL("../data/outline.json", import.meta.url), "utf8"));
+      return { default: data, ...data };
+    }
+    if (name === "./shuffle.ts" || name === "./shuffle") {
+      return { fisherYates: (items: unknown[]) => items.slice() };
+    }
     throw Error(name);
   },
 });

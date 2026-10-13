@@ -313,11 +313,14 @@ small,
 }
 .themes {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
 }
 .themes button {
-  width: 44px;
-  padding: 0;
+  width: auto;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px 10px;
   border: 1px solid var(--edge);
   font-size: var(--micro);
   font-weight: 600;

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { deepLink, askLanguage, pollDelay, classify, localConstitution, POLL_LIMIT } from "../lib/ask.ts";
+import { deepLink, askLanguage, pollDelay, classify, localConstitution, POLL_LIMIT, pollSteps, ATTEMPT_BUDGET_MS, ASK_RETRIES } from "../lib/ask.ts";
 
 test("the Non-Laws hand-off keeps the question in the fragment", () => {
   const url = new URL(deepLink("ตำรวจค้นบ้านได้ไหม", [33, 36, 1, 2, 3, 4]));
@@ -18,7 +18,12 @@ test("languages, polling and outcomes map to what the server understands", () =>
   assert.equal(askLanguage("th"), "th");
   const delays = Array.from({ length: 6 }, (_, i) => pollDelay(i));
   assert.deepEqual(delays, [...delays].sort((a, b) => a - b));
-  assert.ok(delays.slice(0, 3).reduce((a, b) => a + b) + (POLL_LIMIT - 3) * 5000 > 240_000);
+  const budget = pollSteps().reduce((sum, delay) => sum + delay, 0);
+  assert.ok(budget <= ATTEMPT_BUDGET_MS);
+  assert.ok(budget > 60_000);
+  assert.equal(POLL_LIMIT, pollSteps().length);
+  assert.equal(ASK_RETRIES, 1);
+  assert.ok((ASK_RETRIES + 1) * ATTEMPT_BUDGET_MS < 180_000);
   assert.equal(classify(202, {}), "accepted");
   assert.equal(classify(429, {}), "rate");
   assert.equal(classify(422, { refused: true }), "refused");

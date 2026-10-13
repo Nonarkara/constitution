@@ -1,6 +1,9 @@
-import type { Progress, Question } from "./learning";
-import type { UserAnnotations } from "./annotations";
-import { chapters } from "./outline";
+import type { Progress, Question } from "./learning.ts";
+import type { UserAnnotations } from "./annotations.ts";
+import outlineData from "../data/outline.json" with { type: "json" };
+import { fisherYates } from "./shuffle.ts";
+
+const chapters = outlineData.chapters;
 
 export type ExamTarget = "all" | "ocsc" | "governor" | "legal" | "civic";
 
@@ -93,10 +96,17 @@ export function analyzeUserLearning(
   // Sort by priorityScore descending
   analysis.sort((a, b) => b.priorityScore - a.priorityScore);
 
-  const weakestChapters = analysis
-    .filter((a) => a.errorCount > 0 || a.answeredCount < a.totalQuestions)
-    .slice(0, 3)
-    .map((a) => a.chapter);
+  const answeredTotal = analysis.reduce((sum, row) => sum + row.answeredCount, 0);
+  // An empty profile has no errors to explain. Naming the largest chapter
+  // (Parliament) would be a guess, not an insight.
+  const weakestChapters =
+    answeredTotal === 0
+      ? []
+      : analysis
+          .filter((row) => row.errorCount > 0)
+          .sort((a, b) => b.errorCount - a.errorCount || b.priorityScore - a.priorityScore)
+          .slice(0, 3)
+          .map((row) => row.chapter);
 
   const annotatedSectionsCount = Object.keys(annotations).length;
 
@@ -106,7 +116,7 @@ export function analyzeUserLearning(
   let recZh = "按照常规路径练习，重点复习错题。";
 
   if (weakestChapters.length > 0) {
-    const topWeak = analysis[0];
+    const topWeak = analysis.find((row) => row.chapter === weakestChapters[0])!;
     const topChapterTitle = topWeak.title.th;
     recTh = `ระบบตรวจพบว่าคุณควรเน้น "${topChapterTitle}" (หมวด ${topWeak.chapter}) มีข้อที่ควรเสริมความแม่นยำ`;
     recEn = `We noticed Chapter ${topWeak.chapter} (${topWeak.title.en}) has areas to reinforce.`;
@@ -284,7 +294,7 @@ export function buildPracticeQueue(
     const related = allQuestions.filter(
       (q) => !q.id.startsWith("comp-") && (q.chapter === 11 || q.chapter === 8 || q.chapter === 15)
     );
-    const shuffledRelated = [...related].sort(() => Math.random() - 0.5);
+    const shuffledRelated = fisherYates(related);
     return [...compList, ...shuffledRelated].slice(0, 30);
   }
 
@@ -300,7 +310,7 @@ export function buildPracticeQueue(
         unmastered.push(q);
       }
     }
-    const combined = [...errorQuestions, ...unmastered.sort(() => Math.random() - 0.5)];
+    const combined = [...errorQuestions, ...fisherYates(unmastered)];
     return combined.slice(0, 20);
   }
 
@@ -308,14 +318,14 @@ export function buildPracticeQueue(
     // Chapters 3 (Rights), 5 (Duties of State), and sections on citizen standing
     const scenarioSections = new Set([25, 26, 27, 28, 29, 32, 33, 34, 41, 42, 43, 47, 50, 51, 54, 59, 212, 213]);
     const matches = allQuestions.filter((q) => q.sections.some((s) => scenarioSections.has(s)));
-    return [...matches].sort(() => Math.random() - 0.5).slice(0, 20);
+    return fisherYates(matches).slice(0, 20);
   }
 
   if (mode === "sprint") {
-    return [...allQuestions].sort(() => Math.random() - 0.5).slice(0, 10);
+    return fisherYates(allQuestions).slice(0, 10);
   }
 
   // Endless / all
-  return [...allQuestions].sort(() => Math.random() - 0.5);
+  return fisherYates(allQuestions);
 }
 

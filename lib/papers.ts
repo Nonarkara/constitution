@@ -47,6 +47,8 @@ const themes = [
       "现行与过渡规则",
     ),
     chapters: [1, 7, 8, 15, 17],
+    // The transitory provisions are the theme. Fill them before other chapters.
+    core: [17],
   },
 ];
 export const papers = themes.flatMap((theme, j) =>
@@ -59,6 +61,7 @@ export const papers = themes.flatMap((theme, j) =>
     number: j * 3 + k + 1,
     title: theme.title,
     chapters: theme.chapters,
+    core: "core" in theme ? theme.core : [],
     ...f,
   })),
 );
@@ -94,18 +97,36 @@ export function makePaper(
   bank: Question[],
   paper: (typeof papers)[number],
 ): Question[] {
-  const random = seededRandom(paper.number * 104729),
-    preferred = bank.filter((q) => paper.chapters.includes(q.chapter));
-  const focus = paper.chapters.length
+  const random = seededRandom(paper.number * 104729);
+  const coreChapters = paper.core ?? [];
+  const coreBank = bank.filter((q) => coreChapters.includes(q.chapter));
+  const core = coreChapters.length
+    ? balanced(coreBank, Math.min(coreBank.length, paper.count), random)
+    : [];
+  const used = new Set(core.map((q) => q.id));
+  const preferred = bank.filter(
+    (q) => paper.chapters.includes(q.chapter) && !used.has(q.id),
+  );
+  const themeFill = coreChapters.length
     ? balanced(
         preferred,
-        Math.min(preferred.length, Math.ceil(paper.count * 0.6)),
+        Math.min(preferred.length, paper.count - core.length),
         random,
       )
     : [];
-  const chosen = new Set(focus.map((q) => q.id));
+  const sampled = coreChapters.length
+    ? []
+    : paper.chapters.length
+      ? balanced(
+          preferred,
+          Math.min(preferred.length, Math.ceil(paper.count * 0.6)),
+          random,
+        )
+      : [];
+  const focus = [...core, ...themeFill, ...sampled];
+  for (const q of focus) used.add(q.id);
   const rest = balanced(
-    bank.filter((q) => !chosen.has(q.id)),
+    bank.filter((q) => !used.has(q.id)),
     paper.count - focus.length,
     random,
   );

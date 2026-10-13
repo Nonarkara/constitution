@@ -1,27 +1,33 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { sections as corpus } from "@/lib/corpus";
+import { sectionBody } from "@/lib/corpus";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
 import {
   ASK_ORIGIN,
+  ASK_RETRIES,
+  ATTEMPT_BUDGET_MS,
   askRequest,
   classify,
+  confidenceLabel,
   consentCopy,
   deepLink,
   friendlyAskError,
   groundedLabel,
   localConstitution,
   looksLikeProviderError,
+  notebookFallback,
   outcomeError,
-  pollDelay,
-  POLL_LIMIT,
+  pollSteps,
   presentAnswer,
+  readConfidence,
   readGrounded,
   readSources,
+  shapeAskAnswer,
   showGroundedMark,
   studyDisclaimer,
+  type AskExcerpt,
 } from "@/lib/ask";
 
 type Statute = { cite?: string; law?: string; section?: string; text?: string };
@@ -29,13 +35,14 @@ type Deka = { caseId?: string; year?: string; headnote?: string; url?: string };
 type Answer = {
   answer: string;
   grounded?: boolean;
+  confidence?: string | null;
   sources?: { title?: string; url?: string }[];
-  final?: { grounded?: boolean; sources?: { title?: string; url?: string }[] };
+  final?: { grounded?: boolean; confidence?: string | null; sources?: { title?: string; url?: string }[] };
   appendix?: { disclaimer?: string; statutes?: Statute[]; deka?: Deka[] } | null;
 };
 type State =
   | { kind: "idle" }
-  | { kind: "waiting"; position: number }
+  | { kind: "waiting"; position: number; attempt: number }
   | { kind: "done"; result: Answer }
   | { kind: "error"; message: string; link: boolean };
 
@@ -52,46 +59,70 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
   const length = question.trim().length;
   const busy = state.kind === "waiting";
   const fail = (message: string, link = true) => setState({ kind: "error", message, link });
+  const excerpts: AskExcerpt[] = sections.map((n) => ({ number: n, text: sectionBody(n, lang) }));
+  const settle = (result: Answer) => {
+    const translations = excerpts.map((excerpt) => excerpt.text);
+    const shaped = shapeAskAnswer(result.answer ?? "", lang, sections, translations);
+    setState({ kind: "done", result: { ...result, answer: shaped } });
+  };
 
   async function ask() {
     const mine = ++run.current;
     if (!navigator.onLine) return fail(friendlyAskError("offline", lang));
-    setState({ kind: "waiting", position: 0 });
+    const tries = ASK_RETRIES + 1;
+    for (let attempt = 0; attempt < tries; attempt++) {
+      if (run.current !== mine) return;
+      setState({ kind: "waiting", position: 0, attempt });
+      const outcome = await runAsk(mine, attempt);
+      if (run.current !== mine || outcome === "done" || outcome === "stopped") return;
+    }
+    if (run.current !== mine) return;
+    if (excerpts.length) return settle(notebookFallback(lang, excerpts));
+    fail(friendlyAskError("timeout", lang));
+  }
+
+  async function runAsk(mine: number, attempt: number): Promise<"done" | "retry" | "stopped"> {
     let res: Response;
     try {
       res = await fetch(`${ASK_ORIGIN}/api/laws`, {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify(askRequest(question, lang, sections)),
+        body: JSON.stringify(askRequest(question, lang, sections, excerpts)),
+        signal: AbortSignal.timeout(20_000),
       });
     } catch {
-      return fail(friendlyAskError("unreachable", lang));
+      return attempt + 1 < ASK_RETRIES + 1 ? "retry" : "retry";
     }
     const body = await res.json().catch(() => ({}));
     const outcome = classify(res.status, body);
-    if (outcome !== "accepted") return fail(outcomeError(outcome, lang));
-    for (let attempt = 0; attempt < POLL_LIMIT; attempt++) {
-      await new Promise((r) => setTimeout(r, pollDelay(attempt)));
-      if (run.current !== mine) return;
+    if (outcome === "refused" || outcome === "invalid") {
+      fail(outcomeError(outcome, lang));
+      return "stopped";
+    }
+    if (outcome !== "accepted") return "retry";
+    const started = Date.now();
+    for (const delay of pollSteps()) {
+      await new Promise((r) => setTimeout(r, delay));
+      if (run.current !== mine) return "stopped";
+      if (Date.now() - started > ATTEMPT_BUDGET_MS) return "retry";
       try {
-        const poll = await fetch(`${ASK_ORIGIN}/api/ask/${encodeURIComponent(body.id)}`);
+        const poll = await fetch(`${ASK_ORIGIN}/api/ask/${encodeURIComponent(body.id)}`, {
+          signal: AbortSignal.timeout(15_000),
+        });
         const job = await poll.json();
-        if (run.current !== mine) return;
-        if (!poll.ok || job.error) {
-          const raw = String(job.error ?? "");
-          return fail(friendlyAskError(looksLikeProviderError(raw) ? "rate" : "lost", lang));
-        }
+        if (run.current !== mine) return "stopped";
+        if (!poll.ok || job.error) return "retry";
         if (job.status === "done") {
-          if (looksLikeProviderError(String(job.answer ?? "")))
-            return fail(friendlyAskError("rate", lang));
-          return setState({ kind: "done", result: job });
+          if (looksLikeProviderError(String(job.answer ?? ""))) return "retry";
+          settle(job);
+          return "done";
         }
-        setState({ kind: "waiting", position: Number(job.position) || 0 });
+        setState({ kind: "waiting", position: Number(job.position) || 0, attempt });
       } catch {
-        return fail(friendlyAskError("lost", lang));
+        return "retry";
       }
     }
-    fail(friendlyAskError("timeout", lang));
+    return "retry";
   }
 
   const open = (
@@ -111,7 +142,12 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
   );
   const presented =
     state.kind === "done" ? presentAnswer(state.result.answer, readSources(state.result)) : null;
-  const grounded = state.kind === "done" && showGroundedMark({ grounded: readGrounded(state.result) });
+  const confidenceLevel = state.kind === "done" ? readConfidence(state.result) : null;
+  const confidenceText = confidenceLevel
+    ? confidenceLabel(confidenceLevel, lang)
+    : state.kind === "done" && showGroundedMark({ grounded: readGrounded(state.result) })
+      ? groundedLabel(lang)
+      : null;
   const appendix = state.kind === "done" ? state.result.appendix : null;
   const ours = localConstitution(appendix?.statutes);
   const others = (appendix?.statutes ?? []).filter((s) => !s.cite?.startsWith("รธน."));
@@ -167,9 +203,11 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
       <div role="status" aria-live="polite">
         {state.kind === "waiting" && (
           <p className="micro">
-            {state.position > 0
-              ? tr(lang, `อยู่ในคิวลำดับที่ ${state.position}`, `In queue · position ${state.position}`, `排队中 · 第${state.position}位`)
-              : tr(lang, "กำลังค้นตัวบทและเขียนคำตอบ อาจใช้เวลาหนึ่งถึงสองนาที", "Searching the law and writing. This can take a minute or two.", "正在检索法条并撰写答案，可能需要一两分钟。")}
+            {state.attempt > 0
+              ? tr(lang, "รอบแรกไม่กลับมา กำลังถามอีกครั้งหนึ่ง", "The first try did not come back. Asking once more.", "第一次没有返回。正在再问一次。")
+              : state.position > 0
+                ? tr(lang, `อยู่ในคิวลำดับที่ ${state.position}`, `In queue · position ${state.position}`, `排队中 · 第${state.position}位`)
+                : tr(lang, "กำลังค้นตัวบทและเขียนคำตอบ ถ้าไม่กลับมาภายในประมาณหนึ่งนาที จะถามใหม่หนึ่งครั้ง", "Searching the law and writing. If nothing returns within about a minute, it asks once more.", "正在检索法条并撰写答案。若大约一分钟内没有返回，会再问一次。")}
           </p>
         )}
         {state.kind === "error" && (
@@ -184,7 +222,7 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
       {state.kind === "done" && (
         <div className="ask-answer">
           <p className="ask-text">{presented?.text}</p>
-          {grounded && <p className="micro">{groundedLabel(lang)}</p>}
+          {confidenceText && <p className="micro">{confidenceText}</p>}
           {(presented?.sources.length ?? 0) > 0 && (
             <ol className="ask-sources">
               {presented?.sources.map((source) => (
@@ -203,7 +241,7 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
           {ours.map((n) => (
             <div className="reading-excerpt" key={`c${n}`}>
               <h3>{sectionLabel(lang, n)}</h3>
-              <p lang="th">{corpus[n - 1].th}</p>
+              <p lang={lang}>{sectionBody(n, lang)}</p>
               <Link href={`/section/?n=${n}`}>
                 {tr(lang, "อ่านในสมุด", "Read in the notebook", "在笔记中阅读")} →
               </Link>

@@ -97,7 +97,7 @@ export function Puzzle({
           <br />
           {item.choices[item.answer][lang]}
         </p>
-        <MemoryCue chapter={item.chapter} />
+        <MemoryCue item={item} />
         <RuleDiagram id={item.id} />
         <p>{item.story[lang]}</p>
         <p>{item.why[lang]}</p>

@@ -7,7 +7,8 @@ import { sections, chapters, sectionBody } from "@/lib/corpus";
 import { recordAnswer, lessonQueue } from "@/lib/learning";
 import { chapterPuzzles } from "@/lib/puzzles";
 import { choiceLetter, fisherYates } from "@/lib/shuffle";
-import { sessionSummary } from "@/lib/session";
+import { sessionSummary, sessionTotals } from "@/lib/session";
+import { matchingWhys } from "@/lib/cues";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
 import { MemoryCue } from "./MemoryCue";
@@ -52,6 +53,7 @@ export function Quiz({
   const [recallDraft, setRecallDraft] = useState("");
   const [confidence, setConfidence] = useState<Confidence | null>(null);
   const [calibration, setCalibration] = useState(emptyCalibration);
+  const totals = sessionTotals(correct, list.length);
   const puzzle = lesson[puzzleAt] ?? null;
   const q = list[index];
   const readSections = [
@@ -82,7 +84,7 @@ export function Quiz({
             "今天又前进了一点。",
           )}
         </h1>
-        <p>{sessionSummary(correct, firstTotal, lang)}</p>
+        <p>{sessionSummary(totals.correct, totals.total, lang)}</p>
         {calibration.sure > 0 && <p>{tr(lang, `มั่นใจ ${calibration.sure} ข้อ แต่พลาด ${calibration.sureMissed} ข้อ จุดนี้เหมาะกลับไปถามว่ากฎต่างจากที่คิดตรงไหน`, `High-confidence responses: ${calibration.sure}; incorrect: ${calibration.sureMissed}. Revisit where the rule differed from your expectation.`, `你对${calibration.sure}题很确定，其中${calibration.sureMissed}题答错了。回顾规则与预期不同之处。`)}</p>}
         {calibration.uncertainCorrect > 0 && <p>{tr(lang, `ไม่มั่นใจแต่ตอบถูก ${calibration.uncertainCorrect} ข้อ ลองอธิบายเหตุผลเพื่อแยกความเข้าใจจากการเดา`, `Correct while unsure: ${calibration.uncertainCorrect}. Explain why to distinguish understanding from a lucky guess.`, `有${calibration.uncertainCorrect}题虽然不确定却答对了。解释理由，以区分理解与猜中。`)}</p>}
         <p>{tr(lang,"ตอบซ้ำทันทีช่วยแก้ความเข้าใจ แต่ยังไม่พิสูจน์ว่าจำได้หลังเว้นเวลา","An immediate retry helps correct your understanding; it does not yet prove delayed retention.","立即重试有助于纠正理解，但尚不能证明隔一段时间仍能记住。")}</p>
@@ -160,7 +162,7 @@ export function Quiz({
     const ok = picked === q.answer;
     save(recordAnswer(progress, q, ok, Date.now()));
     if (index < firstTotal) setCalibration(c => recordCalibration(c, confidence, ok));
-    if (ok && index < firstTotal) setCorrect((x) => x + 1);
+    if (ok) setCorrect((x) => x + 1);
     if (!ok && !retried) setMissed((ids) => (ids.includes(q.id) ? ids : [...ids, q.id]));
     setChecked(true);
   };
@@ -197,9 +199,9 @@ export function Quiz({
         <span className="mono">
           {tr(
             lang,
-            `ทบทวน ${String(index + 1).padStart(2, "0")} / ${String(list.length).padStart(2, "0")}`,
-            `Recall ${String(index + 1).padStart(2, "0")} / ${String(list.length).padStart(2, "0")}`,
-            `回忆 ${String(index + 1).padStart(2, "0")} / ${String(list.length).padStart(2, "0")}`,
+            `ทบทวน ${String(index + 1).padStart(2, "0")} / ${String(totals.total).padStart(2, "0")}`,
+            `Recall ${String(index + 1).padStart(2, "0")} / ${String(totals.total).padStart(2, "0")}`,
+            `回忆 ${String(index + 1).padStart(2, "0")} / ${String(totals.total).padStart(2, "0")}`,
           )}
         </span>
         <span className="micro">
@@ -276,13 +278,11 @@ export function Quiz({
             </strong>
             <p>{q.explanation[lang]}</p>
             {recallDraft.trim() && <p className="micro">{tr(lang,"ความคิดก่อนเห็นตัวเลือก:","Your thought before the options:","看选项前的想法：")} {recallDraft}</p>}
-            {cases
-              .filter((item) => item.sections.some((n) => q.sections.includes(n)))
-              .map((item) => (
+            {matchingWhys(cases, q).map((item) => (
                 <p key={item.id}>{item.why[lang]}</p>
               ))}
             {"hook" in q && q.hook ? <p className="micro">{q.hook[lang]}</p> : null}
-            <MemoryCue chapter={q.chapter}/>
+            <MemoryCue item={q}/>
             {q.sections.some((n) => annotations[n]?.note) && (
               <div className="note" style={{ margin: "12px 0", borderLeft: "3px solid var(--accent)" }}>
                 <strong className="micro">

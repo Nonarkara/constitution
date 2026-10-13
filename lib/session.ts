@@ -1,5 +1,10 @@
 import { tr, type Lang } from "./i18n.ts";
 
+/** Header and summary share one queue length, including items re-queued after a miss. */
+export function sessionTotals(correct: number, queueLength: number) {
+  return { correct, total: queueLength };
+}
+
 export function sessionSummary(correct: number, total: number, lang: Lang): string {
   if (correct === total) {
     return tr(

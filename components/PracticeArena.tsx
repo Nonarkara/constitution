@@ -7,7 +7,7 @@ import { recordAnswer } from "@/lib/learning";
 import { useStudy } from "./Provider";
 import { choiceLetter, fisherYates } from "@/lib/shuffle";
 import { preparePracticeQuestion, practiceSessionScore } from "@/lib/practice-session";
-import { tr, sectionLabel } from "@/lib/i18n";
+import { tr, sectionLabel, chapterPickerLabel } from "@/lib/i18n";
 import {
   analyzeUserLearning,
   detectTopicWeaknesses,
@@ -431,11 +431,11 @@ export function PracticeArena() {
                   <select
                     value={selectedChapter}
                     onChange={(e) => setSelectedChapter(Number(e.target.value))}
-                    aria-label="Select Chapter"
+                    aria-label={tr(lang, "เลือกหมวด", "Select a chapter", "选择章节")}
                   >
                     {chapters.map((c) => (
                       <option key={c.number} value={c.number}>
-                        {c.number === 17 ? "T" : `Ch ${c.number}`}: {c.title[lang]} (ม.{c.start}–{c.end})
+                        {chapterPickerLabel(lang, c)}
                       </option>
                     ))}
                   </select>

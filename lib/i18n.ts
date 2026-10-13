@@ -37,3 +37,27 @@ export const labels = {
 
 export const sectionLabel = (lang: Lang, n: number | string) =>
   lang === "zh" ? `第${n}条` : `${labels.section[lang]} ${n}`;
+
+/** Chapter picker: Thai หมวด / English Chapter / Chinese 第N章, and a section range in that language. */
+export function chapterPickerLabel(
+  lang: Lang,
+  chapter: { number: number; title: Text; start: number; end: number },
+): string {
+  const head =
+    chapter.number === 17
+      ? chapter.title[lang]
+      : tr(
+          lang,
+          `หมวด ${chapter.number}`,
+          `Chapter ${chapter.number}`,
+          `第${chapter.number}章`,
+        );
+  const range =
+    lang === "zh"
+      ? `第${chapter.start}–${chapter.end}条`
+      : lang === "en"
+        ? `Sections ${chapter.start}–${chapter.end}`
+        : `ม. ${chapter.start}–${chapter.end}`;
+  const name = chapter.number === 17 ? "" : `: ${chapter.title[lang]}`;
+  return `${head}${name} (${range})`;
+}
