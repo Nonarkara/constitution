@@ -165,6 +165,9 @@ export function PracticeArena() {
             <Link href="/exam/" className="subnav-pill">
               {tr(lang, "สอบจำลองจับเวลา", "Timed mock exam", "计时模考")}
             </Link>
+            <Link href="/drills/" className="subnav-pill">
+              {tr(lang, "เจาะตัวเลข 4,230 ข้อ", "4,230 number drills", "4,230道数字速练")}
+            </Link>
             <Link href="/flashcards/" className="subnav-pill">
               {tr(lang, "การ์ดความจำ", "Flashcards", "记忆闪卡")}
             </Link>
