@@ -13,23 +13,27 @@ import { tr, sectionLabel } from "@/lib/i18n";
 import { MemoryCue } from "./MemoryCue";
 import { RecallFirst, ConfidenceCheck, ExplainBack } from "./LearningCoach";
 import { emptyCalibration, recordCalibration, nextReviewAt, type Confidence } from "@/lib/coach";
+import { TeachingSteps } from "./TeachingSteps";
 import { Puzzle } from "./Puzzle";
-type Question = (typeof questions)[number];
+import type { Question } from "@/lib/learning";
 
 export function Quiz({
   chapter,
   ids,
+  supplied,
   onExit,
 }: {
   chapter?: number;
   ids?: string[];
+  supplied?: Question[];
   onExit: () => void;
 }) {
   const { lang, progress, save, annotations } = useStudy();
-  const lesson = chapter ? chapterPuzzles(cases, chapter) : [];
-  const opening = ids
+  const [lesson] = useState(() => chapter ? fisherYates(chapterPuzzles(cases, chapter)).slice(0, 1) : []);
+  const bank = supplied ?? questions;
+  const opening = supplied ?? (ids
     ? ids.flatMap((id) => questions.filter((q) => q.id === id))
-    : lessonQueue(questions, progress, chapter ?? 0, Date.now());
+    : lessonQueue(questions, progress, chapter ?? 0, Date.now(), 5));
   const [list, setList] = useState<Question[]>(opening);
   const [firstTotal] = useState(opening.length);
   const [index, setIndex] = useState(0),
@@ -83,7 +87,7 @@ export function Quiz({
         {calibration.uncertainCorrect > 0 && <p>{tr(lang, `ไม่มั่นใจแต่ตอบถูก ${calibration.uncertainCorrect} ข้อ ลองอธิบายเหตุผลเพื่อแยกความเข้าใจจากการเดา`, `Correct while unsure: ${calibration.uncertainCorrect}. Explain why to distinguish understanding from a lucky guess.`, `有${calibration.uncertainCorrect}题虽然不确定却答对了。解释理由，以区分理解与猜中。`)}</p>}
         <p>{tr(lang,"ตอบซ้ำทันทีช่วยแก้ความเข้าใจ แต่ยังไม่พิสูจน์ว่าจำได้หลังเว้นเวลา","An immediate retry helps correct your understanding; it does not yet prove delayed retention.","立即重试有助于纠正理解，但尚不能证明隔一段时间仍能记住。")}</p>
         {nextReviewAt(progress, list.map(q=>q.id), Date.now()) !== null && <p>{tr(lang,"กลับมาทบทวนเร็วที่สุด:","Earliest next review:","最早下次复习：")} {new Date(nextReviewAt(progress,list.map(q=>q.id),Date.now())!).toLocaleString(lang === "th" ? "th-TH" : lang === "zh" ? "zh-CN" : "en-GB", {timeZone:"Asia/Bangkok",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"})} · {tr(lang,"เวลาไทย","Bangkok time","曼谷时间")}</p>}
-        {missed.length > 0 && <details><summary>{tr(lang,"จุดที่ควรกลับมาอธิบายใหม่","Ideas to explain again","值得重新解释的概念")}</summary><ul>{missed.map(id=>{const item=questions.find(q=>q.id===id);return item?<li key={id}><Link href={`/section/?n=${item.sections[0]}`}>{item.prompt[lang]} →</Link></li>:null;})}</ul></details>}
+        {missed.length > 0 && <details><summary>{tr(lang,"จุดที่ควรกลับมาอธิบายใหม่","Ideas to explain again","值得重新解释的概念")}</summary><ul>{missed.map(id=>{const item=bank.find(q=>q.id===id);return item?<li key={id}><Link href={`/section/?n=${item.sections[0]}`}>{item.prompt[lang]} →</Link></li>:null;})}</ul></details>}
         <p><Link href="/review/">{tr(lang,"ทบทวนแบบสลับเรื่อง","Mix topics for review","交错复习不同主题")} →</Link> · <Link href="/memory/">{tr(lang,"เดินบ้านความจำโดยไม่ดูเฉลย","Recall the memory house without answers","不看答案回忆记忆屋")} →</Link></p>
         <button className="primary" onClick={onExit}>
           {tr(lang, "กลับสู่เส้นทาง", "Back to your path", "返回学习路径")} →
@@ -126,8 +130,8 @@ export function Quiz({
             )}
             {lang === "en" && s.amended && (
               <p className="notice">
-                Historical 2017 English. Read the amended Thai text before
-                relying on this section.
+                English study translation of the amended text. The Thai text
+                is authoritative.
               </p>
             )}
             <Link href={`/section/?n=${s.number}`}>
@@ -168,7 +172,7 @@ export function Quiz({
     if (!more && !retried && (missed.length > 0 || (choice !== null && order[choice] !== q.answer && !missed.includes(q.id)))) {
       const ids = missed.includes(q.id) || (choice !== null && order[choice] === q.answer) ? missed : [...missed, q.id];
       const extra = ids
-        .map((id) => questions.find((item) => item.id === id))
+        .map((id) => bank.find((item) => item.id === id))
         .filter((item): item is Question => Boolean(item));
       if (extra.length) {
         const next = [...list, ...extra];
@@ -297,6 +301,7 @@ export function Quiz({
               ))}
             </div>
           </div>
+          <TeachingSteps key={`teach-${index}`} question={q} selected={choice === null ? undefined : order[choice]}/>
           <ExplainBack key={index} section={q.sections[0]}/>
           <button className="primary" onClick={advance}>
             {index === list.length - 1 && (retried || missed.length === 0)
@@ -313,7 +318,7 @@ export function Quiz({
         {openLaw.map((s) => (
           <div className="reading-excerpt" key={s.number}>
             <h3>{sectionLabel(lang, s.number)}</h3>
-            <p lang="th">{s.th}</p>
+            <p lang={lang}>{sectionBody(s.number, lang)}</p>
           </div>
         ))}
       </details>

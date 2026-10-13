@@ -3,28 +3,17 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import questions from "@/data/questions.json";
 import { chapters } from "@/lib/outline";
+import { papers, makePaper } from "@/lib/papers";
+import { choiceLetter } from "@/lib/shuffle";
+import { ExplainBack } from "./LearningCoach";
+import { TeachingSteps } from "./TeachingSteps";
+import { Quiz } from "./Quiz";
 import { recordAnswer } from "@/lib/learning";
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
 
 type Question = (typeof questions)[number];
-const FORMATS = [
-  { count: 25, minutes: 30 },
-  { count: 50, minutes: 60 },
-  { count: 100, minutes: 120 },
-];
-const letters = ["ก", "ข", "ค", "ง"];
-
-/** A fair random draw: shuffle the whole bank, so chapters appear in proportion to their sections. */
-function draw(count: number): Question[] {
-  const bank = [...questions];
-  for (let i = bank.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [bank[i], bank[j]] = [bank[j], bank[i]];
-  }
-  return bank.slice(0, count);
-}
-
+const FORMATS = papers;
 const clock = (ms: number) => {
   const s = Math.max(0, Math.ceil(ms / 1000));
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
@@ -33,7 +22,8 @@ const clock = (ms: number) => {
 // A timed, mixed test. Nothing is shown until the end, as in a real exam; then every
 // answer counts as retrieval practice and the misses come back in spaced review.
 export function Exam() {
-  const { lang, progress, save } = useStudy();
+  const { lang, progress, save, ready } = useStudy();
+  const [repair, setRepair] = useState<string[] | null>(null);
   const [paper, setPaper] = useState<{ list: Question[]; ends: number } | null>(null);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [index, setIndex] = useState(0);
@@ -73,9 +63,11 @@ export function Exam() {
       byChapter.set(q.chapter, row);
     }
     const right = paper.list.filter((q) => answers[q.id] === q.answer).length;
-    return { right, byChapter: [...byChapter].sort((a, b) => a[0] - b[0]) };
+    const blanks = paper.list.filter(q => !(q.id in answers)).length;
+    return { right, blanks, wrong: paper.list.length - right - blanks, byChapter: [...byChapter].sort((a, b) => a[0] - b[0]) };
   }, [paper, done, answers]);
 
+  if (repair) return <Quiz ids={repair} onExit={() => setRepair(null)}/>;
   if (!paper)
     return (
       <>
@@ -83,9 +75,9 @@ export function Exam() {
         <p>
           {tr(
             lang,
-            `สุ่มจากคลัง ${questions.length} ข้อ ครอบคลุมทุกมาตรา จับเวลา ไม่เฉลยจนกว่าจะส่ง แล้วดูคะแนนแยกตามหมวด ข้อที่ผิดจะกลับมาในการทบทวน`,
-            `Drawn from all ${questions.length} questions, covering every section. Timed, no answers until you submit, then a score by chapter. Misses come back in spaced review.`,
-            `从覆盖全部条文的${questions.length}道题中随机抽取。计时作答，交卷前不显示答案，交卷后按章节显示得分，错题会进入间隔复习。`,
+            `30 ชุดฝึกจากโจทย์เขียนเอง ${questions.length} ข้อ คลังครอบคลุมทุกมาตรา แต่แต่ละชุดเป็นการสุ่มตัวอย่าง ชุดเน้นเรื่องมีโจทย์หมวดอื่นเสริม เฉลยหลังส่ง ข้อที่ตอบผิดจะเข้าคิวทบทวน ข้อว่างยังไม่นับว่าลองตอบ`,
+            `30 study papers from ${questions.length} authored questions. The bank covers every section; each paper samples it. Topic papers include mixed supplements. Answers appear after submission. Wrong submitted answers enter review; blanks remain unattempted.`,
+            `30套练习卷来自${questions.length}道原创题。题库覆盖全部条文，每套只是抽样；主题卷补充其他章节。交卷后显示解析。已答错题进入复习，空白题仍算未尝试。`,
           )}
         </p>
         <p className="micro">
@@ -99,17 +91,18 @@ export function Exam() {
         <div className="exam-formats">
           {FORMATS.map((f, i) => (
             <button
-              key={f.count}
+              key={f.id}
+              disabled={!ready}
               className={i === 0 ? "primary" : ""}
               onClick={() => {
                 setAnswers({});
                 setIndex(0);
                 setDone(false);
                 setNow(Date.now());
-                setPaper({ list: draw(f.count), ends: Date.now() + f.minutes * 60_000 });
+                setPaper({ list: makePaper(questions, f), ends: Date.now() + f.minutes * 60_000 });
               }}
             >
-              {f.count} {tr(lang, "ข้อ", "questions", "题")} · {f.minutes} {tr(lang, "นาที", "min", "分钟")}
+              {f.number}. {f.title[lang]} · {f.count} {tr(lang, "ข้อ", "questions", "题")} · {f.minutes} {tr(lang, "นาที", "min", "分钟")}
             </button>
           ))}
         </div>
@@ -130,6 +123,7 @@ export function Exam() {
             `正确率${Math.round((result.right / paper.list.length) * 100)}%。错题及解析、条文见下方。`,
           )}
         </p>
+        <p>{tr(lang, `ตอบผิด ${result.wrong} ข้อ · ยังไม่ตอบ ${result.blanks} ข้อ`, `${result.wrong} wrong answers · ${result.blanks} unanswered`, `答错${result.wrong}题 · 未答${result.blanks}题`)}</p>
         <table className="exam-table">
           <thead>
             <tr>
@@ -150,6 +144,8 @@ export function Exam() {
             ))}
           </tbody>
         </table>
+        <p>{tr(lang,"ข้อที่ยังไม่ตอบจะเข้าการฝึกเมื่อคุณเลือกลอง ไม่ให้คะแนนการเรียนจากการเว้นว่าง","Unanswered questions stay unattempted until you practise them.","未作答题在实际练习前仍算未尝试。")}</p>
+        <button onClick={()=>setRepair(paper.list.filter(q=>answers[q.id]!==q.answer).map(q=>q.id))}>{tr(lang,"ฝึกข้อที่ผิดและข้อที่ยังไม่ตอบ","Practise wrong and unanswered questions","练习错题与未答题")} →</button>
         {paper.list
           .filter((q) => answers[q.id] !== q.answer)
           .map((q) => (
@@ -157,11 +153,13 @@ export function Exam() {
               <h3>{q.prompt[lang]}</h3>
               <p className="micro">
                 {q.id in answers
-                  ? `${tr(lang, "คุณตอบ", "You answered", "你的答案")} ${letters[answers[q.id]]} · `
+                  ? `${tr(lang, "คุณตอบ", "You answered", "你的答案")} ${choiceLetter(lang,answers[q.id])} · `
                   : `${tr(lang, "ไม่ได้ตอบ", "Not answered", "未作答")} · `}
-                {tr(lang, "คำตอบ", "Answer", "答案")} {letters[q.answer]}. {q.choices[q.answer][lang]}
+                {tr(lang, "คำตอบ", "Answer", "答案")} {choiceLetter(lang,q.answer)}. {q.choices[q.answer][lang]}
               </p>
               <p>{q.explanation[lang]}</p>
+              <TeachingSteps question={q} selected={answers[q.id]}/>
+              <ExplainBack section={q.sections[0]}/>
               <div>
                 {q.sections.map((n) => (
                   <Link className="citation" key={n} href={`/read/?c=${chapters.find((c) => n >= c.start && n <= c.end)?.number}#s-${n}`}>
@@ -198,7 +196,7 @@ export function Exam() {
         {q.choices.map((c, i) => (
           <label className={"answer " + (answers[q.id] === i ? "selected" : "")} key={i}>
             <input type="radio" name={`exam-${q.id}`} checked={answers[q.id] === i} onChange={() => setAnswers({ ...answers, [q.id]: i })} />
-            <span className="answer-letter mono">{letters[i]}</span>
+            <span className="answer-letter mono">{choiceLetter(lang,i)}</span>
             <span>{c[lang]}</span>
           </label>
         ))}

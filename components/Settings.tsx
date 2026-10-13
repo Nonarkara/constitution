@@ -1,4 +1,7 @@
 "use client";
+import { persistImport, ImportStorageError, RECOVERY_KEY } from "@/lib/import-storage";
+import { drillIds } from "@/lib/drills";
+import Link from "next/link";
 import { useState } from "react";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
@@ -10,6 +13,7 @@ import { THEMES, THEME_NAME, type ThemeChoice } from "@/lib/theme";
 import { useTheme } from "@/lib/use-theme";
 export function Settings() {
   const {
+    applyBackup,
     lang,
     progress,
     save,
@@ -181,7 +185,9 @@ export function Settings() {
             "无需账号，成绩不会发送到服务器。每台设备单独记录进度。可导出备份，避免浏览器清除数据。",
           )}
         </p>
+        <p><Link href="/polls/">{tr(lang,"ส่งออกคำตอบโพลจากหน้าโพลแยกต่างหาก","Export private poll answers separately on the polls page","私人问卷答案须在问卷页单独导出")} →</Link></p>
         <div className="settings-actions">
+          <button onClick={() => {let raw: string | null; try { raw=localStorage.getItem(RECOVERY_KEY); } catch { setMessage(tr(lang,"เบราว์เซอร์อ่านข้อมูลไม่ได้","The browser could not read recovery data.","浏览器无法读取恢复数据。")); return; }if(!raw){setMessage(tr(lang,"ยังไม่มีสำเนากู้คืน","No recovery copy yet.","暂无恢复副本。"));return;}const url=URL.createObjectURL(new Blob([raw],{type:"application/json"}));const a=document.createElement("a");a.href=url;a.download="constitution-import-recovery.json";a.click();URL.revokeObjectURL(url);setMessage(tr(lang,"ส่งออกข้อมูลก่อนนำเข้าแล้ว เก็บไว้เพื่อกู้คืน","Previous-state recovery data exported. Keep it for recovery.","已导出导入前的恢复数据，请留存。"));}}>{tr(lang,"ส่งออกสำเนาก่อนนำเข้า","Export pre-import recovery copy","导出导入前恢复副本")}</button>
           <button onClick={download}>
             {tr(
               lang,
@@ -203,32 +209,11 @@ export function Settings() {
                   const d = JSON.parse(await f.text());
                   const imported = parseBackup(
                     d,
-                    new Set(questions.map((q) => q.id)),
+                    new Set([...questions.map((q) => q.id), ...drillIds()]),
                   );
                   if (!imported) throw new Error("invalid");
-                  // Old backups have no reflection field: keep the existing note.
-                  // Store this separately saved record first; a storage failure must
-                  // not report success or replace the rest of the user's progress.
-                  if (imported.reflection !== undefined) {
-                    const old = localStorage.getItem(REFLECTION_KEY);
-                    if (old !== null)
-                      localStorage.setItem(
-                        `${REFLECTION_KEY}-backup-${Date.now()}`,
-                        old,
-                      );
-                    if (imported.reflection === null)
-                      localStorage.removeItem(REFLECTION_KEY);
-                    else
-                      localStorage.setItem(
-                        REFLECTION_KEY,
-                        JSON.stringify(imported.reflection),
-                      );
-                  }
-                  save(imported.progress);
-                  if (imported.marks) saveMarks(imported.marks);
-                  if (imported.annotations)
-                    saveAnnotations(imported.annotations);
-                  if (imported.read) saveRead(imported.read);
+                  persistImport(localStorage, imported);
+                  applyBackup(imported);
                   setMessage(
                     tr(
                       lang,
@@ -239,17 +224,20 @@ export function Settings() {
                   );
                 } catch (error) {
                   const storageFailure =
+                    error instanceof ImportStorageError ||
                     error instanceof DOMException &&
                     ["QuotaExceededError", "SecurityError"].includes(
                       error.name,
                     );
                   setMessage(
-                    storageFailure
+                    error instanceof ImportStorageError && !error.recovered
+                      ? tr(lang,"นำเข้าไม่สำเร็จและคืนค่าบางส่วนไม่ได้ ส่งออกสำเนากู้คืนก่อนลองอีกครั้ง","Import failed and some previous values could not be restored. Export the recovery copy before trying again.","导入失败，部分原值无法恢复。再次尝试前请先导出恢复副本。")
+                      : storageFailure
                       ? tr(
                           lang,
-                          "เครื่องนี้บันทึกข้อมูลนำเข้าไม่ได้ ข้อมูลที่ยังไม่แทนที่ยังอยู่",
-                          "This device could not save the import. Data not yet replaced is preserved.",
-                          "此设备无法保存导入数据，尚未替换的数据仍保留。",
+                          "นำเข้าไม่ได้ เก็บสำเนาก่อนนำเข้าไว้ในเครื่องเมื่อพื้นที่อนุญาต",
+                          "The import could not be saved. A previous-state recovery copy is kept on this device when storage allows it.",
+                          "导入无法保存；存储空间允许时，本设备保留导入前的恢复副本。",
                         )
                       : tr(
                           lang,

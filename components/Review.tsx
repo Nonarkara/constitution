@@ -5,6 +5,7 @@ import Link from "next/link";
 import { questionIndex as questions } from "@/lib/outline";
 import { dueQuestions } from "@/lib/learning";
 import { mixedPracticeQueue } from "@/lib/shuffle";
+import { prioritizedReview, attemptedCount } from "@/lib/review-queue";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
 import dynamic from "next/dynamic";
@@ -40,11 +41,11 @@ export function Review() {
   }, [profile.weakestChapters]);
 
   const activeQueue = useMemo(() => {
-    if (mode === "annotated") return annotatedQuestions.slice(0, 8);
-    if (mode === "weak") return weakQuestions.slice(0, 8);
+    if (mode === "annotated") return prioritizedReview(annotatedQuestions, progress, now, 8);
+    if (mode === "weak") return prioritizedReview(weakQuestions, progress, now, 8);
     if (mode === "mix") return mixedPracticeQueue(questions, 8);
     return due.slice(0, 8);
-  }, [mode, due, annotatedQuestions, weakQuestions]);
+  }, [mode, due, annotatedQuestions, weakQuestions, progress, now]);
 
   if (active)
     return (
@@ -56,7 +57,7 @@ export function Review() {
         }}
       />
     );
-  const studied = Object.values(progress.questions).length;
+  const studied = attemptedCount(questions, progress);
   return (
     <>
       <div className="review-intro">

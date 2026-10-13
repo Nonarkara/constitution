@@ -10,6 +10,8 @@ export default function Page() {
         zh: "理解整个体系：你的权利、索引和术语表。",
       }}
       items={[
+        { href: "/drills/", title: { th: "4,700 แบบฝึก", en: "4,700 exercises", zh: "4,700道练习" }, text: { th: "470 โจทย์เขียนเอง + 4,230 โจทย์เปลี่ยนเงื่อนไข", en: "470 authored + 4,230 parameter-generated drills", zh: "470道原创＋4,230道参数生成题" } },
+        { href: "/polls/", title: { th: "10 คำถามส่วนตัว", en: "Ten private polls", zh: "十个私人问卷" }, text: { th: "ลองคิดและเก็บเหตุผล ไม่มีคะแนนความเห็น", en: "Keep your reasons; opinions earn no points", zh: "保存理由，不给观点评分" } },
         { href: "/memory/", title: { th: "บ้านความจำ 16 ห้อง", en: "The sixteen-room memory house", zh: "十六间记忆屋" }, text: { th: "ภาพสีอ่อน มุกเล็ก ๆ และตัวเลขที่มีความหมาย", en: "Pastel pictures, small jokes and meaningful numbers", zh: "柔和图画、小笑话与有意义的数字" } },
         { href: "/civic/", title: { th: "ตรวจคำสัญญาในบ้านความจำ", en: "Check promises in the memory house", zh: "在记忆屋核查承诺" }, text: { th: "16 โจทย์แก้ไข สิทธิและงบประมาณ พร้อมคั่นไว้อ่านต่อ", en: "16 amendment, rights and budget puzzles; bookmark the law", zh: "16道修宪、权利与预算题；收藏条文" } },
         { href: "/amend/", title: { th: "ถ้าเราอยากแก้รัฐธรรมนูญ", en: "If we want to amend it", zh: "如果我们想修宪" }, text: { th: "เรื่องสมมติ ประตูจริง และคำตอบของคุณเอง", en: "A fictional story, real gates and your own reflection", zh: "虚构故事、真实门槛与你自己的思考" } },

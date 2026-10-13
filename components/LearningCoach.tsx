@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useId } from "react";
 import Link from "next/link";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
@@ -84,6 +84,7 @@ export function ConfidenceCheck({
   );
 }
 export function ExplainBack({ section }: { section: number }) {
+  const draftId = useId();
   const { lang, annotations, saveAnnotations, storageError } = useStudy();
   const [draft, setDraft] = useState(""),
     [message, setMessage] = useState<"saved" | "long" | null>(null);
@@ -105,7 +106,7 @@ export function ExplainBack({ section }: { section: number }) {
           "解释谁有权、需要哪些条件，以及看似可信的选项错在哪里。换人物或人数：规则还适用吗？",
         )}
       </p>
-      <label htmlFor="explain-draft">
+      <label htmlFor={draftId}>
         {tr(
           lang,
           "เหตุผลหรือภาพช่วยจำของฉัน",
@@ -114,7 +115,7 @@ export function ExplainBack({ section }: { section: number }) {
         )}
       </label>
       <textarea
-        id="explain-draft"
+        id={draftId}
         rows={3}
         maxLength={1500}
         value={draft}

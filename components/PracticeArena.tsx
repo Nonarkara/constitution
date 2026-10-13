@@ -14,6 +14,9 @@ import {
   buildPracticeQueue,
   type TopicWeakness,
 } from "@/lib/adaptive";
+import { attemptedCount } from "@/lib/review-queue";
+import { TeachingSteps } from "./TeachingSteps";
+import { ExplainBack } from "./LearningCoach";
 import { StudyArt } from "./StudyArt";
 
 type Question = (typeof questions)[number];
@@ -187,9 +190,9 @@ export function PracticeArena() {
               <span className="micro mono">
                 {tr(
                   lang,
-                  `ฝึกแล้ว ${Object.keys(progress.questions).length} ข้อ / ${questions.length}`,
-                  `Attempted ${Object.keys(progress.questions).length} / ${questions.length}`,
-                  `已练 ${Object.keys(progress.questions).length} / ${questions.length} 题`
+                  `ฝึกแล้ว ${attemptedCount(questions, progress)} ข้อ / ${questions.length}`,
+                  `Attempted ${attemptedCount(questions, progress)} / ${questions.length}`,
+                  `已练 ${attemptedCount(questions, progress)} / ${questions.length} 题`
                 )}
               </span>
             </div>
@@ -570,6 +573,8 @@ export function PracticeArena() {
                 </div>
 
                 <p className="explanation-body">{currentQ.explanation[lang]}</p>
+                <TeachingSteps question={currentQ} selected={selectedChoice ?? undefined}/>
+                <ExplainBack section={currentQ.sections[0]}/>
 
                 {/* Personal Notes Callout if User has Annotated this Section */}
                 {currentQ.sections.some((s) => annotations[s]?.note) && (

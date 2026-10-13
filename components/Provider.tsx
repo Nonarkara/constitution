@@ -19,7 +19,9 @@ import { MARKS_KEY, emptyMarks, parseMarks, type Marks } from "@/lib/marks";
 import { workerMessage, type OfflineStatus } from "@/lib/offline";
 import type { Lang } from "@/lib/i18n";
 import { READ_KEY, markRead, parseRead, type ReadLog } from "@/lib/knowledge";
+import type { ImportedBackup } from "@/lib/backup";
 type State = {
+  applyBackup: (backup: ImportedBackup) => void;
   lang: Lang;
   setLang: (l: Lang) => void;
   progress: Progress;
@@ -243,6 +245,7 @@ export function Provider({ children }: { children: ReactNode }) {
   return (
     <Context.Provider
       value={{
+        applyBackup: (b: ImportedBackup) => {setP(b.progress);if(b.marks!==null)setM(b.marks);if(b.annotations!==null)setA(b.annotations);if(b.read!==undefined)setR(b.read);},
         lang,
         setLang,
         progress,
