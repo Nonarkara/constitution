@@ -30,3 +30,9 @@ The chapter path uses one unscored scenario warm-up, optional reading, five-ques
 Browser storage is shared by anyone using the same browser profile. Polls are separate from the standard progress backup. Learning effectiveness, physical iPad home-screen behavior and microphone input still need human/device testing.
 
 Rule sources: [Senate consolidated Constitution](https://www.senate.go.th/assets/portals/420/fileups/507/files/con2560%20edition5_4%20july%202567.pdf), [Senate amendment explanation](https://www.senate.go.th/view/386/News/Latest/368/TH-TH). The application retains section-level citations and the authoritative Thai corpus.
+
+## Publication closeout
+
+Source commit `063d476` pushed to `origin/main`. Cloudflare version `61729abe-2a06-422c-8138-c3e0c4e6a083` deployed to https://constitution.nonarkara.org; offline revision `3f2f41fab506c5dc` includes241shellassets. Live Learn, Drills, Polls, Exam HTML and offline-manifest bytes match the local production build exactly. Standard browser User-Agent requests returned200; Python's default urllib agent was rejected403, so that rejection is not reported as successful verification.
+
+Live browser: hydrated Learn button enabled; new4700exercise link navigates; the three-final-gate drill opens a five-question session; no captured console errors. Local result widths375/768 have no horizontal overflow; Chinese chapter entry confirms one optional warm-up→reading→fivequestions, and exam repair opens explicitly. Live screenshot: `.openai/qa/expansion-live.png` (ignored QA evidence). Human efficacy, physical iPad/PWA/microphone checks remain unverified.
