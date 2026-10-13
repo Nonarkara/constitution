@@ -1,0 +1,381 @@
+{
+  "id": "rights",
+  "order": 3,
+  "title": {
+    "th": "หมวด 3 สิทธิและเสรีภาพของปวงชนชาวไทย (มาตรา 25–49)",
+    "en": "Chapter 3: Rights and Liberties of the Thai People (sections 25–49)"
+  },
+  "lede": {
+    "th": "ลองนึกถึงป้ายหน้าสวนสาธารณะสองแบบ แบบแรกเขียนว่า “อนุญาตให้เดิน วิ่ง และนั่ง” อีกแบบเขียนว่า “ห้ามเหยียบหญ้า” ป้ายแบบแรกทำให้ทุกอย่างที่ไม่ได้เขียนไว้กลายเป็นเรื่องต้องห้าม ป้ายแบบที่สองทำให้ทุกอย่างที่ไม่ได้ห้ามไว้ทำได้ รัฐธรรมนูญ 2560 เลือกป้ายแบบที่สองตั้งแต่มาตราแรกของหมวดนี้ และทั้งหมวดคือการตอบคำถามเดียวว่า รัฐจะเข้ามาจำกัดเสรีภาพของคนได้เมื่อไร โดยใคร และต้องผ่านด่านอะไรบ้าง",
+    "en": "Picture two signs at the gate of a park. One says “You may walk, run and sit.” The other says “Keep off the grass.” The first makes everything it fails to mention forbidden. The second makes everything it fails to forbid allowed. The 2017 constitution hangs the second sign on the first section of this chapter, and the rest of the chapter answers one question: when may the state limit a person's freedom, who decides, and which gates must it pass through first?"
+  },
+  "blocks": [
+    {
+      "kind": "text",
+      "title": {
+        "th": "แผนที่ของหมวด: 25 มาตรา จัดเป็นกลุ่มได้",
+        "en": "A map of the chapter: 25 sections in clusters"
+      },
+      "body": {
+        "th": "หมวด 3 มี 25 มาตรา คือมาตรา 25 ถึงมาตรา 49 อย่าจำทีละมาตรา ให้จำเป็นกลุ่ม แล้วค่อยเติมเลข\n\n- กติกากลาง: มาตรา 25 (หลักทั่วไป) และมาตรา 26 (เงื่อนไขของกฎหมายที่จำกัดสิทธิ)\n- ความเสมอภาค: มาตรา 27\n- ร่างกายและกระบวนการยุติธรรม: มาตรา 28 ชีวิตและร่างกาย มาตรา 29 สิทธิในคดีอาญา มาตรา 30 ห้ามเกณฑ์แรงงาน\n- ความเชื่อ: มาตรา 31 เสรีภาพในการถือศาสนา\n- พื้นที่ส่วนตัว: มาตรา 32 ความเป็นอยู่ส่วนตัวและข้อมูลส่วนบุคคล มาตรา 33 เคหสถาน มาตรา 36 การติดต่อสื่อสาร\n- การพูดและสื่อ: มาตรา 34 การแสดงความคิดเห็นและเสรีภาพทางวิชาการ มาตรา 35 สื่อมวลชน\n- ทรัพย์สินและชีวิตทางเศรษฐกิจ: มาตรา 37 ทรัพย์สินและการเวนคืน มาตรา 38 การเดินทาง มาตรา 39 ห้ามเนรเทศและห้ามถอนสัญชาติโดยการเกิด มาตรา 40 การประกอบอาชีพ\n- ประชาชนกับรัฐและการรวมกลุ่ม: มาตรา 41 ข้อมูลข่าวสาร ร้องเรียน และฟ้องรัฐ มาตรา 42 การรวมกันเป็นสมาคม มาตรา 43 สิทธิชุมชน มาตรา 44 การชุมนุม มาตรา 45 พรรคการเมือง มาตรา 46 ผู้บริโภค\n- สวัสดิการ: มาตรา 47 สาธารณสุข มาตรา 48 มารดา ผู้สูงอายุ และผู้ยากไร้\n- เส้นแดง: มาตรา 49 ห้ามใช้สิทธิเสรีภาพเพื่อล้มล้างการปกครอง\n\nสังเกตว่าหมวดเริ่มด้วยกติกากลางและปิดด้วยเส้นแดง ตรงกลางคือรายการเสรีภาพ โครงสร้างแบบนี้บอกวิธีอ่านทั้งหมวด เสรีภาพเป็นหลัก ข้อจำกัดเป็นข้อยกเว้นที่ต้องมีเหตุผล",
+        "en": "Chapter 3 has 25 sections, numbered 25 to 49. Do not memorise them one by one. Learn the clusters, then attach the numbers.\n\n- The general rules: section 25 (the basic principle) and section 26 (the conditions any rights-limiting law must meet)\n- Equality: section 27\n- Body and criminal justice: section 28 life and body, section 29 rights in criminal cases, section 30 no forced labour\n- Belief: section 31 freedom of religion\n- Private space: section 32 privacy and personal data, section 33 the home, section 36 communications\n- Speech and media: section 34 expression and academic freedom, section 35 the press\n- Property and economic life: section 37 property and expropriation, section 38 movement, section 39 no exile and no stripping of birth nationality, section 40 occupation\n- The citizen against the state, and group life: section 41 information, petitions and suing the state, section 42 association, section 43 community rights, section 44 assembly, section 45 political parties, section 46 consumers\n- Welfare: section 47 public health, section 48 mothers, the elderly and the poor\n- The red line: section 49, no use of rights to overthrow the regime\n\nThe chapter opens with general rules and closes with a red line, with the list of freedoms in between. That shape tells you how to read it: freedom is the default, and every limit is an exception that has to justify itself."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "มาตรา 25: ทุกอย่างที่ไม่ได้ห้าม ทำได้",
+        "en": "Section 25: whatever is not forbidden is allowed"
+      },
+      "body": {
+        "th": "มาตรา 25 วรรคหนึ่งพูดสองเรื่องในประโยคเดียว เรื่องแรก สิทธิที่รัฐธรรมนูญเขียนคุ้มครองไว้เฉพาะ ได้รับความคุ้มครองแน่นอน เรื่องที่สองสำคัญกว่า การใดที่ไม่ได้ห้ามหรือจำกัดไว้ในรัฐธรรมนูญหรือกฎหมายอื่น บุคคลย่อมทำได้และได้รับความคุ้มครอง\n\nทำไมต้องเขียนแบบนี้ เพราะรายการสิทธิไม่มีวันครบ ชีวิตเปลี่ยนเร็วกว่าการแก้รัฐธรรมนูญ ถ้าคุ้มครองเฉพาะสิ่งที่เขียนไว้ ทุกเทคโนโลยีใหม่ ทุกวิถีชีวิตใหม่ จะตกอยู่ในที่ว่างที่รัฐทำอะไรก็ได้ การกลับด้านให้ “เสรีภาพเป็นค่าตั้งต้น” ย้ายภาระพิสูจน์ไปไว้ที่รัฐ คนไม่ต้องหาว่ามีมาตราไหนอนุญาต รัฐต่างหากที่ต้องชี้ว่ามีกฎหมายไหนห้าม\n\nแต่เสรีภาพแบบตั้งต้นนี้มีขอบ มาตรา 25 วางไว้สามด้าน คือ ต้องไม่กระทบหรือเป็นอันตรายต่อความมั่นคงของรัฐ ต้องไม่กระทบความสงบเรียบร้อยหรือศีลธรรมอันดีของประชาชน และต้องไม่ละเมิดสิทธิเสรีภาพของคนอื่น\n\nวรรคที่เหลือของมาตรา 25 เป็นเครื่องมือใช้งาน\n- วรรคสอง: สิทธิที่รัฐธรรมนูญบอกว่า “ตามที่กฎหมายบัญญัติ” ใช้ได้เลยตามเจตนารมณ์ของรัฐธรรมนูญ แม้ยังไม่มีกฎหมายนั้น\n- วรรคสาม: คนที่ถูกละเมิดสิทธิ ยกบทบัญญัติรัฐธรรมนูญขึ้นใช้สิทธิทางศาลหรือต่อสู้คดีได้\n- วรรคสี่: คนที่เสียหายจากการถูกละเมิดสิทธิ หรือจากการกระทำความผิดอาญาของคนอื่น มีสิทธิได้รับการเยียวยาหรือช่วยเหลือจากรัฐตามที่กฎหมายบัญญัติ\n\nโซ่เหตุผลจึงเป็นแบบนี้ เสรีภาพเป็นค่าตั้งต้น → รัฐต้องมีกฎหมายจึงจะจำกัดได้ → กฎหมายนั้นต้องผ่านเงื่อนไขของมาตรา 26 → ถ้าไม่ผ่าน ขัดรัฐธรรมนูญและใช้บังคับไม่ได้ตามมาตรา 5",
+        "en": "The first paragraph of section 25 says two things in one sentence. First, rights the constitution names specifically are protected. Second, and more important: anything not prohibited or restricted by the constitution or by another law, a person may do, and that freedom is protected.\n\nWhy write it this way? Because a list of rights is never complete. Life changes faster than constitutions. If only listed activities were protected, every new technology and every new way of living would fall into a gap where the state could do as it pleased. Making freedom the default moves the burden of proof onto the state. A citizen does not have to find a section that permits something. The state has to point to a law that forbids it.\n\nThe default has edges. Section 25 names three: the activity must not harm or endanger the security of the state, must not harm public order or good morals, and must not violate other people's rights and freedoms.\n\nThe remaining paragraphs of section 25 are working tools:\n- Paragraph 2: a right the constitution says is exercised “as provided by law” can be used right away, in line with the constitution's intent, even if that law has not yet been passed.\n- Paragraph 3: a person whose rights are violated may invoke the constitution directly in court, either to bring a claim or as a defence.\n- Paragraph 4: a person harmed by a rights violation, or by someone else's crime, is entitled to remedy or help from the state, as the law provides.\n\nSo the chain runs: freedom is the default → the state needs a law to restrict it → that law must pass the conditions in section 26 → if it fails, it conflicts with the constitution and cannot be enforced under section 5."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "สิทธิที่ไม่ต้องรอกฎหมาย (มาตรา 25 วรรคสอง)",
+        "en": "Rights that do not wait for parliament (section 25, paragraph 2)"
+      },
+      "body": {
+        "th": "หลายมาตราในหมวดนี้มีวลีต่อท้ายว่า “ตามที่กฎหมายบัญญัติ” หรือ “ตามหลักเกณฑ์และวิธีการที่กฎหมายบัญญัติ” เช่น สิทธิชุมชนในการจัดการทรัพยากรธรรมชาติตามมาตรา 43 หรือสิทธิได้รับข้อมูลข่าวสารสาธารณะตามมาตรา 41 วลีนี้มีไว้ให้สภาออกรายละเอียด เช่น ยื่นเรื่องที่ไหน ภายในกี่วัน\n\nปัญหาคือ ถ้าสภาไม่ออกกฎหมาย สิทธิจะค้างอยู่บนกระดาษหรือไม่ เหมือนได้กุญแจบ้านมาแต่ประตูยังไม่ได้ติดตั้ง มาตรา 25 วรรคสองตอบว่าไม่ค้าง บุคคลหรือชุมชนใช้สิทธินั้นได้ทันทีตามเจตนารมณ์ของรัฐธรรมนูญ ความเงียบของสภาจึงไม่ใช่การปิดประตู\n\nสำหรับข้อสอบ ให้จำคู่กันว่า วรรคสองแก้ปัญหา “สิทธิรอกฎหมาย” ส่วนวรรคสามแก้ปัญหา “สิทธิที่ไม่มีช่องทางไปศาล” ทั้งสองวรรคทำหน้าที่เดียวกัน คือทำให้สิทธิในรัฐธรรมนูญใช้ได้จริง ไม่ใช่แค่ประกาศเจตนา",
+        "en": "Many sections in this chapter end with “as provided by law” or “according to the rules and procedures provided by law”. Examples are a community's right to manage natural resources in section 43 and the right to public information in section 41. The phrase is there so parliament can fill in the details: where to file, within how many days.\n\nThe problem: if parliament never writes that law, is the right frozen? It is like being handed a house key before anyone has fitted the door. Section 25, paragraph 2 says no. A person or community can use the right at once, according to the constitution's intent. Parliament's silence does not lock the door.\n\nFor the exam, learn the pair. Paragraph 2 fixes the problem of a right that waits for a law. Paragraph 3 fixes the problem of a right with no route to court. Both do the same job: they make constitutional rights usable, not just declared."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "มาตรา 26: ด่านตรวจของกฎหมายที่จำกัดสิทธิ",
+        "en": "Section 26: the checkpoint for any law that limits rights"
+      },
+      "body": {
+        "th": "ถ้ามาตรา 25 บอกว่ารัฐต้องมีกฎหมายจึงจำกัดสิทธิได้ มาตรา 26 บอกว่ากฎหมายนั้นต้องหน้าตาแบบไหน\n\nขั้นแรก ถ้ารัฐธรรมนูญเขียนเงื่อนไขไว้เฉพาะ ต้องทำตามนั้น เช่น มาตรา 34 บอกว่าจำกัดเสรีภาพในการแสดงความคิดเห็นได้เฉพาะเพื่อความมั่นคงของรัฐ สิทธิของผู้อื่น ความสงบเรียบร้อยหรือศีลธรรมอันดี หรือสุขภาพของประชาชน เหตุอื่นใช้ไม่ได้\n\nขั้นที่สอง ถ้ารัฐธรรมนูญไม่ได้เขียนเงื่อนไขไว้ กฎหมายนั้นยังต้องผ่านด่านกลาง\n- ไม่ขัดหลักนิติธรรม\n- ไม่เพิ่มภาระหรือจำกัดสิทธิเกินสมควรแก่เหตุ (หลักความได้สัดส่วน: ใช้ค้อนให้เหมาะกับขนาดตะปู)\n- ไม่กระทบศักดิ์ศรีความเป็นมนุษย์ ซึ่งมาตรา 4 รับรองไว้แล้ว\n- ต้องระบุเหตุผลความจำเป็นในการจำกัดสิทธิไว้ในกฎหมาย\n\nขั้นที่สาม กฎหมายต้องใช้บังคับเป็นการทั่วไป ห้ามเขียนเจาะจงกรณีใดกรณีหนึ่งหรือคนใดคนหนึ่ง เหตุผลง่ายมาก กรรมการฟุตบอลออกกฎว่า “ห้ามยิงจากนอกกรอบ” ได้ แต่ออกกฎว่า “ห้ามหมายเลข 10 ของทีมเยือนยิงประตู” ไม่ได้ กฎที่เล็งคนคนเดียวไม่ใช่กฎ แต่เป็นการตัดสินคดีโดยไม่ผ่านศาล\n\nข้อยกเว้นที่ต้องรู้: มาตรา 37 วรรคท้ายบอกว่า กฎหมายเวนคืนที่ระบุเจาะจงที่ดินหรือเจ้าของตามความจำเป็น ไม่ถือว่าขัดมาตรา 26 วรรคสอง เพราะการเวนคืนเพื่อสร้างถนนสายหนึ่ง ย่อมต้องระบุแปลงที่ดินเป็นธรรมดา\n\nเปรียบเทียบกับฉบับก่อน: รัฐธรรมนูญ 2550 ใช้ถ้อยคำว่ากฎหมายจำกัดสิทธิจะกระทบ “สาระสำคัญแห่งสิทธิ” ไม่ได้ ฉบับ 2560 ไม่ได้ใช้คำนั้นในมาตรา 26 แต่ใช้ชุดเงื่อนไขข้างบน คือนิติธรรม ความได้สัดส่วน และศักดิ์ศรีความเป็นมนุษย์ ถ้าเจอข้อสอบที่ถามถ้อยคำของมาตรา 26 ให้ยึดถ้อยคำปัจจุบัน",
+        "en": "Section 25 says the state needs a law to limit a right. Section 26 says what that law must look like.\n\nStep one: if the constitution sets specific conditions, follow them. Section 34, for example, allows limits on expression only to protect state security, other people's rights, public order or good morals, or public health. No other reason will do.\n\nStep two: where the constitution sets no specific conditions, the law must still pass a general checkpoint:\n- it must not conflict with the rule of law;\n- it must not burden or restrict rights more than the reason requires (proportionality: match the hammer to the nail);\n- it must not affect human dignity, which section 4 already protects;\n- it must state its reasons for the restriction.\n\nStep three: the law must apply generally. It may not be aimed at one particular case or one particular person. The logic is simple. A referee may announce “no shooting from outside the box”. A referee may not announce “the away team's number 10 may not score”. A rule aimed at one person is not a rule at all; it is a verdict that skipped the courtroom.\n\nThe exception to know: the last paragraph of section 37 says an expropriation law that names specific land or owners, as necessary, does not breach section 26, paragraph 2. You cannot build one particular road without naming the plots it crosses.\n\nCompared with the previous charter: the 2007 constitution said a rights-limiting law could not affect “the essence” of the right. Section 26 of the 2017 text does not use that phrase. It uses the checklist above instead: rule of law, proportionality, human dignity. If an exam asks for the wording of section 26, go by the current text."
+      }
+    },
+    {
+      "kind": "mnemonic",
+      "title": {
+        "th": "ห้าด่านของมาตรา 26: “นิติ–พอดี–ศักดิ์ศรี–มีเหตุ–ทั่วไป”",
+        "en": "Section 26's five gates: Rule, Proportion, Dignity, Reasons, General"
+      },
+      "body": {
+        "th": "ท่องเป็นจังหวะว่า “นิติ พอดี ศักดิ์ศรี มีเหตุ ทั่วไป”\n\n- นิติ = ไม่ขัดหลักนิติธรรม\n- พอดี = ไม่จำกัดเกินสมควรแก่เหตุ\n- ศักดิ์ศรี = ไม่กระทบศักดิ์ศรีความเป็นมนุษย์\n- มีเหตุ = ต้องระบุเหตุผลความจำเป็นไว้\n- ทั่วไป = ใช้บังคับเป็นการทั่วไป ไม่เจาะจงคนหรือกรณี\n\nห้าคำนี้เรียงตามคำถามที่ศาลจะถามกฎหมายฉบับหนึ่ง: ชอบด้วยหลักไหม แรงเกินไปไหม เหยียบศักดิ์ศรีคนไหม บอกเหตุผลไหม และเล็งใครเป็นพิเศษไหม",
+        "en": "Remember RPDRG as one breath: “Rule, Proportion, Dignity, Reasons, General.”\n\n- Rule = consistent with the rule of law\n- Proportion = no heavier than the reason requires\n- Dignity = does not affect human dignity\n- Reasons = states why the restriction is necessary\n- General = applies to everyone, not to one person or case\n\nThe five words follow the questions a court asks of a law: is it lawful in principle, is it too heavy, does it trample dignity, does it explain itself, and is it aimed at someone in particular?"
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "แม่แบบ “เสรีภาพ + ข้อยกเว้น”: มีสามระดับความแน่นหนา",
+        "en": "The “liberty + exception” template comes in three strengths"
+      },
+      "body": {
+        "th": "อ่านหมวด 3 ไปเรื่อย ๆ จะเห็นประโยคแม่แบบซ้ำ “บุคคลย่อมมีเสรีภาพใน... การจำกัดเสรีภาพจะกระทำมิได้ เว้นแต่...” ความต่างอยู่ที่คำหลัง “เว้นแต่” ซึ่งแบ่งได้สามระดับ\n\nระดับแรก ต้องมีคำสั่งหรือหมายศาล หรือมีเหตุอื่นตามที่กฎหมายบัญญัติ ใช้กับพื้นที่ใกล้ตัวที่สุดสามแห่ง คือ ร่างกาย (การจับและคุมขังตามมาตรา 28) บ้าน (การเข้าและค้นเคหสถานตามมาตรา 33) และการสื่อสาร (การตรวจ กัก หรือเปิดเผยข้อมูลที่คนสื่อสารถึงกันตามมาตรา 36) เหตุผลคือ สามพื้นที่นี้ถ้าถูกบุกรุกแล้ว ความเสียหายเกิดทันทีและเรียกคืนไม่ได้ จึงต้องให้ผู้พิพากษาซึ่งเป็นคนกลางดูก่อนเป็นหลัก ส่วน “เหตุอื่นตามที่กฎหมายบัญญัติ” คือกรณีอย่างความผิดซึ่งหน้า ที่รอหมายไม่ทัน\n\nระดับที่สอง จำกัดได้โดยกฎหมาย แต่เฉพาะเพื่อเหตุที่รัฐธรรมนูญระบุ เช่น การแสดงความคิดเห็น (มาตรา 34) การเดินทางและเลือกถิ่นที่อยู่ (มาตรา 38) การประกอบอาชีพ (มาตรา 40) การรวมกันเป็นสมาคม (มาตรา 42) และการชุมนุม (มาตรา 44) สภาจำกัดได้ แต่ต้องอ้างเหตุที่อยู่ในรายการ เช่น การเดินทางจำกัดได้เพื่อความมั่นคง ความสงบเรียบร้อย การผังเมือง สถานภาพของครอบครัว หรือสวัสดิภาพของผู้เยาว์\n\nระดับที่สาม ห้ามเด็ดขาด ไม่มีคำว่า “เว้นแต่” หรือมีแค่ข้อยกเว้นแคบมาก\n- การทรมาน ทารุณกรรม หรือลงโทษอย่างโหดร้ายไร้มนุษยธรรม (มาตรา 28 วรรคสาม)\n- การเนรเทศคนสัญชาติไทย การห้ามคนสัญชาติไทยเข้าประเทศ และการถอนสัญชาติของคนที่ได้สัญชาติไทยโดยการเกิด (มาตรา 39)\n- การสั่งปิดสื่อเพื่อลิดรอนเสรีภาพ (มาตรา 35 วรรคสอง)\n- การเกณฑ์แรงงาน ทำได้เฉพาะกรณีภัยพิบัติสาธารณะ สถานการณ์ฉุกเฉิน กฎอัยการศึก หรือภาวะสงคราม (มาตรา 30)\n\nหลักคิดที่ใช้ได้ทั้งหมวด: ยิ่งความเสียหายแก้คืนไม่ได้มากเท่าไร ด่านยิ่งแน่นหนาเท่านั้น",
+        "en": "Read through Chapter 3 and one sentence keeps returning: “A person has the liberty to … ; restricting it is not permitted, except …”. What changes is the wording after “except”, and it comes in three strengths.\n\nStrength one: a court order or warrant, or another ground provided by law. This guards the three most intimate spaces: the body (arrest and detention, section 28), the home (entry and search, section 33) and private communication (inspecting, seizing or disclosing what people send each other, section 36). Intrusion into these spaces does damage instantly and cannot be undone, so the default is that a neutral judge looks first. “Another ground provided by law” covers situations such as an offence committed in plain sight, where there is no time to get a warrant.\n\nStrength two: restriction by law, but only for reasons the constitution lists. Expression (section 34), movement and residence (section 38), occupation (section 40), association (section 42) and assembly (section 44) work this way. Parliament can restrict them, but must rely on a listed reason. Movement, for example, can be restricted for state security, public order, town planning, family status or the welfare of minors.\n\nStrength three: absolute, with no “except”, or only a very narrow one:\n- torture, cruelty, or inhuman punishment (section 28, paragraph 3);\n- exiling a Thai national, barring a Thai national from entering the country, or revoking the nationality of someone who is Thai by birth (section 39);\n- closing a news outlet in order to curb its freedom (section 35, paragraph 2);\n- forced labour, allowed only for public disasters, a declared emergency, martial law, or war (section 30).\n\nThe rule that ties the chapter together: the harder the harm is to reverse, the higher the gate."
+      }
+    },
+    {
+      "kind": "mnemonic",
+      "title": {
+        "th": "“ตัว–บ้าน–สาย” ต้องผ่านศาล",
+        "en": "“Body, home, line” go through a judge"
+      },
+      "body": {
+        "th": "สามพื้นที่ที่ต้องมีคำสั่งหรือหมายศาลเป็นหลัก ท่องว่า “ตัว บ้าน สาย”\n\n- ตัว = จับ คุมขัง (มาตรา 28)\n- บ้าน = เข้าหรือค้นเคหสถาน (มาตรา 33)\n- สาย = ดักฟัง ตรวจ หรือเปิดเผยการสื่อสาร (มาตรา 36)\n\nจำเลขเป็นทางเดิน 28 → 33 → 36 ตัวเราเดินเข้าบ้านแล้วยกหูโทรศัพท์ ระยะห่างของเลขเพิ่มขึ้นตามระยะห่างจากตัว",
+        "en": "The three spaces that default to a judge's order or warrant: “body, home, line”.\n\n- Body = arrest and detention (section 28)\n- Home = entering or searching a dwelling (section 33)\n- Line = intercepting, inspecting or disclosing communications (section 36)\n\nRead the numbers as a walk: 28 → 33 → 36. You walk into your house, then pick up the phone. The numbers grow as you move outward from the body."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "มาตรา 27: เท่าเทียมไม่ได้แปลว่าเหมือนกันทุกกรณี",
+        "en": "Section 27: equal does not mean identical"
+      },
+      "body": {
+        "th": "มาตรา 27 มีห้าวรรค และแต่ละวรรคตอบคำถามคนละข้อ\n\n- วรรคหนึ่ง: บุคคลย่อมเสมอกันในกฎหมาย ได้รับความคุ้มครองตามกฎหมายเท่าเทียมกัน\n- วรรคสอง: ชายและหญิงมีสิทธิเท่าเทียมกัน\n- วรรคสาม: ห้ามเลือกปฏิบัติโดยไม่เป็นธรรมด้วยเหตุความแตกต่าง เช่น ถิ่นกำเนิด เชื้อชาติ ภาษา เพศ อายุ ความพิการ สภาพทางกายหรือสุขภาพ สถานะของบุคคล ฐานะทางเศรษฐกิจหรือสังคม ความเชื่อทางศาสนา การศึกษาอบรม ความคิดเห็นทางการเมืองที่ไม่ขัดรัฐธรรมนูญ “หรือเหตุอื่นใด” คำสุดท้ายนี้ทำให้รายการเปิด ไม่ใช่รายการปิด\n- วรรคสี่: มาตรการที่รัฐทำเพื่อขจัดอุปสรรค หรือเพื่อคุ้มครองเด็ก สตรี ผู้สูงอายุ คนพิการ หรือผู้ด้อยโอกาส ไม่ถือเป็นการเลือกปฏิบัติโดยไม่เป็นธรรม\n- วรรคห้า: ทหาร ตำรวจ ข้าราชการ เจ้าหน้าที่รัฐ และพนักงานขององค์กรของรัฐ มีสิทธิเสรีภาพเหมือนคนทั่วไป เว้นแต่กฎหมายจำกัดไว้เฉพาะเรื่องการเมือง สมรรถภาพ วินัย หรือจริยธรรม\n\nวรรคสี่คือหัวใจของการเข้าใจความเท่าเทียม ทางลาดหน้าอาคารราชการไม่ใช่สิทธิพิเศษของคนนั่งรถเข็น มันคือการทำให้เขาเดินเข้าประตูเดียวกับทุกคนได้ ความเท่าเทียมจึงวัดที่ผลว่าคนเข้าถึงสิทธิได้เท่ากันไหม ไม่ได้วัดที่การปฏิบัติเหมือนกันเป๊ะ\n\nคำว่า “โดยไม่เป็นธรรม” ในวรรคสามก็สำคัญ กฎหมายแยกแยะคนได้ตลอดเวลา เช่น กำหนดอายุขั้นต่ำในการขับรถ สิ่งที่ห้ามคือการแยกแยะที่ไม่มีเหตุผลรองรับ",
+        "en": "Section 27 has five paragraphs, each answering a different question.\n\n- Paragraph 1: all persons are equal before the law and equally protected by it.\n- Paragraph 2: men and women have equal rights.\n- Paragraph 3: no unjust discrimination on grounds such as origin, race, language, sex, age, disability, physical or health condition, personal status, economic or social standing, religious belief, education, political opinion that does not conflict with the constitution, “or any other ground”. That last phrase makes the list open, not closed.\n- Paragraph 4: measures the state takes to remove obstacles, or to protect children, women, the elderly, people with disabilities or the disadvantaged, are not unjust discrimination.\n- Paragraph 5: soldiers, police, civil servants, other state officials and employees of state bodies have the same rights as everyone else, except where a law restricts them on matters of politics, capacity, discipline or ethics.\n\nParagraph 4 is the key to the whole idea. A ramp at the entrance of a government office is not a privilege for wheelchair users. It lets them walk through the same door as everyone else. Equality is measured by whether people can actually reach their rights, not by identical treatment.\n\nThe word “unjust” in paragraph 3 matters too. Laws sort people all the time; a minimum driving age is one example. What is forbidden is sorting without a defensible reason."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "มาตรา 29: กติกาของห้องพิจารณาคดีอาญา",
+        "en": "Section 29: the ground rules of a criminal courtroom"
+      },
+      "body": {
+        "th": "มาตรา 29 คือรายการกติกาที่ทำให้การดำเนินคดีอาญาเป็นการแข่งขันที่ยุติธรรม แทนที่จะเป็นการไล่ล่า\n\n- ไม่มีความผิด ไม่มีโทษ ถ้าไม่มีกฎหมายในเวลาที่ทำ: คนจะต้องรับโทษอาญาก็ต่อเมื่อกฎหมายที่ใช้อยู่ตอนทำบัญญัติว่าเป็นความผิดและกำหนดโทษไว้ และโทษต้องไม่หนักกว่าที่กฎหมายตอนนั้นกำหนด กฎกติกาต้องประกาศก่อนเริ่มเกม\n- สันนิษฐานไว้ก่อนว่าบริสุทธิ์: ผู้ต้องหาหรือจำเลยต้องถือว่าไม่มีความผิด จนกว่าจะมีคำพิพากษาอันถึงที่สุด และห้ามปฏิบัติต่อเขาเหมือนผู้กระทำผิดก่อนถึงตอนนั้น\n- ควบคุมตัวเท่าที่จำเป็นเพื่อกันหลบหนี: การขังไม่ใช่การลงโทษล่วงหน้า\n- ห้ามบังคับให้ให้การเป็นปฏิปักษ์ต่อตนเอง: รัฐต้องหาหลักฐานเอง ไม่ใช่บีบให้คนพูดปรักปรำตัวเอง\n- คำขอประกันต้องได้รับการพิจารณา ห้ามเรียกหลักประกันเกินควร และการไม่ให้ประกันต้องเป็นไปตามที่กฎหมายบัญญัติ\n\nเหตุผลรวมของทั้งมาตราคือ รัฐมีตำรวจ อัยการ งบประมาณ และเวลา คนคนเดียวไม่มี กติกาเหล่านี้คือการให้แต้มต่อแก่ฝ่ายที่อ่อนกว่า เพื่อให้ความผิดพลาดที่ร้ายแรงที่สุด คือการลงโทษคนบริสุทธิ์ เกิดยากที่สุด",
+        "en": "Section 29 is the list of rules that make a prosecution a fair contest rather than a hunt.\n\n- No crime and no punishment without a law in force at the time: a person can be punished only if the law in force when they acted defined it as an offence and set the penalty, and the penalty cannot exceed what that law allowed. The rules must be announced before the game starts.\n- Presumption of innocence: a suspect or defendant is presumed not guilty until a final judgment, and may not be treated as guilty before then.\n- Detention only as needed to prevent flight: pre-trial custody is not punishment in advance.\n- No compelled self-incrimination: the state must find its own evidence, not squeeze a confession.\n- Bail requests must be considered, bail may not be excessive, and refusal of bail must follow the law.\n\nThe common thread: the state has police, prosecutors, a budget and time. One person has none of these. These rules hand a head start to the weaker side, so that the worst possible error, punishing an innocent person, becomes as rare as possible."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "คดีกฎหมายขายตรง: เมื่อกฎหมายสันนิษฐานว่ากรรมการบริษัทผิดไว้ก่อน",
+        "en": "The Direct Sales Act case: when a law presumed company directors guilty"
+      },
+      "year": 2012,
+      "ref": "คำวินิจฉัยศาลรัฐธรรมนูญที่ 12/2555",
+      "body": {
+        "th": "ปี 2555 คดีหนึ่งจากศาลจังหวัดบุรีรัมย์ขึ้นไปถึงศาลรัฐธรรมนูญ บริษัทขายตรงแห่งหนึ่งถูกฟ้องตามพระราชบัญญัติขายตรงและตลาดแบบตรง พ.ศ. 2545 และผู้บริหารของบริษัทถูกพิพากษาจำคุกด้วย ฐานะผู้บริหาร เพราะกฎหมายฉบับนั้นมีบทสันนิษฐานว่า เมื่อนิติบุคคลทำผิด ให้สันนิษฐานไว้ก่อนว่ากรรมการผู้จัดการหรือผู้รับผิดชอบการดำเนินงานร่วมทำผิดด้วย เว้นแต่จะพิสูจน์ได้ว่าไม่ได้มีส่วน\n\nระหว่างคดีอยู่ในชั้นฎีกา จำเลยโต้แย้งว่าบทสันนิษฐานนี้ขัดรัฐธรรมนูญ ศาลรัฐธรรมนูญวินิจฉัยว่าบทบัญญัติส่วนนั้นขัดหลักสันนิษฐานว่าบริสุทธิ์ตามรัฐธรรมนูญ 2550 เหตุผลคือ บทสันนิษฐานแบบนี้ไม่ได้ให้โจทก์พิสูจน์ว่าคนคนนั้นทำอะไร แค่มีตำแหน่งก็ถือว่าผิด แล้วโยนภาระให้จำเลยพิสูจน์ความบริสุทธิ์ของตัวเอง ซึ่งเป็นการกลับด้านกติกาของคดีอาญา\n\nทำไมคดีนี้สำคัญ เพราะกฎหมายไทยหลายสิบฉบับในตอนนั้นมีบทสันนิษฐานแบบเดียวกัน คำวินิจฉัยนี้จึงกระทบเป็นวงกว้าง และต่อมาในปี 2560 มีการตรากฎหมายแก้ไขบทบัญญัติลักษณะนี้รวดเดียวหลายฉบับ คือ พระราชบัญญัติแก้ไขเพิ่มเติมบทบัญญัติที่เกี่ยวกับความรับผิดในทางอาญาของผู้แทนนิติบุคคล พ.ศ. 2560 หลักใหม่คือ โจทก์ต้องพิสูจน์ว่าผู้บริหารคนนั้นสั่งการหรือละเว้นจนเกิดความผิด ตำแหน่งอย่างเดียวไม่พอ\n\nหลักนี้ยังอยู่ครบในมาตรา 29 ของรัฐธรรมนูญ 2560 คดีนี้จึงเป็นตัวอย่างที่ดีว่า สิทธิในรัฐธรรมนูญเปลี่ยนกฎหมายธรรมดาได้จริงอย่างไร",
+        "en": "In 2012 a case from the Buriram provincial court reached the Constitutional Court. A direct-sales company had been prosecuted under the Direct Sales and Direct Marketing Act of 2002, and one of its executives was sentenced to prison as well, simply as an executive. The Act said that when a company committed an offence, its managing director or the person responsible for its operations was presumed to have committed it too, unless they could prove they had no part in it.\n\nWhile the case was before the Supreme Court, the defendant argued that this presumption was unconstitutional. The Constitutional Court agreed that the provision conflicted with the presumption of innocence in the 2007 constitution. The reasoning: the presumption did not require the prosecution to prove what the person had actually done. Holding the job was enough, and the defendant had to prove innocence. That turns the rules of a criminal trial upside down.\n\nWhy it matters: dozens of Thai statutes contained the same kind of presumption at the time, so the ruling had wide effects. In 2017 parliament fixed many of them in one sweep with the Act Amending Provisions on the Criminal Liability of Representatives of Juristic Persons. The new principle: the prosecution must prove that the executive ordered or failed to prevent the offence. A job title alone is not enough.\n\nThe same principle carries over intact into section 29 of the 2017 constitution. The case is a clean example of a constitutional right reshaping ordinary law."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "มาตรา 34–35: พูด เขียน สอน และสื่อ",
+        "en": "Sections 34–35: speech, scholarship and the press"
+      },
+      "body": {
+        "th": "มาตรา 34 คุ้มครองการแสดงความคิดเห็น การพูด การเขียน การพิมพ์ การโฆษณา และการสื่อความหมายวิธีอื่น จำกัดได้โดยกฎหมายเฉพาะเพื่อสี่เหตุ คือ ความมั่นคงของรัฐ สิทธิเสรีภาพของผู้อื่น ความสงบเรียบร้อยหรือศีลธรรมอันดี และสุขภาพของประชาชน\n\nวรรคสองของมาตรา 34 คุ้มครองเสรีภาพทางวิชาการ แต่มีเงื่อนไขที่ข้อสอบชอบถาม การใช้เสรีภาพทางวิชาการต้องไม่ขัดต่อหน้าที่ของปวงชนชาวไทยหรือศีลธรรมอันดี และต้อง “เคารพและไม่ปิดกั้นความเห็นต่างของบุคคลอื่น” เงื่อนไขข้อหลังน่าสนใจ เพราะผูกเสรีภาพของนักวิชาการไว้กับหน้าที่เปิดพื้นที่ให้คนเห็นต่างด้วย\n\nมาตรา 35 ว่าด้วยสื่อมวลชน และเป็นมาตราที่ละเอียดที่สุดมาตราหนึ่งในหมวดนี้\n- คนทำสื่อมีเสรีภาพเสนอข่าวและแสดงความคิดเห็นตามจริยธรรมวิชาชีพ\n- ห้ามสั่งปิดสื่อเพื่อลิดรอนเสรีภาพ\n- ห้ามบังคับให้ส่งข่าวให้เจ้าหน้าที่ตรวจก่อนเผยแพร่ ยกเว้นในภาวะสงคราม\n- เจ้าของหนังสือพิมพ์หรือสื่อมวลชนอื่นต้องมีสัญชาติไทย\n- รัฐห้ามให้เงินหรือทรัพย์สินอุดหนุนสื่อเอกชน\n- หน่วยงานรัฐที่จ่ายเงินให้สื่อ เช่นค่าโฆษณาหรือประชาสัมพันธ์ ต้องเปิดเผยรายละเอียดต่อคณะกรรมการตรวจเงินแผ่นดินและประกาศให้ประชาชนทราบ\n- เจ้าหน้าที่รัฐที่ทำงานสื่อมีเสรีภาพเช่นกัน แต่ต้องคำนึงถึงภารกิจของหน่วยงานตัวเอง\n\nทำไมต้องเขียนเรื่องเงินไว้ถึงขนาดนี้ เพราะการปิดปากสื่อไม่จำเป็นต้องใช้กุญแจล็อกโรงพิมพ์ ใช้งบโฆษณาก็ได้ สื่อที่รายได้หลักมาจากหน่วยงานรัฐจะวิจารณ์หน่วยงานนั้นยากขึ้นเอง กฎเรื่องการเปิดเผยเงินจึงเป็นการทำให้เชือกที่มองไม่เห็นกลายเป็นเชือกที่มองเห็น",
+        "en": "Section 34 protects expression: speaking, writing, printing, publishing and every other way of conveying meaning. A law may restrict it only for four purposes: state security, the rights and freedoms of others, public order or good morals, and public health.\n\nThe second paragraph protects academic freedom, with a condition exam writers like to test. Academic freedom must not conflict with the duties of the Thai people or with good morals, and must “respect and not obstruct the differing opinions of others”. That last clause ties a scholar's freedom to a duty to leave room for people who disagree.\n\nSection 35 covers the press and is one of the most detailed sections in the chapter:\n- media professionals are free to report and comment within professional ethics;\n- no outlet may be closed down in order to curb that freedom;\n- no one may be forced to submit news to officials before publication, except in time of war;\n- owners of newspapers and other media must be Thai nationals;\n- the state may not subsidise private media with money or property;\n- state agencies that pay media, for advertising, PR or anything similar, must report the details to the State Audit Commission and publish them;\n- state officials who do media work have the same freedom, but must keep their agency's mission in mind.\n\nWhy so much about money? Because silencing the press does not require a padlock on the printing house. An advertising budget will do. An outlet that lives on a ministry's ad spending will find it harder to criticise that ministry. The disclosure rule turns an invisible string into a visible one."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "มาตรา 32: ความเป็นส่วนตัวและข้อมูลส่วนบุคคล",
+        "en": "Section 32: privacy and personal data"
+      },
+      "body": {
+        "th": "มาตรา 32 คุ้มครองความเป็นอยู่ส่วนตัว เกียรติยศ ชื่อเสียง และครอบครัว และเพิ่มเรื่องที่ฉบับเก่าไม่ได้เน้นเท่า คือ การนำข้อมูลส่วนบุคคลไปใช้ประโยชน์ไม่ว่าทางใด ทำไม่ได้ เว้นแต่มีกฎหมายที่ตราขึ้นเพียงเท่าที่จำเป็นเพื่อประโยชน์สาธารณะ\n\nลองคิดถึงเบอร์โทรศัพท์ที่คุณให้ร้านค้าไว้รับแต้มสะสม แล้ววันหนึ่งมีบริษัทประกันที่ไม่เคยรู้จักโทรมา คำถามว่า “ใครเอาข้อมูลไป และมีสิทธิอะไร” คือคำถามของมาตรานี้ กฎหมายที่ทำหน้าที่ลงรายละเอียดเรื่องนี้คือ พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562\n\nสังเกตคำว่า “เพียงเท่าที่จำเป็น” ซึ่งเป็นหลักความได้สัดส่วนแบบเดียวกับมาตรา 26 ปรากฏอยู่ในตัวมาตราอีกชั้นหนึ่ง",
+        "en": "Section 32 protects privacy, dignity, reputation and family life, and adds something earlier charters did not stress as much: personal data may not be used in any way, except under a law enacted only as far as necessary for the public interest.\n\nThink of the phone number you gave a shop for loyalty points, and the insurance company you have never heard of that calls you a month later. “Who took my data, and by what right?” is the question this section answers. The detailed rules live in the Personal Data Protection Act of 2019.\n\nNotice “only as far as necessary”. It is the same proportionality idea as section 26, written into the section a second time."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "มาตรา 37: ทรัพย์สินและการเวนคืน",
+        "en": "Section 37: property and expropriation"
+      },
+      "body": {
+        "th": "สมมติกรมทางหลวงจะตัดถนนผ่านสวนทุเรียนที่ครอบครัวหนึ่งปลูกมาสามรุ่น มาตรา 37 คือกติกาของเหตุการณ์นี้ทั้งหมด\n\n- สิทธิในทรัพย์สินและการสืบมรดกได้รับคุ้มครอง ขอบเขตและการจำกัดเป็นไปตามกฎหมาย\n- การเวนคืนอสังหาริมทรัพย์ทำได้เฉพาะโดยกฎหมาย และเฉพาะเพื่อสาธารณูปโภค การป้องกันประเทศ การได้มาซึ่งทรัพยากรธรรมชาติ หรือประโยชน์สาธารณะอย่างอื่น\n- ต้องจ่ายค่าทดแทนที่เป็นธรรมภายในเวลาอันควร แก่เจ้าของและผู้ทรงสิทธิที่เสียหาย โดยคำนึงถึงประโยชน์สาธารณะ ผลกระทบต่อผู้ถูกเวนคืน และประโยชน์ที่ผู้ถูกเวนคืนอาจได้จากการเวนคืนนั้น (เช่น ที่ดินแปลงที่เหลือราคาขึ้นเพราะติดถนนใหม่)\n- เวนคืนได้เท่าที่จำเป็นเท่านั้น\n- กฎหมายเวนคืนต้องระบุวัตถุประสงค์และระยะเวลาเข้าใช้ให้ชัด\n- ถ้าไม่ได้ใช้ภายในเวลาที่กำหนด หรือมีที่เหลือจากการใช้ และเจ้าของเดิมหรือทายาทต้องการคืน ต้องคืนให้\n- กฎหมายเวนคืนที่ระบุเจาะจงที่ดินหรือเจ้าของ ไม่ถือว่าขัดมาตรา 26 วรรคสอง\n\nตรรกะของกติกาข้อ “ต้องคืน” ตรงไปตรงมา รัฐเอาที่ดินไปได้เพราะมีเหตุผลสาธารณะ ถ้าเหตุผลนั้นหายไป อำนาจที่อาศัยเหตุผลนั้นก็ต้องหายไปด้วย เหมือนเพื่อนบ้านยืมบันไดไปซ่อมหลังคา ซ่อมเสร็จแล้วก็ต้องเอามาคืน ไม่ใช่เก็บไว้เผื่อใช้วันหน้า",
+        "en": "Suppose the Highways Department plans a road through a durian orchard one family has farmed for three generations. Section 37 is the rulebook for that whole story.\n\n- The right to property and inheritance is protected; its scope and limits are set by law.\n- Land may be expropriated only by law, and only for public utilities, national defence, acquiring natural resources, or another public interest.\n- Fair compensation must be paid within a reasonable time to the owner and anyone else with rights who suffers loss, taking into account the public interest, the impact on the person losing the land, and any benefit that person gains from the project (for example, the remaining plot rising in value because it now fronts a new road).\n- Only as much land as is necessary may be taken.\n- The expropriation law must state its purpose and the time by which the land will be used.\n- If the land is not used in time, or some is left over, and the former owner or heirs want it back, it must be returned.\n- An expropriation law that names specific land or owners does not breach section 26, paragraph 2.\n\nThe logic of the return rule is plain. The state may take land because there is a public reason. If the reason disappears, the power built on it disappears too. A neighbour who borrows your ladder to fix his roof gives it back when the roof is fixed; he does not keep it in case he needs it next year."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "ประชาชนกับรัฐ: ข้อมูล ร้องเรียน ฟ้อง และสิทธิชุมชน (มาตรา 41, 43, 46)",
+        "en": "Citizens and the state: information, complaints, lawsuits and community rights (sections 41, 43, 46)"
+      },
+      "body": {
+        "th": "มาตรา 41 ให้บุคคลและชุมชนมีสิทธิสามอย่างต่อรัฐ เรียงตามลำดับความแรง\n- รู้: ได้รับทราบและเข้าถึงข้อมูลข่าวสารสาธารณะที่หน่วยงานรัฐถืออยู่ ตามที่กฎหมายบัญญัติ\n- บอก: เสนอเรื่องราวร้องทุกข์ และได้รับแจ้งผลโดยรวดเร็ว\n- ฟ้อง: ฟ้องหน่วยงานรัฐให้รับผิดจากการกระทำหรือละเว้นการกระทำของเจ้าหน้าที่\n\nมาตรา 43 เป็นสิทธิชุมชน ชุมชนมีสิทธิอนุรักษ์ภูมิปัญญาและวัฒนธรรม จัดการและใช้ประโยชน์จากทรัพยากรธรรมชาติอย่างสมดุลและยั่งยืน เข้าชื่อเสนอแนะให้รัฐทำหรืองดเว้นการกระทำที่กระทบชุมชนแล้วได้รับแจ้งผลโดยรวดเร็ว และจัดระบบสวัสดิการของชุมชนเอง โดยมีสิทธิร่วมกับท้องถิ่นหรือรัฐในการทำเรื่องเหล่านี้ด้วย\n\nมาตรา 46 คุ้มครองสิทธิผู้บริโภค ให้รวมกันตั้งองค์กรผู้บริโภค และให้องค์กรเหล่านั้นรวมกันเป็นองค์กรอิสระที่รัฐสนับสนุนได้ กฎหมายที่ตามมาคือพระราชบัญญัติการจัดตั้งสภาองค์กรของผู้บริโภค พ.ศ. 2562\n\nทำไมชุมชนต้องมีสิทธิเป็นกลุ่ม ไม่ใช่แค่สิทธิรายคน เพราะความเสียหายบางอย่างเป็นของส่วนรวม แม่น้ำที่เน่าไม่ได้เป็นของใครคนเดียว ถ้าต้องรอให้เจ้าของที่ดินทีละรายพิสูจน์ความเสียหายของตัวเอง ก็จะไม่มีใครพูดแทนแม่น้ำ",
+        "en": "Section 41 gives persons and communities three rights against the state, in rising order of force:\n- to know: access to public information held by state agencies, as the law provides;\n- to speak: to file complaints and be told the outcome promptly;\n- to sue: to bring a state agency to court for the acts or omissions of its officials.\n\nSection 43 sets out community rights. Communities may preserve local wisdom and culture; manage and use natural resources in a balanced, sustainable way; jointly petition the state to act, or to refrain from acts that harm the community, and be told the outcome promptly; and run their own welfare systems. They may do all of this together with local government or the state.\n\nSection 46 protects consumers: people may form consumer organisations, and those organisations may join into an independent body with state support. The law that followed is the Act on the Establishment of the Consumer Council of 2019.\n\nWhy give rights to a community, not just to individuals? Because some harm is shared. A poisoned river belongs to no single person. If every landowner had to prove their own private loss, no one would speak for the river."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "มาบตาพุด 2552: สิทธิชุมชนที่หยุดโครงการ 76 โครงการ",
+        "en": "Map Ta Phut, 2009: community rights that paused 76 projects"
+      },
+      "year": 2009,
+      "body": {
+        "th": "นิคมอุตสาหกรรมมาบตาพุดในจังหวัดระยองเป็นศูนย์กลางปิโตรเคมีของประเทศ และเป็นพื้นที่ที่ชาวบ้านร้องเรียนเรื่องมลพิษมานาน รัฐธรรมนูญ 2550 ม. 67 วรรคสอง กำหนดว่าโครงการที่อาจกระทบชุมชนอย่างรุนแรง ต้องศึกษาผลกระทบทั้งด้านสิ่งแวดล้อมและสุขภาพ รับฟังความคิดเห็น และให้องค์การอิสระให้ความเห็นก่อน แต่หลายปีผ่านไป กลไกเหล่านี้ยังไม่ครบ ขณะที่โครงการก็ได้รับอนุมัติต่อไป\n\nชาวบ้านและองค์กรสิ่งแวดล้อมฟ้องศาลปกครอง วันที่ 29 กันยายน 2552 ศาลปกครองกลางมีคำสั่งคุ้มครองชั่วคราวให้ระงับ 76 โครงการไว้ก่อน วันที่ 2 ธันวาคม 2552 ศาลปกครองสูงสุดให้บางโครงการ (11 โครงการ) เดินหน้าได้ ส่วนที่เหลือต้องรอจนกว่าจะทำตามขั้นตอนของรัฐธรรมนูญ ต่อมาโครงการส่วนใหญ่กลับมาเดินหน้าหลังทำการศึกษาและขั้นตอนครบ\n\nบทเรียนมีสองด้าน ด้านหนึ่ง สิทธิในรัฐธรรมนูญมีผลจริง แม้รัฐยังทำกลไกไม่ครบ ศาลก็ไม่ยอมให้ความล่าช้าของรัฐกลายเป็นข้ออ้างข้ามขั้นตอน อีกด้านหนึ่ง ภาคธุรกิจและนักลงทุนชี้ว่าความไม่แน่นอนแบบนี้มีต้นทุนทางเศรษฐกิจ รัฐธรรมนูญ 2560 นำเรื่องการศึกษาผลกระทบด้านสิ่งแวดล้อมและสุขภาพไปเขียนเป็นหน้าที่ของรัฐในมาตรา 58 และให้สิทธิประชาชนได้รับข้อมูลและคำชี้แจงก่อนรัฐอนุญาต",
+        "en": "The Map Ta Phut industrial estate in Rayong is Thailand's petrochemical hub, and residents had complained about pollution there for years. S. 67, paragraph 2 of the 2007 constitution said a project that might seriously affect a community needed an environmental and health impact study, public hearings, and an opinion from an independent body before approval. Years later those mechanisms were still incomplete, while approvals kept coming.\n\nResidents and environmental groups went to the administrative courts. On 29 September 2009 the Central Administrative Court issued an interim order suspending 76 projects. On 2 December 2009 the Supreme Administrative Court let some of them (11) proceed and kept the rest on hold until the constitutional steps were completed. Most projects later resumed once the studies and procedures were done.\n\nThe lesson cuts both ways. Constitutional rights had real force: even though the state had not finished building the machinery, the court would not let that delay become an excuse to skip the steps. Businesses and investors pointed out that this kind of uncertainty has an economic cost. The 2017 constitution moved the environmental and health impact assessment into the duties of the state in section 58, and gave people the right to information and explanation before the state grants a permit."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "รวมกลุ่ม ชุมนุม และตั้งพรรค (มาตรา 42, 44, 45)",
+        "en": "Association, assembly and parties (sections 42, 44, 45)"
+      },
+      "body": {
+        "th": "มาตรา 42 คุ้มครองการรวมกันเป็นสมาคม สหกรณ์ สหภาพ องค์กร ชุมชน หรือหมู่คณะอื่น จำกัดได้โดยกฎหมายเพื่อประโยชน์สาธารณะ ความสงบเรียบร้อยหรือศีลธรรมอันดี หรือเพื่อป้องกันการกีดกันหรือผูกขาด\n\nมาตรา 44 คุ้มครองการชุมนุม มีคุณสมบัติสองคำที่ต้องจำ คือ “โดยสงบ” และ “ปราศจากอาวุธ” การชุมนุมที่ขาดสองคุณสมบัตินี้อยู่นอกการคุ้มครองตั้งแต่ต้น ส่วนการชุมนุมที่สงบและไม่มีอาวุธ จำกัดได้โดยกฎหมายเพื่อความมั่นคง ความปลอดภัยสาธารณะ ความสงบเรียบร้อยหรือศีลธรรมอันดี หรือสิทธิของผู้อื่น กฎหมายที่ใช้จัดระเบียบเรื่องนี้ในปัจจุบันคือ พระราชบัญญัติการชุมนุมสาธารณะ พ.ศ. 2558\n\nมาตรา 45 ให้เสรีภาพรวมกันตั้งพรรคการเมืองตามวิถีทางการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข และสั่งให้กฎหมายพรรคการเมืองต้องมีอย่างน้อยสี่เรื่อง คือ การบริหารพรรคต้องเปิดเผยและตรวจสอบได้ สมาชิกต้องมีส่วนร่วมกว้างขวางในการกำหนดนโยบายและส่งผู้สมัคร พรรคต้องเป็นอิสระไม่ถูกคนนอกพรรคครอบงำหรือชี้นำ และต้องมีมาตรการกำกับไม่ให้สมาชิกทำผิดกฎหมายเลือกตั้ง\n\nข้อ “ห้ามคนนอกครอบงำ” มีเหตุผลชัด ถ้าคนที่ไม่ได้เป็นสมาชิกสั่งพรรคได้ สมาชิกก็เป็นแค่ฉากหน้า และผู้สั่งการตัวจริงไม่ต้องรับผิดชอบอะไรต่อผู้เลือกตั้งเลย",
+        "en": "Section 42 protects joining together in associations, cooperatives, unions, organisations, communities or other groups. A law may restrict this for the public interest, public order or good morals, or to prevent unfair barriers or monopolies.\n\nSection 44 protects assembly, and two qualifiers matter: “peaceful” and “unarmed”. An assembly that is neither falls outside the protection from the start. A peaceful, unarmed assembly can be restricted by law for state security, public safety, public order or good morals, or the rights of others. The law that currently regulates it is the Public Assembly Act of 2015.\n\nSection 45 guarantees the freedom to form political parties in line with the democratic regime of government with the King as Head of State, and orders the party law to include at least four things: party management must be open and auditable; members must have broad say over policy and candidate selection; the party must be independent and not controlled or directed by outsiders; and there must be measures to stop members from breaking election law.\n\nThe ban on outside control has an obvious purpose. If someone who is not a member can steer the party, the members are a façade, and the real decision-maker answers to no voter."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "สิทธิด้านสุขภาพและสวัสดิการ (มาตรา 47–48)",
+        "en": "Health and welfare rights (sections 47–48)"
+      },
+      "body": {
+        "th": "มาตรา 47 วางสามชั้น\n- ทุกคนมีสิทธิได้รับบริการสาธารณสุขของรัฐ\n- ผู้ยากไร้มีสิทธิได้รับบริการโดยไม่เสียค่าใช้จ่าย ตามที่กฎหมายบัญญัติ\n- ทุกคนมีสิทธิได้รับการป้องกันและขจัดโรคติดต่ออันตรายจากรัฐโดยไม่เสียค่าใช้จ่าย\n\nชั้นที่สามไม่มีเงื่อนไขเรื่องฐานะ เพราะโรคระบาดไม่ถามรายได้ ถ้าคนจนเข้าถึงวัคซีนไม่ได้ คนรวยก็ไม่ปลอดภัย การป้องกันโรคจึงเป็นสินค้าสาธารณะ\n\nมาตรา 48 คุ้มครองมารดาช่วงก่อนและหลังคลอด และให้คนอายุเกินหกสิบปีที่รายได้ไม่พอยังชีพ รวมทั้งผู้ยากไร้ มีสิทธิได้รับความช่วยเหลือที่เหมาะสมจากรัฐ ตามที่กฎหมายบัญญัติ\n\nให้สังเกตว่าสิทธิด้านสวัสดิการหลายเรื่อง เช่น การศึกษา 12 ปี และระบบสาธารณสุขที่ทั่วถึง ถูกย้ายไปเขียนเป็น “หน้าที่ของรัฐ” ในหมวด 5 (มาตรา 54 และ 55) เรื่องนี้มีที่มาและข้อถกเถียง ซึ่งอธิบายไว้ในบทถัดไป",
+        "en": "Section 47 sets three layers:\n- everyone has the right to state public-health services;\n- the poor have the right to those services free of charge, as the law provides;\n- everyone has the right to free prevention and control of dangerous communicable diseases by the state.\n\nThe third layer has no means test, because epidemics do not check income. If the poor cannot get vaccinated, the rich are not safe either. Disease prevention is a public good.\n\nSection 48 protects mothers before and after childbirth, and gives people over sixty without enough income to live on, as well as the poor, the right to appropriate help from the state, as the law provides.\n\nNotice that several welfare matters, such as twelve years of free schooling and universal health services, were moved into the “duties of the State” in Chapter 5 (sections 54 and 55). There is a reason for that move, and a debate about it, covered in the next chapter."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "สิทธิจะมีความหมายก็ต่อเมื่อมีประตูไปศาล: สี่ช่องทาง",
+        "en": "A right means little without a door to a court: four routes"
+      },
+      "body": {
+        "th": "เขียนสิทธิไว้สวยแค่ไหน ถ้าไม่มีใครบังคับใช้ได้ก็เป็นแค่ป้ายประกาศ รัฐธรรมนูญจึงเปิดหลายประตู\n\n- ประตูที่ 1 ยกรัฐธรรมนูญขึ้นในศาลใดก็ได้ (มาตรา 25 วรรคสาม) ทั้งฟ้องและต่อสู้คดี\n- ประตูที่ 2 ส่งเรื่องจากศาลที่พิจารณาคดีอยู่ (มาตรา 212) ถ้าศาลเห็นเอง หรือคู่ความโต้แย้งว่ากฎหมายที่จะใช้กับคดีขัดรัฐธรรมนูญ และยังไม่มีคำวินิจฉัยเรื่องนั้น ศาลต้องส่งให้ศาลรัฐธรรมนูญ ระหว่างนั้นพิจารณาต่อได้แต่ต้องรอพิพากษา\n- ประตูที่ 3 ยื่นคำร้องโดยตรงต่อศาลรัฐธรรมนูญ (มาตรา 213) คนที่ถูกละเมิดสิทธิเสรีภาพยื่นได้ แต่ต้องเป็นไปตามหลักเกณฑ์ในพระราชบัญญัติประกอบรัฐธรรมนูญว่าด้วยวิธีพิจารณาของศาลรัฐธรรมนูญ ซึ่งวางตัวกรองไว้ เช่น โดยหลักต้องใช้ช่องทางอื่นก่อน และบางเรื่องยื่นทางนี้ไม่ได้\n- ประตูที่ 4 ผู้ตรวจการแผ่นดิน (มาตรา 231) เสนอเรื่องกฎหมายที่มีปัญหาความชอบด้วยรัฐธรรมนูญต่อศาลรัฐธรรมนูญ หรือเสนอเรื่องกฎ คำสั่ง หรือการกระทำของหน่วยงานรัฐต่อศาลปกครอง\n\nประตูที่ 3 เป็นของใหม่ในระดับที่ทำให้ “คนธรรมดา” เข้าถึงศาลรัฐธรรมนูญได้กว้างขึ้น แต่ตัวกรองก็มีเหตุผล ศาลมีตุลาการ 9 คน ถ้าเปิดรับทุกเรื่อง ศาลจะจมอยู่ใต้กองคำร้องจนคดีที่สำคัญจริงต้องรอ\n\nผลของคำวินิจฉัยที่ควรจำ (มาตรา 212 วรรคท้าย): คำวินิจฉัยใช้ได้กับคดีทั้งปวง แต่ไม่กระทบคำพิพากษาที่ถึงที่สุดแล้ว ยกเว้นคดีอาญา ถ้ากฎหมายอาญาที่ใช้ลงโทษถูกวินิจฉัยว่าขัดรัฐธรรมนูญ ให้ถือว่าผู้ถูกลงโทษไม่เคยกระทำผิด ถ้ายังรับโทษอยู่ให้ปล่อยตัว แต่เรียกค่าชดเชยไม่ได้",
+        "en": "However finely a right is written, if no one can enforce it, it is a notice on a wall. So the constitution opens several doors.\n\n- Door 1: invoke the constitution in any court (section 25, paragraph 3), to bring a claim or as a defence.\n- Door 2: referral from a trial court (section 212). If the court itself thinks, or a party argues, that a law about to be applied in the case is unconstitutional, and the Constitutional Court has not yet ruled on it, the court must refer the question. The trial may continue, but judgment waits.\n- Door 3: a direct petition to the Constitutional Court (section 213). A person whose rights or liberties were violated may file, subject to the rules in the Organic Act on Constitutional Court Procedure, which sets filters: as a rule, other available remedies must be tried first, and some matters cannot come through this route.\n- Door 4: the Ombudsman (section 231), who may send a question about a law's constitutionality to the Constitutional Court, or a question about a rule, order or act of a state agency to the Administrative Court.\n\nDoor 3 widened access to the Constitutional Court for ordinary people. The filters have a reason too: the court has nine judges, and if it took every petition it would drown, and the cases that truly matter would wait.\n\nOne effect worth remembering (section 212, last paragraph): a ruling applies to all cases but does not reopen final judgments, except in criminal cases. If the criminal law used to convict someone is ruled unconstitutional, that person is treated as never having committed the offence and, if still serving the sentence, is released, though without any right to compensation."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "คดีทำแท้ง 2563: ร่างกายของหญิงกับการคุ้มครองชีวิตในครรภ์",
+        "en": "The abortion ruling, 2020: a woman's body and the protection of the unborn"
+      },
+      "year": 2020,
+      "ref": "คำวินิจฉัยศาลรัฐธรรมนูญที่ 4/2563",
+      "body": {
+        "th": "ก่อนปี 2564 ประมวลกฎหมายอาญาม. 301 กำหนดให้หญิงที่ทำให้ตัวเองแท้งลูก หรือยอมให้คนอื่นทำ เป็นความผิดอาญา ข้อยกเว้นมีแคบมาก ผลในชีวิตจริงคือผู้หญิงจำนวนมากหันไปหาคลินิกเถื่อนที่เสี่ยงต่อชีวิต\n\nวันที่ 19 กุมภาพันธ์ 2563 ศาลรัฐธรรมนูญวินิจฉัยว่า ประมวลกฎหมายอาญาม. 301 ขัดรัฐธรรมนูญ เพราะจำกัดสิทธิและเสรีภาพในชีวิตและร่างกายของหญิงตามมาตรา 28 เกินจำเป็น เหตุผลของศาลคือ รัฐต้องชั่งน้ำหนักสองฝั่ง คือสิทธิของหญิงในเนื้อตัวร่างกาย กับการคุ้มครองชีวิตในครรภ์ การลงโทษทุกกรณีโดยไม่แยกแยะ เท่ากับให้น้ำหนักฝั่งเดียวทั้งหมด ศาลให้เวลาสภาแก้กฎหมายภายใน 360 วัน และชี้ว่าอายุครรภ์อาจใช้เป็นเกณฑ์แบ่งได้\n\nสภาแก้ไขทันกำหนด พระราชบัญญัติแก้ไขเพิ่มเติมประมวลกฎหมายอาญา (ฉบับที่ 28) พ.ศ. 2564 ประกาศในราชกิจจานุเบกษาเมื่อ 6 กุมภาพันธ์ 2564 หญิงยุติการตั้งครรภ์ได้เมื่ออายุครรภ์ไม่เกิน 12 สัปดาห์ และระหว่าง 12 ถึง 20 สัปดาห์ทำได้หลังรับคำปรึกษาตามเกณฑ์ที่กระทรวงสาธารณสุขกำหนด\n\nคดีนี้สอนสามเรื่อง หนึ่ง หลักความได้สัดส่วนตามมาตรา 26 ใช้งานได้จริง กฎหมายที่ลงโทษแบบเหมารวมไม่ผ่าน สอง ศาลไม่ได้เขียนกฎหมายใหม่เอง แต่ส่งงานคืนให้สภาพร้อมกำหนดเวลา ซึ่งเคารพการแบ่งแยกอำนาจ สาม ประเด็นนี้ยังเป็นเรื่องที่คนในสังคมเห็นต่างกันโดยสุจริต ทั้งฝ่ายที่เน้นสิทธิของผู้หญิงและฝ่ายที่เน้นชีวิตในครรภ์ เส้น 12 และ 20 สัปดาห์คือคำตอบเชิงประนีประนอมที่สภาเลือก ไม่ใช่คำตอบเดียวที่เป็นไปได้",
+        "en": "Before 2021, s. 301 of the Criminal Code made it a crime for a woman to end her own pregnancy or let someone else do so, with only narrow exceptions. In practice, many women turned to unlicensed clinics that put their lives at risk.\n\nOn 19 February 2020 the Constitutional Court ruled that s. 301 conflicted with the constitution because it restricted a woman's right to life and bodily integrity under section 28 more than necessary. The state, the court reasoned, has to weigh two things: the woman's rights over her own body and the protection of life in the womb. Punishing every case without distinction gives all the weight to one side. The court gave parliament 360 days to amend the law and suggested that the stage of pregnancy could serve as the dividing line.\n\nParliament met the deadline. The Criminal Code Amendment Act (No. 28) of 2021 was published in the Royal Gazette on 6 February 2021. A woman may end a pregnancy of up to 12 weeks; between 12 and 20 weeks she may do so after counselling under Ministry of Public Health rules.\n\nThree lessons. First, the proportionality test in section 26 works in practice: a blanket criminal ban failed it. Second, the court did not write the new law itself; it sent the job back to parliament with a deadline, respecting the separation of powers. Third, people still disagree in good faith, some stressing women's rights and others stressing unborn life. The 12- and 20-week lines are the compromise parliament chose, not the only possible answer."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "คดีสมรสเพศเดียวกัน 2564: แพ้ในศาล ชนะในสภา",
+        "en": "Same-sex marriage, 2021: lost in court, won in parliament"
+      },
+      "year": 2021,
+      "ref": "คำวินิจฉัยศาลรัฐธรรมนูญที่ 20/2564",
+      "body": {
+        "th": "ปี 2563 คู่รักหญิงคู่หนึ่งไปขอจดทะเบียนสมรสที่สำนักงานเขต นายทะเบียนปฏิเสธ เพราะประมวลกฎหมายแพ่งและพาณิชย์ม. 1448 รับรองการสมรสระหว่างชายกับหญิงเท่านั้น ทั้งคู่ฟ้องต่อศาลเยาวชนและครอบครัวกลาง และขอให้ศาลส่งประเด็นไปศาลรัฐธรรมนูญตามมาตรา 212 ว่าม. 1448 ขัดหลักความเสมอภาคและศักดิ์ศรีความเป็นมนุษย์หรือไม่\n\nวันที่ 17 พฤศจิกายน 2564 ศาลรัฐธรรมนูญมีมติเอกฉันท์ว่าม. 1448 ไม่ขัดรัฐธรรมนูญ แต่มีข้อเสนอแนะให้รัฐสภา คณะรัฐมนตรี และหน่วยงานที่เกี่ยวข้อง ตรากฎหมายรับรองสิทธิและหน้าที่ของบุคคลหลากหลายทางเพศให้เหมาะสม ศาลมองว่าการสมรสตามกฎหมายเดิมมีวัตถุประสงค์และลักษณะเฉพาะ และการขยายความหมายเป็นเรื่องที่ฝ่ายนิติบัญญัติควรตัดสินใจ\n\nเมื่อคำวินิจฉัยฉบับเต็มเผยแพร่ ถ้อยคำในเหตุผลบางส่วนถูกวิจารณ์อย่างหนักจากองค์กรสิทธิมนุษยชนและภาคประชาสังคม เช่น iLaw ว่ามีลักษณะตีตราคนหลากหลายทางเพศ ขณะที่ฝ่ายที่เห็นด้วยกับผลคำวินิจฉัยมองว่าศาลทำถูกที่ไม่ก้าวล่วงไปออกแบบสถาบันครอบครัวแทนสภา\n\nเรื่องจบที่สภา ปี 2567 รัฐสภาผ่านกฎหมายแก้ไขประมวลกฎหมายแพ่งและพาณิชย์ที่รู้จักกันในชื่อ “สมรสเท่าเทียม” และมีผลใช้บังคับเมื่อ 23 มกราคม 2568 ทำให้บุคคลสองคนไม่ว่าเพศใดจดทะเบียนสมรสได้\n\nบทเรียนเชิงระบบ: การแพ้คดีรัฐธรรมนูญไม่ได้แปลว่าสิทธิจบ ศาลตอบคำถามว่า “กฎหมายนี้ขัดรัฐธรรมนูญหรือไม่” ส่วนคำถามว่า “กฎหมายควรเป็นแบบไหน” เป็นของสภาและผู้เลือกตั้ง ทั้งสองเวทีทำงานคนละแบบ",
+        "en": "In 2020 a female couple asked a district office to register their marriage. The registrar refused, because s. 1448 of the Civil and Commercial Code recognised marriage only between a man and a woman. The couple sued in the Central Juvenile and Family Court and asked it to refer a question to the Constitutional Court under section 212: does s. 1448 violate equality and human dignity?\n\nOn 17 November 2021 the Constitutional Court unanimously held that s. 1448 was not unconstitutional, but recommended that parliament, the cabinet and relevant agencies pass laws recognising the rights and duties of people of diverse genders. The court saw marriage under the existing law as having its own purpose and character, and treated widening its meaning as a decision for the legislature.\n\nWhen the full ruling was published, parts of its reasoning drew heavy criticism from human-rights groups and civil-society monitors such as iLaw, who said the wording stigmatised LGBTQ+ people. Those who agreed with the outcome argued the court was right not to redesign the institution of the family in parliament's place.\n\nThe story ended in parliament. In 2024 it passed amendments to the Civil and Commercial Code known as the “marriage equality” law, which took effect on 23 January 2025 and allows any two persons, regardless of sex, to marry.\n\nThe systemic lesson: losing a constitutional case does not end a right. A court answers “does this law violate the constitution?” The question “what should the law be?” belongs to parliament and voters. The two forums work differently."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "มาตรา 49: เส้นแดงและขั้นตอนตามตัวบท",
+        "en": "Section 49: the red line and its procedure"
+      },
+      "body": {
+        "th": "มาตรา 49 มีสี่วรรค อ่านเป็นขั้นตอนได้\n\n- วรรคหนึ่ง (ข้อห้าม): บุคคลจะใช้สิทธิหรือเสรีภาพเพื่อล้มล้างการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุขมิได้\n- วรรคสอง (ช่องทางหลัก): ผู้ใดทราบว่ามีการกระทำตามวรรคหนึ่ง มีสิทธิร้องต่ออัยการสูงสุด เพื่อขอให้ศาลรัฐธรรมนูญวินิจฉัยสั่งการให้เลิกการกระทำนั้น\n- วรรคสาม (ช่องทางสำรอง): ถ้าอัยการสูงสุดสั่งไม่รับดำเนินการ หรือไม่ดำเนินการภายในสิบห้าวันนับแต่ได้รับคำร้อง ผู้ร้องยื่นต่อศาลรัฐธรรมนูญโดยตรงได้\n- วรรคสี่ (ไม่ทับกัน): การดำเนินการตามมาตรานี้ไม่กระทบการดำเนินคดีอาญากับผู้กระทำ\n\nเหตุผลเบื้องหลังเป็นแนวคิดที่หลายประเทศใช้ บางครั้งเรียกว่า “ประชาธิปไตยที่ป้องกันตนเองได้” คือ รัฐธรรมนูญไม่ควรเป็นเครื่องมือที่ใช้ทำลายตัวรัฐธรรมนูญเอง เสรีภาพที่ได้มาจากระบอบ จะใช้รื้อระบอบนั้นไม่ได้\n\nสังเกตสามเรื่องของการออกแบบ หนึ่ง ผลตามมาตรานี้คือคำสั่ง “ให้เลิกการกระทำ” ไม่ใช่การลงโทษ การลงโทษเป็นเรื่องของคดีอาญาแยกต่างหาก สอง อัยการสูงสุดทำหน้าที่เป็นด่านกรองคำร้อง สาม ด่านกรองนั้นมีเพดานเวลา 15 วัน ถ้าด่านเงียบหรือปฏิเสธ ผู้ร้องไปต่อเองได้\n\nข้อสอบชอบถามตัวเลข 15 วัน และถามว่ายื่นต่อใครก่อน คำตอบคืออัยการสูงสุดก่อน แล้วจึงศาลรัฐธรรมนูญ",
+        "en": "Section 49 has four paragraphs that read as a procedure.\n\n- Paragraph 1 (the prohibition): no one may use their rights or liberties to overthrow the democratic regime of government with the King as Head of State.\n- Paragraph 2 (the main route): anyone who knows of such an act may petition the Attorney-General to ask the Constitutional Court to order that the act cease.\n- Paragraph 3 (the back-up route): if the Attorney-General refuses, or does not act within fifteen days of receiving the petition, the petitioner may go directly to the Constitutional Court.\n- Paragraph 4 (no overlap): proceedings under this section do not affect criminal prosecution of the person responsible.\n\nThe idea behind it is used in many countries and is sometimes called “militant” or “self-defending” democracy: a constitution should not become the tool used to destroy itself. Freedoms granted by a system cannot be used to dismantle that system.\n\nNotice three design features. First, the remedy is an order to stop, not a punishment; punishment belongs to a separate criminal case. Second, the Attorney-General acts as a filter. Third, the filter has a time limit of 15 days. If it stays silent or says no, the petitioner can carry on alone.\n\nExams like the number 15 and the question of where to file first. The answer: the Attorney-General first, then the Constitutional Court."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "ที่มาของ “15 วัน”: คดีแก้รัฐธรรมนูญปี 2555 และช่องทางยื่นตรง",
+        "en": "Where the “15 days” came from: the 2012 amendment case and the direct route"
+      },
+      "year": 2012,
+      "ref": "คำวินิจฉัยศาลรัฐธรรมนูญที่ 18-22/2555",
+      "body": {
+        "th": "รัฐธรรมนูญ 2550 มีม. 68 ซึ่งเป็นต้นแบบของมาตรา 49 ในปัจจุบัน ถ้อยคำเดิมให้ผู้ทราบการกระทำเสนอเรื่องต่ออัยการสูงสุด เพื่อให้อัยการตรวจสอบและยื่นคำร้องต่อศาล ศาลรัฐธรรมนูญเคยปฏิบัติว่าต้องผ่านอัยการก่อน\n\nปี 2555 รัฐบาลในขณะนั้นเสนอแก้ม. 291 เพื่อตั้งสภาร่างรัฐธรรมนูญ ฝ่ายคัดค้านยื่นคำร้องต่อศาลรัฐธรรมนูญโดยตรงตามม. 68 ศาลรับคำร้อง โดยตีความว่าม. 68 เปิดสองทาง คือผ่านอัยการ หรือยื่นตรงต่อศาลก็ได้ ในที่สุดศาลวินิจฉัยว่าการแก้ไขนั้นยังไม่เป็นการล้มล้างการปกครอง แต่มีความเห็นว่าการจะร่างรัฐธรรมนูญใหม่ทั้งฉบับควรถามประชาชนผ่านประชามติก่อน\n\nนักวิชาการหลายคนวิจารณ์การตีความเรื่องช่องทางยื่นตรง เข็มทอง ต้นสกุลรุ่งเรือง (Khemthong Tonsakulrungruang) เขียนว่าการเปิดให้ยื่นตรงขัดทั้งถ้อยคำ เจตนารมณ์เดิม และแนวที่ศาลเคยปฏิบัติ และเปิดทางให้ศาลเข้าไปตรวจสอบกระบวนการแก้รัฐธรรมนูญซึ่งเดิมไม่ได้อยู่ในช่องทางนี้ ฝ่ายที่เห็นด้วยกับศาลมองว่า ในเรื่องเร่งด่วนที่กระทบระบอบ ไม่ควรให้การตัดสินใจของคนคนเดียวเป็นตัวปิดประตูศาล\n\nรัฐธรรมนูญ 2560 แก้ความกำกวมนี้ด้วยการเขียนให้ชัด อัยการสูงสุดก่อน แต่ถ้าอัยการปฏิเสธหรือเงียบเกิน 15 วัน ยื่นตรงได้ นี่คือตัวอย่างที่ดีว่าบทบัญญัติในรัฐธรรมนูญฉบับใหม่มักเป็นคำตอบต่อข้อพิพาทในฉบับก่อน",
+        "en": "The 2007 constitution had s. 68, the ancestor of today's section 49. Its wording had a person who knew of such an act inform the Attorney-General, who would investigate and petition the court. The Constitutional Court's past practice was that petitions went through the Attorney-General.\n\nIn 2012 the government of the day moved to amend s. 291 to create a constitution drafting assembly. Opponents petitioned the Constitutional Court directly under s. 68. The court accepted, reading s. 68 as offering two tracks: through the Attorney-General, or straight to the court. In the end it held that the amendment did not amount to overthrowing the regime, but said that writing a whole new constitution should first be put to the people in a referendum.\n\nMany scholars criticised the direct-route reading. Khemthong Tonsakulrungruang, in “Entrenching the Minority”, argues that it contradicted the text, the original intent and the court's own past practice, and that it opened a channel for the court to review the amendment process itself. Those who supported the court argued that, in an urgent matter affecting the regime, one official's decision should not be able to shut the court's door.\n\nThe 2017 constitution settled the ambiguity in writing: the Attorney-General first, but if the Attorney-General refuses or stays silent for more than 15 days, the petitioner may go directly. It is a clear example of a new charter's provision answering a dispute under the old one."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "มาตรา 49 กับการปราศรัยปี 2563",
+        "en": "Section 49 and the 2020 protest speeches"
+      },
+      "year": 2021,
+      "body": {
+        "th": "วันที่ 10 สิงหาคม 2563 มีการชุมนุมที่มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต ซึ่งมีการปราศรัยเสนอข้อเรียกร้องเกี่ยวกับสถาบันพระมหากษัตริย์ ผู้ร้องรายหนึ่งยื่นคำร้องตามมาตรา 49 ว่าการปราศรัยของแกนนำ เช่น อานนท์ นำภา ภาณุพงศ์ จาดนอก และปนัสยา สิทธิจิรวัฒนกุล เป็นการใช้สิทธิเสรีภาพเพื่อล้มล้างการปกครอง\n\nวันที่ 10 พฤศจิกายน 2564 ศาลรัฐธรรมนูญวินิจฉัยว่าการกระทำของบุคคลทั้งสามเป็นการใช้สิทธิหรือเสรีภาพเพื่อล้มล้างการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุขตามมาตรา 49 วรรคหนึ่ง และสั่งให้บุคคลทั้งสาม รวมถึงกลุ่มและเครือข่าย เลิกการกระทำดังกล่าวในอนาคต เหตุผลของศาลโดยสรุปคือ สถาบันพระมหากษัตริย์ผูกพันอยู่กับความเป็นชาติไทย และเมื่อพิจารณาการปราศรัยประกอบกับพฤติการณ์ของการชุมนุมโดยรวม ศาลเห็นว่าเกินกว่าการเสนอความเห็นตามปกติ\n\nฝ่ายวิจารณ์ เช่น iLaw ตั้งข้อสังเกตเชิงกระบวนการ เช่น ศาลไม่ได้เปิดให้ไต่สวนพยานที่ฝ่ายผู้ถูกร้องขอ และข้อเท็จจริงบางส่วนที่ศาลอ้างไม่ได้ระบุที่มาให้ชัด และมองว่าคำวินิจฉัยขยายความหมายของ “การล้มล้าง” ให้ครอบคลุมการเสนอให้ปฏิรูป ฝ่ายที่เห็นด้วยกับศาลมองว่ามาตรา 49 มีไว้หยุดการกระทำก่อนจะเกิดความเสียหายต่อระบอบ ไม่จำเป็นต้องรอให้มีความรุนแรงเกิดขึ้นก่อน\n\nสิ่งที่ควรเข้าใจในทางกฎหมาย: คำวินิจฉัยตามมาตรา 49 เป็นคำสั่งให้เลิกการกระทำ ไม่ใช่คำพิพากษาลงโทษ ส่วนคดีอาญาของบุคคลเหล่านี้ดำเนินไปในศาลยุติธรรมแยกต่างหาก ตามมาตรา 49 วรรคสี่",
+        "en": "On 10 August 2020 a rally at Thammasat University's Rangsit campus included speeches that put forward demands concerning the monarchy. A petitioner filed under section 49, arguing that speeches by protest leaders including Arnon Nampa, Panupong Jadnok and Panusaya Sithijirawattanakul were an exercise of rights and liberties to overthrow the regime.\n\nOn 10 November 2021 the Constitutional Court ruled that the three had used their rights or liberties to overthrow the democratic regime of government with the King as Head of State under section 49, paragraph 1, and ordered them, together with their groups and networks, to cease such acts in future. In summary, the court reasoned that the monarchy is bound up with the Thai nation, and that the speeches, viewed together with the conduct of the wider protests, went beyond ordinary expression of opinion.\n\nCritics such as iLaw raised procedural points: the court did not hear the witnesses the respondents asked to call, and some facts it relied on were not clearly sourced. They also argued the ruling stretched “overthrow” to cover calls for reform. Supporters of the ruling argued that section 49 exists to stop acts before they damage the regime, without waiting for violence to occur.\n\nThe legal point to understand: a section 49 ruling is an order to stop, not a criminal conviction. Criminal cases against the same people ran separately in the ordinary courts, as paragraph 4 of section 49 provides."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "พรรคก้าวไกล 2567: จากมาตรา 49 สู่การยุบพรรค",
+        "en": "Move Forward, 2024: from section 49 to party dissolution"
+      },
+      "year": 2024,
+      "ref": "คำวินิจฉัยศาลรัฐธรรมนูญที่ 3/2567",
+      "body": {
+        "th": "พรรคก้าวไกลได้ที่นั่งมากที่สุดในการเลือกตั้งปี 2566 และมีนโยบายหาเสียงเรื่องแก้ไขประมวลกฎหมายอาญาม. 112 รวมถึงเคยเสนอร่างแก้ไขต่อสภา ผู้ร้องรายหนึ่งยื่นคำร้องตามมาตรา 49\n\nวันที่ 31 มกราคม 2567 ศาลรัฐธรรมนูญวินิจฉัยเป็นเอกฉันท์ว่า การเสนอร่างแก้ไขและการใช้เรื่องนี้หาเสียงเป็นการใช้สิทธิเสรีภาพเพื่อล้มล้างการปกครองตามมาตรา 49 และสั่งให้เลิกการกระทำ รวมทั้งห้ามแก้ไขมาตรา 112 โดยไม่ผ่านกระบวนการนิติบัญญัติที่ชอบ ศาลให้เหตุผลว่าการแก้ไขที่เสนอมุ่งลดการคุ้มครองสถาบันพระมหากษัตริย์ และการนำไปหาเสียงเป็นการใช้สถาบันเพื่อประโยชน์ทางการเมือง\n\nขั้นต่อมาไม่ได้อยู่ในมาตรา 49 แต่อยู่ในพระราชบัญญัติประกอบรัฐธรรมนูญว่าด้วยพรรคการเมือง คณะกรรมการการเลือกตั้งอาศัยคำวินิจฉัยนี้ยื่นขอให้ยุบพรรค และวันที่ 7 สิงหาคม 2567 ศาลรัฐธรรมนูญสั่งยุบพรรคก้าวไกล และเพิกถอนสิทธิสมัครรับเลือกตั้งของกรรมการบริหารพรรคชุดที่เกี่ยวข้องเป็นเวลา 10 ปี สมาชิกที่เหลือย้ายไปพรรคใหม่ คือพรรคประชาชน\n\nฝ่ายวิจารณ์ รวมถึงนักวิชาการกฎหมายและองค์กรต่างประเทศจำนวนหนึ่ง มองว่าการเสนอแก้กฎหมายผ่านสภาเป็นกระบวนการประชาธิปไตยโดยตรง การตีความว่าเป็นการล้มล้างจึงทำให้บางประเด็นถูกปิดไม่ให้อภิปรายในสภาเลย และเชื่อมโยงกับข้อวิจารณ์เรื่อง “ตุลาการภิวัตน์” ที่ศาลเข้ามามีบทบาทชี้ขาดทางการเมือง ฝ่ายที่เห็นด้วยกับศาลมองว่าการคุ้มครองสถาบันเป็นแกนของระบอบตามมาตรา 2 และการใช้เรื่องนี้เป็นนโยบายหาเสียงเสี่ยงต่อการสร้างความแตกแยก\n\nสิ่งที่ต้องเข้าใจเชิงระบบ: มาตรา 49 ให้ได้เพียงคำสั่งให้เลิกการกระทำ แต่เมื่อคำวินิจฉัยนั้นไปเชื่อมกับกฎหมายพรรคการเมือง ผลก็ขยายไปถึงการยุบพรรคได้ การอ่านรัฐธรรมนูญจึงต้องอ่านคู่กับกฎหมายประกอบรัฐธรรมนูญเสมอ",
+        "en": "Move Forward won the most seats in the 2023 election. Its platform included amending s. 112 of the Criminal Code, and its MPs had earlier submitted an amendment bill. A petitioner filed under section 49.\n\nOn 31 January 2024 the Constitutional Court ruled unanimously that proposing the bill and campaigning on it amounted to using rights and liberties to overthrow the regime under section 49. It ordered the party to stop, including any attempt to amend section 112 outside proper legislative procedure. The court reasoned that the proposed changes aimed to reduce the protection given to the monarchy, and that campaigning on the issue used the institution for political advantage.\n\nThe next step did not come from section 49 but from the Organic Act on Political Parties. The Election Commission relied on the ruling to seek the party's dissolution, and on 7 August 2024 the Constitutional Court dissolved Move Forward and banned the executive board members involved from standing for election for 10 years. The remaining MPs moved to a new party, the People's Party.\n\nCritics, including a number of legal scholars and international organisations, argued that proposing a bill in parliament is democratic procedure in its purest form, so treating it as an attempt to overthrow puts some subjects beyond parliamentary debate altogether. They tie this to the wider critique of “judicialisation”, in which the court becomes the final arbiter of political contests. Supporters of the ruling argued that protecting the monarchy is a core feature of the regime under section 2, and that turning it into a campaign issue risks deep division.\n\nThe systemic point: section 49 by itself yields only an order to stop. Once that ruling connects with the political parties law, the consequences can reach dissolution. The constitution always has to be read alongside its organic laws."
+      }
+    },
+    {
+      "kind": "critique",
+      "title": {
+        "th": "ข้อถกเถียง: สิทธิที่กว้างบนกระดาษ กับข้อยกเว้นที่ยืดได้",
+        "en": "The debate: broad rights on paper, elastic exceptions in practice"
+      },
+      "by": "Constitution Drafting Commission (2016–17); iLaw and other civil-society monitors; Khemthong Tonsakulrungruang",
+      "body": {
+        "th": "ฝ่ายผู้ร่างรัฐธรรมนูญ (คณะกรรมการร่างรัฐธรรมนูญที่มีมีชัย ฤชุพันธุ์ เป็นประธาน) ชี้ว่าฉบับ 2560 ให้สิทธิแก่ประชาชนไม่น้อยกว่าฉบับก่อน และบางด้านมากกว่า เพราะหลักทุกอย่างที่ไม่ห้ามทำได้ (มาตรา 25) สิทธิที่ใช้ได้โดยไม่ต้องรอกฎหมาย และช่องทางยื่นคำร้องตรงตามมาตรา 213 นอกจากนี้การย้ายสวัสดิการบางเรื่องไปเป็นหน้าที่ของรัฐ ทำให้รัฐต้องลงมือเองโดยไม่ต้องรอให้ใครมาเรียกร้อง\n\nฝ่ายวิจารณ์ เช่น iLaw และนักวิชาการกฎหมายมหาชนจำนวนหนึ่ง ชี้สามจุด หนึ่ง ข้อยกเว้นอย่าง “ความมั่นคงของรัฐ” และ “ความสงบเรียบร้อยหรือศีลธรรมอันดี” กว้างจนสภาหรือรัฐบาลอ้างได้แทบทุกเรื่อง คุณภาพของการคุ้มครองจึงขึ้นอยู่กับว่าศาลจะตรวจเข้มแค่ไหน สอง การย้ายสิทธิไปเป็นหน้าที่ของรัฐอาจทำให้ประชาชนเรียกร้องได้น้อยลง (ดูบทถัดไป) สาม บทบาทของศาลรัฐธรรมนูญในคดีการเมือง โดยเฉพาะคดีตามมาตรา 49 ทำให้เกิดคำถามว่าเส้นระหว่าง “การปกป้องระบอบ” กับ “การจำกัดการถกเถียง” อยู่ตรงไหน เข็มทอง ต้นสกุลรุ่งเรือง (Khemthong Tonsakulrungruang) วิเคราะห์ไว้ว่าศาลค่อย ๆ ขยายบทบาทตนเองในความขัดแย้งทางการเมืองตั้งแต่ปี 2549\n\nเรื่องนี้ควรมองในภาพยาว ประเทศไทยมีรัฐธรรมนูญมาแล้ว 20 ฉบับนับแต่ปี 2475 หมวดสิทธิเสรีภาพขยายและหดตามยุค ฉบับ 2540 เป็นจุดที่ขยายมากที่สุดครั้งหนึ่ง เพราะเกิดหลังเหตุการณ์พฤษภาคม 2535 และผ่านการมีส่วนร่วมของประชาชนกว้างขวาง ฉบับ 2550 และ 2560 เขียนขึ้นหลังรัฐประหาร บทเรียนคือ ตัวบทเป็นแค่ครึ่งหนึ่ง อีกครึ่งคือองค์กรที่ตีความและบังคับใช้ ว่าได้รับความไว้วางใจจากคนทุกฝ่ายมากแค่ไหน",
+        "en": "The drafters, the Constitution Drafting Commission chaired by Meechai Ruchupan, argued that the 2017 charter gives people no fewer rights than its predecessors and in some respects more: the “whatever is not forbidden is allowed” principle (section 25), rights usable without waiting for a law, and the direct petition route under section 213. Moving some welfare matters into the duties of the state, they said, makes the state act on its own without waiting for anyone to demand it.\n\nCritics, including iLaw and a number of public-law scholars, raise three points. First, exceptions such as “state security” and “public order or good morals” are so broad that parliament or the government can invoke them for almost anything, so the real level of protection depends on how strictly the courts review. Second, turning rights into state duties may leave citizens with less to claim (see the next chapter). Third, the Constitutional Court's role in political cases, especially under section 49, raises the question of where “defending the regime” ends and “closing down debate” begins. Khemthong Tonsakulrungruang traces how the court steadily widened its role in Thailand's political conflict after 2006.\n\nTake the long view. Thailand has had 20 constitutions since 1932, and the rights chapter has grown and shrunk with the times. The 1997 charter marked one of the biggest expansions, drafted after the May 1992 crisis with wide public participation. The 2007 and 2017 charters were written after coups. The lesson: the text is only half the story. The other half is whether the bodies that interpret and enforce it are trusted by people on all sides."
+      }
+    },
+    {
+      "kind": "numbers",
+      "title": {
+        "th": "ตัวเลขที่ต้องจำในหมวด 3",
+        "en": "Numbers to know in Chapter 3"
+      },
+      "rows": [
+        { "th": "จำนวนมาตราในหมวด 3", "en": "Sections in Chapter 3", "value": "25 (มาตรา 25–49)", "sections": [25, 49] },
+        { "th": "เหตุจำกัดเสรีภาพทั่วไปตามมาตรา 25", "en": "General limits on liberty in section 25", "value": "3", "sections": [25] },
+        { "th": "เงื่อนไขกลางของกฎหมายจำกัดสิทธิ", "en": "General conditions for rights-limiting laws", "value": "5", "sections": [26] },
+        { "th": "เหตุที่จำกัดการแสดงความคิดเห็นได้", "en": "Permitted grounds for limiting expression", "value": "4", "sections": [34] },
+        { "th": "สิทธิของประชาชนต่อรัฐ (รู้–บอก–ฟ้อง)", "en": "Rights against the state (know, speak, sue)", "value": "3", "sections": [41] },
+        { "th": "อายุผู้สูงอายุที่รายได้ไม่พอยังชีพ", "en": "Age threshold for elderly without sufficient income", "value": "เกิน 60 ปี / over 60", "sections": [48] },
+        { "th": "อัยการสูงสุดไม่ดำเนินการภายใน แล้วยื่นตรงได้", "en": "Attorney-General inaction before direct petition", "value": "15 วัน / 15 days", "sections": [49] },
+        { "th": "รัฐธรรมนูญไทยนับแต่ 2475", "en": "Thai constitutions since 1932", "value": "20", "sections": [] }
+      ]
+    },
+    {
+      "kind": "check",
+      "title": {
+        "th": "ทดสอบตัวเอง",
+        "en": "Check yourself"
+      },
+      "items": [
+        {
+          "q": { "th": "กฎหมายฉบับใหม่ห้ามนาย ก. คนเดียวประกอบอาชีพทนายความ ผิดหลักข้อใด", "en": "A new law bars one named person from practising as a lawyer. Which principle does it break?" },
+          "a": { "th": "หลักกฎหมายต้องใช้บังคับเป็นการทั่วไป ห้ามเจาะจงบุคคลใดบุคคลหนึ่ง ตามมาตรา 26 วรรคสอง", "en": "The rule that a rights-limiting law must apply generally and not target one person, section 26, paragraph 2." },
+          "sections": [26]
+        },
+        {
+          "q": { "th": "สิทธิที่รัฐธรรมนูญเขียนว่า “ตามที่กฎหมายบัญญัติ” แต่สภายังไม่ออกกฎหมาย ใช้ได้หรือไม่", "en": "A right says “as provided by law”, but parliament has not passed that law. Can it be used?" },
+          "a": { "th": "ใช้ได้ตามเจตนารมณ์ของรัฐธรรมนูญ ตามมาตรา 25 วรรคสอง", "en": "Yes, in line with the constitution's intent, under section 25, paragraph 2." },
+          "sections": [25]
+        },
+        {
+          "q": { "th": "การค้นบ้าน การจับกุม และการดักฟังโทรศัพท์ มีหลักร่วมกันอย่างไร", "en": "What do searching a home, arresting a person and tapping a phone have in common?" },
+          "a": { "th": "ต้องมีคำสั่งหรือหมายศาล หรือมีเหตุอื่นตามที่กฎหมายบัญญัติ (มาตรา 28, 33, 36)", "en": "Each needs a court order or warrant, or another ground provided by law (sections 28, 33, 36)." },
+          "sections": [28, 33, 36]
+        },
+        {
+          "q": { "th": "รัฐจัดทางลาดและที่จอดรถเฉพาะให้คนพิการ ถือเป็นการเลือกปฏิบัติโดยไม่เป็นธรรมหรือไม่", "en": "The state provides ramps and reserved parking for people with disabilities. Is that unjust discrimination?" },
+          "a": { "th": "ไม่ใช่ เป็นมาตรการขจัดอุปสรรคตามมาตรา 27 วรรคสี่", "en": "No. It is a measure to remove obstacles under section 27, paragraph 4." },
+          "sections": [27]
+        },
+        {
+          "q": { "th": "รัฐเวนคืนที่ดินแล้วไม่ได้ใช้ภายในเวลาที่กฎหมายกำหนด เจ้าของเดิมทำอะไรได้", "en": "The state expropriated land but did not use it within the legal time limit. What can the former owner do?" },
+          "a": { "th": "ขอคืนได้ เจ้าของเดิมหรือทายาทที่ประสงค์จะได้คืนต้องได้คืน ตามมาตรา 37", "en": "Ask for it back. If the former owner or heirs want it returned, it must be returned, under section 37." },
+          "sections": [37]
+        },
+        {
+          "q": { "th": "ผู้ทราบว่ามีการใช้สิทธิเพื่อล้มล้างการปกครอง ต้องยื่นต่อใครก่อน และเมื่อใดยื่นตรงต่อศาลได้", "en": "Someone learns of an act to overthrow the regime. Where do they file first, and when may they go straight to the court?" },
+          "a": { "th": "ยื่นต่ออัยการสูงสุดก่อน ถ้าอัยการไม่รับหรือไม่ดำเนินการภายใน 15 วัน ยื่นตรงต่อศาลรัฐธรรมนูญได้ (มาตรา 49)", "en": "The Attorney-General first. If the Attorney-General refuses or does nothing within 15 days, they may petition the Constitutional Court directly (section 49)." },
+          "sections": [49]
+        },
+        {
+          "q": { "th": "คนที่ถูกละเมิดสิทธิยื่นคำร้องต่อศาลรัฐธรรมนูญได้เองตามมาตราใด และมีเงื่อนไขอยู่ที่ไหน", "en": "Under which section can a person whose rights were violated petition the Constitutional Court, and where are the conditions?" },
+          "a": { "th": "มาตรา 213 โดยหลักเกณฑ์และเงื่อนไขอยู่ในพระราชบัญญัติประกอบรัฐธรรมนูญว่าด้วยวิธีพิจารณาของศาลรัฐธรรมนูญ", "en": "Section 213; the rules and conditions are in the Organic Act on Constitutional Court Procedure." },
+          "sections": [213]
+        },
+        {
+          "q": { "th": "ถ้ากฎหมายอาญาที่ใช้ลงโทษคนหนึ่งถูกวินิจฉัยว่าขัดรัฐธรรมนูญ คนที่ยังรับโทษอยู่จะเป็นอย่างไร", "en": "If the criminal law used to convict someone is ruled unconstitutional, what happens to a person still serving the sentence?" },
+          "a": { "th": "ถือว่าไม่เคยกระทำความผิดและให้ปล่อยตัว แต่เรียกค่าชดเชยไม่ได้ (มาตรา 212)", "en": "They are treated as never having committed the offence and are released, but cannot claim compensation (section 212)." },
+          "sections": [212]
+        }
+      ]
+    }
+  ],
+  "sections": [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49],
+  "sources": [
+    "Constitution of the Kingdom of Thailand B.E. 2560 (2017), consolidated through the 2021 amendment, Thai text",
+    "Khemthong Tonsakulrungruang, Entrenching the Minority: The Constitutional Court in Thailand's Political Conflict, 26 Washington International Law Journal 247 (2017)",
+    "Constitutional Court of Thailand, Ruling No. 12/2555 (28 March 2012) on the Direct Sales and Direct Marketing Act B.E. 2545, s. 54",
+    "Constitutional Court of Thailand, Ruling No. 18-22/2555 (2012) on petitions under s. 68 of the 2007 Constitution",
+    "Constitutional Court of Thailand, Ruling No. 4/2563 (19 February 2020) on Criminal Code s. 301",
+    "Constitutional Court of Thailand, Ruling No. 20/2564 (17 November 2021) on Civil and Commercial Code s. 1448",
+    "Constitutional Court of Thailand, ruling of 10 November 2021 under section 49 (Arnon Nampa, Panupong Jadnok, Panusaya Sithijirawattanakul)",
+    "Constitutional Court of Thailand, Ruling No. 3/2567 (31 January 2024) and dissolution ruling of 7 August 2024 (Move Forward Party)",
+    "iLaw, reporting and analysis on Constitutional Court rulings 2020–2024 (ilaw.or.th)",
+    "Reporting on the Map Ta Phut administrative court orders, 29 September and 2 December 2009 (Thai and English news of record)"
+  ]
+}

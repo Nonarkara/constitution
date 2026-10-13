@@ -1,0 +1,317 @@
+{
+  "id": "duties-state-policy",
+  "order": 4,
+  "title": {
+    "th": "หมวด 4–6 หน้าที่ของปวงชนชาวไทย หน้าที่ของรัฐ และแนวนโยบายแห่งรัฐ (มาตรา 50–78)",
+    "en": "Chapters 4–6: Duties of the Thai People, Duties of the State, and Directive Principles of State Policies (sections 50–78)"
+  },
+  "lede": {
+    "th": "ทั้งสามหมวดนี้หมุนรอบคำสองคำ “ต้อง” กับ “พึง” หมวด 5 เขียนว่า “รัฐต้อง” ทุกมาตรา หมวด 6 เขียนว่า “รัฐพึง” เกือบทุกมาตรา คำเล็ก ๆ คู่นี้แยกสัญญาที่ประชาชนทวงได้ ออกจากเข็มทิศที่บอกทิศทางให้รัฐบาล ใครเข้าใจคู่นี้ จะอ่านหมวด 4 ถึง 6 ทั้งหมดได้ด้วยตรรกะเดียว",
+    "en": "These three chapters turn on two small Thai words: ต้อง (must) and พึง (should). Chapter 5 says “the State must” in every section. Chapter 6 says “the State should” in nearly every section. That pair separates promises citizens can chase from a compass that points governments in a direction. Understand the pair and you can read Chapters 4 to 6 with one piece of logic."
+  },
+  "blocks": [
+    {
+      "kind": "text",
+      "title": {
+        "th": "แผนที่ของสามหมวด",
+        "en": "A map of the three chapters"
+      },
+      "body": {
+        "th": "- หมวด 4 หน้าที่ของปวงชนชาวไทย มีมาตราเดียว คือมาตรา 50 แต่มีหน้าที่สิบข้อ\n- หมวด 5 หน้าที่ของรัฐ มาตรา 51 ถึง 63 รวม 13 มาตรา มาตรา 51 เป็นกุญแจ บอกว่าประชาชนติดตามและฟ้องให้รัฐทำหน้าที่ได้ ส่วนมาตรา 52 ถึง 63 คือรายการหน้าที่\n- หมวด 6 แนวนโยบายแห่งรัฐ มาตรา 64 ถึง 78 รวม 15 มาตรา มาตรา 64 เป็นกุญแจ บอกว่าทั้งหมวดเป็น “แนวทาง” ให้รัฐตรากฎหมายและกำหนดนโยบาย ส่วนมาตรา 65 คือยุทธศาสตร์ชาติ ซึ่งเป็นมาตราที่ถูกถกเถียงมากที่สุดในสามหมวดนี้\n\nสังเกตความสมมาตร หมวด 5 เปิดด้วยมาตราที่บอกวิธีบังคับใช้ (51) หมวด 6 เปิดด้วยมาตราที่บอกสถานะทางกฎหมาย (64) ทั้งสองมาตรานี้คือคู่มือการอ่านหมวดของตัวเอง ถ้าเจอข้อสอบถามว่าข้อความไหน “บังคับ” หรือเป็นแค่ “แนวทาง” ให้กลับไปถามว่าอยู่หมวดไหน และใช้คำว่าต้องหรือพึง",
+        "en": "- Chapter 4, Duties of the Thai People, has a single section, section 50, listing ten duties.\n- Chapter 5, Duties of the State, runs from section 51 to section 63: 13 sections. Section 51 is the key: it lets people follow up on and sue over these duties. Sections 52 to 63 are the list of duties.\n- Chapter 6, Directive Principles of State Policies, runs from section 64 to section 78: 15 sections. Section 64 is the key: it says the whole chapter is “guidance” for the state in making laws and policy. Section 65, the national strategy, is the most debated provision in all three chapters.\n\nNotice the symmetry. Chapter 5 opens with a section on how to enforce it (51). Chapter 6 opens with a section on its legal status (64). Each is the reading guide for its own chapter. If an exam asks whether something is binding or only guidance, ask which chapter it sits in and whether it says “must” or “should”."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "มาตรา 50: หน้าที่สิบข้อของคนไทย",
+        "en": "Section 50: the ten duties of Thai people"
+      },
+      "body": {
+        "th": "มาตรา 50 กำหนดให้บุคคลมีหน้าที่สิบข้อ\n\n- (1) พิทักษ์รักษาไว้ซึ่งชาติ ศาสนา พระมหากษัตริย์ และการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข\n- (2) ป้องกันประเทศ พิทักษ์รักษาเกียรติภูมิ ผลประโยชน์ของชาติ และสาธารณสมบัติของแผ่นดิน รวมทั้งร่วมมือป้องกันและบรรเทาสาธารณภัย\n- (3) ปฏิบัติตามกฎหมายอย่างเคร่งครัด\n- (4) เข้ารับการศึกษาอบรมในการศึกษาภาคบังคับ\n- (5) รับราชการทหารตามที่กฎหมายบัญญัติ\n- (6) เคารพและไม่ละเมิดสิทธิเสรีภาพของผู้อื่น และไม่ทำสิ่งที่อาจก่อให้เกิดความแตกแยกหรือเกลียดชังในสังคม\n- (7) ไปใช้สิทธิเลือกตั้งหรือลงประชามติอย่างอิสระ โดยคำนึงถึงประโยชน์ส่วนรวมของประเทศเป็นสำคัญ\n- (8) ร่วมมือและสนับสนุนการอนุรักษ์และคุ้มครองสิ่งแวดล้อม ทรัพยากรธรรมชาติ ความหลากหลายทางชีวภาพ และมรดกทางวัฒนธรรม\n- (9) เสียภาษีอากรตามที่กฎหมายบัญญัติ\n- (10) ไม่ร่วมมือหรือสนับสนุนการทุจริตและประพฤติมิชอบทุกรูปแบบ\n\nสิบข้อนี้แบ่งได้สามกลุ่ม กลุ่มปกป้อง (1, 2, 5) กลุ่มพลเมืองดีในชีวิตประจำวัน (3, 4, 6, 9) และกลุ่มที่ใหม่หรือเน้นขึ้นในยุคนี้ (7 การไปเลือกตั้ง 8 สิ่งแวดล้อม 10 ต้านทุจริต)",
+        "en": "Section 50 gives every person ten duties:\n\n- (1) to protect the nation, religions, the King and the democratic regime of government with the King as Head of State;\n- (2) to defend the country, protect the nation's honour and interests and public property, and cooperate in preventing and relieving disasters;\n- (3) to obey the law strictly;\n- (4) to attend compulsory education;\n- (5) to serve in the armed forces as the law provides;\n- (6) to respect and not violate the rights and freedoms of others, and not do anything that may cause division or hatred in society;\n- (7) to vote in elections and referendums freely, with the common interest of the country as the main consideration;\n- (8) to cooperate in and support conservation of the environment, natural resources, biodiversity and cultural heritage;\n- (9) to pay taxes as the law provides;\n- (10) not to take part in or support corruption or misconduct of any kind.\n\nThe ten fall into three groups: protecting the country (1, 2, 5), everyday good citizenship (3, 4, 6, 9), and duties that are new or newly stressed (7 voting, 8 environment, 10 anti-corruption)."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "หน้าที่ในรัฐธรรมนูญมีไว้ทำไม ถ้าไม่มีบทลงโทษในตัว",
+        "en": "Why list duties in a constitution if it sets no penalty?"
+      },
+      "body": {
+        "th": "มาตรา 50 ไม่ได้บอกว่าใครไม่ทำแล้วจะถูกลงโทษอย่างไร หน้าที่ส่วนใหญ่มีฟันก็ต่อเมื่อกฎหมายธรรมดาไปใส่ฟันให้ เช่น หน้าที่เสียภาษีมีประมวลรัษฎากร หน้าที่รับราชการทหารมีพระราชบัญญัติรับราชการทหาร หน้าที่เข้าเรียนภาคบังคับมีพระราชบัญญัติการศึกษาภาคบังคับ ส่วนหน้าที่ไปเลือกตั้ง กฎหมายเลือกตั้งผูกผลไว้กับการเสียสิทธิบางอย่างของคนที่ไม่ไปใช้สิทธิโดยไม่แจ้งเหตุ\n\nเหมือนกฎบ้านที่แปะไว้หน้าตู้เย็น “ทุกคนล้างจานของตัวเอง” ตัวป้ายไม่ได้ลงโทษใคร แต่บอกว่าครอบครัวนี้ตกลงกันว่าอะไรคือเรื่องปกติ และเป็นฐานให้กติกาที่ละเอียดกว่าตามมา\n\nหน้าที่ในรัฐธรรมนูญยังทำงานอีกทางหนึ่ง คือเป็นหลักให้ตีความสิทธิ เช่น มาตรา 31 บอกว่าเสรีภาพในการนับถือศาสนาต้องไม่เป็นปฏิปักษ์ต่อหน้าที่ของปวงชนชาวไทย และมาตรา 34 บอกว่าเสรีภาพทางวิชาการต้องไม่ขัดต่อหน้าที่ของปวงชนชาวไทย หมวด 4 จึงไม่ได้อยู่ลำพัง มันเป็นขอบของหมวด 3",
+        "en": "Section 50 does not say what happens to someone who fails a duty. Most duties get teeth only when an ordinary law supplies them. The duty to pay tax has the Revenue Code. Military service has the Military Service Act. Compulsory schooling has the Compulsory Education Act. For voting, the election law attaches the loss of certain rights to people who skip voting without giving a reason.\n\nThink of a house rule stuck to the fridge: “Everyone washes their own dishes.” The note punishes no one. It records what the household has agreed is normal, and it is the base on which more detailed rules can rest.\n\nConstitutional duties also work in another way: they guide how rights are read. Section 31 says religious freedom must not be hostile to the duties of the Thai people, and section 34 says academic freedom must not conflict with them. Chapter 4 is not freestanding. It marks the edge of Chapter 3."
+      }
+    },
+    {
+      "kind": "mnemonic",
+      "title": {
+        "th": "หน้าที่สิบข้อ: “ปกป้อง 3 พลเมือง 4 ยุคใหม่ 3”",
+        "en": "The ten duties: “3 to defend, 4 to live by, 3 for a new era”"
+      },
+      "body": {
+        "th": "แบ่งสิบข้อเป็น 3–4–3\n\n- ปกป้อง 3: สถาบันหลัก (1) ประเทศ (2) ทหาร (5)\n- พลเมือง 4: ทำตามกฎหมาย (3) เรียน (4) เคารพผู้อื่น (6) จ่ายภาษี (9)\n- ยุคใหม่ 3: ไปเลือกตั้ง (7) รักษาสิ่งแวดล้อม (8) ไม่เอาด้วยกับการโกง (10)\n\nข้อ (10) ไม่ร่วมมือกับการทุจริต จับคู่กับมาตรา 63 ซึ่งให้รัฐต้องป้องกันและขจัดการทุจริต ประชาชนห้ามร่วม รัฐต้องปราบ สองมาตรานี้เป็นภาพสะท้อนกัน",
+        "en": "Split the ten as 3–4–3:\n\n- Defend (3): the core institutions (1), the country (2), military service (5)\n- Live by (4): obey the law (3), go to school (4), respect others (6), pay tax (9)\n- New era (3): vote (7), protect the environment (8), refuse corruption (10)\n\nDuty (10) pairs with section 63, which obliges the state to prevent and root out corruption. Citizens must not join in; the state must stamp it out. The two sections mirror each other."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "หัวใจของการออกแบบ 2560: “ต้อง” กับ “พึง”",
+        "en": "The core of the 2017 design: “must” versus “should”"
+      },
+      "body": {
+        "th": "ผู้ร่างรัฐธรรมนูญ 2560 แยกเรื่องที่รัฐควรทำออกเป็นสองกอง\n\nกองที่หนึ่ง หมวด 5 หน้าที่ของรัฐ ใช้คำว่า “รัฐต้อง” เช่น รัฐต้องจัดการศึกษา 12 ปีโดยไม่เก็บค่าใช้จ่าย (มาตรา 54) รัฐต้องรักษาวินัยการเงินการคลัง (มาตรา 62) เป็นภาระผูกพัน และมาตรา 51 เปิดช่องให้ประชาชนทวงได้\n\nกองที่สอง หมวด 6 แนวนโยบายแห่งรัฐ ใช้คำว่า “รัฐพึง” เช่น รัฐพึงส่งเสริมการวิจัย (มาตรา 69) รัฐพึงกระจายการถือครองที่ดิน (มาตรา 72) มาตรา 64 บอกตรง ๆ ว่าหมวดนี้เป็น “แนวทาง” ให้รัฐตรากฎหมายและกำหนดนโยบาย\n\nทำไมต้องแยก เพราะถ้าทุกอย่างเป็นคำสั่งเด็ดขาด รัฐจะทำไม่ได้ครบเพราะเงินมีจำกัด และคำสั่งที่ทำไม่ได้ทุกข้อจะทำให้คำสั่งทั้งหมดดูไม่จริงจัง แต่ถ้าทุกอย่างเป็นแค่แนวทาง ก็ไม่มีอะไรที่ประชาชนทวงได้เลย การแยกสองกองคือการบอกว่า ของจำเป็นพื้นฐานอยู่กองแรก ของที่ต้องเลือกจัดลำดับตามงบประมาณและนโยบายอยู่กองที่สอง\n\nเปรียบกับร้านซ่อมรถ ใบรับประกันบอกว่าร้าน “ต้อง” ซ่อมเบรกให้ฟรีภายในหนึ่งปี นั่นคือหมวด 5 คุณถือใบนี้กลับไปทวงได้ ส่วนป้ายในร้านที่เขียนว่า “เราพึงให้บริการด้วยรอยยิ้ม” นั่นคือหมวด 6 เป็นทิศทางที่ร้านประกาศ แต่คุณฟ้องร้านเพราะช่างไม่ยิ้มไม่ได้\n\nโซ่เหตุผลที่เชื่อมไปหมวดอื่น: คณะรัฐมนตรีต้องแถลงนโยบายให้สอดคล้องกับหน้าที่ของรัฐ แนวนโยบายแห่งรัฐ และยุทธศาสตร์ชาติ (มาตรา 162) ดังนั้นแม้หมวด 6 จะเป็นแค่แนวทาง รัฐบาลก็ต้องแสดงต่อรัฐสภาว่านโยบายของตนไม่ขัดกับแนวทางนั้น",
+        "en": "The 2017 drafters split what the state ought to do into two piles.\n\nPile one is Chapter 5, Duties of the State, written as “the State must”: the state must provide twelve years of free education (section 54), the state must keep fiscal discipline (section 62). These are obligations, and section 51 lets citizens chase them.\n\nPile two is Chapter 6, Directive Principles, written as “the State should”: the state should promote research (section 69), the state should spread land ownership (section 72). Section 64 says outright that this chapter is “guidance” for making laws and policy.\n\nWhy split them? If everything were an absolute command, the state could never deliver all of it, because money is finite, and commands that cannot all be met make every command look unserious. If everything were mere guidance, citizens would have nothing to claim. The split says: the basics go in the first pile; things that must be ranked against budgets and political choices go in the second.\n\nThink of a car repair shop. The warranty card says the shop “must” fix your brakes free for one year. That is Chapter 5: you can take the card back and insist. The sign on the wall says “we should serve you with a smile”. That is Chapter 6: it tells you the shop's direction, but you cannot sue because the mechanic frowned.\n\nThe link to the rest of the constitution: the cabinet's policy statement must be consistent with the duties of the state, the directive principles and the national strategy (section 162). So even though Chapter 6 is only guidance, a government still has to show parliament that its programme does not contradict it."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "มาตรา 51: ใบรับประกันที่ประชาชนถือไว้",
+        "en": "Section 51: the warranty card in the citizen's hand"
+      },
+      "body": {
+        "th": "มาตรา 51 บอกว่า หน้าที่ของรัฐในหมวด 5 ถ้าเป็นการทำเพื่อประโยชน์ของประชาชนโดยตรง ประชาชนและชุมชนมีสิทธิสามขั้น\n\n- ติดตาม: ถามว่ารัฐทำไปถึงไหน\n- เร่งรัด: ผลักให้รัฐทำ\n- ฟ้องร้อง: ฟ้องหน่วยงานรัฐที่เกี่ยวข้อง เพื่อให้ได้รับประโยชน์นั้น\n\nทั้งหมดนี้ “ตามหลักเกณฑ์และวิธีการที่กฎหมายบัญญัติ”\n\nมีเงื่อนไขสองข้อที่ต้องอ่านให้ออก ข้อแรก ต้องเป็นหน้าที่ที่ทำ “เพื่อให้เกิดประโยชน์แก่ประชาชนโดยตรง” หน้าที่บางข้อ เช่น การมีการข่าวกรองที่มีประสิทธิภาพตามมาตรา 52 เป็นประโยชน์ของส่วนรวมในภาพกว้าง ยากจะชี้ว่าใครได้ประโยชน์โดยตรง ส่วนการศึกษาของเด็กตามมาตรา 54 ชี้ได้ชัดว่าใครคือผู้ได้รับประโยชน์ ข้อที่สอง สิทธินี้ใช้ตามที่กฎหมายกำหนดวิธีการ\n\nคำถามที่น่าคิด: มาตรา 25 วรรคสองบอกว่าสิทธิที่รอกฎหมายใช้ได้เลยตามเจตนารมณ์ของรัฐธรรมนูญ ถ้าวันหนึ่งยังไม่มีกฎหมายวางวิธีการตามมาตรา 51 ครบถ้วน จะอ่านสองมาตรานี้ร่วมกันอย่างไร ตัวบทไม่ได้ตอบตรง ๆ และเป็นจุดที่การตีความของศาลจะกำหนดว่าใบรับประกันนี้หนาหรือบาง",
+        "en": "Section 51 says that where a duty of the state in Chapter 5 is meant to benefit people directly, people and communities have three levels of right:\n\n- to follow up: ask how far the state has got;\n- to press: push the state to act;\n- to sue: take the relevant state agency to court so that people receive that benefit.\n\nAll of this is “according to the rules and procedures provided by law”.\n\nTwo conditions need careful reading. First, the duty must exist “to benefit the people directly”. Some duties, such as effective intelligence services under section 52, benefit the public in a broad sense; it is hard to point to anyone who benefits directly. A child's schooling under section 54 has an obvious beneficiary. Second, the right is used through procedures set by law.\n\nA question worth thinking about: section 25, paragraph 2 says rights that await a law can be used anyway, in line with the constitution's intent. If the procedures for section 51 are not fully laid down by law, how should the two sections be read together? The text does not answer directly, and this is where the courts' reading will decide whether the warranty card is thick or thin."
+      }
+    },
+    {
+      "kind": "critique",
+      "title": {
+        "th": "ข้อถกเถียง: ย้ายสิทธิไปเป็นหน้าที่ของรัฐ ดีขึ้นหรือแย่ลง",
+        "en": "The debate: is turning rights into state duties an upgrade or a downgrade?"
+      },
+      "by": "Constitution Drafting Commission chaired by Meechai Ruchupan; iLaw and other civil-society critics",
+      "body": {
+        "th": "ในรัฐธรรมนูญ 2540 และ 2550 เรื่องอย่างการศึกษาฟรีและการรับบริการสาธารณสุข อยู่ในหมวดสิทธิเสรีภาพ เขียนในรูป “บุคคลย่อมมีสิทธิ” ฉบับ 2560 ย้ายหลายเรื่องไปไว้หมวดหน้าที่ของรัฐ เขียนในรูป “รัฐต้อง”\n\nเหตุผลของผู้ร่าง (คณะกรรมการร่างรัฐธรรมนูญ ที่มีมีชัย ฤชุพันธุ์ เป็นประธาน) คือ สิทธิแบบเดิมทำงานเมื่อมีคนมาเรียกร้อง คนที่ไม่รู้สิทธิหรือไม่มีแรงไปเรียกร้องจึงตกหล่น การเขียนเป็นหน้าที่ทำให้รัฐต้องลงมือเองโดยไม่ต้องรอใครมาทวง และมาตรา 51 ยังเปิดให้ประชาชนติดตามและฟ้องได้อยู่\n\nฝ่ายวิจารณ์ เช่น iLaw และนักวิชาการด้านสิทธิมนุษยชนจำนวนหนึ่ง มองว่า สิทธิคือสิ่งที่ “เป็นของ” ประชาชน ส่วนหน้าที่ของรัฐคือสิ่งที่รัฐ “ให้” การย้ายกองเปลี่ยนจุดยืนของประชาชนจากเจ้าของสิทธิเป็นผู้รอรับ อีกทั้งช่องทางตามมาตรา 51 ยังผูกกับเงื่อนไข “ประโยชน์โดยตรง” และวิธีการตามกฎหมาย ซึ่งอาจทำให้ฟ้องได้ยากกว่าการอ้างสิทธิตรง ๆ\n\nทั้งสองฝ่ายพูดถึงเรื่องจริงคนละด้าน ฝ่ายแรกมองที่คนที่ไม่เคยเรียกร้องอะไรเลย ฝ่ายหลังมองที่คนที่ต้องการเรียกร้องแล้วถูกปฏิเสธ คำตอบในทางปฏิบัติจะขึ้นอยู่กับว่าศาลอ่านมาตรา 51 กว้างหรือแคบ",
+        "en": "Under the 1997 and 2007 constitutions, matters such as free education and access to health care sat in the rights chapter, written as “a person has the right to”. The 2017 charter moved several of them into the duties of the state, written as “the State must”.\n\nThe drafters' reasoning (the Constitution Drafting Commission chaired by Meechai Ruchupan) was that a classic right only works when someone claims it. People who do not know their rights, or lack the means to press them, fall through. Writing it as a duty makes the state act on its own without waiting to be asked, and section 51 still lets people follow up and sue.\n\nCritics, including iLaw and a number of human-rights scholars, see it differently. A right is something that belongs to the person; a state duty is something the state hands out. Moving the item to the other pile changes the citizen from owner of a right to recipient of a benefit. The section 51 route is also tied to the “direct benefit” condition and to procedures set by law, which may make it harder to use than invoking a right directly.\n\nEach side is describing something real from a different angle. The first is thinking of people who never claim anything. The second is thinking of people who try to claim and are turned away. In practice the answer depends on whether courts read section 51 broadly or narrowly."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "หน้าที่ของรัฐ ตอนที่ 1: ความมั่นคงและกฎหมาย (มาตรา 52–53)",
+        "en": "Duties of the state, part 1: security and law (sections 52–53)"
+      },
+      "body": {
+        "th": "มาตรา 52 กำหนดให้รัฐต้องพิทักษ์รักษาสถาบันพระมหากษัตริย์ เอกราช อธิปไตย บูรณภาพแห่งอาณาเขตและเขตที่ประเทศไทยมีสิทธิอธิปไตย เกียรติภูมิและผลประโยชน์ของชาติ ความมั่นคงของรัฐ และความสงบเรียบร้อยของประชาชน และเพื่อการนี้ รัฐต้องมีการทหาร การทูต และการข่าวกรองที่มีประสิทธิภาพ ประโยคท้ายที่ข้อสอบชอบถามคือ “กำลังทหารให้ใช้เพื่อประโยชน์ในการพัฒนาประเทศด้วย”\n\nมาตรา 53 สั้นที่สุดในหมวด รัฐต้องดูแลให้มีการปฏิบัติตามและบังคับใช้กฎหมายอย่างเคร่งครัด\n\nอ่านคู่กับหมวด 4: ประชาชนมีหน้าที่ปฏิบัติตามกฎหมายอย่างเคร่งครัดตามมาตรา 50 (3) รัฐมีหน้าที่บังคับใช้กฎหมายอย่างเคร่งครัดตามมาตรา 53 กฎหมายที่ประชาชนทำตามแต่รัฐบังคับใช้แบบเลือกปฏิบัติ จะทำลายความเชื่อถือเร็วกว่ากฎหมายที่ไม่มีใครทำตามเสียอีก",
+        "en": "Section 52 requires the state to protect the institution of the monarchy, independence, sovereignty, territorial integrity and the areas over which Thailand has sovereign rights, the nation's honour and interests, state security and public order. For this purpose the state must maintain effective armed forces, diplomacy and intelligence. The last sentence, which exams like, says the armed forces shall also be used for national development.\n\nSection 53 is the shortest in the chapter: the state must ensure that the law is obeyed and strictly enforced.\n\nRead it with Chapter 4. Citizens must obey the law strictly under section 50(3); the state must enforce it strictly under section 53. A law that citizens obey but the state enforces selectively destroys trust faster than a law nobody obeys."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "มาตรา 54: การศึกษา 12 ปีโดยไม่เก็บค่าใช้จ่าย",
+        "en": "Section 54: twelve years of free education"
+      },
+      "body": {
+        "th": "มาตรา 54 เป็นมาตราที่ยาวที่สุดมาตราหนึ่งในหมวด 5 แกนของมันคือประโยคแรก รัฐต้องดำเนินการให้เด็กทุกคนได้รับการศึกษาเป็นเวลาสิบสองปี ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับอย่างมีคุณภาพ โดยไม่เก็บค่าใช้จ่าย\n\nส่วนอื่นของมาตรา 54\n- รัฐต้องดูแลพัฒนาเด็กเล็กก่อนเข้าเรียน ให้พัฒนาทั้งร่างกาย จิตใจ วินัย อารมณ์ สังคม และสติปัญญา โดยให้ท้องถิ่นและเอกชนมีส่วนร่วม\n- รัฐต้องให้ประชาชนได้รับการศึกษาตามความต้องการในระบบต่าง ๆ และส่งเสริมการเรียนรู้ตลอดชีวิต\n- ต้องมีกฎหมายการศึกษาแห่งชาติ ซึ่งอย่างน้อยต้องมีเรื่องแผนการศึกษาแห่งชาติและการตรวจสอบให้เป็นไปตามแผน\n- การศึกษาทั้งปวงต้องมุ่งพัฒนาผู้เรียนให้เป็นคนดี มีวินัย ภูมิใจในชาติ เชี่ยวชาญตามความถนัด และรับผิดชอบต่อครอบครัว ชุมชน สังคม และประเทศ\n- ให้ตั้งกองทุนช่วยผู้ขาดแคลนทุนทรัพย์ ลดความเหลื่อมล้ำ และพัฒนาครู โดยการบริหารกองทุนต้องเป็นอิสระ\n\nกองทุนในวรรคท้ายกลายเป็นจริงในชื่อ กองทุนเพื่อความเสมอภาคทางการศึกษา (กสศ.) ตามพระราชบัญญัติกองทุนเพื่อความเสมอภาคทางการศึกษา พ.ศ. 2561\n\nทำไมเริ่มนับตั้งแต่ “ก่อนวัยเรียน” เพราะงานวิจัยด้านพัฒนาการเด็กจำนวนมากชี้ว่าช่วงปฐมวัยเป็นช่วงที่การลงทุนให้ผลมาก และช่องว่างระหว่างเด็กรวยกับเด็กจนเริ่มถ่างก่อนเด็กจะเข้า ป.1 ด้วยซ้ำ",
+        "en": "Section 54 is one of the longest in Chapter 5. Its core is the first sentence: the state must ensure every child receives twelve years of quality education, from pre-school until the end of compulsory education, free of charge.\n\nThe rest of section 54:\n- the state must care for and develop young children before school, physically, mentally, in discipline, emotions, social skills and intellect, with local government and the private sector taking part;\n- the state must give people education that suits their needs in different systems and promote lifelong learning;\n- there must be a national education law that at least provides for a national education plan and for monitoring its implementation;\n- all education must aim to make learners good people, disciplined, proud of the nation, skilled in their aptitudes, and responsible to family, community, society and country;\n- a fund must be set up to support those without means, reduce inequality and develop teachers, and the fund must be managed independently.\n\nThe fund became real as the Equitable Education Fund, under the Equitable Education Fund Act of 2018.\n\nWhy count from pre-school? Because a large body of child-development research finds the early years are where investment pays off most, and the gap between rich and poor children opens before they even reach first grade."
+      }
+    },
+    {
+      "kind": "critique",
+      "title": {
+        "th": "ข้อถกเถียงเรื่อง “12 ปี”: นับจากไหนถึงไหน",
+        "en": "The “12 years” debate: counted from where to where?"
+      },
+      "by": "Education advocates and civil-society monitors such as iLaw (2016 referendum period); the drafters and the then government",
+      "body": {
+        "th": "รัฐธรรมนูญ 2540 และ 2550 ใช้ถ้อยคำว่าบุคคลมีสิทธิได้รับการศึกษา “ไม่น้อยกว่าสิบสองปี” ที่รัฐต้องจัดให้โดยไม่เก็บค่าใช้จ่าย คำว่า “ไม่น้อยกว่า” เป็นพื้น ไม่ใช่เพดาน และในทางปฏิบัติมักถูกเข้าใจว่าครอบคลุม ป.1 ถึง ม.6\n\nฉบับ 2560 ระบุช่วงให้ชัดว่า 12 ปี “ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับ” การศึกษาภาคบังคับตามกฎหมายการศึกษาคือเก้าปี (ป.1 ถึง ม.3) เมื่อนับก่อนวัยเรียนเข้าไปด้วย ช่วงที่รัฐธรรมนูญบังคับจึงจบที่ ม.3\n\nช่วงก่อนประชามติปี 2559 นักวิชาการและภาคประชาสังคมด้านการศึกษาตั้งคำถามว่า ม.4 ถึง ม.6 และสายอาชีพระดับเดียวกันจะหลุดออกจากหลักประกันระดับรัฐธรรมนูญหรือไม่ ฝ่ายผู้ร่างและรัฐบาลในขณะนั้นตอบว่าการเรียนฟรีถึงมัธยมปลายยังคงอยู่ในระดับนโยบาย และมีคำสั่งหัวหน้าคณะรักษาความสงบแห่งชาติที่ 28/2559 ยืนยันนโยบายเรียนฟรี 15 ปี\n\nบทเรียนคือความต่างระหว่างหลักประกันระดับรัฐธรรมนูญกับหลักประกันระดับนโยบาย อย่างแรกเปลี่ยนยากมาก อย่างหลังเปลี่ยนได้ตามรัฐบาล ทั้งสองอย่างให้เด็กเรียนฟรีได้เท่ากันในวันนี้ แต่มั่นคงไม่เท่ากันในวันหน้า",
+        "en": "The 1997 and 2007 constitutions said a person had the right to “not less than twelve years” of education provided free by the state. “Not less than” sets a floor, not a ceiling, and in practice it was commonly understood to cover grade 1 through grade 12.\n\nThe 2017 charter defines the span: twelve years “from pre-school until the end of compulsory education”. Compulsory education under the education law is nine years, grades 1 to 9. Add pre-school and the constitutional guarantee ends at grade 9.\n\nBefore the 2016 referendum, education scholars and civil-society groups asked whether upper secondary (grades 10 to 12) and the vocational equivalent would drop out of the constitutional guarantee. The drafters and the government of the day replied that free upper-secondary schooling would continue as policy, and NCPO Head Order No. 28/2559 (2016) confirmed the 15-year free education policy.\n\nThe lesson is the difference between a constitutional guarantee and a policy guarantee. The first is very hard to change; the second changes with governments. Today both put a child in a classroom for free. Tomorrow they are not equally secure."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "หน้าที่ของรัฐ ตอนที่ 2: สุขภาพ สาธารณูปโภค ทรัพยากร ข้อมูล คลื่นความถี่ ผู้บริโภค (มาตรา 55–61)",
+        "en": "Duties of the state, part 2: health, utilities, resources, information, spectrum, consumers (sections 55–61)"
+      },
+      "body": {
+        "th": "- มาตรา 55 สาธารณสุข: รัฐต้องให้ประชาชนได้รับบริการสาธารณสุขที่มีประสิทธิภาพอย่างทั่วถึง ครอบคลุมการส่งเสริมสุขภาพ การควบคุมและป้องกันโรค การรักษา และการฟื้นฟู และส่งเสริมภูมิปัญญาแพทย์แผนไทย\n- มาตรา 56 สาธารณูปโภค: รัฐต้องจัดสาธารณูปโภคขั้นพื้นฐานอย่างทั่วถึง โครงสร้างพื้นฐานของสาธารณูปโภคที่จำเป็นต่อชีวิตหรือความมั่นคง รัฐจะทำให้ตกเป็นของเอกชน หรือทำให้รัฐถือน้อยกว่าร้อยละ 51 ไม่ได้ ห้ามเก็บค่าบริการจนเป็นภาระเกินสมควร และถ้าให้เอกชนดำเนินการ รัฐต้องได้ผลตอบแทนที่เป็นธรรม\n- มาตรา 57 วัฒนธรรมและทรัพยากร: อนุรักษ์ภูมิปัญญาท้องถิ่น ศิลปะ วัฒนธรรม และบริหารทรัพยากรธรรมชาติอย่างสมดุลและยั่งยืน โดยให้ชุมชนมีส่วนร่วมและได้รับประโยชน์\n- มาตรา 58 ผลกระทบร้ายแรง: โครงการที่อาจกระทบทรัพยากร สิ่งแวดล้อม สุขภาพ หรือคุณภาพชีวิตอย่างรุนแรง รัฐต้องศึกษาและประเมินผลกระทบต่อสิ่งแวดล้อมและสุขภาพ และรับฟังความคิดเห็นก่อน ประชาชนมีสิทธิได้รับข้อมูลและเหตุผลก่อนรัฐอนุญาต และรัฐต้องเยียวยาผู้ได้รับผลกระทบอย่างเป็นธรรมโดยไม่ชักช้า\n- มาตรา 59 ข้อมูลข่าวสาร: รัฐต้องเปิดเผยข้อมูลสาธารณะที่ไม่ใช่ความมั่นคงหรือความลับของทางราชการ และให้เข้าถึงได้สะดวก\n- มาตรา 60 คลื่นความถี่: คลื่นความถี่และสิทธิเข้าใช้วงโคจรดาวเทียมเป็นสมบัติของชาติ ต้องมีองค์กรของรัฐที่เป็นอิสระกำกับดูแล ในทางปฏิบัติคือ กสทช.\n- มาตรา 61 ผู้บริโภค: รัฐต้องมีมาตรการหรือกลไกคุ้มครองผู้บริโภค ทั้งเรื่องข้อมูลที่เป็นจริง ความปลอดภัย และความเป็นธรรมในการทำสัญญา\n\nสังเกตการจับคู่กับหมวด 3: มาตรา 41 ให้สิทธิเข้าถึงข้อมูล มาตรา 59 ให้รัฐมีหน้าที่เปิดเผย มาตรา 46 ให้สิทธิผู้บริโภค มาตรา 61 ให้รัฐมีหน้าที่สร้างกลไก มาตรา 43 ให้สิทธิชุมชน มาตรา 57 และ 58 ให้รัฐมีหน้าที่ฟังและเยียวยา รัฐธรรมนูญ 2560 เขียนเรื่องเดียวกันจากสองฝั่งบ่อยมาก ฝั่งหนึ่งคือสิ่งที่คนมี อีกฝั่งคือสิ่งที่รัฐต้องทำ",
+        "en": "- Section 55, health: the state must provide efficient, universal public-health services covering health promotion, disease control and prevention, treatment and rehabilitation, and promote Thai traditional medicine.\n- Section 56, utilities: the state must provide basic utilities universally. It may not let the core infrastructure of utilities essential to life or security pass into private ownership, or reduce its own stake below 51 percent. Charges must not be an undue burden, and if private operators run a utility, the state must receive a fair return.\n- Section 57, culture and resources: preserve local wisdom, arts and culture, and manage natural resources in a balanced and sustainable way, with communities taking part and sharing the benefits.\n- Section 58, serious impacts: for projects that may seriously affect resources, the environment, health or quality of life, the state must study and assess environmental and health impacts and hold public hearings first. People have the right to information and reasons before a permit is granted, and the state must compensate those affected fairly and without delay.\n- Section 59, information: the state must disclose public information other than state-security matters or official secrets, and make it easy to access.\n- Section 60, spectrum: radio frequencies and the right to use satellite orbits are national assets, overseen by an independent state body, which in practice is the National Broadcasting and Telecommunications Commission (NBTC).\n- Section 61, consumers: the state must have measures or mechanisms to protect consumers, covering truthful information, safety and fair contracts.\n\nNotice the pairing with Chapter 3. Section 41 gives a right to information; section 59 gives the state a duty to disclose. Section 46 gives consumer rights; section 61 gives the state a duty to build protections. Section 43 gives community rights; sections 57 and 58 give the state duties to consult and compensate. The 2017 charter often writes the same matter from both sides: what people hold, and what the state must do."
+      }
+    },
+    {
+      "kind": "mnemonic",
+      "title": {
+        "th": "“51 คือกุญแจ” สองความหมาย",
+        "en": "“51 holds the key”, two ways"
+      },
+      "body": {
+        "th": "เลข 51 โผล่สองที่ในบทนี้ และทั้งสองที่หมายถึง “ใครถือกุญแจ”\n\n- มาตรา 51: ประชาชนถือกุญแจ ติดตาม เร่งรัด และฟ้องให้รัฐทำหน้าที่\n- ร้อยละ 51 ในมาตรา 56: รัฐถือกุญแจ ต้องเป็นเจ้าของโครงสร้างพื้นฐานสาธารณูปโภคไม่น้อยกว่าร้อยละ 51\n\nทำไมต้อง 51 ไม่ใช่ 50 เพราะ 50 ต่อ 50 คือเสมอกัน ใครก็ชี้ขาดไม่ได้ 51 คือเสียงข้างมาก เพิ่มอีกหนึ่งเดียวก็เปลี่ยนจาก “หุ้นส่วน” เป็น “ผู้ควบคุม”",
+        "en": "The number 51 appears twice in this chapter, and both times it answers “who holds the key?”\n\n- Section 51: the people hold the key, to follow up, press and sue the state over its duties.\n- 51 percent in section 56: the state holds the key, owning at least 51 percent of core utility infrastructure.\n\nWhy 51 and not 50? Because 50–50 is a tie and no one can decide. 51 is a majority. One extra point turns a partner into the one in control."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "มาตรา 62: วินัยการคลัง หรือกติกางบบ้าน",
+        "en": "Section 62: fiscal discipline, or the household budget rule"
+      },
+      "body": {
+        "th": "มาตรา 62 กำหนดให้รัฐต้องรักษาวินัยการเงินการคลังอย่างเคร่งครัด ให้ฐานะการคลังมั่นคงอย่างยั่งยืน ตามกฎหมายวินัยการเงินการคลัง และจัดระบบภาษีให้เป็นธรรม กฎหมายนั้นอย่างน้อยต้องมีเรื่องกรอบการคลังและงบประมาณ วินัยด้านรายได้และรายจ่ายทั้งเงินในและนอกงบประมาณ การบริหารทรัพย์สินและเงินคงคลัง และการบริหารหนี้สาธารณะ กฎหมายที่ตามมาคือพระราชบัญญัติวินัยการเงินการคลังของรัฐ พ.ศ. 2561\n\nลองนึกถึงครอบครัวที่ทุกคนถือบัตรเครดิตของบ้าน ถ้าไม่มีกติกาว่าใครรูดได้เท่าไร และต้องบอกใครก่อน ในที่สุดจะมีคนรูดซื้อของที่ทำให้ตัวเองดูดีในเดือนนี้ แล้วทิ้งบิลให้คนในบ้านปีหน้า รัฐบาลก็เหมือนกัน รัฐบาลอยู่สี่ปี แต่หนี้อยู่นานกว่านั้นมาก วินัยการคลังจึงเป็นกติกาที่ปกป้องรัฐบาลในอนาคตจากรัฐบาลในปัจจุบัน\n\nโซ่ของวินัยการคลังทั้งรัฐธรรมนูญ\n- มาตรา 62: รัฐต้องมีวินัยการคลังและมีกฎหมายวินัยการคลัง\n- มาตรา 140: จ่ายเงินแผ่นดินได้เฉพาะที่กฎหมายงบประมาณหรือกฎหมายการคลังอนุญาต\n- มาตรา 142: ร่างงบประมาณต้องแสดงแหล่งรายได้ ผลที่คาดว่าจะได้ และความสอดคล้องกับยุทธศาสตร์ชาติ\n- มาตรา 162: คณะรัฐมนตรีต้องชี้แจงแหล่งรายได้ที่จะใช้ทำนโยบายตอนแถลงนโยบาย\n- มาตรา 164 (2): คณะรัฐมนตรีต้องรักษาวินัยเงินแผ่นดินตามกฎหมายวินัยการคลังอย่างเคร่งครัด\n- มาตรา 258 ก. (3): การปฏิรูปด้านการเมืองต้องมีกลไกให้พรรครับผิดชอบเมื่อประกาศนโยบายโดยไม่วิเคราะห์ผลกระทบ ความคุ้มค่า และความเสี่ยง\n\nผลของโซ่นี้คือ นโยบายใช้เงินก้อนใหญ่ทุกนโยบาย ต้องตอบคำถามเดียวกันตั้งแต่วันหาเสียงจนวันจ่ายเงิน “เงินมาจากไหน”",
+        "en": "Section 62 requires the state to keep strict fiscal discipline so that public finances remain stable and sustainable, under a fiscal discipline law, and to make the tax system fair. That law must at least cover the fiscal and budget framework, discipline over revenue and spending both inside and outside the budget, management of state assets and the treasury, and public debt. The law that followed is the State Fiscal and Financial Disciplines Act of 2018.\n\nPicture a family where everyone carries a card on the household account. Without rules on how much each person may spend and whom they must tell first, someone eventually buys something that makes them look good this month and leaves the bill for next year's household. Governments are the same. A government lasts four years; its debt lasts far longer. Fiscal discipline is a rule that protects future governments from the present one.\n\nThe fiscal discipline chain across the constitution:\n- section 62: the state must keep fiscal discipline and have a fiscal discipline law;\n- section 140: public money may be spent only as budget or fiscal laws allow;\n- section 142: the budget bill must show its revenue sources, expected results and consistency with the national strategy;\n- section 162: the cabinet must explain where the money for its policies will come from when it presents its policy statement;\n- section 164(2): the cabinet must strictly follow the fiscal discipline law in handling public money;\n- section 258 ก.(3): political reform must include a mechanism making parties answerable for announcing policies without analysing their impact, value for money and risks.\n\nThe effect: every big spending policy must answer one question from campaign day to payment day: “where does the money come from?”"
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "เงินกู้นอกงบประมาณ: รถไฟความเร็วสูง 2557 และดิจิทัลวอลเล็ต 2566–2567",
+        "en": "Borrowing outside the budget: the rail loan bill (2014) and the digital wallet (2023–24)"
+      },
+      "year": 2024,
+      "body": {
+        "th": "เรื่องแรก ปี 2556 รัฐบาลในขณะนั้นเสนอร่างพระราชบัญญัติให้อำนาจกระทรวงการคลังกู้เงินประมาณ 2 ล้านล้านบาท เพื่อลงทุนโครงสร้างพื้นฐานด้านคมนาคม รวมถึงรถไฟความเร็วสูง โดยไม่ผ่านกระบวนการงบประมาณประจำปี ปี 2557 ศาลรัฐธรรมนูญวินิจฉัยว่าร่างกฎหมายนี้ขัดรัฐธรรมนูญ 2550 เหตุผลหลักคือ การใช้จ่ายเงินแผ่นดินต้องผ่านกระบวนการงบประมาณที่รัฐสภาตรวจสอบได้ การกู้เงินก้อนใหญ่ไปใช้นอกระบบงบประมาณทำให้การตรวจสอบหายไป และโครงการเหล่านั้นไม่ได้เร่งด่วนจนต้องข้ามระบบ ฝ่ายวิจารณ์คำวินิจฉัยมองว่าศาลเข้าไปตัดสินนโยบายเศรษฐกิจที่ควรเป็นเรื่องของรัฐบาลและสภา\n\nเรื่องที่สอง ปลายปี 2566 รัฐบาลประกาศแผนออกกฎหมายกู้เงิน 500,000 ล้านบาท เพื่อทำนโยบายแจกเงินดิจิทัล 10,000 บาท สำนักงานคณะกรรมการกฤษฎีกาให้ความเห็นว่าต้องทำตามพระราชบัญญัติวินัยการเงินการคลังของรัฐอย่างเคร่งครัด ซึ่งกำหนดว่าจะออกกฎหมายกู้เงินพิเศษได้เฉพาะเมื่อมีความจำเป็นเร่งด่วนต่อเนื่องเพื่อแก้วิกฤติของประเทศ และฝ่ายค้านกับผู้ร้องเรียนหลายรายอ้างมาตรา 140 ของรัฐธรรมนูญ ต่อมารัฐบาลเลิกแผนกู้แยก และหันไปใช้งบประมาณประจำปีแทน\n\nสองเรื่องนี้สอนสิ่งเดียวกัน กติกาวินัยการคลังไม่ได้ห้ามรัฐบาลใช้เงิน แต่บังคับให้เงินเดินผ่านประตูที่รัฐสภาเห็น และบังคับให้รัฐบาลอธิบายว่าทำไมต้องรีบขนาดนั้น",
+        "en": "First story. In 2013 the government of the day proposed a bill authorising the Finance Ministry to borrow about 2 trillion baht for transport infrastructure, including high-speed rail, outside the annual budget process. In 2014 the Constitutional Court held the bill unconstitutional under the 2007 charter. The core reasoning: public spending must go through a budget process that parliament can scrutinise; borrowing a huge sum to spend outside the budget removes that scrutiny, and the projects were not so urgent as to justify bypassing the system. Critics of the ruling argued that the court was deciding economic policy that belonged to the government and parliament.\n\nSecond story. In late 2023 the government announced a plan for a special law to borrow 500 billion baht to fund a 10,000-baht digital wallet handout. The Council of State advised that the government must strictly follow the State Fiscal and Financial Disciplines Act, which allows a special borrowing law only for an urgent, continuing need to resolve a national crisis. Opposition politicians and several complainants also invoked section 140 of the constitution. The government later dropped the separate loan and turned to the annual budget instead.\n\nBoth stories teach the same thing. Fiscal discipline rules do not stop a government from spending. They force the money through a door parliament can see, and they force the government to explain why it is in such a hurry."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "มาตรา 63: ต้านทุจริต ซึ่งปรากฏสามชั้นในรัฐธรรมนูญ",
+        "en": "Section 63: anti-corruption, written in three layers"
+      },
+      "body": {
+        "th": "มาตรา 63 กำหนดให้รัฐต้องส่งเสริม สนับสนุน และให้ความรู้แก่ประชาชนถึงอันตรายของการทุจริตทั้งในภาครัฐและภาคเอกชน ต้องมีมาตรการและกลไกที่มีประสิทธิภาพเพื่อป้องกันและขจัดการทุจริตอย่างเข้มงวด และต้องมีกลไกส่งเสริมให้ประชาชนรวมตัวกันรณรงค์ ต่อต้าน หรือชี้เบาะแส โดยได้รับความคุ้มครองจากรัฐ\n\nรัฐธรรมนูญ 2560 วางเรื่องทุจริตไว้หลายชั้นตั้งใจ\n- ชั้นประชาชน: มาตรา 50 (10) ไม่ร่วมมือหรือสนับสนุนการทุจริต\n- ชั้นรัฐ: มาตรา 63 ต้องป้องกันและขจัด และคุ้มครองผู้ชี้เบาะแส\n- ชั้นแนวนโยบาย: มาตรา 76 รัฐพึงพัฒนาเจ้าหน้าที่ให้ซื่อสัตย์สุจริต มีระบบคุณธรรมในการบริหารงานบุคคล และมีมาตรฐานทางจริยธรรมให้หน่วยงานใช้กำหนดประมวลจริยธรรม\n- ชั้นการมีส่วนร่วม: มาตรา 78 รัฐพึงส่งเสริมให้ประชาชนมีส่วนร่วมในการตรวจสอบการใช้อำนาจรัฐและการต่อต้านการทุจริต\n\nทำไมต้องเขียนหลายชั้น เพราะการทุจริตต้องมีคนสองฝั่ง คนให้กับคนรับ ถ้ากติกาจับแค่ฝั่งเจ้าหน้าที่ ฝั่งคนให้ก็ยังมีแรงจูงใจ ถ้าคนชี้เบาะแสไม่ได้รับความคุ้มครอง ก็ไม่มีใครกล้าพูด กติกาจึงต้องล้อมทุกมุม\n\nเรื่องนี้มีที่มาทางประวัติศาสตร์ ผู้ร่างรัฐธรรมนูญ 2560 ประกาศว่าเป้าหมายหลักประการหนึ่งคือการป้องกันและปราบปรามการทุจริต ซึ่งเชื่อมโยงกับการออกแบบองค์กรอิสระและมาตรฐานทางจริยธรรมในหมวดอื่นด้วย",
+        "en": "Section 63 requires the state to promote, support and educate the public about the dangers of corruption in both the public and private sectors; to have effective measures and mechanisms to prevent and eliminate corruption strictly; and to have mechanisms that encourage citizens to organise campaigns, resist corruption or blow the whistle, with protection from the state.\n\nThe 2017 charter places corruption in several layers on purpose:\n- the citizen layer: section 50(10), do not take part in or support corruption;\n- the state layer: section 63, prevent and eliminate it, and protect whistleblowers;\n- the policy layer: section 76, the state should develop honest officials, a merit system for personnel, and ethical standards that agencies use to write their codes of ethics;\n- the participation layer: section 78, the state should encourage people to take part in scrutinising state power and fighting corruption.\n\nWhy so many layers? Because corruption needs two sides, a giver and a taker. Rules that only catch the official leave the giver with every incentive. If whistleblowers are not protected, no one speaks. The rules have to cover every corner.\n\nThere is history behind it. The 2017 drafters named the prevention and suppression of corruption as one of the charter's main goals, which links this section to the design of the independent organs and the ethical standards in other chapters."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "หมวด 6 ภาพรวม: 15 มาตราแห่ง “รัฐพึง”",
+        "en": "Chapter 6 at a glance: fifteen sections of “the State should”"
+      },
+      "body": {
+        "th": "- มาตรา 64: หมวดนี้เป็นแนวทางให้รัฐตรากฎหมายและกำหนดนโยบาย\n- มาตรา 65: ยุทธศาสตร์ชาติ\n- มาตรา 66: การต่างประเทศ ความเสมอภาค ไม่แทรกแซงกิจการภายในของกันและกัน คุ้มครองคนไทยในต่างประเทศ\n- มาตรา 67: ศาสนา รัฐพึงอุปถัมภ์และคุ้มครองพระพุทธศาสนาและศาสนาอื่น ส่งเสริมพุทธศาสนาเถรวาท และต้องมีมาตรการป้องกันการบ่อนทำลายพระพุทธศาสนา\n- มาตรา 68: กระบวนการยุติธรรม เข้าถึงสะดวก รวดเร็ว ไม่แพงเกินสมควร คุ้มครองเจ้าหน้าที่ยุติธรรมจากการแทรกแซง และช่วยเหลือทางกฎหมายรวมถึงหาทนายให้ผู้ยากไร้\n- มาตรา 69: วิจัยและพัฒนาวิทยาศาสตร์ เทคโนโลยี และนวัตกรรม\n- มาตรา 70: คุ้มครองกลุ่มชาติพันธุ์ให้ดำรงชีวิตตามวัฒนธรรมและวิถีดั้งเดิมโดยสมัครใจ\n- มาตรา 71: ครอบครัว ที่อยู่อาศัย สุขภาพ กีฬา ทรัพยากรมนุษย์ ช่วยเหลือกลุ่มเปราะบาง และให้คำนึงถึงเพศ วัย และสภาพของบุคคลในการจัดสรรงบประมาณ\n- มาตรา 72: ที่ดิน น้ำ พลังงาน ผังเมือง และการกระจายการถือครองที่ดิน\n- มาตรา 73: เกษตรกร และการปฏิรูปที่ดิน\n- มาตรา 74: แรงงาน การมีงานทำ ความปลอดภัย สวัสดิการ การออมเพื่อวัยเกษียณ และระบบแรงงานสัมพันธ์\n- มาตรา 75: ระบบเศรษฐกิจตามหลักปรัชญาของเศรษฐกิจพอเพียง ขจัดการผูกขาด และรัฐต้องไม่ประกอบกิจการแข่งกับเอกชนเว้นแต่จำเป็น\n- มาตรา 76: บริหารราชการตามหลักธรรมาภิบาล ระบบคุณธรรม และมาตรฐานทางจริยธรรม\n- มาตรา 77: มีกฎหมายเท่าที่จำเป็น\n- มาตรา 78: ความรู้ความเข้าใจเรื่องการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข และการมีส่วนร่วมของประชาชน\n\nกับดักข้อสอบที่ควรรู้: แม้หมวดนี้ใช้คำว่า “พึง” แต่มีบางวลีใช้คำว่า “ต้อง” ซ่อนอยู่ เช่น มาตรา 67 “ต้องมีมาตรการและกลไกในการป้องกันมิให้มีการบ่อนทำลายพระพุทธศาสนา” และมาตรา 75 วรรคสอง “รัฐต้องไม่ประกอบกิจการที่มีลักษณะเป็นการแข่งขันกับเอกชน” ข้อสอบที่ถามว่า “ทุกมาตราในหมวด 6 ใช้คำว่าพึง” จึงเป็นข้อที่ผิด",
+        "en": "- Section 64: this chapter is guidance for the state in making laws and policy.\n- Section 65: the national strategy.\n- Section 66: foreign relations based on equality and non-interference, and protecting Thais abroad.\n- Section 67: religion. The state should support and protect Buddhism and other religions, promote Theravada Buddhism, and must have measures to prevent Buddhism from being undermined.\n- Section 68: justice that is accessible, fast and not unreasonably costly; protecting justice officials from interference; legal aid, including lawyers, for the poor.\n- Section 69: research and development in science, technology and innovation.\n- Section 70: protecting ethnic groups' freedom to live by their own culture and traditional ways, voluntarily.\n- Section 71: family, housing, health, sport, human resources, help for vulnerable groups, and attention to sex, age and condition when allocating budgets.\n- Section 72: land, water, energy, town planning and spreading land ownership.\n- Section 73: farmers and land reform.\n- Section 74: labour: employment, safety, welfare, retirement savings and labour relations.\n- Section 75: an economy guided by the Sufficiency Economy Philosophy, free of unfair monopolies, in which the state must not compete with private business unless necessary.\n- Section 76: public administration based on good governance, a merit system and ethical standards.\n- Section 77: only as many laws as necessary.\n- Section 78: public understanding of the democratic regime of government with the King as Head of State, and public participation.\n\nAn exam trap worth knowing: although this chapter speaks in “should”, a few phrases hide a “must”. Section 67 says there “must be measures and mechanisms to prevent Buddhism from being undermined”, and section 75, paragraph 2 says “the State must not engage in business that competes with the private sector”. A statement that “every section in Chapter 6 uses should” is therefore false."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "มาตรา 65: ยุทธศาสตร์ชาติ “พึง” ที่กลายเป็น “ใช้บังคับได้”",
+        "en": "Section 65: a “should” that becomes binding"
+      },
+      "body": {
+        "th": "มาตรา 65 อยู่ในหมวดแนวนโยบาย ขึ้นต้นด้วยคำว่า “รัฐพึงจัดให้มียุทธศาสตร์ชาติ” เป็นเป้าหมายการพัฒนาประเทศอย่างยั่งยืนตามหลักธรรมาภิบาล และเป็นกรอบให้แผนต่าง ๆ สอดคล้องกัน แต่วรรคท้ายเปลี่ยนน้ำหนักทันที “ยุทธศาสตร์ชาติ เมื่อได้ประกาศในราชกิจจานุเบกษาแล้ว ให้ใช้บังคับได้”\n\nนี่คือจุดที่ต้องเข้าใจ ตัวการมีอยู่ของยุทธศาสตร์ชาติเป็นเรื่อง “พึง” แต่เมื่อประกาศแล้ว ตัวยุทธศาสตร์ผูกพันจริง และรัฐธรรมนูญผูกมันเข้ากับกลไกอื่นอีกหลายจุด\n- มาตรา 65 วรรคสอง: วิธีการจัดทำต้องเป็นไปตามกฎหมาย และกฎหมายนั้นต้องมีการรับฟังความคิดเห็นของประชาชนทุกภาคส่วนอย่างทั่วถึง\n- มาตรา 142: ร่างงบประมาณต้องแสดงความสอดคล้องกับยุทธศาสตร์ชาติ\n- มาตรา 162: นโยบายของคณะรัฐมนตรีต้องสอดคล้องกับยุทธศาสตร์ชาติ\n- มาตรา 270: วุฒิสภาชุดแรกตามบทเฉพาะกาลมีหน้าที่ติดตาม เสนอแนะ และเร่งรัดการปฏิรูปและการดำเนินการตามยุทธศาสตร์ชาติ\n- มาตรา 275: ให้คณะรัฐมนตรีออกกฎหมายตามมาตรา 65 ภายใน 120 วันนับแต่ประกาศใช้รัฐธรรมนูญ และจัดทำยุทธศาสตร์ชาติให้เสร็จภายในหนึ่งปีนับแต่กฎหมายนั้นใช้บังคับ\n\nกฎหมายที่ออกตามมาคือพระราชบัญญัติการจัดทำยุทธศาสตร์ชาติ พ.ศ. 2560 และยุทธศาสตร์ชาติ (พ.ศ. 2561–2580) ประกาศในราชกิจจานุเบกษาเมื่อ 13 ตุลาคม 2561 เป็นแผน 20 ปี แบ่งเป็นหกด้าน คือ ความมั่นคง การสร้างความสามารถในการแข่งขัน การพัฒนาและเสริมสร้างศักยภาพทรัพยากรมนุษย์ การสร้างโอกาสและความเสมอภาคทางสังคม การสร้างการเติบโตบนคุณภาพชีวิตที่เป็นมิตรต่อสิ่งแวดล้อม และการปรับสมดุลและพัฒนาระบบการบริหารจัดการภาครัฐ ทบทวนได้ทุกห้าปี หรือเมื่อสถานการณ์เปลี่ยนไป\n\nกฎหมายการจัดทำยุทธศาสตร์ชาติยังวางกลไกเอาผิดไว้ด้วย ตามที่ iLaw สรุปไว้ ถ้าหน่วยงานรัฐไม่ทำตามและไม่แก้ไข เรื่องอาจไปถึงคณะกรรมการ ป.ป.ช. ซึ่งอาจนำไปสู่การลงโทษหัวหน้าหน่วยงาน และถ้าการไม่ทำตามเกิดจากมติคณะรัฐมนตรี เส้นทางผ่านวุฒิสภา ศาลรัฐธรรมนูญ ป.ป.ช. และศาลฎีกาแผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมือง\n\nโซ่เหตุผลเต็ม: ยุทธศาสตร์ประกาศแล้วผูกพัน → งบประมาณและนโยบายรัฐบาลต้องสอดคล้อง → มีกลไกติดตามและเอาผิด → รัฐบาลที่ชนะเลือกตั้งในอนาคตจึงทำนโยบายได้เท่าที่อยู่ในกรอบ 20 ปีนี้",
+        "en": "Section 65 sits in the directive-principles chapter and opens with “the State should have a national strategy” as the goal for sustainable national development under good governance, and as a framework that keeps all plans consistent. Its last paragraph then changes the weight entirely: “once published in the Royal Gazette, the national strategy shall be enforceable.”\n\nThis is the point to grasp. Having a national strategy is a “should”. Once published, the strategy binds, and the constitution wires it into several other mechanisms:\n- section 65, paragraph 2: the process is set by law, and that law must provide for broad public participation and hearings from every sector;\n- section 142: the budget bill must show its consistency with the national strategy;\n- section 162: the cabinet's policies must be consistent with the national strategy;\n- section 270: the first, transitional Senate was charged with monitoring, advising on and speeding up reform and the implementation of the national strategy;\n- section 275: the cabinet had to pass the section 65 law within 120 days of the constitution's promulgation and complete the national strategy within one year of that law taking effect.\n\nThe law that followed is the National Strategy Preparation Act of 2017. The National Strategy (2018–2037) was published in the Royal Gazette on 13 October 2018: a 20-year plan in six areas, namely security; competitiveness; human-capital development; social opportunity and equality; environmentally friendly growth; and rebalancing and developing public-sector management. It may be reviewed every five years or when circumstances change.\n\nThe preparation act also builds in enforcement. As iLaw summarises it, if a state agency fails to comply and does not correct course, the matter can reach the National Anti-Corruption Commission and lead to penalties for the agency head; if non-compliance stems from a cabinet resolution, the path runs through the Senate, the Constitutional Court, the NACC and the Supreme Court's Criminal Division for Holders of Political Positions.\n\nThe full chain: the published strategy binds → budgets and government policies must align with it → there are mechanisms to monitor and sanction → so any government that wins a future election can only govern within this 20-year frame."
+      }
+    },
+    {
+      "kind": "critique",
+      "title": {
+        "th": "ข้อถกเถียงเรื่องยุทธศาสตร์ชาติ: ความต่อเนื่อง หรือการผูกมือรัฐบาลในอนาคต",
+        "en": "The national strategy debate: continuity, or tying future governments' hands?"
+      },
+      "by": "Apipol Sae-Tung, Juridification, Legitimacy, and Authoritarian Survival (Asian Review, 2025); iLaw; the government and drafters of 2017–18",
+      "body": {
+        "th": "ฝ่ายสนับสนุน ซึ่งรวมถึงรัฐบาลและผู้ร่างในช่วงปี 2560–2561 ให้เหตุผลจากประวัติศาสตร์การเมืองไทย รัฐบาลไทยหลายชุดอยู่ได้ไม่นาน นโยบายระยะยาวอย่างระบบราง การศึกษา หรือการรับมือสังคมสูงวัย ถูกรื้อทุกครั้งที่เปลี่ยนรัฐบาล เหมือนทีมฟุตบอลที่เปลี่ยนโค้ชทุกครึ่งฤดูกาลแล้วเปลี่ยนแผนการเล่นทุกครั้ง ไม่มีทางสร้างทีมได้ ยุทธศาสตร์ระยะยาวที่ทุกรัฐบาลต้องยึดจะทำให้การลงทุนสาธารณะต่อเนื่อง และนักลงทุนวางแผนได้\n\nฝ่ายวิจารณ์ชี้ปัญหาที่ความชอบธรรมของที่มา อภิพล แซ่ตั้ง (Apipol Sae-Tung, 2025) วิเคราะห์ว่ายุทธศาสตร์ชาติมีรากมาจากแผนปฏิรูปของสภาที่คณะรักษาความสงบแห่งชาติแต่งตั้ง และเป็นตัวอย่างของ “การทำให้การเมืองกลายเป็นเรื่องกฎหมาย” (juridification) ที่ระบอบซึ่งขาดความชอบธรรมจากการเลือกตั้งใช้กฎหมายเพื่อสืบทอดอิทธิพล เขายังชี้ว่าคณะกรรมการยุทธศาสตร์ชาติมีผู้แทนฝ่ายความมั่นคงในสัดส่วนสูง iLaw วิเคราะห์ในทำนองเดียวกันว่ากลไกเอาผิดในกฎหมายยุทธศาสตร์ชาติเป็นเครื่องมือควบคุมรัฐบาลที่มาจากการเลือกตั้ง และในช่วงห้าปีแรก ผู้ทำหน้าที่ติดตามคือวุฒิสภาที่มาจากการแต่งตั้ง\n\nมีคำถามที่สามที่ตัดได้ทั้งสองทาง ยุทธศาสตร์ชาติเขียนเป้าหมายกว้างมาก ถ้ากว้างพอ นโยบายแทบทุกอย่างก็ “สอดคล้อง” ได้ ซึ่งแปลว่าผูกมือได้น้อยกว่าที่กลัว แต่ก็แปลว่าใครจะเป็นคนชี้ว่าอะไรไม่สอดคล้อง และชี้ด้วยเกณฑ์อะไร อำนาจจึงไปอยู่ที่ผู้ตีความ ไม่ใช่ที่ตัวเอกสาร\n\nสำหรับผู้อ่านที่ต้องการภาพใหญ่: ความตึงระหว่าง “ความมั่นคงของแผน” กับ “สิทธิของผู้เลือกตั้งที่จะเปลี่ยนทิศ” เป็นคำถามที่ประชาธิปไตยทุกแห่งต้องตอบ คำตอบที่ยั่งยืนมักมาจากการที่แผนได้รับการยอมรับจากหลายฝ่าย ไม่ใช่จากความยากในการแก้",
+        "en": "Supporters, including the government and drafters of 2017–18, argue from Thai political history. Many Thai governments have been short-lived, and long-term policies such as rail networks, education or preparing for an ageing society were torn up with every change of government. A football club that changes coach every half-season, and its tactics with every coach, never builds a team. A long-term strategy that every government must follow keeps public investment on track and lets investors plan.\n\nCritics focus on where it came from. Apipol Sae-Tung (2025) argues that the national strategy grew out of reform plans drawn up by bodies the National Council for Peace and Order appointed, and that it is an example of “juridification”: a regime lacking electoral legitimacy using law to extend its influence. He also notes the high share of security representatives on the National Strategy Committee. iLaw makes a similar argument that the strategy law's sanctions are a tool to control elected governments, and points out that for the first five years the monitoring role sat with an appointed Senate.\n\nA third question cuts both ways. The strategy's goals are very broad. If they are broad enough, almost any policy can be called “consistent”, which means it binds less than critics fear. But it also means the real power lies with whoever decides what is inconsistent, and by what yardstick. Power shifts to the interpreter, not the document.\n\nFor readers who want the bigger picture: the tension between a stable plan and voters' right to change direction is one every democracy has to answer. Durable answers usually come from a plan that many sides accept, not from making it hard to change."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "มาตรา 77: กฎหมายเท่าที่จำเป็น",
+        "en": "Section 77: only as many laws as necessary"
+      },
+      "body": {
+        "th": "มาตรา 77 เป็นมาตราที่คนทำงานราชการควรอ่านช้า ๆ เพราะเป็นคู่มือการออกกฎหมายที่ดีในย่อหน้าเดียว\n\n- มีกฎหมายเท่าที่จำเป็น ยกเลิกหรือปรับปรุงกฎหมายที่หมดความจำเป็นหรือเป็นอุปสรรคต่อการดำรงชีวิตและการประกอบอาชีพโดยไม่ชักช้า\n- ทำให้ประชาชนเข้าถึงตัวบทได้สะดวกและเข้าใจได้ง่าย\n- ก่อนตรากฎหมายทุกฉบับ รับฟังความคิดเห็นผู้เกี่ยวข้อง วิเคราะห์ผลกระทบอย่างรอบด้าน และเปิดเผยผลให้ประชาชนทราบ\n- เมื่อกฎหมายใช้บังคับแล้ว ประเมินผลสัมฤทธิ์ทุกรอบระยะเวลาที่กำหนด\n- ใช้ระบบอนุญาตและระบบคณะกรรมการเฉพาะเมื่อจำเป็น กำหนดหลักเกณฑ์การใช้ดุลพินิจและระยะเวลาให้ชัด\n- กำหนดโทษอาญาเฉพาะความผิดร้ายแรง\n\nกฎหมายที่ออกมารองรับคือ พระราชบัญญัติหลักเกณฑ์การจัดทำร่างกฎหมายและการประเมินผลสัมฤทธิ์ของกฎหมาย พ.ศ. 2562\n\nทำไมเรื่อง “ใบอนุญาต” กับ “โทษอาญา” อยู่ในมาตราเดียวกัน เพราะทั้งสองเป็นต้นทุนที่ซ่อนอยู่ ทุกใบอนุญาตคือคิวที่ประชาชนต้องรอและจุดที่อาจมีการเรียกรับเงิน ทุกโทษอาญาคือการเปลี่ยนคนธรรมดาที่ลืมยื่นเอกสารให้กลายเป็นผู้ต้องหา กฎหมายที่ดีจึงไม่ได้วัดที่จำนวน แต่วัดที่ภาระที่มันสร้างเทียบกับปัญหาที่มันแก้",
+        "en": "Section 77 deserves a slow read from anyone in government, because it is a manual for good law-making in one paragraph.\n\n- Have only as many laws as necessary; repeal or revise laws that are no longer needed or that obstruct people's lives and livelihoods, without delay.\n- Make laws easy to find and easy to understand.\n- Before passing any law, consult those affected, analyse its impacts thoroughly, and publish the results.\n- Once a law is in force, evaluate its results at set intervals.\n- Use licensing and committee systems only where necessary, and set clear rules for official discretion and time limits.\n- Impose criminal penalties only for serious offences.\n\nThe implementing law is the Act on Legislative Drafting and Evaluation of Law of 2019.\n\nWhy are licences and criminal penalties in the same section? Because both are hidden costs. Every licence is a queue people must stand in and a point where someone might ask for a bribe. Every criminal penalty turns an ordinary person who forgot a form into a suspect. Good law is not measured by how many laws there are, but by the burden each one creates against the problem it solves."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "ภาพรวมเป็นระบบเดียว: จากหน้าที่ของคนไปถึงงบประมาณ",
+        "en": "One system: from citizens' duties to the budget"
+      },
+      "body": {
+        "th": "ถ้าวาดสามหมวดนี้เป็นแผนผังเดียว จะเห็นโซ่ที่ต่อกันเป็นวง\n\n- ประชาชนมีหน้าที่ (หมวด 4) เช่น เสียภาษี ไปเลือกตั้ง ไม่ร่วมทุจริต\n- รัฐมีหน้าที่ที่ประชาชนทวงได้ (หมวด 5 และมาตรา 51) เช่น การศึกษา สาธารณสุข สาธารณูปโภค วินัยการคลัง\n- รัฐมีแนวทางที่ต้องใช้กำหนดนโยบาย (หมวด 6 และมาตรา 64) โดยมียุทธศาสตร์ชาติเป็นกรอบที่ผูกพัน (มาตรา 65)\n- คณะรัฐมนตรีแถลงนโยบายโดยต้องสอดคล้องกับทั้งสามอย่าง และชี้แจงแหล่งเงิน (มาตรา 162)\n- งบประมาณต้องแสดงความสอดคล้องกับยุทธศาสตร์ชาติ (มาตรา 142) และจ่ายได้เฉพาะตามกฎหมาย (มาตรา 140)\n- ภาษีของประชาชนกลับมาเป็นบริการตามหน้าที่ของรัฐ แล้ววงก็เริ่มใหม่\n\nคำถามที่ใช้ตรวจความเข้าใจได้ทุกข้อในสามหมวดนี้มีสองข้อ: ข้อความนี้ “ต้อง” หรือ “พึง” และถ้ารัฐไม่ทำ ใครทวงได้ ทวงที่ไหน",
+        "en": "Draw the three chapters as one diagram and you get a loop.\n\n- Citizens have duties (Chapter 4): pay tax, vote, refuse corruption.\n- The state has duties citizens can enforce (Chapter 5 and section 51): education, health, utilities, fiscal discipline.\n- The state has guidance it must use to set policy (Chapter 6 and section 64), with the national strategy as a binding frame (section 65).\n- The cabinet's policy statement must be consistent with all three and must say where the money comes from (section 162).\n- The budget must show consistency with the national strategy (section 142), and money may be spent only as the law allows (section 140).\n- Citizens' taxes come back as services the state is duty-bound to provide, and the loop starts again.\n\nTwo questions test your understanding of any provision in these chapters: is it a “must” or a “should”? And if the state fails, who can chase it, and where?"
+      }
+    },
+    {
+      "kind": "numbers",
+      "title": {
+        "th": "ตัวเลขที่ต้องจำในหมวด 4–6",
+        "en": "Numbers to know in Chapters 4–6"
+      },
+      "rows": [
+        { "th": "หน้าที่ของปวงชนชาวไทย", "en": "Duties of the Thai people", "value": "10 ข้อ ในมาตราเดียว / 10 in one section", "sections": [50] },
+        { "th": "จำนวนมาตราในหมวด 5 หน้าที่ของรัฐ", "en": "Sections in Chapter 5, Duties of the State", "value": "13 (มาตรา 51–63)", "sections": [51, 63] },
+        { "th": "จำนวนมาตราในหมวด 6 แนวนโยบายแห่งรัฐ", "en": "Sections in Chapter 6, Directive Principles", "value": "15 (มาตรา 64–78)", "sections": [64, 78] },
+        { "th": "การศึกษาโดยไม่เก็บค่าใช้จ่าย ก่อนวัยเรียนถึงจบภาคบังคับ", "en": "Free education, pre-school to end of compulsory", "value": "12 ปี / 12 years", "sections": [54] },
+        { "th": "สัดส่วนขั้นต่ำที่รัฐต้องถือในโครงสร้างพื้นฐานสาธารณูปโภค", "en": "Minimum state stake in core utility infrastructure", "value": "51%", "sections": [56] },
+        { "th": "กำหนดออกกฎหมายยุทธศาสตร์ชาตินับแต่ประกาศใช้รัฐธรรมนูญ", "en": "Deadline for the national strategy law after promulgation", "value": "120 วัน / 120 days", "sections": [275] },
+        { "th": "กำหนดจัดทำยุทธศาสตร์ชาตินับแต่กฎหมายใช้บังคับ", "en": "Deadline to complete the strategy after the law took effect", "value": "1 ปี / 1 year", "sections": [275] },
+        { "th": "ระยะเวลาของยุทธศาสตร์ชาติฉบับแรก", "en": "Span of the first national strategy", "value": "20 ปี (2561–2580) / 20 years (2018–2037)", "sections": [65] },
+        { "th": "คณะรัฐมนตรีแจ้งความคืบหน้าการปฏิรูปต่อรัฐสภา", "en": "Cabinet reports reform progress to parliament", "value": "ทุก 3 เดือน / every 3 months", "sections": [270] },
+        { "th": "แถลงนโยบายภายใน นับแต่วันเข้ารับหน้าที่", "en": "Policy statement deadline after taking office", "value": "15 วัน / 15 days", "sections": [162] }
+      ]
+    },
+    {
+      "kind": "check",
+      "title": {
+        "th": "ทดสอบตัวเอง",
+        "en": "Check yourself"
+      },
+      "items": [
+        {
+          "q": { "th": "หมวด 4 หน้าที่ของปวงชนชาวไทย มีกี่มาตรา และกี่หน้าที่", "en": "How many sections and how many duties does Chapter 4 contain?" },
+          "a": { "th": "มาตราเดียว คือมาตรา 50 มีหน้าที่ 10 ข้อ", "en": "One section, section 50, with ten duties." },
+          "sections": [50]
+        },
+        {
+          "q": { "th": "คำใดแยกหมวด 5 ออกจากหมวด 6 และมาตราใดบอกสถานะของหมวด 6", "en": "Which word separates Chapter 5 from Chapter 6, and which section states Chapter 6's status?" },
+          "a": { "th": "หมวด 5 ใช้ “ต้อง” หมวด 6 ใช้ “พึง” มาตรา 64 บอกว่าหมวด 6 เป็นแนวทางให้รัฐตรากฎหมายและกำหนดนโยบาย", "en": "Chapter 5 says “must”; Chapter 6 says “should”. Section 64 says Chapter 6 is guidance for making laws and policy." },
+          "sections": [64]
+        },
+        {
+          "q": { "th": "หน้าที่ของรัฐแบบใดที่ประชาชนติดตาม เร่งรัด และฟ้องได้ตามมาตรา 51", "en": "Which state duties can citizens follow up, press and sue over under section 51?" },
+          "a": { "th": "หน้าที่ในหมวด 5 ที่ทำเพื่อประโยชน์แก่ประชาชนโดยตรง ตามหลักเกณฑ์และวิธีการที่กฎหมายบัญญัติ", "en": "Duties in Chapter 5 that exist to benefit the people directly, following the rules and procedures set by law." },
+          "sections": [51]
+        },
+        {
+          "q": { "th": "การศึกษา 12 ปีโดยไม่เก็บค่าใช้จ่ายตามมาตรา 54 นับจากไหนถึงไหน", "en": "Under section 54, the twelve free years run from when to when?" },
+          "a": { "th": "ตั้งแต่ก่อนวัยเรียนจนจบการศึกษาภาคบังคับ", "en": "From pre-school until the end of compulsory education." },
+          "sections": [54]
+        },
+        {
+          "q": { "th": "รัฐขายหุ้นโครงสร้างพื้นฐานการประปาที่จำเป็นต่อการดำรงชีวิตจนเหลือร้อยละ 40 ได้หรือไม่", "en": "May the state sell down its stake in essential water-supply infrastructure to 40 percent?" },
+          "a": { "th": "ไม่ได้ รัฐต้องถือไม่น้อยกว่าร้อยละ 51 ตามมาตรา 56", "en": "No. The state must keep at least 51 percent under section 56." },
+          "sections": [56]
+        },
+        {
+          "q": { "th": "ยุทธศาสตร์ชาติอยู่ในหมวดแนวนโยบาย แต่ผูกพันได้อย่างไร", "en": "The national strategy sits in the directive-principles chapter. How does it become binding?" },
+          "a": { "th": "มาตรา 65 วรรคท้ายบอกว่าเมื่อประกาศในราชกิจจานุเบกษาแล้วให้ใช้บังคับได้ และยังผูกกับงบประมาณ (มาตรา 142) และนโยบายคณะรัฐมนตรี (มาตรา 162)", "en": "The last paragraph of section 65 makes it enforceable once published in the Royal Gazette, and it is tied to the budget (section 142) and the cabinet's policy statement (section 162)." },
+          "sections": [65, 142, 162]
+        },
+        {
+          "q": { "th": "ข้อความ “ทุกมาตราในหมวด 6 ใช้คำว่าพึงเท่านั้น” ถูกหรือผิด", "en": "True or false: “every provision in Chapter 6 uses only should”?" },
+          "a": { "th": "ผิด เช่น มาตรา 75 วรรคสอง รัฐต้องไม่ประกอบกิจการแข่งขันกับเอกชนเว้นแต่จำเป็น และมาตรา 67 ต้องมีมาตรการป้องกันการบ่อนทำลายพระพุทธศาสนา", "en": "False. Section 75, paragraph 2 says the state must not compete with private business unless necessary, and section 67 requires measures to prevent Buddhism from being undermined." },
+          "sections": [67, 75]
+        },
+        {
+          "q": { "th": "มาตราใดในหมวด 6 สั่งให้กำหนดโทษอาญาเฉพาะความผิดร้ายแรง", "en": "Which section in Chapter 6 says criminal penalties should be reserved for serious offences?" },
+          "a": { "th": "มาตรา 77", "en": "Section 77." },
+          "sections": [77]
+        }
+      ]
+    }
+  ],
+  "sections": [50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78],
+  "sources": [
+    "Constitution of the Kingdom of Thailand B.E. 2560 (2017), consolidated through the 2021 amendment, Thai text",
+    "Apipol Sae-Tung, Juridification, Legitimacy, and Authoritarian Survival in Thai Politics from the 2014 Military Coup, Asian Review 38(1) (2025)",
+    "iLaw, analysis of the National Strategy Preparation Act B.E. 2560 and its sanction mechanisms (ilaw.or.th, 2018)",
+    "iLaw and Thai PBS reporting on section 54 and the 15-year free education policy (2016 referendum period)",
+    "National Strategy (B.E. 2561–2580), Royal Gazette, 13 October 2018",
+    "State Fiscal and Financial Disciplines Act B.E. 2561 (2018)",
+    "Thai PBS World and Bangkok Post reporting on the digital wallet funding debate (2023–2024)",
+    "Constitutional Court of Thailand, 2014 ruling on the 2-trillion-baht infrastructure borrowing bill"
+  ]
+}

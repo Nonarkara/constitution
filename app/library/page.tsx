@@ -10,6 +10,9 @@ export default function Page() {
         zh: "理解整个体系：你的权利、索引和术语表。",
       }}
       items={[
+        { href: "/bible/", title: { th: "คัมภีร์รัฐธรรมนูญ", en: "The study guide", zh: "学习指南" }, text: { th: "13 บท อธิบายทั้งฉบับด้วยตรรกะ คดีจริง ทางลัดช่วยจำ ข้อวิจารณ์ และวิธีทำข้อสอบ", en: "13 chapters: the whole constitution by its logic, real cases, memory aids, critique and exam method", zh: "13章：以逻辑讲解全文，含真实案例、记忆法、批评与答题方法" } },
+        { href: "/bible/exam-method/", title: { th: "วิธีทำข้อสอบ", en: "How to answer exam questions", zh: "答题方法" }, text: { th: "อ่านโจทย์ ตัดตัวเลือกด้วยตรรกะ และกับดักที่พบบ่อย", en: "Reading the stem, eliminating by logic, and the common traps", zh: "读题、用逻辑排除选项，以及常见陷阱" } },
+        { href: "/bible/history/", title: { th: "ประวัติรัฐธรรมนูญไทย", en: "The history, as a story", zh: "泰国宪法史" }, text: { th: "จาก 2475 ถึง 2560 เล่าเป็นเรื่อง ช่วยจำปีและตัวเลข", en: "From 1932 to 2017 as a story that carries the years and numbers", zh: "从1932到2017，以故事记住年份与数字" } },
         { href: "/drills/", title: { th: "4,700 แบบฝึก", en: "4,700 exercises", zh: "4,700道练习" }, text: { th: "470 โจทย์เขียนเอง + 4,230 โจทย์เปลี่ยนเงื่อนไข", en: "470 authored + 4,230 parameter-generated drills", zh: "470道原创＋4,230道参数生成题" } },
         { href: "/polls/", title: { th: "10 คำถามส่วนตัว", en: "Ten private polls", zh: "十个私人问卷" }, text: { th: "ลองคิดและเก็บเหตุผล ไม่มีคะแนนความเห็น", en: "Keep your reasons; opinions earn no points", zh: "保存理由，不给观点评分" } },
         { href: "/memory/", title: { th: "บ้านความจำ 16 ห้อง", en: "The sixteen-room memory house", zh: "十六间记忆屋" }, text: { th: "ภาพสีอ่อน มุกเล็ก ๆ และตัวเลขที่มีความหมาย", en: "Pastel pictures, small jokes and meaningful numbers", zh: "柔和图画、小笑话与有意义的数字" } },

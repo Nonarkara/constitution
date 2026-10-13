@@ -1,0 +1,383 @@
+{
+  "id": "independent-organs",
+  "order": 9,
+  "title": {
+    "th": "องค์กรอิสระและองค์กรอัยการ",
+    "en": "Independent Organs and the State Attorney Organ"
+  },
+  "lede": {
+    "th": "เมษายน 2562 ผู้สมัครที่ชนะการเลือกตั้งในเขต 8 เชียงใหม่ ถูก กกต. แจกใบส้ม เพราะเงิน 2,000 บาทกับนาฬิกาแขวนผนังหนึ่งเรือนที่ถวายพระในงานบุญช่วงหาเสียง เขาเสียสิทธิสมัครหนึ่งปี และเขตนั้นต้องเลือกตั้งใหม่ คนที่ตัดสินเรื่องนี้ไม่ใช่รัฐบาล ไม่ใช่สภา และไม่ใช่ศาล แต่เป็นองค์กรประเภทที่สี่ บทนี้อธิบายว่าองค์กรอิสระห้าองค์กรใช้แม่แบบเดียวกันอย่างไร ต่างกันตรงไหน และคำถามที่ไม่มีวันหายไป: ใครตรวจสอบผู้ตรวจสอบ",
+    "en": "In April 2019 the winning candidate in Chiang Mai's eighth constituency was handed an “orange card” by the Election Commission over 2,000 baht and a wall clock he had given to a monk at a temple event during the campaign. He lost the right to stand for a year and the district voted again. The decision came not from the government, not from Parliament, not from a court, but from a fourth kind of body. This chapter shows how five independent organs share one template, where they differ, and the question that never goes away: who watches the watchers?"
+  },
+  "blocks": [
+    {
+      "kind": "text",
+      "title": {
+        "th": "องค์กรอิสระคืออะไร",
+        "en": "What an independent organ is"
+      },
+      "body": {
+        "th": "มาตรา 215 นิยามสั้น ๆ ว่าองค์กรอิสระเป็นองค์กรที่ตั้งขึ้นให้มีความอิสระในการปฏิบัติหน้าที่ตามรัฐธรรมนูญและกฎหมาย และต้องใช้อำนาจโดยสุจริต เที่ยงธรรม กล้าหาญ และปราศจากอคติ\n\nรัฐธรรมนูญ 2560 มีองค์กรอิสระห้าองค์กร\n- คณะกรรมการการเลือกตั้ง (กกต.) มาตรา 222 ถึง 227\n- ผู้ตรวจการแผ่นดิน มาตรา 228 ถึง 231\n- คณะกรรมการป้องกันและปราบปรามการทุจริตแห่งชาติ (ป.ป.ช.) มาตรา 232 ถึง 237\n- คณะกรรมการตรวจเงินแผ่นดิน (คตง.) มาตรา 238 ถึง 245\n- คณะกรรมการสิทธิมนุษยชนแห่งชาติ (กสม.) มาตรา 246 ถึง 247\n\nองค์กรอัยการ (มาตรา 248) อยู่หมวดแยกของตัวเอง มีความอิสระ แต่ไม่ใช่องค์กรอิสระตามหมวด 12 และศาลรัฐธรรมนูญก็ไม่ใช่องค์กรอิสระ แม้จะใช้กติกาหลายข้อร่วมกัน ข้อสอบชอบหลอกตรงนี้\n\nองค์กรเหล่านี้ส่วนใหญ่เกิดในยุครัฐธรรมนูญ 2540 ผู้ร่างตั้ง กกต. และ ป.ป.ช. ให้อยู่นอกทั้งฝ่ายนิติบัญญัติและฝ่ายบริหาร ส่วนผู้ตรวจการแผ่นดินเริ่มทำงานปี 2542 ในชื่อ “ผู้ตรวจการแผ่นดินของรัฐสภา” และกลายเป็นองค์กรอิสระเต็มตัวในรัฐธรรมนูญ 2550",
+        "en": "Section 215 defines an independent organ briefly: a body set up to be independent in carrying out its duties under the constitution and the law, which must use its powers honestly, fairly, courageously and without bias.\n\nThe 2017 constitution has five independent organs:\n- The Election Commission (EC), sections 222 to 227\n- The Ombudsmen, sections 228 to 231\n- The National Anti-Corruption Commission (NACC), sections 232 to 237\n- The State Audit Commission (SAC), sections 238 to 245\n- The National Human Rights Commission (NHRC), sections 246 to 247\n\nThe State Attorney Organ (section 248) has its own chapter. It is independent, but it is not an independent organ under Chapter 12, and nor is the Constitutional Court, though it shares many rules with them. Exams like to test this line.\n\nMost of these bodies date from the 1997 constitution, whose drafters placed the EC and the anti-corruption commission outside both the legislature and the executive. The Ombudsman began work in 1999 as the “Parliamentary Ombudsman” and became a full independent organ under the 2007 constitution."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "ทำไมต้องมีองค์กรที่ไม่ขึ้นกับใคร",
+        "en": "Why have bodies that answer to no one?"
+      },
+      "body": {
+        "th": "ลองนึกถึงคอนโดที่นิติบุคคลเป็นของคนที่ถือห้องมากที่สุด แล้วคนคนเดียวกันนั้นก็เป็นผู้ตรวจบัญชีค่าส่วนกลาง เป็นคนนับคะแนนในที่ประชุมเจ้าของร่วม และเป็นคนรับเรื่องร้องเรียน เจ้าของห้องที่เหลือจะไม่เชื่ออะไรสักอย่าง\n\nรัฐก็เป็นแบบนั้น ห่วงโซ่คือ\n- รัฐบาลมาจากเสียงข้างมากในสภา และคุมกระทรวงทั้งหมด\n- ถ้าคนนับคะแนนเลือกตั้ง คนตรวจเงินแผ่นดิน และคนสอบสวนการทุจริตอยู่ใต้กระทรวง รัฐบาลก็ตรวจตัวเอง\n- ดังนั้นงานสี่ประเภทจึงถูกยกออกมานอกสายบังคับบัญชาของรัฐบาล คือ กรรมการกีฬา (กกต.) ผู้ตรวจบัญชี (คตง.) ตำรวจตรวจคนมีอำนาจ (ป.ป.ช.) และช่องร้องเรียน (ผู้ตรวจการแผ่นดิน กสม.)\n- แต่ทันทีที่องค์กรไม่ขึ้นกับรัฐบาล มันก็ไม่ขึ้นกับผู้เลือกตั้งด้วย\n\nนี่คือความตึงที่ฝังอยู่ในหมวดนี้ทั้งหมด ยิ่งอิสระมาก ยิ่งรับผิดชอบต่อประชาชนน้อย ทุกกติกาในหมวด 12 คือความพยายามหาจุดสมดุลระหว่างสองขั้วนี้",
+        "en": "Picture a condominium where the biggest owner runs the juristic person, audits the common fees, counts the votes at the owners' meeting, and handles complaints. The other owners would trust nothing.\n\nThe state works the same way. The chain:\n- The government comes from the House majority and controls every ministry.\n- If the people who count votes, audit public money and investigate corruption sit inside ministries, the government audits itself.\n- So four kinds of work are lifted out of the government's chain of command: the referee (EC), the auditor (SAC), the police for the powerful (NACC), and the complaints desk (Ombudsmen, NHRC).\n- But the moment a body stops answering to the government, it also stops answering to voters.\n\nThat tension runs through the whole chapter. The more independent a body is, the less accountable it is to the public. Every rule in Chapter 12 is an attempt to balance the two."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "แม่แบบเดียวใช้ห้าองค์กร",
+        "en": "One template, five organs"
+      },
+      "body": {
+        "th": "จำแม่แบบให้ได้ก่อน แล้วจำข้อยกเว้น จะประหยัดแรงกว่าท่องทีละองค์กรมาก\n\nหนึ่ง คุณสมบัติทั่วไป (มาตรา 216) อายุไม่ต่ำกว่า 45 ปีแต่ไม่เกิน 70 ปี มีสัญชาติไทยโดยการเกิด จบปริญญาตรี ซื่อสัตย์สุจริตเป็นที่ประจักษ์ สุขภาพดี (ยืมจากมาตรา 201) และไม่มีลักษณะต้องห้ามแบบเดียวกับตุลาการศาลรัฐธรรมนูญ (มาตรา 202) เช่น ไม่เป็นสมาชิกพรรคหรือนักการเมืองในสิบปีก่อน\n\nสอง คณะกรรมการสรรหา (มาตรา 217) ใช้คณะเดียวกับที่สรรหาตุลาการศาลรัฐธรรมนูญตามมาตรา 203 ยกเว้นที่นั่งขององค์กรอิสระ ให้เป็นผู้ที่ศาลรัฐธรรมนูญและองค์กรอิสระอื่นแต่งตั้ง องค์กรที่กำลังสรรหาไม่ได้ส่งคนของตัวเอง เพราะไม่ควรเลือกคนมาสืบทอดตัวเอง\n\nสาม วุฒิสภาเห็นชอบ ด้วยคะแนนไม่น้อยกว่ากึ่งหนึ่งของสมาชิกที่มีอยู่ แล้วพระมหากษัตริย์ทรงแต่งตั้งตามคำแนะนำของวุฒิสภา (มาตรา 204 ที่มาตรา 217 นำมาใช้)\n\nสี่ วาระเจ็ดปี วาระเดียว (มาตรา 223, 229, 233, 239, 246)\n\nห้า พ้นตำแหน่ง (มาตรา 218) เมื่อตาย ลาออก ขาดคุณสมบัติ หรือมีลักษณะต้องห้าม และถ้าเกิดข้อสงสัย คณะกรรมการสรรหาเป็นผู้ชี้ขาด\n\nหก จริยธรรมร่วม (มาตรา 219) ศาลรัฐธรรมนูญกับองค์กรอิสระร่วมกันเขียนมาตรฐานทางจริยธรรม ใช้กับตัวเอง และใช้กับ ส.ส. ส.ว. และคณะรัฐมนตรีด้วย\n\nเจ็ด มีสำนักงานของตัวเอง (มาตรา 220) และต้องช่วยเหลือกัน ถ้าเห็นการกระทำผิดที่อยู่ในอำนาจองค์กรอื่น ต้องแจ้งองค์กรนั้น (มาตรา 221)",
+        "en": "Learn the template first, then the exceptions. It is far less work than memorising each organ separately.\n\nOne, general qualifications (section 216): aged at least 45 and not over 70, Thai by birth, a bachelor's degree, evident integrity, good health (borrowed from section 201), and none of the disqualifications that apply to Constitutional Court judges (section 202), such as party membership or political office in the previous ten years.\n\nTwo, the selection committee (section 217): the same committee that selects Constitutional Court judges under section 203, except that the independent-organ seats go to people appointed by the Constitutional Court and the other independent organs. The organ being filled does not send its own appointee, since no one should pick their own successors.\n\nThree, Senate approval by at least half of sitting senators, followed by royal appointment on the Senate's advice (section 204, applied by section 217).\n\nFour, a single seven-year term (sections 223, 229, 233, 239, 246).\n\nFive, leaving office (section 218): death, resignation, losing a qualification or becoming disqualified; any doubt is settled by the selection committee.\n\nSix, shared ethics (section 219): the Constitutional Court and the independent organs jointly write ethical standards that bind themselves and also MPs, senators and the Cabinet.\n\nSeven, each has its own office (section 220), and they must help one another; an organ that sees wrongdoing within another organ's remit must tell that organ (section 221)."
+      }
+    },
+    {
+      "kind": "mnemonic",
+      "title": {
+        "th": "“เลือก ร้อง โกง เงิน สิทธิ” และ 7-3-9-7-7",
+        "en": "“Ballots, Grievances, Graft, Money, Rights” and 7-3-9-7-7"
+      },
+      "body": {
+        "th": "ห้าองค์กรเรียงตามรัฐธรรมนูญ จำเป็นห้าคำ\n- เลือก = กกต. 7 คน\n- ร้อง = ผู้ตรวจการแผ่นดิน 3 คน\n- โกง = ป.ป.ช. 9 คน\n- เงิน = คตง. 7 คน\n- สิทธิ = กสม. 7 คน\n\nตัวเลข 7-3-9-7-7 มีตรรกะ ผู้ตรวจการแผ่นดินมีน้อยที่สุดเพราะงานหลักคือเสนอแนะ ไม่ได้ลงมติลงโทษใคร ป.ป.ช. มีมากที่สุดเท่ากับศาลรัฐธรรมนูญ เพราะต้องลงมติชี้มูลคนที่มีอำนาจที่สุดในประเทศ องค์คณะใหญ่ทำให้ซื้อหรือกดดันยากขึ้น\n\nส่วนวาระ จำว่า “เจ็ดปี วาระเดียว ทุกองค์กร” ไม่มีข้อยกเว้นในหมวดนี้ ยกเว้นผู้ว่าการตรวจเงินแผ่นดิน ซึ่งเป็นตำแหน่งแยก และวาระเป็นไปตาม พ.ร.ป.",
+        "en": "The five organs, in constitutional order, as five words:\n- Ballots = EC, 7 members\n- Grievances = Ombudsmen, 3\n- Graft = NACC, 9\n- Money = SAC, 7\n- Rights = NHRC, 7\n\nThe numbers 7-3-9-7-7 have a logic. The Ombudsmen are the smallest because their main job is recommending; they do not vote to punish anyone. The NACC is the largest, the same size as the Constitutional Court, because it votes on charges against the most powerful people in the country, and a bigger panel is harder to buy or pressure.\n\nFor terms: “seven years, one term, every organ.” The one figure outside the rule is the Auditor-General, a separate post whose term is set by the organic act."
+      }
+    },
+    {
+      "kind": "numbers",
+      "title": {
+        "th": "ตารางเทียบ: จำนวน ที่มา วาระ",
+        "en": "Comparison: size, source, term"
+      },
+      "rows": [
+        {"th": "กกต.", "en": "Election Commission", "value": "7 คน: สรรหา 5 + ที่ประชุมใหญ่ศาลฎีกาเลือก 2 · วุฒิสภาเห็นชอบ · 7 ปี วาระเดียว / 7: 5 selected + 2 chosen by the Supreme Court plenary · Senate approval · 7 years, one term", "sections": [222, 223]},
+        {"th": "ผู้ตรวจการแผ่นดิน", "en": "Ombudsmen", "value": "3 คน: บริหารราชการระดับอธิบดี ≥ 5 ปี 2 + กิจการสาธารณะ ≥ 20 ปี 1 · 7 ปี วาระเดียว / 3: 2 with ≥ 5 years at director-general level + 1 with ≥ 20 years in public-interest work · 7 years, one term", "sections": [228, 229]},
+        {"th": "ป.ป.ช.", "en": "NACC", "value": "9 คน: สรรหา ตามคุณสมบัติ 7 แบบ · 7 ปี วาระเดียว / 9: selected, meeting one of 7 qualification routes · 7 years, one term", "sections": [232, 233]},
+        {"th": "คตง.", "en": "State Audit Commission", "value": "7 คน: สรรหา ประสบการณ์ ≥ 10 ปี · 7 ปี วาระเดียว / 7: selected, ≥ 10 years' relevant experience · 7 years, one term", "sections": [238, 239]},
+        {"th": "ผู้ว่าการตรวจเงินแผ่นดิน", "en": "Auditor-General", "value": "1 คน: คตง. เสนอชื่อ วุฒิสภาเห็นชอบ วาระตาม พ.ร.ป. / 1: nominated by the SAC, Senate approval, term set by organic act", "sections": [241, 243]},
+        {"th": "กสม.", "en": "NHRC", "value": "7 คน: สรรหาตาม พ.ร.ป. โดยผู้แทนองค์กรเอกชนด้านสิทธิมนุษยชนต้องมีส่วนร่วม · 7 ปี วาระเดียว / 7: selected under its own organic act with human-rights NGO participation · 7 years, one term", "sections": [246]},
+        {"th": "อายุ (ทุกองค์กร)", "en": "Age (all organs)", "value": "45–70", "sections": [216]},
+        {"th": "วุฒิสภาเห็นชอบ (ทุกองค์กร)", "en": "Senate approval (all organs)", "value": "≥ กึ่งหนึ่งของ ส.ว. ที่มีอยู่ / at least half of sitting senators", "sections": [204, 217, 241]}
+      ]
+    },
+    {
+      "kind": "numbers",
+      "title": {
+        "th": "ตารางเทียบ: อำนาจหลัก",
+        "en": "Comparison: core powers"
+      },
+      "rows": [
+        {"th": "กกต.", "en": "Election Commission", "value": "จัดและควบคุมการเลือกตั้ง ส.ส. การเลือก ส.ว. เลือกตั้งท้องถิ่น และประชามติ · สั่งเลือกตั้งใหม่ · ระงับสิทธิสมัคร ≤ 1 ปี · ยื่นศาลฎีกาเพิกถอนสิทธิ · ดูแลพรรคการเมือง / Runs and supervises House, Senate, local elections and referendums · orders re-runs · suspends candidacy up to 1 year · asks the Supreme Court to revoke rights · oversees parties", "sections": [224, 225, 226]},
+        {"th": "ผู้ตรวจการแผ่นดิน", "en": "Ombudsmen", "value": "แก้ความเดือดร้อนจากหน่วยงานรัฐ · เสนอแก้กฎหมาย กฎ ขั้นตอน · แจ้ง ครม. เรื่องหมวด 5 · ส่งศาลรัฐธรรมนูญหรือศาลปกครอง / Relieves hardship caused by state agencies · recommends fixing laws, rules, procedures · reports Chapter 5 failures to the Cabinet · refers to the Constitutional or Administrative Court", "sections": [230, 231]},
+        {"th": "ป.ป.ช.", "en": "NACC", "value": "ไต่สวนผู้ดำรงตำแหน่งทางการเมือง ตุลาการศาลรัฐธรรมนูญ องค์กรอิสระ ผู้ว่าการ สตง. · ไต่สวนเจ้าหน้าที่รัฐ · บัญชีทรัพย์สินและหนี้สิน / Investigates politicians, Constitutional Court judges, organ members, the Auditor-General · investigates state officials · asset and liability declarations", "sections": [234, 235]},
+        {"th": "คตง. และผู้ว่าการ", "en": "SAC and Auditor-General", "value": "วางนโยบายและมาตรฐานการตรวจเงิน · ลงโทษทางปกครองตามวินัยการเงินการคลัง · ตรวจผลสัมฤทธิ์ · ส่งเรื่องให้ ป.ป.ช. หรือ กกต. / Sets audit policy and standards · imposes administrative penalties under fiscal-discipline law · performance audits · refers matters to the NACC or EC", "sections": [240, 242, 244, 245]},
+        {"th": "กสม.", "en": "NHRC", "value": "ตรวจสอบรายงานการละเมิดสิทธิ · รายงานสถานการณ์ต่อรัฐสภาและ ครม. · เสนอแก้กฎหมาย · ชี้แจงรายงานที่ไม่ถูกต้อง / Examines and reports rights violations · reports the human-rights situation to Parliament and Cabinet · proposes legal reform · corrects inaccurate reports", "sections": [247]}
+      ]
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "ข้อยกเว้นจากแม่แบบ ที่ข้อสอบชอบถาม",
+        "en": "Exceptions to the template that exams love"
+      },
+      "body": {
+        "th": "- กกต. ไม่ได้มาจากการสรรหาทั้งหมด 2 ใน 7 คนมาจากที่ประชุมใหญ่ศาลฎีกาเลือก ต้องเคยเป็นอธิบดีผู้พิพากษาหรืออธิบดีอัยการขึ้นไปไม่น้อยกว่า 5 ปี (มาตรา 222) เหตุผลคือการเลือกตั้งต้องการคนที่ชั่งพยานหลักฐานเป็น ส่วนอีก 5 คนต้องมีคุณสมบัติแบบเดียวกับ ป.ป.ช. หรือทำงานภาคประชาสังคมมาไม่น้อยกว่า 20 ปี\n- กสม. ไม่ใช้คณะกรรมการสรรหาตามมาตรา 217 แต่ไปตาม พ.ร.ป. ของตัวเอง และต้องให้ผู้แทนองค์กรเอกชนด้านสิทธิมนุษยชนมีส่วนร่วม (มาตรา 246) เพราะมาตรฐานสากลของสถาบันสิทธิมนุษยชนแห่งชาติให้น้ำหนักกับความหลากหลายของผู้สรรหา\n- คตง. มีสองชั้น คณะกรรมการ 7 คนวางนโยบาย ส่วนผู้ว่าการตรวจเงินแผ่นดินเป็นคนทำงานตรวจจริง เป็นหัวหน้าสำนักงาน และรับผิดชอบต่อคณะกรรมการ (มาตรา 241 ถึง 243) คตง. จึงเป็นองค์กรเดียวที่มาตรา 220 ไม่ได้ให้ตั้งหัวหน้าหน่วยธุรการแยก\n- จำนวนขั้นต่ำที่ยังทำงานได้ต่างกัน กกต. เหลือไม่ถึง 4 คน ทำได้เฉพาะเรื่องจำเป็นที่หลีกเลี่ยงไม่ได้ (มาตรา 223) ป.ป.ช. เหลือไม่ถึง 5 คน ทำงานต่อไม่ได้ (มาตรา 233)\n- กกต. มีความคุ้มกัน ระหว่างที่พระราชกฤษฎีกาให้มีการเลือกตั้งหรือประกาศประชามติมีผล ห้ามจับ คุมขัง หรือหมายเรียกกรรมการไปสอบสวน เว้นแต่ได้รับอนุญาตจาก กกต. หรือจับขณะกระทำผิด (มาตรา 227) เพื่อไม่ให้ใครกำจัดกรรมการกลางสนาม",
+        "en": "- Not every EC member is selected. Two of the seven are chosen by the Supreme Court plenary and must have served at least five years at chief-judge or chief-prosecutor level (section 222), because running elections needs people who can weigh evidence. The other five need NACC-type qualifications or at least 20 years in civil society.\n- The NHRC does not use the section 217 committee. Its selection follows its own organic act and must include representatives of human-rights NGOs (section 246), since international standards for national human-rights institutions value a diverse selection body.\n- The SAC has two tiers. The seven-member commission sets policy; the Auditor-General does the actual auditing, heads the office and answers to the commission (sections 241 to 243). That is why the SAC is the one organ section 220 does not give a separate administrative head.\n- The minimum to keep working differs. With fewer than four EC members, only unavoidable necessary acts are allowed (section 223). With fewer than five NACC members, the commission cannot carry on (section 233).\n- EC members have immunity. While a royal decree calling an election, or a referendum announcement, is in force, no member may be arrested, detained or summoned for questioning without the EC's permission unless caught in the act (section 227), so no one can remove the referee mid-match."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "กกต.: ใบเหลือง ใบส้ม ใบแดง",
+        "en": "The EC: yellow, orange and red cards"
+      },
+      "body": {
+        "th": "ศัพท์ใบสีเป็นภาษาพูด ไม่มีในตัวบท แต่ช่วยจำว่าอำนาจไหนเป็นของใคร\n\nใบเหลือง ก่อนประกาศผล ถ้ามีหลักฐานอันควรเชื่อว่าการเลือกตั้งไม่สุจริตหรือเที่ยงธรรม กกต. สั่งเลือกตั้งใหม่ในหน่วยหรือเขตนั้นได้ (มาตรา 225)\n\nใบส้ม ถ้าผู้กระทำเป็นผู้สมัครเองหรือรู้เห็น กกต. สั่งระงับสิทธิสมัครรับเลือกตั้งชั่วคราวได้ไม่เกินหนึ่งปี (มาตรา 224 (4) และ 225) และคำสั่งก่อนประกาศผลนี้เป็นที่สุด\n\nใบแดง การเพิกถอนสิทธิสมัครรับเลือกตั้งหรือสิทธิเลือกตั้ง กกต. ทำเองไม่ได้ ต้องยื่นศาลฎีกา ศาลใช้สำนวนของ กกต. เป็นหลักและไต่สวนเพิ่มได้ ถ้าศาลเห็นว่าผิด เพิกถอนสิทธิ 10 ปี และระหว่างที่ศาลรับคำร้องไว้ ส.ส. หรือ ส.ว. ผู้นั้นต้องหยุดปฏิบัติหน้าที่ สำหรับการเลือกตั้งท้องถิ่น ศาลอุทธรณ์เป็นผู้ตัดสินและเป็นที่สุด (มาตรา 226)\n\nตรรกะของการแบ่งอำนาจ โทษที่หนักและยาวนานต้องผ่านศาล ส่วนโทษเบาและเร่งด่วนให้ กกต. ทำได้เองเพราะการเลือกตั้งรอไม่ได้ นอกจากนี้ กกต. ยังจัดการเลือกตั้งท้องถิ่นและประชามติ ดูแลพรรคการเมือง (มาตรา 224) และเป็นผู้ยื่นคำร้องยุบพรรคตาม พ.ร.ป. ว่าด้วยพรรคการเมือง เช่นกรณีพรรคอนาคตใหม่และพรรคก้าวไกล",
+        "en": "The card colours are everyday shorthand, not legal terms, but they help you remember who holds which power.\n\nYellow: before results are announced, if there is credible evidence that an election was not honest or fair, the EC may order a new vote in that unit or constituency (section 225).\n\nOrange: if the wrongdoer is the candidate, or the candidate knew, the EC may suspend the right to stand for up to one year (sections 224(4) and 225), and this pre-result order is final.\n\nRed: revoking the right to stand, or the right to vote, is beyond the EC. It must petition the Supreme Court, which uses the EC's file as its main record and may inquire further. If the court finds the person guilty, the rights are revoked for ten years, and an MP or senator stops work from the day the court accepts the petition. For local elections the Court of Appeal decides, finally (section 226).\n\nThe logic of the split: heavy, long penalties must pass through a court; light, urgent ones the EC may impose itself, because an election cannot wait. The EC also runs local elections and referendums, oversees political parties (section 224), and files dissolution petitions under the Organic Act on Political Parties, as in the Future Forward and Move Forward cases."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "ใบส้มใบแรกของปี 2562 และราคาของความผิดพลาด",
+        "en": "The first orange card of 2019, and the cost of a mistake"
+      },
+      "year": 2019,
+      "body": {
+        "th": "หลังการเลือกตั้ง 24 มีนาคม 2562 กกต. ให้ใบส้มแก่นายสุรพล เกียรติไชยากร ผู้สมัครพรรคเพื่อไทยที่ชนะในเขต 8 เชียงใหม่ จากการถวายเงิน 2,000 บาทและนาฬิกาแขวนผนังแก่พระในงานบุญช่วงที่กฎหมายเลือกตั้งมีผลแล้ว เขายอมรับว่าถวายจริง แต่ปฏิเสธว่าไม่ได้มุ่งหาเสียง เขตนั้นต้องเลือกตั้งใหม่ และผู้สมัครพรรคอนาคตใหม่ชนะ คะแนนกว่าห้าหมื่นเสียงที่เขาได้ไม่ถูกนับรวมในการคำนวณ ส.ส. บัญชีรายชื่อของพรรค\n\nต่อมา กกต. ยื่นศาลฎีกาให้เพิกถอนสิทธิ Khaosod English รายงานเมื่อกันยายน 2563 ว่าศาลฎีกายกคำร้อง เขาจึงฟ้องเรียกค่าเสียหายจาก กกต. แต่ศาลยกฟ้องคดีนี้ในภายหลัง\n\nคดีนี้สอนสองเรื่อง หนึ่ง อำนาจใบส้มเร็วและแรง เพราะคำสั่งก่อนประกาศผลเป็นที่สุด สอง เมื่อองค์กรที่ใช้อำนาจเร็วตัดสินผิด ผลกระทบไม่ได้ตกกับผู้สมัครคนเดียว แต่เปลี่ยนจำนวนที่นั่งของพรรคและเสียงของผู้เลือกตั้งทั้งเขต นี่คือความตึงระหว่างความเร็วกับความถูกต้อง",
+        "en": "After the 24 March 2019 election the EC gave an orange card to Surapol Kiatchaiyakorn, the Pheu Thai candidate who had won Chiang Mai's eighth constituency, over a gift of 2,000 baht and a wall clock to a monk at a temple event after the election law had taken effect. He admitted the gift but denied it was meant to win votes. The district voted again and a Future Forward candidate won. His more than fifty thousand votes were left out of his party's party-list seat calculation.\n\nThe EC then asked the Supreme Court to revoke his rights. Khaosod English reported in September 2020 that the Supreme Court dismissed the petition. He sued the EC for damages; that suit was later dismissed as well.\n\nTwo lessons. First, the orange card is fast and strong, because a pre-result order is final. Second, when a fast-acting body gets it wrong, the harm does not fall on one candidate alone; it shifts a party's seat count and the voice of a whole district. That is the trade-off between speed and accuracy."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "การเลือก ส.ว. ปี 2567: กกต. คุมกติกาใหม่",
+        "en": "The 2024 Senate selection: the EC runs a new game"
+      },
+      "year": 2024,
+      "body": {
+        "th": "วุฒิสภาชุดแรก 250 คนตามบทเฉพาะกาลมาตรา 269 มาจากการแต่งตั้งตามคำแนะนำของ คสช. เมื่อครบวาระปี 2567 กกต. จัดการเลือก ส.ว. ตามมาตรา 107 เป็นครั้งแรก ผู้สมัครแบ่งเป็น 20 กลุ่มอาชีพและสังคม เลือกกันเองสามระดับ คืออำเภอ จังหวัด และประเทศ ได้กลุ่มละ 10 คน รวม 200 คน ประชาชนทั่วไปไม่ได้ลงคะแนน มีเพียงผู้สมัครที่เลือกกันเอง\n\nกกต. ประกาศรับรองผล 200 คนเมื่อ 10 กรกฎาคม 2567 แม้ยังมีเรื่องร้องเรียนค้างอยู่จำนวนมาก Khaosod English และ International IDEA รายงานข้อกังวลเรื่องการจัดตั้งคะแนนและกติกาที่ซับซ้อน ฝ่าย กกต. ให้เหตุผลว่ากฎหมายให้รับรองผลก่อนได้ และยังตรวจสอบต่อภายหลังได้\n\nเหตุที่เรื่องนี้อยู่ในบทองค์กรอิสระ วุฒิสภาชุดนี้คือผู้ถือกุญแจให้ความเห็นชอบตุลาการศาลรัฐธรรมนูญและกรรมการองค์กรอิสระรุ่นต่อไป กกต. จึงจัดการเลือกคนที่จะมาเห็นชอบ กกต. ชุดถัดไป วงจรนี้คือเหตุผลที่ความน่าเชื่อถือของการเลือก ส.ว. สำคัญเกินกว่าตัววุฒิสภาเอง",
+        "en": "The first Senate of 250 under the transitory section 269 was appointed on the NCPO's recommendation. When its term ended in 2024, the EC ran the section 107 Senate selection for the first time. Candidates registered in 20 occupational and social groups and voted among themselves at three levels, district, province and nation, ending with 10 per group, 200 in all. The general public did not vote; only the candidates did.\n\nThe EC certified the 200 on 10 July 2024 with many complaints still pending. Khaosod English and International IDEA reported concerns about organised bloc voting and convoluted rules. The EC's position was that the law allowed certification first and investigation afterwards.\n\nWhy this belongs in a chapter on independent organs: this Senate holds the key to approving the next Constitutional Court judges and independent-organ members. The EC organised the selection of the people who will approve the next EC. That loop is why the credibility of the Senate selection matters beyond the Senate itself."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "ผู้ตรวจการแผ่นดิน: ช่องร้องเรียนที่มีเส้นตาย",
+        "en": "The Ombudsmen: a complaints desk with deadlines"
+      },
+      "body": {
+        "th": "ผู้ตรวจการแผ่นดินมี 3 คน 2 คนต้องมีประสบการณ์บริหารราชการระดับไม่ต่ำกว่าอธิบดีหรือเทียบเท่ามาไม่น้อยกว่า 5 ปี อีก 1 คนต้องมีประสบการณ์ดำเนินกิจการสาธารณะไม่น้อยกว่า 20 ปี (มาตรา 228) วาระ 7 ปีวาระเดียว (มาตรา 229)\n\nหน้าที่ตามมาตรา 230\n- เสนอแนะหน่วยงานรัฐให้ปรับปรุงกฎหมาย กฎ ระเบียบ คำสั่ง หรือขั้นตอนที่ทำให้ประชาชนเดือดร้อน ไม่เป็นธรรม หรือเป็นภาระเกินจำเป็น\n- แสวงหาข้อเท็จจริงเมื่อมีคนเดือดร้อนเพราะเจ้าหน้าที่ไม่ทำตามกฎหมายหรือทำเกินอำนาจ แล้วเสนอแนะให้แก้\n- รายงานคณะรัฐมนตรีเมื่อหน่วยงานรัฐยังไม่ทำตามหมวด 5 หน้าที่ของรัฐ\n- ถ้าหน่วยงานไม่ทำตามข้อเสนอแนะโดยไม่มีเหตุผลสมควร แจ้งคณะรัฐมนตรีให้สั่งการ และถ้าเป็นเรื่องละเมิดสิทธิมนุษยชน ส่งต่อ กสม.\n\nรายละเอียดตาม พ.ร.ป. ว่าด้วยผู้ตรวจการแผ่นดิน พ.ศ. 2560 (ตามคำอธิบายของสำนักงานผู้ตรวจการแผ่นดิน)\n- ข้อเสนอแนะให้แก้กฎหมาย กฎ หรือขั้นตอน หน่วยงานต้องดำเนินการภายใน 120 วัน ขยายได้อีกไม่เกิน 60 วัน\n- ข้อเสนอแนะให้แก้ความเดือดร้อนของบุคคล หัวหน้าหน่วยงานต้องดำเนินการภายใน 30 วัน\n- ทำรายงานประจำปีเสนอคณะรัฐมนตรีและรัฐสภาภายใน 180 วันนับแต่สิ้นปีงบประมาณ และเผยแพร่ต่อประชาชน\n- ผู้ไม่ให้ความร่วมมือโดยไม่มีเหตุอันสมควร หรือผู้เปิดเผยตัวตนของผู้ร้องเรียน มีโทษจำคุกไม่เกินหกเดือน หรือปรับไม่เกินหนึ่งหมื่นบาท หรือทั้งจำทั้งปรับ\n- เรื่องที่รับไม่ได้ เช่น นโยบายของรัฐบาล เรื่องที่อยู่ระหว่างการพิจารณาของศาลหรือศาลตัดสินถึงที่สุดแล้ว เรื่องที่อยู่ในอำนาจองค์กรอิสระอื่น เรื่องที่ได้รับการแก้ไขแล้ว และเรื่องที่ผู้ตรวจการแผ่นดินเคยสรุปผลไปแล้ว\n- ร้องเรียนได้โดยไม่เสียค่าใช้จ่าย ทางหนึ่งคือสายด่วน 1676",
+        "en": "There are three Ombudsmen: two with at least five years in state administration at director-general level or equivalent, one with at least twenty years in public-interest work (section 228). One seven-year term (section 229).\n\nDuties under section 230:\n- Recommend that state agencies fix any law, rule, regulation, order or procedure that causes hardship or unfairness or burdens people more than necessary.\n- Find the facts when someone suffers because officials failed to follow the law or acted beyond their powers, then recommend a remedy.\n- Report to the Cabinet when state agencies have not met their duties under Chapter 5, Duties of the State.\n- If an agency ignores a recommendation without good reason, tell the Cabinet so it can order action; human-rights violations are passed to the NHRC.\n\nDetails under the Organic Act on the Ombudsmen of 2017 (as explained by the Office of the Ombudsman):\n- A recommendation to change a law, rule or procedure must be acted on within 120 days, extendable by up to 60.\n- A recommendation to relieve an individual's hardship must be acted on by the agency head within 30 days.\n- An annual report goes to the Cabinet and Parliament within 180 days of the end of the fiscal year, and is published.\n- Refusing to cooperate without good reason, or revealing a complainant's identity, carries up to six months in prison, a fine of up to 10,000 baht, or both.\n- Matters it may not accept include government policy, cases before a court or already finally decided, matters within another independent organ's remit, matters already resolved, and matters the Ombudsmen have already concluded.\n- Complaints are free; one channel is the 1676 hotline."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "ส่งศาลไหน: กับดักคลาสสิกของผู้ตรวจการแผ่นดิน",
+        "en": "Which court? The Ombudsmen's classic trap"
+      },
+      "body": {
+        "th": "มาตรา 231 ให้ผู้ตรวจการแผ่นดินเสนอเรื่องต่อศาลได้สองศาล วิธีเลือกขึ้นอยู่กับคำถามเดียว สิ่งที่มีปัญหาเป็น “บทบัญญัติแห่งกฎหมาย” หรือเป็น “กฎ คำสั่ง หรือการกระทำ”\n\nบทบัญญัติแห่งกฎหมาย ไปศาลรัฐธรรมนูญ (มาตรา 231 (1)) คือกฎหมายที่ออกโดยองค์กรที่ใช้อำนาจนิติบัญญัติ ได้แก่ พระราชบัญญัติประกอบรัฐธรรมนูญ พระราชบัญญัติ พระราชกำหนดที่รัฐสภาอนุมัติแล้ว และประกาศคณะปฏิวัติที่มีค่าเท่าพระราชบัญญัติ\n\nกฎ คำสั่ง หรือการกระทำอื่นของหน่วยงานรัฐหรือเจ้าหน้าที่ ไปศาลปกครอง (มาตรา 231 (2)) เช่น กฎกระทรวง ระเบียบ ประกาศ ข้อบัญญัติท้องถิ่น และคำสั่งทางปกครอง แม้ปัญหาจะเป็นเรื่องขัดรัฐธรรมนูญก็ตาม\n\nกับดัก ข้อสอบจะถามว่า “กฎกระทรวงขัดรัฐธรรมนูญ ผู้ตรวจการแผ่นดินส่งศาลไหน” คนที่เห็นคำว่า “รัฐธรรมนูญ” จะตอบศาลรัฐธรรมนูญ คำตอบที่ถูกคือศาลปกครอง เพราะดูที่ “ตัวของสิ่งที่มีปัญหา” ไม่ใช่ดูที่ “กฎหมายที่มันขัด”\n\nอีกบทบาทหนึ่ง ผู้ตรวจการแผ่นดินเป็นด่านกรองคำร้องตามมาตรา 213 ตาม พ.ร.ป. ว่าด้วยวิธีพิจารณาของศาลรัฐธรรมนูญ พ.ศ. 2561 ผู้ถูกละเมิดสิทธิต้องยื่นต่อผู้ตรวจการแผ่นดินก่อนภายใน 90 วันนับแต่รู้หรือควรรู้ถึงการละเมิด (เว้นแต่การละเมิดยังมีอยู่) ผู้ตรวจการแผ่นดินมีเวลาพิจารณา 60 วัน จากนั้นผู้ร้องจึงมีสิทธิยื่นต่อศาลรัฐธรรมนูญโดยตรง ช่องทางนี้ใช้ไม่ได้กับการกระทำของรัฐบาล เรื่องที่มีช่องทางเฉพาะอยู่แล้ว เรื่องที่อยู่ในศาลอื่นหรือศาลตัดสินแล้ว และการกระทำของคณะกรรมการตามมาตรา 192 จำว่า “90 ยื่น 60 พิจารณา”",
+        "en": "Section 231 lets the Ombudsmen take a matter to two different courts. The choice turns on one question: is the problem a “provision of law”, or a “rule, order or act”?\n\nA provision of law goes to the Constitutional Court (section 231(1)). That means law made by a body exercising legislative power: organic acts, Acts, emergency decrees already approved by Parliament, and revolutionary announcements with the force of an Act.\n\nA rule, order or other act of a state agency or official goes to the Administrative Court (section 231(2)): ministerial regulations, regulations, notifications, local ordinances and administrative orders, even when the complaint is that they breach the constitution.\n\nThe trap: an exam asks, “A ministerial regulation conflicts with the constitution. Where do the Ombudsmen send it?” Anyone who reacts to the word “constitution” answers the Constitutional Court. The right answer is the Administrative Court, because you classify the thing being challenged, not the law it is said to break.\n\nA second role: the Ombudsmen filter section 213 petitions. Under the Organic Act on Constitutional Court Procedure of 2018, a person whose rights were violated must first petition the Ombudsmen within 90 days of knowing, or when they should have known, of the violation (unless it is still continuing). The Ombudsmen have 60 days to consider it, after which the petitioner may go to the Constitutional Court directly. The route is closed for acts of government, matters with their own dedicated route, matters before or already decided by another court, and acts of the section 192 committee. Remember “90 to file, 60 to decide.”"
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "ป.ป.ช.: ตำรวจของคนมีอำนาจ",
+        "en": "The NACC: police for the powerful"
+      },
+      "body": {
+        "th": "ป.ป.ช. มี 9 คน (มาตรา 232) ต้องซื่อสัตย์สุจริตเป็นที่ประจักษ์ มีความเชี่ยวชาญด้านกฎหมาย บัญชี เศรษฐศาสตร์ การบริหารราชการ หรือด้านอื่นที่เป็นประโยชน์ และต้องมีคุณสมบัติอย่างใดอย่างหนึ่งในเจ็ดแบบ เช่น เคยเป็นอธิบดีผู้พิพากษาหรืออธิบดีอัยการ เคยเป็นอธิบดี เคยเป็นศาสตราจารย์ ประกอบวิชาชีพมาไม่น้อยกว่า 20 ปี หรือเป็นผู้บริหารระดับสูงของบริษัทมหาชนมาไม่น้อยกว่า 10 ปี\n\nอำนาจตามมาตรา 234\n- ไต่สวนผู้ดำรงตำแหน่งทางการเมือง ตุลาการศาลรัฐธรรมนูญ กรรมการองค์กรอิสระ และผู้ว่าการตรวจเงินแผ่นดิน ที่ถูกกล่าวหาว่าร่ำรวยผิดปกติ ทุจริตต่อหน้าที่ จงใจใช้อำนาจขัดรัฐธรรมนูญหรือกฎหมาย หรือฝ่าฝืนมาตรฐานจริยธรรมอย่างร้ายแรง\n- ไต่สวนและวินิจฉัยเจ้าหน้าที่ของรัฐที่ร่ำรวยผิดปกติหรือทุจริต\n- รับและตรวจบัญชีทรัพย์สินและหนี้สินของผู้ดำรงตำแหน่ง คู่สมรส และบุตรที่ยังไม่บรรลุนิติภาวะ แล้วเปิดเผยผล\n\nเส้นทางคดีตามมาตรา 235\n- ป.ป.ช. ต้องมีมติไม่น้อยกว่ากึ่งหนึ่งของกรรมการที่มีอยู่\n- ถ้าเป็นการฝ่าฝืนจริยธรรมร้ายแรง ส่งศาลฎีกา\n- ถ้าเป็นความผิดอื่น ส่งสำนวนให้อัยการสูงสุดฟ้องศาลฎีกาแผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมือง\n- เมื่อศาลรับฟ้อง ผู้ถูกกล่าวหาหยุดปฏิบัติหน้าที่ ถ้าศาลพิพากษาว่าผิด พ้นตำแหน่งนับแต่วันหยุดปฏิบัติหน้าที่ ถูกเพิกถอนสิทธิสมัครรับเลือกตั้ง และอาจถูกเพิกถอนสิทธิเลือกตั้งไม่เกิน 10 ปี\n- มาตรานี้กำหนดด้วยว่า ผู้ถูกเพิกถอนสิทธิสมัครรับเลือกตั้งไม่ว่าในกรณีใด ไม่มีสิทธิสมัครรับเลือกตั้งตลอดไป และดำรงตำแหน่งทางการเมืองไม่ได้\n- ทรัพย์สินที่ได้จากการร่ำรวยผิดปกติหรือทุจริตตกเป็นของแผ่นดิน",
+        "en": "The NACC has nine members (section 232). They must have evident integrity and expertise in law, accounting, economics, public administration or another useful field, and meet one of seven qualification routes, such as having served as a chief judge or chief prosecutor, as a director-general, as a professor, in a licensed profession for at least 20 years, or as a senior executive of a public company for at least 10 years.\n\nPowers under section 234:\n- Investigate politicians, Constitutional Court judges, independent-organ members and the Auditor-General accused of unusual wealth, corruption, deliberately using power against the constitution or the law, or seriously breaching ethical standards.\n- Investigate and decide on state officials accused of unusual wealth or corruption.\n- Receive and check the asset and liability declarations of office-holders, their spouses and minor children, and publish the results.\n\nThe case route under section 235:\n- The NACC must decide by at least half of its sitting members.\n- A serious ethics breach goes to the Supreme Court.\n- Other offences go to the Attorney-General to prosecute before the Supreme Court's Criminal Division for Persons Holding Political Positions.\n- Once the court accepts the case, the accused stops work. If convicted, they leave office from the day they stopped work, lose the right to stand for election, and may lose the right to vote for up to ten years.\n- The section adds that anyone whose right to stand has been revoked, in any case, may never stand for election again and may not hold any political position.\n- Assets gained through unusual wealth or corruption are forfeited to the state."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "ห้ามลงสมัครตลอดชีวิต: คดีจริยธรรมของ ส.ส. คนหนึ่ง",
+        "en": "A lifetime ban: an MP's ethics case"
+      },
+      "year": 2023,
+      "body": {
+        "th": "ปี 2562 มีผู้ร้องเรียนต่อ ป.ป.ช. เรื่องภาพที่ ช่อ พรรณิการ์ วานิช ส.ส. พรรคอนาคตใหม่ โพสต์ลงเฟซบุ๊กตั้งแต่ปี 2553 ก่อนเข้าสู่การเมือง 28 กุมภาพันธ์ 2565 ป.ป.ช. มีมติเอกฉันท์ว่าเป็นการฝ่าฝืนมาตรฐานจริยธรรมอย่างร้ายแรง และส่งเรื่องให้ศาลฎีกาตามมาตรา 235 (1) 20 กันยายน 2566 ศาลฎีกาพิพากษาว่าเธอฝ่าฝืนมาตรฐานจริยธรรมที่กำหนดให้ผู้ดำรงตำแหน่งต้องธำรงไว้ซึ่งสถาบันพระมหากษัตริย์ และเพิกถอนสิทธิสมัครรับเลือกตั้งตลอดไป แต่ไม่เพิกถอนสิทธิเลือกตั้ง\n\nนี่คือห่วงโซ่ทั้งหมดของบทนี้ในคดีเดียว มาตรฐานจริยธรรมที่ศาลรัฐธรรมนูญและองค์กรอิสระเขียน (มาตรา 219) ใช้กับ ส.ส. ป.ป.ช. ไต่สวน (มาตรา 234) ศาลฎีกาตัดสิน (มาตรา 235) และผลคือห้ามลงสมัครตลอดชีวิต\n\nฝ่ายที่เห็นด้วยมองว่าผู้แทนราษฎรต้องรักษามาตรฐานสูงกว่าคนทั่วไป ฝ่ายวิจารณ์ตั้งคำถามสามข้อ การกระทำเกิดก่อนเธอดำรงตำแหน่ง มาตรฐานจริยธรรมเขียนโดยองค์กรที่ไม่ได้มาจากการเลือกตั้งแต่ใช้ตัดสิทธิคนที่ประชาชนเลือก และโทษตลอดชีวิตหนักกว่าความผิดอาญาหลายฐาน",
+        "en": "In 2019 a complaint reached the NACC about images that Pannika Wanich, a Future Forward MP, had posted on Facebook in 2010, before she entered politics. On 28 February 2022 the NACC unanimously found a serious ethics breach and sent the case to the Supreme Court under section 235(1). On 20 September 2023 the Supreme Court ruled that she had breached the ethical standard requiring office-holders to uphold the monarchy, and banned her from standing for election for life, without taking away her right to vote.\n\nThe whole chain of this chapter fits in one case. Ethical standards written by the Constitutional Court and the independent organs (section 219) apply to MPs; the NACC investigates (section 234); the Supreme Court decides (section 235); the result is a lifetime ban.\n\nSupporters say representatives must meet a higher standard than ordinary citizens. Critics ask three questions: the conduct came before she held office; the standards were written by unelected bodies yet are used to remove people the voters chose; and a lifetime ban is heavier than the penalty for many crimes."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "คดีนาฬิกาหรู: เมื่อผู้ตรวจสอบถูกตั้งคำถาม",
+        "en": "The luxury watches: when the watchdog is questioned"
+      },
+      "year": 2018,
+      "body": {
+        "th": "ปลายปี 2560 ภาพของพลเอกประวิตร วงษ์สุวรรณ รองนายกรัฐมนตรี สวมนาฬิกาหรูหลายเรือนถูกเผยแพร่ ขณะที่บัญชีทรัพย์สินที่ยื่นไว้ไม่มีนาฬิกาเหล่านั้น ป.ป.ช. ไต่สวน และปลายเดือนธันวาคม 2561 มีมติ 5 ต่อ 3 ว่าหลักฐานไม่พอจะชี้ว่าจงใจยื่นบัญชีเท็จ เพราะนาฬิกาเป็นของที่ยืมจากเพื่อนที่เสียชีวิตแล้ว ประธาน ป.ป.ช. ถอนตัวจากการพิจารณาเพราะถูกมองว่าใกล้ชิดกับผู้ถูกกล่าวหา\n\nต่อมา ป.ป.ช. อธิบายว่าการยืมเป็น “การยืมใช้คงรูป” ซึ่งแบบบัญชีทรัพย์สินไม่ได้กำหนดให้ต้องแจ้ง บทบรรณาธิการของ Bangkok Post วิจารณ์ว่าเหตุผลอ่อนและการไต่สวนไม่ครบถ้วน และมีผู้ชี้ว่าไม่สอดคล้องกับคดีก่อนหน้าที่เจ้าหน้าที่รายหนึ่งอ้างว่ายืมรถมา\n\nไม่ว่าจะเห็นอย่างไรกับผลคดี เรื่องนี้แสดงช่องว่างเชิงโครงสร้าง ถ้าประชาชนไม่เชื่อมติของ ป.ป.ช. จะทำอะไรได้ รัฐธรรมนูญตอบไว้ในมาตรา 236 และ 237 ซึ่งดูได้ในหัวข้อถัดไป แต่เส้นทางนั้นใช้เมื่อกล่าวหาว่ากรรมการ ป.ป.ช. เองประพฤติมิชอบ ไม่ใช่เมื่อแค่ไม่เห็นด้วยกับมติ",
+        "en": "In late 2017 photographs showed Deputy Prime Minister Prawit Wongsuwan wearing a series of luxury watches that did not appear in his asset declaration. The NACC investigated and, at the end of December 2018, voted 5 to 3 that there was not enough evidence of a deliberately false declaration, since the watches had been borrowed from a friend who had since died. The NACC chairman recused himself because he was seen as close to the accused.\n\nThe NACC later explained that the arrangement was a loan for use, which the declaration form does not require to be listed. A Bangkok Post editorial called the reasoning weak and the inquiry incomplete, and others pointed to an earlier case where an official who claimed to have borrowed a car was treated differently.\n\nWhatever one thinks of the outcome, the case exposes a structural gap: what can the public do if it does not trust an NACC decision? The constitution's answer is sections 236 and 237, set out next, but that route applies when an NACC member is accused of misconduct, not when people simply disagree with a ruling."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "ใครตรวจสอบ ป.ป.ช.",
+        "en": "Who investigates the NACC?"
+      },
+      "body": {
+        "th": "ป.ป.ช. ไต่สวนตุลาการศาลรัฐธรรมนูญและกรรมการองค์กรอิสระทุกองค์กรได้ แต่ ป.ป.ช. จะไต่สวนตัวเองไม่ได้ เพราะขัดหลักไม่มีใครเป็นผู้พิพากษาในคดีของตัวเอง รัฐธรรมนูญจึงสร้างทางออกพิเศษ\n\n- ผู้มีสิทธิกล่าวหา ส.ส. ส.ว. หรือสมาชิกทั้งสองสภารวมกันไม่น้อยกว่าหนึ่งในห้าของสมาชิกทั้งหมดที่มีอยู่ หรือประชาชนผู้มีสิทธิเลือกตั้งไม่น้อยกว่า 20,000 คน (มาตรา 236)\n- ยื่นต่อประธานรัฐสภาพร้อมหลักฐาน ถ้าประธานรัฐสภาเห็นว่ามีเหตุอันควรสงสัย ส่งเรื่องให้ประธานศาลฎีกาตั้งคณะผู้ไต่สวนอิสระ จากผู้ที่เป็นกลางทางการเมืองและซื่อสัตย์สุจริต\n- ผลการไต่สวน (มาตรา 237) ถ้าไม่มีมูล ยุติเรื่องและเป็นที่สุด ถ้าฝ่าฝืนจริยธรรมร้ายแรง ส่งศาลฎีกา ถ้าเป็นความผิดอื่น ส่งอัยการสูงสุดฟ้องศาลฎีกาแผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมือง\n\nจำเป็นวงกลม ป.ป.ช. ตรวจทุกคน → คณะผู้ไต่สวนอิสระตรวจ ป.ป.ช. → ศาลฎีกาตัดสินทั้งหมด จุดที่ยังเปิดอยู่ คือประตูเริ่มต้นต้องผ่านประธานรัฐสภาซึ่งเป็นนักการเมือง และต้องใช้รายชื่อจำนวนมาก",
+        "en": "The NACC can investigate Constitutional Court judges and the members of every other independent organ. It cannot investigate itself, since no one may judge their own case. So the constitution builds a special exit.\n\n- Who may accuse: MPs, senators or members of both houses together amounting to at least one-fifth of all sitting members, or at least 20,000 eligible voters (section 236).\n- They file with the President of the National Assembly with supporting evidence. If the President finds reasonable grounds for suspicion, the matter goes to the President of the Supreme Court, who appoints an independent inquiry panel of politically neutral people of evident integrity.\n- Outcomes (section 237): if groundless, the matter ends, finally; if a serious ethics breach, it goes to the Supreme Court; if another offence, to the Attorney-General to prosecute before the Supreme Court's Criminal Division for Persons Holding Political Positions.\n\nRemember it as a circle: the NACC checks everyone → an independent panel checks the NACC → the Supreme Court decides all of it. What remains open: the entry door runs through the President of the National Assembly, a politician, and needs a large number of names."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "คตง. และผู้ว่าการตรวจเงินแผ่นดิน: สัญญาณเตือนไฟไหม้ทางการคลัง",
+        "en": "The SAC and the Auditor-General: a fiscal fire alarm"
+      },
+      "body": {
+        "th": "คตง. มี 7 คน ต้องมีประสบการณ์ด้านการตรวจเงินแผ่นดิน กฎหมาย บัญชี การตรวจสอบภายใน การเงินการคลัง หรือด้านอื่นที่เป็นประโยชน์ ไม่น้อยกว่า 10 ปี (มาตรา 238) วาระ 7 ปีวาระเดียว (มาตรา 239)\n\nแบ่งงานกันแบบคณะกรรมการบริษัทกับผู้จัดการ\n- คตง. วางนโยบายและมาตรฐานการตรวจเงินแผ่นดิน กำกับการตรวจ ให้คำแนะนำหน่วยงานรัฐ และสั่งลงโทษทางปกครองเมื่อมีการทำผิดกฎหมายว่าด้วยวินัยการเงินการคลังของรัฐ ผู้ถูกลงโทษอุทธรณ์ต่อศาลปกครองสูงสุดได้ภายใน 90 วัน (มาตรา 240)\n- ผู้ว่าการตรวจเงินแผ่นดินลงมือตรวจ ทั้งตรวจว่าใช้เงินถูกระเบียบหรือไม่ และตรวจผลสัมฤทธิ์ว่าคุ้มค่าหรือไม่ (มาตรา 242) มีความอิสระ แต่รับผิดชอบต่อ คตง. และเป็นหัวหน้าสำนักงาน (มาตรา 243)\n\nเมื่อเจอสิ่งที่ตัวเองไม่มีอำนาจจัดการ เช่น การทุจริต หรือการใช้เงินที่ทำให้การเลือกตั้งไม่สุจริต ผู้ว่าการต้องแจ้ง ป.ป.ช. หรือ กกต. และเอกสารที่ผู้ว่าการตรวจไว้ให้ถือเป็นส่วนหนึ่งของสำนวนขององค์กรนั้นทันที ไม่ต้องเริ่มนับหนึ่งใหม่ (มาตรา 244)\n\nสัญญาณเตือนไฟไหม้อยู่ที่มาตรา 245 ถ้าผู้ว่าการพบการกระทำที่อาจทำให้การเงินการคลังของรัฐเสียหายร้ายแรง และ คตง. เห็นพ้อง ให้ประชุมร่วมกับ กกต. และ ป.ป.ช. ถ้าที่ประชุมร่วมเห็นพ้อง ต้องมีหนังสือแจ้งสภาผู้แทนราษฎร วุฒิสภา และคณะรัฐมนตรีโดยไม่ชักช้า และเปิดเผยต่อประชาชน สามองค์กรต้องเห็นตรงกันก่อนกดสัญญาณ เพื่อไม่ให้องค์กรเดียวใช้อำนาจนี้เล่นการเมือง",
+        "en": "The SAC has seven members, each with at least ten years' experience in state audit, law, accounting, internal audit, public finance or another useful field (section 238). One seven-year term (section 239).\n\nThe work is split like a company board and its managing director:\n- The SAC sets audit policy and standards, supervises audits, advises state agencies, and imposes administrative penalties for breaches of the fiscal-discipline law. Those penalised may appeal to the Supreme Administrative Court within 90 days (section 240).\n- The Auditor-General does the auditing: checking that money was spent by the rules, and auditing performance to see whether it was worth it (section 242). The Auditor-General is independent but answers to the SAC and heads its office (section 243).\n\nWhen the Auditor-General finds something outside his or her own power, such as corruption or spending that could taint an election, the NACC or the EC must be told, and the Auditor-General's documents count as part of that body's file at once; no one has to start from scratch (section 244).\n\nThe fire alarm is section 245. If the Auditor-General finds conduct that could seriously damage public finances and the SAC agrees, it must consult the EC and the NACC. If that joint meeting agrees, they must notify the House, the Senate and the Cabinet without delay and publish the findings. Three organs must agree before the alarm sounds, so no single body can use it as a political weapon."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "ตึกของผู้ตรวจที่ถล่มเอง",
+        "en": "The auditor's own tower"
+      },
+      "year": 2025,
+      "body": {
+        "th": "บ่ายวันที่ 28 มีนาคม 2568 แผ่นดินไหวขนาดใหญ่ในเมียนมาสั่นถึงกรุงเทพฯ อาคารสำนักงานแห่งใหม่ของสำนักงานการตรวจเงินแผ่นดินย่านจตุจักร ซึ่งสูง 30 กว่าชั้นและยังก่อสร้างไม่เสร็จ พังถล่มลงมา เป็นอาคารสูงที่อยู่ระหว่างก่อสร้างหลังเดียวในกรุงเทพฯ ที่ถล่ม คนงานจำนวนมากเสียชีวิตและสูญหาย รัฐบาลสั่งตรวจสอบหาสาเหตุ กรรมาธิการของสภาเรียกผู้ว่าการตรวจเงินแผ่นดินมาชี้แจง ฝ่ายสำนักงานยืนยันว่าแบบอาคารรองรับแผ่นดินไหว และกำลังจะบอกเลิกสัญญาเพราะงานล่าช้า\n\nบทเรียนในบทนี้ไม่ได้อยู่ที่การหาว่าใครผิด ซึ่งเป็นเรื่องของกระบวนการสอบสวน แต่อยู่ที่หลักง่าย ๆ องค์กรที่มีหน้าที่ตรวจการใช้เงินของคนอื่น ก็ใช้เงินแผ่นดินจัดซื้อจัดจ้างเหมือนหน่วยงานอื่น และต้องถูกตรวจได้เช่นกัน ความเป็นอิสระไม่ได้แปลว่าไม่ต้องถูกตรวจ",
+        "en": "On the afternoon of 28 March 2025 a large earthquake in Myanmar shook Bangkok. The State Audit Office's new headquarters in Chatuchak, a tower of more than thirty storeys still under construction, collapsed. It was the only high-rise under construction in Bangkok to fall. Many workers were killed or went missing. The government ordered an inquiry into the cause, a House committee summoned the Auditor-General, and the office maintained that the building was designed to resist earthquakes and that it had been moving to terminate the contract over delays.\n\nThe lesson for this chapter is not who was at fault; that is for the investigations. It is a simple principle. A body whose job is to check other people's spending also spends public money on procurement like any other agency, and must be open to checking too. Independence does not mean being beyond audit."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "กสม.: องค์กรที่ถูกให้คะแนนจากโลก",
+        "en": "The NHRC: an organ graded by the world"
+      },
+      "body": {
+        "th": "กสม. มี 7 คน ต้องมีความรู้และประสบการณ์ด้านการคุ้มครองสิทธิเสรีภาพ เป็นกลางทางการเมือง และซื่อสัตย์สุจริต (มาตรา 246) วาระ 7 ปีวาระเดียว คุณสมบัติและการสรรหาเป็นไปตาม พ.ร.ป. ซึ่งต้องให้ผู้แทนองค์กรเอกชนด้านสิทธิมนุษยชนมีส่วนร่วม\n\nหน้าที่ตามมาตรา 247\n- ตรวจสอบและรายงานข้อเท็จจริงเรื่องการละเมิดสิทธิมนุษยชนทุกกรณีโดยไม่ล่าช้า และเสนอมาตรการป้องกัน แก้ไข และเยียวยา\n- ทำรายงานประเมินสถานการณ์สิทธิมนุษยชนของประเทศเสนอรัฐสภาและคณะรัฐมนตรี และเผยแพร่ต่อประชาชน\n- เสนอแนะการแก้กฎหมายให้สอดคล้องกับหลักสิทธิมนุษยชน\n- ชี้แจงและรายงานข้อเท็จจริงโดยไม่ชักช้า เมื่อมีการรายงานสถานการณ์สิทธิมนุษยชนในประเทศไทยที่ไม่ถูกต้องหรือไม่เป็นธรรม\n- สร้างความตระหนักเรื่องสิทธิมนุษยชนในสังคม\n\nคณะรัฐมนตรีต้องปรับปรุงแก้ไขตามรายงานโดยเร็ว ถ้าทำไม่ได้ต้องแจ้งเหตุผล และ กสม. ต้องคำนึงถึงความผาสุกของประชาชนและประโยชน์ส่วนรวมของชาติ\n\nจุดที่ถูกถกเถียงคือข้อสี่ ฝ่ายวิจารณ์มองว่าการให้ กสม. มีหน้าที่ “ชี้แจงแทน” เมื่อต่างประเทศรายงานเรื่องไทย อาจทำให้องค์กรตรวจสอบรัฐกลายเป็นผู้ปกป้องภาพลักษณ์ของรัฐ ฝ่ายที่เห็นด้วยตอบว่าข้อมูลที่ผิดก็เป็นปัญหา และองค์กรที่มีข้อเท็จจริงควรเป็นผู้แก้",
+        "en": "The NHRC has seven members with knowledge and experience in protecting rights and liberties, who are politically neutral and of evident integrity (section 246). One seven-year term. Qualifications and selection are set by its organic act, which must give human-rights NGO representatives a part in the selection.\n\nDuties under section 247:\n- Examine and report the facts of every human-rights violation without delay, and propose measures to prevent, correct and remedy them.\n- Report on the country's human-rights situation to Parliament and the Cabinet, and publish it.\n- Recommend changes to laws so they fit human-rights principles.\n- Clarify and report the facts without delay when the human-rights situation in Thailand is reported inaccurately or unfairly.\n- Build awareness of human rights across society.\n\nThe Cabinet must act on its reports promptly or explain why it cannot, and the NHRC must take into account the well-being of the Thai people and the common interest of the nation.\n\nThe contested item is the fourth. Critics argue that giving the NHRC a duty to answer foreign reports about Thailand risks turning a body meant to check the state into a defender of the state's image. Supporters reply that inaccurate information is a problem too, and the body holding the facts should correct it."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "จากระดับ A ลงไป B แล้วกลับมา A",
+        "en": "From A status down to B, and back to A"
+      },
+      "year": 2022,
+      "body": {
+        "th": "สถาบันสิทธิมนุษยชนแห่งชาติทั่วโลกถูกประเมินโดยพันธมิตรระดับโลกของสถาบันสิทธิมนุษยชนแห่งชาติ (GANHRI) ตามหลักการปารีส ระดับ A หมายถึงสอดคล้องเต็มที่ ระดับ B หมายถึงสอดคล้องบางส่วน\n\nรายงานการประเมินเดือนพฤศจิกายน 2558 เสนอลด กสม. ไทยจาก A เป็น B โดยชี้ปัญหาเรื่องกระบวนการสรรหากรรมการ ความล่าช้าในการตอบสนองต่อเรื่องสิทธิ และข้อสงสัยเรื่องความเป็นอิสระ กสม. ยื่นขอประเมินใหม่ในปี 2561 การพิจารณาถูกเลื่อนออกไป จนเดือนมีนาคม 2565 คณะอนุกรรมการประเมินสถานะปรับกลับเป็นระดับ A ระหว่างนั้น ทั้งในปี 2560 กรรมการ กสม. ทั้งคณะถูกให้พ้นตำแหน่งโดย พ.ร.ป. ฉบับใหม่ ซึ่งผู้ร่างอ้างการถูกลดระดับเป็นเหตุผลหนึ่ง\n\nบทเรียน ความเป็นอิสระไม่ใช่สิ่งที่รัฐธรรมนูญประกาศแล้วจบ มันถูกวัดจากภายนอกได้ และวัดจากสิ่งที่จับต้องได้ เช่น ใครเป็นคนสรรหา องค์กรเอกชนเข้าร่วมไหม และองค์กรกล้าพูดเรื่องที่รัฐไม่อยากได้ยินหรือเปล่า ข้อกำหนดเรื่องผู้แทนองค์กรเอกชนในมาตรา 246 คือคำตอบโดยตรงต่อคำวิจารณ์นี้ ส่วนกลุ่มประชาสังคม เช่น FORUM-ASIA ยังเรียกร้องให้เสริมความเป็นอิสระต่อไป",
+        "en": "National human-rights institutions worldwide are assessed against the Paris Principles by the Global Alliance of National Human Rights Institutions (GANHRI). A status means full compliance; B means partial.\n\nA November 2015 accreditation report recommended moving Thailand's NHRC from A to B, citing the process for selecting commissioners, slow responses to rights issues and doubts about independence. The NHRC applied for re-accreditation in 2018; the review was deferred, and in March 2022 the accreditation subcommittee restored A status. In between, in 2017, the whole commission was removed by the new organic act, and the drafters cited the downgrade as one reason.\n\nThe lesson: independence is not something a constitution declares and is done with. It can be measured from outside, by concrete things: who selects the members, whether civil society takes part, and whether the body will say what the state does not want to hear. The NGO-participation rule in section 246 answers this criticism directly. Civil-society groups such as FORUM-ASIA continue to press for more independence."
+      }
+    },
+    {
+      "kind": "critique",
+      "title": {
+        "th": "ล้างไพ่บางองค์กร เก็บไว้บางองค์กร",
+        "en": "Resetting some organs, keeping others"
+      },
+      "by": "รายงานของ The Nation (2560–2561) และความเห็นของคณะกรรมการร่างรัฐธรรมนูญที่สื่อรายงาน",
+      "body": {
+        "th": "มาตรา 273 ในบทเฉพาะกาลให้ตุลาการศาลรัฐธรรมนูญและกรรมการองค์กรอิสระที่อยู่ในตำแหน่งก่อนรัฐธรรมนูญ 2560 อยู่ต่อไป และเมื่อ พ.ร.ป. ฉบับใหม่ใช้บังคับ ให้การดำรงตำแหน่งต่อไปเป็นไปตาม พ.ร.ป. นั้น\n\nเมื่อ สนช. ออก พ.ร.ป. ช่วงปี 2560 ถึง 2561 ผลออกมาไม่เหมือนกัน\n- กกต. ถูกล้างไพ่ (ที่สื่อเรียกว่า “เซ็ตซีโร่”) ให้สรรหาใหม่ทั้งคณะ 7 คน\n- กสม. ถูกล้างไพ่ทั้งคณะ\n- ผู้ตรวจการแผ่นดินอยู่ต่อจนครบวาระ และศาลรัฐธรรมนูญวินิจฉัยว่า พ.ร.ป. ที่ให้อยู่ต่อไม่ขัดรัฐธรรมนูญ\n- กรรมการ ป.ป.ช. อยู่ต่อ รวมถึงบางคนที่ไม่ผ่านคุณสมบัติใหม่ตามรัฐธรรมนูญ 2560\n\nข้อวิจารณ์ The Nation รายงานว่านักวิชาการและกรรมการองค์กรที่ถูกให้พ้นตำแหน่งเห็นตรงกันว่าการปฏิบัติต่อแต่ละองค์กรเป็นแบบเลือกปฏิบัติ คณะกรรมการร่างรัฐธรรมนูญเองเคยเตือนเรื่องการให้กรรมการ ป.ป.ช. ที่ขาดคุณสมบัติอยู่ต่อ และร่างแรกเคยเสนอให้ล้างไพ่ผู้ตรวจการแผ่นดินด้วย คำถามที่ตามมาคือ เมื่อผู้ออกกฎหมายเลือกได้ว่าจะเก็บใครไว้ องค์กรนั้นยังอิสระจากผู้ออกกฎหมายจริงหรือไม่\n\nเหตุผลอีกฝั่ง สนช. ชี้ว่ามาตรา 273 มอบให้ พ.ร.ป. เป็นผู้กำหนดเรื่องนี้ไว้แล้ว แต่ละองค์กรมีสถานการณ์ต่างกัน กสม. ถูกลดระดับจากเวทีสากล ส่วน กกต. ต้องการคณะใหม่ที่ทำงานร่วมกันได้ภายใต้โครงสร้าง 7 คน การรักษาความต่อเนื่องในองค์กรที่ทำคดีค้างอยู่ก็มีเหตุผลของมัน",
+        "en": "The transitory section 273 kept Constitutional Court judges and independent-organ members in office when the 2017 constitution arrived, and said that once the new organic acts took effect, how much longer they stayed would be up to those acts.\n\nWhen the National Legislative Assembly passed the organic acts in 2017 and 2018, the results differed:\n- The EC was reset (the press called it a “set zero”) and all seven seats were filled anew.\n- The NHRC was reset in full.\n- The Ombudsmen stayed to the end of their terms, and the Constitutional Court ruled that the act letting them stay was constitutional.\n- The NACC members stayed, including some who did not meet the new qualifications under the 2017 constitution.\n\nThe criticism: The Nation reported that academics and the commissioners being removed agreed the treatment was selective. The Constitution Drafting Commission had itself warned against keeping unqualified NACC members, and its early draft would have reset the Ombudsmen too. The question that follows: if the lawmakers can choose whom to keep, is the organ truly independent of the lawmakers?\n\nThe other side: the Assembly pointed out that section 273 had already handed the matter to the organic acts. Each organ's situation differed: the NHRC had been downgraded internationally, and the EC needed a new board able to work together in its seven-member structure. Keeping continuity in a body with pending cases has its own logic."
+      }
+    },
+    {
+      "kind": "critique",
+      "title": {
+        "th": "ใครให้ความเห็นชอบผู้ตรวจสอบ: วุฒิสภาชุดแรก",
+        "en": "Who approves the watchdogs: the first Senate"
+      },
+      "by": "Apipol Sae-Tung (2025); Khemthong Tonsakulrungruang (2017)",
+      "body": {
+        "th": "แม่แบบของหมวด 12 มีกุญแจดอกสุดท้ายอยู่ที่วุฒิสภา (มาตรา 204 และ 217) ในช่วงห้าปีแรก วุฒิสภา 250 คนมาจากการคัดเลือกและแต่งตั้งตามคำแนะนำของ คสช. (มาตรา 269) รวมผู้นำเหล่าทัพและผู้บัญชาการตำรวจแห่งชาติโดยตำแหน่ง วุฒิสภาชุดนี้คือผู้ให้ความเห็นชอบตุลาการศาลรัฐธรรมนูญและกรรมการองค์กรอิสระที่เข้ารับตำแหน่งช่วงปี 2562 ถึง 2567\n\nApipol Sae-Tung ชี้ว่าวุฒิสภาที่แต่งตั้งมามีบทบาทชี้ขาดในการเลือกนายกรัฐมนตรีปี 2562 และในการขวางผู้นำพรรคที่ได้ที่นั่งมากที่สุดปี 2566 จากมุมของเขา องค์กรที่วุฒิสภาชุดนี้เห็นชอบย่อมถูกตั้งคำถามเรื่องความเป็นกลางไปด้วย Khemthong Tonsakulrungruang ชี้ปัญหาที่ลึกกว่านั้นตั้งแต่ยุครัฐธรรมนูญ 2550 คือจุดเน้นของรัฐธรรมนูญเปลี่ยนจากการสร้างสถาบันที่ตอบสนองประชาชน ไปเป็นการคัดคนที่มีจริยธรรมส่วนบุคคลตามที่ต้องการ\n\nเหตุผลของผู้ออกแบบ วุฒิสภาห้ามเป็นสมาชิกพรรค จึงน่าจะเป็นกลางกว่าสภาผู้แทนราษฎร ถ้าให้ ส.ส. เห็นชอบ เสียงข้างมากของรัฐบาลจะเลือกคนที่จะมาตรวจสอบรัฐบาลเอง และบทเฉพาะกาลมีไว้เพื่อประคองช่วงเปลี่ยนผ่านและการปฏิรูป คำถามที่ผู้อ่านควรถือไว้ คือ ทางเลือกระหว่างให้คนที่ถูกตรวจเลือกผู้ตรวจ กับให้คนที่ไม่ได้มาจากประชาชนเลือกผู้ตรวจ มีทางที่สามหรือไม่ เช่น การกำหนดให้ต้องได้เสียงจากทั้งฝ่ายรัฐบาลและฝ่ายค้าน",
+        "en": "The Chapter 12 template puts the last key in the Senate's hands (sections 204 and 217). For the first five years the 250 senators were selected and appointed on the NCPO's recommendation (section 269), including the armed-forces chiefs and the police chief ex officio. That Senate approved the Constitutional Court judges and independent-organ members who took office from 2019 to 2024.\n\nApipol Sae-Tung notes that the appointed Senate played a decisive role in choosing the prime minister in 2019 and in blocking the leader of the largest party in 2023. On his reading, the bodies that Senate approved inherit questions about their neutrality. Khemthong Tonsakulrungruang points to a deeper shift going back to the 2007 constitution: its focus moved from building institutions that respond to the people to selecting office-holders with the desired personal ethics.\n\nThe designers' reasoning: senators may not belong to parties, so they should be more neutral than the House. If MPs approved the watchdogs, the government's majority would choose the people meant to watch the government. And the transitory provisions were meant to steady the transition and reform. The question to hold: between letting the watched choose the watchers and letting unelected people choose them, is there a third way, such as requiring support from both government and opposition?"
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "หมวด 13 องค์กรอัยการ: อิสระในการสั่งคดี",
+        "en": "Chapter 13, the State Attorney Organ: independence to decide cases"
+      },
+      "body": {
+        "th": "หมวด 13 มีมาตราเดียว คือมาตรา 248 แต่ทุกวรรคมีเหตุผล\n\nวรรคแรกและวรรคสอง พนักงานอัยการมีอิสระในการพิจารณาสั่งคดีและปฏิบัติหน้าที่ให้รวดเร็ว เที่ยงธรรม ปราศจากอคติ และคำสั่งคดีของอัยการ “ไม่ให้ถือว่าเป็นคำสั่งทางปกครอง” ผลคือคนที่ไม่พอใจคำสั่งฟ้องหรือไม่ฟ้อง จะไปฟ้องศาลปกครองให้เพิกถอนไม่ได้ เหตุผลคือถ้าคำสั่งคดีทุกฉบับถูกฟ้องกลับได้ งานอัยการจะหยุดนิ่ง และคดีอาญาจะถูกดึงไปพิจารณาในศาลที่ไม่ได้ออกแบบมาเพื่อเรื่องนี้\n\nวรรคสาม การบริหารงานบุคคล งบประมาณ และการดำเนินงานอื่นเป็นอิสระ มีระบบเงินเดือนเฉพาะ และการบริหารงานบุคคลของอัยการทำโดยคณะกรรมการอัยการ ซึ่งประธานต้องไม่เป็นพนักงานอัยการ และต้องมีกรรมการที่ไม่เคยเป็นอัยการอย่างน้อยสองคน นี่คือหน้าต่างจากภายนอกแบบเดียวกับ ก.ต. แต่กว้างกว่า เพราะประธานเป็นคนนอก\n\nวรรคสี่ กฎหมายต้องมีมาตรการกันไม่ให้อัยการไปดำรงตำแหน่งหรือทำการใดที่ทำให้สั่งคดีไม่เป็นกลางหรือเกิดผลประโยชน์ทับซ้อน และมาตรการนั้นต้องชัดและใช้เป็นการทั่วไป จะมอบให้พิจารณาเป็นราย ๆ ไปไม่ได้ ข้อนี้ตอบคำวิจารณ์เก่าที่อัยการไปนั่งเป็นกรรมการรัฐวิสาหกิจ ซึ่งอาจเป็นคู่กรณีในคดีที่ตัวเองต้องสั่ง\n\nอัยการยังมีบทบาทในหมวดอื่น เป็นประตูแรกของคำร้องตามมาตรา 49 และเป็นผู้ฟ้องคดีที่ ป.ป.ช. ส่งมาตามมาตรา 235",
+        "en": "Chapter 13 has a single section, section 248, but every paragraph has a reason.\n\nParagraphs one and two: public prosecutors are independent in deciding whether to prosecute and in performing their duties quickly, fairly and without bias, and a prosecutor's decision on a case “shall not be deemed an administrative order”. The effect: someone unhappy with a decision to prosecute or not cannot ask the Administrative Court to quash it. The reason: if every charging decision could be challenged, prosecution would grind to a halt and criminal cases would be pulled into a court not designed for them.\n\nParagraph three: personnel, budget and other operations are independent, with a separate salary scale, and prosecutors' personnel matters are run by the Public Prosecutor Commission, whose chair must not be a prosecutor and which must include at least two members who have never been prosecutors. It is the same outside window as the judicial commissions, only wider, because the chair is an outsider.\n\nParagraph four: the law must prevent prosecutors from holding posts or doing things that could bias their decisions or create conflicts of interest, and the rules must be clear and general; they may not be left to case-by-case permission. This answers an old criticism that prosecutors sat on the boards of state enterprises that could be parties to cases they had to decide.\n\nProsecutors also appear elsewhere: the Attorney-General is the first door for petitions under section 49, and prosecutes the cases the NACC sends under section 235."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "คดีบอส: อิสระในการสั่งคดี กับคำถามจากสังคม",
+        "en": "The “Boss” case: prosecutorial independence meets public anger"
+      },
+      "year": 2020,
+      "body": {
+        "th": "ปี 2555 รถเฟอร์รารีที่วรยุทธ อยู่วิทยา ทายาทกระทิงแดง ขับ ชนดาบตำรวจที่ขี่จักรยานยนต์อยู่ในกรุงเทพฯ จนเสียชีวิต คดีลากยาวหลายปี เดือนมิถุนายน 2563 รองอัยการสูงสุดมีคำสั่งไม่ฟ้องข้อหาขับรถโดยประมาททำให้ผู้อื่นถึงแก่ความตาย อ้างพยานหลักฐานใหม่เรื่องความเร็วรถ เมื่อข่าวเปิดเผยในเดือนกรกฎาคม สังคมโกรธมาก นายกรัฐมนตรีตั้งคณะกรรมการที่มีนายวิชา มหาคุณ อดีตกรรมการ ป.ป.ช. เป็นประธาน\n\nคณะกรรมการชุดนั้นพบพฤติการณ์ที่ส่อว่ามีการร่วมมือกันของเจ้าหน้าที่หลายหน่วย รวมถึงพยาน และเสนอให้รื้อคดี อัยการสูงสุดจึงตั้งข้อหาใหม่ ศาลออกหมายจับ และองค์การตำรวจสากลออกหมายแดง ป.ป.ช. ไต่สวนเจ้าหน้าที่ที่เกี่ยวข้องต่อมา\n\nคดีนี้คือมาตรา 248 ในชีวิตจริง ความเป็นอิสระในการสั่งคดีมีไว้กันไม่ให้นักการเมืองสั่งอัยการ แต่เมื่อคำสั่งคดีไม่ใช่คำสั่งทางปกครอง ประชาชนก็ฟ้องเพิกถอนไม่ได้ สิ่งที่ทำให้คดีกลับมา คือแรงกดดันของสื่อและสังคม การตรวจสอบโดยคณะกรรมการภายนอก และ ป.ป.ช. ไม่ใช่ศาล ความเป็นอิสระจึงต้องมาพร้อมความโปร่งใส ไม่อย่างนั้นจะกลายเป็นที่หลบภัย",
+        "en": "In 2012 a Ferrari driven by Vorayuth Yoovidhya, an heir to the Red Bull fortune, hit and killed a police sergeant-major on a motorcycle in Bangkok. The case dragged on for years. In June 2020 a deputy attorney-general decided not to prosecute the charge of reckless driving causing death, citing new evidence about the car's speed. When the news broke in July, public anger was intense, and the prime minister set up a panel chaired by Vicha Mahakun, a former NACC commissioner.\n\nThe panel found signs of collusion among officials across several agencies, as well as witnesses, and recommended reopening the case. The Attorney-General's office brought fresh charges, a court issued an arrest warrant, Interpol issued a red notice, and the NACC went on to investigate the officials involved.\n\nThis is section 248 in real life. Independence in charging decisions exists to stop politicians from directing prosecutors. But because a charging decision is not an administrative order, the public cannot sue to quash it. What revived the case was press and public pressure, an outside review panel and the NACC, not a court. Independence has to come with transparency, or it becomes a hiding place."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "วงจรการตรวจสอบ: ทุกคนถูกใครสักคนตรวจ",
+        "en": "The accountability circle: everyone is checked by someone"
+      },
+      "body": {
+        "th": "เอาทุกบทมาวางเป็นวงเดียว\n- ประชาชนเลือก ส.ส. โดยมี กกต. เป็นกรรมการ (มาตรา 224)\n- ส.ส. และ ส.ว. ถูกตรวจโดย ป.ป.ช. (มาตรา 234) โดยมาตรฐานจริยธรรมร่วม (มาตรา 219) และโดยศาลรัฐธรรมนูญเรื่องสมาชิกภาพ (มาตรา 82)\n- รัฐบาลถูกตรวจการใช้เงินโดย คตง. และผู้ว่าการ (มาตรา 240 ถึง 245) ถูกตรวจความเดือดร้อนที่สร้างให้ประชาชนโดยผู้ตรวจการแผ่นดิน (มาตรา 230) และถูกตรวจเรื่องสิทธิโดย กสม. (มาตรา 247)\n- กรรมการองค์กรอิสระและตุลาการศาลรัฐธรรมนูญถูกตรวจโดย ป.ป.ช. (มาตรา 234 (1))\n- ป.ป.ช. ถูกตรวจโดยคณะผู้ไต่สวนอิสระที่ประธานศาลฎีกาตั้ง (มาตรา 236)\n- เกือบทุกเส้นจบที่ศาลฎีกาหรือศาลฎีกาแผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมือง (มาตรา 226, 235, 237)\n- และวุฒิสภาเป็นผู้ให้ความเห็นชอบคนเข้าสู่องค์กรเกือบทั้งหมด (มาตรา 204, 217)\n\nสังเกตว่าวงนี้ปิดได้เกือบสนิท แต่ประชาชนมีมือจับอยู่ไม่กี่จุด คือ การเลือกตั้ง การร้องเรียน และการเข้าชื่อ 20,000 คนตามมาตรา 236 นี่คือราคาของการออกแบบที่ไม่ไว้ใจนักการเมือง ยิ่งกันนักการเมืองออกจากการแต่งตั้งผู้ตรวจสอบเท่าไร ผู้ตรวจสอบก็ยิ่งห่างจากผู้เลือกตั้งเท่านั้น",
+        "en": "Put every chapter into one circle:\n- The people elect MPs, with the EC as referee (section 224).\n- MPs and senators are checked by the NACC (section 234), by the shared ethical standards (section 219), and by the Constitutional Court on their membership (section 82).\n- The government's spending is checked by the SAC and the Auditor-General (sections 240 to 245), the hardship it causes by the Ombudsmen (section 230), its rights record by the NHRC (section 247).\n- Independent-organ members and Constitutional Court judges are checked by the NACC (section 234(1)).\n- The NACC is checked by an independent inquiry panel appointed by the President of the Supreme Court (section 236).\n- Almost every line ends at the Supreme Court or its political-office criminal division (sections 226, 235, 237).\n- And the Senate approves the people who enter almost every organ (sections 204, 217).\n\nNotice that the circle closes almost completely, yet the public holds only a few handles: elections, complaints, and the 20,000-signature petition in section 236. That is the price of a design that distrusts politicians. The further politicians are kept from choosing the watchdogs, the further the watchdogs drift from the voters."
+      }
+    },
+    {
+      "kind": "mnemonic",
+      "title": {
+        "th": "ตัวเลขเล็ก ๆ ที่ข้อสอบชอบ",
+        "en": "Small numbers exams love"
+      },
+      "body": {
+        "th": "- “4-5-7” จำนวนขั้นต่ำที่ทำงานต่อได้ กกต. 4 (ต่ำกว่านั้นทำได้เฉพาะเรื่องจำเป็น) ป.ป.ช. 5 ศาลรัฐธรรมนูญ 7\n- “90 ยื่น 60 พิจารณา” คำร้องสิทธิตามมาตรา 213 ผ่านผู้ตรวจการแผ่นดิน\n- “120 + 60 / 30” หน่วยงานต้องทำตามข้อเสนอแนะของผู้ตรวจการแผ่นดิน แก้กฎ 120 วัน ขยายได้ 60 แก้ความเดือดร้อนรายบุคคล 30 วัน\n- “ส้ม 1 แดง 10” ใบส้มของ กกต. ระงับสิทธิไม่เกิน 1 ปี ใบแดงของศาลฎีกาเพิกถอน 10 ปี\n- “หนึ่งในห้า หรือ สองหมื่น” ผู้มีสิทธิกล่าวหากรรมการ ป.ป.ช.\n- “90 วันไปศาลปกครองสูงสุด” อุทธรณ์คำสั่งลงโทษทางปกครองของ คตง.\n- “สามองค์กรกดสัญญาณ” คตง. + กกต. + ป.ป.ช. ตามมาตรา 245",
+        "en": "- “4-5-7”: the minimum to keep working. EC 4 (below that, only necessary acts), NACC 5, Constitutional Court 7.\n- “90 to file, 60 to decide”: section 213 rights petitions through the Ombudsmen.\n- “120 + 60 / 30”: agencies must act on Ombudsman recommendations, 120 days to fix a rule (plus up to 60), 30 days to relieve an individual's hardship.\n- “Orange 1, red 10”: the EC's orange card suspends candidacy for up to 1 year; the Supreme Court's red card revokes it for 10.\n- “One-fifth or twenty thousand”: who may accuse an NACC member.\n- “90 days to the Supreme Administrative Court”: appealing an SAC administrative penalty.\n- “Three organs to sound the alarm”: SAC + EC + NACC under section 245."
+      }
+    },
+    {
+      "kind": "check",
+      "title": {
+        "th": "ทดสอบตัวเอง",
+        "en": "Check yourself"
+      },
+      "items": [
+        {
+          "q": {"th": "องค์กรอิสระตามรัฐธรรมนูญ 2560 มีกี่องค์กร อะไรบ้าง องค์กรอัยการนับรวมหรือไม่", "en": "How many independent organs are there under the 2017 constitution, and is the State Attorney Organ one of them?"},
+          "a": {"th": "ห้าองค์กร กกต. ผู้ตรวจการแผ่นดิน ป.ป.ช. คตง. กสม. องค์กรอัยการไม่นับ อยู่หมวด 13 แยกต่างหาก", "en": "Five: EC, Ombudsmen, NACC, SAC, NHRC. The State Attorney Organ is not one; it has its own Chapter 13."},
+          "sections": [215, 248]
+        },
+        {
+          "q": {"th": "ผู้ตรวจการแผ่นดินเห็นว่ากฎกระทรวงฉบับหนึ่งขัดรัฐธรรมนูญ ต้องเสนอเรื่องต่อศาลใด", "en": "The Ombudsmen think a ministerial regulation is unconstitutional. To which court do they refer it?"},
+          "a": {"th": "ศาลปกครอง เพราะกฎกระทรวงเป็น “กฎ” ไม่ใช่บทบัญญัติแห่งกฎหมาย", "en": "The Administrative Court, because a ministerial regulation is a rule, not a provision of law."},
+          "sections": [231]
+        },
+        {
+          "q": {"th": "กกต. มีกี่คน มาจากไหน และเหลือไม่ถึงกี่คนจึงทำได้เฉพาะเรื่องจำเป็น", "en": "How many EC members are there, where do they come from, and below what number may it do only necessary acts?"},
+          "a": {"th": "7 คน สรรหา 5 ที่ประชุมใหญ่ศาลฎีกาเลือก 2 ถ้าเหลือไม่ถึง 4 คน ทำได้เฉพาะเรื่องจำเป็นที่หลีกเลี่ยงไม่ได้", "en": "Seven: 5 through selection, 2 chosen by the Supreme Court plenary. With fewer than 4, only unavoidable necessary acts."},
+          "sections": [222, 223]
+        },
+        {
+          "q": {"th": "กกต. เพิกถอนสิทธิสมัครรับเลือกตั้งของผู้สมัครที่ซื้อเสียงเป็นเวลา 10 ปีได้เองหรือไม่", "en": "Can the EC itself revoke a vote-buying candidate's right to stand for ten years?"},
+          "a": {"th": "ไม่ได้ กกต. ระงับสิทธิได้เองไม่เกิน 1 ปี การเพิกถอน 10 ปีต้องยื่นศาลฎีกา (ท้องถิ่นยื่นศาลอุทธรณ์)", "en": "No. The EC may suspend the right for up to one year; a ten-year revocation needs the Supreme Court (the Court of Appeal for local elections)."},
+          "sections": [224, 225, 226]
+        },
+        {
+          "q": {"th": "ถ้ามีคนกล่าวหาว่ากรรมการ ป.ป.ช. ทุจริต ใครไต่สวน", "en": "If an NACC member is accused of corruption, who investigates?"},
+          "a": {"th": "คณะผู้ไต่สวนอิสระที่ประธานศาลฎีกาตั้ง หลังจาก ส.ส./ส.ว. หนึ่งในห้า หรือประชาชน 20,000 คน ยื่นต่อประธานรัฐสภา และประธานรัฐสภาเห็นว่ามีเหตุอันควรสงสัย", "en": "An independent inquiry panel appointed by the President of the Supreme Court, after one-fifth of members of Parliament or 20,000 voters file with the President of the National Assembly and the President finds reasonable grounds."},
+          "sections": [236, 237]
+        },
+        {
+          "q": {"th": "ใครเป็นผู้กำหนดมาตรฐานทางจริยธรรมตามมาตรา 219 และใช้กับใครบ้าง", "en": "Who sets the ethical standards under section 219, and whom do they bind?"},
+          "a": {"th": "ศาลรัฐธรรมนูญและองค์กรอิสระร่วมกันกำหนด ใช้กับตุลาการศาลรัฐธรรมนูญ กรรมการองค์กรอิสระ ผู้ว่าการตรวจเงินแผ่นดิน หัวหน้าหน่วยธุรการ และใช้กับ ส.ส. ส.ว. และคณะรัฐมนตรีด้วย", "en": "The Constitutional Court and the independent organs jointly. They bind the judges, organ members, the Auditor-General and administrative heads, and also MPs, senators and the Cabinet."},
+          "sections": [219]
+        },
+        {
+          "q": {"th": "ผู้ไม่พอใจคำสั่งไม่ฟ้องของอัยการ ฟ้องศาลปกครองให้เพิกถอนได้หรือไม่ เพราะอะไร", "en": "Can someone unhappy with a prosecutor's decision not to prosecute ask the Administrative Court to quash it? Why?"},
+          "a": {"th": "ไม่ได้ เพราะรัฐธรรมนูญบัญญัติว่าการสั่งคดีของพนักงานอัยการไม่ให้ถือว่าเป็นคำสั่งทางปกครอง", "en": "No. The constitution says a prosecutor's charging decision is not deemed an administrative order."},
+          "sections": [248]
+        },
+        {
+          "q": {"th": "เมื่อผู้ว่าการตรวจเงินแผ่นดินพบการกระทำที่อาจทำให้การคลังเสียหายร้ายแรง ต้องผ่านใครบ้างก่อนแจ้งสภาและเปิดเผยต่อประชาชน", "en": "When the Auditor-General finds conduct that could seriously damage public finances, who must agree before Parliament is told and the public informed?"},
+          "a": {"th": "คตง. ต้องเห็นพ้องก่อน แล้วประชุมร่วมกับ กกต. และ ป.ป.ช. ถ้าที่ประชุมร่วมเห็นพ้อง จึงแจ้งสภาผู้แทนราษฎร วุฒิสภา คณะรัฐมนตรี และเปิดเผยต่อประชาชน", "en": "First the SAC must agree, then a joint meeting with the EC and the NACC. If that meeting agrees, they notify the House, the Senate and the Cabinet and publish the findings."},
+          "sections": [245]
+        }
+      ]
+    }
+  ],
+  "sections": [215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248],
+  "sources": [
+    "Constitution of the Kingdom of Thailand B.E. 2560 (2017), Thai text consolidated through the 2021 amendment",
+    "สำนักงานผู้ตรวจการแผ่นดิน, คำอธิบายสาระสำคัญ พระราชบัญญัติประกอบรัฐธรรมนูญว่าด้วยผู้ตรวจการแผ่นดิน พ.ศ. 2560 (สิงหาคม 2563)",
+    "Khemthong Tonsakulrungruang, Entrenching the Minority: The Constitutional Court in Thailand's Political Conflict, 26 Washington International Law Journal 247 (2017)",
+    "Apipol Sae-Tung, Juridification, Legitimacy, and Authoritarian Survival in Thai Politics from the 2014 Military Coup, Asian Review 38(1) (2025)",
+    "The Nation (Thailand), reporting on the 2017–2018 organic acts and the selective reset of independent organs",
+    "Asia Pacific Forum and GANHRI accreditation records on the NHRC of Thailand (2015 recommendation, 2022 A status); FORUM-ASIA statements",
+    "Khaosod English and Thai PBS World on the 2019 Chiang Mai orange card and the 2020 Supreme Court ruling",
+    "Khaosod English, International IDEA, BenarNews on the 2024 Senate selection",
+    "Thai PBS World, Bangkok Post on the NACC's December 2018 decision in the Prawit watches case",
+    "Bangkok Post, Thai PBS World on Pannika Wanich (NACC 2022, Supreme Court 20 September 2023)",
+    "Khaosod English, Asia News Network on the State Audit Office building collapse (28 March 2025)",
+    "Bangkok Post, Thai PBS World on the Vorayuth Yoovidhya case and the Vicha Mahakun panel (2020)",
+    "data.go.th, Ombudsman 1676 hotline service statistics"
+  ]
+}

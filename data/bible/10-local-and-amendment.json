@@ -1,0 +1,488 @@
+{
+ "id": "local-and-amendment",
+ "order": 10,
+ "title": {
+  "th": "ท้องถิ่น การแก้ไขรัฐธรรมนูญ และการปฏิรูปประเทศ",
+  "en": "Local Administration, Amendment and National Reform"
+ },
+ "lede": {
+  "th": "หมวดท้ายของรัฐธรรมนูญตอบสามคำถาม: อำนาจที่ใกล้บ้านที่สุดทำงานอย่างไร กติกาของประเทศเปลี่ยนได้อย่างไร และงานปฏิรูปที่ถูกเขียนไว้พร้อมเส้นตายไปถึงไหน กุญแจที่ต้องจับให้ได้คือมาตรา 256 ซึ่งกำหนดว่าใครบ้างต้องเห็นด้วย ก่อนกติกาจะเปลี่ยน",
+  "en": "The closing chapters answer three questions: how the power closest to home works, how the country's rules can change, and how far the reform list written with deadlines has gone. The key to master is section 256, which decides who must agree before the rules change."
+ },
+ "blocks": [
+  {
+   "kind": "text",
+   "title": {
+    "th": "ท้องถิ่น: รัฐบาลที่อยู่ใกล้บ้านที่สุด",
+    "en": "Local government: the government closest to your front door"
+   },
+   "body": {
+    "th": "ถนนหน้าบ้านเป็นหลุม ไฟทางดับมาสามคืน รถขยะไม่มาตั้งแต่วันจันทร์ คนส่วนใหญ่ไม่โทรหานายกรัฐมนตรี เขาเดินไปที่สำนักงาน อบต. หรือเทศบาล นี่คือรัฐในรูปที่คนไทยเจอบ่อยที่สุด และเป็นเรื่องที่รัฐธรรมนูญหมวด 14 (มาตรา 249 ถึง มาตรา 254) วางกติกาไว้\n\nหมวดนี้สั้นมาก มีแค่หกมาตรา แต่ตอบคำถามใหญ่สามข้อ: ท้องถิ่นมีอำนาจมาจากไหน ทำอะไรได้แค่ไหน และประชาชนในพื้นที่คุมคนที่ตัวเองเลือกได้อย่างไร\n\nจุดเริ่มคือมาตรา 249 ซึ่งขึ้นต้นด้วยคำว่า \"ภายใต้บังคับมาตรา 1\" มาตรา 1 บอกว่าประเทศไทยเป็นราชอาณาจักรอันหนึ่งอันเดียว จะแบ่งแยกมิได้ แปลว่าท้องถิ่นปกครองตนเองได้จริง แต่ไม่ใช่รัฐเล็ก ๆ ที่แยกตัวออกไป ท้องถิ่นได้อำนาจจากกฎหมายของประเทศ ไม่ได้มีอำนาจอธิปไตยของตัวเอง",
+    "en": "The road outside is cratered, the street light has been out for three nights, and the rubbish truck has not come since Monday. Nobody phones the Prime Minister about this. They walk to the subdistrict office or the municipality. For most Thais, that office is the state they meet most often, and Chapter 14 of the constitution (sections 249 to 254) sets its rules.\n\nThe chapter is short, six sections in all, yet it answers three large questions: where local power comes from, how far it reaches, and how local people keep control of the officials they elect.\n\nSection 249 opens with the words \"subject to section 1\". Section 1 says Thailand is one indivisible kingdom. So local bodies govern themselves for real, but they are not mini-states. Their power is granted by national law; they hold no sovereignty of their own."
+   }
+  },
+  {
+   "kind": "logic",
+   "title": {
+    "th": "ทำไมต้องมีท้องถิ่น: ตรรกะของคนที่รู้ปัญหาดีที่สุด",
+    "en": "Why local government exists: let the people who see the problem decide"
+   },
+   "body": {
+    "th": "ลองคิดแบบงบบ้าน ถ้าทุกครั้งที่ก๊อกน้ำรั่วต้องเขียนจดหมายไปขออนุญาตจากญาติผู้ใหญ่ที่อยู่อีกจังหวัด ก๊อกจะรั่วไปอีกหลายเดือน ประเทศก็เหมือนกัน ส่วนกลางอยู่ไกลจากปัญหา คนในพื้นที่เห็นปัญหาก่อนและรู้ดีกว่าว่าอะไรสำคัญ\n\n- ปัญหา: ส่วนกลางตัดสินใจช้าและไม่รู้บริบทของแต่ละพื้นที่\n- ทางแก้: ให้คนในพื้นที่เลือกผู้บริหารและสภาของตัวเอง (มาตรา 252) แล้วมอบงานบริการสาธารณะให้ (มาตรา 250)\n- ความเสี่ยงที่ตามมา: เงินไม่พอ คนไม่พอ หรือผู้มีอิทธิพลในพื้นที่ยึดกลไก\n- กลไกกันความเสี่ยง: รัฐต้องจัดระบบภาษีให้ท้องถิ่นมีรายได้ของตัวเอง (มาตรา 250) บุคลากรต้องใช้ระบบคุณธรรม (มาตรา 251) ต้องเปิดเผยข้อมูล (มาตรา 253) และประชาชนถอดถอนได้ (มาตรา 254)\n\nลำดับเหตุผลนี้คือหัวใจของหมวด 14 ทุกมาตราตอบปัญหาที่เกิดจากมาตราก่อนหน้า ถ้าจำลำดับได้ ไม่ต้องท่องทีละมาตรา",
+    "en": "Think of a household budget. If every leaking tap required a letter to an elderly relative in another province asking permission, the tap would drip for months. A country works the same way. The centre sits far from the problem; people on the spot see it first and know what matters.\n\n- Problem: the centre decides slowly and does not know local conditions.\n- Answer: let local people elect their own councils and executives (section 252) and hand them public services (section 250).\n- New risk: not enough money, not enough staff, or local strongmen capturing the machinery.\n- Safeguards: the state must give local bodies their own revenue through taxes or tax-sharing (section 250); staff are hired on merit (section 251); local bodies must publish information and results (section 253); and residents can propose local ordinances and recall officials (section 254).\n\nThat chain is the whole of Chapter 14. Each section patches a risk created by the one before it. Learn the chain and you will not need to memorise the sections one by one."
+   }
+  },
+  {
+   "kind": "text",
+   "title": {
+    "th": "มาตรา 249–250: รูปแบบ หน้าที่ และเงิน",
+    "en": "Sections 249–250: forms, duties and money"
+   },
+   "body": {
+    "th": "มาตรา 249 บอกว่าจะตั้งท้องถิ่นรูปแบบไหน ต้องดูสี่อย่างประกอบกัน คือ เจตนารมณ์ของประชาชนในพื้นที่ รายได้ จำนวนและความหนาแน่นของประชากร และขนาดพื้นที่ที่ต้องดูแล ตำบลชนบทกับเมืองใหญ่จึงไม่จำเป็นต้องใช้โครงสร้างเดียวกัน\n\nมาตรา 250 เป็นมาตราที่ยาวที่สุดในหมวด มีห้าเรื่องที่ควรจับให้ได้\n\n- หน้าที่: ดูแลและจัดทำบริการสาธารณะและกิจกรรมสาธารณะเพื่อประโยชน์ของคนในพื้นที่ ตามหลักการพัฒนาอย่างยั่งยืน และส่งเสริมการจัดการศึกษา\n- การกระจายอำนาจ: งานใดเป็นของท้องถิ่นรูปแบบไหน ให้กฎหมายกำหนด และกฎหมายนั้นต้องมีกลไกโอนหน้าที่ งบประมาณ และบุคลากรจากส่วนราชการมาให้ท้องถิ่นด้วย ไม่ใช่โอนแต่งานโดยไม่ให้เงิน\n- ทำเองหรือจ้างคนอื่น: ถ้าร่วมทำกับเอกชนหรือหน่วยงานรัฐ หรือมอบให้เขาทำ แล้วเป็นประโยชน์กับประชาชนมากกว่าทำเอง ท้องถิ่นเลือกทางนั้นได้\n- เงิน: รัฐต้องจัดระบบภาษีหรือการจัดสรรภาษีให้ท้องถิ่นมีรายได้ของตัวเองพอทำงาน ระหว่างที่ยังทำไม่ได้ ให้รัฐจัดงบอุดหนุนไปพลางก่อน\n- ความอิสระ: กฎหมายต้องให้ท้องถิ่นมีอิสระในการบริหาร การบริการ การศึกษา และการเงินการคลัง ส่วนการกำกับดูแลของรัฐให้ทำเพียงเท่าที่จำเป็น เพื่อคุ้มครองประโยชน์ของคนในพื้นที่หรือของประเทศ ป้องกันทุจริต และให้ใช้เงินอย่างมีประสิทธิภาพ และต้องมีบทบัญญัติป้องกันการขัดกันแห่งผลประโยชน์และการก้าวก่ายงานของข้าราชการท้องถิ่น",
+    "en": "Section 249 says the choice of form for a local body must weigh four things together: the wishes of local people, revenue, population size and density, and the area to be served. A rural subdistrict and a big city need not share one structure.\n\nSection 250 is the longest section in the chapter. Five points carry most of its weight.\n\n- Duties: provide and look after public services and public activities for local people, following the principle of sustainable development, and support education.\n- Decentralisation: which tasks belong to which form of local body is set by law, and that law must include a mechanism to transfer duties together with the budget and staff that go with them. Handing down work without money is not what the text asks for.\n- Do it yourself or contract out: if working jointly with, or handing a task to, a private firm or another state agency serves local people better than doing it in-house, the local body may do so.\n- Money: the state must arrange taxes or tax-sharing so that local bodies have revenue of their own sufficient for their duties. Until that is achieved, the state supports them from the national budget.\n- Autonomy: the law must give local bodies freedom in administration, services, education, and finance. State supervision may go only as far as needed to protect local or national interests, prevent corruption, and ensure money is spent efficiently. The law must also guard against conflicts of interest and against politicians interfering in the work of local civil servants."
+   }
+  },
+  {
+   "kind": "logic",
+   "title": {
+    "th": "กำกับดูแล ไม่ใช่บังคับบัญชา",
+    "en": "Supervision, not command"
+   },
+   "body": {
+    "th": "คำสองคำนี้ออกข้อสอบบ่อยและสับสนง่าย ให้นึกภาพเจ้าของตึกกับผู้เช่า\n\nบังคับบัญชา คือหัวหน้ากับลูกน้องในกรมเดียวกัน หัวหน้าสั่งได้ เปลี่ยนคำสั่งได้ ย้ายคนได้ เป็นสายบังคับบัญชาแบบราชการส่วนกลางและส่วนภูมิภาค\n\nกำกับดูแล คือเจ้าของตึกกับผู้เช่า ผู้เช่าจัดห้องเองได้ ทาสีเองได้ เลือกเฟอร์นิเจอร์เองได้ เจ้าของตึกเข้ามาได้เฉพาะเมื่อมีเหตุตามสัญญา เช่น โครงสร้างตึกจะพัง หรือผู้เช่าทำผิดกฎหมาย มาตรา 250 วางหลักแบบนี้ไว้: การกำกับดูแลท้องถิ่นต้องทำ \"เพียงเท่าที่จำเป็น\" ตามเหตุผลที่ระบุไว้\n\nทำไมต้องแยก เพราะถ้าส่วนกลางสั่งท้องถิ่นได้ทุกเรื่อง การเลือกตั้งท้องถิ่นก็ไม่มีความหมาย ประชาชนเลือกคนมาแล้ว แต่คนที่ตัดสินใจจริงกลับเป็นข้าราชการจากส่วนกลาง\n\nข้อควรระวัง: รัฐธรรมนูญวางหลักไว้ รายละเอียดว่าใครกำกับดูแลอย่างไร เช่น บทบาทของผู้ว่าราชการจังหวัดและนายอำเภอ อยู่ในกฎหมายจัดตั้งท้องถิ่นแต่ละรูปแบบ ไม่ได้อยู่ในตัวรัฐธรรมนูญ",
+    "en": "These two terms turn up in exams and are easy to mix up. Picture a landlord and a tenant.\n\nCommand (บังคับบัญชา) is boss and subordinate inside one department. The boss gives orders, overturns decisions, moves staff. That is the chain of command in central and provincial administration.\n\nSupervision (กำกับดูแล) is landlord and tenant. The tenant arranges the flat, paints the walls, picks the furniture. The landlord steps in only for reasons set out in the lease: the building is about to fall down, or the tenant is breaking the law. Section 250 sets exactly this principle: supervision of local bodies goes only \"as far as necessary\" for the listed purposes.\n\nWhy keep them apart? If the centre could order a local body about on everything, local elections would be hollow. People would elect someone, and a civil servant sent from Bangkok would make the real decisions.\n\nOne caution: the constitution sets the principle only. Who supervises, and how (for example the roles of provincial governors and district chiefs), is written in the founding law of each type of local body, not in the constitution itself."
+   }
+  },
+  {
+   "kind": "text",
+   "title": {
+    "th": "มาตรา 251–254: คน การเลือกตั้ง ความโปร่งใส และอำนาจของประชาชน",
+    "en": "Sections 251–254: staff, elections, openness, and residents' power"
+   },
+   "body": {
+    "th": "มาตรา 251 การบริหารงานบุคคลของท้องถิ่นต้องใช้ระบบคุณธรรม คือรับคนและเลื่อนตำแหน่งตามความสามารถ ไม่ใช่ตามความสัมพันธ์ และต้องมีมาตรฐานที่สอดคล้องกัน เพื่อให้ย้ายหรือสับเปลี่ยนบุคลากรระหว่างท้องถิ่นได้\n\nมาตรา 252 สมาชิกสภาท้องถิ่นต้องมาจากการเลือกตั้งเสมอ ส่วนผู้บริหารท้องถิ่นมีสามทาง คือ มาจากการเลือกตั้ง มาจากความเห็นชอบของสภาท้องถิ่น หรือถ้าเป็นท้องถิ่นรูปแบบพิเศษ อาจมาโดยวิธีอื่นก็ได้ แต่ต้องคำนึงถึงการมีส่วนร่วมของประชาชน กฎหมายเลือกตั้งท้องถิ่นยังต้องคำนึงถึงเจตนารมณ์การป้องกันและปราบปรามการทุจริตด้วย\n\nมาตรา 253 ท้องถิ่น สภาท้องถิ่น และผู้บริหารท้องถิ่น ต้องเปิดเผยข้อมูลและรายงานผลการดำเนินงานให้ประชาชนรู้ และต้องมีช่องทางให้ประชาชนมีส่วนร่วม\n\nมาตรา 254 ผู้มีสิทธิเลือกตั้งในท้องถิ่นมีสิทธิเข้าชื่อกันเพื่อสองเรื่อง คือ เสนอข้อบัญญัติท้องถิ่น และถอดถอนสมาชิกสภาท้องถิ่นหรือผู้บริหารท้องถิ่น จำนวนคนและขั้นตอนอยู่ในกฎหมายเฉพาะ\n\nสังเกตความต่างกับระดับชาติ: ประชาชนเข้าชื่อถอดถอน ส.ส. หรือรัฐมนตรีโดยตรงไม่ได้ แต่ระดับท้องถิ่นทำได้ เหตุผลคือระดับท้องถิ่นคนน้อยกว่า ใกล้กันกว่า และตรวจสอบกันเองได้ง่ายกว่า",
+    "en": "Section 251: local personnel management must follow the merit system, meaning people are hired and promoted for ability rather than connections. Standards must be compatible across local bodies so staff can transfer between them.\n\nSection 252: local council members must always be elected. Local executives can arrive by one of three routes: direct election, approval by the local council, or, for special-form local bodies, some other method, provided public participation is taken into account. Local election law must also follow the constitution's anti-corruption intent.\n\nSection 253: local bodies, their councils and executives must disclose information and report their results to the public, and must provide ways for residents to take part.\n\nSection 254: registered local voters may sign a joint petition for two purposes: to propose a local ordinance, or to recall a local council member or local executive. The numbers and procedure are set by separate laws.\n\nNotice the contrast with national politics. Citizens cannot petition to recall an MP or a minister directly, but at local level they can. The reasoning: local communities are smaller and closer, and watching your own officials is easier."
+   }
+  },
+  {
+   "kind": "mnemonic",
+   "title": {
+    "th": "แบบแผน: ท้องถิ่น 3 แบบทั่วไป + 2 แบบพิเศษ",
+    "en": "Pattern: three general forms plus two special forms"
+   },
+   "body": {
+    "th": "รัฐธรรมนูญไม่ได้ระบุชื่อรูปแบบท้องถิ่น แต่ข้อสอบมักถามต่อจากมาตรา 249 และมาตรา 252 ไปถึงกฎหมายจัดตั้ง จำแบบนี้\n\n- 3 แบบทั่วไป ไล่จากใหญ่ไปเล็ก: องค์การบริหารส่วนจังหวัด (อบจ.) เทศบาล และองค์การบริหารส่วนตำบล (อบต.)\n- 2 แบบพิเศษ: กรุงเทพมหานคร และเมืองพัทยา\n\nเชื่อมกับมาตรา 252: \"รูปแบบพิเศษ\" คือช่องที่ทำให้ผู้บริหารอาจมาโดยวิธีอื่นได้ ส่วนในทางปฏิบัติ ผู้ว่าราชการกรุงเทพมหานครและนายกเมืองพัทยามาจากการเลือกตั้งโดยตรง\n\nภาษาอังกฤษ: \"3 + 2\" — provincial, municipal, subdistrict; then Bangkok and Pattaya.",
+    "en": "The constitution does not name the forms of local government, but exam questions often move from sections 249 and 252 into the founding laws. Remember it this way.\n\n- Three general forms, from largest to smallest: the Provincial Administrative Organisation (อบจ.), the municipality (เทศบาล), and the Subdistrict Administrative Organisation (อบต.).\n- Two special forms: Bangkok Metropolitan Administration and Pattaya City.\n\nLink it to section 252: \"special form\" is the clause that allows an executive to be chosen by some other method. In practice the Bangkok governor and the Pattaya mayor are directly elected.\n\nThai cue: \"สาม บวก สอง\" — three ordinary, two special."
+   }
+  },
+  {
+   "kind": "case",
+   "title": {
+    "th": "การเลือกตั้งท้องถิ่นที่หยุดไปหลายปี",
+    "en": "The local elections that stopped for years"
+   },
+   "body": {
+    "th": "หลังรัฐประหารพฤษภาคม 2557 การเลือกตั้งท้องถิ่นทั่วประเทศหยุดไป ผู้บริหารและสมาชิกสภาท้องถิ่นจำนวนมากอยู่ในตำแหน่งต่อโดยไม่มีการเลือกตั้งใหม่ บางแห่งมีการแต่งตั้งคนเข้ามาทำหน้าที่แทน\n\nการเลือกตั้งกลับมาทีละระดับ: การเลือกตั้ง อบจ. ในเดือนธันวาคม 2563 เทศบาลในเดือนมีนาคม 2564 อบต. ในเดือนพฤศจิกายน 2564 และผู้ว่าราชการกรุงเทพมหานครกับเมืองพัทยาในเดือนพฤษภาคม 2565\n\nทำไมเรื่องนี้สำคัญกับผู้เรียน: มาตรา 252 บอกว่าสมาชิกสภาท้องถิ่น \"ต้องมาจากการเลือกตั้ง\" แต่หลักในรัฐธรรมนูญจะมีชีวิตก็ต่อเมื่อมีกฎหมายลูกและการจัดการเลือกตั้งจริง ช่วงหลายปีนั้นแสดงให้เห็นว่าระยะห่างระหว่างตัวบทกับการปฏิบัติอาจยาวได้แค่ไหน ฝ่ายผู้มีอำนาจในขณะนั้นให้เหตุผลเรื่องการจัดระเบียบกฎหมายท้องถิ่นและความสงบเรียบร้อย ฝ่ายวิจารณ์มองว่าเป็นการยืดเวลาโดยไม่จำเป็น",
+    "en": "After the May 2014 coup, local elections stopped nationwide. Many local executives and councillors stayed in office with no fresh mandate; in some places appointed people took over.\n\nElections came back one tier at a time: Provincial Administrative Organisations in December 2020, municipalities in March 2021, Subdistrict Administrative Organisations in November 2021, and the Bangkok governor and Pattaya City in May 2022.\n\nWhy this matters to a learner: section 252 says local councillors \"must be elected\", but a constitutional principle only lives once the implementing laws exist and someone actually runs the vote. Those years showed how wide the gap between text and practice can grow. The authorities of the time cited the need to reorganise local laws and keep order; critics saw an unnecessary delay."
+   },
+   "year": 2020
+  },
+  {
+   "kind": "critique",
+   "title": {
+    "th": "ข้อถกเถียง: กระจายอำนาจจริงแค่ไหน",
+    "en": "Debate: how real is decentralisation?"
+   },
+   "body": {
+    "th": "มาตรา 250 สัญญาเรื่องรายได้ของท้องถิ่นและความอิสระ แต่คำสำคัญหลายคำในมาตรานี้ส่งต่อให้ \"กฎหมายบัญญัติ\" ทั้งหมด ผลจริงจึงขึ้นกับรัฐสภาและรัฐบาลแต่ละชุด\n\nฝ่ายที่ผลักดันการกระจายอำนาจ เช่น ขบวนการ \"จังหวัดจัดการตนเอง\" ในหลายจังหวัด และนักวิชาการด้านการปกครองท้องถิ่น ชี้ว่าท้องถิ่นไทยยังพึ่งเงินอุดหนุนจากส่วนกลางสูง และราชการส่วนภูมิภาค (ผู้ว่าราชการจังหวัดที่แต่งตั้งจากกระทรวงมหาดไทย) ยังทับซ้อนกับท้องถิ่น ข้อเสนอที่พบบ่อยคือให้มีผู้ว่าราชการจังหวัดจากการเลือกตั้ง\n\nฝ่ายที่ระมัดระวังให้เหตุผลว่าท้องถิ่นหลายแห่งยังมีขีดความสามารถไม่เท่ากัน ปัญหาทุจริตและอิทธิพลในพื้นที่ยังมีอยู่ และมาตรา 1 ต้องการความเป็นหนึ่งเดียวของรัฐ จึงควรกระจายอำนาจทีละขั้น\n\nผู้เรียนควรจับประเด็นที่ตัวบท: รัฐธรรมนูญไม่ได้บังคับรูปแบบผู้ว่าราชการจังหวัด และไม่ได้กำหนดสัดส่วนรายได้ท้องถิ่นเป็นตัวเลข ทั้งสองเรื่องจึงเป็นทางเลือกเชิงนโยบายที่แก้ได้ด้วยกฎหมายธรรมดา",
+    "en": "Section 250 promises local bodies their own revenue and real autonomy, but its key commitments are all handed on to \"the law\". What happens in practice therefore depends on each parliament and government.\n\nAdvocates of decentralisation, such as the \"self-governing province\" movements active in several provinces and many scholars of local government, point out that Thai local bodies still depend heavily on central grants, and that provincial administration (governors appointed by the Interior Ministry) overlaps with local government. A common proposal is elected provincial governors.\n\nMore cautious voices answer that local bodies differ widely in capacity, that corruption and local strongmen remain real problems, and that section 1 asks for a unified state, so power should move down step by step.\n\nA learner should hold on to the text: the constitution neither prescribes how provincial governors are chosen nor fixes local revenue as a percentage. Both are policy choices that ordinary legislation can change."
+   },
+   "by": "Decentralisation advocates (e.g. self-governing province movements) and their cautious critics"
+  },
+  {
+   "kind": "text",
+   "title": {
+    "th": "หมวด 15: กุญแจที่ล็อกตัวเอง",
+    "en": "Chapter 15: a lock that guards its own key"
+   },
+   "body": {
+    "th": "คืนวันที่ 10 กันยายน 2564 ที่ประชุมร่วมของรัฐสภาลงมติวาระที่สามแบบเรียกชื่อทีละคน ผลออกมา เห็นชอบ 472 ไม่เห็นชอบ 33 งดออกเสียง 187 รัฐธรรมนูญ 2560 ได้รับการแก้ไขครั้งแรก โดยเปลี่ยนระบบเลือกตั้ง ส.ส. ในมาตรา 83 มาตรา 86 และมาตรา 91\n\nตัวเลข 472 ฟังดูท่วมท้น แต่สิ่งที่ทำให้ผ่านจริงคือตัวเลขที่เล็กกว่านั้น รายงานของ iLaw ระบุว่ามี ส.ว. เห็นชอบ 149 คน มากกว่าหนึ่งในสามของวุฒิสภาที่กำหนดไว้ ถ้า ส.ว. ไม่ถึงเกณฑ์ ต่อให้ ส.ส. เห็นด้วยทั้งสภาก็ไม่ผ่าน\n\nหมวด 15 มีสองมาตรา มาตรา 255 บอกว่าอะไรแก้ไม่ได้เลย มาตรา 256 บอกว่าที่เหลือแก้ได้อย่างไร และเพราะมาตรา 256 อยู่ในหมวด 15 การแก้ตัวมาตรา 256 เองจึงต้องผ่านประชามติด้วย กุญแจนี้จึงล็อกตัวเองไว้อีกชั้นหนึ่ง",
+    "en": "On the night of 10 September 2021, a joint sitting of Parliament held its third-reading vote by roll call: 472 in favour, 33 against, 187 abstentions. The 2017 constitution had its first amendment, a new electoral system for MPs in sections 83, 86 and 91.\n\nThe number 472 sounds overwhelming. The number that actually carried the bill was smaller. iLaw reported that 149 senators voted yes, more than the one-third of the Senate the constitution requires. Without that, even a unanimous House could not have passed it.\n\nChapter 15 has two sections. Section 255 says what can never be amended. Section 256 says how everything else can be. And because section 256 sits in Chapter 15, amending section 256 itself also needs a referendum. The lock guards its own key."
+   }
+  },
+  {
+   "kind": "text",
+   "title": {
+    "th": "มาตรา 255: สิ่งที่แก้ไม่ได้",
+    "en": "Section 255: what cannot be amended"
+   },
+   "body": {
+    "th": "มาตรา 255 ห้ามการแก้ไขเพิ่มเติมรัฐธรรมนูญสองแบบ คือ การแก้ที่เปลี่ยนแปลงการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข และการแก้ที่เปลี่ยนแปลงรูปแบบของรัฐ\n\n\"รูปแบบของรัฐ\" เชื่อมกับมาตรา 1: ประเทศไทยเป็นรัฐเดี่ยว แบ่งแยกไม่ได้ การแก้ให้กลายเป็นสหพันธรัฐจึงทำผ่านมาตรา 256 ไม่ได้\n\nนักกฎหมายเรียกบทบัญญัติแบบนี้ว่า \"บทบัญญัติที่แก้ไขไม่ได้\" ซึ่งรัฐธรรมนูญเยอรมันมีคล้ายกันและเป็นที่รู้จักในชื่อ eternity clause เหตุผลคือ กติกาบางข้อเป็นตัวตนของระบบ ถ้าแก้ได้ด้วยเสียงข้างมากพิเศษ ก็เท่ากับเปลี่ยนเป็นระบบใหม่โดยใช้ช่องทางของระบบเก่า\n\nใครดูว่าการแก้ขัดมาตรา 255 หรือไม่ มาตรา 256 (9) ให้สมาชิกรัฐสภาเข้าชื่อส่งศาลรัฐธรรมนูญได้ก่อนนำขึ้นทูลเกล้าทูลกระหม่อมถวาย",
+    "en": "Section 255 bans two kinds of amendment: one that changes the democratic regime of government with the King as Head of State, and one that changes the form of the state.\n\n\"Form of the state\" connects to section 1: Thailand is a unitary state and cannot be divided. Turning it into a federation cannot be done through section 256.\n\nLawyers call this an unamendable provision. Germany's Basic Law has a famous version, often called the eternity clause. The reasoning: some rules are the identity of the system. If a supermajority could amend them, the old system's own procedure would be used to create a different system.\n\nWho checks whether an amendment breaches section 255? Under section 256(9), members of Parliament can petition the Constitutional Court before the bill is presented to the King."
+   }
+  },
+  {
+   "kind": "logic",
+   "title": {
+    "th": "ทำไมแก้รัฐธรรมนูญต้องยากกว่ากฎหมายธรรมดา",
+    "en": "Why amending the constitution is harder than passing a law"
+   },
+   "body": {
+    "th": "ลองนึกถึงการแข่งฟุตบอล นักเตะแต่ละทีมเปลี่ยนแผนการเล่นได้ทุกนาที แต่ถ้าทีมที่นำอยู่เปลี่ยนกติกากลางเกม เช่น ขอให้ประตูของตัวเองนับสองแต้ม เกมก็จบความหมาย\n\nกฎหมายธรรมดาคือแผนการเล่น รัฐธรรมนูญคือกติกา คนที่ชนะเลือกตั้งควรเปลี่ยนนโยบายได้ง่าย แต่ไม่ควรเปลี่ยนกติกาที่ใช้ตัดสินว่าใครชนะได้ง่ายเท่ากัน มิฉะนั้นผู้ชนะจะเขียนกติกาให้ตัวเองชนะตลอดไป\n\nมาตรา 256 จึงวางด่านไว้หลายชั้น แต่ละด่านตอบคำถามว่า \"ใครต้องเห็นด้วยบ้าง\"\n\n- ด่านเสียงข้างมากของสองสภา: ต้องได้เกินครึ่งของรัฐสภาทั้งหมด ไม่ใช่แค่ของผู้มาประชุม\n- ด่านวุฒิสภา: ต้องมี ส.ว. ไม่น้อยกว่าหนึ่งในสาม ทั้งวาระแรกและวาระสาม\n- ด่านฝ่ายค้าน: วาระสามต้องมี ส.ส. จากพรรคที่ไม่มีรัฐมนตรี ไม่มีประธานหรือรองประธานสภา เห็นชอบไม่น้อยกว่าร้อยละ 20 ของพรรคเหล่านั้นรวมกัน\n- ด่านประชาชน: เรื่องอ่อนไหวตาม (8) ต้องผ่านประชามติ\n- ด่านศาล: สมาชิกรัฐสภาหนึ่งในสิบส่งศาลรัฐธรรมนูญตรวจได้ตาม (9)\n\nคำถามที่ผู้เรียนควรถามต่อ คือ ด่านมากแค่ไหนจึงพอดี ด่านน้อยไป ผู้ชนะแก้กติกาเพื่อตัวเอง ด่านมากไป กติกาที่คนส่วนใหญ่ไม่ยอมรับก็แก้ไม่ได้ ข้อถกเถียงเรื่องรัฐธรรมนูญ 2560 อยู่ตรงคำถามนี้ (ดูบทที่ 12)",
+    "en": "Think of a football match. A team can change its tactics every minute. But if the team that is ahead changes the rules mid-game, say by making its own goals count double, the match loses its meaning.\n\nOrdinary laws are tactics. The constitution is the rulebook. Whoever wins an election should be able to change policy easily, but should not be able to change the rules that decide who wins just as easily. Otherwise the winner writes rules that keep them winning.\n\nSo section 256 sets several gates. Each gate answers the question \"who has to agree?\"\n\n- The two-chamber majority: more than half of all members of both Houses, not just of those present.\n- The Senate gate: at least one-third of senators, at both the first and the third reading.\n- The opposition gate: at the third reading, at least 20 per cent of the MPs from parties holding no ministerial post and neither the Speaker nor a Deputy Speaker of the House.\n- The people's gate: sensitive subjects listed in (8) need a referendum.\n- The court gate: one-tenth of members can send the bill to the Constitutional Court under (9).\n\nThe question a learner should keep asking is: how many gates are enough? Too few and winners rewrite the rules for themselves. Too many and rules that most people reject cannot be changed. The whole debate over the 2017 constitution sits on that question (see Chapter 12)."
+   }
+  },
+  {
+   "kind": "logic",
+   "title": {
+    "th": "มาตรา 256 เป็นแผนผังทีละขั้น",
+    "en": "Section 256 as a step-by-step flowchart"
+   },
+   "body": {
+    "th": "อ่านเหมือนแผนผัง เริ่มบนสุด เดินลงทีละกล่อง ทุกกล่องมีทางออกสองทาง คือผ่านไปกล่องถัดไป หรือตกไป\n\n- ขั้น 1 ผู้เสนอ (256 (1)): คณะรัฐมนตรี หรือ ส.ส. ไม่น้อยกว่าหนึ่งในห้าของสภาผู้แทนราษฎร หรือ ส.ส. รวมกับ ส.ว. ไม่น้อยกว่าหนึ่งในห้าของสองสภา หรือประชาชนผู้มีสิทธิเลือกตั้งไม่น้อยกว่า 50,000 คน\n- ขั้น 2 รูปแบบ (256 (2)): ต้องเสนอเป็นร่างรัฐธรรมนูญแก้ไขเพิ่มเติมต่อรัฐสภา พิจารณาสามวาระในที่ประชุมร่วม\n- ขั้น 3 วาระแรก รับหลักการ (256 (3)): ลงคะแนนเปิดเผยโดยเรียกชื่อ ต้องได้เสียงเห็นชอบ \"ไม่น้อยกว่ากึ่งหนึ่ง\" ของสมาชิกทั้งหมดเท่าที่มีอยู่ของสองสภา และในจำนวนนั้นต้องมี ส.ว. ไม่น้อยกว่าหนึ่งในสามของ ส.ว. ทั้งหมดเท่าที่มีอยู่ ไม่ถึงเกณฑ์ใดเกณฑ์หนึ่ง ร่างตก\n- ขั้น 4 วาระสอง เรียงมาตรา (256 (4)): ใช้เสียงข้างมากธรรมดา ถ้าประชาชนเป็นผู้เสนอ ต้องให้ผู้แทนของผู้เข้าชื่อแสดงความเห็นด้วย\n- ขั้น 5 พัก 15 วัน (256 (5))\n- ขั้น 6 วาระสาม ขั้นสุดท้าย (256 (6)): ลงคะแนนเปิดเผยโดยเรียกชื่อ ต้องได้เสียง \"มากกว่ากึ่งหนึ่ง\" ของสมาชิกทั้งหมดเท่าที่มีอยู่ของสองสภา และต้องมีครบสองกุญแจ คือ ส.ส. จากพรรคที่ไม่มีรัฐมนตรี ประธานสภา หรือรองประธานสภา เห็นชอบไม่น้อยกว่าร้อยละ 20 ของพรรคเหล่านั้นรวมกัน และ ส.ว. ไม่น้อยกว่าหนึ่งในสาม\n- ขั้น 7 พักอีก 15 วัน (256 (7))\n- ขั้น 8 ทางแยกประชามติ (256 (8)): ถ้าแก้หมวด 1 บททั่วไป หมวด 2 พระมหากษัตริย์ หมวด 15 การแก้ไขเพิ่มเติมรัฐธรรมนูญ เรื่องคุณสมบัติหรือลักษณะต้องห้ามของผู้ดำรงตำแหน่งตามรัฐธรรมนูญ เรื่องหน้าที่หรืออำนาจของศาลหรือองค์กรอิสระ หรือเรื่องที่ทำให้ศาลหรือองค์กรอิสระทำหน้าที่ไม่ได้ ต้องจัดออกเสียงประชามติก่อน ถ้าประชามติไม่เห็นชอบ ร่างไปต่อไม่ได้\n- ขั้น 9 ประตูศาล (256 (9)): ก่อนนายกรัฐมนตรีนำความกราบบังคมทูล ส.ส. หรือ ส.ว. หรือสองสภารวมกัน ไม่น้อยกว่าหนึ่งในสิบ เข้าชื่อเสนอว่าร่างขัดมาตรา 255 หรือเป็นเรื่องตาม (8) ได้ ประธานสภาส่งศาลรัฐธรรมนูญ ศาลต้องวินิจฉัยภายใน 30 วัน ระหว่างนั้นห้ามนำขึ้นทูลเกล้าทูลกระหม่อมถวาย\n- ขั้น 10 นำขึ้นทูลเกล้าทูลกระหม่อมถวายเพื่อทรงลงพระปรมาภิไธย และนำมาตรา 81 มาใช้โดยอนุโลม\n\nจุดที่คนพลาดบ่อย: วาระแรกใช้คำว่า \"ไม่น้อยกว่ากึ่งหนึ่ง\" (ครึ่งพอดีก็ผ่าน) วาระสามใช้คำว่า \"มากกว่ากึ่งหนึ่ง\" (ต้องเกินครึ่ง) และเกณฑ์ร้อยละ 20 ของฝ่ายค้านมีเฉพาะวาระสาม",
+    "en": "Read it like a flowchart. Start at the top and move down one box at a time. Every box has two exits: pass to the next box, or the bill dies.\n\n- Step 1, who may propose (256(1)): the Cabinet; or at least one-fifth of all MPs; or MPs and senators together numbering at least one-fifth of both Houses; or at least 50,000 eligible voters.\n- Step 2, form (256(2)): it must be a draft constitutional amendment presented to Parliament and considered in three readings in joint sitting.\n- Step 3, first reading, acceptance in principle (256(3)): open roll-call vote. It needs \"not less than half\" of all existing members of both Houses, and among them at least one-third of all existing senators. Miss either test and the bill falls.\n- Step 4, second reading, clause by clause (256(4)): simple majority. If citizens proposed the bill, their representatives must be allowed to give their views.\n- Step 5: wait 15 days (256(5)).\n- Step 6, third and final reading (256(6)): open roll-call vote. It needs \"more than half\" of all existing members of both Houses, plus two keys: at least 20 per cent of the MPs from parties that hold no ministerial post and neither the Speaker nor a Deputy Speaker, counted together; and at least one-third of senators.\n- Step 7: wait another 15 days (256(7)).\n- Step 8, the referendum fork (256(8)): if the bill touches Chapter 1 (General Provisions), Chapter 2 (the King), Chapter 15 (amendment), the qualifications or prohibitions of constitutional office-holders, the duties or powers of the courts or independent organs, or anything that would leave a court or independent organ unable to perform its duties, a referendum must be held first. If voters reject it, the bill goes no further.\n- Step 9, the court gate (256(9)): before the Prime Minister submits it, at least one-tenth of MPs, of senators, or of both Houses together may petition that the bill breaches section 255 or falls under (8). The presiding officer sends it to the Constitutional Court, which must rule within 30 days. Meanwhile the bill may not be presented to the King.\n- Step 10: the bill is presented to the King for royal signature, with section 81 applied by analogy.\n\nCommon slip: the first reading says \"not less than half\" (exactly half passes); the third reading says \"more than half\" (must exceed half). The 20 per cent opposition test applies only at the third reading."
+   }
+  },
+  {
+   "kind": "numbers",
+   "title": {
+    "th": "เกณฑ์ของมาตรา 256 เป็นตัวเลข (เมื่อสภาเต็ม 500 + 200)",
+    "en": "Section 256 thresholds in seats (full House of 500 and Senate of 200)"
+   },
+   "rows": [
+    {
+     "th": "ส.ส. เข้าชื่อเสนอ (หนึ่งในห้า)",
+     "en": "MPs needed to propose (one-fifth)",
+     "value": "100 จาก 500 / 100 of 500",
+     "sections": [
+      256
+     ]
+    },
+    {
+     "th": "สองสภาเข้าชื่อเสนอ (หนึ่งในห้า)",
+     "en": "Members of both Houses needed to propose (one-fifth)",
+     "value": "140 จาก 700 / 140 of 700",
+     "sections": [
+      256
+     ]
+    },
+    {
+     "th": "ประชาชนเข้าชื่อเสนอ",
+     "en": "Citizens needed to propose",
+     "value": "50,000",
+     "sections": [
+      256
+     ]
+    },
+    {
+     "th": "วาระแรก: ไม่น้อยกว่ากึ่งหนึ่งของสองสภา",
+     "en": "First reading: not less than half of both Houses",
+     "value": "350 จาก 700 / 350 of 700",
+     "sections": [
+      256
+     ]
+    },
+    {
+     "th": "วาระแรกและวาระสาม: ส.ว. ไม่น้อยกว่าหนึ่งในสาม",
+     "en": "First and third readings: at least one-third of senators",
+     "value": "67 จาก 200 (ช่วง ส.ว. 250 คน คือ 84) / 67 of 200 (84 when the Senate had 250)",
+     "sections": [
+      256,
+      269
+     ]
+    },
+    {
+     "th": "วาระสาม: มากกว่ากึ่งหนึ่งของสองสภา",
+     "en": "Third reading: more than half of both Houses",
+     "value": "351 จาก 700 / 351 of 700",
+     "sections": [
+      256
+     ]
+    },
+    {
+     "th": "วาระสาม: ส.ส. พรรคที่ไม่มีรัฐมนตรี ประธาน หรือรองประธานสภา",
+     "en": "Third reading: MPs of parties without a minister, Speaker or Deputy Speaker",
+     "value": "ร้อยละ 20 ของพรรคเหล่านั้นรวมกัน / 20% of those parties combined",
+     "sections": [
+      256
+     ]
+    },
+    {
+     "th": "ระยะพักหลังวาระสอง และหลังวาระสาม",
+     "en": "Waiting periods after second and third readings",
+     "value": "15 + 15 วัน / days",
+     "sections": [
+      256
+     ]
+    },
+    {
+     "th": "ส่งศาลรัฐธรรมนูญ / เวลาวินิจฉัย",
+     "en": "Petition to the Constitutional Court / time to rule",
+     "value": "1/10 ของสมาชิก, 30 วัน / one-tenth, 30 days",
+     "sections": [
+      256
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "mnemonic",
+   "title": {
+    "th": "ตัวช่วยจำ: 4 ประตู 3 วาระ 2 พัก 2 กุญแจ 1 ศาล",
+    "en": "Memory aid: four doors, three readings, two pauses, two keys, one court"
+   },
+   "body": {
+    "th": "- สี่ประตูเข้า: ครม. / ส.ส. หนึ่งในห้า / สองสภาหนึ่งในห้า / ประชาชนห้าหมื่น จำว่า \"หนึ่งในห้าเปิดประตู\" เพราะตัวเลขหนึ่งในห้าโผล่ซ้ำสองครั้ง ส่วนประชาชนห้าหมื่นใช้เลขห้าเหมือนกัน\n- สามวาระ: รับหลักการ → เรียงมาตรา → ลงมติทั้งฉบับ\n- สองพัก: 15 วันหลังวาระสอง และ 15 วันหลังวาระสาม ให้ทุกฝ่ายมีเวลาคิดอีกรอบ เหมือนพักครึ่งก่อนยิงจุดโทษ\n- สองกุญแจ: กุญแจ ส.ว. (หนึ่งในสาม) ใช้สองครั้งคือวาระแรกกับวาระสาม กุญแจฝ่ายค้าน (ร้อยละ 20) ใช้ครั้งเดียวในวาระสาม ความหมายคือ การแก้กติกาต้องไม่ใช่ของฝ่ายรัฐบาลฝ่ายเดียว\n- หนึ่งศาล: หนึ่งในสิบส่งศาลได้ ศาลมี 30 วัน\n\nรายการที่ต้องทำประชามติ จำเป็นภาพบ้าน: \"ฐานบ้าน (หมวด 1) หลังคา (หมวด 2) แม่กุญแจ (หมวด 15) คนเฝ้าบ้าน (คุณสมบัติผู้ดำรงตำแหน่ง) และกรรมการตัดสิน (ศาลและองค์กรอิสระ)\"",
+    "en": "- The four doors in: Cabinet; one-fifth of MPs; one-fifth of both Houses; 50,000 voters. \"One-fifth opens the door\": the fraction appears twice, and fifty thousand carries the same five.\n- Three readings: principle, clause by clause, final vote.\n- Two pauses: 15 days after the second reading and 15 days after the third, a cooling-off break like the pause before a penalty shoot-out.\n- Two keys: the Senate key (one-third) turns twice, at the first and third readings; the opposition key (20 per cent) turns once, at the third. The meaning: changing the rules cannot be the government side's business alone.\n- One court: one-tenth of members can send it to the Court, which has 30 days.\n\nThe referendum list as a house: \"the foundation (Chapter 1), the roof (Chapter 2), the padlock (Chapter 15), the people who guard the house (qualifications of office-holders), and the referees (courts and independent organs)\"."
+   }
+  },
+  {
+   "kind": "case",
+   "title": {
+    "th": "แก้ระบบเลือกตั้ง 2564: ร่างเดียวที่รอด",
+    "en": "The 2021 electoral amendment: the one draft that survived"
+   },
+   "body": {
+    "th": "กลางปี 2564 รัฐสภาพิจารณาร่างแก้ไขรัฐธรรมนูญหลายฉบับพร้อมกัน ทั้งของพรรครัฐบาลและพรรคฝ่ายค้าน วันที่ 24 มิถุนายน 2564 วาระแรกผ่านเพียงฉบับเดียว คือร่างของพรรคประชาธิปัตย์ ซึ่งแก้ระบบเลือกตั้ง ร่างอื่นตกเพราะไม่ได้เสียง ส.ว. ถึงหนึ่งในสาม หรือไม่ได้เสียงรวมถึงเกณฑ์\n\nร่างนี้เปลี่ยนสามเรื่อง:\n- มาตรา 83: ส.ส. 500 คน เป็น ส.ส. เขต 400 คน และบัญชีรายชื่อ 100 คน และใช้บัตรเลือกตั้งแยกกันแบบละหนึ่งใบ จากเดิมปี 2562 ที่ใช้บัตรใบเดียว เขต 350 บัญชีรายชื่อ 150\n- มาตรา 86: วิธีคำนวณจำนวน ส.ส. ของแต่ละจังหวัดโดยใช้ฐาน 400 คน\n- มาตรา 91: คิดที่นั่งบัญชีรายชื่อจากคะแนนบัตรบัญชีรายชื่อรวมทั้งประเทศ\n\nวาระสามวันที่ 10 กันยายน 2564 ผ่านด้วยเสียง 472 ต่อ 33 งดออกเสียง 187 iLaw รายงานว่า ส.ว. เห็นชอบ 149 คน การแก้ไขมีผลใช้บังคับในเดือนพฤศจิกายน 2564 และใช้ในการเลือกตั้งปี 2566\n\nทำไมไม่ต้องทำประชามติ: ระบบเลือกตั้งไม่อยู่ในรายการของมาตรา 256 (8) ร่างนี้จึงไปถึงขั้นนำขึ้นทูลเกล้าทูลกระหม่อมถวายได้โดยไม่ผ่านประชามติ\n\nบทเรียน: มาตรา 256 ไม่ได้ทำให้แก้รัฐธรรมนูญไม่ได้เลย แต่ทำให้การแก้ผ่านได้เฉพาะเรื่องที่ ส.ว. จำนวนพอสมควรเห็นด้วย ความเห็นของผู้วิจารณ์และผู้สนับสนุนต่อข้อนี้อยู่ในบทที่ 12",
+    "en": "In mid-2021 Parliament considered several amendment drafts at once, from both government and opposition parties. On 24 June 2021 only one cleared the first reading: the Democrat Party's draft changing the electoral system. The others fell short, either of one-third of senators or of the overall total.\n\nThe draft changed three things:\n- Section 83: 500 MPs become 400 constituency MPs plus 100 party-list MPs, elected on two separate ballots. The 2019 election had used a single ballot, with 350 constituency and 150 list seats.\n- Section 86: how each province's number of MPs is calculated, now based on 400.\n- Section 91: list seats are allocated from the national total of party-list ballots.\n\nAt the third reading on 10 September 2021 it passed 472 to 33, with 187 abstentions; iLaw reported 149 senators in favour. The amendment took effect in November 2021 and governed the 2023 election.\n\nWhy no referendum? The electoral system is not on the section 256(8) list, so the bill could go to the King without one.\n\nThe lesson: section 256 does not make amendment impossible. It makes amendment possible only on subjects that a substantial bloc of senators accepts. How critics and defenders read that fact is covered in Chapter 12."
+   },
+   "year": 2021
+  },
+  {
+   "kind": "case",
+   "title": {
+    "th": "จะเขียนรัฐธรรมนูญใหม่ทั้งฉบับ ทำผ่านมาตรา 256 ได้ไหม",
+    "en": "Can Parliament write a whole new constitution through section 256?"
+   },
+   "body": {
+    "th": "ปลายปี 2563 รัฐสภารับหลักการร่างแก้ไขมาตรา 256 จากทั้งฝั่งรัฐบาลและฝ่ายค้าน ซึ่งจะเพิ่มหมวดใหม่ให้มีสภาร่างรัฐธรรมนูญ (ส.ส.ร.) ไปเขียนฉบับใหม่ ส่วนร่างที่ประชาชนเข้าชื่อเสนอผ่าน iLaw ไม่ผ่านวาระแรก\n\nก่อนวาระสาม รัฐสภาส่งคำถามให้ศาลรัฐธรรมนูญว่ารัฐสภามีอำนาจทำเช่นนี้หรือไม่ วันที่ 11 มีนาคม 2564 ศาลมีคำวินิจฉัยว่า รัฐสภามีอำนาจจัดทำรัฐธรรมนูญฉบับใหม่ได้ แต่ต้องถามประชาชนผู้มีอำนาจสถาปนารัฐธรรมนูญก่อนว่าต้องการรัฐธรรมนูญฉบับใหม่หรือไม่ และเมื่อร่างเสร็จต้องให้ประชาชนลงประชามติเห็นชอบอีกครั้ง เหตุผลหลักของศาลคือ รัฐธรรมนูญ 2560 ผ่านการออกเสียงประชามติของประชาชน การเปลี่ยนทั้งฉบับจึงต้องกลับไปถามเจ้าของอำนาจ\n\nวันที่ 17 มีนาคม 2564 การลงมติวาระสามไม่ผ่าน รายงานข่าวระบุว่ามี ส.ว. เห็นชอบเพียงสองคน ส.ว. จำนวนมากงดออกเสียงหรือไม่ลงคะแนน ร่างจึงตกที่กุญแจ ส.ว.\n\nข้อวิจารณ์ที่ต้องรู้: นักกฎหมายฝ่ายหนึ่งชี้ว่ามาตรา 256 ไม่ได้เขียนเรื่องประชามติก่อนเริ่มร่างไว้เลย การกำหนดเงื่อนไขนี้จึงมาจากการตีความของศาล ฝ่ายที่เห็นด้วยกับศาลมองว่าการเปลี่ยนทั้งฉบับไม่ใช่ \"การแก้ไขเพิ่มเติม\" แบบปกติ จึงต้องมีความยินยอมของประชาชนโดยตรง",
+    "en": "In late 2020 Parliament accepted in principle drafts from both government and opposition to amend section 256 and add a chapter creating an elected Constitution Drafting Assembly to write a new charter. A citizens' draft submitted through iLaw failed at the first reading.\n\nBefore the third reading, Parliament asked the Constitutional Court whether it had the power to do this. On 11 March 2021 the Court ruled that Parliament may produce a new constitution, but must first ask the people, who hold constituent power, whether they want one, and then hold another referendum to approve the finished draft. The Court's core reasoning: the 2017 constitution was approved by referendum, so replacing it entirely requires going back to the people who own that power.\n\nOn 17 March 2021 the third-reading vote failed. Press reports said only two senators voted yes, while many abstained or did not vote. The bill died at the Senate key.\n\nThe critique to know: some legal scholars point out that section 256 says nothing about a referendum before drafting begins, so that condition comes from the Court's interpretation. Those who agree with the Court argue that replacing the whole document is not an ordinary \"amendment\" and therefore needs the people's direct consent."
+   },
+   "year": 2021,
+   "ref": "คำวินิจฉัยศาลรัฐธรรมนูญที่ 4/2564"
+  },
+  {
+   "kind": "case",
+   "title": {
+    "th": "กฎหมายประชามติ: จากเสียงข้างมากสองชั้น สู่เสียงข้างมากธรรมดา",
+    "en": "The referendum law: from double majority to simple majority"
+   },
+   "body": {
+    "th": "เมื่อศาลบอกว่าต้องถามประชาชนก่อน คำถามถัดไปคือ ถามแล้วนับผลอย่างไร พ.ร.บ.ว่าด้วยการออกเสียงประชามติ พ.ศ. 2564 เดิมใช้ \"เสียงข้างมากสองชั้น\" คือต้องมีผู้มาใช้สิทธิเกินครึ่งของผู้มีสิทธิ และฝ่ายที่ชนะต้องได้เกินครึ่งของผู้มาใช้สิทธิ ผู้วิจารณ์ชี้ว่าเกณฑ์นี้ทำให้การไม่ไปลงคะแนนกลายเป็นการคัดค้านไปโดยปริยาย\n\nปี 2567–2568 สภาผู้แทนราษฎรกับวุฒิสภาเห็นไม่ตรงกัน สภาผู้แทนราษฎรต้องการเสียงข้างมากธรรมดา วุฒิสภาต้องการคงเกณฑ์สองชั้น สุดท้ายกฎหมายแก้ไข (ฉบับที่ 2) พ.ศ. 2568 ประกาศในราชกิจจานุเบกษาเมื่อ 21 ตุลาคม 2568 และมีผลวันที่ 22 ตุลาคม 2568 เปลี่ยนเป็นเสียงข้างมากธรรมดา และเปิดทางให้จัดประชามติวันเดียวกับการเลือกตั้งได้\n\nทำไมเรื่องนี้อยู่ในบทแก้ไขรัฐธรรมนูญ: เพราะมาตรา 256 (8) และคำวินิจฉัยของศาลส่งเรื่องสำคัญไปที่ประชามติ เกณฑ์นับคะแนนจึงเป็นกุญแจอีกดอกหนึ่งที่ไม่ได้อยู่ในตัวรัฐธรรมนูญ แต่มีผลต่อการแก้รัฐธรรมนูญโดยตรง",
+    "en": "Once the Court said the people must be asked first, the next question was how to count the answer. The Referendum Act of 2021 originally used a \"double majority\": turnout above half of eligible voters, and the winning side above half of those who voted. Critics noted that this turned staying at home into a de facto No vote.\n\nIn 2024–2025 the House and the Senate disagreed. The House wanted a simple majority; the Senate wanted to keep the double majority. In the end the amending act (No. 2) of 2025 was published in the Royal Gazette on 21 October 2025 and took effect on 22 October 2025. It switched to a simple majority and allowed a referendum to be held on the same day as an election.\n\nWhy does this belong in a chapter on amendment? Because section 256(8) and the Court's rulings send major questions to a referendum. The counting rule is another key: it is not in the constitution, yet it shapes constitutional change directly."
+   },
+   "year": 2025
+  },
+  {
+   "kind": "case",
+   "title": {
+    "th": "สามประชามติ และการลงคะแนน 8 กุมภาพันธ์ 2569",
+    "en": "Three referendums, and the vote of 8 February 2026"
+   },
+   "body": {
+    "th": "ปี 2567 รัฐสภาเคยขอให้ศาลรัฐธรรมนูญอธิบายคำวินิจฉัยปี 2564 ว่าต้องทำประชามติกี่ครั้ง ศาลไม่รับคำร้องไว้พิจารณา ปีต่อมารัฐสภาส่งคำถามอีกครั้ง\n\nวันที่ 10 กันยายน 2568 ศาลรัฐธรรมนูญวินิจฉัย ตามที่สื่อรายงาน ว่ารัฐสภามีอำนาจริเริ่มจัดทำรัฐธรรมนูญฉบับใหม่ได้ แต่ต้องผ่านประชามติรวมสามครั้ง คือ ครั้งแรกถามว่าต้องการฉบับใหม่หรือไม่ ครั้งที่สองตามมาตรา 256 (8) เพราะต้องแก้หมวด 15 เพื่อเพิ่มกลไกยกร่าง และครั้งที่สามรับรองร่างที่เสร็จแล้ว ศาลเปิดทางให้รวมครั้งแรกกับครั้งที่สองไว้ด้วยกันได้ และระบุว่าสมาชิกสภาร่างรัฐธรรมนูญไม่อาจมาจากการเลือกตั้งโดยตรงทั้งหมด ประเด็นหลังนี้ไม่ได้อยู่ในคำถามที่รัฐสภาส่งไป จึงถูกวิจารณ์จากนักวิชาการบางส่วน\n\nปลายปี 2568 รัฐสภาพิจารณาร่างแก้มาตรา 256 หลายฉบับ ร่างบางฉบับผ่านวาระแรก แต่ร่างของพรรคเพื่อไทยตกเพราะได้ ส.ว. ไม่ถึงหนึ่งในสาม ต่อมามีการยุบสภาผู้แทนราษฎรในเดือนธันวาคม 2568 ก่อนกระบวนการแก้ไขจะเสร็จ คำถามประชามติครั้งแรกจึงแยกออกมาจัดพร้อมการเลือกตั้งทั่วไป\n\nวันที่ 8 กุมภาพันธ์ 2569 ประชาชนตอบคำถามว่าเห็นชอบให้มีรัฐธรรมนูญฉบับใหม่หรือไม่ ผลตามรายงานของคณะกรรมการการเลือกตั้ง เห็นชอบประมาณ 21.6 ล้านเสียง (ร้อยละ 60) ไม่เห็นชอบประมาณ 11.2 ล้านเสียง (ร้อยละ 31) ไม่แสดงความเห็นประมาณ 3.1 ล้านเสียง\n\nผลนี้เป็นเพียงประตูแรก การเขียนฉบับใหม่ยังต้องผ่านการแก้มาตรา 256 ตามขั้นตอนเต็ม รวมถึงกุญแจ ส.ว. หนึ่งในสาม และประชามติอีกอย่างน้อยหนึ่งครั้ง ผู้เรียนควรตรวจข่าวล่าสุดเสมอ เพราะเรื่องนี้ยังเดินต่อ",
+    "en": "In 2024 Parliament asked the Constitutional Court to clarify how many referendums its 2021 ruling required. The Court declined to take the case. The following year Parliament asked again.\n\nOn 10 September 2025 the Court ruled, as reported in the press, that Parliament may initiate a new constitution but only through three referendums in total: the first asking whether people want a new charter; a second under section 256(8), because Chapter 15 must be amended to add a drafting mechanism; and a third to approve the finished draft. The Court allowed the first two to be combined, and said the drafting assembly's members could not all be directly elected. That last point was not in the question Parliament had asked, and some scholars criticised it on that ground.\n\nIn late 2025 Parliament debated several drafts amending section 256. Some cleared the first reading; Pheu Thai's draft failed because it won fewer than one-third of senators. The House was dissolved in December 2025 before the amendment process finished, so the first referendum question was put on its own, alongside the general election.\n\nOn 8 February 2026 voters were asked whether they approved of having a new constitution. Election Commission figures reported about 21.6 million in favour (60 per cent), about 11.2 million against (31 per cent), and about 3.1 million expressing no opinion.\n\nThis was only the first door. A new charter still needs a section 256 amendment through every step, including the one-third Senate key, and at least one more referendum. Learners should check the latest news; the story is still moving."
+   },
+   "year": 2026
+  },
+  {
+   "kind": "critique",
+   "title": {
+    "th": "ข้อถกเถียง: กุญแจ ส.ว. คือหลักประกันหรือสิทธิยับยั้งของคนส่วนน้อย",
+    "en": "Debate: is the Senate key a safeguard or a minority veto?"
+   },
+   "body": {
+    "th": "ฝ่ายวิจารณ์: Apipol Sae-Tung (Asian Review, 2025) เสนอว่าการกำหนดให้ต้องได้ ส.ว. หนึ่งในสามทั้งวาระแรกและวาระสาม ในช่วงที่ ส.ว. ทั้ง 250 คนได้รับแต่งตั้งตามคำแนะนำของ คสช. ทำให้รัฐธรรมนูญแทบแก้ไม่ได้ตราบที่กลุ่มผู้ร่างยังมีบทบาทในการเมือง ตัวอย่างที่ใช้ประกอบคือร่างตั้ง ส.ส.ร. ปี 2564 ที่ตกเพราะได้ ส.ว. น้อยมาก\n\nฝ่ายผู้ร่างและผู้สนับสนุน: กุญแจหลายดอกมีไว้กันไม่ให้เสียงข้างมากในสภาผู้แทนราษฎรเพียงฝ่ายเดียวเปลี่ยนกติกาเพื่อประโยชน์ตัวเอง การที่ร่างแก้ระบบเลือกตั้งปี 2564 ผ่านได้แสดงว่าการแก้ไขเป็นไปได้เมื่อมีฉันทามติกว้างพอ\n\nข้อเท็จจริงที่ทั้งสองฝ่ายต้องยอมรับ: ตั้งแต่กลางปี 2567 ส.ว. มาจากการเลือกกันเองตามมาตรา 107 ไม่ใช่การแต่งตั้งตามมาตรา 269 แล้ว แต่เกณฑ์หนึ่งในสามยังอยู่ และร่างแก้ไขในปี 2568 ก็ยังตกที่กุญแจนี้อย่างน้อยหนึ่งฉบับ ข้อถกเถียงจึงเปลี่ยนจากเรื่อง \"ส.ว. แต่งตั้ง\" เป็นเรื่องว่าสภาที่สองซึ่งประชาชนไม่ได้เลือกโดยตรงควรถือกุญแจแก้รัฐธรรมนูญหรือไม่",
+    "en": "The critics: Apipol Sae-Tung (Asian Review, 2025) argues that requiring one-third of senators at both the first and third readings, while all 250 senators had been appointed on the NCPO's advice, made the constitution almost impossible to amend as long as its authors stayed in politics. The 2021 drafting-assembly bill, which won almost no senators, is the usual illustration.\n\nThe drafters and defenders: multiple keys exist so that a House majority alone cannot rewrite the rules in its own favour. The 2021 electoral amendment passing shows change is possible when agreement is broad enough.\n\nA fact both sides must accept: since mid-2024 senators have been chosen by the group-selection process of section 107, not appointed under section 269. The one-third rule remains, and at least one amendment draft still failed at that key in 2025. So the debate has shifted from \"appointed senators\" to a wider question: should a second chamber that voters do not elect directly hold a key to constitutional change?"
+   },
+   "by": "Apipol Sae-Tung (2025); constitution drafters and defenders"
+  },
+  {
+   "kind": "text",
+   "title": {
+    "th": "หมวด 16: การปฏิรูปประเทศ แผนที่เขียนไว้ในรัฐธรรมนูญ",
+    "en": "Chapter 16: national reform written into the constitution"
+   },
+   "body": {
+    "th": "รัฐธรรมนูญส่วนใหญ่ในโลกบอกว่าใครมีอำนาจอะไร หมวด 16 ทำสิ่งที่ต่างออกไป มันเขียนรายการงานที่ต้องทำให้เสร็จ พร้อมกำหนดเวลา เหมือนรายการงานที่เจ้าของบ้านแปะไว้ที่ตู้เย็น\n\nมาตรา 257 กำหนดเป้าหมายสามข้อ: ประเทศสงบเรียบร้อย สามัคคีปรองดอง พัฒนาอย่างยั่งยืนตามหลักปรัชญาของเศรษฐกิจพอเพียง และสมดุลระหว่างวัตถุกับจิตใจ สังคมสงบสุข เป็นธรรม มีโอกาสทัดเทียมเพื่อขจัดความเหลื่อมล้ำ และประชาชนมีความสุข มีคุณภาพชีวิตที่ดี และมีส่วนร่วมในการพัฒนาประเทศและการปกครอง\n\nมาตรา 258 ลงรายละเอียดอย่างน้อยเจ็ดด้าน ใช้ตัวอักษร ก ถึง ช\n- ก. การเมือง: ประชาชนเข้าใจระบอบ ใช้สิทธิโดยอิสระ พรรคการเมืองเปิดเผยตรวจสอบได้ พรรคต้องรับผิดชอบเมื่อโฆษณานโยบายโดยไม่วิเคราะห์ผลกระทบ ความคุ้มค่า และความเสี่ยง และมีกลไกแก้ความขัดแย้งโดยสันติวิธี\n- ข. การบริหารราชการแผ่นดิน: ใช้เทคโนโลยี เชื่อมฐานข้อมูลภาครัฐ ปรับโครงสร้าง ระบบบุคคลภาครัฐ และการจัดซื้อจัดจ้างให้โปร่งใส\n- ค. กฎหมาย: ทบทวนกฎหมายเก่าให้สอดคล้องกับมาตรา 77 ลดระบบอนุญาต ปฏิรูปการศึกษากฎหมาย ทำฐานข้อมูลกฎหมาย และช่วยประชาชนเสนอกฎหมาย\n- ง. กระบวนการยุติธรรม: กำหนดเวลาทุกขั้นตอน ช่วยคนไม่มีเงิน ถ่วงดุลพนักงานสอบสวนกับอัยการ มีบริการนิติวิทยาศาสตร์มากกว่าหนึ่งหน่วยงาน และปฏิรูปตำรวจ\n- จ. การศึกษา: ดูแลเด็กเล็กก่อนวัยเรียนโดยไม่เก็บเงินตามมาตรา 54 ตั้งกองทุนตามมาตรา 54 ภายในหนึ่งปี ระบบผลิตครู และปรับการเรียนการสอน\n- ฉ. เศรษฐกิจ: ความสามารถในการแข่งขัน ภาษีที่เป็นธรรม งบประมาณที่มีประสิทธิภาพ สหกรณ์และวิสาหกิจเพื่อสังคม\n- ช. ด้านอื่น: น้ำ การกระจายการถือครองที่ดิน ขยะ หลักประกันสุขภาพ และแพทย์เวชศาสตร์ครอบครัว",
+    "en": "Most constitutions say who holds which power. Chapter 16 does something different: it writes a to-do list with deadlines, like a list stuck on the fridge.\n\nSection 257 sets three goals: a peaceful, united country developing sustainably under the philosophy of the sufficiency economy, with balance between material and spiritual development; a fair and peaceful society with equal opportunity to remove inequality; and people who are happy, enjoy a good quality of life, and take part in developing the country and in its democratic government with the King as Head of State.\n\nSection 258 sets out at least seven areas, lettered in Thai from ก to ช:\n- (a) Politics: civic understanding, free voting, open and accountable parties, party responsibility for promising policies without analysing impact, value for money and risk, and peaceful ways to resolve political conflict.\n- (b) Public administration: technology, linked government databases, restructuring, civil-service personnel reform, and transparent procurement.\n- (c) Law: review older laws against section 77, fewer licensing regimes, reform of legal education, a public legal database, and help for citizens drafting bills.\n- (d) Justice: time limits at every stage, help for people without money, checks between police investigators and prosecutors, more than one independent forensic service, and police reform.\n- (e) Education: free early-childhood care under section 54, a fund under section 54 to be legislated within one year, teacher training, and reformed teaching.\n- (f) Economy: competitiveness, fair taxes, efficient budgets, co-operatives and social enterprises.\n- (g) Other: water management, fair distribution of landholding, waste, health insurance, and family-medicine doctors."
+   }
+  },
+  {
+   "kind": "logic",
+   "title": {
+    "th": "มาตรา 259–261: เส้นตายและแผนสำรอง",
+    "en": "Sections 259–261: deadlines and fallbacks"
+   },
+   "body": {
+    "th": "มาตรา 259 กำหนดให้มีกฎหมายว่าด้วยแผนและขั้นตอนการปฏิรูปประเทศ ซึ่งต้องมีวิธีทำแผน การมีส่วนร่วม ขั้นตอน การวัดผล และระยะเวลา ทุกด้านต้องเริ่มภายในหนึ่งปีนับแต่วันประกาศใช้รัฐธรรมนูญ และต้องระบุผลที่คาดว่าจะได้ภายในห้าปี กฎหมายนี้ต้องประกาศใช้ภายใน 120 วัน ระหว่างที่ยังไม่มี ให้หน่วยงานรัฐปฏิรูปไปพลางก่อนด้วยอำนาจที่มีอยู่\n\nมาตรา 260 ปฏิรูปตำรวจตามมาตรา 258 ง. (4) ให้ ครม. ตั้งคณะกรรมการ ประธานต้องเป็นผู้ทรงคุณวุฒิที่ไม่เคยเป็นตำรวจ ฝั่งที่เป็นหรือเคยเป็นตำรวจต้องมีผู้บัญชาการตำรวจแห่งชาติ และฝั่งผู้ทรงคุณวุฒิที่ไม่เคยเป็นตำรวจต้องมีจำนวนเท่ากับฝั่งตำรวจ บวกกับปลัดกระทรวงการคลัง ปลัดกระทรวงมหาดไทย ปลัดกระทรวงยุติธรรม เลขาธิการสำนักงานศาลยุติธรรม และอัยการสูงสุด ต้องทำให้เสร็จในหนึ่งปี ถ้าไม่เสร็จ การแต่งตั้งโยกย้ายตำรวจต้องใช้หลักอาวุโสตามหลักเกณฑ์ที่ ครม. กำหนด\n\nมาตรา 261 ปฏิรูปการศึกษา ให้ ครม. ตั้งคณะกรรมการอิสระภายใน 60 วัน แล้วคณะกรรมการต้องเสนอข้อเสนอแนะและร่างกฎหมายภายในสองปี\n\nตรรกะของการออกแบบ: ผู้ร่างรู้ว่างานปฏิรูปมักถูกเลื่อน จึงใส่ทั้งเส้นตายและ \"บทลงโทษตัวระบบ\" ไว้ในตัว ตัวอย่างชัดที่สุดคือมาตรา 260 ถ้าปฏิรูปตำรวจไม่ทัน ระบบแต่งตั้งจะถูกบังคับให้ใช้หลักอาวุโส ซึ่งลดดุลพินิจของฝ่ายการเมือง",
+    "en": "Section 259 requires a law on national reform plans and procedures, covering how plans are made, public participation, steps, measurement, and timing. Every area must start within one year of the constitution's promulgation, with expected results within five years. That law had to be in force within 120 days; until then, state agencies were to reform using the powers they already had.\n\nSection 260 covers police reform under section 258(d)(4). The Cabinet appoints a committee chaired by a qualified person who has never been a police officer. It includes serving or former police officers, among them the Commissioner-General; an equal number of qualified people who were never police; and the permanent secretaries of Finance, Interior and Justice, the Secretary-General of the Office of the Courts of Justice, and the Attorney-General. The work had to be done in one year. If not, police appointments and transfers must follow seniority under Cabinet rules.\n\nSection 261 covers education. The Cabinet appoints an independent committee within 60 days, which must deliver recommendations and draft laws within two years.\n\nThe design logic: the drafters expected reform to be postponed, so they built in deadlines and a penalty on the system itself. Section 260 is the clearest example: miss the police-reform deadline and appointments switch to seniority, shrinking politicians' discretion."
+   }
+  },
+  {
+   "kind": "mnemonic",
+   "title": {
+    "th": "ตัวช่วยจำ: ก–ช เจ็ดด้าน และเลข 120 / 1 / 5",
+    "en": "Memory aid: seven lettered areas and 120 / 1 / 5"
+   },
+   "body": {
+    "th": "- เจ็ดด้านเรียงตามตัวอักษร ก ข ค ง จ ฉ ช ไม่ต้องท่องเลข ให้ท่องเป็นการเดินทางของคดีหนึ่งเรื่อง: การเมืองออกกฎ (ก) ข้าราชการนำไปใช้ (ข) กฎหมายเขียนไว้ (ค) ศาลและตำรวจบังคับใช้ (ง) โรงเรียนสร้างคนรุ่นต่อไป (จ) เศรษฐกิจจ่ายบิล (ฉ) แล้วที่เหลือคือน้ำ ดิน ขยะ สุขภาพ (ช)\n- เส้นตายของมาตรา 259: 120 วันมีกฎหมาย / 1 ปีเริ่มทุกด้าน / 5 ปีเห็นผล จำว่า \"ร้อยยี่สิบวันเขียนแผน หนึ่งปีลงมือ ห้าปีตรวจการบ้าน\"\n- ตำรวจ (มาตรา 260): หนึ่งปี ไม่ทันใช้อาวุโส / การศึกษา (มาตรา 261): 60 วันตั้งกรรมการ สองปีส่งงาน",
+    "en": "- Seven areas, (a) to (g), read as the life of a single case: politics makes the rules (a), the civil service applies them (b), the law is written (c), police and courts enforce it (d), schools shape the next generation (e), the economy pays the bill (f), and the rest is water, land, waste and health (g).\n- Section 259 deadlines: 120 days for the law, one year to start every area, five years to show results. \"Write the plan in 120 days, start in a year, mark the homework at five.\"\n- Police (section 260): one year, or seniority applies. Education (section 261): committee within 60 days, report within two years."
+   }
+  },
+  {
+   "kind": "case",
+   "title": {
+    "th": "ปฏิรูปทำจริงแค่ไหน: กฎหมายที่ออกมาตามหมวด 16",
+    "en": "What reform actually produced"
+   },
+   "body": {
+    "th": "บางเส้นตายทำได้ทัน พ.ร.บ.แผนและขั้นตอนการดำเนินการปฏิรูปประเทศ พ.ศ. 2560 ออกมาในปีเดียวกับรัฐธรรมนูญ แผนปฏิรูปประเทศชุดแรกประกาศใช้ในปี 2561 และมีการปรับแผนอีกครั้งในปี 2564\n\nด้านการศึกษา มี พ.ร.บ.กองทุนเพื่อความเสมอภาคทางการศึกษา พ.ศ. 2561 ซึ่งเป็นกองทุนที่มาตรา 54 และมาตรา 258 จ. (2) สั่งให้ตั้ง ส่วนกฎหมายการศึกษาแห่งชาติฉบับใหม่ใช้เวลานานกว่าที่กำหนดมาก\n\nด้านตำรวจ กฎหมายตำรวจแห่งชาติฉบับใหม่ผ่านในปี 2565 ช้ากว่าเส้นตายหนึ่งปีของมาตรา 260 อยู่หลายปี ระหว่างนั้นจึงเกิดคำถามเรื่องการใช้หลักอาวุโสในการแต่งตั้งตามกลไกสำรองของมาตรานี้\n\nข้อสังเกตของนักวิชาการ: Apipol Sae-Tung (2025) ชี้ว่าแผนปฏิรูปเริ่มต้นจากองค์กรที่ คสช. แต่งตั้ง คือสภาปฏิรูปแห่งชาติ แล้วต่อด้วยสภาขับเคลื่อนการปฏิรูปประเทศ ก่อนส่งต่อเป็นยุทธศาสตร์ชาติ ฝ่ายสนับสนุนตอบว่าการเขียนการปฏิรูปไว้ในรัฐธรรมนูญทำให้งานไม่ขาดช่วงเมื่อรัฐบาลเปลี่ยน ผู้เรียนควรแยกสองคำถามออกจากกัน: เนื้อหาการปฏิรูปดีหรือไม่ กับ ใครเป็นผู้กำหนดวาระการปฏิรูป",
+    "en": "Some deadlines were met. The National Reform Plans and Procedures Act was passed in 2017, the same year as the constitution. The first set of national reform plans came out in 2018 and was revised in 2021.\n\nIn education, the Equitable Education Fund Act of 2018 created the fund that section 54 and section 258(e)(2) called for. A new national education law took far longer than the timetable intended.\n\nFor the police, a new National Police Act passed only in 2022, years after the one-year deadline in section 260. That gap raised questions about how the section's seniority fallback should operate in the meantime.\n\nA scholar's observation: Apipol Sae-Tung (2025) notes that the reform plans began in bodies appointed by the NCPO (the National Reform Council, then the National Reform Steering Assembly) and later fed into the National Strategy. Supporters answer that writing reform into the constitution keeps the work going when governments change. Learners should keep two questions apart: is the reform content good, and who set the reform agenda?"
+   },
+   "year": 2022
+  },
+  {
+   "kind": "check",
+   "title": {
+    "th": "ทดสอบตัวเอง",
+    "en": "Check yourself"
+   },
+   "items": [
+    {
+     "q": {
+      "th": "สมาชิกสภาท้องถิ่นมาจากทางใด และผู้บริหารท้องถิ่นมาได้กี่ทาง",
+      "en": "How are local councillors chosen, and how many routes are there for local executives?"
+     },
+     "a": {
+      "th": "สมาชิกสภาท้องถิ่นต้องมาจากการเลือกตั้งเสมอ ผู้บริหารมาได้สามทาง: เลือกตั้ง ความเห็นชอบของสภาท้องถิ่น หรือวิธีอื่นสำหรับท้องถิ่นรูปแบบพิเศษ โดยคำนึงถึงการมีส่วนร่วมของประชาชน",
+      "en": "Councillors must always be elected. Executives: direct election, approval by the local council, or another method for special-form bodies, with public participation in mind."
+     },
+     "sections": [
+      252
+     ]
+    },
+    {
+     "q": {
+      "th": "ประชาชนในท้องถิ่นเข้าชื่อกันทำอะไรได้บ้างตามรัฐธรรมนูญ",
+      "en": "What can local voters do by joint petition?"
+     },
+     "a": {
+      "th": "เสนอข้อบัญญัติท้องถิ่น และถอดถอนสมาชิกสภาท้องถิ่นหรือผู้บริหารท้องถิ่น ตามที่กฎหมายกำหนด",
+      "en": "Propose local ordinances, and recall local councillors or executives, under the relevant laws."
+     },
+     "sections": [
+      254
+     ]
+    },
+    {
+     "q": {
+      "th": "การกำกับดูแลท้องถิ่นของรัฐต่างจากการบังคับบัญชาอย่างไร",
+      "en": "How does state supervision of local bodies differ from command?"
+     },
+     "a": {
+      "th": "กำกับดูแลทำได้เพียงเท่าที่จำเป็นเพื่อคุ้มครองประโยชน์ของคนในท้องถิ่นหรือของประเทศ ป้องกันทุจริต และให้ใช้เงินอย่างมีประสิทธิภาพ ไม่ใช่การสั่งการแบบหัวหน้ากับลูกน้อง",
+      "en": "Supervision goes only as far as necessary to protect local or national interests, prevent corruption and ensure efficient spending; it is not boss-to-subordinate command."
+     },
+     "sections": [
+      250
+     ]
+    },
+    {
+     "q": {
+      "th": "วาระแรกของการแก้รัฐธรรมนูญต้องได้เสียงเท่าไร",
+      "en": "What does the first reading of an amendment require?"
+     },
+     "a": {
+      "th": "ไม่น้อยกว่ากึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่ของสองสภา และต้องมี ส.ว. ไม่น้อยกว่าหนึ่งในสามของ ส.ว. ทั้งหมดเท่าที่มีอยู่ ลงคะแนนเปิดเผยโดยเรียกชื่อ",
+      "en": "Not less than half of all existing members of both Houses, including at least one-third of all existing senators, by open roll-call vote."
+     },
+     "sections": [
+      256
+     ]
+    },
+    {
+     "q": {
+      "th": "เกณฑ์ใดมีเฉพาะในวาระสาม",
+      "en": "Which requirement applies only at the third reading?"
+     },
+     "a": {
+      "th": "ส.ส. จากพรรคที่ไม่มีรัฐมนตรี ประธานสภา หรือรองประธานสภา ต้องเห็นชอบไม่น้อยกว่าร้อยละ 20 ของพรรคเหล่านั้นรวมกัน และเสียงรวมต้อง 'มากกว่า' กึ่งหนึ่ง",
+      "en": "At least 20 per cent of MPs from parties holding no ministerial post, Speaker or Deputy Speaker; and the total must be 'more than' half."
+     },
+     "sections": [
+      256
+     ]
+    },
+    {
+     "q": {
+      "th": "แก้ระบบเลือกตั้งปี 2564 ทำไมไม่ต้องทำประชามติ แต่การแก้มาตรา 256 ต้องทำ",
+      "en": "Why did the 2021 electoral amendment need no referendum, while amending section 256 does?"
+     },
+     "a": {
+      "th": "ระบบเลือกตั้งไม่อยู่ในรายการของมาตรา 256 (8) ส่วนมาตรา 256 อยู่ในหมวด 15 ซึ่งอยู่ในรายการ",
+      "en": "The electoral system is not on the section 256(8) list; section 256 sits in Chapter 15, which is on the list."
+     },
+     "sections": [
+      256,
+      83,
+      91
+     ]
+    },
+    {
+     "q": {
+      "th": "การแก้ไขแบบใดทำไม่ได้เลย",
+      "en": "Which amendments are forbidden outright?"
+     },
+     "a": {
+      "th": "การแก้ที่เปลี่ยนแปลงการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือเปลี่ยนแปลงรูปแบบของรัฐ",
+      "en": "Any that changes the democratic regime with the King as Head of State, or changes the form of the state."
+     },
+     "sections": [
+      255,
+      1
+     ]
+    },
+    {
+     "q": {
+      "th": "ถ้าปฏิรูปกฎหมายตำรวจไม่เสร็จในหนึ่งปี เกิดอะไรขึ้น",
+      "en": "What happens if police law reform is not finished within one year?"
+     },
+     "a": {
+      "th": "การแต่งตั้งโยกย้ายข้าราชการตำรวจต้องใช้หลักอาวุโสตามหลักเกณฑ์ที่ ครม. กำหนดและประกาศในราชกิจจานุเบกษา",
+      "en": "Police appointments and transfers must follow seniority under Cabinet rules published in the Royal Gazette."
+     },
+     "sections": [
+      260
+     ]
+    }
+   ]
+  }
+ ],
+ "sections": [
+  249,
+  250,
+  251,
+  252,
+  253,
+  254,
+  255,
+  256,
+  257,
+  258,
+  259,
+  260,
+  261
+ ],
+ "sources": [
+  "Constitution of the Kingdom of Thailand B.E. 2560, as amended B.E. 2564 (Thai text)",
+  "Apipol Sae-Tung, 'Juridification, Legitimacy, and Authoritarian Survival in Thai Politics from the 2014 Military Coup', Asian Review 38(1) (2025)",
+  "Khemthong Tonsakulrungruang, 'Entrenching the Minority: The Constitutional Court in Thailand's Political Conflict', Washington International Law Journal 26(2) (2017)",
+  "Constitutional Court of Thailand, Ruling No. 4/2564 (11 March 2021)",
+  "iLaw reporting on the 2021 amendment votes (ilaw.or.th)",
+  "Referendum Act (No. 2) B.E. 2568, reported by InfoQuest and The Standard (October 2025)",
+  "ConstitutionNet, 'Thailand's constitutional court rules three referendums required' (2025) and 'Thailand's 2026 Constitutional Referendum' (2026)",
+  "Election Commission of Thailand results for the 8 February 2026 referendum, as compiled by Wikipedia ('2026 Thai constitutional referendum')"
+ ]
+}

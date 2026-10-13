@@ -1,0 +1,425 @@
+{
+  "id": "history",
+  "order": 0,
+  "title": {
+    "th": "ยี่สิบฉบับ: เขียน ฉีก แล้วเขียนใหม่",
+    "en": "Twenty Charters: Write, Tear Up, Write Again"
+  },
+  "lede": {
+    "th": "เช้ามืดวันที่ 24 มิถุนายน 2475 นายทหารคนหนึ่งปีนขึ้นรถบรรทุกกลางลานพระบรมรูปทรงม้า แล้วอ่านประกาศที่เปลี่ยนประเทศไปตลอดกาล นับจากเช้าวันนั้นถึงวันที่ 6 เมษายน 2560 ไทยมีรัฐธรรมนูญ 20 ฉบับ เฉลี่ยราวสี่ปีต่อฉบับ เท่ากับอายุสภาหนึ่งสมัยพอดี บทนี้เล่าว่าแต่ละฉบับเกิดขึ้นเพราะอะไร ใครเขียน และทิ้งร่องรอยอะไรไว้ในรัฐธรรมนูญที่เราใช้อยู่วันนี้",
+    "en": "Before dawn on 24 June 1932, an army colonel climbed onto a truck in Bangkok's Royal Plaza and read out a statement that ended absolute monarchy in Siam. Between that morning and 6 April 2017, Thailand produced 20 charters, roughly one every four years, which is exactly the length of one parliamentary term. This chapter tells how each one came about, who wrote it, and what traces each left in the constitution in force today."
+  },
+  "blocks": [
+    {
+      "kind": "text",
+      "title": {"th": "ก่อนจะมีรัฐธรรมนูญ: กฎหมายตราสามดวง", "en": "Before the charter: the Three Seals Law"},
+      "body": {
+        "th": "ปี 2347 หญิงคนหนึ่งชื่ออำแดงป้อมยื่นฟ้องหย่าสามี ทั้งที่ตัวเองเป็นฝ่ายมีชู้ ตัวบทที่ศาลเปิดดูกลับบอกว่าหย่าได้ เรื่องนี้ไปถึงพระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราช ซึ่งทรงเห็นว่าตัวบทคลาดเคลื่อน จึงโปรดเกล้าฯ ให้ชำระกฎหมายทั้งหมดใหม่ ผลงานที่เสร็จในปี 2348 คือกฎหมายตราสามดวง ประทับตราสามดวงของสมุหนายก สมุหกลาโหม และพระคลัง\n\nกฎหมายชุดนี้สืบรากมาจากคัมภีร์พระธรรมศาสตร์ ซึ่งวางหลักว่ากษัตริย์ต้องปกครองโดยธรรม แต่ไม่มีเอกสารฉบับใดกำหนดว่าใครเป็นเจ้าของอำนาจ ใครถ่วงดุลใคร และถ้าผู้ปกครองทำผิดจะเกิดอะไรขึ้น ช่องว่างนี้แหละที่รัฐธรรมนูญเข้ามาเติม\n\nความคิดเรื่องรัฐธรรมนูญมีมาก่อนปี 2475 นานพอสมควร กลุ่มทหารหนุ่มที่ถูกจับในเหตุการณ์ที่เรียกว่ากบฏ ร.ศ. 130 (ค.ศ. 1912) ก็คิดเรื่องเปลี่ยนการปกครองแล้ว ในรัชกาลที่ 7 พระบาทสมเด็จพระปกเกล้าเจ้าอยู่หัวทรงให้ที่ปรึกษาชาวอเมริกันศึกษาเรื่องนี้ถึงสองครั้ง คือ ฟรานซิส บี. แซร์ ในปี 1926 และเรย์มอนด์ บี. สตีเวนส์ ร่วมกับพระยาศรีวิสารวาจา ในต้นปี 1932 ซึ่งเสนอเค้าโครงการเปลี่ยนแปลงรูปแบบการปกครอง เอกสารทั้งสองชุดปัจจุบันสถาบันพระปกเกล้ารวบรวมไว้ แต่ที่ปรึกษาในราชสำนักส่วนใหญ่เห็นว่ายังไม่ถึงเวลา เรื่องจึงค้างไว้ จนมีคนอื่นลงมือก่อน",
+        "en": "In 1804 a woman named Amdaeng Pom filed for divorce, even though she was the one who had been unfaithful. The legal text the court consulted said she could. The case reached King Rama I, who concluded the text had been corrupted and ordered the entire body of law revised. The result, finished in 1805, was the Three Seals Law, named after the three seals of the chief ministers that were stamped on it.\n\nThose laws grew out of the Thammasat, an Indic legal tradition that told kings to rule by dharma. What it never did was say in writing who owned power, who checked whom, or what happened if a ruler went wrong. That gap is exactly what a constitution fills.\n\nThe idea of a constitution was around well before 1932. Young officers arrested in the 1912 plot known as the R.S. 130 rebellion had already talked of changing the system. King Prajadhipok (Rama VII) twice asked American advisers to study the question: Francis B. Sayre in 1926, and Raymond B. Stevens with Phraya Sriwisarn Vacha in early 1932, who drafted an outline of changes to the form of government. King Prajadhipok's Institute has since published both sets of papers. Most senior advisers at court said the time was not right, so the plans were shelved. Someone else moved first."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {"th": "เจ็ดคนในห้องเช่าที่ปารีส", "en": "Seven men in a rented room in Paris"},
+      "body": {
+        "th": "เดือนกุมภาพันธ์ 1927 นักเรียนและข้าราชการไทยเจ็ดคนประชุมกันที่ห้องพักบนถนนซอเมอราร์ (Rue du Sommerard) ในปารีส ประชุมกันอยู่หลายวัน และตกลงตั้งคณะที่ต่อมาเรียกว่าคณะราษฎร เป้าหมายคือเปลี่ยนจากสมบูรณาญาสิทธิราชย์มาเป็นการปกครองที่กษัตริย์อยู่ใต้กฎหมาย และต้องทำโดยฉับพลัน เลี่ยงการนองเลือด (ปฏิทินไทยสมัยนั้นยังขึ้นปีใหม่เดือนเมษายน เดือนกุมภาพันธ์นั้นจึงนับเป็น พ.ศ. 2469)\n\nคนที่ควรจำไว้มีสองฝั่ง ฝั่งพลเรือนมีหลวงประดิษฐ์มนูธรรม (ปรีดี พนมยงค์) นักกฎหมายหนุ่มที่ร่างเอกสารสำคัญเกือบทั้งหมด ฝั่งทหารที่เข้าร่วมภายหลังมีนายทหารอาวุโสสี่คนที่เรียกกันว่า สี่ทหารเสือ คือ พระยาพหลพลพยุหเสนา พระยาทรงสุรเดช พระยาฤทธิอัคเนย์ และพระประศาสน์พิทยายุทธ และมีนายทหารหนุ่มอีกคนชื่อหลวงพิบูลสงคราม (แปลก พิบูลสงคราม) ซึ่งจะกลับมาในเรื่องนี้อีกหลายครั้ง\n\nทำไมช่วงนั้น เศรษฐกิจตกต่ำครั้งใหญ่ทั่วโลกกระทบสยามหนัก รัฐบาลต้องตัดงบและปลดข้าราชการ คนรุ่นใหม่ที่เรียนจากยุโรปเห็นว่าระบบเดิมแก้ปัญหาไม่ได้ และกังวลแรงกดดันจากอังกฤษกับฝรั่งเศสที่ประชิดชายแดนทั้งสองด้าน นี่คือคำอธิบายที่นักประวัติศาสตร์ เช่น ชาญวิทย์ เกษตรศิริ ให้ไว้",
+        "en": "In February 1927, seven Thai students and officials met in a rented room on Rue du Sommerard in Paris. They talked for several days and agreed to form what became the Khana Ratsadon, the People's Party. Their goal: replace absolute monarchy with a king who sits under the law, and do it in one swift move without bloodshed. (Siam's calendar then started the year in April, so Thai records file that February under B.E. 2469.)\n\nTwo names on each side matter. On the civilian side stood Pridi Banomyong, a young lawyer who drafted almost every key document. On the military side, later recruits included four senior officers nicknamed the Four Musketeers: Phraya Phahon Phonphayuhasena, Phraya Songsuradet, Phraya Ritthi Akhaney and Phra Prasasphithayayut. A young officer called Plaek Phibunsongkhram was also in the group; he returns to this story many times.\n\nWhy then? The Great Depression hit Siam hard. The government cut budgets and laid off officials. A generation educated in Europe believed the old system could not fix this, and worried about British and French pressure on two borders. That is the explanation historians such as Charnvit Kasetsiri give."
+      }
+    },
+    {
+      "kind": "image",
+      "file": "khana-ratsadon-announcement-1932.jpg",
+      "caption": {
+        "th": "ประกาศคณะราษฎร ลงวันที่ 24 มิถุนายน 2475 ที่แจกจ่ายในเช้าวันเปลี่ยนแปลงการปกครอง",
+        "en": "The People's Party announcement dated 24 June 1932, handed out on the morning of the revolution."
+      },
+      "credit": "Khana Ratsadon (People's Party)",
+      "license": "Public domain (PD-Thailand)",
+      "source": "https://commons.wikimedia.org/wiki/File:Announcement_of_People%27s_Party_(1932-06-24).jpg"
+    },
+    {
+      "kind": "text",
+      "title": {"th": "เช้ามืด 24 มิถุนายน 2475", "en": "Before dawn, 24 June 1932"},
+      "body": {
+        "th": "ตอนนั้นพระบาทสมเด็จพระปกเกล้าเจ้าอยู่หัวประทับอยู่ที่วังไกลกังวล หัวหิน ในกรุงเทพฯ ทหารถูกเรียกมาชุมนุมที่ลานพระบรมรูปทรงม้าหน้าพระที่นั่งอนันตสมาคม รถหุ้มเกราะเคลื่อนเข้าคุมพื้นที่ เจ้านายและเสนาบดีคนสำคัญถูกเชิญตัวมาไว้ที่พระที่นั่ง พระยาพหลพลพยุหเสนาขึ้นยืนบนรถบรรทุก อ่านประกาศคณะราษฎรต่อหน้าทหาร\n\nประกาศฉบับนั้นวางหลักหกข้อที่ต่อมาเรียกว่าหลัก 6 ประการ คือ เอกราช ความปลอดภัย เศรษฐกิจ ความเสมอภาค เสรีภาพ และการศึกษา คณะราษฎรมีหนังสือกราบบังคมทูลเชิญเสด็จกลับพระนครเพื่อทรงเป็นกษัตริย์ภายใต้รัฐธรรมนูญ\n\nพระบาทสมเด็จพระปกเกล้าเจ้าอยู่หัวทรงรับข้อเสนอ และเสด็จกลับพระนครในวันที่ 26 มิถุนายน ทั้งหมดนี้ใช้เวลาไม่ถึงสามวัน โดยไม่มีการสู้รบกลางเมือง นักประวัติศาสตร์เกือบทุกสำนักเห็นตรงกันในข้อเท็จจริงชุดนี้ แต่ยังเถียงกันมาเกือบร้อยปีว่าควรเรียกเหตุการณ์นี้ว่า ปฏิวัติ หรือ การเปลี่ยนแปลงการปกครอง และใครควรได้เครดิตแค่ไหน",
+        "en": "King Prajadhipok was at Klai Kangwon Palace in Hua Hin that morning. In Bangkok, troops were called to the Royal Plaza in front of the Ananta Samakhom Throne Hall. Armoured cars moved in to hold the area. Senior princes and ministers were brought to the throne hall and held there. Phraya Phahon stood on a truck and read the People's Party manifesto to the soldiers.\n\nThe manifesto laid down six principles: independence, security, economy, equality, liberty and education. The party sent a letter inviting the King to return to Bangkok and reign under a constitution.\n\nThe King accepted and returned to the capital on 26 June. The whole change took less than three days and involved no fighting in the streets. Historians broadly agree on these facts. They have argued for almost a century about whether to call it a revolution or a change of government, and about who deserves how much credit."
+      }
+    },
+    {
+      "kind": "image",
+      "file": "1932-manifesto-reading-royal-plaza.png",
+      "caption": {
+        "th": "พระยาพหลพลพยุหเสนายืนบนรถบรรทุก อ่านประกาศคณะราษฎรที่ลานพระบรมรูปทรงม้า 24 มิถุนายน 2475",
+        "en": "Phraya Phahon reads the People's Party manifesto from a truck in the Royal Plaza, 24 June 1932."
+      },
+      "credit": "Unknown photographer (press photo distributed by International News Photos, Inc.)",
+      "license": "Public domain (PD-old-70; PD-Thailand)",
+      "source": "https://commons.wikimedia.org/wiki/File:Manifesto_Speech_of_Siamese_Revolution_of_1932.png"
+    },
+    {
+      "kind": "text",
+      "title": {"th": "27 มิถุนายน: คำว่า ชั่วคราว", "en": "27 June: the word “provisional”"},
+      "body": {
+        "th": "วันที่ 26 มิถุนายน คณะราษฎรนำร่างกฎหมายที่ปรีดีร่างขึ้นทูลเกล้าฯ ถวาย พระบาทสมเด็จพระปกเกล้าเจ้าอยู่หัวทรงขอเวลาทอดพระเนตรก่อน แล้วทรงลงพระปรมาภิไธยในวันรุ่งขึ้น 27 มิถุนายน 2475 พร้อมทรงเติมคำว่า ชั่วคราว ต่อท้ายชื่อ ด้วยเหตุผลว่าควรใช้ไปก่อน จนกว่าจะมีกรรมการและสภาพิจารณาทำเป็นฉบับถาวร ชื่อเต็มจึงเป็น พระราชบัญญัติธรรมนูญการปกครองแผ่นดินสยามชั่วคราว พุทธศักราช 2475\n\nม. 1 ของฉบับนี้สั้นและแรงที่สุดในประวัติศาสตร์รัฐธรรมนูญไทย คือ “อำนาจสูงสุดของประเทศนั้นเป็นของราษฎรทั้งหลาย” มาตราถัดมาแบ่งผู้ใช้อำนาจแทนราษฎรออกเป็นสี่ คือ กษัตริย์ สภาผู้แทนราษฎร คณะกรรมการราษฎร และศาล\n\nทั้งฉบับมี 39 มาตรา สภาผู้แทนราษฎรชุดแรกมีสมาชิก 70 คนที่ฝ่ายคณะราษฎรแต่งตั้ง ประชุมครั้งแรกวันที่ 28 มิถุนายน และเลือกพระยามโนปกรณ์นิติธาดา นักกฎหมายอาวุโสที่ไม่ได้เป็นสมาชิกคณะราษฎร เป็นประธานคณะกรรมการราษฎร ซึ่งก็คือหัวหน้ารัฐบาลคนแรก การเลือกคนกลางมานั่งตำแหน่งนี้เป็นสัญญาณแรกว่าฝ่ายใหม่ต้องการประนีประนอมกับฝ่ายเก่า",
+        "en": "On 26 June the People's Party presented the draft Pridi had written. King Prajadhipok asked for time to read it, and signed the next day, 27 June 1932. He added the word “provisional” (chua khrao) to the title, reasoning that it should serve for now, until a committee and the assembly could turn it into a permanent text. So the first charter's full name became the Temporary Charter for the Administration of Siam Act, B.E. 2475.\n\nIts s. 1 is the shortest and boldest sentence in Thai constitutional history: supreme power in the country belongs to all the people. The next section named four bodies that exercise power on the people's behalf: the King, the House of Representatives, the People's Committee and the courts.\n\nThe act had 39 sections. The first House had 70 members appointed by the People's Party side. It met on 28 June and chose Phraya Manopakorn Nititada, a senior judge who was not a party member, as President of the People's Committee, in effect the first head of government. Putting a neutral figure in that seat was the first sign that the new side wanted a deal with the old one."
+      }
+    },
+    {
+      "kind": "image",
+      "file": "1932-provisional-charter-gazette.jpg",
+      "caption": {
+        "th": "หน้าแรกของพระราชบัญญัติธรรมนูญการปกครองแผ่นดินสยามชั่วคราว พ.ศ. 2475 ในราชกิจจานุเบกษา",
+        "en": "First page of the 1932 Temporary Charter as published in the Royal Gazette."
+      },
+      "credit": "Royal Gazette scan uploaded by Aristitleism (Wikimedia Commons)",
+      "license": "Public domain (PD-self; the text of a law is not protected by Thai copyright)",
+      "source": "https://commons.wikimedia.org/wiki/File:1932_Siamese_Constitution_001.jpg"
+    },
+    {
+      "kind": "text",
+      "title": {"th": "10 ธันวาคม: ทำไมเป็นวันรัฐธรรมนูญ", "en": "10 December: why it is Constitution Day"},
+      "body": {
+        "th": "ห้าเดือนครึ่งต่อมา คณะอนุกรรมการที่มีพระยามโนปกรณ์ฯ เป็นประธานร่างฉบับถาวรเสร็จ วันที่ 10 ธันวาคม 2475 ในพระที่นั่งอนันตสมาคม พระบาทสมเด็จพระปกเกล้าเจ้าอยู่หัวทรงลงพระปรมาภิไธยในรัฐธรรมนูญแห่งราชอาณาจักรสยาม พุทธศักราช 2475 ฉบับนี้เขียนด้วยลายมือบนสมุดไทย ทำไว้สามชุด ปัจจุบันชุดหนึ่งจัดแสดงที่พิพิธภัณฑ์รัฐสภา วันที่ 10 ธันวาคมจึงเป็นวันรัฐธรรมนูญมาจนทุกวันนี้\n\nฉบับถาวรมี 68 มาตรา และเป็นผลของการต่อรองที่เห็นได้ชัด ตำแหน่งหัวหน้ารัฐบาลเปลี่ยนชื่อเป็น นายกรัฐมนตรี และพระยามโนปกรณ์ฯ ดำรงตำแหน่งนี้ บทเฉพาะกาลให้สภามีสมาชิกสองประเภทจำนวนเท่ากัน ประเภทหนึ่งมาจากการเลือกตั้ง อีกประเภทมาจากการแต่งตั้ง จนกว่าราษฎรที่จบประถมศึกษาจะเกินครึ่ง แต่ไม่เกินสิบปี การเลือกตั้งทั่วไปครั้งแรกจัดขึ้นวันที่ 15 พฤศจิกายน 2476 เป็นการเลือกตั้งทางอ้อม\n\nฉบับนี้อยู่ยาวที่สุดในบรรดา 20 ฉบับ ใช้ต่อเนื่องราวสิบสามปีครึ่ง จนถึงวันที่ 9 พฤษภาคม 2489",
+        "en": "Five and a half months later, a subcommittee chaired by Phraya Manopakorn finished the permanent text. On 10 December 1932, in the Ananta Samakhom Throne Hall, King Prajadhipok signed the Constitution of the Kingdom of Siam. It was handwritten on traditional folding books in three copies; one is on display at the Parliament Museum. That is why 10 December is still Constitution Day.\n\nThe permanent constitution had 68 sections, and the bargain behind it shows. The head of government was now called Prime Minister, and Phraya Manopakorn held the post. A transitional clause gave the House two equal halves, one elected and one appointed, until more than half the voters had finished primary school, and for no more than ten years. The first general election, an indirect one, took place on 15 November 1933.\n\nOf all 20 charters, this one lasted longest without interruption: about thirteen and a half years, until 9 May 1946."
+      }
+    },
+    {
+      "kind": "image",
+      "file": "1932-king-prajadhipok-signs-constitution.jpg",
+      "caption": {
+        "th": "พระบาทสมเด็จพระปกเกล้าเจ้าอยู่หัวทรงลงพระปรมาภิไธยในรัฐธรรมนูญแห่งราชอาณาจักรสยาม 10 ธันวาคม 2475 ณ พระที่นั่งอนันตสมาคม",
+        "en": "King Prajadhipok signs the permanent Constitution of the Kingdom of Siam, 10 December 1932, Ananta Samakhom Throne Hall."
+      },
+      "credit": "Unknown photographer",
+      "license": "Public domain (PD-old-70)",
+      "source": "https://commons.wikimedia.org/wiki/File:King_Prajadhipok_Signs_Constitution_of_Siam_1932.jpg"
+    },
+    {
+      "kind": "logic",
+      "title": {"th": "คำกริยาที่ย้ายไปมา: เป็นของ → มาจาก → เป็นของ", "en": "A verb that moved: belongs to → comes from → belongs to"},
+      "body": {
+        "th": "ลองวางสามประโยคเรียงกัน\n\n- ฉบับชั่วคราว 27 มิ.ย. 2475 ม. 1: อำนาจสูงสุดของประเทศนั้น เป็นของ ราษฎรทั้งหลาย\n- ฉบับถาวร 10 ธ.ค. 2475 ม. 2: อำนาจอธิปไตย ย่อมมาจาก ปวงชนชาวสยาม พระมหากษัตริย์ทรงใช้อำนาจนั้นตามรัฐธรรมนูญ\n- ฉบับปัจจุบัน มาตรา 3: อำนาจอธิปไตย เป็นของ ปวงชนชาวไทย พระมหากษัตริย์ทรงใช้อำนาจนั้นทางรัฐสภา คณะรัฐมนตรี และศาล\n\nนักประวัติศาสตร์หลายคนอ่านการเปลี่ยนคำจาก เป็นของ เป็น มาจาก ในเดือนธันวาคมว่าเป็นส่วนหนึ่งของการประนีประนอมระหว่างฝ่ายใหม่กับฝ่ายเก่า บางคนเห็นว่าความหมายทางกฎหมายแทบไม่ต่าง ที่แน่ ๆ คือคำว่า เป็นของ กลับมาในฉบับหลัง ๆ และอยู่ในมาตรา 3 ทุกวันนี้\n\nอีกสองประโยคเดินทางมาไกลกว่านั้น มาตรา 1 ของฉบับถาวร 2475 เขียนว่าสยามเป็นราชอาณาจักรอันหนึ่งอันเดียว จะแบ่งแยกมิได้ ถ้อยคำเดียวกันนี้คือมาตรา 1 ฉบับปัจจุบัน และหลักที่ว่าองค์พระมหากษัตริย์ดำรงอยู่ในฐานะอันเป็นที่เคารพสักการะ ผู้ใดจะละเมิดมิได้ ซึ่งอยู่ในมาตรา 3 ของฉบับ 2475 ก็คือมาตรา 6 ในวันนี้ ฉบับ 2475 ยังเขียนว่าประชาชนไม่ว่าเหล่ากำเนิดหรือศาสนาใดได้รับความคุ้มครองเสมอกัน ซึ่งเป็นต้นทางของมาตรา 4\n\nบทเรียน: รัฐธรรมนูญไทยถูกฉีกบ่อย แต่แก่นที่อยู่บนสุดของแต่ละฉบับแทบไม่เปลี่ยน สิ่งที่เปลี่ยนไปมาคือส่วนกลาง ได้แก่ ใครเลือกสภา ใครเลือกนายกฯ และใครตรวจสอบใคร",
+        "en": "Put three sentences side by side.\n\n- Provisional charter, 27 June 1932, s. 1: supreme power in the country belongs to all the people.\n- Permanent charter, 10 December 1932, s. 2: sovereign power comes from the Siamese people, and the King exercises it under the constitution.\n- Today's section 3: sovereign power belongs to the Thai people, and the King exercises it through the National Assembly, the Council of Ministers and the courts.\n\nMany historians read December's shift from “belongs to” to “comes from” as part of the compromise between the new order and the old. Others think the legal difference is small. Either way, “belongs to” came back in later charters and sits in section 3 today.\n\nTwo other sentences travelled even further. S. 1 of the 1932 permanent charter said Siam was one indivisible kingdom; the same words are section 1 today. The principle that the King is held in revered worship and may not be violated was s. 3 in 1932 and is section 6 now. The 1932 text also promised equal protection to all people whatever their birth or religion, the seed of today's section 4.\n\nThe lesson: Thai charters were torn up often, but the top layer barely moved. What kept changing was the middle: who picks parliament, who picks the prime minister, and who checks whom."
+      }
+    },
+    {
+      "kind": "image",
+      "file": "1932-constitution-folding-book-parliament-museum.jpg",
+      "caption": {
+        "th": "ต้นฉบับรัฐธรรมนูญแห่งราชอาณาจักรสยาม 2475 เขียนบนสมุดไทย จัดแสดงที่พิพิธภัณฑ์รัฐสภา",
+        "en": "One of the three handwritten folding-book originals of the 1932 constitution, on display at the Parliament Museum."
+      },
+      "credit": "Iudexvivorum (Wikimedia Commons)",
+      "license": "CC0 1.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1932_Constitution_of_Siam_-_2017-01-26_(001).jpg"
+    },
+    {
+      "kind": "text",
+      "title": {"th": "สามปีที่ไม่ราบเรียบ 2476–2477", "en": "Three rough years, 1933–1935"},
+      "body": {
+        "th": "ข้อตกลงแรกอยู่ได้ไม่นาน ต้นปี 2476 ปรีดีเสนอเค้าโครงการเศรษฐกิจที่ฝ่ายตรงข้ามเรียกว่าสมุดปกเหลือง ถูกโจมตีว่าเอียงไปทางคอมมิวนิสต์ วันที่ 1 เมษายน 2476 พระยามโนปกรณ์ฯ ออกพระราชกฤษฎีกาปิดประชุมสภาและงดใช้รัฐธรรมนูญบางมาตรา ปรีดีต้องเดินทางออกนอกประเทศ วันที่ 20 มิถุนายน 2476 พระยาพหลฯ นำทหารยึดอำนาจคืนและขึ้นเป็นนายกรัฐมนตรี เดือนตุลาคมปีเดียวกันเกิดกบฏบวรเดช ฝ่ายรัฐบาลปราบได้ และต่อมาสร้างอนุสาวรีย์พิทักษ์รัฐธรรมนูญที่หลักสี่\n\nพระบาทสมเด็จพระปกเกล้าเจ้าอยู่หัวทรงมีความเห็นต่างจากรัฐบาลหลายเรื่อง ระหว่างประทับที่อังกฤษ ทรงสละราชสมบัติในวันที่ 2 มีนาคม 2477 ตามปฏิทินสมัยนั้น (ค.ศ. 1935) ในพระราชหัตถเลขา ทรงแสดงว่าพร้อมจะสละอำนาจให้แก่ราษฎรทั้งหลาย แต่ไม่ทรงยินยอมมอบอำนาจให้บุคคลหรือคณะใดใช้อย่างเผด็จการโดยไม่ฟังเสียงประชาชน ข้อความนี้ถูกยกอ้างจากทุกฝ่ายการเมืองมาจนทุกวันนี้ แต่ละฝ่ายอ่านต่างกัน",
+        "en": "The first bargain did not last. In early 1933 Pridi proposed an economic plan that opponents nicknamed the Yellow Book and attacked as communist. On 1 April 1933, Phraya Manopakorn issued a decree closing parliament and suspending parts of the constitution; Pridi was sent abroad. On 20 June 1933, Phraya Phahon took power back with troops and became prime minister. That October a royalist revolt, the Boworadet rebellion, was defeated; the government later built the Constitution Defence Monument at Lak Si to mark it.\n\nKing Prajadhipok disagreed with the government on many points. While in England, he abdicated on 2 March 1935. In his statement he said he was willing to give up his powers to the people as a whole, but not to hand them to any person or group to use autocratically without heeding the people's voice. Every political camp in Thailand still quotes that passage, and each reads it differently."
+      }
+    },
+    {
+      "kind": "mnemonic",
+      "title": {"th": "กับดักปฏิทิน: ทำไมปีไทยก่อน 2484 ดูเพี้ยนไปหนึ่งปี", "en": "The calendar trap: why Thai years before 1941 look one off"},
+      "body": {
+        "th": "ก่อนปี 2484 ไทยขึ้นปีใหม่วันที่ 1 เมษายน ไม่ใช่ 1 มกราคม เดือนมกราคมถึงมีนาคมจึงยังนับเป็นปี พ.ศ. เดิม\n\n- สูตรปกติ: ค.ศ. = พ.ศ. − 543\n- สูตรสำหรับเดือน ม.ค.–มี.ค. ก่อนปี 2484: ค.ศ. = พ.ศ. − 542\n\nตัวอย่าง: การสละราชสมบัติวันที่ 2 มีนาคม 2477 คือปี 1935 ไม่ใช่ 1934 และการประชุมที่ปารีสเดือนกุมภาพันธ์ 2469 คือปี 1927\n\nจำง่าย ๆ: ปีไทยเก่าเริ่มตอนสงกรานต์ เดือนที่อยู่ก่อนสงกรานต์ยังเป็นปีเก่า",
+        "en": "Until 1941, the Thai year began on 1 April, not 1 January. So January to March still counted as the previous Buddhist Era year.\n\n- Normal rule: CE = BE − 543\n- January to March before 1941: CE = BE − 542\n\nExamples: the abdication on 2 March B.E. 2477 was in 1935, not 1934; the Paris meeting of February B.E. 2469 was in 1927.\n\nEasy way to hold it: the old Thai year started at Songkran (mid-April). Anything before Songkran still belonged to the old year."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {"th": "2489: ฉบับของปรีดี และวันที่ทุกอย่างพลิก", "en": "1946: Pridi's charter, and the year everything turned"},
+      "body": {
+        "th": "หลังสงครามโลกครั้งที่สอง ปรีดีมีบทบาทนำในการเมือง รัฐธรรมนูญฉบับที่ 3 ประกาศใช้วันที่ 9 พฤษภาคม 2489 พระบาทสมเด็จพระเจ้าอยู่หัวอานันทมหิดลทรงลงพระปรมาภิไธย ฉบับนี้ให้มีสองสภา ได้แก่ สภาผู้แทนราษฎร และพฤฒสภา 80 คนที่มาจากการเลือกตั้งโดยอ้อม เป็นครั้งแรกที่ทั้งสองสภาไม่มีสมาชิกแต่งตั้ง\n\nหนึ่งเดือนต่อมา วันที่ 9 มิถุนายน 2489 พระบาทสมเด็จพระเจ้าอยู่หัวอานันทมหิดลเสด็จสวรรคต บรรยากาศการเมืองตึงเครียดขึ้นเรื่อย ๆ รัฐบาลพลเรือนอ่อนแรงลง\n\nคืนวันที่ 8 พฤศจิกายน 2490 คณะทหารนำโดยพลโทผิน ชุณหะวัณ ยึดอำนาจ วันรุ่งขึ้นก็มีรัฐธรรมนูญฉบับใหม่พร้อมใช้ เพราะร่างไว้ล่วงหน้าแล้ว ตามเรื่องเล่าที่พิพิธภัณฑ์รัฐสภาบันทึกไว้ ร่างนั้นถูกซ่อนไว้ใต้ตุ่มน้ำดินเผาสีแดงที่บ้านของนาวาอากาศเอกกาจ กาจสงคราม หนึ่งในแกนนำ ฉบับวันที่ 9 พฤศจิกายน 2490 จึงได้ชื่อว่า รัฐธรรมนูญใต้ตุ่ม\n\nนักวิชาการและนักเขียนหลายคน เช่น บทความในเว็บไซต์ของสถาบันปรีดี พนมยงค์ ชี้ว่านี่เป็นครั้งแรกที่คณะรัฐประหารฉีกฉบับเดิมแล้วเขียนฉบับใหม่ทันที แบบแผนนี้ถูกทำซ้ำมาตลอดหลังจากนั้น",
+        "en": "After the Second World War, Pridi led Thai politics. The third charter was promulgated on 9 May 1946 and signed by King Ananda Mahidol (Rama VIII). It created two chambers: the House and an 80-member Senate (the Phruetthasapha) chosen by indirect election. For the first time, neither chamber had appointed members.\n\nA month later, on 9 June 1946, King Ananda Mahidol died. Politics grew tense and the civilian government weakened.\n\nOn the night of 8 November 1947, a military group led by Lieutenant General Phin Choonhavan seized power. A new charter was ready the next day because it had been written in advance. According to the account kept by the Parliament Museum, the draft had been hidden under a red clay water jar at the house of Group Captain Kat Katsongkhram, one of the leaders. The charter of 9 November 1947 has been called the Under-the-Jar Constitution ever since.\n\nWriters including those published by the Pridi Banomyong Institute point out that this was the first time a coup group tore up a charter and replaced it at once. The pattern repeated from then on."
+      }
+    },
+    {
+      "kind": "image",
+      "file": "1946-constitution-signing.jpg",
+      "caption": {
+        "th": "พระบาทสมเด็จพระเจ้าอยู่หัวอานันทมหิดลทรงลงพระปรมาภิไธยในรัฐธรรมนูญ พ.ศ. 2489 ณ พระที่นั่งอนันตสมาคม โดยมีปรีดี พนมยงค์ นายกรัฐมนตรี เป็นผู้ลงนามรับสนองฯ",
+        "en": "King Ananda Mahidol signs the 1946 constitution at the Ananta Samakhom Throne Hall; Prime Minister Pridi Banomyong countersigned it."
+      },
+      "credit": "Unknown photographer (Thai Parliament Museum collection)",
+      "license": "Public domain (PD-Thailand)",
+      "source": "https://commons.wikimedia.org/wiki/File:Signing_of_1946_constitution_of_Thailand_(1).jpg"
+    },
+    {
+      "kind": "text",
+      "title": {"th": "2492–2501: จอมพลคนเดิม ฉบับใหม่เรื่อย ๆ", "en": "1949–1958: the same field marshal, ever-new charters"},
+      "body": {
+        "th": "รัฐธรรมนูญฉบับที่ 5 ประกาศใช้วันที่ 23 มีนาคม 2492 จอมพล ป. พิบูลสงคราม กลับมาเป็นนายกรัฐมนตรีอีกครั้ง วันที่ 29 พฤศจิกายน 2494 คณะทหารยึดอำนาจโดยแทบไม่มีการเคลื่อนกำลัง แล้วประกาศนำฉบับ 2475 กลับมาใช้ ต่อมาแก้ไขเป็นรัฐธรรมนูญแห่งราชอาณาจักรไทย พุทธศักราช 2475 แก้ไขเพิ่มเติม พุทธศักราช 2495 ประกาศใช้วันที่ 8 มีนาคม 2495 นับเป็นฉบับที่ 6\n\nปลายทศวรรษนั้นอำนาจย้ายไปอยู่กับจอมพลสฤษดิ์ ธนะรัชต์ ซึ่งยึดอำนาจวันที่ 16 กันยายน 2500 และอีกครั้งวันที่ 20 ตุลาคม 2501 ครั้งหลังนี้ยกเลิกรัฐธรรมนูญ ยุบสภา และไม่มีกำหนดเลือกตั้ง",
+        "en": "The fifth charter came into force on 23 March 1949, and Field Marshal Plaek Phibunsongkhram was back as prime minister. On 29 November 1951, a military group took power with barely a troop movement and brought back the 1932 constitution, later amended and promulgated on 8 March 1952 as the sixth charter.\n\nBy the late 1950s power had shifted to Field Marshal Sarit Thanarat, who seized it on 16 September 1957 and again on 20 October 1958. The second time he abolished the constitution, dissolved parliament and set no election date."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {"th": "2502: ฉบับ 20 มาตรา และม. 17", "en": "1959: twenty sections, and s. 17"},
+      "body": {
+        "th": "วันที่ 28 มกราคม 2502 ธรรมนูญการปกครองราชอาณาจักรประกาศใช้ ทั้งฉบับมีแค่ 20 มาตรา สั้นพอจะอ่านจบระหว่างรอกาแฟ แต่มีมาตราหนึ่งที่คนจำได้จนทุกวันนี้ คือมาตรา 17 ซึ่งให้นายกรัฐมนตรีโดยมติคณะรัฐมนตรีสั่งการหรือกระทำการใด ๆ เพื่อระงับการกระทำที่บ่อนทำลายความมั่นคงหรือความสงบ และให้ถือว่าคำสั่งนั้นชอบด้วยกฎหมาย แล้วค่อยแจ้งสภาทราบ\n\nฉบับเดียวกันตั้งสภาร่างรัฐธรรมนูญ 240 คนที่มาจากการแต่งตั้ง ทำหน้าที่ทั้งร่างรัฐธรรมนูญและออกกฎหมาย สภานี้ใช้เวลาร่างนานจนธรรมนูญชั่วคราวฉบับนี้อยู่ได้เก้าปีสี่เดือน กว่าจะได้รัฐธรรมนูญฉบับที่ 8 ประกาศใช้วันที่ 20 มิถุนายน 2511 ในสมัยจอมพลถนอม กิตติขจร ซึ่งขึ้นเป็นนายกรัฐมนตรีหลังจอมพลสฤษดิ์ถึงแก่อสัญกรรมในปี 2506\n\nเก็บไว้ในใจ: ห้าสิบกว่าปีต่อมา ม. 44 ของรัฐธรรมนูญชั่วคราว 2557 ให้อำนาจหัวหน้าคณะรักษาความสงบแห่งชาติในทำนองเดียวกัน นักวิจารณ์จำนวนมากจึงเรียกมันว่าลูกหลานของมาตรา 17",
+        "en": "On 28 January 1959, the Charter for the Administration of the Kingdom came into force. It had only 20 sections, short enough to read while waiting for a coffee. One of them is still remembered: section 17 let the prime minister, by cabinet resolution, order or do anything needed to suppress acts undermining security or public order, deemed every such order lawful, and only required him to report to the assembly afterwards.\n\nThe same charter set up a 240-member appointed Constituent Assembly that both drafted the next constitution and passed ordinary laws. It took so long that the interim charter lasted nine years and four months. The eighth charter finally came into force on 20 June 1968 under Field Marshal Thanom Kittikachorn, who had become prime minister after Sarit died in 1963.\n\nKeep this in mind: more than fifty years later, s. 44 of the 2014 interim charter gave the head of the National Council for Peace and Order a similar power, and many critics called it a descendant of section 17."
+      }
+    },
+    {
+      "kind": "image",
+      "file": "sarit-thanarat-1962.jpg",
+      "caption": {
+        "th": "จอมพลสฤษดิ์ ธนะรัชต์ นายกรัฐมนตรี ภาพจากสำนักนายกรัฐมนตรี ปี 2505",
+        "en": "Field Marshal Sarit Thanarat, prime minister, in an Office of the Prime Minister photograph from 1962."
+      },
+      "credit": "Office of the Prime Minister (Thailand)",
+      "license": "Public domain (PD-Thailand)",
+      "source": "https://commons.wikimedia.org/wiki/File:Sarit_Thanarat.jpg"
+    },
+    {
+      "kind": "critique",
+      "title": {"th": "รัฐราชการ: คำอธิบายจากนักรัฐศาสตร์ต่างชาติ", "en": "The “bureaucratic polity”: an outsider's explanation"},
+      "body": {
+        "th": "ปี 1966 นักรัฐศาสตร์อเมริกัน เฟรด ดับเบิลยู. ริกส์ (Fred W. Riggs) เสนอว่าการเมืองไทยหลัง 2475 เป็น รัฐราชการ (bureaucratic polity) อำนาจจริงอยู่ในมือข้าราชการระดับสูงและทหาร ไม่ใช่พรรคการเมือง สภา หรือกลุ่มผลประโยชน์ในสังคม การเปลี่ยนรัฐบาลจึงเป็นการแย่งชิงระหว่างกลุ่มชนชั้นนำในระบบราชการ ส่วนรัฐธรรมนูญเป็นกติกาที่กลุ่มผู้ชนะเขียนขึ้น\n\nทักษ์ เฉลิมเตียรณ (Thak Chaloemtiarana) ต่อยอดคำอธิบายนี้ในหนังสือเรื่องยุคสฤษดิ์ โดยเรียกระบบนั้นว่า เผด็จการแบบพ่อขุนอุปถัมภ์ ผู้นำอ้างความชอบธรรมจากการดูแลประชาชนแบบพ่อดูแลลูก ไม่ใช่จากการเลือกตั้ง\n\nข้อโต้แย้ง: นักวิชาการรุ่นหลังเห็นว่าแบบจำลองรัฐราชการมองข้ามบทบาทของนักธุรกิจ นักศึกษา และนักการเมืองท้องถิ่นที่โตขึ้นมากหลังทศวรรษ 2510 ซึ่งเหตุการณ์ 14 ตุลาคม 2516 แสดงให้เห็นชัด ใช้แนวคิดนี้เป็นแว่นอ่านช่วง 2490–2516 ได้ดี แต่อย่าใช้อธิบายทุกยุค",
+        "en": "In 1966 the American political scientist Fred W. Riggs described post-1932 Thailand as a “bureaucratic polity”: real power sat with senior officials and the military, not with parties, parliament or organised interests in society. Changes of government were contests between factions inside the state, and each constitution was the rulebook written by whichever faction won.\n\nThak Chaloemtiarana built on this in his study of the Sarit years, calling the system “despotic paternalism”: the leader claimed legitimacy by looking after the people as a father looks after children, not from elections.\n\nThe pushback: later scholars argue the model misses the businesspeople, students and provincial politicians who grew far more important from the late 1960s on, as 14 October 1973 made obvious. Use the idea as a lens for roughly 1947–1973, not as an explanation for every era."
+      },
+      "by": "Fred W. Riggs (1966); Thak Chaloemtiarana (1979)"
+    },
+    {
+      "kind": "text",
+      "title": {"th": "2514–2521: ถนนราชดำเนิน และสองเดือนตุลา", "en": "1971–1978: Ratchadamnoen Avenue and two Octobers"},
+      "body": {
+        "th": "วันที่ 17 พฤศจิกายน 2514 จอมพลถนอมยึดอำนาจรัฐบาลของตัวเอง ยกเลิกฉบับ 2511 และใช้ธรรมนูญการปกครองราชอาณาจักร ที่ประกาศใช้วันที่ 15 ธันวาคม 2515 นักศึกษาและประชาชนเริ่มเรียกร้องรัฐธรรมนูญ เมื่อนักเคลื่อนไหวที่แจกใบปลิวเรียกร้องรัฐธรรมนูญถูกจับ การชุมนุมก็ขยายจนมีผู้คนหลายแสนเดินไปตามถนนราชดำเนิน\n\nวันที่ 14 ตุลาคม 2516 การปะทะกับเจ้าหน้าที่ทำให้มีผู้เสียชีวิต ตัวเลขทางการคือ 77 คน บาดเจ็บ 857 คน แหล่งข่าวและการประมาณการอื่นบางแห่งระบุว่าสูงกว่านั้นมาก จอมพลถนอมและผู้นำรัฐบาลเดินทางออกนอกประเทศ นายสัญญา ธรรมศักดิ์ ได้รับพระราชทานแต่งตั้งเป็นนายกรัฐมนตรี รัฐธรรมนูญฉบับที่ 10 ประกาศใช้วันที่ 7 ตุลาคม 2517 นักวิชาการหลายคนมองว่าเปิดกว้างที่สุดเท่าที่ไทยเคยมีในเวลานั้น\n\nช่วงเปิดกว้างนั้นสั้นมาก เช้าวันที่ 6 ตุลาคม 2519 เจ้าหน้าที่และกลุ่มติดอาวุธปราบการชุมนุมของนักศึกษาในมหาวิทยาลัยธรรมศาสตร์ รายงานทางการระบุผู้เสียชีวิต 46 คน ขณะที่แหล่งอื่น รวมถึงโครงการบันทึก 6 ตุลา และงานของธงชัย วินิจจะกูล ชี้ว่ายอดจริงอาจสูงกว่า และตัวเลขยังถกเถียงกันอยู่ เย็นวันเดียวกันคณะทหารยึดอำนาจ รัฐธรรมนูญฉบับที่ 11 ประกาศใช้วันที่ 22 ตุลาคม 2519\n\nหนึ่งปีต่อมา วันที่ 20 ตุลาคม 2520 คณะทหารกลุ่มเดียวกันยึดอำนาจอีกครั้ง ออกธรรมนูญการปกครองราชอาณาจักรวันที่ 9 พฤศจิกายน 2520 และรัฐธรรมนูญฉบับที่ 13 วันที่ 22 ธันวาคม 2521 ฉบับนี้มีวุฒิสภาแต่งตั้งที่มีอำนาจมาก ช่วงที่พลเอกเปรม ติณสูลานนท์ เป็นนายกรัฐมนตรี (2523–2531) โดยไม่ได้ลงเลือกตั้ง จึงถูกเรียกว่ายุค ประชาธิปไตยครึ่งใบ",
+        "en": "On 17 November 1971, Field Marshal Thanom staged a coup against his own government, scrapped the 1968 charter and later issued an interim charter on 15 December 1972. Students and citizens began demanding a constitution. When activists handing out leaflets that called for one were arrested, the protests grew until hundreds of thousands marched along Ratchadamnoen Avenue.\n\nOn 14 October 1973, clashes with security forces left people dead: the official count is 77 killed and 857 injured, while some press reports and later estimates put the deaths far higher. Thanom and other leaders left the country. Sanya Dharmasakti was royally appointed prime minister. The tenth charter came into force on 7 October 1974; many scholars regard it as the most open Thailand had had up to then.\n\nThe opening was short. On the morning of 6 October 1976, police and armed groups attacked a student gathering at Thammasat University. Official reports gave 46 dead; other sources, including the October 6 documentation project and historian Thongchai Winichakul, argue the true toll was higher, and the figure is still debated. That evening a military group seized power. The eleventh charter came into force on 22 October 1976.\n\nA year later, on 20 October 1977, the same military group took power again, issued an interim charter on 9 November 1977, and then the thirteenth charter on 22 December 1978. It gave a powerful role to an appointed Senate. The years when General Prem Tinsulanonda served as an unelected prime minister (1980–1988) are often called the era of “half-page democracy”."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {"th": "2534–2535: รัฐประหาร รสช. และพฤษภาทมิฬ", "en": "1991–1992: the NPKC coup and Black May"},
+      "body": {
+        "th": "วันที่ 23 กุมภาพันธ์ 2534 คณะรักษาความสงบเรียบร้อยแห่งชาติ (รสช.) ยึดอำนาจรัฐบาลพลเอกชาติชาย ชุณหะวัณ ซึ่งมาจากการเลือกตั้ง ออกธรรมนูญการปกครองราชอาณาจักรวันที่ 1 มีนาคม 2534 และรัฐธรรมนูญฉบับที่ 15 วันที่ 9 ธันวาคม 2534\n\nหลังเลือกตั้งปี 2535 พลเอกสุจินดา คราประยูร ผู้นำ รสช. ซึ่งไม่ได้ลงเลือกตั้ง ขึ้นเป็นนายกรัฐมนตรี ผู้คนออกมาประท้วง วันที่ 17–20 พฤษภาคม 2535 เจ้าหน้าที่ใช้กำลังสลายการชุมนุม ตัวเลขทางการคือผู้เสียชีวิต 52 คน และมีรายงานผู้สูญหายอีกจำนวนมาก เหตุการณ์คลี่คลายหลังพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร พระราชทานพระบรมราชวโรกาสให้พลเอกสุจินดาและพลตรีจำลอง ศรีเมือง เข้าเฝ้าฯ\n\nผลทางรัฐธรรมนูญที่ตามมาทันทีคือการแก้ไขให้นายกรัฐมนตรีต้องเป็นสมาชิกสภาผู้แทนราษฎร บทเรียนนี้สะท้อนอยู่ในฉบับปัจจุบันในรูปที่ต่างออกไป: นายกฯ ไม่ต้องเป็น ส.ส. แต่ต้องมีชื่อในบัญชีที่พรรคแจ้งต่อประชาชนก่อนเลือกตั้ง ไม่เกินพรรคละสามชื่อ (มาตรา 88, มาตรา 159)",
+        "en": "On 23 February 1991, the National Peace Keeping Council (NPKC) overthrew the elected government of General Chatichai Choonhavan. It issued an interim charter on 1 March 1991 and the fifteenth charter on 9 December 1991.\n\nAfter the 1992 election, NPKC leader General Suchinda Kraprayoon, who had not stood for election, became prime minister. People took to the streets. From 17 to 20 May 1992 security forces broke up the protests; the official death toll is 52, with many more reported missing. The crisis ended after King Bhumibol Adulyadej (Rama IX) granted an audience to General Suchinda and protest leader Major General Chamlong Srimuang.\n\nThe immediate constitutional result was an amendment requiring the prime minister to be an elected member of the House. Today's charter carries the lesson in a different shape: the prime minister need not be an MP, but must be on a list of up to three names each party publishes before the election (section 88, section 159)."
+      }
+    },
+    {
+      "kind": "image",
+      "file": "democracy-monument-bangkok-1963.jpg",
+      "caption": {
+        "th": "อนุสาวรีย์ประชาธิปไตย ถนนราชดำเนิน ภาพถ่ายปี 2506 สถานที่ที่ผู้ชุมนุมเดินผ่านในปี 2516 และ 2535",
+        "en": "The Democracy Monument on Ratchadamnoen Avenue, photographed in 1963. Crowds marched past it in 1973 and 1992."
+      },
+      "credit": "Don Christie",
+      "license": "CC BY-SA 4.0 (released by heirs)",
+      "source": "https://commons.wikimedia.org/wiki/File:Democracy_monument_Bangkok_1963.jpg"
+    },
+    {
+      "kind": "mnemonic",
+      "title": {"th": "อนุสาวรีย์ที่เป็นปฏิทินคอนกรีต", "en": "A monument that is a concrete calendar"},
+      "body": {
+        "th": "อนุสาวรีย์ประชาธิปไตยเปิดวันที่ 24 มิถุนายน 2483 ออกแบบโดยหม่อมหลวงปุ่ม มาลากุล และมีภาพนูนต่ำโดยศิลป์ พีระศรี ตัวเลขในอนุสาวรีย์ตามคำอธิบายที่นิยมอ้างกัน:\n\n- ปีกสี่ด้าน สูง 24 เมตร = วันที่ 24\n- ป้อมกลาง สูง 3 เมตร = เดือนมิถุนายน ซึ่งเป็นเดือนที่ 3 ของปีไทยแบบเก่า (เริ่มเมษายน)\n- ปืนใหญ่ 75 กระบอกรอบฐาน = พ.ศ. 2475\n- ประตูหกบานที่ป้อมกลาง = หลัก 6 ประการของคณะราษฎร\n- ปีกสี่ปีก = ทหารบก ทหารเรือ ทหารอากาศ และตำรวจ\n\nยืนอยู่ตรงวงเวียนแล้วอ่านได้ทั้งวันเดือนปี: 24 · 3 · 75 = 24 มิถุนายน 2475",
+        "en": "The Democracy Monument opened on 24 June 1940. Its design is usually credited to architect Mom Luang Pum Malakul, with relief sculpture by Silpa Bhirasri (Corrado Feroci). The numbers built into it, as they are commonly explained:\n\n- Four wings, each 24 metres high = the 24th\n- A central turret 3 metres high = June, the third month of the old Thai year (which began in April)\n- 75 small cannons around the base = B.E. 2475\n- Six doors on the turret = the People's Party's six principles\n- Four wings = army, navy, air force and police\n\nStand at the roundabout and you can read the whole date: 24 · 3 · 75 = 24 June 2475."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {"th": "2540: รัฐธรรมนูญฉบับประชาชน", "en": "1997: the People's Constitution"},
+      "body": {
+        "th": "หลังพฤษภาคม 2535 คำถามเปลี่ยนไป ไม่ใช่แค่ใครยึดอำนาจ แต่ทำไมระบบเลือกตั้งผลิตรัฐบาลผสมที่อ่อนแอ ซื้อเสียง และเปิดช่องให้ทหารอ้างเหตุเข้ามา ปี 2537 คณะกรรมการพัฒนาประชาธิปไตยที่มีนายแพทย์ประเวศ วะสี เป็นประธาน เสนอให้ปฏิรูปการเมืองทั้งระบบ ปี 2539 รัฐสภาแก้รัฐธรรมนูญ 2534 เพื่อตั้งสภาร่างรัฐธรรมนูญ (ส.ส.ร.) ขึ้นนอกรัฐสภา\n\nส.ส.ร. มี 99 คน คือ ตัวแทนจังหวัดละหนึ่งคน 76 คน และผู้เชี่ยวชาญด้านกฎหมาย รัฐศาสตร์ และการบริหาร 23 คน โดยรัฐสภาเป็นผู้เลือกขั้นสุดท้าย นายอุทัย พิมพ์ใจชน เป็นประธาน ส.ส.ร. นายอานันท์ ปันยารชุน เป็นประธานกรรมาธิการยกร่าง มีการรับฟังความเห็นทั่วประเทศ\n\nกลางปี 2540 วิกฤตต้มยำกุ้งระเบิด ค่าเงินบาทร่วง ผู้สนับสนุนร่างโบกธงเขียวตามท้องถนนเพื่อกดดันให้รัฐสภารับร่าง รัฐสภาลงมติเห็นชอบปลายเดือนกันยายน และรัฐธรรมนูญฉบับที่ 16 ประกาศใช้วันที่ 11 ตุลาคม 2540\n\nสิ่งใหม่ที่ฉบับนี้สร้างขึ้นยังอยู่กับเราเกือบทั้งหมด: ศาลรัฐธรรมนูญ ศาลปกครอง คณะกรรมการการเลือกตั้ง คณะกรรมการป้องกันและปราบปรามการทุจริตแห่งชาติ ผู้ตรวจการแผ่นดิน และคณะกรรมการสิทธิมนุษยชนแห่งชาติ ฉบับ 2540 ยังให้มี ส.ส. 500 คน แบ่งเป็นแบบแบ่งเขต 400 และบัญชีรายชื่อ 100 วุฒิสภา 200 คนมาจากการเลือกตั้ง และบังคับให้ไปใช้สิทธิเลือกตั้ง หมวดองค์กรอิสระในฉบับปัจจุบัน (มาตรา 215 ถึงมาตรา 247) และศาลรัฐธรรมนูญ (มาตรา 200 ถึงมาตรา 214) คือทายาทของปี 2540",
+        "en": "After May 1992 the question changed. It was no longer only who seized power, but why elections kept producing weak coalitions, vote-buying and an excuse for the army to step in. In 1994 a Democracy Development Committee chaired by Dr Prawase Wasi called for reform of the whole political system. In 1996 parliament amended the 1991 charter to create a Constitution Drafting Assembly that sat outside parliament.\n\nThe assembly had 99 members: 76 representatives, one per province, and 23 experts in law, political science and public administration, with parliament making the final selection. Uthai Pimchaichon chaired the assembly and Anand Panyarachun chaired the drafting committee. Public hearings were held across the country.\n\nIn mid-1997 the Tom Yum Kung crisis hit and the baht collapsed. Supporters of the draft waved green flags in the streets to push parliament to accept it. Parliament approved it in late September, and the sixteenth charter came into force on 11 October 1997.\n\nAlmost everything it created is still here: the Constitutional Court, the Administrative Courts, the Election Commission, the National Anti-Corruption Commission, the Ombudsman and the National Human Rights Commission. The 1997 text also set 500 MPs (400 constituency, 100 party-list), a 200-member elected Senate, and compulsory voting. Today's chapter on independent organs (sections 215 to 247) and on the Constitutional Court (sections 200 to 214) are the descendants of 1997."
+      }
+    },
+    {
+      "kind": "critique",
+      "title": {"th": "ฉบับประชาชนถูกวิจารณ์จากสองฝั่ง", "en": "The People's Constitution, criticised from both sides"},
+      "body": {
+        "th": "ฉบับ 2540 ตั้งใจแก้ปัญหารัฐบาลผสมอ่อนแอ จึงออกแบบให้ฝ่ายบริหารเข้มแข็งและพรรคใหญ่ได้เปรียบ ผลคือพรรคไทยรักไทยของ พ.ต.ท.ทักษิณ ชินวัตร ชนะเลือกตั้งปี 2544 และ 2548 อย่างท่วมท้น ฝ่ายหนึ่งเห็นว่านี่คือรัฐธรรมนูญทำงานตามที่ออกแบบ อีกฝ่ายเห็นว่ารัฐบาลเข้มแข็งเกินจนองค์กรตรวจสอบถูกครอบงำ\n\nเข็มทอง ต้นสกุลรุ่งเรือง ในบทความ Entrenching the Minority (2017) ชี้ว่าศาลรัฐธรรมนูญที่เกิดจากการปฏิรูป 2540 ค่อย ๆ กลายเป็นศูนย์กลางของความขัดแย้งทางการเมืองหลังปี 2549 จากเดิมที่ตั้งขึ้นเพื่อเป็นกรรมการกลาง\n\nฝ่ายที่ปกป้องบทบาทศาลและองค์กรอิสระให้เหตุผลว่า นักการเมืองที่ชนะเลือกตั้งไม่ควรอยู่เหนือการตรวจสอบ และนิติธรรมต้องมาก่อนเสียงข้างมาก ผู้อ่านควรเห็นทั้งสองเหตุผลก่อนตัดสินใจเอง",
+        "en": "The 1997 charter was built to cure weak coalitions, so it made the executive strong and favoured big parties. The result was landslide wins for Thaksin Shinawatra's Thai Rak Thai party in 2001 and 2005. One side says the constitution worked as designed; the other says the government grew so strong that the watchdog bodies were captured.\n\nKhemthong Tonsakulrungruang, in “Entrenching the Minority” (2017), argues that the Constitutional Court born of the 1997 reform gradually moved to the centre of political conflict after 2006, although it had been created to be a neutral referee.\n\nThose who defend the court and the independent organs reply that election winners should not be above scrutiny and that the rule of law must come before the majority. Readers should weigh both arguments before reaching their own view."
+      },
+      "by": "Khemthong Tonsakulrungruang, Entrenching the Minority (2017); defenders of the 1997 checks"
+    },
+    {
+      "kind": "text",
+      "title": {"th": "2549–2550: รัฐประหารครั้งแรกในรอบ 15 ปี และประชามติครั้งแรก", "en": "2006–2007: the first coup in 15 years, and the first referendum"},
+      "body": {
+        "th": "หลังการชุมนุมยืดเยื้อตลอดปี 2549 วันที่ 19 กันยายน 2549 คณะปฏิรูปการปกครองในระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข (คปค.) นำโดยพลเอกสนธิ บุญยรัตกลิน ยึดอำนาจ ยกเลิกฉบับ 2540 และใช้รัฐธรรมนูญฉบับชั่วคราววันที่ 1 ตุลาคม 2549\n\nร่างฉบับใหม่ถูกส่งให้ประชาชนลงประชามติเป็นครั้งแรกในประวัติศาสตร์ไทย วันที่ 19 สิงหาคม 2550 ผู้มาใช้สิทธิราว 57.6% เห็นชอบ 57.81% ของบัตรดี (ถ้าคิดจากบัตรทั้งหมดที่ใช้สิทธิ จะได้ 56.69%) รัฐธรรมนูญฉบับที่ 18 ประกาศใช้วันที่ 24 สิงหาคม 2550\n\nฉบับ 2550 ตอบโจทย์ตรงข้ามกับ 2540: กลัวฝ่ายบริหารที่แข็งเกินไป จึงเพิ่มอำนาจองค์กรตรวจสอบ และให้วุฒิสภา 150 คน มาจากการเลือกตั้งจังหวัดละหนึ่งคน 76 คน และการสรรหาอีก 74 คน ผู้วิจารณ์ชี้ว่าร่างเขียนโดยคณะที่ คปค. ตั้ง และบางส่วนลงมติรับเพื่อให้ได้เลือกตั้งเร็วขึ้น",
+        "en": "After a year of mass protests, on 19 September 2006 the Council for Democratic Reform led by General Sonthi Boonyaratglin seized power, abolished the 1997 charter and issued an interim charter on 1 October 2006.\n\nThe new draft went to the first national referendum in Thai history, on 19 August 2007. Turnout was about 57.6%; 57.81% of valid ballots approved (56.69% if spoiled ballots are counted). The eighteenth charter came into force on 24 August 2007.\n\nThe 2007 charter answered the opposite question to 1997: it feared an executive that was too strong, so it gave the watchdogs more power and made the 150-member Senate a mix of 76 elected (one per province) and 74 selected members. Critics noted that the drafters were appointed by the coup group, and that some voters said yes mainly to get an election sooner."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {"th": "2557–2560: ร่างที่ถูกคว่ำ ประชามติ และวันจักรี", "en": "2014–2017: a rejected draft, a referendum and Chakri Day"},
+      "body": {
+        "th": "วันที่ 22 พฤษภาคม 2557 คณะรักษาความสงบแห่งชาติ (คสช.) นำโดยพลเอกประยุทธ์ จันทร์โอชา ยึดอำนาจ รัฐธรรมนูญฉบับชั่วคราวประกาศใช้วันที่ 22 กรกฎาคม 2557 ม. 44 ของฉบับนั้นให้อำนาจหัวหน้า คสช. ออกคำสั่งได้กว้างขวาง\n\nร่างแรกที่คณะกรรมาธิการนำโดยบวรศักดิ์ อุวรรณโณ จัดทำ ถูกสภาปฏิรูปแห่งชาติลงมติคว่ำวันที่ 6 กันยายน 2558 ด้วยคะแนน 135 ต่อ 105 คณะกรรมการร่างรัฐธรรมนูญชุดใหม่ 21 คน นำโดยมีชัย ฤชุพันธุ์ เริ่มงานต่อ\n\nวันที่ 7 สิงหาคม 2559 ประชามติครั้งที่สอง ผู้มาใช้สิทธิราว 59.4% เห็นชอบร่าง 61.35% และเห็นชอบคำถามพ่วง 58.07% คำถามพ่วงนี้เองที่กลายเป็นมาตรา 272: ในห้าปีแรก ให้ ส.ส. และ ส.ว. ร่วมกันเลือกนายกรัฐมนตรี\n\nวันที่ 13 ตุลาคม 2559 พระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร เสด็จสวรรคต ต้นเดือนมกราคม 2560 รัฐบาลแจ้งว่ามีข้อสังเกตพระราชทานให้ปรับบทบัญญัติบางมาตราในหมวดพระมหากษัตริย์ สภานิติบัญญัติแห่งชาติแก้ไขรัฐธรรมนูญชั่วคราววันที่ 13 มกราคม 2560 เพื่อให้ปรับร่างได้ ตัวอย่างที่ปรากฏในฉบับประกาศใช้คือมาตรา 16 ที่ให้ทรงแต่งตั้งผู้สำเร็จราชการแทนพระองค์หรือไม่ก็ได้ เมื่อจะไม่ประทับอยู่ในราชอาณาจักร\n\nวันที่ 6 เมษายน 2560 ซึ่งตรงกับวันจักรี พระบาทสมเด็จพระวชิรเกล้าเจ้าอยู่หัวทรงลงพระปรมาภิไธยในรัฐธรรมนูญแห่งราชอาณาจักรไทย พุทธศักราช 2560 ณ พระที่นั่งอนันตสมาคม ห้องเดียวกับที่รัชกาลที่ 7 ทรงลงพระปรมาภิไธยในฉบับ 10 ธันวาคม 2475 ฉบับที่ 20 นี้มี 279 มาตรา\n\nร่องรอยของช่วงเปลี่ยนผ่านยังอยู่ในบทเฉพาะกาล: วุฒิสภาชุดแรก 250 คนที่แต่งตั้งตามคำแนะนำของ คสช. (มาตรา 269) คสช. อยู่ต่อจนมีคณะรัฐมนตรีใหม่ (มาตรา 265) และประกาศหรือคำสั่งของ คสช. ให้ถือว่าชอบด้วยรัฐธรรมนูญ (มาตรา 279) ส่วนหน้าที่จัดทำยุทธศาสตร์ชาติอยู่ในมาตรา 65 และมาตรา 275",
+        "en": "On 22 May 2014, the National Council for Peace and Order (NCPO) led by General Prayut Chan-o-cha seized power. An interim charter came into force on 22 July 2014. Its s. 44 gave the NCPO head sweeping powers to issue orders.\n\nThe first draft, prepared by a committee chaired by Borwornsak Uwanno, was voted down by the National Reform Council on 6 September 2015, 135 to 105. A new 21-member Constitution Drafting Commission chaired by Meechai Ruchupan took over.\n\nOn 7 August 2016, the second national referendum: turnout was about 59.4%; 61.35% approved the draft and 58.07% approved an additional question. That additional question became section 272: for the first five years, MPs and senators would vote together to choose the prime minister.\n\nKing Bhumibol Adulyadej died on 13 October 2016. In early January 2017 the government announced that royal observations had been conveyed asking for changes to several provisions in the chapter on the King. On 13 January 2017 the National Legislative Assembly amended the interim charter so the draft could be revised. One visible result in the final text is section 16, under which the King may, or may not, appoint a regent when he will be outside the kingdom.\n\nOn 6 April 2017, Chakri Day, King Maha Vajiralongkorn (Rama X) signed the Constitution of the Kingdom of Thailand, B.E. 2560, in the Ananta Samakhom Throne Hall: the same hall where King Prajadhipok signed the charter of 10 December 1932. This twentieth charter has 279 sections.\n\nTraces of the transition remain in its transitory provisions: a first Senate of 250 members appointed on the NCPO's advice (section 269), the NCPO staying in office until a new cabinet took over (section 265), and all NCPO announcements and orders deemed constitutional (section 279). The duty to draw up a national strategy sits in section 65 and section 275."
+      }
+    },
+    {
+      "kind": "image",
+      "file": "2016-referendum-result-by-province.png",
+      "caption": {
+        "th": "ผลประชามติร่างรัฐธรรมนูญ 7 สิงหาคม 2559 รายจังหวัด (สีหนึ่งคือเห็นชอบ อีกสีคือไม่เห็นชอบ)",
+        "en": "Results of the 7 August 2016 constitutional referendum by province (one colour approve, the other reject)."
+      },
+      "credit": "Applezapotis (Thai Wikipedia); base map by NordNordWest",
+      "license": "CC BY-SA 3.0 (also GFDL)",
+      "source": "https://commons.wikimedia.org/wiki/File:Thai_Referendum_2016_result_by_province_(Charter).png"
+    },
+    {
+      "kind": "critique",
+      "title": {"th": "ประชามติ 2559: ผ่านด้วยเสียงข้างมาก แต่ถกเถียงเรื่องความเป็นธรรม", "en": "The 2016 referendum: a clear majority, a contested process"},
+      "body": {
+        "th": "ฝ่ายสนับสนุนชี้ว่าร่างผ่านด้วยเสียงเกิน 61% ในประเทศที่แบ่งขั้วรุนแรง และเนื้อหามุ่งปราบการทุจริต วางกลไกปฏิรูป และกันวิกฤตแบบปี 2549–2557 ไม่ให้วนกลับมา\n\nฝ่ายวิจารณ์ เช่น iLaw และผู้สังเกตการณ์ต่างประเทศหลายราย ชี้ว่ากฎหมายประชามติช่วงนั้นจำกัดการรณรงค์ฝ่ายไม่รับอย่างหนัก มีผู้ถูกดำเนินคดีจากการแจกเอกสาร และผู้มีสิทธิจำนวนมากไม่มีโอกาสอ่านร่างเต็ม อภิพล แซ่ตั้ง (2025) อธิบายช่วงหลัง 2557 ว่าเป็นการใช้กลไกกฎหมายและศาลเพื่อสร้างความชอบธรรมและการอยู่รอดของระบอบ\n\nทั้งสองข้อเท็จจริงจริงพร้อมกัน: ตัวเลขผลประชามติเป็นทางการ และข้อจำกัดในการรณรงค์ก็มีบันทึกไว้",
+        "en": "Supporters point out that the draft won more than 61% in a deeply divided country, and that it aimed to fight corruption, set up reform machinery and stop the 2006–2014 crisis from repeating.\n\nCritics, including the Thai legal monitor iLaw and several foreign observers, note that referendum rules at the time sharply restricted campaigning against the draft, that some people were prosecuted for handing out leaflets, and that many voters never saw the full text. Apipol Sae-Tung (2025) describes the post-2014 period as the use of law and courts to build legitimacy and help the regime survive.\n\nBoth things are true at once: the referendum figures are official, and the limits on campaigning are on record."
+      },
+      "by": "Supporters of the 2017 draft; iLaw; Apipol Sae-Tung, Juridification, Legitimacy, and Authoritarian Survival (2025)"
+    },
+    {
+      "kind": "text",
+      "title": {"th": "2564 และหลังจากนั้น: บัตรสองใบ", "en": "2021 and after: two ballots"},
+      "body": {
+        "th": "การเลือกตั้งปี 2562 ใช้บัตรใบเดียว ส.ส. แบ่งเขต 350 คน บัญชีรายชื่อ 150 คน หลังเลือกตั้ง ที่ประชุมร่วมของสองสภาเลือกพลเอกประยุทธ์เป็นนายกรัฐมนตรีตามมาตรา 272\n\nวันที่ 10 กันยายน 2564 รัฐสภาลงมติเห็นชอบการแก้ไขรัฐธรรมนูญที่สำเร็จเป็นครั้งแรกของฉบับนี้ คือ รัฐธรรมนูญแห่งราชอาณาจักรไทย แก้ไขเพิ่มเติม (ฉบับที่ 1) พุทธศักราช 2564 ประกาศในราชกิจจานุเบกษาวันที่ 21 พฤศจิกายน 2564 และใช้บังคับวันที่ 22 พฤศจิกายน 2564 สาระคือแก้มาตรา 83 มาตรา 86 และมาตรา 91 ให้กลับไปใช้บัตรสองใบ ส.ส. แบ่งเขต 400 คน บัญชีรายชื่อ 100 คน รวม 500 คน ซึ่งเป็นตัวเลขชุดเดียวกับฉบับ 2540\n\nส่วนความพยายามเขียนฉบับใหม่ทั้งฉบับ ศาลรัฐธรรมนูญมีคำวินิจฉัยที่ 4/2564 (11 มีนาคม 2564) ว่ารัฐสภามีอำนาจจัดทำรัฐธรรมนูญใหม่ได้ แต่ต้องถามประชาชนผ่านประชามติก่อน ว่าขั้นตอนไหนคือ ก่อน ยังถกเถียงกันจนถึงวันนี้ บทนี้หยุดเล่าที่ข้อเท็จจริงที่ยืนยันได้ ให้ตรวจข่าวล่าสุดจากแหล่งทางการเสมอ",
+        "en": "The 2019 election used a single ballot, with 350 constituency MPs and 150 party-list MPs. Afterwards a joint sitting of both houses chose General Prayut as prime minister under section 272.\n\nOn 10 September 2021, parliament passed the first successful amendment to this charter: the Constitution of the Kingdom of Thailand Amendment (No. 1), B.E. 2564. It was published in the Royal Gazette on 21 November 2021 and took effect on 22 November 2021. It rewrote sections 83, 86 and 91 to bring back two ballots, with 400 constituency MPs and 100 party-list MPs: 500 in total, the same numbers as in 1997.\n\nOn the separate push to write a whole new charter, Constitutional Court ruling No. 4/2564 (11 March 2021) held that parliament may draft a new constitution but must first ask the people in a referendum. Exactly which step counts as “first” is still argued over. This chapter stops at what can be verified; always check current events against official sources."
+      },
+      "year": 2021
+    },
+    {
+      "kind": "logic",
+      "title": {"th": "แบบแผน เขียน ฉีก เขียนใหม่ ทำงานอย่างไร", "en": "How the write–tear–rewrite pattern works"},
+      "body": {
+        "th": "นักรัฐศาสตร์ ชัยอนันต์ สมุทวณิช เรียกแบบแผนนี้ว่า วงจรอุบาทว์ ลองเดินตามทีละข้อ\n\n- มีการเลือกตั้ง ได้รัฐบาล\n- เกิดวิกฤต: ข้อกล่าวหาเรื่องทุจริต การชุมนุม ความรุนแรง หรือสภาทำงานไม่ได้\n- ทหารยึดอำนาจ อ้างเหตุวิกฤตนั้น\n- ออกธรรมนูญชั่วคราวที่ให้อำนาจพิเศษแก่คณะผู้ยึดอำนาจ (ม. 17 ปี 2502, ม. 44 ปี 2557) และรับรองว่าการกระทำของคณะนั้นชอบด้วยกฎหมาย (ร่องรอยวันนี้คือมาตรา 279)\n- ร่างฉบับถาวร ออกแบบเพื่อกันวิกฤตครั้งล่าสุด\n- เลือกตั้ง แล้ววงจรเริ่มใหม่\n\nข้อสังเกตที่สำคัญที่สุด: ฉบับถาวรแต่ละฉบับคือคำตอบต่อความล้มเหลวของฉบับก่อน ปี 2540 กลัวรัฐบาลผสมอ่อนแอ จึงสร้างนายกฯ ที่แข็ง ปี 2550 และ 2560 กลัวนายกฯ ที่แข็งเกิน จึงสร้างองค์กรตรวจสอบที่แข็ง แต่ละฉบับแก้โจทย์ของปีที่แล้ว ไม่ใช่โจทย์ของปีหน้า\n\nคำถามที่ค้างไว้ให้คิด: ความมั่นคงของรัฐธรรมนูญมาจากเนื้อหาที่ดี หรือมาจากการที่ผู้เล่นทุกฝ่ายยอมรับกติกาแม้ตัวเองแพ้ ถ้าเป็นอย่างหลัง กระบวนการเขียน (ใครได้ร่วมเขียน) อาจสำคัญพอ ๆ กับตัวบท",
+        "en": "The political scientist Chai-Anan Samudavanija called this pattern the “vicious cycle”. Walk through it step by step.\n\n- An election produces a government.\n- A crisis follows: corruption charges, street protests, violence or a deadlocked parliament.\n- The army seizes power, citing the crisis.\n- An interim charter gives the coup group special powers (s. 17 in 1959, s. 44 in 2014) and declares its acts lawful (today's trace is section 279).\n- A permanent charter is drafted, designed to prevent the most recent crisis.\n- Elections are held, and the cycle starts again.\n\nThe key observation: each permanent charter answers the failure of the one before. 1997 feared weak coalitions, so it built a strong prime minister. 2007 and 2017 feared a prime minister who was too strong, so they built strong watchdogs. Each charter solves last year's problem, not next year's.\n\nA question to leave open: does a constitution last because its content is good, or because every player accepts the rules even when they lose? If it is the second, then the process of writing it, and who gets a say, may matter as much as the text."
+      }
+    },
+    {
+      "kind": "numbers",
+      "title": {"th": "รัฐธรรมนูญ 20 ฉบับ และวันที่ประกาศใช้", "en": "The 20 charters and the dates they took effect"},
+      "rows": [
+        {"th": "1 พ.ร.บ.ธรรมนูญการปกครองแผ่นดินสยามชั่วคราว 2475", "en": "1 Temporary Charter for the Administration of Siam", "value": "27 มิ.ย. 2475 · 27 Jun 1932", "sections": []},
+        {"th": "2 รัฐธรรมนูญแห่งราชอาณาจักรสยาม 2475", "en": "2 Constitution of the Kingdom of Siam", "value": "10 ธ.ค. 2475 · 10 Dec 1932", "sections": []},
+        {"th": "3 รัฐธรรมนูญ 2489", "en": "3 Constitution of 1946", "value": "9 พ.ค. 2489 · 9 May 1946", "sections": []},
+        {"th": "4 รัฐธรรมนูญ (ฉบับชั่วคราว) 2490 “ใต้ตุ่ม”", "en": "4 Interim Constitution of 1947 (“under the jar”)", "value": "9 พ.ย. 2490 · 9 Nov 1947", "sections": []},
+        {"th": "5 รัฐธรรมนูญ 2492", "en": "5 Constitution of 1949", "value": "23 มี.ค. 2492 · 23 Mar 1949", "sections": []},
+        {"th": "6 รัฐธรรมนูญ 2475 แก้ไขเพิ่มเติม 2495", "en": "6 1932 Constitution as amended in 1952", "value": "8 มี.ค. 2495 · 8 Mar 1952", "sections": []},
+        {"th": "7 ธรรมนูญการปกครองราชอาณาจักร 2502 (20 มาตรา)", "en": "7 Charter for the Administration of the Kingdom, 1959 (20 sections)", "value": "28 ม.ค. 2502 · 28 Jan 1959", "sections": []},
+        {"th": "8 รัฐธรรมนูญ 2511", "en": "8 Constitution of 1968", "value": "20 มิ.ย. 2511 · 20 Jun 1968", "sections": []},
+        {"th": "9 ธรรมนูญการปกครองราชอาณาจักร 2515", "en": "9 Interim Charter of 1972", "value": "15 ธ.ค. 2515 · 15 Dec 1972", "sections": []},
+        {"th": "10 รัฐธรรมนูญ 2517", "en": "10 Constitution of 1974", "value": "7 ต.ค. 2517 · 7 Oct 1974", "sections": []},
+        {"th": "11 รัฐธรรมนูญ 2519", "en": "11 Constitution of 1976", "value": "22 ต.ค. 2519 · 22 Oct 1976", "sections": []},
+        {"th": "12 ธรรมนูญการปกครองราชอาณาจักร 2520", "en": "12 Interim Charter of 1977", "value": "9 พ.ย. 2520 · 9 Nov 1977", "sections": []},
+        {"th": "13 รัฐธรรมนูญ 2521", "en": "13 Constitution of 1978", "value": "22 ธ.ค. 2521 · 22 Dec 1978", "sections": []},
+        {"th": "14 ธรรมนูญการปกครองราชอาณาจักร 2534", "en": "14 Interim Charter of 1991", "value": "1 มี.ค. 2534 · 1 Mar 1991", "sections": []},
+        {"th": "15 รัฐธรรมนูญ 2534", "en": "15 Constitution of 1991", "value": "9 ธ.ค. 2534 · 9 Dec 1991", "sections": []},
+        {"th": "16 รัฐธรรมนูญ 2540 “ฉบับประชาชน”", "en": "16 Constitution of 1997 (“People's Constitution”)", "value": "11 ต.ค. 2540 · 11 Oct 1997", "sections": []},
+        {"th": "17 รัฐธรรมนูญ (ฉบับชั่วคราว) 2549", "en": "17 Interim Constitution of 2006", "value": "1 ต.ค. 2549 · 1 Oct 2006", "sections": []},
+        {"th": "18 รัฐธรรมนูญ 2550 (ผ่านประชามติ)", "en": "18 Constitution of 2007 (approved by referendum)", "value": "24 ส.ค. 2550 · 24 Aug 2007", "sections": []},
+        {"th": "19 รัฐธรรมนูญ (ฉบับชั่วคราว) 2557", "en": "19 Interim Constitution of 2014", "value": "22 ก.ค. 2557 · 22 Jul 2014", "sections": []},
+        {"th": "20 รัฐธรรมนูญ 2560 (279 มาตรา)", "en": "20 Constitution of 2017 (279 sections)", "value": "6 เม.ย. 2560 · 6 Apr 2017", "sections": [1, 279]}
+      ]
+    },
+    {
+      "kind": "numbers",
+      "title": {"th": "ตัวเลขที่ต้องระบุแหล่งที่มาเสมอ", "en": "Numbers that always need a source"},
+      "rows": [
+        {"th": "ฉบับชั่วคราว / ธรรมนูญการปกครอง", "en": "Provisional or interim charters", "value": "8 (1, 4, 7, 9, 12, 14, 17, 19)", "sections": []},
+        {"th": "ฉบับที่ใช้ชื่อรัฐธรรมนูญแบบถาวร", "en": "Charters styled as permanent constitutions", "value": "12", "sections": []},
+        {"th": "รัฐประหารที่สำเร็จ (นับต่างกันตามเกณฑ์)", "en": "Successful coups (counts differ by method)", "value": "12–13", "sections": []},
+        {"th": "14 ต.ค. 2516 ผู้เสียชีวิต (ทางการ; แหล่งอื่นสูงกว่า)", "en": "14 Oct 1973 deaths (official; other estimates higher)", "value": "77", "sections": []},
+        {"th": "6 ต.ค. 2519 ผู้เสียชีวิต (ทางการ; ยังถกเถียง)", "en": "6 Oct 1976 deaths (official; still disputed)", "value": "46", "sections": []},
+        {"th": "พฤษภาคม 2535 ผู้เสียชีวิต (ทางการ; มีผู้สูญหายอีก)", "en": "May 1992 deaths (official; many more missing)", "value": "52", "sections": []},
+        {"th": "เมษายน–พฤษภาคม 2553 ผู้เสียชีวิต (คอป.)", "en": "April–May 2010 deaths (Truth for Reconciliation Commission)", "value": "92", "sections": []},
+        {"th": "ประชามติ 2550 เห็นชอบ (ของบัตรดี)", "en": "2007 referendum, yes (of valid ballots)", "value": "57.81%", "sections": []},
+        {"th": "ประชามติ 2559 เห็นชอบร่าง / คำถามพ่วง", "en": "2016 referendum, yes to draft / to extra question", "value": "61.35% / 58.07%", "sections": [272]},
+        {"th": "ส.ส.ร. 2540", "en": "1997 Constitution Drafting Assembly", "value": "99 = 76 + 23", "sections": []}
+      ]
+    },
+    {
+      "kind": "critique",
+      "title": {"th": "นับรัฐประหารและผู้เสียชีวิตอย่างไรให้ซื่อตรง", "en": "Counting coups and deaths honestly"},
+      "body": {
+        "th": "ตัวเลขรัฐประหารต่างกันตามเกณฑ์ ศิวัช ศรีโภคางกุล และ Paul Chambers (2017) นับว่าไทยมีรัฐประหารสำเร็จ 13 ครั้งในรอบ 84 ปี ขณะที่สื่อต่างประเทศหลายสำนักเรียกรัฐประหาร 2557 ว่าเป็นครั้งที่ 12 ความต่างมักมาจากการนับหรือไม่นับเหตุการณ์บางครั้ง เช่น การปิดสภาด้วยพระราชกฤษฎีกาเมื่อ 1 เมษายน 2476 ถ้าจะใช้ตัวเลข ให้พูดว่า ราว 12–13 ครั้ง และบอกว่าใครนับ\n\nตัวเลขผู้เสียชีวิตยิ่งต้องระวัง ตัวเลขทางการของปี 2516, 2519 และ 2535 ถูกโต้แย้งโดยนักวิชาการ ญาติผู้เสียชีวิต และสื่อในเวลานั้น ส่วนเหตุการณ์เมษายน–พฤษภาคม 2553 คณะกรรมการอิสระตรวจสอบและค้นหาความจริงเพื่อการปรองดองแห่งชาติ (คอป.) รายงานผู้เสียชีวิต 92 คน และบาดเจ็บราว 1,700 คน หลักที่ใช้ในบทนี้: บอกตัวเลขทางการพร้อมแหล่งที่มา และบอกด้วยว่ามีผู้โต้แย้ง",
+        "en": "Coup counts depend on method. Siwach Sripokangkul and Paul Chambers (2017) count 13 successful coups in 84 years, while many foreign news outlets called the 2014 coup the twelfth. The gap usually comes from whether certain events are counted, such as the closure of parliament by decree on 1 April 1933. If you use a number, say “about 12 to 13” and name who is counting.\n\nDeath tolls need even more care. Official figures for 1973, 1976 and 1992 have been challenged by scholars, victims' families and the press of the time. For April–May 2010, the Truth for Reconciliation Commission of Thailand reported 92 deaths and about 1,700 injured. The rule this chapter follows: give the official number with its source, and say when it is disputed."
+      },
+      "by": "Siwach Sripokangkul & Paul Chambers (2017); Truth for Reconciliation Commission of Thailand (2012)"
+    },
+    {
+      "kind": "mnemonic",
+      "title": {"th": "สี่ยุค สี่ภาพ", "en": "Four eras, four pictures"},
+      "body": {
+        "th": "ใช้เป็นเครื่องมือจำ ไม่ใช่ข้อสรุปทางประวัติศาสตร์ นักประวัติศาสตร์แบ่งยุคต่างกันได้\n\n- 2475–2490 สมุดไทย: จากราชาธิปไตยสู่กติกาเป็นลายลักษณ์อักษร คณะราษฎรนำ ฉบับ 1–3\n- 2490–2516 ตุ่มน้ำ: ยุคทหารและรัฐราชการ (คำของ Fred W. Riggs) ร่างกันใต้ตุ่ม จบด้วยฉบับ 20 มาตราและมาตรา 17 ฉบับ 4–9\n- 2516–2549 ธงเขียว: ประชาชนลงถนนสามครั้ง (2516, 2519, 2535) จนได้ฉบับประชาชน 2540 ฉบับ 10–16\n- 2549–ปัจจุบัน ตาชั่ง: ศาลและองค์กรอิสระกลายเป็นศูนย์กลางของการเมือง ประชามติสองครั้ง ฉบับ 17–20\n\nสุ่มถามตัวเอง: ฉบับที่ 7 อยู่ยุคไหน? (ตุ่มน้ำ — ฉบับสฤษดิ์ 2502)",
+        "en": "A memory tool, not a historical verdict; historians divide the periods in different ways.\n\n- 1932–1947, the folding book: from absolute monarchy to written rules, led by the People's Party. Charters 1–3.\n- 1947–1973, the water jar: military rule and the bureaucratic polity (Fred W. Riggs's term), charters drafted under a jar, ending with a 20-section charter and its s. 17. Charters 4–9.\n- 1973–2006, the green flag: people in the streets three times (1973, 1976, 1992) until the People's Constitution of 1997. Charters 10–16.\n- 2006–today, the scales: courts and independent organs at the centre of politics, two referendums. Charters 17–20.\n\nQuiz yourself: which era is charter 7 in? (The water jar: Sarit's 1959 charter.)"
+      }
+    },
+    {
+      "kind": "mnemonic",
+      "title": {"th": "วันที่ที่ต้องจำ ผูกกับความหมาย", "en": "Dates worth knowing, tied to their meaning"},
+      "body": {
+        "th": "- 24 มิ.ย. 2475: วันที่ลงมือ อ่านได้จากอนุสาวรีย์ (24 · 3 · 75)\n- 27 มิ.ย. 2475: วันที่มีคำว่า ชั่วคราว ห่างจากวันลงมือ 3 วัน = คณะราษฎรรอ 3 วันจึงได้กติกาแรก\n- 10 ธ.ค. 2475: วันรัฐธรรมนูญ ฉบับถาวร ที่พระที่นั่งอนันตสมาคม\n- 11 ต.ค. 2540: ฉบับประชาชน ออกมากลางวิกฤตต้มยำกุ้ง\n- 6 เม.ย. 2560: วันจักรี ฉบับที่ 20 ที่พระที่นั่งองค์เดิม ห้องเดียวกันเปิดและปิดวงจรยี่สิบฉบับ\n- 22 พ.ย. 2564: บัตรสองใบกลับมา 400 + 100\n\nสูตรเฉลี่ย: 85 ปี (2475–2560) หาร 20 ฉบับ ≈ 4 ปีต่อฉบับ = อายุสภาผู้แทนราษฎรหนึ่งสมัย (มาตรา 99)",
+        "en": "- 24 June 1932: the day of the takeover; read it off the monument (24 · 3 · 75).\n- 27 June 1932: the day of the word “provisional”, three days after the takeover.\n- 10 December 1932: Constitution Day; the permanent charter, signed in the Ananta Samakhom Throne Hall.\n- 11 October 1997: the People's Constitution, born in the middle of the Tom Yum Kung crisis.\n- 6 April 2017: Chakri Day; charter number 20, signed in the same throne hall, so one room opens and closes the twenty.\n- 22 November 2021: two ballots return, 400 + 100.\n\nThe average: 85 years (1932–2017) divided by 20 charters is about 4 years per charter, the length of one House term (section 99)."
+      }
+    },
+    {
+      "kind": "check",
+      "title": {"th": "ทดสอบตัวเอง", "en": "Check yourself"},
+      "items": [
+        {
+          "q": {"th": "ทำไมวันที่ 10 ธันวาคมจึงเป็นวันรัฐธรรมนูญ ไม่ใช่ 24 หรือ 27 มิถุนายน", "en": "Why is Constitution Day 10 December rather than 24 or 27 June?"},
+          "a": {"th": "เพราะ 10 ธ.ค. 2475 เป็นวันที่รัชกาลที่ 7 ทรงลงพระปรมาภิไธยในรัฐธรรมนูญฉบับถาวรฉบับแรก ที่พระที่นั่งอนันตสมาคม ส่วน 24 มิ.ย. คือวันเปลี่ยนแปลงการปกครอง และ 27 มิ.ย. คือฉบับชั่วคราว", "en": "On 10 December 1932 King Prajadhipok signed the first permanent constitution in the Ananta Samakhom Throne Hall. 24 June was the takeover; 27 June was the provisional charter."},
+          "sections": []
+        },
+        {
+          "q": {"th": "มาตรา 1 ของฉบับชั่วคราว 27 มิ.ย. 2475 ว่าอย่างไร และหลักนี้อยู่ที่มาตราไหนในฉบับปัจจุบัน", "en": "What did section 1 of the 27 June 1932 provisional charter say, and where does the idea sit today?"},
+          "a": {"th": "อำนาจสูงสุดของประเทศเป็นของราษฎรทั้งหลาย ฉบับปัจจุบันอยู่ในมาตรา 3: อำนาจอธิปไตยเป็นของปวงชนชาวไทย", "en": "Supreme power in the country belongs to all the people. Today: section 3, sovereign power belongs to the Thai people."},
+          "sections": [3]
+        },
+        {
+          "q": {"th": "รัฐธรรมนูญใต้ตุ่มคือฉบับใด สำคัญอย่างไรต่อประวัติศาสตร์", "en": "Which charter is the “under the jar” constitution, and why does it matter?"},
+          "a": {"th": "ฉบับชั่วคราว 9 พ.ย. 2490 หลังรัฐประหาร 8 พ.ย. 2490 ร่างไว้ล่วงหน้าและซ่อนใต้ตุ่มน้ำ เป็นครั้งแรกที่คณะรัฐประหารฉีกฉบับเดิมแล้วประกาศฉบับใหม่ทันที", "en": "The interim charter of 9 November 1947, written in advance and hidden under a water jar before the coup of 8 November. It was the first time a coup group tore up a charter and replaced it at once."},
+          "sections": []
+        },
+        {
+          "q": {"th": "ม. 17 ของธรรมนูญ 2502 ให้อำนาจอะไร และร่องรอยแนวคิดเดียวกันในปี 2557 คืออะไร", "en": "What power did s. 17 of the 1959 charter give, and what was its 2014 echo?"},
+          "a": {"th": "ให้นายกฯ โดยมติ ครม. สั่งการใด ๆ เพื่อระงับการบ่อนทำลายความมั่นคง และถือว่าชอบด้วยกฎหมาย ปี 2557 คือม. 44 ของรัฐธรรมนูญชั่วคราว ส่วนการรับรองคำสั่ง คสช. ในฉบับปัจจุบันคือมาตรา 279", "en": "It let the prime minister, by cabinet resolution, order anything to suppress threats to security, and deemed it lawful. The 2014 echo was s. 44 of the interim charter; today section 279 deems NCPO orders constitutional."},
+          "sections": [279]
+        },
+        {
+          "q": {"th": "ส.ส.ร. 2540 มีกี่คน มาจากไหน", "en": "How many members did the 1997 Constitution Drafting Assembly have, and where did they come from?"},
+          "a": {"th": "99 คน: ตัวแทนจังหวัด 76 คน และผู้เชี่ยวชาญ 23 คน โดยรัฐสภาเลือกขั้นสุดท้าย", "en": "99: 76 provincial representatives and 23 experts, with parliament making the final selection."},
+          "sections": []
+        },
+        {
+          "q": {"th": "คำถามพ่วงในประชามติ 7 ส.ค. 2559 กลายเป็นมาตราใด และว่าด้วยอะไร", "en": "Which section did the extra question in the 7 August 2016 referendum become, and what does it do?"},
+          "a": {"th": "มาตรา 272: ในห้าปีแรกนับแต่มีรัฐสภาชุดแรก ให้เลือกนายกรัฐมนตรีในที่ประชุมร่วมของสองสภา (ผ่านด้วย 58.07%)", "en": "Section 272: for five years from the first parliament, the prime minister is chosen in a joint sitting of both houses (approved by 58.07%)."},
+          "sections": [272]
+        },
+        {
+          "q": {"th": "การแก้ไขเพิ่มเติมปี 2564 เปลี่ยนอะไร และมีผลวันไหน", "en": "What did the 2021 amendment change, and when did it take effect?"},
+          "a": {"th": "แก้มาตรา 83, 86 และ 91 ให้ใช้บัตรสองใบ ส.ส. เขต 400 บัญชีรายชื่อ 100 มีผลวันที่ 22 พ.ย. 2564", "en": "It rewrote sections 83, 86 and 91: two ballots, 400 constituency and 100 party-list MPs. In force from 22 November 2021."},
+          "sections": [83, 86, 91]
+        },
+        {
+          "q": {"th": "ยกตัวอย่างหนึ่งข้อว่าฉบับถาวรแต่ละฉบับเป็นคำตอบต่อความล้มเหลวของฉบับก่อน", "en": "Give one example of a permanent charter answering the failure of the one before."},
+          "a": {"th": "2540 กลัวรัฐบาลผสมอ่อนแอ จึงสร้างฝ่ายบริหารที่แข็ง ส่วน 2550 และ 2560 กลัวฝ่ายบริหารที่แข็งเกิน จึงเพิ่มอำนาจองค์กรตรวจสอบ", "en": "1997 feared weak coalitions and built a strong executive; 2007 and 2017 feared an over-strong executive and strengthened the watchdogs."},
+          "sections": []
+        }
+      ]
+    }
+  ],
+  "sections": [1, 2, 3, 4, 5, 6, 16, 65, 83, 86, 88, 91, 99, 159, 200, 214, 215, 247, 265, 269, 272, 275, 279],
+  "sources": [
+    "Royal Gazette (ราชกิจจานุเบกษา): texts of the 1932 provisional charter (vol. 49) and later charters; Constitution Amendment (No. 1) B.E. 2564, published 21 Nov 2021",
+    "Thai Parliament Museum (parliamentmuseum.go.th): pages on each constitution, incl. “รัฐธรรมนูญใต้ตุ่ม”",
+    "King Prajadhipok's Institute: Draft Constitution of King Prajadhipok (1926 and 1932 documents)",
+    "Wikisource (th): พระราชบัญญัติธรรมนูญการปกครองแผ่นดินสยามชั่วคราว พ.ศ. 2475; รัฐธรรมนูญแห่งราชอาณาจักรสยาม พ.ศ. 2475",
+    "Fred W. Riggs, Thailand: The Modernization of a Bureaucratic Polity (1966)",
+    "Thak Chaloemtiarana, Thailand: The Politics of Despotic Paternalism (1979)",
+    "Chris Baker & Pasuk Phongpaichit, A History of Thailand",
+    "Charnvit Kasetsiri, work on the 1932 revolution and the People's Party",
+    "Thongchai Winichakul, Moments of Silence: The Unforgetting of the October 6, 1976, Massacre in Bangkok (2020)",
+    "Khemthong Tonsakulrungruang, Entrenching the Minority: The Constitutional Court in Thailand's Political Conflict, 26 Wash. Int'l L.J. 247 (2017)",
+    "Apipol Sae-Tung, Juridification, Legitimacy, and Authoritarian Survival in Thai Politics from the 2014 Military Coup, Asian Review 38(1) (2025)",
+    "Siwach Sripokangkul & Paul Chambers, Returning Soldiers to the Barracks, Pertanika J. Soc. Sci. & Hum. 25(1) (2017)",
+    "Truth for Reconciliation Commission of Thailand, final report (2012)",
+    "Election Commission of Thailand: official results of the 2007 and 2016 referendums (via IFES ElectionGuide)",
+    "Constitutional Court of Thailand, Ruling No. 4/2564 (11 March 2021)",
+    "Wikimedia Commons file pages for every image used (licences checked October 2026)"
+  ]
+}

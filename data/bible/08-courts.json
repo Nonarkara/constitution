@@ -1,0 +1,404 @@
+{
+  "id": "courts",
+  "order": 8,
+  "title": {
+    "th": "ศาลและศาลรัฐธรรมนูญ",
+    "en": "The Courts and the Constitutional Court"
+  },
+  "lede": {
+    "th": "ปี 2551 นายกรัฐมนตรีคนหนึ่งต้องพ้นตำแหน่งเพราะไปทำรายการสอนทำอาหารทางโทรทัศน์ ปีเดียวกัน อดีตนายกรัฐมนตรีอีกคนถูกศาลฎีกาพิพากษาจำคุกสองปีเพราะภรรยาซื้อที่ดินจากกองทุนของรัฐ สองเรื่องนี้ขึ้นศาลคนละศาล ด้วยเหตุผลคนละแบบ บทนี้สอนให้รู้ว่าประเทศไทยมีศาลกี่ระบบ แต่ละศาลรับเรื่องอะไร และทำไมศาลรัฐธรรมนูญซึ่งมีตุลาการเพียงเก้าคน จึงกลายเป็นสถาบันที่ทรงอิทธิพลและถูกถกเถียงมากที่สุดแห่งหนึ่งในการเมืองไทย",
+    "en": "In 2008 a sitting prime minister lost his job for hosting a television cooking show. The same year a former prime minister was sentenced to two years in prison because his wife had bought land from a state fund. The two cases went to different courts for different reasons. This chapter shows how many court systems Thailand has, which one hears what, and why a Constitutional Court of just nine judges became one of the most powerful and most argued-over institutions in Thai politics."
+  },
+  "blocks": [
+    {
+      "kind": "text",
+      "title": {
+        "th": "ศาลคือผู้ตัดสินที่ต้องไม่ใช่ผู้เล่น",
+        "en": "A court is a referee who cannot be a player"
+      },
+      "body": {
+        "th": "นึกถึงฟุตบอลนัดหนึ่ง ถ้าทีมเจ้าบ้านเลือกกรรมการได้ตอนพักครึ่ง ผลการแข่งขันก็ไม่มีความหมาย หลักทั้งหมดในหมวดศาลมีไว้กันไม่ให้เกิดเรื่องแบบนั้น\n\nมาตรา 188 วางหลักว่าการพิจารณาพิพากษาคดีเป็นอำนาจของศาล ทำในพระปรมาภิไธยพระมหากษัตริย์ และผู้พิพากษามีอิสระในการพิจารณาพิพากษาตามรัฐธรรมนูญและกฎหมาย ต้องรวดเร็ว เป็นธรรม และปราศจากอคติ\n\nมาตรา 189 คือกติกาที่ห้ามเลือกกรรมการตอนพักครึ่ง ศาลตั้งได้โดยพระราชบัญญัติเท่านั้น และห้ามตั้งศาลใหม่หรือวิธีพิจารณาพิเศษขึ้นมาเพื่อตัดสินคดีใดคดีหนึ่งหรือข้อหาใดข้อหาหนึ่งโดยเฉพาะแทนศาลที่มีอยู่ เหตุผลง่ายมาก ถ้ารัฐบาลตั้งศาลเฉพาะกิจขึ้นมาเพื่อพิจารณาคดีของศัตรูทางการเมืองได้ ผลคดีก็ถูกกำหนดไว้ตั้งแต่ก่อนเปิดศาล\n\nมาตรา 190 ให้พระมหากษัตริย์ทรงแต่งตั้งและให้ผู้พิพากษาพ้นจากตำแหน่ง ส่วนกรณีพ้นตำแหน่งเพราะตาย เกษียณ ครบวาระ หรือถูกลงโทษ ให้นำความกราบบังคมทูลเพื่อทรงทราบ มาตรา 191 กำหนดถ้อยคำถวายสัตย์ปฏิญาณก่อนเข้ารับหน้าที่ ทั้งสองมาตรานี้ทำให้ตำแหน่งผู้พิพากษาไม่ขึ้นกับคำสั่งของรัฐมนตรีคนใด",
+        "en": "Picture a football match where the home team may pick the referee at half-time. The result would mean nothing. Every rule in the courts chapter exists to stop that from happening.\n\nSection 188 sets the base: judging cases is the power of the courts, exercised in the name of the King, and judges are independent in deciding cases under the constitution and the law, quickly, fairly and without bias.\n\nSection 189 is the no-half-time-referee rule. Courts may be created only by an Act, and no one may set up a new court or a special procedure to try one particular case, or one particular charge, in place of the court that normally has jurisdiction. The reason is plain. If a government could build a tribunal to try its political enemies, the verdict would be decided before the doors opened.\n\nSection 190 has the King appoint and remove judges; where a judge leaves through death, retirement, end of term or punishment, the matter is simply reported to the King. Section 191 sets the oath judges swear before taking office. Together these keep a judge's post out of any minister's hands."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "ทำไมศาลต้องบริหารตัวเอง",
+        "en": "Why the courts run their own house"
+      },
+      "body": {
+        "th": "ความเป็นอิสระบนกระดาษไม่มีความหมาย ถ้าคนที่ไม่ชอบคำพิพากษาของคุณเป็นคนตัดสินว่าปีหน้าคุณจะถูกย้ายไปอยู่จังหวัดไหน หรือศาลของคุณจะได้งบประมาณเท่าไร\n\nห่วงโซ่จึงเป็นแบบนี้\n- ถ้ากระทรวงคุมการโยกย้ายผู้พิพากษา ผู้พิพากษาจะเกรงใจกระทรวง\n- ดังนั้นมาตรา 193 ให้แต่ละศาล ยกเว้นศาลทหาร มีหน่วยธุรการของตัวเองที่เป็นอิสระด้านบุคคลและงบประมาณ ขึ้นตรงต่อประธานศาลนั้น และให้ศาลยุติธรรมกับศาลปกครองมีระบบเงินเดือนเฉพาะ\n- ดังนั้นมาตรา 196 ให้การบริหารงานบุคคลของผู้พิพากษาศาลยุติธรรมอยู่ในมือคณะกรรมการตุลาการศาลยุติธรรม (ก.ต.) ซึ่งมีประธานศาลฎีกาเป็นประธาน และมาตรา 198 ทำแบบเดียวกันกับศาลปกครอง (ก.ศป.) มีประธานศาลปกครองสูงสุดเป็นประธาน\n- กรรมการทั้งสองชุดมาจากการเลือกของผู้พิพากษาเอง โดยมีคนนอกที่ไม่เคยเป็นผู้พิพากษาได้ไม่เกินสองคน\n\nราคาที่ต้องจ่าย คือศาลที่ปกครองตัวเองตรวจสอบจากภายนอกได้ยาก คนนอกสองคนในคณะกรรมการคือช่องลมเล็ก ๆ ที่รัฐธรรมนูญเปิดไว้ ส่วนศาลทหารถูกยกเว้นจากมาตรา 193 จึงยังอยู่ในสายการบังคับบัญชาของฝ่ายทหาร ข้อนี้คือหนึ่งในต้นเหตุของคำวิจารณ์ที่จะเห็นในหัวข้อถัดไป",
+        "en": "Independence on paper means little if the people who dislike your judgment decide where you will be posted next year, or how much money your court gets.\n\nSo the chain runs like this:\n- If a ministry controls judges' transfers, judges will learn to please the ministry.\n- So section 193 gives every court except the Military Court its own administrative office, independent in staffing and budget and answering to that court's president, and gives the Courts of Justice and the Administrative Courts their own salary scales.\n- So section 196 puts personnel decisions for Court of Justice judges in the hands of the Judicial Commission, chaired by the President of the Supreme Court, and section 198 does the same for administrative judges, chaired by the President of the Supreme Administrative Court.\n- Both commissions are elected by the judges themselves, with no more than two outsiders who are not and never were judges.\n\nThe price is that a self-governing judiciary is hard to check from outside. The two outside seats are a small window the constitution leaves open. The Military Court is left out of section 193, so it stays inside the military's chain of command. That exception feeds the criticism you will meet below."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "ศาลสี่ระบบ",
+        "en": "Four court systems"
+      },
+      "body": {
+        "th": "ประเทศไทยมีศาลสี่ระบบที่แยกจากกัน แต่ละระบบมีศาลสูงสุดของตัวเอง\n- ศาลยุติธรรม (มาตรา 194) ศาลชั้นต้น ศาลอุทธรณ์ ศาลฎีกา รับคดีแพ่งและคดีอาญาทั่วไป และเป็นศาลที่รับคดีทั้งปวงที่ไม่ได้ถูกกำหนดให้ไปศาลอื่น\n- ศาลปกครอง (มาตรา 197) มีศาลปกครองชั้นต้นและศาลปกครองสูงสุด รับคดีที่เกิดจากการใช้อำนาจทางปกครองหรือการดำเนินกิจการทางปกครอง\n- ศาลทหาร (มาตรา 199) รับคดีอาญาที่ผู้กระทำผิดอยู่ในอำนาจศาลทหาร และคดีอื่นตามที่กฎหมายบัญญัติ\n- ศาลรัฐธรรมนูญ (หมวด 11 มาตรา 200 ถึง 214) วินิจฉัยว่ากฎหมายขัดรัฐธรรมนูญหรือไม่ และชี้ขาดข้อพิพาทเรื่องอำนาจขององค์กรตามรัฐธรรมนูญ\n\nศาลปกครองและศาลรัฐธรรมนูญเป็นของใหม่ เกิดจากรัฐธรรมนูญปี 2540 ก่อนหน้านั้นศาลยุติธรรมเป็นศาลเดียวที่รับคดีทุกประเภท ส่วนข้อพิพาทเรื่องรัฐธรรมนูญอยู่กับคณะตุลาการรัฐธรรมนูญ และข้อพิพาททางปกครองอยู่กับคณะกรรมการกฤษฎีกา ซึ่งทั้งสององค์กรอยู่ในฝ่ายบริหาร (ตามที่ Khemthong Tonsakulrungruang สรุปไว้) ศาลรัฐธรรมนูญเริ่มทำงานปี 2541 ส่วนศาลปกครองตั้งตามพระราชบัญญัติจัดตั้งศาลปกครองและวิธีพิจารณาคดีปกครอง พ.ศ. 2542",
+        "en": "Thailand has four separate court systems, each with its own top court:\n- The Courts of Justice (section 194): courts of first instance, the Court of Appeal and the Supreme Court. They hear ordinary civil and criminal cases and every case not assigned to another court.\n- The Administrative Courts (section 197): Administrative Courts of First Instance and the Supreme Administrative Court. They hear cases arising from the use of administrative power or the conduct of administrative affairs.\n- The Military Courts (section 199): criminal cases where the offender falls under military jurisdiction, and other cases the law assigns.\n- The Constitutional Court (Chapter 11, sections 200 to 214): it decides whether laws conflict with the constitution and settles disputes over the powers of constitutional bodies.\n\nThe Administrative and Constitutional Courts are young. Both came from the 1997 constitution. Before that the Courts of Justice heard everything, constitutional questions went to a Constitutional Tribunal, and administrative disputes went to the Council of State, both of which sat inside the executive branch (as Khemthong Tonsakulrungruang summarises). The Constitutional Court began work in 1998; the Administrative Courts were set up under the Act on the Establishment of Administrative Courts and Administrative Court Procedure of 1999."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "เรื่องนี้ขึ้นศาลไหน ถามสามคำถาม",
+        "en": "Which court? Ask three questions"
+      },
+      "body": {
+        "th": "ข้อสอบชอบให้เรื่องราวมาหนึ่งย่อหน้าแล้วถามว่าศาลไหนมีอำนาจ ไม่ต้องท่องรายการคดี ให้ถามตามลำดับนี้\n\nคำถามที่หนึ่ง ตัวกฎหมายระดับพระราชบัญญัติถูกกล่าวหาว่าขัดรัฐธรรมนูญหรือไม่ ถ้าใช่ ศาลที่ชี้ขาดได้มีศาลเดียวคือศาลรัฐธรรมนูญ แม้คดีจะเริ่มในศาลอื่น ศาลนั้นต้องส่งเรื่องไปตามมาตรา 212\n\nคำถามที่สอง รัฐกำลังใช้อำนาจรัฐกับเอกชนอยู่หรือไม่ เช่น คำสั่งเพิกถอนใบอนุญาต กฎกระทรวง ข้อบัญญัติท้องถิ่น สัญญาทางปกครอง หน่วยงานละเลยหน้าที่ หรือเจ้าหน้าที่ทำละเมิดจากการใช้อำนาจทางปกครอง ถ้าใช่ ไปศาลปกครอง (มาตรา 197) เพราะศาลนี้ถูกออกแบบมาให้ถ่วงน้ำหนักระหว่างรัฐที่มีอำนาจมากกับประชาชนที่มีน้อย\n\nคำถามที่สาม ผู้ถูกกล่าวหาเป็นบุคคลที่อยู่ในอำนาจศาลทหาร เช่น ทหารประจำการที่กระทำผิดอาญา ถ้าใช่ ไปศาลทหาร (มาตรา 199)\n\nตอบไม่ใช่ทั้งสามข้อ ไปศาลยุติธรรม (มาตรา 194) ศาลยุติธรรมคือลิ้นชักที่รับทุกอย่างที่เหลือ ทั้งคดีแพ่ง อาญา แรงงาน ภาษี ครอบครัว ล้มละลาย\n\nกับดักที่พบบ่อย\n- นักการเมืองทุจริต ไม่ใช่ศาลรัฐธรรมนูญ แต่เป็นศาลฎีกาแผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมือง (มาตรา 195) ซึ่งอยู่ในศาลยุติธรรม\n- เพิกถอนสิทธิสมัครรับเลือกตั้งเพราะทุจริตเลือกตั้ง เป็นอำนาจศาลฎีกา ส่วนการเลือกตั้งท้องถิ่นเป็นศาลอุทธรณ์ (มาตรา 226)\n- คำวินิจฉัยขององค์กรอิสระที่ใช้อำนาจโดยตรงตามรัฐธรรมนูญ ศาลปกครองไม่มีอำนาจ (มาตรา 197 วรรคสาม)\n- ถ้าสองศาลเถียงกันว่าใครมีอำนาจ ให้คณะกรรมการตามมาตรา 192 ชี้ขาด",
+        "en": "Exam questions love to tell a story in one paragraph and ask which court has jurisdiction. Do not memorise lists of cases. Ask these questions in order.\n\nQuestion one: is a statute itself accused of breaching the constitution? If so, only one body can decide that: the Constitutional Court. Even when the case starts elsewhere, that court must send the question on under section 212.\n\nQuestion two: is the state using state power against a private person? An order revoking a licence, a ministerial regulation, a local ordinance, an administrative contract, an agency neglecting its duty, an official causing harm while exercising administrative power. If so, it goes to the Administrative Court (section 197), a court built to balance a powerful state against a citizen with little power.\n\nQuestion three: is the accused someone under military jurisdiction, such as a serving soldier charged with a crime? If so, the Military Court (section 199).\n\nNo to all three? The Courts of Justice (section 194). They are the drawer that takes everything else: civil, criminal, labour, tax, family, bankruptcy.\n\nCommon traps:\n- A corrupt politician does not go to the Constitutional Court. The case goes to the Supreme Court's Criminal Division for Persons Holding Political Positions (section 195), inside the Courts of Justice.\n- Revoking a candidate's right to stand for election over electoral fraud is for the Supreme Court; for local elections, the Court of Appeal (section 226).\n- Decisions an independent organ makes using power given directly by the constitution are outside the Administrative Court's reach (section 197, third paragraph).\n- When two courts dispute which of them has jurisdiction, the committee under section 192 decides."
+      }
+    },
+    {
+      "kind": "numbers",
+      "title": {
+        "th": "ตัวเลขในหมวดศาล",
+        "en": "Numbers in the courts chapter"
+      },
+      "rows": [
+        {"th": "คณะกรรมการชี้ขาดอำนาจระหว่างศาล", "en": "Committee settling jurisdiction between courts", "value": "ประธานศาลฎีกา + ประธานศาลปกครองสูงสุด + หัวหน้าสำนักตุลาการทหาร + ผู้ทรงคุณวุฒิ ≤ 4 / 3 court heads + up to 4 experts", "sections": [192]},
+        {"th": "องค์คณะศาลฎีกาแผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมือง", "en": "Panel of the Supreme Court's political-office criminal division", "value": "5–9 คน เลือกเป็นรายคดี / 5–9 judges, chosen per case", "sections": [195]},
+        {"th": "อุทธรณ์คำพิพากษาแผนกนี้", "en": "Appeal from that division", "value": "ภายใน 30 วัน ต่อที่ประชุมใหญ่ศาลฎีกา / within 30 days, to the Supreme Court plenary", "sections": [195]},
+        {"th": "องค์คณะวินิจฉัยอุทธรณ์", "en": "Appeal panel", "value": "9 คน ที่ไม่เคยนั่งพิจารณาคดีนั้น / 9 judges who never sat on the case", "sections": [195]},
+        {"th": "คนนอกใน ก.ต. และ ก.ศป.", "en": "Outsiders on the two judicial commissions", "value": "ไม่เกิน 2 คน / no more than 2", "sections": [196, 198]},
+        {"th": "เพิกถอนสิทธิสมัครรับเลือกตั้งเพราะทุจริตเลือกตั้ง (ศาลฎีกา)", "en": "Candidacy ban for electoral fraud (Supreme Court)", "value": "10 ปี / 10 years", "sections": [226]}
+      ]
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "ช่องทางพิเศษสำหรับนักการเมือง",
+        "en": "A special lane for politicians"
+      },
+      "body": {
+        "th": "ทำไมต้องมีแผนกพิเศษในศาลฎีกาสำหรับคดีอาญาของนักการเมือง คำตอบคือเวลา คดีอาญาปกติเดินสามชั้นศาล อาจกินเวลาเกินสิบปี ระหว่างนั้นจำเลยอาจยังนั่งอยู่ในตำแหน่งที่ใช้อำนาจกับพยานได้\n\nมาตรา 195 จึงตั้งศาลฎีกาแผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมือง\n- องค์คณะ 5 ถึง 9 คน คัดเลือกโดยที่ประชุมใหญ่ศาลฎีกาเป็นรายคดี จากผู้พิพากษาระดับศาลฎีกาขึ้นไป\n- อุทธรณ์ได้ภายใน 30 วันต่อที่ประชุมใหญ่ศาลฎีกา ซึ่งวินิจฉัยโดยองค์คณะ 9 คนที่ไม่เคยพิจารณาคดีนั้น\n- ถ้าคำพิพากษามีผลให้ผู้ใดพ้นตำแหน่ง ให้พ้นตั้งแต่วันที่แผนกนี้พิพากษา ไม่ว่าจะอุทธรณ์หรือไม่\n\nคดีส่วนใหญ่มาถึงแผนกนี้ผ่าน ป.ป.ช. ซึ่งไต่สวนแล้วส่งสำนวนให้อัยการสูงสุดฟ้อง (มาตรา 235) และศาลใช้สำนวนของ ป.ป.ช. เป็นหลักในการพิจารณา โดยไต่สวนเพิ่มเติมได้ นี่คือระบบไต่สวน ศาลค้นหาความจริงเองได้ ไม่ใช่แค่นั่งฟังสองฝ่ายโต้กัน",
+        "en": "Why does the Supreme Court need a special division for criminal cases against politicians? Time. An ordinary criminal case climbs three levels of court and can take more than a decade, and all the while the accused may still hold an office with power over the witnesses.\n\nSection 195 therefore creates the Supreme Court's Criminal Division for Persons Holding Political Positions:\n- A panel of 5 to 9 judges, picked by the Supreme Court plenary for each case, from judges of Supreme Court rank or above.\n- An appeal within 30 days to the Supreme Court plenary, decided by a fresh panel of 9 judges who never sat on the case.\n- If the judgment removes someone from office, the removal runs from the day the division rules, appeal or no appeal.\n\nMost cases arrive through the National Anti-Corruption Commission, which investigates and sends its file to the Attorney-General to prosecute (section 235). The court uses the NACC's file as the main record and may inquire further. This is an inquisitorial system: the court can look for the truth itself rather than only referee two sides."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "ที่ดินรัชดาฯ และโครงการรับจำนำข้าว",
+        "en": "The Ratchadaphisek land and the rice-pledging scheme"
+      },
+      "year": 2008,
+      "body": {
+        "th": "21 ตุลาคม 2551 ศาลฎีกาแผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมืองพิพากษาจำคุกทักษิณ ชินวัตร สองปี กรณีภรรยาซึ่งเป็นคู่สมรสของนายกรัฐมนตรีในขณะนั้นซื้อที่ดินย่านรัชดาภิเษกจากกองทุนเพื่อการฟื้นฟูและพัฒนาระบบสถาบันการเงิน ซึ่งเป็นหน่วยงานของรัฐ ศาลเห็นว่าเป็นการขัดกันระหว่างประโยชน์ส่วนตนกับหน้าที่ตามกฎหมาย ป.ป.ช. ขณะนั้นเขาอยู่ต่างประเทศ\n\n27 กันยายน 2560 แผนกเดียวกันพิพากษาจำคุกยิ่งลักษณ์ ชินวัตร ห้าปี ฐานละเว้นการปฏิบัติหน้าที่ในการระงับความเสียหายจากการขายข้าวแบบรัฐต่อรัฐในโครงการรับจำนำข้าว เธอเดินทางออกนอกประเทศก่อนวันพิพากษา\n\nทั้งสองคดีแสดงหลักเดียวกัน แผนกนี้ไม่ได้ตัดสินว่านโยบายดีหรือไม่ดี แต่ตัดสินว่าผู้มีอำนาจทำผิดกฎหมายอาญาหรือไม่ ผู้สนับสนุนมองว่านี่คือหลักฐานว่านักการเมืองระดับสูงสุดก็หนีกฎหมายไม่ได้ ฝ่ายวิจารณ์ตั้งคำถามว่าการเอาผิดทางอาญากับการตัดสินใจเชิงนโยบาย เช่น โครงการรับจำนำข้าว ทำให้เส้นแบ่งระหว่างความรับผิดทางการเมืองกับความผิดทางอาญาเลือนลงหรือไม่",
+        "en": "On 21 October 2008 the Supreme Court's Criminal Division for Persons Holding Political Positions sentenced Thaksin Shinawatra to two years in prison. His wife, the spouse of the sitting prime minister, had bought land on Ratchadaphisek Road from the Financial Institutions Development Fund, a state body. The court found a conflict between private interest and official duty under the anti-corruption law. He was abroad at the time.\n\nOn 27 September 2017 the same division sentenced Yingluck Shinawatra to five years for dereliction of duty: failing to stop losses in government-to-government rice sales under the rice-pledging scheme. She left the country before the verdict.\n\nBoth cases show the same principle. The division does not rule on whether a policy was wise; it rules on whether a power-holder committed a crime. Supporters see proof that even the most senior politicians cannot escape the law. Critics ask whether prosecuting a policy decision, such as the rice scheme, blurs the line between political accountability and criminal guilt."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "ศาลทหาร: ศาลที่มีประโยคเปิดท้าย",
+        "en": "The Military Court: a court with an open-ended clause"
+      },
+      "body": {
+        "th": "มาตรา 199 สั้นมาก ศาลทหารพิจารณาคดีอาญาที่ผู้กระทำผิดอยู่ในอำนาจศาลทหาร และคดีอื่น ตามที่กฎหมายบัญญัติ ส่วนการจัดตั้ง วิธีพิจารณา และการแต่งตั้งถอดถอนตุลาการศาลทหาร ให้เป็นไปตามกฎหมาย\n\nสังเกตสองจุด\n- คำว่า “และคดีอื่น ตามที่กฎหมายบัญญัติ” เปิดให้กฎหมายระดับต่ำกว่ารัฐธรรมนูญขยายอำนาจศาลทหารได้\n- ศาลทหารไม่ได้รับหน่วยธุรการอิสระตามมาตรา 193 และการแต่งตั้งตุลาการศาลทหารไม่ต้องผ่านกลไกแบบ ก.ต. แต่ไปตามกฎหมายเฉพาะ\n\nเหตุผลที่มีศาลทหารแยก คือวินัยทหารและความผิดในหน้าที่ทหารต้องการผู้พิพากษาที่เข้าใจระบบนั้น และต้องพิจารณาได้รวดเร็วแม้ในยามสงคราม คำถามที่ตามมาคือ เมื่อพลเรือนถูกส่งไปศาลนี้ จะเกิดอะไรขึ้น",
+        "en": "Section 199 is short. The Military Court tries criminal cases where the offender falls under military jurisdiction, and other cases, as the law provides. Its organisation, procedure, and the appointment and removal of its judges are all left to ordinary law.\n\nNotice two things:\n- The words “and other cases, as the law provides” let a law below the constitution widen the Military Court's reach.\n- The Military Court is not given an independent administrative office under section 193, and its judges are not appointed through a judicial commission like the one in section 196; a separate law governs them.\n\nThe reason for a separate military court is that military discipline and offences in military service call for judges who understand that system, and for speed even in wartime. The obvious next question: what happens when civilians are sent there?"
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "พลเรือนในศาลทหาร 2557–2562",
+        "en": "Civilians in military courts, 2014–2019"
+      },
+      "year": 2014,
+      "body": {
+        "th": "หลังรัฐประหาร 22 พฤษภาคม 2557 คณะรักษาความสงบแห่งชาติ (คสช.) ออกประกาศ คสช. ฉบับที่ 37/2557, 38/2557 และ 50/2557 ให้คดีที่พลเรือนเป็นจำเลยบางประเภทขึ้นศาลทหาร ได้แก่ ความผิดต่อสถาบันพระมหากษัตริย์ ความผิดต่อความมั่นคง การฝ่าฝืนคำสั่ง คสช. และความผิดเกี่ยวกับอาวุธสงคราม เรื่องนี้เกิดก่อนรัฐธรรมนูญ 2560 ใช้บังคับ\n\nข้อมูลจากกรมพระธรรมนูญที่ศูนย์ทนายความเพื่อสิทธิมนุษยชนเผยแพร่ ระบุว่าระหว่าง 22 พฤษภาคม 2557 ถึง 31 พฤษภาคม 2559 มีพลเรือนอย่างน้อย 1,811 คนถูกพิจารณาคดีในศาลทหาร คำสั่งหัวหน้า คสช. ที่ 55/2559 ลงวันที่ 12 กันยายน 2559 ยุติการส่งคดีใหม่ของพลเรือนไปศาลทหาร แต่ไม่ครอบคลุมคดีที่ค้างอยู่ จนคำสั่งหัวหน้า คสช. ที่ 9/2562 ยกเลิกประกาศเหล่านั้นและโอนคดีที่ค้างไปศาลยุติธรรม\n\nผู้สนับสนุนมาตรการขณะนั้นให้เหตุผลเรื่องความสงบเรียบร้อยในภาวะวิกฤต ฝ่ายวิจารณ์ เช่น International Commission of Jurists ชี้ว่าพลเรือนควรขึ้นศาลพลเรือน บทเรียนเชิงระบบอยู่ที่ประโยค “และคดีอื่น ตามที่กฎหมายบัญญัติ” ในมาตรา 199 ซึ่งยังอยู่ในรัฐธรรมนูญฉบับปัจจุบัน",
+        "en": "After the coup of 22 May 2014, the National Council for Peace and Order (NCPO) issued Announcements 37/2014, 38/2014 and 50/2014, sending certain civilian cases to military courts: offences against the monarchy, national security offences, defying NCPO orders, and weapons-of-war offences. All of this happened before the 2017 constitution came into force.\n\nFigures from the Judge Advocate General's Department, published by Thai Lawyers for Human Rights, counted at least 1,811 civilians tried in military courts between 22 May 2014 and 31 May 2016. NCPO Head Order 55/2016, dated 12 September 2016, stopped sending new civilian cases to military courts but left pending cases where they were, until NCPO Head Order 9/2019 repealed the announcements and moved the remaining cases to the Courts of Justice.\n\nSupporters at the time argued that order had to be kept in a crisis. Critics, including the International Commission of Jurists, argued that civilians belong in civilian courts. The structural lesson sits in the phrase “and other cases, as the law provides” in section 199, which remains in the current constitution."
+      }
+    },
+    {
+      "kind": "critique",
+      "title": {
+        "th": "ข้อเสนอให้ปฏิรูปศาลทหาร",
+        "en": "The case for reforming the Military Court"
+      },
+      "by": "Siwach Sripokangkul & Paul Chambers (2017)",
+      "body": {
+        "th": "Siwach Sripokangkul และ Paul Chambers มองว่ากองทัพคืออุปสรรคหลักของประชาธิปไตยไทย และเสนอว่ารัฐบาลที่มาจากการเลือกตั้งควรปฏิรูปกองทัพเป็นเรื่องแรก หนึ่งในข้อเสนอคือยกเลิกหรือทบทวนกฎหมายและกลไกที่ใช้หลังรัฐประหาร 2557 รวมถึงศาลทหาร ซึ่งทั้งสองเขียนว่าเป็นศาลชั้นเดียวในบางสถานการณ์และถูกมองว่าให้ความชอบธรรมแก่การปราบปรามหลังรัฐประหาร ทั้งสองยังชี้ว่าทหารที่กระทำผิดมักขึ้นศาลทหาร และจะขึ้นศาลพลเรือนก็ต่อเมื่อกองทัพยินยอม\n\nฝ่ายที่เห็นต่างให้เหตุผลว่าศาลทหารจำเป็นต่อวินัยกองทัพ และรัฐธรรมนูญเองก็ยอมรับศาลนี้ไว้ในมาตรา 199 ประเด็นที่ควรคิดไม่ใช่ว่าควรมีศาลทหารหรือไม่ แต่อยู่ที่ว่าเขตอำนาจของศาลนี้ควรกว้างแค่ไหน และใครเป็นคนขีดเส้น",
+        "en": "Siwach Sripokangkul and Paul Chambers argue that the military is the main obstacle to Thai democracy and that an elected government should make military reform its first task. Among their proposals: abolish or review the laws and bodies used after the 2014 coup, including the military court, which they describe as single-tiered in some situations and perceived as lending legitimacy to post-coup repression. They also note that soldiers who break the law are usually tried in military court and reach a civilian court only if the military allows it.\n\nThe opposing view holds that military courts are needed for discipline, and the constitution itself recognises them in section 199. The useful question is not whether a military court should exist but how wide its jurisdiction should be, and who draws the line."
+      }
+    },
+    {
+      "kind": "mnemonic",
+      "title": {
+        "th": "จำศาลสี่ระบบด้วยคำถามเดียว: ใครเป็นคู่กรณี",
+        "en": "Remember four courts with one question: who is on the other side?"
+      },
+      "body": {
+        "th": "- กฎหมายปะทะรัฐธรรมนูญ → ศาลรัฐธรรมนูญ (“กฎหมายแม่ตรวจกฎหมายลูก”)\n- รัฐปะทะประชาชน → ศาลปกครอง (“รัฐใช้อำนาจ ประชาชนร้อง”)\n- ทหารทำผิดอาญา → ศาลทหาร\n- ที่เหลือทั้งหมด → ศาลยุติธรรม (“ลิ้นชักกลาง”)\n\nและมาตรา 189 จำว่า “ไม่มีศาลตัดเสื้อ” ห้ามตัดศาลให้พอดีกับคดีเดียว",
+        "en": "- A law against the constitution → Constitutional Court (“the mother law checks the child laws”)\n- The state against a citizen → Administrative Court (“the state uses power, the citizen complains”)\n- A soldier's crime → Military Court\n- Everything else → Courts of Justice (“the default drawer”)\n\nFor section 189 remember “no tailor-made courts”: you may not cut a court to fit one case."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "ศาลรัฐธรรมนูญมีไว้ทำอะไร",
+        "en": "What the Constitutional Court is for"
+      },
+      "body": {
+        "th": "มาตรา 5 ประกาศว่ารัฐธรรมนูญเป็นกฎหมายสูงสุด กฎหมายหรือการกระทำใดที่ขัดรัฐธรรมนูญย่อมใช้บังคับไม่ได้ ประโยคนี้สวยงาม แต่ทิ้งคำถามไว้หนึ่งข้อ ใครเป็นคนบอกว่าขัด\n\nถ้าให้รัฐสภาตัดสินเอง เสียงข้างมากที่ออกกฎหมายก็จะบอกว่ากฎหมายของตัวเองไม่ขัด ถ้าให้รัฐบาลตัดสิน ก็เหมือนให้จำเลยเป็นผู้พิพากษา รัฐธรรมนูญไทยจึงตั้งศาลเฉพาะขึ้นมาเป็นผู้มีคำตอบสุดท้าย\n\nมาตรา 210 เขียนอำนาจไว้สั้น ๆ สามข้อ\n- วินิจฉัยความชอบด้วยรัฐธรรมนูญของกฎหมายหรือร่างกฎหมาย\n- วินิจฉัยปัญหาเกี่ยวกับหน้าที่และอำนาจของสภาผู้แทนราษฎร วุฒิสภา รัฐสภา คณะรัฐมนตรี หรือองค์กรอิสระ\n- หน้าที่และอำนาจอื่นตามที่รัฐธรรมนูญบัญญัติ\n\nข้อสามคือประตูบานใหญ่ที่สุด อำนาจจริงของศาลกระจายอยู่ในหลายมาตรา ซึ่งจะเห็นในหัวข้อถัดไป และมาตรา 211 วรรคสี่ ทำให้ทุกคำวินิจฉัยเด็ดขาด ผูกพันรัฐสภา คณะรัฐมนตรี ศาล องค์กรอิสระ และหน่วยงานของรัฐ ไม่มีศาลใดอุทธรณ์ต่อได้",
+        "en": "Section 5 declares the constitution the supreme law: any law or act that conflicts with it cannot be enforced. A fine sentence, with one question left hanging. Who decides that there is a conflict?\n\nLet Parliament decide and the majority that passed a law will say its own law is fine. Let the government decide and the defendant becomes the judge. So the Thai constitution creates a specialised court to give the final answer.\n\nSection 210 lists its powers in three short lines:\n- Deciding whether a law or a draft law is constitutional.\n- Deciding questions about the duties and powers of the House of Representatives, the Senate, the National Assembly, the Council of Ministers or the independent organs.\n- Other duties and powers the constitution provides.\n\nThe third line is the widest door. The court's real powers are scattered across many sections, as the next block shows. And section 211, fourth paragraph, makes every ruling final and binding on the National Assembly, the Council of Ministers, the courts, the independent organs and state agencies. There is no appeal."
+      }
+    },
+    {
+      "kind": "numbers",
+      "title": {
+        "th": "ศาลรัฐธรรมนูญในตัวเลข",
+        "en": "The Constitutional Court in numbers"
+      },
+      "rows": [
+        {"th": "จำนวนตุลาการ", "en": "Judges", "value": "9", "sections": [200]},
+        {"th": "ที่มา: ผู้พิพากษาศาลฎีกา", "en": "From the Supreme Court", "value": "3 (ระดับหัวหน้าคณะในศาลฎีกามาแล้ว ≥ 3 ปี / presiding-judge rank ≥ 3 years)", "sections": [200]},
+        {"th": "ที่มา: ตุลาการศาลปกครองสูงสุด", "en": "From the Supreme Administrative Court", "value": "2 (≥ 5 ปี / ≥ 5 years)", "sections": [200]},
+        {"th": "ที่มา: ศาสตราจารย์นิติศาสตร์", "en": "Law professor", "value": "1 (≥ 5 ปี / ≥ 5 years)", "sections": [200]},
+        {"th": "ที่มา: ศาสตราจารย์รัฐศาสตร์หรือรัฐประศาสนศาสตร์", "en": "Political science or public administration professor", "value": "1 (≥ 5 ปี / ≥ 5 years)", "sections": [200]},
+        {"th": "ที่มา: ข้าราชการระดับอธิบดีหรือรองอัยการสูงสุดขึ้นไป", "en": "Senior officials (director-general or deputy attorney-general and above)", "value": "2 (≥ 5 ปี / ≥ 5 years)", "sections": [200]},
+        {"th": "อายุวันสมัครหรือวันคัดเลือก", "en": "Age when selected", "value": "45 ถึงไม่ถึง 68 ปี / 45 to under 68", "sections": [201]},
+        {"th": "ปลอดการเมือง (ส.ส. ส.ว. ข้าราชการการเมือง ท้องถิ่น สมาชิกพรรค)", "en": "Cooling-off from politics and party membership", "value": "10 ปี / 10 years", "sections": [202]},
+        {"th": "วาระ", "en": "Term", "value": "7 ปี วาระเดียว / 7 years, one term", "sections": [207]},
+        {"th": "พ้นตำแหน่งเมื่ออายุ", "en": "Leaves office at age", "value": "75", "sections": [208]},
+        {"th": "วุฒิสภาเห็นชอบ", "en": "Senate approval", "value": "≥ กึ่งหนึ่งของ ส.ว. ที่มีอยู่ / at least half of sitting senators", "sections": [204]},
+        {"th": "องค์คณะขั้นต่ำ", "en": "Quorum", "value": "7", "sections": [209, 211]},
+        {"th": "ให้ตุลาการพ้นตำแหน่งเพราะผิดจริยธรรม", "en": "Removing a judge for an ethics breach", "value": "≥ 3/4 ของตุลาการที่มีอยู่ / at least three-quarters of sitting judges", "sections": [208]},
+        {"th": "วินิจฉัยว่าพระราชกำหนดไม่เข้าเงื่อนไข", "en": "Striking down an emergency decree", "value": "≥ 2/3 ของตุลาการที่มีอยู่ / at least two-thirds", "sections": [173]}
+      ]
+    },
+    {
+      "kind": "mnemonic",
+      "title": {
+        "th": "“เสื้อครุยห้า คนนอกสี่” และ 9-7-7",
+        "en": "“Five robes, four outsiders” and 9-7-7"
+      },
+      "body": {
+        "th": "แยกเก้าคนเป็น 3-2-1-1-2 แล้วรวบเป็นสองกลุ่ม\n- เสื้อครุยห้า คือผู้พิพากษาอาชีพ ศาลฎีกา 3 กับศาลปกครองสูงสุด 2 ห้าคนนี้เป็นเสียงข้างมากพอดี เพราะงานหลักคือการตีความกฎหมาย\n- คนนอกสี่ คือนิติศาสตร์ 1 รัฐศาสตร์ 1 ข้าราชการระดับสูง 2 เพราะคดีรัฐธรรมนูญคือคดีการเมืองด้วย ต้องมีคนที่เข้าใจรัฐและการบริหาร\n\nแล้วจำ 9-7-7 คือ ตุลาการ 9 คน นั่งพิจารณาได้ต้องมีอย่างน้อย 7 คน อยู่ในตำแหน่ง 7 ปีวาระเดียว ตรรกะของเลข 7 คือยาวกว่าอายุสภา 4 ปี รัฐบาลชุดเดียวจึงไม่ได้เลือกตุลาการครบทั้งคณะ และวาระเดียวทำให้ไม่มีใครต้องตัดสินคดีเพื่อเอาใจคนที่จะต่อวาระให้",
+        "en": "Split the nine into 3-2-1-1-2, then fold them into two groups:\n- Five robes: career judges, 3 from the Supreme Court and 2 from the Supreme Administrative Court. Five is exactly a majority, because the core work is legal interpretation.\n- Four outsiders: 1 law professor, 1 political scientist, 2 senior officials, because constitutional cases are also political cases and need people who understand the state.\n\nThen remember 9-7-7: nine judges, at least seven to sit, seven years in a single term. The logic of seven years is that it outlasts a four-year House, so no single government picks the whole bench; one term means no judge rules to please whoever might renew them."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "ใครเลือกตุลาการ และทำไมต้องผสมหลายมือ",
+        "en": "Who picks the judges, and why so many hands"
+      },
+      "body": {
+        "th": "ถ้าฝ่ายเดียวเลือกตุลาการได้ทั้งหมด ศาลก็จะเป็นของฝ่ายนั้น รัฐธรรมนูญจึงกระจายการเลือกเป็นสามจังหวะ\n\nจังหวะที่หนึ่ง ต้นทาง ผู้พิพากษาศาลฎีกา 3 คนคัดเลือกโดยที่ประชุมใหญ่ศาลฎีกา ตุลาการศาลปกครองสูงสุด 2 คนคัดเลือกโดยที่ประชุมใหญ่ตุลาการในศาลปกครองสูงสุด ส่วนอีก 4 คนผ่านการสรรหา (มาตรา 200)\n\nจังหวะที่สอง คณะกรรมการสรรหาตามมาตรา 203 มีเก้าคน ได้แก่ ประธานศาลฎีกาเป็นประธาน ประธานสภาผู้แทนราษฎร ผู้นำฝ่ายค้านในสภาผู้แทนราษฎร ประธานศาลปกครองสูงสุด และบุคคลที่องค์กรอิสระแต่งตั้งองค์กรละหนึ่งคน (องค์กรอิสระมีห้าองค์กร จึงได้ห้าคน) ศาล รัฐบาลผ่านประธานสภา ฝ่ายค้าน และองค์กรอิสระ ได้นั่งโต๊ะเดียวกัน คณะกรรมการเสาะหาคนที่เหมาะสมเองได้ด้วย ไม่ต้องรอแค่ผู้สมัคร แต่ต้องได้รับความยินยอมจากผู้นั้น\n\nจังหวะที่สาม วุฒิสภาต้องเห็นชอบด้วยคะแนนไม่น้อยกว่ากึ่งหนึ่งของสมาชิกที่มีอยู่ ถ้าไม่เห็นชอบรายใด ต้องสรรหาใหม่ จากนั้นตุลาการเลือกกันเองเป็นประธานศาล และประธานวุฒิสภานำความกราบบังคมทูลเพื่อทรงแต่งตั้ง โดยเป็นผู้ลงนามรับสนองพระบรมราชโองการ (มาตรา 204)\n\nจุดอ่อนของห่วงโซ่นี้อยู่ที่จังหวะที่สาม วุฒิสภาถือกุญแจดอกสุดท้าย ถ้าวุฒิสภามาจากฝ่ายใดฝ่ายหนึ่ง ทั้งห่วงโซ่ก็เอียงตาม ประเด็นนี้กลับมาอีกครั้งในบทองค์กรอิสระ",
+        "en": "If one side could pick every judge, the court would belong to that side. So the constitution spreads the choice over three steps.\n\nStep one, the source. The 3 Supreme Court judges are chosen by the Supreme Court plenary, the 2 administrative judges by the plenary of the Supreme Administrative Court, and the other 4 go through a selection process (section 200).\n\nStep two, the selection committee under section 203, nine people: the President of the Supreme Court as chair, the Speaker of the House, the Leader of the Opposition, the President of the Supreme Administrative Court, and one person appointed by each independent organ (there are five organs, so five people). Courts, the governing majority through the Speaker, the opposition and the independent organs sit at one table. The committee may also seek out suitable people rather than wait for applicants, with their consent.\n\nStep three, the Senate must approve each nominee by at least half of its sitting members; a rejected nominee is replaced by a new selection. The judges then elect their own president, and the President of the Senate submits the names to the King for appointment and countersigns the royal command (section 204).\n\nThe weak link is step three. The Senate holds the last key. If the Senate leans to one side, the whole chain leans with it. This returns in the chapter on independent organs."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "อำนาจที่กระจายอยู่ทั่วรัฐธรรมนูญ",
+        "en": "Powers scattered across the constitution"
+      },
+      "body": {
+        "th": "มาตรา 210 (3) บอกว่าศาลมีอำนาจอื่นตามที่รัฐธรรมนูญบัญญัติ นี่คือแผนที่ของอำนาจเหล่านั้น\n- มาตรา 49 วินิจฉัยสั่งให้เลิกการกระทำเพื่อล้มล้างการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข\n- มาตรา 82 สมาชิกภาพของ ส.ส. หรือ ส.ว. สิ้นสุดลงหรือไม่ และมาตรา 170 ความเป็นรัฐมนตรีรวมถึงนายกรัฐมนตรีสิ้นสุดลงหรือไม่\n- มาตรา 132 ให้ความเห็นต่อร่างพระราชบัญญัติประกอบรัฐธรรมนูญที่เกี่ยวกับศาล\n- มาตรา 139 ร่างกฎหมายที่เสนอใหม่มีหลักการเดียวกับร่างที่ถูกยับยั้งไว้หรือไม่\n- มาตรา 144 สมาชิกรัฐสภาเข้าไปมีส่วนใช้งบประมาณหรือไม่ ต้องวินิจฉัยภายใน 15 วัน\n- มาตรา 148 ร่างพระราชบัญญัติขัดรัฐธรรมนูญหรือไม่ ก่อนนำขึ้นทูลเกล้าทูลกระหม่อมถวาย\n- มาตรา 173 พระราชกำหนดเข้าเงื่อนไขมาตรา 172 หรือไม่ ต้องวินิจฉัยภายใน 60 วัน และต้องใช้เสียงสองในสาม\n- มาตรา 178 หนังสือสัญญาใดต้องได้รับความเห็นชอบจากรัฐสภาหรือไม่ ภายใน 30 วัน\n- มาตรา 212 และ 213 คดีที่ศาลอื่นส่งมา และคำร้องของบุคคลที่ถูกละเมิดสิทธิ\n- มาตรา 231 เรื่องที่ผู้ตรวจการแผ่นดินเสนอ\n- มาตรา 256 ร่างแก้ไขรัฐธรรมนูญขัดมาตรา 255 หรือต้องทำประชามติหรือไม่ ภายใน 30 วัน\n\nส่วนการยุบพรรคการเมือง ไม่ได้อยู่ในตัวรัฐธรรมนูญ แต่อยู่ใน พ.ร.ป. ว่าด้วยพรรคการเมือง ซึ่ง กกต. เป็นผู้ยื่นคำร้อง\n\nสังเกตรูปแบบ เกือบทุกช่องทางมีผู้มีสิทธิยื่นที่ถูกกำหนดไว้ และหลายช่องทางมีกำหนดเวลา เพราะเรื่องเหล่านี้หยุดการทำงานของรัฐไว้ระหว่างรอ",
+        "en": "Section 210(3) says the court has other powers the constitution provides. Here is a map of them:\n- Section 49: ordering a stop to an act aimed at overthrowing the democratic regime of government with the King as Head of State.\n- Section 82: whether an MP's or senator's membership has ended; section 170: whether a minister's, including the prime minister's, tenure has ended.\n- Section 132: commenting on draft organic acts concerning the court.\n- Section 139: whether a new bill repeats the principle of a bill that has been held back.\n- Section 144: whether members of Parliament have taken a hand in spending the budget, decided within 15 days.\n- Section 148: whether a passed bill conflicts with the constitution, before it is presented to the King.\n- Section 173: whether an emergency decree meets the conditions of section 172, within 60 days, needing a two-thirds vote to strike it down.\n- Section 178: whether a treaty needs parliamentary approval, within 30 days.\n- Sections 212 and 213: questions referred by other courts, and petitions from people whose rights were violated.\n- Section 231: matters referred by the Ombudsmen.\n- Section 256: whether a constitutional amendment breaches section 255 or needs a referendum, within 30 days.\n\nDissolving a political party is not in the constitution's own text. It sits in the Organic Act on Political Parties, under which the Election Commission files the petition.\n\nNotice the pattern. Almost every door names who may knock, and many set a deadline, because these questions freeze some part of the state while they wait."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "สามประตูเข้าศาลรัฐธรรมนูญ",
+        "en": "Three doors into the Constitutional Court"
+      },
+      "body": {
+        "th": "ประตูที่หนึ่ง ศาลอื่นส่งมา (มาตรา 212) ระหว่างพิจารณาคดี ถ้าศาลเห็นเอง หรือคู่ความโต้แย้งพร้อมเหตุผลว่ากฎหมายที่จะใช้ขัดรัฐธรรมนูญ และศาลรัฐธรรมนูญยังไม่เคยวินิจฉัยบทบัญญัตินั้น ศาลต้องส่งเรื่องไป ระหว่างนั้นพิจารณาต่อได้ แต่ต้องรอพิพากษา ศาลรัฐธรรมนูญจะไม่รับก็ได้ถ้าเห็นว่าข้อโต้แย้งไม่เป็นสาระ ถ้าวินิจฉัยว่ากฎหมายขัด คำวินิจฉัยใช้ได้ในคดีทั้งปวง แต่ไม่กระทบคำพิพากษาที่ถึงที่สุดแล้ว ยกเว้นคดีอาญา ผู้ถูกพิพากษาตามกฎหมายนั้นให้ถือว่าไม่เคยกระทำผิด ถ้ายังรับโทษอยู่ให้ปล่อยตัว แต่เรียกค่าชดเชยไม่ได้\n\nประตูที่สอง ผู้มีตำแหน่งยื่น เช่น ส.ส. หรือ ส.ว. หนึ่งในสิบยื่นเรื่องสมาชิกภาพ (มาตรา 82) หรือร่างกฎหมายขัดรัฐธรรมนูญ (มาตรา 148) กกต. ยื่นเรื่องความเป็นรัฐมนตรี (มาตรา 170) ผู้ตรวจการแผ่นดินยื่นเรื่องกฎหมายมีปัญหา (มาตรา 231)\n\nประตูที่สาม ประชาชน มีสองบาน\n- มาตรา 213 ผู้ถูกละเมิดสิทธิหรือเสรีภาพยื่นคำร้องได้ ตามเงื่อนไขของ พ.ร.ป. ว่าด้วยวิธีพิจารณาของศาลรัฐธรรมนูญ พ.ศ. 2561 ซึ่งให้ยื่นต่อผู้ตรวจการแผ่นดินก่อนภายใน 90 วันนับแต่รู้หรือควรรู้ถึงการละเมิด ผู้ตรวจการแผ่นดินมีเวลาพิจารณา 60 วัน แล้วจึงมีสิทธิยื่นต่อศาลโดยตรง (รายละเอียดอยู่ในบทองค์กรอิสระ)\n- มาตรา 49 ผู้ทราบว่ามีการกระทำเพื่อล้มล้างการปกครอง ร้องต่ออัยการสูงสุดก่อน ถ้าอัยการสูงสุดไม่รับหรือไม่ดำเนินการภายใน 15 วัน ยื่นต่อศาลโดยตรงได้\n\nทำไมต้องมีด่านกรอง เพราะศาลมีตุลาการเก้าคน ถ้าใครก็ยื่นได้ทุกเรื่อง ศาลจะจมอยู่กับคำร้อง ด่านกรองคือการแลกระหว่างการเข้าถึงกับความสามารถในการทำงาน",
+        "en": "Door one: another court refers the question (section 212). If, during a case, a court thinks on its own, or a party argues with reasons, that the law to be applied conflicts with the constitution, and the Constitutional Court has not yet ruled on that provision, the court must refer it. The case may continue, but judgment waits. The Constitutional Court may decline an argument it finds insubstantial. If it rules the law unconstitutional, the ruling applies to all cases but does not reopen final judgments, except in criminal cases: anyone convicted under that law is treated as never having committed the offence and, if still serving a sentence, is released, though with no right to compensation.\n\nDoor two: office-holders file. A tenth of MPs or senators may challenge a member's status (section 82) or a bill's constitutionality (section 148); the Election Commission may challenge a minister's status (section 170); the Ombudsmen may refer a doubtful law (section 231).\n\nDoor three: the people, through two gates:\n- Section 213: a person whose constitutional rights or liberties were violated may petition, on the conditions set by the Organic Act on Constitutional Court Procedure of 2018. That act requires a petition to the Ombudsmen first, within 90 days of knowing (or when one should have known) of the violation; the Ombudsmen have 60 days, and only then may the person go to the court directly. (Details are in the chapter on independent organs.)\n- Section 49: anyone who knows of an act aimed at overthrowing the regime petitions the Attorney-General first; if the Attorney-General refuses or does nothing within 15 days, the petitioner may go to the court directly.\n\nWhy the filters? A court of nine judges that took every complaint from anyone would drown. The filters trade access for the ability to function."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "คดีสมรสเพศเดียวกัน: ประตูมาตรา 212",
+        "en": "Same-sex marriage: the section 212 door"
+      },
+      "year": 2021,
+      "ref": "คำวินิจฉัยศาลรัฐธรรมนูญที่ 20/2564",
+      "body": {
+        "th": "คู่รักเพศเดียวกันคู่หนึ่งไปจดทะเบียนสมรสที่เขตบางกอกใหญ่ นายทะเบียนปฏิเสธ เพราะประมวลกฎหมายแพ่งและพาณิชย์กำหนดว่าการสมรสทำได้เฉพาะชายกับหญิง ทั้งคู่ฟ้องคดี และศาลเยาวชนและครอบครัวกลางส่งคำถามไปศาลรัฐธรรมนูญว่าบทบัญญัตินั้นขัดรัฐธรรมนูญหรือไม่ นี่คือเส้นทางตามมาตรา 212 พอดี\n\n17 พฤศจิกายน 2564 ศาลวินิจฉัยว่าไม่ขัด เสียงข้างมากให้เหตุผลว่าการสมรสระหว่างชายกับหญิงตั้งอยู่บนธรรมชาติและประเพณี และไม่ใช่การเลือกปฏิบัติที่ไม่เป็นธรรม แต่ศาลก็เสนอแนะให้รัฐสภาและคณะรัฐมนตรีพิจารณาออกกฎหมายรับรองสิทธิของบุคคลที่มีความหลากหลายทางเพศ\n\nบทเรียนเชิงระบบ คำวินิจฉัยว่า “ไม่ขัด” ไม่ได้ปิดประเด็นนโยบาย มันส่งลูกกลับไปให้รัฐสภา ต่อมารัฐสภาแก้ประมวลกฎหมายแพ่งและพาณิชย์เพื่อรับรองการสมรสเท่าเทียม ซึ่งมีผลใช้บังคับต้นปี 2568 นักวิชาการบางส่วนวิจารณ์ว่าเหตุผลเรื่อง “ธรรมชาติ” ในคำวินิจฉัยอิงกฎหมายธรรมชาติมากกว่าหลักความเสมอภาคในมาตรา 27",
+        "en": "A same-sex couple tried to register their marriage at Bangkok Yai district office and were refused, because the Civil and Commercial Code allows marriage only between a man and a woman. They went to court, and the Central Juvenile and Family Court referred the question to the Constitutional Court: does that provision conflict with the constitution? That is the section 212 route exactly.\n\nOn 17 November 2021 the court ruled that it does not. The majority reasoned that marriage between a man and a woman rests on nature and tradition and is not unjust discrimination. But the court also urged Parliament and the Cabinet to consider laws recognising the rights of people of diverse genders.\n\nThe systems lesson: a “not unconstitutional” ruling does not close the policy question; it hands the ball back to Parliament. Parliament later amended the Civil and Commercial Code to recognise marriage equality, in force from early 2025. Some scholars criticised the ruling's reliance on “nature” as natural-law reasoning rather than the equality guarantee in section 27."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "คดีทำแท้ง: เมื่อศาลให้เวลารัฐสภาแก้กฎหมาย",
+        "en": "Abortion: when the court gave Parliament a deadline"
+      },
+      "year": 2020,
+      "body": {
+        "th": "19 กุมภาพันธ์ 2563 ศาลรัฐธรรมนูญวินิจฉัยว่าบทบัญญัติในประมวลกฎหมายอาญาที่ลงโทษหญิงซึ่งทำให้ตนเองแท้งลูกหรือยอมให้ผู้อื่นทำให้แท้ง ขัดต่อมาตรา 27 และมาตรา 28 ของรัฐธรรมนูญ คำร้องมาจากแพทย์ผู้หนึ่งที่ถูกดำเนินคดีจากการทำแท้งในคลินิก ศาลเห็นว่าการลงโทษหญิงทุกกรณีโดยไม่คำนึงถึงอายุครรภ์ จำกัดสิทธิในชีวิตและร่างกายของหญิงเกินสมควร ส่วนบทบัญญัติที่ยกเว้นความผิดให้แพทย์ในบางกรณี ศาลเห็นว่าไม่ขัด\n\nสิ่งที่น่าสนใจคือศาลไม่ได้ทำให้บทบัญญัติสิ้นผลทันที แต่กำหนดให้คำวินิจฉัยมีผลเมื่อพ้น 360 วัน เพื่อให้รัฐสภามีเวลาแก้กฎหมาย รัฐสภาแก้ไขประมวลกฎหมายอาญาก่อนครบกำหนด เปิดให้ยุติการตั้งครรภ์ได้ภายในอายุครรภ์ที่กฎหมายกำหนด\n\nคดีนี้แสดงอีกด้านของศาลรัฐธรรมนูญ ศาลไม่ได้เป็นเพียงผู้ตัดสินข้อพิพาททางการเมือง แต่ยังเป็นช่องทางให้สิทธิของคนธรรมดาไปถึงสภา",
+        "en": "On 19 February 2020 the Constitutional Court ruled that the Criminal Code provision punishing a woman who ends her own pregnancy, or allows another to do so, conflicts with sections 27 and 28 of the constitution. The case came from a doctor who had been prosecuted for performing abortions at a clinic. The court found that punishing women in every case, regardless of the stage of pregnancy, restricted women's rights over their lives and bodies more than necessary. The provision exempting doctors in certain cases it left standing.\n\nThe interesting part: the court did not strike the provision down at once. It set its ruling to take effect after 360 days, giving Parliament time to rewrite the law. Parliament amended the Criminal Code before the deadline, allowing termination within a set stage of pregnancy.\n\nThe case shows another face of the Constitutional Court. It is not only an umpire of political fights; it can also be the channel through which an ordinary person's rights reach Parliament."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "การยุบพรรค ก่อนรัฐธรรมนูญ 2560: ไทยรักไทยและพลังประชาชน",
+        "en": "Party dissolutions before 2017: Thai Rak Thai and People Power"
+      },
+      "year": 2007,
+      "ref": "คำวินิจฉัยคณะตุลาการรัฐธรรมนูญที่ 3-5/2550",
+      "body": {
+        "th": "30 พฤษภาคม 2550 คณะตุลาการรัฐธรรมนูญ ซึ่งตั้งขึ้นตามรัฐธรรมนูญฉบับชั่วคราว พ.ศ. 2549 หลังรัฐประหาร 19 กันยายน 2549 (ไม่ใช่ศาลรัฐธรรมนูญตามรัฐธรรมนูญ 2560) วินิจฉัยยุบพรรคไทยรักไทย ด้วยเหตุเกี่ยวกับการจ้างพรรคเล็กลงสมัครในการเลือกตั้งเดือนเมษายน 2549 และเพิกถอนสิทธิเลือกตั้งกรรมการบริหารพรรค 111 คน เป็นเวลา 5 ปี คำวินิจฉัยเรื่องเพิกถอนสิทธิมีเสียงแตก ข้อวิจารณ์สำคัญคือ การเพิกถอนสิทธิอาศัยประกาศของคณะรัฐประหารที่ออกหลังการกระทำ จึงเป็นการใช้โทษย้อนหลัง\n\n2 ธันวาคม 2551 ศาลรัฐธรรมนูญ (ตามรัฐธรรมนูญ 2550) ยุบพรรคพลังประชาชน พรรคชาติไทย และพรรคมัชฌิมาธิปไตย เพราะกรรมการบริหารพรรคกระทำการทุจริตเลือกตั้ง กรณีพรรคพลังประชาชนคือนายยงยุทธ ติยะไพรัช รองหัวหน้าพรรค ซึ่งศาลฎีกาวินิจฉัยว่าซื้อเสียง ภายใต้หลัก “ความรับผิดร่วม” กรรมการบริหารทั้งพรรคถูกเพิกถอนสิทธิ 5 ปี รวมถึงนายสมชาย วงศ์สวัสดิ์ นายกรัฐมนตรีในขณะนั้น รัฐบาลจึงสิ้นสุดลง ขณะที่ผู้ชุมนุมยังปิดสนามบินอยู่\n\nเหตุผลฝ่ายศาล พรรคต้องรับผิดชอบการกระทำของผู้บริหาร มิฉะนั้นพรรคใหญ่จะปล่อยให้คนหนึ่งคนซื้อเสียงแล้วรับประโยชน์ร่วมกันโดยไม่มีต้นทุน ข้อวิจารณ์ การลงโทษคนทั้งพรรคและผู้เลือกตั้งหลายล้านคนจากความผิดของคนคนเดียวไม่ได้สัดส่วน (Khemthong Tonsakulrungruang อ้างคำวินิจฉัยชุดนี้เป็นตัวอย่างว่าฝ่ายต่อต้านทักษิณเห็นว่าศาลเป็น “เครื่องมือที่ได้ผล” ในการตอบโต้ความนิยมของนักการเมือง)",
+        "en": "On 30 May 2007 the Constitutional Tribunal, created by the 2006 interim charter after the coup of 19 September 2006 (not the Constitutional Court of the 2017 constitution), dissolved the Thai Rak Thai Party over hiring small parties to stand in the April 2006 election, and stripped 111 party executives of their electoral rights for five years. The vote on the bans was split. The main criticism: the bans rested on a junta announcement issued after the conduct took place, which amounted to retroactive punishment.\n\nOn 2 December 2008 the Constitutional Court (under the 2007 constitution) dissolved the People Power Party, Chart Thai and Matchimathipataya, because party executives had committed electoral fraud. For People Power, it was deputy leader Yongyuth Tiyapairat, whom the Supreme Court had found guilty of vote-buying. Under the principle of collective responsibility, the whole executive board was banned for five years, including Prime Minister Somchai Wongsawat. His government fell while protesters still occupied Bangkok's airports.\n\nThe court's reasoning: a party must answer for its executives, or big parties could let one person buy votes and share the gains at no cost. The criticism: punishing a whole party, and millions of its voters, for one person's offence is disproportionate. (Khemthong Tonsakulrungruang cites this run of rulings as showing Thaksin's opponents that the judiciary could be an effective tool against a popular politician.)"
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "การยุบพรรคภายใต้รัฐธรรมนูญ 2560: ไทยรักษาชาติ อนาคตใหม่ ก้าวไกล",
+        "en": "Dissolutions under the 2017 constitution: Thai Raksa Chart, Future Forward, Move Forward"
+      },
+      "year": 2024,
+      "ref": "คำวินิจฉัยศาลรัฐธรรมนูญที่ 3/2567 (คดีตามมาตรา 49 ที่เป็นฐานของการยุบพรรคก้าวไกล)",
+      "body": {
+        "th": "ไทยรักษาชาติ (7 มีนาคม 2562) พรรคเสนอพระนามทูลกระหม่อมหญิงอุบลรัตนราชกัญญาฯ เป็นผู้ที่พรรคจะเสนอชื่อเป็นนายกรัฐมนตรี กกต. ยื่นคำร้อง ศาลมีมติเอกฉันท์ยุบพรรค โดยเห็นว่าพระบรมวงศานุวงศ์ต้องอยู่เหนือการเมือง การดึงเข้ามาในการแข่งขันทางการเมืองจึงเป็นปฏิปักษ์ต่อการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข และมีมติ 6 ต่อ 3 ห้ามกรรมการบริหารพรรคลงสมัครรับเลือกตั้ง 10 ปี ข้อวิจารณ์ที่ Bangkok Post รายงาน คือศาลไม่ได้เปิดให้พรรคนำพยานเข้าสืบ\n\nอนาคตใหม่ (21 กุมภาพันธ์ 2563) หัวหน้าพรรคให้พรรคกู้เงินราว 191 ล้านบาท ศาลมีมติ 7 ต่อ 2 ว่าเงินกู้นี้เป็นประโยชน์อื่นใดที่เทียบได้กับการบริจาค ซึ่งกฎหมายพรรคการเมืองจำกัดไว้ปีละไม่เกิน 10 ล้านบาทต่อผู้บริจาคหนึ่งราย เหตุผลคือเจ้าหนี้รายใหญ่ย่อมครอบงำพรรคได้ ยุบพรรคและตัดสิทธิทางการเมืองของกรรมการบริหาร 16 คนเป็นเวลา 10 ปี รวมถึงห้ามตั้งพรรคใหม่หรือเป็นกรรมการบริหารพรรค ฝ่ายพรรคแย้งว่ากฎหมายไม่ได้ห้ามการกู้ยืม\n\nก้าวไกล (7 สิงหาคม 2567) ก่อนหน้านั้น 31 มกราคม 2567 ศาลวินิจฉัยในคดีตามมาตรา 49 ว่าการรณรงค์แก้ไขกฎหมายหมิ่นพระบรมเดชานุภาพเป็นการกระทำเพื่อล้มล้างการปกครองฯ และสั่งให้เลิกการกระทำ กกต. จึงยื่นยุบพรรคตาม พ.ร.ป. ว่าด้วยพรรคการเมือง ศาลมีมติเอกฉันท์ยุบพรรค และห้ามกรรมการบริหาร 11 คนลงสมัคร 10 ปี ทั้งที่พรรคได้ที่นั่งมากที่สุดในการเลือกตั้งปี 2566\n\nฝ่ายศาลให้เหตุผลว่ารัฐธรรมนูญกำหนดหน้าที่ปกป้องระบอบการปกครองไว้ และศาลผูกพันต้องวินิจฉัยตามตัวบท ฝ่ายวิจารณ์ เช่น International IDEA และ Human Rights Watch เห็นว่าการยุบพรรคเป็นโทษที่ไม่ได้สัดส่วน",
+        "en": "Thai Raksa Chart (7 March 2019). The party named Princess Ubolratana as its prime-ministerial candidate. The Election Commission petitioned; the court unanimously dissolved the party, reasoning that members of the royal family must stand above politics, so drawing one into electoral competition was hostile to the democratic regime with the King as Head of State. By 6 to 3 it banned the party's executives from standing for election for ten years. A criticism reported by the Bangkok Post: the party was not allowed to call witnesses.\n\nFuture Forward (21 February 2020). The party's leader had lent it about 191 million baht. By 7 to 2 the court held that the loan was a benefit equivalent to a donation, which the party law caps at 10 million baht a year per donor, reasoning that a large creditor could control a party. It dissolved the party and banned 16 executives from politics for ten years, including from founding a party or sitting on a party's executive board. The party argued that the law said nothing about loans.\n\nMove Forward (7 August 2024). Earlier, on 31 January 2024, in a case under section 49, the court ruled that the party's campaign to amend the lèse-majesté law was an act aimed at overthrowing the regime and ordered it to stop. The Election Commission then sought dissolution under the Organic Act on Political Parties. The court unanimously dissolved the party and banned 11 executives from standing for ten years, though the party had won the most seats in the 2023 election.\n\nThe court's position is that the constitution gives it a duty to protect the regime and binds it to apply the text. Critics, including International IDEA and Human Rights Watch, called dissolution a disproportionate penalty."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "นายกรัฐมนตรีห้าคนที่พ้นตำแหน่งเพราะคำวินิจฉัย",
+        "en": "Five prime ministers removed by court rulings"
+      },
+      "year": 2025,
+      "ref": "คำวินิจฉัยศาลรัฐธรรมนูญที่ 12-13/2551 (คดีนายสมัคร)",
+      "body": {
+        "th": "ตั้งแต่ปี 2551 มีนายกรัฐมนตรีห้าคนต้องพ้นตำแหน่งด้วยผลของคำวินิจฉัยศาลรัฐธรรมนูญ\n- สมัคร สุนทรเวช (9 กันยายน 2551) ไปเป็นพิธีกรรายการสอนทำอาหารและรับค่าตอบแทน ศาลตีความคำว่า “ลูกจ้าง” ตามความหมายทั่วไป ไม่ใช่ความหมายแคบตามกฎหมายแรงงาน จึงเป็นการต้องห้ามสำหรับรัฐมนตรี\n- สมชาย วงศ์สวัสดิ์ (2 ธันวาคม 2551) ถูกเพิกถอนสิทธิจากการยุบพรรคพลังประชาชน\n- ยิ่งลักษณ์ ชินวัตร (7 พฤษภาคม 2557) กรณีโยกย้ายเลขาธิการสภาความมั่นคงแห่งชาติ ศาลเห็นว่าใช้อำนาจเพื่อประโยชน์ทางการเมือง สองสัปดาห์ต่อมาเกิดรัฐประหาร\n- เศรษฐา ทวีสิน (14 สิงหาคม 2567) ส.ว. 40 คนยื่นเรื่องผ่านมาตรา 82 ประกอบมาตรา 170 กรณีแต่งตั้งนายพิชิต ชื่นบาน ซึ่งเคยถูกลงโทษฐานละเมิดอำนาจศาล ศาลมีมติ 5 ต่อ 4 ว่าขาดความซื่อสัตย์สุจริตเป็นที่ประจักษ์และฝ่าฝืนมาตรฐานจริยธรรมร้ายแรง ตามมาตรา 160 (4) (5)\n- แพทองธาร ชินวัตร (29 สิงหาคม 2568) จากคลิปเสียงสนทนากับสมเด็จฮุน เซน ที่ถูกเผยแพร่ ศาลมีมติ 6 ต่อ 3 ว่าฝ่าฝืนมาตรฐานจริยธรรมร้ายแรง\n\nส่วนอีกคดีที่ผลออกมาตรงข้าม 30 กันยายน 2565 ศาลมีมติ 6 ต่อ 3 ว่าการดำรงตำแหน่ง 8 ปีของพลเอกประยุทธ์ จันทร์โอชา ตามมาตรา 158 นับจากปี 2560 ที่รัฐธรรมนูญนี้ใช้บังคับ ไม่นับช่วงที่เป็นนายกรัฐมนตรีหลังรัฐประหาร 2557 เขาจึงอยู่ต่อได้\n\nรูปแบบที่ควรสังเกต สามคดีหลังสุดผ่านถ้อยคำกว้าง ๆ อย่าง “ซื่อสัตย์สุจริตเป็นที่ประจักษ์” และ “มาตรฐานจริยธรรม” ผู้สนับสนุนมองว่านี่ทำให้ผู้นำต้องรักษามาตรฐานสูง ผู้วิจารณ์มองว่าถ้อยคำที่กว้างขนาดนี้ทำให้ศาลมีดุลพินิจมากจนผลคดีคาดเดาไม่ได้",
+        "en": "Since 2008 five prime ministers have left office as a result of Constitutional Court rulings:\n- Samak Sundaravej (9 September 2008) hosted a television cooking show and was paid for it. The court read “employee” in its ordinary sense, not the narrow labour-law sense, so the work was forbidden to a minister.\n- Somchai Wongsawat (2 December 2008) lost his rights when the People Power Party was dissolved.\n- Yingluck Shinawatra (7 May 2014), over the transfer of the National Security Council's secretary-general, which the court saw as an abuse of power for political gain. A coup followed two weeks later.\n- Srettha Thavisin (14 August 2024). Forty senators petitioned under section 82 read with section 170 over his appointment of Pichit Chuenban, once jailed for contempt of court. By 5 to 4 the court found he lacked evident integrity and had seriously breached ethical standards under section 160(4) and (5).\n- Paetongtarn Shinawatra (29 August 2025), over a leaked recording of her call with Hun Sen. By 6 to 3 the court found a serious ethical breach.\n\nOne case went the other way. On 30 September 2022 the court ruled 6 to 3 that Prayut Chan-o-cha's eight-year limit under section 158 counted from 2017, when this constitution took effect, not from his time as prime minister after the 2014 coup. He stayed.\n\nThe pattern to notice: the three most recent removals ran through broad words such as “evident integrity” and “ethical standards”. Supporters say this holds leaders to a high bar. Critics say words this broad give the court so much discretion that outcomes become hard to predict."
+      }
+    },
+    {
+      "kind": "case",
+      "title": {
+        "th": "รัฐสภาร่างรัฐธรรมนูญใหม่ได้ไหม: ต้องถามประชาชนก่อน",
+        "en": "May Parliament write a new constitution? Ask the people first"
+      },
+      "year": 2021,
+      "ref": "คำวินิจฉัยศาลรัฐธรรมนูญที่ 4/2564",
+      "body": {
+        "th": "ปี 2563 รัฐสภาเสนอแก้ไขรัฐธรรมนูญเพื่อเพิ่มหมวดใหม่ ตั้งสภาร่างรัฐธรรมนูญขึ้นร่างฉบับใหม่ทั้งฉบับ ประธานรัฐสภาส่งคำถามไปศาลตามมาตรา 210 (2) ว่ารัฐสภามีอำนาจทำเช่นนั้นหรือไม่\n\n11 มีนาคม 2564 ศาลวินิจฉัยว่ารัฐสภามีอำนาจจัดทำรัฐธรรมนูญฉบับใหม่ได้ แต่ต้องให้ประชาชนลงประชามติก่อนว่าต้องการรัฐธรรมนูญฉบับใหม่หรือไม่ และเมื่อร่างเสร็จต้องลงประชามติอีกครั้ง เหตุผลคือรัฐธรรมนูญ 2560 ผ่านการออกเสียงประชามติปี 2559 อำนาจสถาปนารัฐธรรมนูญจึงเป็นของประชาชน 17 มีนาคม 2564 ร่างแก้ไขดังกล่าวตกไปในวาระที่สาม\n\nข้อถกเถียง มาตรา 256 เขียนขั้นตอนการแก้ไขไว้ละเอียด และกำหนดให้ทำประชามติเฉพาะบางเรื่องตามมาตรา 256 (8) ไม่ได้พูดถึงประชามติก่อนเริ่มร่าง ข้อกำหนดเรื่องประชามติก่อนจึงมาจากการให้เหตุผลของศาล ไม่ได้มาจากตัวอักษร ทำนองเดียวกับคำวินิจฉัยปี 2555 ภายใต้รัฐธรรมนูญ 2550 ที่ Khemthong Tonsakulrungruang ชี้ว่าถูกวิจารณ์ว่าขาดฐานตัวบท ฝ่ายที่เห็นด้วยกับศาลแย้งว่าการเปลี่ยนทั้งฉบับต่างจากการแก้ไขรายมาตรา และควรกลับไปหาเจ้าของอำนาจ\n\nเรื่องยังไม่จบ ปี 2568 ศาลมีคำวินิจฉัยตามมาอีกฉบับเรื่องลำดับของประชามติ และวันที่ 8 กุมภาพันธ์ 2569 การออกเสียงประชามติว่าควรจัดทำรัฐธรรมนูญใหม่หรือไม่ได้เสียงเห็นชอบเป็นเสียงข้างมาก ขั้นตอนถัดไปยังต้องผ่านรัฐสภาและประชามติอีก",
+        "en": "In 2020 Parliament proposed an amendment adding a new chapter to set up a drafting assembly to write a whole new constitution. The President of the National Assembly asked the court, under section 210(2), whether Parliament had the power to do so.\n\nOn 11 March 2021 the court ruled that Parliament may make a new constitution, but the people must first vote in a referendum on whether they want one, and must vote again on the finished draft. Its reasoning: the 2017 constitution was approved in the 2016 referendum, so the power to make a constitution belongs to the people. On 17 March 2021 the amendment failed at its third reading.\n\nThe argument: section 256 sets out the amendment steps in detail and requires a referendum only for the subjects listed in section 256(8). It says nothing about a referendum before drafting begins. The prior-referendum requirement came from the court's reasoning, not from the text, much like the 2012 ruling under the 2007 constitution that Khemthong Tonsakulrungruang notes was criticised for lacking textual basis. Those who agree with the court reply that replacing the whole charter differs from amending a section and should go back to the people who hold that power.\n\nThe story continued. In 2025 the court issued a further ruling on the sequence of referendums, and on 8 February 2026 a majority voted yes in a referendum on whether a new constitution should be drafted. The next steps still run through Parliament and further referendums."
+      }
+    },
+    {
+      "kind": "critique",
+      "title": {
+        "th": "“ตรวจสอบโดยไม่มีถ่วงดุล”",
+        "en": "“Checks without balances”"
+      },
+      "by": "Khemthong Tonsakulrungruang, Entrenching the Minority (2017)",
+      "body": {
+        "th": "Khemthong Tonsakulrungruang วิเคราะห์คดีสำคัญช่วงปี 2551 ถึง 2557 และเสนอว่าศาลรัฐธรรมนูญเน้น “หลักนิติธรรม” จนมองข้ามเสียงของผู้เลือกตั้ง ศาลอธิบายว่าประชาธิปไตยไม่ได้หมายถึงเสียงข้างมากเสมอไป เพราะเสียงข้างมากอาจกลายเป็นทรราช แต่เมื่อหลักนิติธรรมเป็นคำกว้างที่ศาลตีความได้เองโดยแทบไม่มีกลไกตรวจสอบ คำนี้ก็กลายเป็นเครื่องมือขวางเสียงข้างมาก เขาสรุปว่าศาล “emphasized checks without balances” และกลายเป็นสถาบันที่ต่อต้านเสียงข้างมาก\n\nความน่าสนใจของงานชิ้นนี้คือไม่ได้โทษศาลฝ่ายเดียว เขายอมรับว่ารัฐบาลที่ถูกวินิจฉัยบางครั้งก็เร่งรัดกระบวนการและข้ามขั้นตอน และศาลพูดถูกที่ว่าประชาธิปไตยที่ไม่มีหลักนิติธรรมอาจไถลไปเป็นอำนาจนิยมที่อาศัยความนิยม ปัญหาอยู่ที่ระดับการแทรกแซงและการไม่มีใครตรวจสอบศาล\n\nฝั่งตรงข้ามของข้อวิจารณ์ ผู้ร่างรัฐธรรมนูญ 2540 และ 2550 ตั้งใจให้ศาลเป็นผู้คุมนักการเมืองที่พวกเขาไม่ไว้ใจ ถ้ามองจากเจตนานั้น ศาลกำลังทำงานตามที่ถูกออกแบบมา คำถามที่เปิดอยู่คือการออกแบบนั้นถูกต้องหรือไม่",
+        "en": "Khemthong Tonsakulrungruang studies the major cases of 2008 to 2014 and argues that the Constitutional Court stressed the “rule of law” to the point of setting aside the voice of voters. The court explained that democracy is not always majority rule, since a majority can become a tyranny. But when the rule of law is a broad term the court interprets for itself, with almost no mechanism to check it, the term becomes a tool for blocking majorities. He concludes that the court “emphasized checks without balances” and became an anti-majoritarian institution.\n\nWhat makes the piece useful is that it does not blame the court alone. He accepts that the governments involved sometimes rushed and skipped procedure, and that the court was right that democracy without the rule of law can slide into popular authoritarianism. His problem is the depth of intervention and the absence of anyone to check the court.\n\nThe other side: the drafters of the 1997 and 2007 constitutions meant the court to police politicians they did not trust. Measured by that intent, the court is doing what it was built to do. The open question is whether the design was right."
+      }
+    },
+    {
+      "kind": "critique",
+      "title": {
+        "th": "กฎหมายในฐานะเครื่องมือรักษาอำนาจ",
+        "en": "Law as a tool for staying in power"
+      },
+      "by": "Apipol Sae-Tung, Juridification, Legitimacy, and Authoritarian Survival (2025)",
+      "body": {
+        "th": "Apipol Sae-Tung ตั้งคำถามว่าทำไมระบอบที่มีกำลังบังคับอยู่ในมือจึงยังต้องพึ่งกฎหมาย คำตอบของเขาคือ “juridification” หรือการขยายกฎหมายเข้าไปควบคุมพื้นที่การเมือง เกิดขึ้นเมื่อระบอบขาดความชอบธรรมทางการเมือง กฎหมายจึงถูกใช้เป็นสะพานข้ามช่องว่างนั้น เขาเสนอว่ารัฐธรรมนูญ 2560 และยุทธศาสตร์ชาติถูกออกแบบเพื่อรักษาสถานะเดิมของระบอบหลังรัฐประหาร 2557 ภายใต้กรอบกฎหมาย\n\nเขาวางศาลรัฐธรรมนูญไว้กลางกลไกนี้ และยกคดียุบพรรคไทยรักษาชาติ (2562) อนาคตใหม่ (2563) และก้าวไกล (2567) เป็นตัวอย่าง โดยอ้างแนวคิด “abusive judicial review” ของ Landau และ Dixon ที่อธิบายว่าศาลในบางประเทศถูกใช้กัดกร่อนแกนขั้นต่ำของประชาธิปไตย\n\nนี่คือข้อโต้แย้งเชิงวิชาการ ไม่ใช่ข้อเท็จจริงที่ทุกฝ่ายยอมรับ ฝ่ายที่เห็นต่างจะชี้ว่าแต่ละคดีมีฐานกฎหมายเฉพาะ เช่น เพดานเงินบริจาค หรือหน้าที่ปกป้องระบอบตามมาตรา 49 และศาลไม่ได้เลือกคดีเอง เพราะต้องมีผู้ยื่นคำร้องมาก่อน ผู้อ่านควรถือทั้งสองมุมไว้แล้วตัดสินจากคำวินิจฉัยจริง",
+        "en": "Apipol Sae-Tung asks why a regime that holds the guns still bothers with law. His answer is juridification, the spread of legal control into political space, which happens when a regime lacks political legitimacy; law becomes the bridge across that gap. He argues that the 2017 constitution and the National Strategy were designed to lock in the post-2014 regime's position within a legal frame.\n\nHe places the Constitutional Court at the centre of this mechanism and cites the dissolutions of Thai Raksa Chart (2019), Future Forward (2020) and Move Forward (2024), drawing on Landau and Dixon's idea of “abusive judicial review”, in which courts are used to wear away the minimum core of democracy.\n\nThis is a scholarly argument, not a fact everyone accepts. Those who disagree point out that each case had its own legal basis, such as the donation cap or the duty to protect the regime under section 49, and that the court does not choose its cases: someone has to petition first. Hold both views and judge from the actual rulings."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": {
+        "th": "ใครตรวจสอบศาลรัฐธรรมนูญ",
+        "en": "Who checks the Constitutional Court?"
+      },
+      "body": {
+        "th": "ศาลที่คำวินิจฉัยเด็ดขาดและไม่มีใครอุทธรณ์ได้ (มาตรา 211) ต้องมีกลไกรับผิดชอบบางอย่าง รัฐธรรมนูญวางไว้ห้าชั้น\n- ระหว่างทาง ตุลาการจะปฏิเสธไม่วินิจฉัยโดยอ้างว่าไม่อยู่ในอำนาจไม่ได้ เมื่อรับเรื่องไว้แล้ว (มาตรา 211 วรรคสาม) กันไม่ให้ศาลเลือกหลบคดียาก\n- จริยธรรม ศาลรัฐธรรมนูญกับองค์กรอิสระร่วมกันกำหนดมาตรฐานทางจริยธรรม (มาตรา 219) ถ้าตุลาการฝ่าฝืน ศาลลงมติให้พ้นตำแหน่งได้ด้วยเสียงไม่น้อยกว่าสามในสี่ (มาตรา 208 (5))\n- ทุจริต ป.ป.ช. ไต่สวนตุลาการศาลรัฐธรรมนูญได้ (มาตรา 234 (1) และ 235) และเมื่อศาลฎีการับฟ้อง ตุลาการต้องหยุดปฏิบัติหน้าที่ ถ้าเหลือไม่ถึง 7 คน ประธานศาลฎีกากับประธานศาลปกครองสูงสุดร่วมกันแต่งตั้งผู้ทำหน้าที่ชั่วคราว (มาตรา 214)\n- คุณสมบัติ ถ้ามีปัญหาว่าตุลาการคนใดขาดคุณสมบัติหรือลาออกหรือไม่ คณะกรรมการสรรหาตามมาตรา 203 เป็นผู้ชี้ขาด (มาตรา 208)\n- เวลา วาระเดียว 7 ปี (มาตรา 207) ทุกคนต้องออกในที่สุด\n\nสังเกตว่าทุกชั้นเป็นการตรวจสอบโดยองค์กรที่ไม่ได้มาจากการเลือกตั้ง ไม่มีชั้นไหนที่ประชาชนหรือรัฐสภาถอดถอนตุลาการได้โดยตรง นี่คือที่มาของคำถามในข้อวิจารณ์ข้างต้น",
+        "en": "A court whose rulings are final with no appeal (section 211) needs some form of accountability. The constitution provides five layers:\n- On the bench: once a case is accepted, no judge may refuse to decide it by claiming it lies outside the court's jurisdiction (section 211, third paragraph). This stops the court from dodging hard cases.\n- Ethics: the Constitutional Court and the independent organs jointly set ethical standards (section 219). A judge who breaches them can be removed by a vote of at least three-quarters of the court (section 208(5)).\n- Corruption: the NACC may investigate Constitutional Court judges (sections 234(1) and 235), and once the Supreme Court accepts the case the judge must stop work. If fewer than 7 remain, the Presidents of the Supreme Court and the Supreme Administrative Court jointly appoint temporary substitutes (section 214).\n- Qualifications: whether a judge has lost a qualification or resigned is decided by the section 203 selection committee (section 208).\n- Time: one seven-year term (section 207). Everyone leaves eventually.\n\nNotice that every layer is a check by unelected bodies. No layer lets the people or Parliament remove a judge directly. That is where the critiques above find their opening."
+      }
+    },
+    {
+      "kind": "text",
+      "title": {
+        "th": "ยี่สิบฉบับ และศาลที่ถูกสร้างใหม่ทุกครั้ง",
+        "en": "Twenty charters, and a court rebuilt each time"
+      },
+      "body": {
+        "th": "ตั้งแต่ปี 2475 ประเทศไทยมีรัฐธรรมนูญแล้ว 20 ฉบับ ศาลรัฐธรรมนูญเองก็ไม่รอดจากวงจรนี้ เกิดปี 2540 ถูกยุบหลังรัฐประหาร 2549 แทนที่ด้วยคณะตุลาการรัฐธรรมนูญ กลับมาในรัฐธรรมนูญ 2550 และถูกออกแบบใหม่ในรัฐธรรมนูญ 2560 ส่วนบทเฉพาะกาลมาตรา 273 ให้ตุลาการที่อยู่ในตำแหน่งก่อนรัฐธรรมนูญ 2560 ประกาศใช้ อยู่ต่อจนกว่า พ.ร.ป. ที่เกี่ยวข้องจะกำหนดเป็นอย่างอื่น\n\nบทเรียนเชิงระบบ ศาลที่มีอำนาจสูงสุดจะมั่นคงได้ก็ต่อเมื่อคนส่วนใหญ่ยอมรับว่าศาลเป็นกลาง อำนาจทางกฎหมาย (คำวินิจฉัยผูกพันทุกองค์กร) กับความชอบธรรม (คนยอมรับคำวินิจฉัย) เป็นคนละเรื่องกัน กฎหมายสร้างข้อแรกได้ด้วยตัวอักษร แต่ข้อหลังต้องสะสมจากคำวินิจฉัยทีละคดี ทุกครั้งที่ศาลตัดสินเรื่องที่สังคมแตกเป็นสองฝ่าย ศาลใช้ทุนก้อนนี้ไปส่วนหนึ่ง\n\nนี่ไม่ใช่ปัญหาเฉพาะของไทย ศาลสูงสุดในหลายประเทศเผชิญคำถามเดียวกัน ความต่างอยู่ที่ประเทศไทยเปลี่ยนรัฐธรรมนูญบ่อย กติกาจึงไม่มีเวลาสะสมความเชื่อถือ",
+        "en": "Since 1932 Thailand has had 20 constitutions. The Constitutional Court has not escaped the cycle. It was born in 1997, abolished after the 2006 coup and replaced by a Constitutional Tribunal, restored in the 2007 constitution, and redesigned in the 2017 constitution. The transitory section 273 let the judges who were sitting when the 2017 constitution was promulgated stay on until the relevant organic act provided otherwise.\n\nThe systems lesson: a court with the last word is stable only when most people accept that it is neutral. Legal authority (rulings bind every organ) and legitimacy (people accept the rulings) are different things. Text can create the first. The second has to be earned case by case, and every ruling on a question that splits society spends some of it.\n\nThis is not a uniquely Thai problem; top courts everywhere face it. The difference is that Thailand changes its constitution so often that the rules never get time to build trust."
+      }
+    },
+    {
+      "kind": "check",
+      "title": {
+        "th": "ทดสอบตัวเอง",
+        "en": "Check yourself"
+      },
+      "items": [
+        {
+          "q": {"th": "เทศบาลออกคำสั่งรื้อถอนอาคารของนาย ก. โดยอ้างข้อบัญญัติท้องถิ่น นาย ก. เห็นว่าคำสั่งไม่ชอบด้วยกฎหมาย ต้องฟ้องศาลใด", "en": "A municipality orders Mr A's building demolished under a local ordinance. He thinks the order is unlawful. Which court?"},
+          "a": {"th": "ศาลปกครอง เพราะเป็นคำสั่งที่รัฐใช้อำนาจทางปกครองต่อเอกชน", "en": "The Administrative Court: the state is using administrative power against a private person."},
+          "sections": [197]
+        },
+        {
+          "q": {"th": "รัฐบาลจะตั้งศาลพิเศษขึ้นมาพิจารณาคดีของผู้ชุมนุมกลุ่มหนึ่งโดยเฉพาะ ได้หรือไม่", "en": "May the government set up a special court just to try one group of protesters?"},
+          "a": {"th": "ไม่ได้ ศาลตั้งได้โดยพระราชบัญญัติ และห้ามตั้งศาลหรือวิธีพิจารณาเฉพาะคดีใดคดีหนึ่งแทนศาลที่มีอยู่", "en": "No. Courts are created only by an Act, and no court or procedure may be created for one particular case in place of the existing court."},
+          "sections": [189]
+        },
+        {
+          "q": {"th": "ศาลรัฐธรรมนูญมีตุลาการกี่คน มาจากไหนบ้าง และอยู่ในตำแหน่งนานเท่าใด", "en": "How many Constitutional Court judges are there, where do they come from, and for how long?"},
+          "a": {"th": "9 คน ศาลฎีกา 3 ศาลปกครองสูงสุด 2 นิติศาสตร์ 1 รัฐศาสตร์หรือรัฐประศาสนศาสตร์ 1 ข้าราชการระดับสูง 2 วาระ 7 ปี วาระเดียว", "en": "Nine: 3 Supreme Court, 2 Supreme Administrative Court, 1 law professor, 1 political science or public administration professor, 2 senior officials. One seven-year term."},
+          "sections": [200, 207]
+        },
+        {
+          "q": {"th": "ระหว่างพิจารณาคดีอาญา จำเลยโต้แย้งพร้อมเหตุผลว่ากฎหมายที่ใช้ฟ้องขัดรัฐธรรมนูญ ศาลยุติธรรมต้องทำอย่างไร", "en": "During a criminal trial the defendant argues, with reasons, that the law charged is unconstitutional. What must the trial court do?"},
+          "a": {"th": "ส่งความเห็นไปศาลรัฐธรรมนูญ ถ้ายังไม่เคยมีคำวินิจฉัยเรื่องนั้น พิจารณาต่อได้แต่ต้องรอพิพากษา", "en": "Refer the question to the Constitutional Court if it has not ruled on that provision before; continue hearing the case but hold back judgment."},
+          "sections": [212]
+        },
+        {
+          "q": {"th": "ถ้าศาลรัฐธรรมนูญวินิจฉัยว่ากฎหมายอาญาข้อหนึ่งขัดรัฐธรรมนูญ ผู้ที่เคยถูกพิพากษาตามกฎหมายนั้นจะเป็นอย่างไร", "en": "If the court strikes down a criminal provision, what happens to people already convicted under it?"},
+          "a": {"th": "ถือว่าไม่เคยกระทำความผิด ถ้ายังรับโทษอยู่ให้ปล่อยตัว แต่เรียกค่าชดเชยไม่ได้", "en": "They are treated as never having committed the offence and released if still serving, but they cannot claim compensation."},
+          "sections": [212]
+        },
+        {
+          "q": {"th": "ศาลรัฐธรรมนูญต้องมีตุลาการอย่างน้อยกี่คนจึงนั่งพิจารณาได้ และคำวินิจฉัยผูกพันใคร", "en": "What is the court's quorum, and whom do its rulings bind?"},
+          "a": {"th": "อย่างน้อย 7 คน คำวินิจฉัยเด็ดขาด ผูกพันรัฐสภา คณะรัฐมนตรี ศาล องค์กรอิสระ และหน่วยงานของรัฐ", "en": "At least seven. Rulings are final and bind the National Assembly, the Council of Ministers, the courts, the independent organs and state agencies."},
+          "sections": [211]
+        },
+        {
+          "q": {"th": "รัฐมนตรีถูกกล่าวหาว่ารับสินบน คดีอาญาจะไปจบที่ศาลใด", "en": "A minister is accused of taking bribes. Where does the criminal case end up?"},
+          "a": {"th": "ศาลฎีกาแผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมือง โดย ป.ป.ช. ไต่สวนแล้วส่งอัยการสูงสุดฟ้อง ไม่ใช่ศาลรัฐธรรมนูญ", "en": "The Supreme Court's Criminal Division for Persons Holding Political Positions, after the NACC investigates and the Attorney-General prosecutes. Not the Constitutional Court."},
+          "sections": [195, 235]
+        },
+        {
+          "q": {"th": "ประชาชนที่เห็นว่ามีการกระทำเพื่อล้มล้างการปกครองฯ ต้องยื่นเรื่องที่ใดก่อน", "en": "Where does a citizen who sees an attempt to overthrow the regime file first?"},
+          "a": {"th": "อัยการสูงสุด ถ้าไม่รับหรือไม่ดำเนินการภายใน 15 วัน ยื่นต่อศาลรัฐธรรมนูญโดยตรงได้", "en": "With the Attorney-General; if refused or ignored for 15 days, directly with the Constitutional Court."},
+          "sections": [49]
+        }
+      ]
+    }
+  ],
+  "sections": [188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214],
+  "sources": [
+    "Constitution of the Kingdom of Thailand B.E. 2560 (2017), Thai text consolidated through the 2021 amendment",
+    "Khemthong Tonsakulrungruang, Entrenching the Minority: The Constitutional Court in Thailand's Political Conflict, 26 Washington International Law Journal 247 (2017)",
+    "Apipol Sae-Tung, Juridification, Legitimacy, and Authoritarian Survival in Thai Politics from the 2014 Military Coup, Asian Review 38(1) (2025)",
+    "Siwach Sripokangkul & Paul Chambers, Returning Soldiers to the Barracks: Military Reform as the Crucial First Step in Democratising Thailand, Pertanika J. Soc. Sci. & Hum. 25(1) (2017)",
+    "สำนักงานผู้ตรวจการแผ่นดิน, คำอธิบายสาระสำคัญ พ.ร.ป. ว่าด้วยผู้ตรวจการแผ่นดิน พ.ศ. 2560 (2563) — on the section 213 filter",
+    "Constitutional Court of Thailand, Ruling No. 4/2564 (2021) summary, constitutionalcourt.or.th",
+    "Thai Lawyers for Human Rights, statistics on civilians tried in military courts (2016); International Commission of Jurists on NCPO Order 55/2016",
+    "News of record: Bangkok Post, Khaosod English, Thai PBS World, BenarNews, AP, Reuters (2008–2026) for dates and votes",
+    "iLaw, Thai PBS on the 2007 Thai Rak Thai dissolution (ruling 3-5/2550)"
+  ]
+}

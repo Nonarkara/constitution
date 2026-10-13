@@ -1,0 +1,250 @@
+{
+  "id": "general-and-king",
+  "order": 2,
+  "title": {
+    "th": "บททั่วไป และพระมหากษัตริย์",
+    "en": "General provisions and the King"
+  },
+  "lede": {
+    "th": "ยี่สิบสี่มาตราแรกเป็นส่วนที่สั้นที่สุดแต่ถูกอ้างถึงมากที่สุด ห้ามาตราแรกบอกว่าประเทศนี้คืออะไร อีกสิบเก้ามาตราบอกว่าตำแหน่งประมุขของรัฐทำงานอย่างไร และจะไม่มีวันว่างลงได้อย่างไร",
+    "en": "The first twenty-four sections are among the shortest in the document and among the most cited. The first five say what this country is. The next nineteen say how the office of Head of State works, and how it is designed never to stand empty."
+  },
+  "blocks": [
+    {
+      "kind": "text",
+      "title": { "th": "มาตรา 1: หนึ่งเดียว แบ่งแยกมิได้", "en": "Section 1: one and indivisible" },
+      "body": {
+        "th": "มาตรา 1 มีประโยคเดียว ประเทศไทยเป็นราชอาณาจักรอันหนึ่งอันเดียว จะแบ่งแยกมิได้\n\nประโยคนี้ตอบคำถามเรื่องรูปของรัฐ ไทยเป็นรัฐเดี่ยว ไม่ใช่สหพันธรัฐ ในสหพันธรัฐอย่างมาเลเซียหรือสหรัฐอเมริกา แต่ละรัฐมีรัฐธรรมนูญและอำนาจของตัวเองที่ส่วนกลางยึดคืนไม่ได้ง่าย ๆ ในรัฐเดี่ยว อำนาจทั้งหมดเริ่มจากศูนย์กลางเดียว ท้องถิ่นมีอำนาจได้เท่าที่รัฐธรรมนูญและกฎหมายมอบให้\n\nนี่ไม่ได้แปลว่าท้องถิ่นไม่มีอำนาจ หมวด 14 เปิดด้วยวลี “ภายใต้บังคับมาตรา 1” แล้วให้มีการปกครองตนเองตามเจตนารมณ์ของประชาชนในท้องถิ่น (มาตรา 249) ความหมายคือ กระจายอำนาจได้เต็มที่ แต่ต้องไม่ถึงขั้นแยกดินแดนหรือกลายเป็นรัฐย่อย",
+        "en": "Section 1 is a single sentence: Thailand is one indivisible Kingdom.\n\nIt answers the question of the form of the state. Thailand is a unitary state, not a federation. In a federation such as Malaysia or the United States, each state has its own constitution and powers the centre cannot easily take back. In a unitary state, all power starts from one centre, and local bodies hold as much as the constitution and laws give them.\n\nThat does not mean localities have no power. Chapter 14 opens with “subject to section 1” and then provides for local self-government according to the will of local people (section 249). Decentralise as far as you like, but never to the point of secession or a state within the state."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": { "th": "มาตรา 1 และมาตรา 2 ถูกล็อกไว้", "en": "Sections 1 and 2 are locked" },
+      "body": {
+        "th": "มาตรา 2 กำหนดรูปการปกครอง ระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข\n\nสองมาตรานี้คือสองค่าที่ระบบตั้งใจไม่ให้เปลี่ยน มาตรา 255 ห้ามแก้รัฐธรรมนูญในทางที่เปลี่ยนการปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือเปลี่ยนรูปแบบของรัฐ แม้จะได้เสียงครบทุกขั้นตามมาตรา 256 ก็ทำไม่ได้\n\nส่วนการแก้ไขเนื้อหาของหมวด 1 หรือหมวด 2 ในเรื่องที่ไม่ถึงขั้นเปลี่ยนสองค่าข้างต้น ทำได้ แต่ต้องผ่านประชามติก่อนนำขึ้นทูลเกล้าทูลกระหม่อมถวาย (มาตรา 256 (8))\n\nโซ่ที่ควรจำ\n- มาตรา 1 และมาตรา 2 วางรูปของรัฐและรูปการปกครอง\n- มาตรา 255 ห้ามแก้ในทางที่เปลี่ยนสองสิ่งนี้\n- มาตรา 256 (8) แก้หมวด 1 หรือหมวด 2 ได้ แต่ต้องมีประชามติ\n- มาตรา 256 (9) สมาชิกหนึ่งในสิบส่งให้ศาลรัฐธรรมนูญตรวจได้ว่าร่างขัดมาตรา 255 หรือเข้าเงื่อนไขต้องทำประชามติหรือไม่",
+        "en": "Section 2 sets the form of government: democracy with the King as Head of State.\n\nThese two are the values the system is built never to change. Section 255 forbids any amendment that changes the democratic regime with the King as Head of State or changes the form of the state. Even an amendment that clears every vote in section 256 cannot do this.\n\nChanging the content of Chapter 1 or Chapter 2 in ways that stop short of those two things is possible, but requires a referendum before the draft is presented to the King (section 256 (8)).\n\nThe chain to remember:\n- Sections 1 and 2 set the form of the state and of government.\n- Section 255 bars amendments that change either.\n- Section 256 (8): Chapters 1 and 2 can be amended, but only after a referendum.\n- Section 256 (9): one tenth of members can ask the Constitutional Court whether a draft breaches section 255 or triggers the referendum requirement."
+      }
+    },
+    {
+      "kind": "text",
+      "title": { "th": "มาตรา 3 ถึงมาตรา 5: เจ้าของอำนาจ ศักดิ์ศรี และกฎหมายสูงสุด", "en": "Sections 3 to 5: the owner of power, dignity, and supremacy" },
+      "body": {
+        "th": "มาตรา 3 วรรคหนึ่ง อำนาจอธิปไตยเป็นของปวงชนชาวไทย พระมหากษัตริย์ผู้ทรงเป็นประมุขทรงใช้อำนาจนั้นทางรัฐสภา คณะรัฐมนตรี และศาล ตามบทบัญญัติแห่งรัฐธรรมนูญ ข้อสอบมักสลับชื่อองค์กร เช่น ใส่ “องค์กรอิสระ” เข้าไปในรายการช่องทางการใช้อำนาจ จำให้แม่นว่าวรรคหนึ่งมีสามองค์กร คือ นิติบัญญัติ บริหาร ตุลาการ\n\nมาตรา 3 วรรคสอง ขยายรายชื่อเป็นห้า รัฐสภา คณะรัฐมนตรี ศาล องค์กรอิสระ และหน่วยงานของรัฐ ต้องปฏิบัติหน้าที่ตามรัฐธรรมนูญ กฎหมาย และหลักนิติธรรม เพื่อประโยชน์ส่วนรวมของประเทศชาติและความผาสุกของประชาชนโดยรวม วรรคนี้ไม่ได้บอกว่าใครใช้อำนาจอธิปไตย แต่บอกว่าทุกคนที่ใช้อำนาจรัฐต้องอยู่ใต้อะไร\n\nมาตรา 4 คุ้มครองศักดิ์ศรีความเป็นมนุษย์ สิทธิ เสรีภาพ และความเสมอภาค และปวงชนชาวไทยได้รับความคุ้มครองตามรัฐธรรมนูญเสมอกัน มาตรานี้เป็นประตูของหมวด 3\n\nมาตรา 5 รัฐธรรมนูญเป็นกฎหมายสูงสุด สิ่งที่ขัดหรือแย้งใช้บังคับไม่ได้ และเมื่อไม่มีบทบัญญัติใช้บังคับ ให้วินิจฉัยตามประเพณีการปกครองประเทศไทยในระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข (ดูรายละเอียดและกรณีปี 2549 ในบทที่ 1)",
+        "en": "Section 3, paragraph one: sovereign power belongs to the Thai people, and the King as Head of State exercises it through the National Assembly, the Council of Ministers and the Courts, in accordance with the constitution. Exams like to swap names, slipping “independent organs” into that list. Paragraph one has exactly three bodies: legislative, executive, judicial.\n\nSection 3, paragraph two, widens the list to five. The National Assembly, the Cabinet, the courts, the independent organs and state agencies must act under the constitution, the law and the rule of law, for the common good of the nation and the well-being of the people. This paragraph does not say who exercises sovereignty. It says what everyone wielding state power is bound by.\n\nSection 4 protects human dignity, rights, liberties and equality, and gives all Thai people equal protection under the constitution. It is the doorway to Chapter 3.\n\nSection 5: the constitution is the supreme law; anything that conflicts with it cannot be enforced; and where no provision applies, decide by the constitutional conventions of Thailand's democratic regime with the King as Head of State. (See Chapter 1 of this guide for the detail and the 2006 episode.)"
+      }
+    },
+    {
+      "kind": "text",
+      "title": { "th": "มาตรา 6 ถึงมาตรา 9: พระราชสถานะ", "en": "Sections 6 to 9: the King's position" },
+      "body": {
+        "th": "หมวด 2 เปิดด้วยพระราชสถานะสี่ด้าน\n- มาตรา 6 องค์พระมหากษัตริย์ทรงดำรงอยู่ในฐานะอันเป็นที่เคารพสักการะ ผู้ใดจะละเมิดมิได้ ผู้ใดจะกล่าวหาหรือฟ้องร้องพระมหากษัตริย์ในทางใด ๆ มิได้\n- มาตรา 7 พระมหากษัตริย์ทรงเป็นพุทธมามกะ และทรงเป็นอัครศาสนูปถัมภก คือทรงเป็นผู้อุปถัมภ์ทุกศาสนา\n- มาตรา 8 พระมหากษัตริย์ทรงดำรงตำแหน่งจอมทัพไทย\n- มาตรา 9 ทรงไว้ซึ่งพระราชอำนาจที่จะสถาปนาและถอดถอนฐานันดรศักดิ์ และพระราชทานและเรียกคืนเครื่องราชอิสริยาภรณ์\n\nคำที่ข้อสอบชอบใช้หลอก\n- พุทธมามกะ แปลว่าผู้นับถือพระพุทธศาสนา\n- อัครศาสนูปถัมภก แปลว่าองค์อุปถัมภ์ศาสนาทั้งปวง ไม่ใช่เฉพาะพระพุทธศาสนา\n- จอมทัพไทย คือตำแหน่งประมุขของกองทัพ ไม่ใช่ผู้บัญชาการทหารสูงสุด ซึ่งเป็นตำแหน่งราชการ",
+        "en": "Chapter 2 opens with the King's position in four respects:\n- Section 6: the King is enthroned in a position of revered worship and shall not be violated; no one shall expose the King to any sort of accusation or action.\n- Section 7: the King is a Buddhist and the Upholder of religions, meaning patron of every faith.\n- Section 8: the King holds the position of Head of the Thai Armed Forces.\n- Section 9: the King has the prerogative to create and revoke titles and to confer and recall royal decorations.\n\nTerms exams use as traps:\n- พุทธมามกะ (phutthamamaka) means a professed Buddhist.\n- อัครศาสนูปถัมภก (akkhara-satsanupathamphok) means patron of all religions, not Buddhism alone.\n- จอมทัพไทย (Chom Thap Thai) is the headship of the armed forces, not the post of Chief of Defence Forces, which is a civil-service appointment."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": { "th": "ทำไมต้องมีผู้รับสนองพระบรมราชโองการ", "en": "Why royal acts need a countersignature" },
+      "body": {
+        "th": "เริ่มจากมาตรา 6 ผู้ใดจะกล่าวหาหรือฟ้องร้องพระมหากษัตริย์ในทางใด ๆ มิได้ ถ้าหยุดแค่นี้ จะเกิดคำถามทางระบบทันที เมื่อมีพระบรมราชโองการแต่งตั้งรัฐมนตรี ประกาศใช้กฎหมาย หรือยุบสภา แล้วการกระทำนั้นผิดพลาด ใครเป็นผู้รับผิดชอบต่อประชาชน\n\nคำตอบของระบอบประชาธิปไตยแบบมีพระมหากษัตริย์คือ ผู้รับสนองพระบรมราชโองการ\n- พระมหากษัตริย์ทรงอยู่เหนือการเมืองและไม่อาจถูกกล่าวหาได้ (มาตรา 6)\n- ดังนั้นการกระทำในพระปรมาภิไธยที่เกี่ยวกับราชการแผ่นดินต้องมีผู้ลงนามรับสนอง (มาตรา 182)\n- ผู้ลงนามรับสนองคือผู้ที่เสนอเรื่องนั้นและรับผิดชอบเรื่องนั้น\n- ผู้รับสนองที่เป็นรัฐมนตรีต้องรับผิดชอบต่อสภาผู้แทนราษฎร ซึ่งลงมติไม่ไว้วางใจได้ (มาตรา 151)\n- โซ่ความรับผิดชอบจึงไม่ขาด แม้จุดสูงสุดของโซ่จะไม่อาจถูกฟ้องร้องได้\n\nระบบแบบเดียวกันนี้มีในราชาธิปไตยภายใต้รัฐธรรมนูญอื่น ๆ เช่น สหราชอาณาจักร ซึ่งรัฐมนตรีเป็นผู้รับผิดชอบทางการเมืองต่อการกระทำในพระนามของประมุข\n\nเวลาตอบข้อสอบ ให้ถามว่า “เรื่องนี้ใครเป็นผู้เสนอขึ้นไป” ผู้เสนอมักเป็นผู้รับสนอง",
+        "en": "Start with section 6: no one may expose the King to any accusation or action. Stop there and a systemic question appears at once. When a royal command appoints a minister, promulgates a law or dissolves the House, and that act turns out to be wrong, who answers for it to the public?\n\nThe answer in a constitutional monarchy is the countersignature (ผู้รับสนองพระบรมราชโองการ):\n- The King is above politics and cannot be accused (section 6).\n- So every royal act concerning affairs of state must be countersigned (section 182).\n- The countersigner is the person who put the matter forward and who takes responsibility for it.\n- A countersigning minister answers to the House, which can vote no confidence (section 151).\n- The chain of accountability stays unbroken even though its top link cannot be sued.\n\nOther constitutional monarchies work the same way. In the United Kingdom, ministers carry the political responsibility for acts done in the sovereign's name.\n\nIn an exam, ask: who brought this matter up to the King? That person is usually the countersigner."
+      }
+    },
+    {
+      "kind": "numbers",
+      "title": { "th": "ใครรับสนองพระบรมราชโองการเรื่องใด", "en": "Who countersigns what" },
+      "rows": [
+        { "th": "หลักทั่วไป: บทกฎหมาย พระราชหัตถเลขา พระบรมราชโองการเกี่ยวกับราชการแผ่นดิน", "en": "General rule: laws, royal letters and royal commands on affairs of state", "value": "รัฐมนตรี / a minister", "sections": [182] },
+        { "th": "แต่งตั้งหรือให้ประธานองคมนตรีพ้นจากตำแหน่ง", "en": "Appointing or removing the President of the Privy Council", "value": "ประธานรัฐสภา / President of the National Assembly", "sections": [11] },
+        { "th": "แต่งตั้งหรือให้องคมนตรีอื่นพ้นจากตำแหน่ง", "en": "Appointing or removing other Privy Councillors", "value": "ประธานองคมนตรี / President of the Privy Council", "sections": [11] },
+        { "th": "แต่งตั้งผู้สำเร็จราชการแทนพระองค์ (กรณีทรงแต่งตั้งเอง)", "en": "Appointing a Regent (by the King)", "value": "ประธานรัฐสภา / President of the National Assembly", "sections": [16] },
+        { "th": "แก้ไขเพิ่มเติมกฎมณเฑียรบาลว่าด้วยการสืบราชสันตติวงศ์", "en": "Amending the Palace Law on Succession", "value": "ประธานรัฐสภา / President of the National Assembly", "sections": [20] },
+        { "th": "แต่งตั้งนายกรัฐมนตรี", "en": "Appointing the prime minister", "value": "ประธานสภาผู้แทนราษฎร / Speaker of the House", "sections": [158] },
+        { "th": "แต่งตั้งผู้นำฝ่ายค้านในสภาผู้แทนราษฎร", "en": "Appointing the Leader of the Opposition", "value": "ประธานสภาผู้แทนราษฎร / Speaker of the House", "sections": [106] },
+        { "th": "แต่งตั้งประธานและตุลาการศาลรัฐธรรมนูญ", "en": "Appointing the President and judges of the Constitutional Court", "value": "ประธานวุฒิสภา / President of the Senate", "sections": [204] },
+        { "th": "เรียกประชุมรัฐสภาสมัยวิสามัญตามคำร้องของสมาชิก", "en": "Convening an extraordinary session on members' request", "value": "ประธานรัฐสภา / President of the National Assembly", "sections": [123] }
+      ]
+    },
+    {
+      "kind": "mnemonic",
+      "title": { "th": "ใครส่งเรื่อง คนนั้นรับสนอง", "en": "Whoever sends it up, signs it" },
+      "body": {
+        "th": "ไม่ต้องท่องทีละมาตรา ให้ถามว่าการตัดสินใจนั้นเกิดในองค์กรไหน\n- สภาผู้แทนราษฎรเลือกนายกรัฐมนตรี จึงเป็นประธานสภาผู้แทนราษฎรรับสนอง (มาตรา 158)\n- วุฒิสภาเห็นชอบตุลาการศาลรัฐธรรมนูญ จึงเป็นประธานวุฒิสภา (มาตรา 204)\n- คณะองคมนตรีเป็นองค์กรของประธานองคมนตรี จึงให้ประธานองคมนตรีรับสนองการแต่งตั้งองคมนตรีอื่น แต่ประธานองคมนตรีจะรับสนองการแต่งตั้งตัวเองไม่ได้ จึงขึ้นไปที่ประธานรัฐสภา (มาตรา 11)\n- เรื่องของราชบัลลังก์ที่ต้องแจ้งให้รัฐสภาทราบ เช่น ผู้สำเร็จราชการ และกฎมณเฑียรบาล ใช้ประธานรัฐสภา (มาตรา 16 มาตรา 20)\n- ที่เหลือทั้งหมด เป็นรัฐมนตรี (มาตรา 182)\n\nจำเพิ่มอีกนิด ประธานรัฐสภาคือประธานสภาผู้แทนราษฎร ส่วนประธานวุฒิสภาเป็นรองประธานรัฐสภา (มาตรา 80)",
+        "en": "Don't memorise section by section. Ask which body made the decision:\n- The House chooses the prime minister, so the Speaker of the House countersigns (section 158).\n- The Senate approves Constitutional Court judges, so the President of the Senate countersigns (section 204).\n- The Privy Council is the President of the Privy Council's own body, so he countersigns appointments of other councillors; he cannot countersign his own appointment, so that goes up to the President of the National Assembly (section 11).\n- Throne matters Parliament must be told about, such as a Regent or the Palace Law, use the President of the National Assembly (sections 16, 20).\n- Everything else: a minister (section 182).\n\nOne more anchor: the President of the National Assembly is the Speaker of the House; the President of the Senate is Vice-President of the National Assembly (section 80)."
+      }
+    },
+    {
+      "kind": "text",
+      "title": { "th": "คณะองคมนตรี: มาตรา 10 ถึงมาตรา 14", "en": "The Privy Council: sections 10 to 14" },
+      "body": {
+        "th": "มาตรา 10 พระมหากษัตริย์ทรงเลือกและทรงแต่งตั้งผู้ทรงคุณวุฒิเป็นประธานองคมนตรีหนึ่งคน และองคมนตรีอื่นอีกไม่เกินสิบแปดคน รวมแล้วไม่เกินสิบเก้าคน หน้าที่หลักคือถวายความเห็นในพระราชกรณียกิจทั้งปวงที่ทรงปรึกษา และหน้าที่อื่นตามที่รัฐธรรมนูญบัญญัติ\n\nมาตรา 11 การเลือก แต่งตั้ง และให้พ้นจากตำแหน่ง เป็นไปตามพระราชอัธยาศัย พร้อมกำหนดผู้รับสนองไว้สองชั้น\n\nมาตรา 12 องคมนตรีต้องไม่เป็น ส.ส. ส.ว. ผู้ดำรงตำแหน่งทางการเมือง ตุลาการศาลรัฐธรรมนูญ ผู้ดำรงตำแหน่งในองค์กรอิสระ พนักงานรัฐวิสาหกิจ เจ้าหน้าที่อื่นของรัฐ สมาชิกหรือเจ้าหน้าที่พรรคการเมือง หรือข้าราชการ เว้นแต่ข้าราชการในพระองค์ในตำแหน่งองคมนตรี และต้องไม่แสดงการฝักใฝ่พรรคการเมืองใด\n\nมาตรา 13 ก่อนเข้ารับหน้าที่ องคมนตรีต้องถวายสัตย์ปฏิญาณต่อพระมหากษัตริย์\n\nมาตรา 14 องคมนตรีพ้นจากตำแหน่งเมื่อตาย ลาออก หรือมีพระบรมราชโองการให้พ้นจากตำแหน่ง สังเกตว่าไม่มีวาระและไม่มีอายุเกษียณกำหนดไว้ในรัฐธรรมนูญ\n\nมาตรา 15 แยกเรื่องข้าราชการในพระองค์ออกมา การแต่งตั้งและให้พ้นจากตำแหน่งเป็นไปตามพระราชอัธยาศัย และการจัดระเบียบราชการและการบริหารงานบุคคลเป็นไปตามพระราชอัธยาศัยตามที่บัญญัติไว้ในพระราชกฤษฎีกา",
+        "en": "Section 10: the King selects and appoints one qualified person as President of the Privy Council and up to eighteen other Privy Councillors, so at most nineteen in total. Their main duty is to give advice on all matters on which the King consults them, plus any other duties the constitution assigns.\n\nSection 11: selection, appointment and removal are at the King's pleasure, with countersignature set at two levels.\n\nSection 12: a Privy Councillor may not be an MP, a senator, a political office holder, a Constitutional Court judge, a member of an independent organ, a state-enterprise employee, any other state official, a member or officer of a political party, or a civil servant, except as a royal household official in the capacity of Privy Councillor. Nor may a councillor show partisanship towards any party.\n\nSection 13: before taking office, a councillor swears an oath of allegiance before the King.\n\nSection 14: a councillor leaves office on death, resignation, or by royal command. Note that the constitution sets no term and no retirement age.\n\nSection 15 deals separately with royal household officials: their appointment and removal are at the King's pleasure, and the organisation and personnel management of the royal household service follow the King's pleasure as provided by royal decree."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": { "th": "ทำไมองคมนตรีต้องปลอดการเมือง", "en": "Why Privy Councillors must stay out of politics" },
+      "body": {
+        "th": "ดูว่ารัฐธรรมนูญให้คณะองคมนตรีทำอะไรนอกจากถวายความเห็น\n- เสนอชื่อผู้สำเร็จราชการแทนพระองค์ในบางกรณี (มาตรา 17)\n- ประธานองคมนตรีเป็นผู้สำเร็จราชการชั่วคราว (มาตรา 18 และมาตรา 22)\n- จัดทำร่างแก้ไขกฎมณเฑียรบาลว่าด้วยการสืบราชสันตติวงศ์เมื่อมีพระราชดำริ (มาตรา 20)\n- เสนอพระนามผู้สืบราชสันตติวงศ์ในกรณีที่ไม่ได้ทรงแต่งตั้งพระรัชทายาทไว้ (มาตรา 21 วรรคสอง)\n\nทั้งหมดนี้เป็นจังหวะที่ประเทศเปราะบางที่สุด คือช่วงที่ราชบัลลังก์อาจว่างหรือพระมหากษัตริย์ทรงปฏิบัติพระราชภาระไม่ได้ ถ้าคนที่อยู่ในจังหวะนั้นเป็นคนของพรรคการเมือง การเปลี่ยนผ่านจะกลายเป็นสนามแข่งทางการเมือง มาตรา 12 จึงตัดความเชื่อมโยงกับการเมืองและหน่วยงานรัฐออกทั้งหมด โซ่คือ บทบาทในช่วงเปลี่ยนผ่าน → ต้องเป็นกลางที่สุด → ห้ามถือตำแหน่งทางการเมืองหรือฝักใฝ่พรรค",
+        "en": "Look at what the constitution asks the Privy Council to do beyond giving advice:\n- In some cases, propose the name of a Regent (section 17).\n- Its President serves as interim Regent (sections 18 and 22).\n- Draft amendments to the Palace Law on Succession when the King so wishes (section 20).\n- Propose the name of the successor when no heir has been designated (section 21, paragraph two).\n\nEvery one of these happens at the country's most fragile moments, when the throne may be vacant or the King unable to carry out his duties. If the people involved at those moments belonged to a party, the transition would become a political contest. Section 12 therefore cuts every tie to politics and to state posts. The chain: a role in transitions → must be as neutral as possible → no political office, no partisanship."
+      }
+    },
+    {
+      "kind": "text",
+      "title": { "th": "ผู้สำเร็จราชการแทนพระองค์: สามทาง", "en": "The Regent: three routes" },
+      "body": {
+        "th": "ผู้สำเร็จราชการแทนพระองค์คือผู้ที่ปฏิบัติพระราชภาระแทนเมื่อพระมหากษัตริย์ไม่ประทับในราชอาณาจักรหรือทรงบริหารพระราชภาระไม่ได้ รัฐธรรมนูญวางไว้สามทาง เรียงตามลำดับ\n\nทางที่หนึ่ง มาตรา 16 พระมหากษัตริย์จะทรงแต่งตั้งบุคคลคนหนึ่งหรือหลายคนเป็นคณะ เป็นผู้สำเร็จราชการแทนพระองค์หรือไม่ก็ได้ ถ้าทรงแต่งตั้ง ประธานรัฐสภาเป็นผู้ลงนามรับสนอง\n\nทางที่สอง มาตรา 17 ถ้าไม่ได้ทรงแต่งตั้งไว้ หรือทรงแต่งตั้งไม่ได้เพราะยังไม่ทรงบรรลุนิติภาวะหรือเหตุอื่น และคณะองคมนตรีเห็นว่าจำเป็นต้องมีผู้สำเร็จราชการ แต่กราบบังคมทูลให้ทรงแต่งตั้งไม่ทันการ ให้คณะองคมนตรีเสนอชื่อบุคคลตามลำดับที่โปรดเกล้าโปรดกระหม่อมกำหนดไว้ก่อนแล้ว แล้วแจ้งประธานรัฐสภาเพื่อประกาศในพระปรมาภิไธยแต่งตั้งผู้นั้น\n\nทางที่สาม มาตรา 18 ระหว่างที่ยังไม่มีผู้สำเร็จราชการตามมาตรา 17 ให้ประธานองคมนตรีเป็นผู้สำเร็จราชการชั่วคราวไปพลางก่อน และถ้าผู้สำเร็จราชการที่ได้รับแต่งตั้งปฏิบัติหน้าที่ไม่ได้ ประธานองคมนตรีก็ทำหน้าที่แทนชั่วคราวเช่นกัน ระหว่างนั้นประธานองคมนตรีจะทำหน้าที่ประธานองคมนตรีไม่ได้ คณะองคมนตรีจึงเลือกองคมนตรีคนหนึ่งทำหน้าที่ประธานองคมนตรีชั่วคราว\n\nมาตรา 23 ปิดช่องสุดท้าย ถ้าในจังหวะเหล่านี้ไม่มีประธานองคมนตรี หรือมีแต่ปฏิบัติหน้าที่ไม่ได้ ให้องคมนตรีที่เหลือเลือกองคมนตรีคนหนึ่งขึ้นทำหน้าที่แทน",
+        "en": "A Regent carries out the King's duties when the King is outside the Kingdom or unable to perform them. The constitution provides three routes, in order.\n\nRoute one, section 16: the King may, but need not, appoint one person or a council of persons as Regent. If he does, the President of the National Assembly countersigns.\n\nRoute two, section 17: if the King has made no appointment, or cannot because he has not come of age or for another reason, and the Privy Council considers a Regent necessary but cannot petition the King in time, the Privy Council proposes a name according to an order the King has set in advance, then informs the President of the National Assembly, who proclaims the appointment in the King's name.\n\nRoute three, section 18: while there is no Regent under section 17, the President of the Privy Council serves as Regent for the time being. If an appointed Regent cannot act, the President of the Privy Council stands in temporarily as well. During that time he cannot also act as President of the Privy Council, so the Council chooses one of its members to do so for the time being.\n\nSection 23 closes the last gap: if at such a moment there is no President of the Privy Council, or he cannot act, the remaining councillors choose one of their number to step in."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": { "th": "เก้าอี้ที่ไม่มีวันว่าง", "en": "The chair that is never empty" },
+      "body": {
+        "th": "มองมาตรา 16 ถึงมาตรา 23 เหมือนระบบไฟสำรองของโรงพยาบาล ไฟหลักดับเมื่อใด เครื่องปั่นไฟต้องติดทันที ถ้าเครื่องปั่นไฟเสีย ต้องมีแบตเตอรี่ต่อ ห้องผ่าตัดไม่มีวินาทีไหนมืด\n\nโซ่ของรัฐธรรมนูญเป็นแบบนั้น\n- ทรงแต่งตั้งเองได้ (มาตรา 16)\n- ถ้าไม่ได้แต่งตั้ง คณะองคมนตรีเสนอตามลำดับที่ทรงกำหนดไว้ล่วงหน้า (มาตรา 17)\n- ระหว่างรอ ประธานองคมนตรีทำหน้าที่ทันที (มาตรา 18)\n- ถ้าไม่มีประธานองคมนตรี องคมนตรีที่เหลือเลือกกันเอง (มาตรา 23)\n\nสังเกตว่าทุกขั้นใช้คำว่า “ชั่วคราว” หรือ “ไปพลางก่อน” และทุกขั้นอิงลำดับหรือพระราชประสงค์ที่กำหนดไว้ล่วงหน้า ไม่ใช่การเลือกใหม่ด้วยเสียงข้างมากในเวลานั้น เป้าหมายคือความต่อเนื่องที่ไม่ต้องมีใครตัดสินใจแบบเฉพาะหน้า",
+        "en": "Read sections 16 to 23 like a hospital's backup power. When mains power fails, the generator must start at once. If the generator fails, batteries take over. The operating theatre is never dark for a second.\n\nThe constitution's chain works the same way:\n- The King may appoint a Regent himself (section 16).\n- If not, the Privy Council proposes according to an order the King set in advance (section 17).\n- Meanwhile the President of the Privy Council acts immediately (section 18).\n- If there is no President of the Privy Council, the remaining councillors choose among themselves (section 23).\n\nNotice that every step says “for the time being” or “temporarily,” and every step relies on an order or wish fixed in advance rather than a fresh majority vote at the moment of crisis. The goal is continuity that needs no one to improvise."
+      }
+    },
+    {
+      "kind": "text",
+      "title": { "th": "คำปฏิญาณของผู้สำเร็จราชการ และการถวายสัตย์ปฏิญาณ", "en": "The Regent's oath, and oaths of allegiance" },
+      "body": {
+        "th": "มาตรา 19 ผู้สำเร็จราชการที่ได้รับแต่งตั้งตามมาตรา 16 หรือมาตรา 17 ต้องปฏิญาณตนในที่ประชุมรัฐสภาก่อนเข้ารับหน้าที่ ถ้าเคยปฏิญาณมาแล้วไม่ต้องปฏิญาณอีก ที่ประชุมนี้เป็นการประชุมร่วมกันของรัฐสภา (มาตรา 156 (2))\n\nสังเกตความต่างของถ้อยคำซึ่งข้อสอบชอบถาม\n- “ถวายสัตย์ปฏิญาณต่อพระมหากษัตริย์” ใช้กับองคมนตรี (มาตรา 13) รัฐมนตรี (มาตรา 161) และผู้พิพากษาตุลาการ (มาตรา 191)\n- “ปฏิญาณตนในที่ประชุม” ใช้กับผู้สำเร็จราชการ ซึ่งปฏิญาณในที่ประชุมรัฐสภา (มาตรา 19) และ ส.ส. กับ ส.ว. ซึ่งปฏิญาณในที่ประชุมสภาของตน (มาตรา 115)\n\nตรรกะช่วยจำ ผู้สำเร็จราชการทำหน้าที่แทนพระมหากษัตริย์ จึงไม่ถวายสัตย์ต่อตำแหน่งที่ตนกำลังทำหน้าที่แทน แต่ปฏิญาณต่อผู้แทนของปวงชนในรัฐสภา\n\nมาตรา 24 การถวายสัตย์ปฏิญาณต่อพระมหากษัตริย์ตามรัฐธรรมนูญหรือกฎหมาย จะโปรดเกล้าโปรดกระหม่อมให้กระทำต่อพระรัชทายาทซึ่งทรงบรรลุนิติภาวะแล้ว หรือต่อผู้แทนพระองค์ก็ได้ และระหว่างที่ยังไม่ได้ถวายสัตย์ปฏิญาณ จะโปรดเกล้าโปรดกระหม่อมให้ผู้นั้นปฏิบัติหน้าที่ไปพลางก่อนก็ได้",
+        "en": "Section 19: a Regent appointed under section 16 or 17 must make an affirmation before the National Assembly before taking office. One who has already done so need not repeat it. This happens in a joint sitting (section 156 (2)).\n\nNote the difference in wording, which exams like to test:\n- “Swear an oath of allegiance before the King” (ถวายสัตย์ปฏิญาณ) applies to Privy Councillors (section 13), ministers (section 161) and judges (section 191).\n- “Make an affirmation in a sitting” (ปฏิญาณตน) applies to the Regent, before the National Assembly (section 19), and to MPs and senators, before their own chamber (section 115).\n\nA memory aid: the Regent acts in place of the King, so he does not swear allegiance to the office he is standing in for. He affirms before the people's representatives instead.\n\nSection 24: an oath of allegiance required by the constitution or by law may, at the King's command, be sworn before the Heir who has come of age, or before a royal representative. Until the oath is sworn, the King may allow the person to begin their duties in the meantime."
+      }
+    },
+    {
+      "kind": "text",
+      "title": { "th": "การสืบราชสมบัติ: มาตรา 20 ถึงมาตรา 22", "en": "Succession: sections 20 to 22" },
+      "body": {
+        "th": "มาตรา 20 การสืบราชสมบัติเป็นไปโดยนัยแห่งกฎมณเฑียรบาลว่าด้วยการสืบราชสันตติวงศ์ พระพุทธศักราช 2467 โดยอยู่ภายใต้มาตรา 21 การแก้ไขกฎมณเฑียรบาลนี้เป็นพระราชอำนาจของพระมหากษัตริย์โดยเฉพาะ ขั้นตอนคือ\n- เมื่อมีพระราชดำริ คณะองคมนตรีจัดทำร่างขึ้นทูลเกล้าทูลกระหม่อมถวาย\n- เมื่อทรงเห็นชอบและทรงลงพระปรมาภิไธย ประธานองคมนตรีแจ้งประธานรัฐสภา\n- ประธานรัฐสภาแจ้งให้รัฐสภาทราบ และลงนามรับสนองพระบรมราชโองการ\n- เมื่อประกาศในราชกิจจานุเบกษาแล้วใช้บังคับได้\n\nรัฐสภาในขั้นตอนนี้มีบทบาท “รับทราบ” ไม่ใช่ “ให้ความเห็นชอบ” (มาตรา 156 (3))\n\nมาตรา 21 เมื่อราชบัลลังก์ว่างลง แยกสองกรณี\n- กรณีที่ทรงแต่งตั้งพระรัชทายาทไว้แล้วตามกฎมณเฑียรบาล: คณะรัฐมนตรีแจ้งประธานรัฐสภา ประธานรัฐสภาเรียกประชุมรัฐสภาเพื่อรับทราบ แล้วอัญเชิญองค์พระรัชทายาทขึ้นทรงราชย์ และประกาศให้ประชาชนทราบ\n- กรณีที่ไม่ได้ทรงแต่งตั้งพระรัชทายาทไว้: คณะองคมนตรีเสนอพระนามผู้สืบราชสันตติวงศ์ต่อคณะรัฐมนตรี เพื่อเสนอต่อรัฐสภาให้ความเห็นชอบ ในกรณีนี้จะเสนอพระนามพระราชธิดาก็ได้ เมื่อรัฐสภาเห็นชอบแล้ว ประธานรัฐสภาอัญเชิญขึ้นทรงราชย์และประกาศให้ประชาชนทราบ\n\nมาตรา 22 ระหว่างที่ยังไม่มีประกาศอัญเชิญ ให้ประธานองคมนตรีเป็นผู้สำเร็จราชการชั่วคราว แต่ถ้าราชบัลลังก์ว่างลงขณะมีผู้สำเร็จราชการตามมาตรา 16 หรือมาตรา 17 อยู่แล้ว หรือขณะที่ประธานองคมนตรีเป็นผู้สำเร็จราชการตามมาตรา 18 วรรคหนึ่ง ให้ผู้นั้นเป็นผู้สำเร็จราชการต่อไปจนกว่าจะประกาศอัญเชิญ",
+        "en": "Section 20: succession follows the Palace Law on Succession of B.E. 2467 (1924), subject to section 21. Amending that Palace Law is the King's exclusive prerogative. The steps:\n- When the King so wishes, the Privy Council drafts the amendment and presents it to him.\n- Once the King approves and signs it, the President of the Privy Council informs the President of the National Assembly.\n- The President of the National Assembly informs Parliament and countersigns.\n- It takes effect as law once published in the Royal Gazette.\n\nParliament's role here is to be informed, not to approve (section 156 (3)).\n\nSection 21 covers a vacant throne in two cases:\n- If the King has already designated an Heir under the Palace Law: the Cabinet informs the President of the National Assembly, who convenes Parliament to acknowledge it, then invites the Heir to ascend the throne and announces it to the people.\n- If no Heir has been designated: the Privy Council submits the name of the successor to the Cabinet, which puts it to Parliament for approval. A princess may be named. Once Parliament approves, the President of the National Assembly invites the successor to ascend the throne and announces it to the people.\n\nSection 22: until the invitation is proclaimed, the President of the Privy Council serves as Regent for the time being. But if the throne falls vacant while a Regent under section 16 or 17 is already in place, or while the President of the Privy Council is serving as Regent under section 18, paragraph one, that person continues as Regent until the invitation is proclaimed."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": { "th": "รับทราบ กับ ให้ความเห็นชอบ", "en": "Acknowledge versus approve" },
+      "body": {
+        "th": "หมวด 2 ใช้คำสองคำที่ต่างกันมากในทางกฎหมาย และข้อสอบมักสลับกัน\n- “รับทราบ” คือรัฐสภาได้รับแจ้ง ไม่มีการลงมติว่าจะยอมหรือไม่ ใช้เมื่อเรื่องนั้นได้ตัดสินไว้แล้วตามกฎมณเฑียรบาลหรือพระราชอำนาจ เช่น การแก้กฎมณเฑียรบาล (มาตรา 20) และการสืบราชสมบัติกรณีที่ทรงแต่งตั้งพระรัชทายาทไว้แล้ว (มาตรา 21 วรรคหนึ่ง)\n- “ให้ความเห็นชอบ” คือรัฐสภาลงมติ ใช้เมื่อยังไม่มีการกำหนดไว้ล่วงหน้า คือกรณีที่ไม่ได้ทรงแต่งตั้งพระรัชทายาท (มาตรา 21 วรรคสอง)\n\nตรรกะ: ถ้ามีคำตอบที่กำหนดไว้แล้วตามกฎที่ใช้อยู่ รัฐสภารับทราบ ถ้ายังไม่มีคำตอบที่กำหนดไว้ ต้องมีองค์กรที่เป็นผู้แทนของปวงชนร่วมให้ความเห็นชอบ\n\nข้อสังเกตในการอ่านตัวบท: มาตรา 156 (1) ยังระบุ “การให้ความเห็นชอบในการแต่งตั้งผู้สำเร็จราชการแทนพระองค์ตามมาตรา 17” ไว้ในรายการเรื่องที่รัฐสภาประชุมร่วมกัน ขณะที่ตัวมาตรา 17 บัญญัติขั้นตอนเป็นการเสนอชื่อตามลำดับที่ทรงกำหนดไว้แล้วแจ้งประธานรัฐสภา ถ้าข้อสอบถามขั้นตอนตามมาตรา 17 ให้ตอบตามตัวมาตรา 17",
+        "en": "Chapter 2 uses two words that differ sharply in law, and exams like to swap them:\n- “Acknowledge” (รับทราบ): Parliament is informed and does not vote on whether to accept. It is used where the matter is already settled by the Palace Law or royal prerogative, such as amending the Palace Law (section 20) and succession where an Heir has been designated (section 21, paragraph one).\n- “Approve” (ให้ความเห็นชอบ): Parliament votes. It is used where nothing has been fixed in advance, namely when no Heir has been designated (section 21, paragraph two).\n\nThe logic: where an answer is already fixed by the rules in force, Parliament acknowledges. Where no answer is fixed, a body representing the people must join in approving.\n\nA note for close readers: section 156 (1) still lists “approval of the appointment of a Regent under section 17” among matters for a joint sitting, while section 17 itself sets the procedure as a nomination according to the order the King has set, followed by notice to the President of the National Assembly. If an exam asks about the section 17 procedure, answer from the text of section 17."
+      }
+    },
+    {
+      "kind": "case",
+      "title": { "th": "ปี 2559: การเปลี่ยนรัชกาลตามขั้นตอน", "en": "2016: a change of reign, step by step" },
+      "year": 2016,
+      "body": {
+        "th": "พระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร เสด็จสวรรคตเมื่อวันที่ 13 ตุลาคม 2559 ขณะนั้นใช้รัฐธรรมนูญฉบับชั่วคราว พ.ศ. 2557 และสภานิติบัญญัติแห่งชาติทำหน้าที่รัฐสภา ขั้นตอนที่ใช้เป็นแบบเดียวกับที่ฉบับปัจจุบันบัญญัติไว้ในมาตรา 21 วรรคหนึ่ง และมาตรา 22\n- พระรัชทายาทได้รับการแต่งตั้งไว้แล้ว โดยทรงได้รับการสถาปนาเป็นสมเด็จพระบรมโอรสาธิราช สยามมกุฎราชกุมาร ตั้งแต่ปี 2515 กรณีจึงเข้าทางที่หนึ่ง คือรัฐสภา “รับทราบ” ไม่ใช่ “ให้ความเห็นชอบ”\n- ระหว่างที่ยังไม่มีการอัญเชิญ พลเอกเปรม ติณสูลานนท์ ประธานองคมนตรี เป็นผู้สำเร็จราชการแทนพระองค์ชั่วคราว\n- คณะรัฐมนตรีแจ้งประธานสภานิติบัญญัติแห่งชาติ ที่ประชุมรับทราบในวันที่ 29 พฤศจิกายน 2559\n- วันที่ 1 ธันวาคม 2559 ประธานสภานิติบัญญัติแห่งชาติเข้าเฝ้าฯ อัญเชิญ และพระบาทสมเด็จพระวชิรเกล้าเจ้าอยู่หัวทรงรับการอัญเชิญขึ้นทรงราชย์\n\nกรณีนี้แสดงให้เห็นว่าแต่ละองค์กรมีบทบาทที่แยกกันชัด คณะรัฐมนตรีแจ้ง รัฐสภารับทราบ ประธานรัฐสภาอัญเชิญ และประธานองคมนตรีรับหน้าที่ระหว่างกลางเพื่อไม่ให้มีช่วงว่าง",
+        "en": "King Bhumibol Adulyadej the Great passed away on 13 October 2016. At the time the 2014 interim charter was in force and the National Legislative Assembly served as Parliament. The procedure followed was the same as the one the current constitution sets out in section 21, paragraph one, and section 22:\n- An Heir had already been designated: the Crown Prince had held the title of Crown Prince since 1972. So the case fell under route one, where Parliament acknowledges rather than approves.\n- Until the invitation, General Prem Tinsulanonda, President of the Privy Council, served as Regent for the time being.\n- The Cabinet informed the President of the National Legislative Assembly, which acknowledged the matter on 29 November 2016.\n- On 1 December 2016 the Assembly's President, in an audience, conveyed the invitation, and King Maha Vajiralongkorn accepted and ascended the throne.\n\nThe episode shows each body's role kept distinct: the Cabinet informs, Parliament acknowledges, its President conveys the invitation, and the President of the Privy Council fills the interval so there is no gap."
+      }
+    },
+    {
+      "kind": "case",
+      "title": { "th": "ปี 2560: การประกาศใช้ และความต่อเนื่องของคณะองคมนตรี", "en": "2017: promulgation, and the Privy Council's continuity" },
+      "year": 2017,
+      "body": {
+        "th": "ร่างรัฐธรรมนูญฉบับนี้ผ่านประชามติเมื่อวันที่ 7 สิงหาคม 2559 ก่อนประกาศใช้ ได้มีการแก้ไขรัฐธรรมนูญฉบับชั่วคราว พ.ศ. 2557 เมื่อต้นปี 2560 เพื่อเปิดทางให้ปรับปรุงร่างในบางมาตราที่เกี่ยวกับพระราชอำนาจตามข้อสังเกตพระราชทาน จากนั้นพระบาทสมเด็จพระวชิรเกล้าเจ้าอยู่หัวทรงลงพระปรมาภิไธยประกาศใช้เมื่อวันที่ 6 เมษายน 2560\n\nในวันเปลี่ยนผ่าน บทเฉพาะกาลกันไม่ให้ตำแหน่งในหมวด 2 ว่างลงแม้แต่วันเดียว มาตรา 262 ให้คณะองคมนตรีที่ดำรงตำแหน่งอยู่ในวันก่อนวันประกาศใช้ เป็นคณะองคมนตรีตามรัฐธรรมนูญนี้ ไม่ต้องแต่งตั้งใหม่\n\nสำหรับผู้สอบ จำไว้สองอย่าง วันประกาศใช้คือ 6 เมษายน 2560 ซึ่งเป็นวันที่ใช้เริ่มนับหลายเรื่องในบทเฉพาะกาล และหลักความต่อเนื่องที่เห็นในมาตรา 16 ถึงมาตรา 23 ก็ปรากฏในมาตรา 262 ด้วย",
+        "en": "The draft of this constitution passed a referendum on 7 August 2016. Before promulgation, the 2014 interim charter was amended in early 2017 to allow certain provisions of the draft concerning royal powers to be revised in line with royal observations. King Maha Vajiralongkorn then signed and promulgated the constitution on 6 April 2017.\n\nOn the day of transition, the transitory provisions kept every Chapter 2 office filled without a single day's gap. Section 262 made the Privy Council in office the day before promulgation the Privy Council under this constitution, with no fresh appointment needed.\n\nFor exam takers, remember two things: promulgation day was 6 April 2017, the starting point for many transitory clocks; and the continuity principle of sections 16 to 23 reappears in section 262."
+      }
+    },
+    {
+      "kind": "text",
+      "title": { "th": "พระราชอำนาจที่กระจายอยู่ในหมวดอื่น", "en": "Royal prerogatives found in other chapters" },
+      "body": {
+        "th": "หมวด 2 ไม่ได้รวมพระราชอำนาจไว้ทั้งหมด หลายเรื่องอยู่ในหมวดที่เกี่ยวกับองค์กรนั้น และทุกเรื่องที่เกี่ยวกับราชการแผ่นดินต้องมีผู้รับสนองตามมาตรา 182 เว้นแต่รัฐธรรมนูญกำหนดไว้เป็นอย่างอื่น\n- ยุบสภาผู้แทนราษฎร โดยพระราชกฤษฎีกา ทำได้ครั้งเดียวในเหตุการณ์เดียวกัน (มาตรา 103)\n- เรียกประชุม เปิด และปิดประชุมรัฐสภา (มาตรา 122)\n- ทรงลงพระปรมาภิไธยในร่างพระราชบัญญัติ หรือพระราชทานคืน (มาตรา 81 มาตรา 145 มาตรา 146)\n- ให้รัฐมนตรีพ้นจากความเป็นรัฐมนตรีตามที่นายกรัฐมนตรีถวายคำแนะนำ (มาตรา 171)\n- ตราพระราชกำหนด (มาตรา 172 มาตรา 174) และพระราชกฤษฎีกา (มาตรา 175)\n- ประกาศใช้และเลิกใช้กฎอัยการศึก (มาตรา 176)\n- ประกาศสงครามเมื่อได้รับความเห็นชอบของรัฐสภา ไม่น้อยกว่าสองในสามของสมาชิกทั้งสองสภา (มาตรา 177)\n- ทำหนังสือสัญญากับนานาประเทศ (มาตรา 178)\n- พระราชทานอภัยโทษ (มาตรา 179)\n- แต่งตั้งข้าราชการระดับปลัดกระทรวง อธิบดี และเทียบเท่า (มาตรา 180) และผู้พิพากษาตุลาการ (มาตรา 190)\n- ศาลพิจารณาพิพากษาอรรถคดีในพระปรมาภิไธยพระมหากษัตริย์ (มาตรา 188)",
+        "en": "Chapter 2 does not hold every royal prerogative. Many sit in the chapter about the body concerned, and every one that concerns affairs of state needs a countersignature under section 182 unless the constitution provides otherwise.\n- Dissolving the House by royal decree, only once for the same circumstance (section 103).\n- Convoking, opening and closing Parliament (section 122).\n- Signing bills into law, or returning them (sections 81, 145, 146).\n- Removing a minister on the prime minister's advice (section 171).\n- Enacting emergency decrees (sections 172, 174) and royal decrees (section 175).\n- Declaring and lifting martial law (section 176).\n- Declaring war with Parliament's approval by at least two thirds of both houses (section 177).\n- Concluding treaties (section 178).\n- Granting pardons (section 179).\n- Appointing permanent secretaries, director-generals and equivalents (section 180), and judges (section 190).\n- Courts try and adjudicate cases in the name of the King (section 188)."
+      }
+    },
+    {
+      "kind": "logic",
+      "title": { "th": "เมื่อร่างกฎหมายไม่ได้รับพระราชทานคืน", "en": "When a bill is not returned with assent" },
+      "body": {
+        "th": "มาตรา 146 แก้ปัญหาที่ทุกระบบต้องเจอ ถ้าผู้มีอำนาจลงนามไม่ลงนาม กฎหมายจะค้างอยู่ตลอดไปหรือไม่\n\nขั้นตอนคือ\n- ร่างพระราชบัญญัติที่ไม่ทรงเห็นชอบและพระราชทานคืนมา หรือพ้น 90 วันแล้วไม่ได้พระราชทานคืน\n- รัฐสภาต้องปรึกษาร่างนั้นใหม่\n- ถ้ายืนยันตามเดิมด้วยคะแนนไม่น้อยกว่าสองในสามของสมาชิกทั้งหมดเท่าที่มีอยู่ของทั้งสองสภา นายกรัฐมนตรีนำขึ้นทูลเกล้าทูลกระหม่อมถวายอีกครั้ง\n- ถ้าไม่ได้ทรงลงพระปรมาภิไธยพระราชทานคืนมาภายใน 30 วัน ให้นายกรัฐมนตรีนำไปประกาศในราชกิจจานุเบกษาใช้บังคับได้เสมือนหนึ่งว่าได้ทรงลงพระปรมาภิไธยแล้ว\n\nตรรกะคือการรักษาสองค่าไว้พร้อมกัน ค่าแรกคือโอกาสให้ทบทวน ร่างที่มีปัญหาได้กลับไปให้รัฐสภาคิดอีกครั้ง ค่าที่สองคือกฎหมายที่ผู้แทนของปวงชนยืนยันด้วยเสียงสูงมากต้องไม่ค้าง ตัวเลข 90 / สองในสาม / 30 จำง่ายถ้าคิดว่า รอนาน → ยืนยันหนัก → รอสั้น",
+        "en": "Section 146 solves a problem every system faces: if the person whose signature is required does not sign, does the law stay stuck forever?\n\nThe steps:\n- A bill the King does not approve and returns, or does not return within 90 days.\n- Parliament must reconsider it.\n- If Parliament reaffirms it by at least two thirds of the total existing members of both houses, the prime minister presents it again.\n- If it is not signed and returned within 30 days, the prime minister publishes it in the Royal Gazette and it takes effect as if it had been signed.\n\nThe logic keeps two values at once. The first is a chance to reconsider: a troubled bill goes back for Parliament to think again. The second is that a law reaffirmed by a very large majority of the people's representatives must not stay stuck. The numbers 90 / two thirds / 30 are easy if you think: a long wait → a heavy reaffirmation → a short wait."
+      }
+    },
+    {
+      "kind": "text",
+      "title": { "th": "ราชาศัพท์ที่ต้องรู้สำหรับหมวดนี้", "en": "Royal vocabulary you need for this chapter" },
+      "body": {
+        "th": "ข้อสอบภาษาไทยมักใช้ถ้อยคำตามตัวบทตรง ๆ ถ้ารู้ความหมาย จะไม่สับสนกับตัวเลือกที่คล้ายกัน\n- พระบรมราชโองการ: คำสั่งของพระมหากษัตริย์\n- พระปรมาภิไธย: พระนามของพระมหากษัตริย์ ใช้ในวลี “ทรงลงพระปรมาภิไธย” คือทรงลงพระนาม\n- พระราชหัตถเลขา: จดหมายที่ทรงเขียนด้วยพระองค์เอง\n- ทูลเกล้าทูลกระหม่อมถวาย: นำสิ่งของหรือเอกสารขึ้นถวายพระมหากษัตริย์\n- กราบบังคมทูล: กล่าวหรือรายงานต่อพระมหากษัตริย์\n- พระราชอัธยาศัย: พระราชประสงค์หรือดุลพินิจส่วนพระองค์\n- โปรดเกล้าโปรดกระหม่อม: ทรงอนุญาตหรือทรงสั่ง\n- ถวายสัตย์ปฏิญาณ: กล่าวคำสัตย์ต่อพระมหากษัตริย์\n- พระรัชทายาท: ผู้ที่ทรงแต่งตั้งไว้ให้สืบราชสมบัติ\n- ผู้สืบราชสันตติวงศ์: ผู้มีสิทธิสืบราชสมบัติตามกฎมณเฑียรบาล\n- อัญเชิญขึ้นทรงราชย์: เชิญให้ขึ้นเป็นพระมหากษัตริย์\n- ราชบัลลังก์ว่างลง: ไม่มีพระมหากษัตริย์ในขณะนั้น\n- ผู้สำเร็จราชการแทนพระองค์: ผู้ปฏิบัติพระราชภาระแทน\n- ข้าราชการในพระองค์: ข้าราชการในหน่วยงานในพระองค์",
+        "en": "Thai-language exams often reuse the exact wording of the text. Knowing what each term means keeps you from confusing look-alike options.\n- Phra borom rachaongkan (พระบรมราชโองการ): a royal command.\n- Phra poramaphithai (พระปรมาภิไธย): the King's name; “to sign” is ทรงลงพระปรมาภิไธย.\n- Phra rachahatthalekha (พระราชหัตถเลขา): a letter in the King's own hand.\n- Thun klao thun kramom thawai (ทูลเกล้าทูลกระหม่อมถวาย): to present something to the King.\n- Krap bangkhom thun (กราบบังคมทูล): to address or report to the King.\n- Phra rach-atthayasai (พระราชอัธยาศัย): the King's own discretion or pleasure.\n- Prot klao prot kramom (โปรดเกล้าโปรดกระหม่อม): the King graciously permits or commands.\n- Thawai sat patiyan (ถวายสัตย์ปฏิญาณ): to swear allegiance before the King.\n- Phra ratchathayat (พระรัชทายาท): the designated Heir.\n- Phu suep rachasantatiwong (ผู้สืบราชสันตติวงศ์): a person in the line of succession under the Palace Law.\n- Anchoen khuen song rat (อัญเชิญขึ้นทรงราชย์): to invite to ascend the throne.\n- Rachabanlang wang long (ราชบัลลังก์ว่างลง): the throne falls vacant.\n- Phu samret rachakan thaen phra-ong (ผู้สำเร็จราชการแทนพระองค์): the Regent.\n- Kharachakan nai phra-ong (ข้าราชการในพระองค์): royal household officials."
+      }
+    },
+    {
+      "kind": "numbers",
+      "title": { "th": "ตัวเลขของบทนี้", "en": "Numbers in this chapter" },
+      "rows": [
+        { "th": "คณะองคมนตรี", "en": "Privy Council", "value": "ประธาน 1 + ไม่เกิน 18 = ไม่เกิน 19 / President + up to 18 = up to 19", "sections": [10] },
+        { "th": "วาระองคมนตรี", "en": "Privy Councillor's term", "value": "ไม่กำหนด (พ้นเมื่อตาย ลาออก มีพระบรมราชโองการ) / none set (death, resignation, royal command)", "sections": [14] },
+        { "th": "กฎมณเฑียรบาลว่าด้วยการสืบราชสันตติวงศ์", "en": "Palace Law on Succession", "value": "พ.ศ. 2467 / B.E. 2467 (1924)", "sections": [20] },
+        { "th": "ร่างกฎหมายไม่ได้พระราชทานคืน", "en": "Bill not returned", "value": "90 วัน / 90 days", "sections": [146] },
+        { "th": "มติยืนยันร่างกฎหมาย", "en": "Vote to reaffirm the bill", "value": "≥ 2/3 ของสมาชิกทั้งสองสภา / ≥ 2/3 of both houses", "sections": [146] },
+        { "th": "ประกาศใช้เสมือนทรงลงพระปรมาภิไธย", "en": "Published as if signed", "value": "หลัง 30 วัน / after 30 days", "sections": [146] },
+        { "th": "ประกาศสงคราม", "en": "Declaring war", "value": "≥ 2/3 ของสมาชิกทั้งสองสภา / ≥ 2/3 of both houses", "sections": [177] },
+        { "th": "วันประกาศใช้รัฐธรรมนูญ", "en": "Promulgation date", "value": "6 เมษายน 2560 / 6 April 2017", "sections": [262] }
+      ]
+    },
+    {
+      "kind": "mnemonic",
+      "title": { "th": "1 + 18 และ 2467", "en": "1 + 18, and 2467" },
+      "body": {
+        "th": "องคมนตรี “หนึ่งนำ สิบแปดตาม” ประธานหนึ่ง องคมนตรีอื่นไม่เกินสิบแปด รวมไม่เกินสิบเก้า ข้อสอบชอบใส่ตัวเลือก 18 รวม หรือ 19 ไม่รวมประธาน จำว่าสิบแปดคือ “คนอื่น” ไม่รวมประธาน\n\nกฎมณเฑียรบาล 2467 ตรงกับปี ค.ศ. 1924 ซึ่งเก่ากว่าการเปลี่ยนแปลงการปกครองปี 2475 ถึงแปดปี จำว่า “กฎการสืบราชสมบัติมาก่อนรัฐธรรมนูญ แล้วรัฐธรรมนูญทุกฉบับรับมาใช้”\n\nลำดับผู้สำเร็จราชการ จำว่า “ทรงตั้ง → องคมนตรีเสนอ → ประธานองคมนตรีรักษาการ → องคมนตรีเลือกกันเอง” ตรงกับมาตรา 16 → 17 → 18 → 23",
+        "en": "Privy Council: “one leads, eighteen follow.” One President, up to eighteen others, at most nineteen in all. Exams offer “18 including the President” or “19 not counting the President.” Remember that eighteen means the others, not the President.\n\nThe Palace Law of B.E. 2467 is 1924 CE, eight years older than the 1932 change to constitutional rule. Remember: the succession law came before the constitution, and every constitution since has adopted it.\n\nRegent order: “the King appoints → the Council proposes → its President stands in → the councillors choose one of their own,” matching sections 16 → 17 → 18 → 23."
+      }
+    },
+    {
+      "kind": "check",
+      "title": { "th": "ทดสอบตัวเอง", "en": "Check yourself" },
+      "items": [
+        {
+          "q": { "th": "ใครลงนามรับสนองพระบรมราชโองการแต่งตั้งประธานองคมนตรี และใครรับสนองการแต่งตั้งองคมนตรีอื่น", "en": "Who countersigns the appointment of the President of the Privy Council, and who countersigns appointments of other councillors?" },
+          "a": { "th": "ประธานรัฐสภา และประธานองคมนตรี ตามลำดับ", "en": "The President of the National Assembly, and the President of the Privy Council, respectively." },
+          "sections": [11]
+        },
+        {
+          "q": { "th": "อัครศาสนูปถัมภก หมายถึงอะไร", "en": "What does อัครศาสนูปถัมภก (Upholder of religions) mean?" },
+          "a": { "th": "ทรงเป็นองค์อุปถัมภ์ทุกศาสนา ไม่ใช่เฉพาะพระพุทธศาสนา", "en": "Patron of all religions, not Buddhism alone." },
+          "sections": [7]
+        },
+        {
+          "q": { "th": "ระหว่างที่ราชบัลลังก์ว่างและยังไม่มีการประกาศอัญเชิญ ใครเป็นผู้สำเร็จราชการ (กรณีไม่มีผู้สำเร็จราชการอยู่ก่อน)", "en": "While the throne is vacant and no invitation has yet been proclaimed, who is Regent (where none was already in place)?" },
+          "a": { "th": "ประธานองคมนตรี เป็นการชั่วคราวไปพลางก่อน", "en": "The President of the Privy Council, for the time being." },
+          "sections": [22]
+        },
+        {
+          "q": { "th": "กรณีไม่ได้ทรงแต่งตั้งพระรัชทายาทไว้ ใครเสนอพระนามผู้สืบราชสันตติวงศ์ และรัฐสภามีบทบาทอย่างไร", "en": "If no Heir has been designated, who proposes the successor's name, and what does Parliament do?" },
+          "a": { "th": "คณะองคมนตรีเสนอต่อคณะรัฐมนตรี เพื่อเสนอต่อรัฐสภาให้ความเห็นชอบ (เสนอพระนามพระราชธิดาได้)", "en": "The Privy Council proposes to the Cabinet, which submits it to Parliament for approval; a princess may be named." },
+          "sections": [21]
+        },
+        {
+          "q": { "th": "ผู้สำเร็จราชการแทนพระองค์ต้องปฏิญาณตนที่ใด", "en": "Where must a Regent make the affirmation?" },
+          "a": { "th": "ในที่ประชุมรัฐสภา (ที่ประชุมร่วมกัน)", "en": "Before a (joint) sitting of the National Assembly." },
+          "sections": [19, 156]
+        },
+        {
+          "q": { "th": "องคมนตรีเป็นข้าราชการได้หรือไม่", "en": "May a Privy Councillor be a civil servant?" },
+          "a": { "th": "ไม่ได้ เว้นแต่เป็นข้าราชการในพระองค์ในตำแหน่งองคมนตรี", "en": "No, except as a royal household official in the capacity of Privy Councillor." },
+          "sections": [12]
+        },
+        {
+          "q": { "th": "ทำไมการกระทำในพระปรมาภิไธยเกี่ยวกับราชการแผ่นดินต้องมีผู้รับสนอง", "en": "Why must royal acts on affairs of state be countersigned?" },
+          "a": { "th": "เพราะพระมหากษัตริย์ทรงอยู่ในฐานะที่ผู้ใดจะกล่าวหาหรือฟ้องร้องมิได้ ผู้รับสนองจึงเป็นผู้รับผิดชอบแทน เพื่อให้โซ่ความรับผิดชอบไม่ขาด", "en": "Because the King cannot be accused or sued, the countersigner carries the responsibility, keeping the chain of accountability intact." },
+          "sections": [6, 182]
+        },
+        {
+          "q": { "th": "การแก้ไขหมวด 2 ทำได้หรือไม่ ต้องมีเงื่อนไขพิเศษอะไร", "en": "Can Chapter 2 be amended, and with what extra condition?" },
+          "a": { "th": "ทำได้หากไม่เป็นการเปลี่ยนการปกครองหรือรูปแบบของรัฐ แต่ต้องทำประชามติก่อนนำขึ้นทูลเกล้าทูลกระหม่อมถวาย", "en": "Yes, if it does not change the regime or the form of state, but a referendum must be held before it is presented to the King." },
+          "sections": [255, 256]
+        }
+      ]
+    }
+  ],
+  "sections": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 80, 81, 103, 106, 115, 122, 123, 145, 146, 151, 156, 158, 161, 171, 172, 174, 175, 176, 177, 178, 179, 180, 182, 188, 190, 191, 204, 249, 255, 256, 262],
+  "sources": [
+    "รัฐธรรมนูญแห่งราชอาณาจักรไทย พุทธศักราช 2560 แก้ไขเพิ่มเติม (ฉบับที่ 1) พ.ศ. 2564",
+    "กฎมณเฑียรบาลว่าด้วยการสืบราชสันตติวงศ์ พระพุทธศักราช 2467",
+    "Records of the National Legislative Assembly, sessions of 29 November and 1 December 2016 (acknowledgement of succession and invitation)",
+    "Royal Gazette, promulgation of the Constitution of the Kingdom of Thailand, 6 April 2017"
+  ]
+}
