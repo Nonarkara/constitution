@@ -5,13 +5,16 @@ import vm from "node:vm";
 import ts from "typescript";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { CITATION_PENDING } from "../lib/pokklong.ts";
 import {
   buildPokklongQueue,
+  citationPending,
+  creditParagraph,
   emptyPokklong,
+  guessKey,
   POKKLONG_KEY,
   parsePokklong,
   recordPokklong,
+  sectionLine,
   stepAccuracy,
   textOf,
   type PokklongBank,
@@ -108,6 +111,28 @@ test("pokklong progress is its own namespace and blank text falls back to Thai",
   assert.equal(textOf({ th: "ไทย", en: "English", zh: "中" }, "zh"), "中");
 });
 
+test("citation, credit and section lines follow the page language", () => {
+  assert.equal(citationPending("th"), "รอยืนยันการอ้างอิง");
+  assert.equal(citationPending("en"), "citation to be confirmed");
+  assert.equal(citationPending("zh"), "引用待核实");
+  assert.equal(creditParagraph("en", bank.meta.credit), bank.meta.credit);
+  assert.match(creditParagraph("th", bank.meta.credit), /เขียนคำถามใหม่ทั้งหมด ไม่ได้คัดลอกข้อความ/);
+  assert.match(creditParagraph("th", bank.meta.credit), /วิกิซอร์ซภาษาไทย/);
+  assert.match(creditParagraph("zh", bank.meta.credit), /题目均已重写，未逐字照搬/);
+  assert.match(creditParagraph("zh", bank.meta.credit), /泰文维基文库/);
+  assert.equal(creditParagraph("th", bank.meta.credit).includes("Questions rewritten"), false);
+  const paired = questions.find((question) => question.source.section.includes(" / "));
+  assert.ok(paired);
+  const [thai, english] = paired.source.section.split(" / ");
+  assert.equal(sectionLine(paired.source.section, "th"), thai);
+  assert.equal(sectionLine(paired.source.section, "en"), english);
+  assert.equal(sectionLine(paired.source.section, "zh"), english);
+  assert.equal(sectionLine("-", "en"), "-");
+  assert.equal(guessKey("Enter", 4, 2), 2);
+  assert.equal(guessKey("Enter", 4, null), null);
+  assert.equal(guessKey("3", 4, null), 2);
+});
+
 const compiled = ts.transpileModule(
   readFileSync(new URL("../components/GuessFirstCard.tsx", import.meta.url), "utf8"),
   {
@@ -126,13 +151,18 @@ vm.runInNewContext(compiled, {
   exports: cardModule.exports,
   require: (name: string) => {
     if (name === "react") return React;
-    if (name === "@/lib/pokklong") return { CITATION_PENDING };
+    if (name === "@/lib/pokklong") return { guessKey };
     throw new Error(name);
   },
 });
 const { GuessFirstCard } = cardModule.exports;
 
-function card(question: PokklongQuestion, revealed: boolean, selected: number | null) {
+function card(
+  question: PokklongQuestion,
+  revealed: boolean,
+  selected: number | null,
+  extra: Record<string, unknown> = {},
+) {
   const markup = renderToStaticMarkup(
     React.createElement(GuessFirstCard, {
       prompt: question.prompt.en,
@@ -146,7 +176,7 @@ function card(question: PokklongQuestion, revealed: boolean, selected: number | 
       logic: question.logic_so_far.en,
       mnemonic: question.mnemonic?.en ?? null,
       sourceAct: question.source.act.en,
-      sourceSection: question.source.section,
+      sourceSection: sectionLine(question.source.section, "en"),
       verified: question.source.verified,
       note: question.source.note,
       whyLabel: "Why",
@@ -155,10 +185,14 @@ function card(question: PokklongQuestion, revealed: boolean, selected: number | 
       sourceLabel: "Source",
       correctLabel: "Correct",
       wrongLabel: "Wrong",
+      verdictStop: ". ",
+      letterStop: ". ",
+      citationLabel: citationPending("en"),
       nextLabel: "Next",
       optionsLabel: "Options",
       onChoose: () => {},
       onNext: () => {},
+      ...extra,
     }),
   );
   return markup;
@@ -174,15 +208,17 @@ test("the reveal stays hidden until a guess, then shows why, logic, mnemonic and
   const question = questions.find((item) => {
     if (!item.mnemonic || !item.source.verified || item.source.section.length < 3) return false;
     const visible = [item.prompt.en, ...item.options.map((option) => option.en)].join("\n");
-    return !visible.includes(item.mnemonic.en) && !visible.includes(item.source.section);
+    const shown = sectionLine(item.source.section, "en");
+    return !visible.includes(item.mnemonic.en) && !visible.includes(item.source.section) && !visible.includes(shown);
   });
   assert.ok(question);
+  const shown = sectionLine(question.source.section, "en");
   const before = card(question, false, null);
   assert.equal(before.includes('data-testid="reveal"'), false);
   assert.equal(before.includes('data-reveal='), false);
   assert.equal(before.includes(question.mnemonic!.en), false);
-  assert.equal(before.includes(question.source.section), false);
-  assert.equal(before.includes(CITATION_PENDING), false);
+  assert.equal(before.includes(shown), false);
+  assert.equal(before.includes(citationPending("en")), false);
   assert.match(nextTag(before), /disabled/);
   assert.match(nextTag(before), /hidden/);
 
@@ -205,10 +241,38 @@ test("the reveal stays hidden until a guess, then shows why, logic, mnemonic and
 test("an unverified citation shows the confirmation marker only after the guess", () => {
   const question = questions.find((item) => !item.source.verified);
   assert.ok(question);
-  assert.equal(card(question, false, null).includes(CITATION_PENDING), false);
+  assert.equal(card(question, false, null).includes(citationPending("en")), false);
   const after = card(question, true, question.answer === 0 ? 1 : 0);
-  const marker = after.indexOf(CITATION_PENDING);
+  const marker = after.indexOf(citationPending("en"));
   const source = after.indexOf('data-reveal="source"');
   assert.ok(source >= 0 && marker > source);
+  const sourceHtml = after.slice(source);
+  const english = sectionLine(question.source.section, "en");
+  const thai = sectionLine(question.source.section, "th");
+  if (english !== thai) {
+    assert.equal(sourceHtml.includes(english), true);
+    assert.equal(sourceHtml.includes(thai), false);
+  }
   assert.match(after, new RegExp(question.source.note!.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  const zh = card(question, true, question.answer === 0 ? 1 : 0, {
+    wrongLabel: "错误",
+    correctLabel: "正确",
+    verdictStop: "。",
+    letterStop: "",
+    citationLabel: citationPending("zh"),
+    letters: ["1", "2", "3", "4"],
+  });
+  assert.match(zh, /错误。/);
+  assert.equal(zh.includes("错误."), false);
+  assert.match(zh, /引用待核实/);
+  const th = card(question, true, question.answer === 0 ? 1 : 0, {
+    wrongLabel: "ผิด",
+    correctLabel: "ถูก",
+    verdictStop: " ",
+    letterStop: ". ",
+    citationLabel: citationPending("th"),
+  });
+  assert.equal(th.includes("ผิด."), false);
+  assert.match(th, /ผิด /);
+  assert.match(th, /รอยืนยันการอ้างอิง/);
 });

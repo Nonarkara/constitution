@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { CITATION_PENDING } from "@/lib/pokklong";
+import { guessKey } from "@/lib/pokklong";
 
 export type GuessFirstCardProps = {
   prompt: string;
@@ -23,6 +23,11 @@ export type GuessFirstCardProps = {
   sourceLabel: string;
   correctLabel: string;
   wrongLabel: string;
+  /** After the verdict word: ". " in English, a space in Thai, "。" in Chinese. */
+  verdictStop: string;
+  /** After the choice letter. Empty in Chinese, where the verdict already ends with "。". */
+  letterStop: string;
+  citationLabel: string;
   nextLabel: string;
   optionsLabel: string;
   onChoose: (index: number) => void;
@@ -51,6 +56,9 @@ export function GuessFirstCard({
   sourceLabel,
   correctLabel,
   wrongLabel,
+  verdictStop,
+  letterStop,
+  citationLabel,
   nextLabel,
   optionsLabel,
   onChoose,
@@ -67,8 +75,8 @@ export function GuessFirstCard({
       const tag = (event.target as HTMLElement | null)?.tagName;
       if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
       if (revealed) return;
-      const index = ["1", "2", "3", "4"].indexOf(event.key);
-      if (index < 0 || index >= options.length) return;
+      const index = guessKey(event.key, options.length, null);
+      if (index === null) return;
       event.preventDefault();
       onChooseRef.current(index);
     };
@@ -102,6 +110,11 @@ export function GuessFirstCard({
               disabled={revealed}
               aria-pressed={selected === index}
               onClick={() => onChoose(index)}
+              onKeyDown={(event) => {
+                if (revealed || guessKey(event.key, options.length, index) === null || event.key !== "Enter") return;
+                event.preventDefault();
+                onChoose(index);
+              }}
             >
               <span className="mono choice-letter">{letters[index]}</span>
               <span className="choice-text">{option}</span>
@@ -117,10 +130,12 @@ export function GuessFirstCard({
             className={`explanation-panel ${right ? "panel-correct" : "panel-wrong"}`}
             data-testid="reveal"
           >
-            <p className="explanation-head">
+            <p className="explanation-head" data-reveal="verdict">
               {right ? correctLabel : wrongLabel}
-              {". "}
-              {letters[answer]}. {options[answer]}
+              {verdictStop}
+              {letters[answer]}
+              {letterStop}
+              {options[answer]}
             </p>
             <p data-reveal="why">
               <span className="micro">{whyLabel}</span>
@@ -128,7 +143,7 @@ export function GuessFirstCard({
               {why}
             </p>
             <p data-reveal="logic">
-              <span className="micro">{stepName}. {logicLabel}</span>
+              <span className="micro">{stepName}{verdictStop === "。" ? "。" : ". "}{logicLabel}</span>
               <br />
               {logic}
             </p>
@@ -147,7 +162,7 @@ export function GuessFirstCard({
               {!verified && (
                 <>
                   <br />
-                  <span className="pokklong-unverified">{CITATION_PENDING}</span>
+                  <span className="pokklong-unverified">{citationLabel}</span>
                   {note ? ` ${note}` : ""}
                 </>
               )}

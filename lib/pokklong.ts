@@ -3,8 +3,41 @@ import { fisherYates } from "./shuffle.ts";
 
 /** Separate from constitution-progress so Pokklong answers never enter constitution stats. */
 export const POKKLONG_KEY = "pokklong-progress";
-export const CITATION_PENDING = "citation to be confirmed";
 export const STEP_COUNT = 12;
+
+const SLIDE_SET = "แนวข้อสอบ พ.ร.บ.วิธีปฏิบัติราชการทางปกครอง พ.ศ. 2539 (ชุดสู้ไม่ถอย)";
+
+export function citationPending(lang: Lang): string {
+  if (lang === "th") return "รอยืนยันการอ้างอิง";
+  if (lang === "zh") return "引用待核实";
+  return "citation to be confirmed";
+}
+
+/** Local rendering of meta.credit. The English string stays the bank's own paragraph. */
+export function creditParagraph(lang: Lang, english: string): string {
+  if (lang === "th") {
+    return `ได้แรงบันดาลใจจาก ${SLIDE_SET} โดย ประพันธ์ เวารัมย์ (SlideShare) เขียนคำถามใหม่ทั้งหมด ไม่ได้คัดลอกข้อความ ตรวจตัวบทกับวิกิซอร์ซภาษาไทย`;
+  }
+  if (lang === "zh") {
+    return `灵感来自${SLIDE_SET}，作者 ประพันธ์ เวารัมย์（Praphan Waorom，SlideShare）。题目均已重写，未逐字照搬；法条已对照泰文维基文库核对。`;
+  }
+  return english;
+}
+
+/** "มาตรา N / s.N" shows the Thai half on Thai pages and the English half on EN and ZH. */
+export function sectionLine(section: string, lang: Lang): string {
+  const parts = section.split(" / ");
+  if (parts.length !== 2 || !parts[0] || !parts[1]) return section;
+  return lang === "th" ? parts[0] : parts[1];
+}
+
+/** Number keys pick an option. Enter commits the option that already has focus. */
+export function guessKey(key: string, optionCount: number, focusedIndex: number | null): number | null {
+  const numbered = ["1", "2", "3", "4"].indexOf(key);
+  if (numbered >= 0 && numbered < optionCount) return numbered;
+  if (key === "Enter" && focusedIndex !== null && focusedIndex >= 0 && focusedIndex < optionCount) return focusedIndex;
+  return null;
+}
 
 export type PokklongSource = {
   act: Text;

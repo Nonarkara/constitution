@@ -1,13 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import bank from "@/data/pokklong/questions.json";
 import { choiceLetter } from "@/lib/shuffle";
 import { tr, type Lang } from "@/lib/i18n";
 import {
   buildPokklongQueue,
+  citationPending,
+  creditParagraph,
   loadPokklongProgress,
   recordPokklong,
   savePokklongProgress,
+  sectionLine,
   stepAccuracy,
   stepHeader,
   textOf,
@@ -16,6 +19,7 @@ import {
   type PokklongQuestion,
 } from "@/lib/pokklong";
 import { useStudy } from "./Provider";
+import { useHidePageNext } from "./Shell";
 import { PracticeTabs } from "./PracticeTabs";
 import { GuessFirstCard } from "./GuessFirstCard";
 
@@ -36,6 +40,8 @@ export function PokklongPractice() {
   const [revealed, setRevealed] = useState(false);
   const [runCorrect, setRunCorrect] = useState(0);
   const [runAnswered, setRunAnswered] = useState(0);
+  const answering = useRef(false);
+  useHidePageNext(phase === "intro" || phase === "question");
 
   useEffect(() => {
     setProgress(loadPokklongProgress());
@@ -58,12 +64,14 @@ export function PokklongPractice() {
     setRevealed(false);
     setRunCorrect(0);
     setRunAnswered(0);
+    answering.current = false;
     setPhase("intro");
     window.scrollTo({ top: 0 });
   };
 
   const commit = (choice: number) => {
-    if (revealed || !current) return;
+    if (answering.current || revealed || !current) return;
+    answering.current = true;
     const correct = choice === current.answer;
     setSelected(choice);
     setRevealed(true);
@@ -73,6 +81,7 @@ export function PokklongPractice() {
   };
 
   const goNext = () => {
+    answering.current = false;
     const following = queue[index + 1];
     if (!following) {
       setPhase("done");
@@ -283,7 +292,7 @@ function Question({
         logic={textOf(question.logic_so_far, lang)}
         mnemonic={mnemonic || null}
         sourceAct={textOf(question.source.act, lang)}
-        sourceSection={question.source.section}
+        sourceSection={sectionLine(question.source.section, lang)}
         verified={question.source.verified}
         note={question.source.note}
         whyLabel={tr(lang, "เหตุผล", "Why", "原因")}
@@ -292,6 +301,9 @@ function Question({
         sourceLabel={tr(lang, "ที่มา", "Source", "出处")}
         correctLabel={tr(lang, "ถูก", "Correct", "正确")}
         wrongLabel={tr(lang, "ผิด", "Wrong", "错误")}
+        verdictStop={lang === "zh" ? "。" : lang === "en" ? ". " : " "}
+        letterStop={lang === "zh" ? "" : ". "}
+        citationLabel={citationPending(lang)}
         nextLabel={
           index < total - 1
             ? tr(lang, "ข้อถัดไป", "Next", "下一题")
@@ -388,7 +400,7 @@ function Credit({ lang }: { lang: Lang }) {
           "来源：Praphan Waorom 的课件",
         )}
       </p>
-      <p className="micro">{data.meta.credit}</p>
+      <p className="micro">{creditParagraph(lang, data.meta.credit)}</p>
     </footer>
   );
 }
