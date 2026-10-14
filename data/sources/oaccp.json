@@ -1,0 +1,17 @@
+{
+  "name": {
+    "th": "พระราชบัญญัติประกอบรัฐธรรมนูญว่าด้วยวิธีพิจารณาของศาลรัฐธรรมนูญ พ.ศ. 2561",
+    "en": "Organic Act on Constitutional Court Procedure B.E. 2561 (2018)",
+    "zh": "宪法法院程序法 2561 年（2018 年）"
+  },
+  "citation": {
+    "th": "ราชกิจจานุเบกษา เล่ม 135 ตอนที่ 18 ก วันที่ 12 มีนาคม 2561",
+    "en": "Royal Gazette Vol. 135 Part 18 A, 12 March 2018"
+  },
+  "sections": {
+    "46": {
+      "th": "ผู้ร้องจะยื่นคำร้องตามวรรคหนึ่งต่อศาลรัฐธรรมนูญได้ต่อเมื่อได้ใช้สิทธิร้องเรียนต่อผู้ตรวจการแผ่นดินมาแล้ว และผู้ตรวจการแผ่นดินมีคำสั่งไม่รับคำร้องหรือไม่มีคำสั่งภายในหกสิบวันนับแต่วันที่ได้รับคำร้อง",
+      "en": "A petitioner may file the petition under paragraph one to the Constitutional Court only after having exercised the right to petition the Ombudsmen, and the Ombudsmen have issued an order not to accept the petition or have not issued an order within sixty days from the date the petition was received."
+    }
+  }
+}

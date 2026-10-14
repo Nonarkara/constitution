@@ -3433,6 +3433,17 @@ footer { flex-wrap:wrap; gap:16px; }
   font-weight: 500;
   border-style: dashed;
 }
+.cram-source-tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 6px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-2, #555);
+  border: 1px solid var(--line, #ccc);
+  background: var(--bg-2, transparent);
+}
 .cram-traps li {
   margin: 10px 0;
 }

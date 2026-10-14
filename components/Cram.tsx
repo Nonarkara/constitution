@@ -7,7 +7,14 @@ import { LawRef, LawText, Peek } from "./LawRef";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel, type Lang } from "@/lib/i18n";
 
-type Row = { id: string; section: number; label: Record<Lang, string>; value: Record<Lang, string> };
+type Row = { id: string; section: number; label: Record<Lang, string>; value: Record<Lang, string>; source?: string; note?: Record<Lang, string> };
+
+const SourceTag = ({ source, note }: { source?: string; note?: Record<Lang, string> }) => {
+  if (!source || source === "constitution") return null;
+  const { lang } = useStudy();
+  const text = note?.[lang] ?? (source === "oaccp" ? "Organic Act" : source);
+  return <span className="cram-source-tag" title="not from the constitution — verify against the cited act">· {text}</span>;
+};
 
 // Everything an exam asks as a number, on one page. Covering the answers turns
 // reading into recall, which is what actually sticks the night before.
@@ -28,6 +35,7 @@ export function Cram() {
               {r.label[lang]}{" "}
               <span className="micro">
                 <LawRef n={r.section} label={sectionLabel(lang, r.section)} lang={lang} onOpen={() => setPeek(r.section)} />
+                <SourceTag source={r.source} note={r.note} />
               </span>
             </dt>
             <dd>
@@ -86,6 +94,7 @@ export function Cram() {
           {cram.traps.map((t) => (
             <li key={t.id}>
               <LawText text={t.text[lang]} lang={lang} />
+              <SourceTag source={t.source} note={t.note} />
             </li>
           ))}
         </ol>
