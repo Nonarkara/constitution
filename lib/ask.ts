@@ -328,6 +328,15 @@ export function outsideQuotes(text: string): string {
   return maskQuotes(text).masked.replace(/⟦\d+⟧/g, " ");
 }
 
+function section36Note(lang: Lang): string {
+  return tr(
+    lang,
+    "มาตรา 36 ห้ามตรวจ กัก หรือเปิดเผยข้อมูลที่สื่อสารถึงกัน เว้นแต่มีคำสั่งหรือหมายของศาล หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ การไม่มีหมายศาลอย่างเดียวจึงยังไม่จบคำถาม",
+    "Section 36 bars censorship, detention or disclosure of a communication except by a court order or warrant, or where there are other grounds as provided by law. No court order, by itself, does not settle the question.",
+    "第36条禁止检查、扣留或披露人们之间的通信，除非有法院的命令或令状，或者另有法律规定的其他理由。仅没有法院命令，并不能单独决定这个问题。",
+  );
+}
+
 /** If the answer drops section 36's statutory exception, put that exception back. */
 export function keepStatutoryExceptions(
   answer: string,
@@ -335,16 +344,16 @@ export function keepStatutoryExceptions(
   sections: number[],
   noteFirst = false,
 ): string {
-  if (!sections.includes(36) || SECTION_36_EXCEPTION.test(outsideQuotes(answer))) return answer;
-  const note = tr(
-    lang,
-    "มาตรา 36 ห้ามตรวจ กัก หรือเปิดเผยข้อมูลที่สื่อสารถึงกัน เว้นแต่มีคำสั่งหรือหมายของศาล หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ การไม่มีหมายศาลอย่างเดียวจึงยังไม่จบคำถาม",
-    "Section 36 bars censorship, detention or disclosure of a communication except by a court order or warrant, or where there are other grounds as provided by law. No court order, by itself, does not settle the question.",
-    "第36条禁止检查、扣留或披露人们之间的通信，除非有法院的命令或令状，或者另有法律规定的其他理由。仅没有法院命令，并不能单独决定这个问题。",
-  );
+  if (!sections.includes(36)) return answer;
+  const note = section36Note(lang);
   const body = answer.trim();
+  if (noteFirst) {
+    if (body.startsWith(note.slice(0, 24))) return body;
+    return body ? `${note}\n\n${body}` : note;
+  }
+  if (SECTION_36_EXCEPTION.test(outsideQuotes(body))) return body;
   if (!body) return note;
-  return noteFirst ? `${note}\n\n${body}` : `${body}\n\n${note}`;
+  return `${body}\n\n${note}`;
 }
 
 const THAI_LETTERS = /[\u0E00-\u0E7F]/g;
@@ -391,10 +400,10 @@ export function answerMatchesUi(text: string, lang: Lang): boolean {
 function unsafeRefusal(sentence: string): boolean {
   const value = sentence.toLowerCase();
   const denial =
-    /authority is lacking|lacks (?:the |their )?authority|no (?:\w+ )?authority|no power to|exceeds their power|beyond their power|do not have to comply|no obligation to (?:cooperate|comply)|no reason to comply|do not consent|not consent to|legal basis to tell|违反第36条|属于违法|越权|ไม่ต้องยอม|ไม่ยินยอม|เกินอำนาจ/;
+    /authority is lacking|lacks (?:the |their )?authority|no (?:\w+ )?authority|no power to|exceeds their power|beyond their power|do not have to (?:comply|give|provide|allow)|don't have to (?:give|allow)|need not (?:give|allow)|no need to allow|no legal reason|no court order\s*[—–-]\s*no\b|no obligation to (?:cooperate|comply)|no reason to comply|do not consent|not consent to|legal basis to tell|违反第36条|属于违法|越权|ไม่ต้องยอม|ไม่ยินยอม|ไม่ต้องให้|อย่าให้|ไม่มีอำนาจ|เกินอำนาจ|不必提供|可以说不|您无需|您不必|无需允许|不必允许|不需要允许|没有法院命令\s*[—–―\-]+/;
   if (denial.test(value)) return true;
   const refusal =
-    /may refuse|can refuse|could refuse|refuse without|right to refuse|allows you to refuse|right to demand|ปฏิเสธได้|มีสิทธิ์?ปฏิเสธ|สามารถปฏิเสธ|可以拒绝|有权拒绝|无权/;
+    /may refuse|can refuse|could refuse|\brefus(?:e|al|ing)\b|refuse without|right to refuse|allows you to refuse|right to demand|your refusal|ปฏิเสธ|拒绝|可以不给|不必给|不要给|无权/;
   if (refusal.test(value)) return true;
   const search = /search|ค้น|搜查|ตรวจค้น|dwelling|premises|บ้าน/;
   const order = /court order|warrant|หมาย|法院命令|令状|without a court order/;
@@ -446,10 +455,31 @@ export function dropEmptyQuotes(answer: string): string {
     .trim();
 }
 
+/** A sentence left with a hole where a Thai quotation was removed. */
+export function isBrokenStump(sentence: string): boolean {
+  const value = sentence.replace(/\s+/g, " ").trim();
+  if (!value) return false;
+  if (/must have or\b/i.test(value)) return true;
+  if (/\bhave or otherwise\b/i.test(value)) return true;
+  if (/\bor otherwise(?:\s*[.,]|\s*$)/i.test(value)) return true;
+  if (/states that\.?\s*$/i.test(value)) return true;
+  if (/(?:^|\s)clear:\s*$/i.test(value)) return true;
+  return false;
+}
+
 /** Drop a sentence that says the person may refuse a search, or that authority is lacking. */
 export function dropUnsafeRefusals(answer: string): string {
   const kept = splitSentences(answer).filter((part) => !unsafeRefusal(part) && !isQuoteFragment(part));
   return kept.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+}
+
+/** Drop a mid-sentence stump left after a Thai quotation is removed. */
+export function dropBrokenStumps(answer: string): string {
+  return splitSentences(answer)
+    .filter((part) => !isBrokenStump(part))
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 }
 
 /** English answers cite a section, not an article. */
@@ -468,11 +498,13 @@ export function shapeAskAnswer(
   translations: string[] = [],
 ): string {
   const stripped = stripFabricatedSources(answer);
+  const thaiBefore = lang !== "th" && /[\u0E00-\u0E7F]/.test(stripped);
   const refused = dropUnsafeRefusals(stripped);
   const cited = citeAsSection(refused, lang);
   const glossed = quotesInAnswerLanguage(cited, lang, translations);
-  const cleaned = stripDanglingColons(dropEmptyQuotes(glossed));
-  const dropped = refused.trim() !== stripped.trim() || cleaned.trim() !== glossed.trim();
+  const cleaned = dropBrokenStumps(stripDanglingColons(dropEmptyQuotes(glossed)));
+  const thaiStripped = thaiBefore && !/[\u0E00-\u0E7F]/.test(cleaned);
+  const dropped = refused.trim() !== stripped.trim() || cleaned.trim() !== glossed.trim() || thaiStripped;
   return keepStatutoryExceptions(cleaned, lang, sections, dropped);
 }
 
@@ -495,7 +527,12 @@ export function wrongLanguageResult(lang: Lang, excerpts: AskExcerpt[]) {
     )
     .join("\n\n");
   return {
-    answer: [lead, body].filter(Boolean).join("\n\n"),
+    answer: keepStatutoryExceptions(
+      [lead, body].filter(Boolean).join("\n\n"),
+      lang,
+      excerpts.map((excerpt) => excerpt.number),
+      true,
+    ),
     confidence: null,
     grounded: false,
     sources: [] as AskSource[],
