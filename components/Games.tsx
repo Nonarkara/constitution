@@ -93,9 +93,19 @@ function NumberMatch() {
         {message}
       </p>
       {finished && (
-        <button className="primary" onClick={deal}>
-          {tr(lang, "อีกชุด", "Another round", "再来一组")} →
-        </button>
+        <div style={{ marginTop: "14px" }}>
+          <p className="micro" style={{ color: "var(--ok)", fontWeight: 600 }}>
+            ✓ {tr(lang, `จับคู่สำเร็จครบ 6 ข้อ! (พลาด ${misses} ครั้ง)`, `All 6 matched! (${misses} misses)`, `全部6项配对成功！（失误${misses}次）`)}
+          </p>
+          <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginTop: "8px" }}>
+            <button className="primary" onClick={deal}>
+              {tr(lang, "อีกชุด", "Another round", "再来一组")} →
+            </button>
+            <Link href="/cheatsheet/" className="button">
+              {tr(lang, "ดูสรุปตัวเลข รธน.", "View constitutional numbers cheat sheet", "查看宪法数字速查")} →
+            </Link>
+          </div>
+        </div>
       )}
     </div>
   );
@@ -138,22 +148,37 @@ function SectionSprint() {
         {tr(lang, "เริ่มแข่ง 60 วินาที", "Start the 60-second sprint", "开始60秒挑战")} →
       </button>
     );
-  if (left === 0)
+  if (left === 0) {
+    const pct = score.tried > 0 ? Math.round((score.right / score.tried) * 100) : 0;
     return (
-      <div>
-        <p>
+      <div className="sprint-complete-card" style={{ padding: "16px 0" }}>
+        <p className="mono font-bold" style={{ fontSize: "var(--body)", margin: "0 0 6px" }}>
           {tr(
             lang,
-            `ได้ ${score.right} จาก ${score.tried} ข้อ`,
-            `${score.right} right out of ${score.tried}`,
-            `${score.tried}题中答对${score.right}题`,
+            `ได้ ${score.right} จาก ${score.tried} ข้อ (${pct}%)`,
+            `${score.right} right out of ${score.tried} (${pct}%)`,
+            `${score.tried}题中答对${score.right}题（${pct}%）`,
           )}
         </p>
-        <button className="primary" onClick={start}>
-          {tr(lang, "เล่นอีกครั้ง", "Play again", "再玩一次")} →
-        </button>
+        <p className="micro" style={{ color: "var(--muted)", margin: "0 0 16px" }}>
+          {pct >= 70
+            ? tr(lang, "ยอดเยี่ยม! ความจำตำแหน่งมาตราแม่นยำมาก", "Great speed and accuracy!", "反应迅速且条文定位精准！")
+            : tr(lang, "ฝึกสปรินต์บ่อย ๆ ช่วยให้เปิดข้อสอบจริงแล้วจำตำแหน่งหมวดได้ทันที", "Regular sprints build rapid section recall for real exams.", "经常速练能帮你迅速在真实考卷中回忆起所属章节。")}
+        </p>
+        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+          <button className="primary" onClick={start}>
+            {tr(lang, "เล่นอีกครั้ง", "Play again", "再玩一次")} →
+          </button>
+          <Link href="/practice/" className="button">
+            {tr(lang, "ไปฝึกตอบแบบเลือกหมวด", "Practise by chapter", "按章节练习")} →
+          </Link>
+          <Link href="/drills/" className="button">
+            {tr(lang, "เจาะตัวเลข 4,230 ข้อ", "4,230 number drills", "4,230道数字速练")} →
+          </Link>
+        </div>
       </div>
     );
+  }
   const text = readingText(card.n, lang).replace(/^第\d+条\s*/, "");
   return (
     <div>
@@ -167,10 +192,11 @@ function SectionSprint() {
       <blockquote className="sprint-text" lang={lang}>
         {text.slice(0, 180)}…
       </blockquote>
-      <div className="exam-formats">
+      <div className="sprint-options-grid">
         {card.options.map((n) => (
           <button
             key={n}
+            className="sprint-option-btn"
             onClick={() => {
               const ok = n === card.n;
               setScore({ right: score.right + (ok ? 1 : 0), tried: score.tried + 1 });

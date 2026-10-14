@@ -93,7 +93,7 @@ export function Exam() {
             <button
               key={f.id}
               disabled={!ready}
-              className={i === 0 ? "primary" : ""}
+              className={"exam-paper-card" + (i === 0 ? " primary" : "")}
               onClick={() => {
                 setAnswers({});
                 setIndex(0);
@@ -102,7 +102,36 @@ export function Exam() {
                 setPaper({ list: makePaper(questions, f), ends: Date.now() + f.minutes * 60_000 });
               }}
             >
-              {f.number}. {f.title[lang]} · {f.count} {tr(lang, "ข้อ", "questions", "题")} · {f.minutes} {tr(lang, "นาที", "min", "分钟")}
+              <div className="paper-card-top">
+                <span className="mono paper-card-num">
+                  {tr(
+                    lang,
+                    `ชุดที่ ${String(f.number).padStart(2, "0")}`,
+                    `Paper ${String(f.number).padStart(2, "0")}`,
+                    `第${String(f.number).padStart(2, "0")}套`,
+                  )}
+                </span>
+                <span className="paper-card-time mono">
+                  {f.minutes} {tr(lang, "นาที", "min", "分钟")}
+                </span>
+              </div>
+              <div className="paper-card-title">{f.title[lang]}</div>
+              <div className="paper-card-meta micro">
+                {f.count}{" "}
+                {tr(
+                  lang,
+                  "ข้อสอบจับเวลา",
+                  "timed questions",
+                  "道计时题",
+                )}{" "}
+                ·{" "}
+                {tr(
+                  lang,
+                  "เฉลยหลังส่ง",
+                  "solutions at end",
+                  "交卷后解析",
+                )}
+              </div>
             </button>
           ))}
         </div>

@@ -262,25 +262,27 @@ export function PracticeArena() {
                   if (e.key === "Enter" || e.key === " ") startSession("competition");
                 }}
               >
-                <h3>
-                  {tr(
-                    lang,
-                    "แนวแข่งขันตอบปัญหาศาลรัฐธรรมนูญ",
-                    "Constitutional Court quiz-competition style",
-                    "宪法法院知识竞赛风格"
-                  )}
-                </h3>
-                <p>
-                  {tr(
-                    lang,
-                    "30 ข้อที่เขียนขึ้นในแนวการแข่งขัน: การยื่นคำร้อง ม.212/213 ผู้รับสนองพระบรมราชโองการ พระราชกำหนด และการขัดกันแห่งผลประโยชน์",
-                    "30 questions written in the competition style: s.212/213 petitions, royal countersignature, emergency decrees and conflicts of interest.",
-                    "按竞赛风格编写的30道题：第212/213条申请、王室谕令副署、紧急法令及利益冲突。"
-                  )}
-                </p>
-                <button className="primary mode-start-btn">
+                <div className="mode-card-main">
+                  <h3>
+                    {tr(
+                      lang,
+                      "แนวแข่งขันตอบปัญหาศาลรัฐธรรมนูญ",
+                      "Constitutional Court quiz-competition style",
+                      "宪法法院知识竞赛风格",
+                    )}
+                  </h3>
+                  <p>
+                    {tr(
+                      lang,
+                      "30 ข้อที่เขียนขึ้นในแนวการแข่งขัน: การยื่นคำร้อง ม.212/213 ผู้รับสนองพระบรมราชโองการ พระราชกำหนด และการขัดกันแห่งผลประโยชน์",
+                      "30 questions written in the competition style: s.212/213 petitions, royal countersignature, emergency decrees and conflicts of interest.",
+                      "按竞赛风格编写的30道题：第212/213条申请、王室谕令副署、紧急法令及利益冲突。",
+                    )}
+                  </p>
+                </div>
+                <span className="mode-card-action primary" aria-hidden="true">
                   {tr(lang, "เริ่ม 30 ข้อ", "Start 30", "开始30题")} →
-                </button>
+                </span>
               </div>
 
               {/* Adaptive Weakness Drill */}
@@ -293,25 +295,27 @@ export function PracticeArena() {
                   if (e.key === "Enter" || e.key === " ") startSession("weak");
                 }}
               >
-                <h3>
-                  {tr(
-                    lang,
-                    "ข้อที่เคยพลาด",
-                    "What you missed",
-                    "你答错过的题"
-                  )}
-                </h3>
-                <p>
-                  {tr(
-                    lang,
-                    "ข้อที่คุณตอบผิด และหมวดที่ยังไม่ผ่านเกณฑ์ วนกลับมาให้ลองใหม่",
-                    "Questions you got wrong and chapters not yet passed, brought back to try again.",
-                    "你答错的题和尚未达标的章节，再来一次。"
-                  )}
-                </p>
-                <button className="mode-start-btn">
+                <div className="mode-card-main">
+                  <h3>
+                    {tr(
+                      lang,
+                      "ข้อที่เคยพลาด",
+                      "What you missed",
+                      "你答错过的题",
+                    )}
+                  </h3>
+                  <p>
+                    {tr(
+                      lang,
+                      "ข้อที่คุณตอบผิด และหมวดที่ยังไม่ผ่านเกณฑ์ วนกลับมาให้ลองใหม่",
+                      "Questions you got wrong and chapters not yet passed, brought back to try again.",
+                      "你答错的题和尚未达标的章节，再来一次。",
+                    )}
+                  </p>
+                </div>
+                <span className="mode-card-action" aria-hidden="true">
                   {tr(lang, "ลองใหม่ 20 ข้อ", "Retry 20", "重练20题")} →
-                </button>
+                </span>
               </div>
 
               {/* 10-Question Sprint */}
@@ -324,20 +328,22 @@ export function PracticeArena() {
                   if (e.key === "Enter" || e.key === " ") startSession("sprint");
                 }}
               >
-                <h3>
-                  {tr(lang, "สุ่ม 10 ข้อ", "Ten at random", "随机10题")}
-                </h3>
-                <p>
-                  {tr(
-                    lang,
-                    "สิบข้อจากทั้งเล่ม พอดีช่วงพักสั้น ๆ เฉลยพร้อมวิธีคิดหลังตอบทุกข้อ",
-                    "Ten from the whole text, for a short break. Each answer comes with the reasoning.",
-                    "从全文随机抽十题，适合短暂休息时练。每题答后附解题思路。"
-                  )}
-                </p>
-                <button className="mode-start-btn">
-                  {tr(lang, "เริ่ม", "Start", "开始")} →
-                </button>
+                <div className="mode-card-main">
+                  <h3>
+                    {tr(lang, "สุ่ม 10 ข้อ", "Ten at random", "随机10题")}
+                  </h3>
+                  <p>
+                    {tr(
+                      lang,
+                      "สิบข้อจากทั้งเล่ม พอดีช่วงพักสั้น ๆ เฉลยพร้อมวิธีคิดหลังตอบทุกข้อ",
+                      "Ten from the whole text, for a short break. Each answer comes with the reasoning.",
+                      "从全文随机抽十题，适合短暂休息时练。每题答后附解题思路。",
+                    )}
+                  </p>
+                </div>
+                <span className="mode-card-action" aria-hidden="true">
+                  {tr(lang, "เริ่ม 10 ข้อ", "Start 10", "开始10题")} →
+                </span>
               </div>
 
               {/* Real-Life Situations */}
@@ -350,25 +356,27 @@ export function PracticeArena() {
                   if (e.key === "Enter" || e.key === " ") startSession("real-life");
                 }}
               >
-                <h3>
-                  {tr(
-                    lang,
-                    "เรื่องในชีวิตจริง",
-                    "Everyday situations",
-                    "日常生活情境"
-                  )}
-                </h3>
-                <p>
-                  {tr(
-                    lang,
-                    "การค้นบ้านโดยไม่มีหมาย การฟ้องหน่วยงานรัฐ การชุมนุม และหลักความได้สัดส่วนตามมาตรา 26",
-                    "Searches without a warrant, suing a state agency, gathering to protest and the s.26 proportionality test.",
-                    "无令搜查、起诉国家机关、集会抗议及第26条比例原则。"
-                  )}
-                </p>
-                <button className="mode-start-btn">
+                <div className="mode-card-main">
+                  <h3>
+                    {tr(
+                      lang,
+                      "เรื่องในชีวิตจริง",
+                      "Everyday situations",
+                      "日常生活情境",
+                    )}
+                  </h3>
+                  <p>
+                    {tr(
+                      lang,
+                      "การค้นบ้านโดยไม่มีหมาย การฟ้องหน่วยงานรัฐ การชุมนุม และหลักความได้สัดส่วนตามมาตรา 26",
+                      "Searches without a warrant, suing a state agency, gathering to protest and the s.26 proportionality test.",
+                      "无令搜查、起诉国家机关、集会抗议及第26条比例原则。",
+                    )}
+                  </p>
+                </div>
+                <span className="mode-card-action" aria-hidden="true">
                   {tr(lang, "เริ่ม", "Start", "开始")} →
-                </button>
+                </span>
               </div>
 
               {/* Endless Marathon */}
@@ -381,40 +389,44 @@ export function PracticeArena() {
                   if (e.key === "Enter" || e.key === " ") startSession("endless");
                 }}
               >
-                <h3>
-                  {tr(
-                    lang,
-                    `ทั้งคลัง ${questions.length} ข้อ`,
-                    `The whole bank, ${questions.length}`,
-                    `全部${questions.length}题`
-                  )}
-                </h3>
-                <p>
-                  {tr(
-                    lang,
-                    "คำถามจากทั้งคลัง ทีละข้อต่อกันไป หยุดเมื่อไรก็ได้",
-                    "Questions from the whole bank, one after another, until you stop.",
-                    "从整个题库连续出题，一题接一题，随时可停。"
-                  )}
-                </p>
-                <button className="mode-start-btn">
+                <div className="mode-card-main">
+                  <h3>
+                    {tr(
+                      lang,
+                      `ทั้งคลัง ${questions.length} ข้อ`,
+                      `The whole bank, ${questions.length}`,
+                      `全部${questions.length}题`,
+                    )}
+                  </h3>
+                  <p>
+                    {tr(
+                      lang,
+                      "คำถามจากทั้งคลัง ทีละข้อต่อกันไป หยุดเมื่อไรก็ได้",
+                      "Questions from the whole bank, one after another, until you stop.",
+                      "从整个题库连续出题，一题接一题，随时可停。",
+                    )}
+                  </p>
+                </div>
+                <span className="mode-card-action" aria-hidden="true">
                   {tr(lang, "เริ่ม", "Start", "开始")} →
-                </button>
+                </span>
               </div>
 
               {/* Specific Chapter Filter */}
               <div className="mode-card chapter-select-mode">
-                <h3>
-                  {tr(lang, "ทีละหมวด", "One chapter", "按章节")}
-                </h3>
-                <p>
-                  {tr(
-                    lang,
-                    "หมวด 1 ถึง 16 หรือบทเฉพาะกาล",
-                    "Chapters 1–16 or the transitory provisions.",
-                    "第1至16章或过渡条款。"
-                  )}
-                </p>
+                <div className="mode-card-main">
+                  <h3>
+                    {tr(lang, "ทีละหมวด", "One chapter", "按章节")}
+                  </h3>
+                  <p>
+                    {tr(
+                      lang,
+                      "หมวด 1 ถึง 16 หรือบทเฉพาะกาล",
+                      "Chapters 1–16 or the transitory provisions.",
+                      "第1至16章或过渡条款。",
+                    )}
+                  </p>
+                </div>
                 <div className="chapter-dropdown-row">
                   <select
                     value={selectedChapter}

@@ -838,22 +838,34 @@ summary {
   padding-top: 20px;
 }
 .flow-tabs {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin: 20px 0;
 }
 .flow-tabs button {
+  flex: 1 1 140px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: flex-start;
-  padding: 12px 6px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  min-height: 48px;
+  background: var(--wash);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+.flow-tabs button:hover {
+  background: var(--paper);
+  border-color: var(--ink);
 }
 .flow-tabs button[aria-pressed="true"] {
   background: var(--accent);
-  border-color: var(--accent);
+  border-color: var(--accent-deep);
   color: var(--accent-ink);
+  font-weight: 600;
 }
 .flow-detail {
   padding: 22px;
@@ -1079,8 +1091,10 @@ html[data-large="true"] {
   .answer-letter {
     min-width: 1.4em;
   }
-  .flow-tabs {
-    grid-template-columns: repeat(2, 1fr);
+  .flow-tabs button {
+    flex: 1 1 120px;
+    padding: 10px 8px;
+    font-size: var(--micro);
   }
   footer {
     padding: 24px 18px;
@@ -2395,10 +2409,89 @@ mark.hl.has-note {
   }
 }
 .exam-formats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
   margin: 24px 0;
+}
+.exam-paper-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 14px 16px;
+  text-align: left;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  min-height: 80px;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+.exam-paper-card:hover {
+  background: var(--wash);
+  border-color: var(--ink);
+}
+.exam-paper-card.primary {
+  border-left: 4px solid var(--accent);
+  background: var(--wash);
+}
+.paper-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.paper-card-num {
+  font-size: var(--micro);
+  font-weight: 700;
+  color: var(--muted);
+}
+.paper-card-time {
+  font-size: var(--micro);
+  background: var(--accent-wash);
+  color: var(--accent-deep);
+  border: 1px solid var(--accent);
+  padding: 1px 6px;
+}
+.paper-card-title {
+  font-weight: 600;
+  font-size: var(--body);
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+.paper-card-meta {
+  font-size: var(--micro);
+  color: var(--muted);
+}
+.sprint-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+.sprint-option-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 56px;
+  font-size: var(--body);
+  font-weight: 600;
+  background: var(--wash);
+  border: 2px solid var(--line);
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+.sprint-option-btn:hover {
+  background: var(--paper);
+  border-color: var(--ink);
+}
+@media (max-width: 500px) {
+  .sprint-options-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .exam-table {
   width: 100%;
@@ -2422,9 +2515,9 @@ mark.hl.has-note {
 }
 .match-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin: 12px 0;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 14px;
+  margin: 16px 0;
 }
 .match-grid > div {
   display: flex;
@@ -2435,7 +2528,23 @@ mark.hl.has-note {
   justify-content: flex-start;
   text-align: left;
   font-weight: 500;
-  min-height: 56px;
+  min-height: 54px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  transition: all 120ms ease;
+}
+.match-grid > div:last-child .match-card {
+  justify-content: center;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--body);
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+  .match-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .match-card.picked {
   border: 2px solid var(--ink);
@@ -2686,11 +2795,14 @@ mark.hl.has-note {
 /* Ways to practise read as a ruled list, like the chapter route: one row, one choice. */
 .mode-card {
   border-top: 1px solid var(--line);
-  padding: 18px 0;
+  padding: 16px 12px;
   display: grid;
-  gap: 4px 24px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px 20px;
   cursor: pointer;
   position: relative;
+  transition: background 120ms ease;
 }
 .mode-card:hover {
   background: var(--wash);
@@ -2700,47 +2812,57 @@ mark.hl.has-note {
   outline-offset: 2px;
 }
 .featured-mode {
-  border-top: 3px solid var(--accent);
+  border-left: 4px solid var(--accent);
+  background: var(--wash);
 }
-@media (min-width: 760px) {
-  .mode-card {
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-  }
-  .mode-card > :not(.mode-start-btn):not(.chapter-dropdown-row) {
-    grid-column: 1;
-  }
-  .mode-card > .mode-start-btn {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-  }
-}
-.mode-card-icon {
-  font-size: var(--display);
-  margin-bottom: 10px;
-}
-.mode-card h3 {
-  margin: 0 0 8px;
-  font-size: var(--body);
-  line-height: 1.4;
+.mode-card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 .mode-card h3 {
   margin: 0;
+  font-size: var(--body);
+  font-weight: 600;
+  line-height: 1.35;
 }
 .mode-card p {
   font-size: var(--micro);
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.5;
   margin: 0;
 }
-.mode-start-btn {
-  justify-self: start;
-  margin-top: 8px;
+.mode-card-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: var(--micro);
+  font-weight: 600;
+  padding: 8px 16px;
+  border: 1px solid var(--edge);
+  background: var(--paper);
+  white-space: nowrap;
+  pointer-events: none;
+  min-height: 40px;
+  transition: all 120ms ease;
 }
-@media (min-width: 760px) {
-  .mode-start-btn {
-    justify-self: end;
-    margin-top: 0;
+.mode-card:hover .mode-card-action {
+  border-color: var(--ink);
+  background: var(--wash);
+}
+.featured-mode .mode-card-action {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+@media (max-width: 600px) {
+  .mode-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .mode-card-action {
+    justify-content: center;
   }
 }
 .chapter-select-mode {
@@ -3403,8 +3525,33 @@ footer { flex-wrap:wrap; gap:16px; }
 .confidence-check label { display:flex; align-items:center; gap:.5rem; min-height:44px; }
 
 .teaching-steps { margin-block:1rem; border-block:1px solid var(--line); padding-block:1rem; }
-.teaching-steps nav { display:flex; flex-wrap:wrap; gap:.5rem; margin-block:1rem; }
-.teaching-steps nav button[aria-pressed="true"] { background:var(--accent); color:var(--accent-ink); }
+.teaching-steps nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 6px;
+  margin-block: 1rem;
+}
+.teaching-steps nav button {
+  min-height: 42px;
+  padding: 6px 10px;
+  font-size: var(--micro);
+  text-align: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  background: var(--wash);
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+.teaching-steps nav button:hover {
+  background: var(--paper);
+  border-color: var(--ink);
+}
+.teaching-steps nav button[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent-deep);
+  font-weight: 600;
+}
 .hub-list > button { display:flex; flex-direction:column; align-items:flex-start; text-align:left; padding:1rem; border:0; border-bottom:1px solid var(--line); background:var(--paper); color:var(--ink); }
 #poll-note { width:100%; display:block; font:inherit; padding:.75rem; background:var(--paper); color:var(--ink); border:1px solid var(--edge); }
 .cram-tools {
