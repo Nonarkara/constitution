@@ -12,7 +12,10 @@
   "blocks": [
     {
       "kind": "text",
-      "title": {"th": "สองสภา หนึ่งรัฐสภา", "en": "Two houses, one Assembly"},
+      "title": {
+        "th": "สองสภา หนึ่งรัฐสภา",
+        "en": "Two houses, one Assembly"
+      },
       "body": {
         "th": "รัฐสภาประกอบด้วยสภาผู้แทนราษฎรและวุฒิสภา และคนคนเดียวจะเป็นทั้ง ส.ส. และ ส.ว. พร้อมกันไม่ได้ (มาตรา 79) ทั้งสองสภาประชุมแยกกันเป็นหลัก และประชุมร่วมกันเฉพาะเรื่องที่รัฐธรรมนูญกำหนด ซึ่งรวบรวมไว้ในมาตรา 156 เช่น การพิจารณาร่าง พ.ร.ป. การแถลงนโยบาย การให้ความเห็นชอบหนังสือสัญญาบางประเภท และการแก้ไขรัฐธรรมนูญ\n\nประธานสภาผู้แทนราษฎรเป็นประธานรัฐสภา ส่วนประธานวุฒิสภาเป็นรองประธานรัฐสภา (มาตรา 80) เหตุผลไม่ซับซ้อน สภาที่มาจากการเลือกตั้งโดยตรงได้นั่งหัวโต๊ะ ประธานทุกคนต้องวางตนเป็นกลาง (มาตรา 80 และมาตรา 119) และประธานกับรองประธานสภาผู้แทนราษฎรจะเป็นกรรมการบริหารหรือดำรงตำแหน่งในพรรคการเมืองระหว่างดำรงตำแหน่งไม่ได้ (มาตรา 116)\n\nสิ่งที่ผูกทุกคนไว้ด้วยกันอยู่ในมาตรา 114 คือ ส.ส. และ ส.ว. เป็นผู้แทนของปวงชนชาวไทยทั้งประเทศ ไม่ใช่ตัวแทนของจังหวัด พรรค หรือนายทุนคนใด และไม่อยู่ใต้อาณัติมอบหมายหรือการครอบงำใด ๆ ก่อนเข้ารับหน้าที่ทุกคนต้องปฏิญาณตนในที่ประชุม (มาตรา 115)",
         "en": "The National Assembly is made of the House of Representatives and the Senate, and nobody may sit in both at once (section 79). The two houses normally meet apart. They meet together only for matters the constitution lists, collected in section 156: organic bills, the government's policy statement, certain treaties, constitutional amendments and more.\n\nThe Speaker of the House is President of the National Assembly; the President of the Senate is Vice-President (section 80). The logic is simple: the directly elected house takes the chair. Every presiding officer must act neutrally (sections 80 and 119), and the Speaker and Deputy Speakers of the House may not hold party executive posts while in office (section 116).\n\nSection 114 ties all 700 together. MPs and senators represent the whole Thai people, not a province, a party or a patron, and they are bound by no instruction or domination from anyone. Each takes an oath in the chamber before starting work (section 115)."
@@ -20,7 +23,10 @@
     },
     {
       "kind": "logic",
-      "title": {"th": "ทำไมต้องมีสองสภา และใครถ่วงใคร", "en": "Why two houses, and who checks whom"},
+      "title": {
+        "th": "ทำไมต้องมีสองสภา และใครถ่วงใคร",
+        "en": "Why two houses, and who checks whom"
+      },
       "body": {
         "th": "ลองไล่เป็นโซ่ทีละข้อ\n\n- สภาผู้แทนราษฎรลงมติไม่ไว้วางใจรัฐมนตรีหรือทั้งคณะได้ (มาตรา 151) วุฒิสภาทำไม่ได้\n- เมื่อสภาล้มรัฐบาลได้ รัฐบาลจึงต้องมีเสียงสนับสนุนในสภา\n- จึงสมเหตุสมผลที่นายกรัฐมนตรีต้องได้รับความเห็นชอบจากสภาผู้แทนราษฎร (มาตรา 159) และต้องมาจากรายชื่อที่พรรคประกาศไว้ก่อนเลือกตั้ง (มาตรา 88)\n- ฝ่ายบริหารก็ถ่วงกลับได้ ด้วยการยุบสภา (มาตรา 103) แต่ถ้ามีญัตติไม่ไว้วางใจยื่นแล้ว จะยุบสภาหนีไม่ได้ (มาตรา 151 วรรคสอง)\n\nแล้ววุฒิสภามีไว้ทำไม คำตอบคือเป็นเบรก ไม่ใช่กำแพง วุฒิสภากลั่นกรองร่างกฎหมายได้ภายใน 60 วัน (มาตรา 136) ยับยั้งได้ แต่สภาผู้แทนราษฎรยืนยันกลับได้เมื่อพ้น 180 วันด้วยเสียงเกินกึ่งหนึ่ง (มาตรา 138) งานที่วุฒิสภามีอำนาจตัดสินจริงคือการให้ความเห็นชอบบุคคลในตำแหน่งสำคัญ เช่น ตุลาการศาลรัฐธรรมนูญ (มาตรา 204) และกรรมการองค์กรอิสระ\n\nเปรียบง่าย ๆ สภาผู้แทนราษฎรคือคนขับรถที่ผู้โดยสารเลือกมา วุฒิสภาคือเพื่อนที่นั่งข้างคนขับ เตือนได้ ชะลอได้ แต่ไม่ได้ถือพวงมาลัย",
         "en": "Follow the chain one link at a time.\n\n- The House can pass a vote of no confidence in a minister or the whole Cabinet (section 151). The Senate cannot.\n- Because the House can bring the government down, the government needs the House's support.\n- So it makes sense that the Prime Minister must be approved by the House (section 159), chosen from the names parties declared before the election (section 88).\n- The executive can push back by dissolving the House (section 103), but once a no-confidence motion is filed it cannot dissolve to escape it (section 151, second paragraph).\n\nWhat is the Senate for, then? It is a brake, not a wall. It reviews bills within 60 days (section 136) and may veto one, but the House can override after 180 days with an absolute majority (section 138). Where the Senate truly decides is in approving people for key posts, such as Constitutional Court judges (section 204) and members of the independent organs.\n\nPicture a car. The House is the driver the passengers picked. The Senate sits in the front passenger seat: it can warn and it can slow things down, but it does not hold the wheel."
@@ -28,26 +34,126 @@
     },
     {
       "kind": "numbers",
-      "title": {"th": "ตัวเลขที่ต้องรู้ในหมวดรัฐสภา", "en": "The numbers that matter in this chapter"},
+      "title": {
+        "th": "ตัวเลขที่ต้องรู้ในหมวดรัฐสภา",
+        "en": "The numbers that matter in this chapter"
+      },
       "rows": [
-        {"th": "ส.ส. ทั้งหมด (เขต + บัญชีรายชื่อ)", "en": "MPs (constituency + party-list)", "value": "500 = 400 + 100", "sections": [83]},
-        {"th": "บัตรเลือกตั้ง ส.ส.", "en": "Ballots for an MP election", "value": "2 ใบ / 2 ballots", "sections": [83]},
-        {"th": "ส.ว.", "en": "Senators", "value": "200", "sections": [107]},
-        {"th": "อายุสภาผู้แทนราษฎร / วุฒิสภา", "en": "Term of the House / Senate", "value": "4 ปี / 5 ปี (4 / 5 years)", "sections": [99, 109]},
-        {"th": "อายุขั้นต่ำ ผู้มีสิทธิเลือกตั้ง / ส.ส. / ส.ว.", "en": "Minimum age: voter / MP / senator", "value": "18 / 25 / 40", "sections": [95, 97, 108]},
-        {"th": "สมัยประชุมสามัญต่อปี และความยาวแต่ละสมัย", "en": "Ordinary sessions per year, length of each", "value": "2 สมัย × 120 วัน", "sections": [121]},
-        {"th": "องค์ประชุม", "en": "Quorum", "value": "≥ 1/2", "sections": [120]},
-        {"th": "เข้าชื่อยื่นอภิปรายไม่ไว้วางใจ", "en": "Signatures to file a no-confidence motion", "value": "≥ 1/5 ของ ส.ส.", "sections": [151]},
-        {"th": "เสียงที่ใช้ลงมติไม่ไว้วางใจ", "en": "Votes needed for no confidence", "value": "> 1/2 ของ ส.ส. ทั้งหมดเท่าที่มีอยู่", "sections": [151]},
-        {"th": "วุฒิสภาพิจารณาร่าง พ.ร.บ. ทั่วไป / การเงิน", "en": "Senate review: ordinary / money bill", "value": "60 / 30 วัน (+30)", "sections": [136]},
-        {"th": "ร่าง พ.ร.บ. งบประมาณ: สภาผู้แทนราษฎร / วุฒิสภา", "en": "Budget bill: House / Senate", "value": "105 / 20 วัน", "sections": [143]},
-        {"th": "ร่าง พ.ร.ป.: รัฐสภาต้องพิจารณาให้เสร็จ", "en": "Organic bill: joint sitting deadline", "value": "180 วัน", "sections": [132]},
-        {"th": "พระราชบัญญัติ 10 ฉบับที่ต้องตราเป็น พ.ร.ป.", "en": "Organic acts required", "value": "10", "sections": [130]}
+        {
+          "th": "ส.ส. ทั้งหมด (เขต + บัญชีรายชื่อ)",
+          "en": "MPs (constituency + party-list)",
+          "value": "500 = 400 + 100",
+          "sections": [
+            83
+          ]
+        },
+        {
+          "th": "บัตรเลือกตั้ง ส.ส.",
+          "en": "Ballots for an MP election",
+          "value": "2 ใบ / 2 ballots",
+          "sections": [
+            83
+          ]
+        },
+        {
+          "th": "ส.ว.",
+          "en": "Senators",
+          "value": "200",
+          "sections": [
+            107
+          ]
+        },
+        {
+          "th": "อายุสภาผู้แทนราษฎร / วุฒิสภา",
+          "en": "Term of the House / Senate",
+          "value": "4 ปี / 5 ปี (4 / 5 years)",
+          "sections": [
+            99,
+            109
+          ]
+        },
+        {
+          "th": "อายุขั้นต่ำ ผู้มีสิทธิเลือกตั้ง / ส.ส. / ส.ว.",
+          "en": "Minimum age: voter / MP / senator",
+          "value": "18 / 25 / 40",
+          "sections": [
+            95,
+            97,
+            108
+          ]
+        },
+        {
+          "th": "สมัยประชุมสามัญต่อปี และความยาวแต่ละสมัย",
+          "en": "Ordinary sessions per year, length of each",
+          "value": "2 สมัย × 120 วัน",
+          "sections": [
+            121
+          ]
+        },
+        {
+          "th": "องค์ประชุม",
+          "en": "Quorum",
+          "value": "≥ 1/2",
+          "sections": [
+            120
+          ]
+        },
+        {
+          "th": "เข้าชื่อยื่นอภิปรายไม่ไว้วางใจ",
+          "en": "Signatures to file a no-confidence motion",
+          "value": "≥ 1/5 ของ ส.ส.",
+          "sections": [
+            151
+          ]
+        },
+        {
+          "th": "เสียงที่ใช้ลงมติไม่ไว้วางใจ",
+          "en": "Votes needed for no confidence",
+          "value": "> 1/2 ของ ส.ส. ทั้งหมดเท่าที่มีอยู่",
+          "sections": [
+            151
+          ]
+        },
+        {
+          "th": "วุฒิสภาพิจารณาร่าง พ.ร.บ. ทั่วไป / การเงิน",
+          "en": "Senate review: ordinary / money bill",
+          "value": "60 / 30 วัน (+30)",
+          "sections": [
+            136
+          ]
+        },
+        {
+          "th": "ร่าง พ.ร.บ. งบประมาณ: สภาผู้แทนราษฎร / วุฒิสภา",
+          "en": "Budget bill: House / Senate",
+          "value": "105 / 20 วัน",
+          "sections": [
+            143
+          ]
+        },
+        {
+          "th": "ร่าง พ.ร.ป.: รัฐสภาต้องพิจารณาให้เสร็จ",
+          "en": "Organic bill: joint sitting deadline",
+          "value": "180 วัน",
+          "sections": [
+            132
+          ]
+        },
+        {
+          "th": "พระราชบัญญัติ 10 ฉบับที่ต้องตราเป็น พ.ร.ป.",
+          "en": "Organic acts required",
+          "value": "10",
+          "sections": [
+            130
+          ]
+        }
       ]
     },
     {
       "kind": "text",
-      "title": {"th": "สภาผู้แทนราษฎร: 400 เขต 100 บัญชีรายชื่อ", "en": "The House: 400 districts, 100 list seats"},
+      "title": {
+        "th": "สภาผู้แทนราษฎร: 400 เขต 100 บัญชีรายชื่อ",
+        "en": "The House: 400 districts, 100 list seats"
+      },
       "body": {
         "th": "มาตรา 83 ฉบับปัจจุบัน (หลังการแก้ไขปี 2564) กำหนดให้มี ส.ส. 500 คน มาจากการเลือกตั้งแบบแบ่งเขต 400 คน และแบบบัญชีรายชื่อ 100 คน ลงคะแนนโดยตรงและลับ และใช้บัตรเลือกตั้งแบบละหนึ่งใบ คือบัตรเลือกคนหนึ่งใบ บัตรเลือกพรรคหนึ่งใบ\n\nแบบแบ่งเขต: เขตละหนึ่งคน ใครได้คะแนนสูงสุดชนะ แต่มีเงื่อนไขว่าต้องได้คะแนนมากกว่าช่อง 'ไม่เลือกผู้ใด' ด้วย (มาตรา 85) ถ้าช่องไม่เลือกผู้ใดชนะ ต้องเลือกตั้งใหม่ และผู้สมัครเดิมทุกคนห้ามลงซ้ำ (มาตรา 92) กติกานี้ให้ประชาชนมีวิธีบอกว่า 'ไม่เอาใครเลยในชุดนี้' แบบที่มีผลจริง\n\nแบ่ง 400 เขตอย่างไร: มาตรา 86 ใช้วิธีเลขคณิตตรงไปตรงมา เอาจำนวนราษฎรทั้งประเทศตามทะเบียนราษฎรปีสุดท้ายก่อนเลือกตั้งหารด้วย 400 ได้ 'ราษฎรต่อ ส.ส. หนึ่งคน' จังหวัดที่ราษฎรไม่ถึงเกณฑ์ได้ 1 คนเสมอ จังหวัดที่เกินได้เพิ่มตามจำนวนเท่าที่ถึงเกณฑ์ ถ้ายังไม่ครบ 400 ให้จังหวัดที่มีเศษเหลือมากที่สุดได้เพิ่มทีละคนจนครบ จากนั้นแบ่งเขตในจังหวัดให้พื้นที่ติดต่อกันและจำนวนราษฎรใกล้เคียงกัน\n\nแบบบัญชีรายชื่อ: แต่ละพรรคยื่นบัญชีเดียวทั่วประเทศ พรรคจะส่งบัญชีได้ต้องส่งผู้สมัครแบบแบ่งเขตด้วย (มาตรา 90) และต้องคำนึงถึงผู้สมัครจากภูมิภาคต่าง ๆ และความเท่าเทียมระหว่างชายหญิง ที่นั่งคำนวณจากคะแนนบัตรพรรคที่รวมทั่วประเทศ ให้ได้สัดส่วนสัมพันธ์โดยตรงกับคะแนนที่ได้ แล้วไล่ตามลำดับในบัญชี (มาตรา 91) รายละเอียดวิธีคำนวณอยู่ใน พ.ร.ป. ว่าด้วยการเลือกตั้งสมาชิกสภาผู้แทนราษฎร\n\nผู้สมัครแบบแบ่งเขตต้องเป็นคนที่พรรคส่ง ลงได้เขตเดียว (มาตรา 87) ส่วนพรรคเสนอชื่อบุคคลที่จะเสนอเป็นนายกรัฐมนตรีได้ไม่เกิน 3 ชื่อ ก่อนปิดรับสมัคร (มาตรา 88 และมาตรา 89)",
         "en": "Section 83 as it stands now (after the 2021 amendment) sets 500 MPs: 400 from single-member constituencies and 100 from party lists, chosen by direct secret ballot using one ballot of each type. One paper for a person, one paper for a party.\n\nConstituencies: one MP per district, highest vote wins, but the winner must also beat the 'vote for no one' box (section 85). If 'no one' wins, the district votes again and every original candidate is barred from standing (section 92). It gives voters a way to say 'none of these' that actually bites.\n\nDrawing 400 districts: section 86 is plain arithmetic. Take the national population from the civil register of the last year before the election and divide by 400. That gives 'people per MP'. A province below that figure still gets one MP. A province above it gets one MP for each full quota. If the total is still short of 400, the provinces with the largest remainders get one extra each until the count reaches 400. Inside each province, districts must be contiguous and close in population.\n\nParty lists: each party files one nationwide list, and it may only do so if it also fields constituency candidates (section 90). The list must take account of candidates from different regions and of equality between men and women. List seats are shared out from the nationwide party-ballot vote, in direct proportion to each party's total, filled in list order (section 91). The precise formula sits in the Organic Act on the Election of MPs.\n\nA constituency candidate must be fielded by their party and may stand in only one district (section 87). Before nominations close, each party may name up to three people it will put forward for Prime Minister (sections 88 and 89)."
@@ -55,7 +161,10 @@
     },
     {
       "kind": "logic",
-      "title": {"th": "สูตรปี 2562 กับสูตรปี 2566 ต่างกันตรงไหน", "en": "The 2019 formula versus the 2023 formula"},
+      "title": {
+        "th": "สูตรปี 2562 กับสูตรปี 2566 ต่างกันตรงไหน",
+        "en": "The 2019 formula versus the 2023 formula"
+      },
       "body": {
         "th": "การเลือกตั้ง 24 มีนาคม 2562 ใช้มาตรา 83 และ 91 ฉบับเดิม คือ ส.ส. เขต 350 คน บัญชีรายชื่อ 150 คน และบัตรใบเดียว กาเลือกผู้สมัครเขตแล้วคะแนนนั้นนับให้พรรคไปพร้อมกัน วิธีคิดที่นั่งเป็นแบบ 'จัดสรรปันส่วนผสม' คือ\n\n- เอาคะแนนทุกพรรคทั่วประเทศหารด้วย 500 ได้ 'จำนวน ส.ส. พึงมี' ของแต่ละพรรค\n- ลบด้วยจำนวน ส.ส. เขตที่พรรคชนะ ส่วนต่างที่เหลือคือ ส.ส. บัญชีรายชื่อที่พรรคได้\n- พรรคที่ชนะเขตมากจนเกินจำนวนพึงมี ไม่ได้บัญชีรายชื่อเลย\n\nเป้าหมายคือทุกคะแนนมีความหมาย คะแนนของผู้สมัครที่แพ้ในเขตยังไปช่วยพรรค ผลข้างเคียงคือ ผู้ชนะเขตจำนวนมากทำให้พรรคใหญ่ได้บัญชีรายชื่อน้อยหรือไม่ได้เลย และพรรคเล็กมากมีโอกาสได้ที่นั่ง\n\nการเลือกตั้ง 14 พฤษภาคม 2566 ใช้มาตรา 83 และ 91 ที่แก้ไขแล้ว เป็นระบบ 'คู่ขนาน' บัตรสองใบนับแยกกันสนิท\n\n- 400 เขต ใครชนะเขตก็ได้ที่นั่งนั้น\n- 100 ที่นั่งบัญชีรายชื่อ แบ่งตามสัดส่วนคะแนนบัตรพรรคล้วน ๆ ไม่สนว่าพรรคชนะเขตไปกี่เขต\n\nตัวอย่างสมมุติ ถ้าพรรค ก. ได้คะแนนบัตรพรรค 20% ภายใต้สูตรคู่ขนาน พรรค ก. ได้ประมาณ 20 ที่นั่งบัญชีรายชื่อ บวกกับเขตที่ชนะ ภายใต้สูตรปี 2562 พรรค ก. มีที่นั่งพึงมีราว 100 ที่นั่ง ถ้าชนะเขตไปแล้ว 100 เขต ก็จะไม่ได้บัญชีรายชื่อเพิ่ม\n\nบทเรียนที่ใช้ได้ทั่วไป: สูตรแบบปันส่วนผสมทำให้สภาสะท้อนคะแนนนิยมทั่วประเทศใกล้เคียงกว่า สูตรคู่ขนานให้รางวัลพรรคที่ชนะเขตเยอะ ทั้งสองแบบมีเหตุผลรองรับ และทั้งสองแบบมีผู้ได้และผู้เสีย",
         "en": "The election of 24 March 2019 ran on the original sections 83 and 91: 350 constituency MPs, 150 list MPs, and a single ballot. You marked a constituency candidate and the same mark counted for that candidate's party. Seats were worked out by 'mixed-member apportionment':\n\n- Divide each party's national vote share across all 500 seats to get the seats it is 'entitled' to.\n- Subtract the constituencies it won. The difference is its list seats.\n- A party that won more districts than its entitlement got no list seats at all.\n\nThe aim was that every vote counts: votes for losing district candidates still helped their party. The side effects were that big district winners got few or no list seats, and very small parties had a route in.\n\nThe election of 14 May 2023 ran on the amended sections 83 and 91, a 'parallel' system. The two ballots are counted completely separately.\n\n- 400 districts: whoever wins a district takes that seat.\n- 100 list seats: shared purely by party-ballot share, regardless of how many districts the party won.\n\nA made-up example. Party A wins 20% of the party vote. Under the parallel system it gets about 20 list seats on top of whatever districts it won. Under the 2019 formula its entitlement would be about 100 seats in total, so if it had already won 100 districts it would get no list seats.\n\nThe general lesson: apportionment formulas make the House mirror the national vote more closely; parallel formulas reward parties that win many districts. Each has a defensible logic, and each creates winners and losers."
@@ -63,7 +172,10 @@
     },
     {
       "kind": "case",
-      "title": {"th": "2562: สูตรปัดเศษ และ ส.ส. พรรคเล็ก", "en": "2019: the rounding formula and the micro-parties"},
+      "title": {
+        "th": "2562: สูตรปัดเศษ และ ส.ส. พรรคเล็ก",
+        "en": "2019: the rounding formula and the micro-parties"
+      },
       "year": 2019,
       "body": {
         "th": "หลังการเลือกตั้ง 24 มีนาคม 2562 เกิดคำถามใหญ่ว่าจะคำนวณ ส.ส. บัญชีรายชื่อ 150 ที่นั่งอย่างไร คะแนนรวมทั่วประเทศหาร 500 ได้ราว 71,000 คะแนนต่อ ส.ส. หนึ่งคน วิธีหนึ่งให้ที่นั่งเฉพาะพรรคที่คะแนนถึงเกณฑ์นี้ อีกวิธีหนึ่งให้ที่นั่งเต็มก่อนแล้วปัดเศษแจกที่นั่งที่เหลือ ซึ่งทำให้พรรคที่คะแนนไม่ถึงเกณฑ์ได้ที่นั่งด้วย\n\nผู้ตรวจการแผ่นดินส่งเรื่องให้ศาลรัฐธรรมนูญ และเมื่อ 8 พฤษภาคม 2562 ศาลวินิจฉัยว่าบทบัญญัติเรื่องการคำนวณใน พ.ร.ป. เลือกตั้ง ส.ส. ไม่ขัดรัฐธรรมนูญ คณะกรรมการการเลือกตั้งจึงคำนวณตามวิธีของตน ผลคือมี 26 พรรคได้ที่นั่งในสภา โดยพรรคเล็กจำนวนมากได้พรรคละหนึ่งที่นั่ง แม้คะแนนจะต่ำกว่าเกณฑ์ 71,000 อยู่มาก ขณะที่พรรคเพื่อไทยชนะ ส.ส. เขต 136 ที่นั่ง แต่ไม่ได้บัญชีรายชื่อเลย\n\nฝ่ายที่เห็นด้วยบอกว่าวิธีนี้ทำตามเจตนารมณ์ให้ทุกคะแนนมีค่า ฝ่ายที่ค้าน เช่น พรรคเพื่อไทยและพรรคอนาคตใหม่ บอกว่าเป็นการบิดคณิตศาสตร์ให้พรรคเล็กได้ที่นั่งเกินคะแนน และพรรคเล็กเหล่านี้หลายพรรคไปสนับสนุนฝ่ายรัฐบาล เรื่องนี้กลายเป็นเชื้อเพลิงสำคัญของการแก้รัฐธรรมนูญในปี 2564",
@@ -72,7 +184,10 @@
     },
     {
       "kind": "case",
-      "title": {"th": "2564: แก้รัฐธรรมนูญกลับไปใช้บัตรสองใบ", "en": "2021: amending the constitution back to two ballots"},
+      "title": {
+        "th": "2564: แก้รัฐธรรมนูญกลับไปใช้บัตรสองใบ",
+        "en": "2021: amending the constitution back to two ballots"
+      },
       "year": 2021,
       "body": {
         "th": "ปี 2564 รัฐสภามีร่างแก้ไขรัฐธรรมนูญหลายฉบับ ฉบับที่ผ่านครบทั้งสามวาระคือฉบับที่แก้ระบบเลือกตั้ง แก้มาตรา 83, 86 และ 91 เปลี่ยนเป็น ส.ส. เขต 400 บัญชีรายชื่อ 100 บัตรสองใบ และคิดบัญชีรายชื่อแยกจากเขต รัฐธรรมนูญแก้ไขเพิ่มเติม (ฉบับที่ 1) พ.ศ. 2564 มีผลใช้บังคับในเดือนพฤศจิกายน 2564 และเป็นการแก้ไขเพียงครั้งเดียวที่รวมอยู่ในตัวบทที่ใช้ในแอปนี้\n\nทำไมผ่าน ทั้งที่การแก้รัฐธรรมนูญฉบับนี้ยากมาก เหตุผลเชิงโครงสร้างคือพรรคใหญ่ทั้งฝั่งรัฐบาลและฝั่งค้านมีผลประโยชน์ตรงกันว่าระบบคู่ขนานให้ประโยชน์แก่พรรคที่ชนะเขตเยอะ และเรื่องนี้ไม่เข้ากลุ่มเรื่องที่ต้องทำประชามติตามมาตรา 256 (8) จึงไม่ต้องผ่านด่านประชามติ แต่ยังต้องได้เสียง ส.ว. ไม่น้อยกว่าหนึ่งในสามตามมาตรา 256\n\nเหตุผลที่ผู้เสนออธิบาย: ผู้มีสิทธิเลือกตั้งควรเลือกคนกับพรรคแยกกันได้ ระบบบัตรใบเดียวบังคับให้คนที่ชอบผู้สมัครแต่ไม่ชอบพรรคต้องเลือกอย่างใดอย่างหนึ่ง และสูตรปี 2562 คำนวณยาก ประชาชนตรวจสอบเองไม่ได้ ข้อโต้แย้งจากพรรคเล็กคือระบบใหม่ทำให้สภาสะท้อนคะแนนนิยมน้อยลงและกีดกันพรรคเล็ก ระบบบัตรสองใบไม่ใช่ของใหม่ ประเทศไทยเคยใช้ในการเลือกตั้งช่วงปี 2544 ถึง 2554 มาแล้ว",
@@ -81,7 +196,10 @@
     },
     {
       "kind": "case",
-      "title": {"th": "2565: หาร 100 หรือหาร 500", "en": "2022: divide by 100 or by 500?"},
+      "title": {
+        "th": "2565: หาร 100 หรือหาร 500",
+        "en": "2022: divide by 100 or by 500?"
+      },
       "year": 2022,
       "body": {
         "th": "เมื่อรัฐธรรมนูญเปลี่ยน กฎหมายลูกต้องเปลี่ยนตาม รัฐสภาถกกันว่าที่นั่งบัญชีรายชื่อควรหารคะแนนด้วย 100 (จำนวนที่นั่งบัญชีรายชื่อ) หรือ 500 (จำนวน ส.ส. ทั้งสภา) ซึ่งจะทำให้กลับไปคล้ายระบบปันส่วนผสม ที่ประชุมรัฐสภาเคยลงมติเลือกหาร 500 ในวาระสอง แต่สุดท้ายการประชุมล่มซ้ำ ๆ จนพ้นกำหนด 180 วันตามมาตรา 132 (1) ผลตามรัฐธรรมนูญคือถือว่ารัฐสภาเห็นชอบตามร่างที่เสนอไว้แต่แรก ซึ่งใช้หาร 100 ศาลรัฐธรรมนูญวินิจฉัยปลายปี 2565 ว่าร่างนี้ไม่ขัดรัฐธรรมนูญ การเลือกตั้งปี 2566 จึงใช้หาร 100 รายละเอียดเชิงกฎหมายลูกอยู่ในบทถัดไป",
@@ -90,7 +208,10 @@
     },
     {
       "kind": "mnemonic",
-      "title": {"th": "จำระบบเลือกตั้งด้วยเลข 4-1-2", "en": "Remember the electoral system as 4-1-2"},
+      "title": {
+        "th": "จำระบบเลือกตั้งด้วยเลข 4-1-2",
+        "en": "Remember the electoral system as 4-1-2"
+      },
       "body": {
         "th": "4-1-2 = เขตสี่ร้อย รายชื่อหนึ่งร้อย บัตรสองใบ\n\nจำว่า 'สี่ร้อยหน้าที่คุณรู้จัก หนึ่งร้อยชื่อที่คุณเลือกผ่านพรรค' บัตรใบแรกเลือกคนในเขต บัตรใบที่สองเลือกพรรค\n\nส่วนการแบ่งเขต (มาตรา 86) จำเป็นสามจังหวะ: หาร-ปัด-แบ่ง\n- หาร: ราษฎรทั้งประเทศหาร 400\n- ปัด: จังหวัดเล็กได้อย่างน้อย 1 ที่นั่งที่เหลือแจกตามเศษมากที่สุด\n- แบ่ง: เขตติดกัน คนใกล้เคียงกัน\n\nถ้าข้อสอบถามถึง 350 + 150 หรือบัตรใบเดียว นั่นคือฉบับก่อนแก้ไขปี 2564",
         "en": "4-1-2 = four hundred districts, one hundred list seats, two ballots.\n\nThink 'four hundred faces you know, one hundred names you pick through a party.' The first ballot picks a local person; the second picks a party.\n\nFor drawing districts (section 86), remember three beats: divide, round, draw.\n- Divide: national population by 400.\n- Round: every province gets at least one seat; leftover seats go to the largest remainders.\n- Draw: districts contiguous and close in population.\n\nIf a question mentions 350 + 150 or a single ballot, it is describing the text before the 2021 amendment."
@@ -98,7 +219,10 @@
     },
     {
       "kind": "text",
-      "title": {"th": "ใครเลือกได้ ใครลงสมัครได้", "en": "Who may vote, who may stand"},
+      "title": {
+        "th": "ใครเลือกได้ ใครลงสมัครได้",
+        "en": "Who may vote, who may stand"
+      },
       "body": {
         "th": "ผู้มีสิทธิเลือกตั้ง (มาตรา 95): สัญชาติไทย ถ้าแปลงสัญชาติต้องได้มาแล้วไม่น้อยกว่า 5 ปี อายุไม่ต่ำกว่า 18 ปีในวันเลือกตั้ง และมีชื่อในทะเบียนบ้านในเขตไม่น้อยกว่า 90 วัน ผู้อยู่นอกเขตหรืออยู่ต่างประเทศลงทะเบียนเลือกตั้งนอกเขตได้ คนที่ไม่ไปเลือกตั้งโดยไม่แจ้งเหตุอาจถูกจำกัดสิทธิบางอย่าง เพราะรัฐธรรมนูญถือว่าการไปเลือกตั้งเป็นหน้าที่ด้วย\n\nผู้ต้องห้ามใช้สิทธิเลือกตั้ง (มาตรา 96): ภิกษุ สามเณร นักพรตหรือนักบวช ผู้ถูกเพิกถอนสิทธิเลือกตั้ง ผู้ถูกคุมขังโดยหมายศาลหรือคำสั่งที่ชอบด้วยกฎหมาย และผู้วิกลจริตหรือจิตฟั่นเฟือนไม่สมประกอบ\n\nผู้สมัคร ส.ส. (มาตรา 97): สัญชาติไทยโดยการเกิด อายุไม่ต่ำกว่า 25 ปี เป็นสมาชิกพรรคเดียวติดต่อกันไม่น้อยกว่า 90 วัน (ลดเหลือ 30 วันถ้าเป็นการเลือกตั้งเพราะยุบสภา) และผู้สมัครแบบแบ่งเขตต้องผูกพันกับจังหวัดอย่างใดอย่างหนึ่ง: มีชื่อในทะเบียนบ้าน 5 ปีติดต่อกัน เกิดในจังหวัด เคยเรียนในจังหวัด 5 ปีการศึกษาติดต่อกัน หรือเคยรับราชการหรือมีชื่อในทะเบียนบ้านในจังหวัด 5 ปีติดต่อกัน\n\nทำไมต้องสังกัดพรรค 90 วัน ตรรกะคือกันการย้ายพรรคนาทีสุดท้ายแบบซื้อตัว ส่วนเหตุที่ลดเป็น 30 วันเมื่อยุบสภา ก็เพราะการยุบสภาเกิดได้กะทันหัน ถ้าใช้ 90 วัน คนที่เพิ่งเข้าพรรคจะเสียสิทธิโดยไม่ได้ทำผิดอะไร",
         "en": "Voters (section 95): Thai nationality, held for at least five years if acquired by naturalisation; at least 18 on election day; on a house register in the district for at least 90 days. People living outside their district or abroad can register to vote elsewhere. Those who skip voting without notifying a reason may lose certain rights, because the constitution treats voting as a duty as well as a right.\n\nBarred from voting (section 96): Buddhist monks, novices, ascetics and clergy; people whose voting rights have been revoked; people detained by a court warrant or lawful order; and people of unsound mind.\n\nMP candidates (section 97): Thai by birth; at least 25; a member of one party only for at least 90 consecutive days (cut to 30 days when the election follows a dissolution). Constituency candidates must also have one tie to the province: on a house register there for five straight years, born there, studied there for five straight academic years, or served in government or been registered there for five straight years.\n\nWhy 90 days in a party? To block last-minute defections bought with money. Why only 30 after a dissolution? Because dissolutions come without warning, and a 90-day rule would strip a newly joined member of the right to stand through no fault of their own."
@@ -106,7 +230,10 @@
     },
     {
       "kind": "text",
-      "title": {"th": "ลักษณะต้องห้าม 18 ข้อ (มาตรา 98) จัดเป็นกลุ่ม", "en": "The 18 disqualifications in section 98, grouped"},
+      "title": {
+        "th": "ลักษณะต้องห้าม 18 ข้อ (มาตรา 98) จัดเป็นกลุ่ม",
+        "en": "The 18 disqualifications in section 98, grouped"
+      },
       "body": {
         "th": "มาตรา 98 ยาว แต่ถ้าจัดกลุ่มตามเหตุผลจะจำง่าย\n\n- สภาพตัวบุคคลที่ไม่พร้อม: ติดยาเสพติด ล้มละลายหรือเคยล้มละลายทุจริต ต้องห้ามใช้สิทธิเลือกตั้งตามมาตรา 96 (ยกเว้นกรณีถูกคุมขัง ซึ่งมีข้ออื่นรองรับ) (98 (1) (2) (4))\n- ผลประโยชน์ทับซ้อน: เป็นเจ้าของหรือผู้ถือหุ้นในกิจการหนังสือพิมพ์หรือสื่อมวลชนใด ๆ (98 (3))\n- ประวัติคดีและความซื่อสัตย์: ถูกจำคุกอยู่ พ้นโทษจำคุกยังไม่ถึง 10 ปี (เว้นความผิดโดยประมาทหรือลหุโทษ) เคยถูกไล่ออกเพราะทุจริต เคยถูกยึดทรัพย์เพราะร่ำรวยผิดปกติ เคยต้องคำพิพากษาในความผิดร้ายแรงบางประเภท เช่น ค้ายาเสพติด ฟอกเงิน ค้ามนุษย์ หรือทุจริตเลือกตั้ง (98 (6) ถึง (11))\n- ตำแหน่งที่ต้องเลือกอย่างใดอย่างหนึ่ง: ข้าราชการประจำ พนักงานหรือลูกจ้างของรัฐ สมาชิกสภาท้องถิ่นหรือผู้บริหารท้องถิ่น ส.ว. หรือเพิ่งพ้นจาก ส.ว. ไม่ถึง 2 ปี ตุลาการศาลรัฐธรรมนูญหรือผู้ดำรงตำแหน่งในองค์กรอิสระ (98 (12) ถึง (16))\n- ถูกตัดสิทธิทางการเมืองหรือเคยพ้นตำแหน่งเพราะทำผิดร้ายแรง: อยู่ระหว่างถูกระงับหรือเพิกถอนสิทธิสมัคร ต้องห้ามดำรงตำแหน่งทางการเมือง หรือเคยพ้นตำแหน่งเพราะมาตรา 144 (ยุ่งกับงบประมาณ) หรือมาตรา 235 วรรคสาม (ฝ่าฝืนจริยธรรมร้ายแรงหรือทุจริต) (98 (5) (17) (18))\n\nข้อสังเกตที่ชอบออกข้อสอบ: ส.ว. ใช้ลักษณะต้องห้ามชุดนี้เกือบทั้งหมด (มาตรา 108 ข. (1)) และรัฐมนตรีก็ต้องไม่มีลักษณะต้องห้ามตามมาตรา 98 (มาตรา 160 (6)) เรื่องหุ้นสื่อจึงตามไปถึงทุกตำแหน่ง",
         "en": "Section 98 is long, but grouped by purpose it becomes easy.\n\n- Personal unfitness: drug addiction; bankruptcy or past fraudulent bankruptcy; being barred from voting under section 96 (items 1, 2, 4).\n- Conflict of interest: owning or holding shares in any newspaper or mass-media business (item 3).\n- Criminal record and integrity: currently imprisoned; released from a prison sentence less than ten years ago (except negligence or petty offences); dismissed from state service for corruption; assets seized for unusual wealth; convicted of certain grave offences such as drug trafficking, money laundering, human trafficking or electoral fraud (items 6 to 11).\n- Posts you must choose between: career civil servant, state employee, local councillor or local executive, senator or ex-senator within two years, Constitutional Court judge or member of an independent organ (items 12 to 16).\n- Political bans and removal for serious wrongdoing: candidacy rights suspended or revoked; barred from political office; or previously removed under section 144 (meddling in the budget) or section 235, third paragraph (serious ethical breach or corruption) (items 5, 17, 18).\n\nA favourite exam point: senators inherit almost the whole list (section 108 B(1)), and ministers must also be free of every section 98 disqualification (section 160(6)). The media-share rule follows a person into every office."
@@ -114,15 +241,21 @@
     },
     {
       "kind": "logic",
-      "title": {"th": "ทำไมห้ามถือหุ้นสื่อ", "en": "Why ban media shares?"},
+      "title": {
+        "th": "ทำไมห้ามถือหุ้นสื่อ",
+        "en": "Why ban media shares?"
+      },
       "body": {
-        "th": "ปัญหาที่กฎข้อนี้ต้องการแก้คือ นักการเมืองที่เป็นเจ้าของโทรโข่ง ถ้าคนที่ออกกฎหมายและคุมรัฐบาลถือหุ้นหนังสือพิมพ์หรือสถานีโทรทัศน์ด้วย เขาใช้สื่อของตัวเองหาเสียง ปิดข่าวที่ไม่เป็นคุณ หรือออกกฎหมายเอื้อธุรกิจสื่อของตัวเองได้\n\nแต่ถ้อยคำในมาตรา 98 (3) กว้างมาก 'เจ้าของหรือผู้ถือหุ้น' ในกิจการสื่อมวลชน 'ใด ๆ' ไม่ได้กำหนดจำนวนหุ้นขั้นต่ำ คำถามจึงตามมาเป็นชุด ถือหุ้นนิดเดียวผิดไหม บริษัทที่จดวัตถุประสงค์ว่าทำสื่อแต่ไม่ได้ทำจริงนับไหม บริษัทที่เลิกทำสื่อไปแล้วนับไหม ศาลรัฐธรรมนูญต้องเป็นคนตอบทีละคดี และคำตอบออกมาต่างกันตามข้อเท็จจริง สองคดีถัดไปแสดงให้เห็นว่ากฎข้อเดียวกันให้ผลต่างกันได้อย่างไร\n\nเส้นทางคดี: ส.ส. หรือ ส.ว. ไม่น้อยกว่าหนึ่งในสิบของสภาเข้าชื่อ หรือ กกต. ส่งเรื่องเอง ไปยังศาลรัฐธรรมนูญ ถ้ามีเหตุอันควรสงสัย ศาลสั่งให้หยุดปฏิบัติหน้าที่ระหว่างพิจารณาได้ และถ้าวินิจฉัยว่าสมาชิกภาพสิ้นสุด ให้พ้นตำแหน่งนับแต่วันที่หยุดปฏิบัติหน้าที่ (มาตรา 82)",
-        "en": "The problem this rule targets is the politician who owns a megaphone. If the people who write the laws and control the government also own a newspaper or a TV station, they can use it to campaign, bury bad news, or pass laws that help their media business.\n\nBut the wording of section 98(3) is very wide: an 'owner or shareholder' of 'any' mass-media business, with no minimum stake. So a string of questions follows. Is one share enough? Does a company count if its registered objectives include media but it never did any? What about a company that stopped broadcasting years ago? The Constitutional Court has to answer case by case, and the answers turn on the facts. The next two cases show the same rule producing opposite results.\n\nThe route: at least one-tenth of the members of either house sign a petition, or the Election Commission refers the matter itself, to the Constitutional Court. If there is reasonable doubt, the Court may suspend the member while it decides; if it rules the membership has ended, the member is out from the date of suspension (section 82)."
+        "th": "ปัญหาที่กฎข้อนี้ต้องการแก้คือ นักการเมืองที่เป็นเจ้าของโทรโข่ง ถ้าคนที่ออกกฎหมายและคุมรัฐบาลถือหุ้นหนังสือพิมพ์หรือสถานีโทรทัศน์ด้วย เขาใช้สื่อของตัวเองหาเสียง ปิดข่าวที่ไม่เป็นคุณ หรือออกกฎหมายเอื้อธุรกิจสื่อของตัวเองได้\n\nแต่ถ้อยคำในมาตรา 98 (3) กว้างมาก 'เจ้าของหรือผู้ถือหุ้น' ในกิจการสื่อมวลชน 'ใด ๆ' ไม่ได้กำหนดจำนวนหุ้นขั้นต่ำ คำถามจึงตามมาเป็นชุด ถือหุ้นนิดเดียวผิดไหม บริษัทที่จดวัตถุประสงค์ว่าทำสื่อแต่ไม่ได้ทำจริงนับไหม บริษัทที่เลิกทำสื่อไปแล้วนับไหม ศาลรัฐธรรมนูญต้องเป็นคนตอบทีละคดี และคำตอบออกมาต่างกันตามข้อเท็จจริง สองคดีถัดไปแสดงให้เห็นว่ากฎข้อเดียวกันให้ผลต่างกันได้อย่างไร\n\nเส้นทางคดี: ส.ส. หรือ ส.ว. ไม่น้อยกว่าหนึ่งในสิบของสภาเข้าชื่อร้องต่อประธานสภาของตน ซึ่งต้องส่งเรื่องไปยังศาลรัฐธรรมนูญ หรือ กกต. ส่งเรื่องไปยังศาลเอง ถ้ามีเหตุอันควรสงสัย ศาลต้องสั่งให้หยุดปฏิบัติหน้าที่จนกว่าจะวินิจฉัย และถ้าวินิจฉัยว่าสมาชิกภาพสิ้นสุด ให้พ้นตำแหน่งนับแต่วันที่หยุดปฏิบัติหน้าที่ (มาตรา 82)",
+        "en": "The problem this rule targets is the politician who owns a megaphone. If the people who write the laws and control the government also own a newspaper or a TV station, they can use it to campaign, bury bad news, or pass laws that help their media business.\n\nBut the wording of section 98(3) is very wide: an 'owner or shareholder' of 'any' mass-media business, with no minimum stake. So a string of questions follows. Is one share enough? Does a company count if its registered objectives include media but it never did any? What about a company that stopped broadcasting years ago? The Constitutional Court has to answer case by case, and the answers turn on the facts. The next two cases show the same rule producing opposite results.\n\nThe route: at least one-tenth of the members of either house petition their presiding officer, who must forward it to the Constitutional Court, or the Election Commission refers the matter to the Court itself. If there is reasonable doubt, the Court must suspend the member until it rules; if it rules the membership has ended, the member is out from the date of suspension (section 82)."
       }
     },
     {
       "kind": "case",
-      "title": {"th": "ธนาธร จึงรุ่งเรืองกิจ กับหุ้นวี-ลัค มีเดีย", "en": "Thanathorn Juangroongruangkit and the V-Luck Media shares"},
+      "title": {
+        "th": "ธนาธร จึงรุ่งเรืองกิจ กับหุ้นวี-ลัค มีเดีย",
+        "en": "Thanathorn Juangroongruangkit and the V-Luck Media shares"
+      },
       "year": 2019,
       "body": {
         "th": "กกต. ร้องว่านายธนาธร หัวหน้าพรรคอนาคตใหม่ ถือหุ้นบริษัท วี-ลัค มีเดีย ในวันสมัครรับเลือกตั้ง นายธนาธรสู้ว่าโอนหุ้นให้มารดาไปแล้วตั้งแต่เดือนมกราคม 2562 ก่อนวันสมัคร 6 กุมภาพันธ์ 2562 ศาลรัฐธรรมนูญสั่งให้หยุดปฏิบัติหน้าที่ตั้งแต่พฤษภาคม 2562 และเมื่อ 20 พฤศจิกายน 2562 วินิจฉัย 7 ต่อ 2 ว่าสมาชิกภาพสิ้นสุดลง\n\nเหตุผลของศาลโดยสรุปคือ หลักฐานการโอนไม่น่าเชื่อว่าเกิดขึ้นจริงก่อนวันสมัคร เช่น การแจ้งเปลี่ยนแปลงผู้ถือหุ้นต่อทางราชการเกิดขึ้นภายหลัง และเช็คค่าหุ้นถูกนำไปขึ้นเงินหลังการเลือกตั้ง ฝ่ายนายธนาธรโต้ว่าศาลตัดสินจากการอนุมาน ไม่ใช่ข้อเท็จจริง และบริษัทหยุดกิจการสื่อไปแล้ว\n\nบทเรียนเชิงระบบ: ในคดีลักษณะต้องห้าม ภาระพิสูจน์เรื่องวันเวลาของเอกสารสำคัญมาก และผลของคดีไม่ได้หยุดแค่ตัวบุคคล แต่กระทบจำนวนที่นั่งของพรรคและเสียงในสภาด้วย",
@@ -131,7 +264,10 @@
     },
     {
       "kind": "case",
-      "title": {"th": "พิธา ลิ้มเจริญรัตน์ กับหุ้นไอทีวี", "en": "Pita Limjaroenrat and the iTV shares"},
+      "title": {
+        "th": "พิธา ลิ้มเจริญรัตน์ กับหุ้นไอทีวี",
+        "en": "Pita Limjaroenrat and the iTV shares"
+      },
       "year": 2024,
       "body": {
         "th": "หลังการเลือกตั้งปี 2566 นายพิธา หัวหน้าพรรคก้าวไกลซึ่งได้ที่นั่งมากที่สุด ถูกร้องว่าถือหุ้นบริษัท ไอทีวี 42,000 หุ้น ซึ่งเป็นหุ้นที่อยู่ในกองมรดกของบิดาและเขาถือในฐานะผู้จัดการมรดก ศาลรัฐธรรมนูญสั่งให้หยุดปฏิบัติหน้าที่เมื่อ 19 กรกฎาคม 2566 ซึ่งเป็นวันเดียวกับที่รัฐสภาลงมติไม่ให้เสนอชื่อเขาเป็นนายกรัฐมนตรีซ้ำ\n\nวันที่ 24 มกราคม 2567 ศาลวินิจฉัย 8 ต่อ 1 ว่าสมาชิกภาพไม่สิ้นสุด เหตุผลหลักคือ ในวันที่พรรคส่งชื่อเขาสมัคร ไอทีวีไม่ได้ประกอบกิจการสื่อมวลชนแล้ว เพราะถูกยกเลิกสัญญาสัมปทานตั้งแต่ปี 2550 และไม่มีรายได้จากกิจการสื่อ\n\nเทียบกับคดีธนาธร: ศาลดูว่า 'บริษัททำสื่อจริงหรือไม่ในวันที่สำคัญ' ไม่ได้ดูแค่ชื่อหรือวัตถุประสงค์ที่จดทะเบียน นี่คือวิธีอ่านมาตรา 98 (3) ที่นักเรียนควรจำ ฝ่ายวิจารณ์ตั้งข้อสังเกตว่า การสั่งหยุดปฏิบัติหน้าที่นานหกเดือนในช่วงที่สำคัญทางการเมืองที่สุดมีผลทางการเมืองไปแล้ว ไม่ว่าคำวินิจฉัยสุดท้ายจะออกมาทางใด",
@@ -140,7 +276,10 @@
     },
     {
       "kind": "text",
-      "title": {"th": "สมาชิกภาพสิ้นสุดเมื่อไร และวินัยพรรค", "en": "When membership ends, and party discipline"},
+      "title": {
+        "th": "สมาชิกภาพสิ้นสุดเมื่อไร และวินัยพรรค",
+        "en": "When membership ends, and party discipline"
+      },
       "body": {
         "th": "มาตรา 101 รวมเหตุที่ ส.ส. พ้นตำแหน่งไว้ 13 ข้อ ที่สำคัญคือ สภาครบวาระหรือถูกยุบ ตาย ลาออก ขาดคุณสมบัติหรือมีลักษณะต้องห้าม ทำผิดเรื่องผลประโยชน์ขัดกันตามมาตรา 184 หรือ 185 ขาดประชุมเกินหนึ่งในสี่ของวันประชุมในสมัยประชุม 120 วันโดยไม่ได้รับอนุญาต และต้องคำพิพากษาถึงที่สุดให้จำคุก แม้รอลงอาญา (เว้นความผิดโดยประมาท ลหุโทษ หรือหมิ่นประมาท)\n\nสามข้อที่ผูก ส.ส. ไว้กับพรรค\n- ลาออกจากพรรค: พ้นจาก ส.ส. ทันที (101 (8))\n- พรรคมีมติขับออก: ต้องเป็นมติไม่น้อยกว่าสามในสี่ของที่ประชุมร่วมกรรมการบริหารพรรคกับ ส.ส. ของพรรค แล้ว ส.ส. คนนั้นมีเวลา 30 วันหาพรรคใหม่ ถ้าหาได้ก็ยังเป็น ส.ส. ต่อ (101 (9))\n- พรรคถูกยุบ: มีเวลา 60 วันย้ายเข้าพรรคอื่น ไม่เช่นนั้นพ้นสมาชิกภาพ (101 (10))\n\nเหตุผลเบื้องหลังคือความสมดุลสองด้าน ด้านหนึ่งกันไม่ให้ ส.ส. ย้ายพรรคกลางสภาเพื่อแลกผลประโยชน์ อีกด้านหนึ่งกันไม่ให้ผู้บริหารพรรคใช้การขับออกเป็นอาวุธปิดปาก ส.ส. ที่เห็นต่าง เกณฑ์สามในสี่และสิทธิหาพรรคใหม่ใน 30 วันจึงเป็นตัวกันชน ทั้งนี้ระหว่างอายุสภาห้ามควบรวมพรรคที่มี ส.ส. (มาตรา 99)\n\nเมื่อตำแหน่งว่าง: ส.ส. เขตว่างต้องเลือกตั้งซ่อม เว้นแต่อายุสภาเหลือไม่ถึง 180 วัน ส.ส. บัญชีรายชื่อว่าง ให้ผู้มีชื่อลำดับถัดไปเลื่อนขึ้นมา โดยประธานสภาประกาศในราชกิจจานุเบกษาภายใน 7 วัน (มาตรา 105)",
         "en": "Section 101 lists thirteen ways an MP's membership ends. The main ones: the House's term expires or it is dissolved; death; resignation; losing a qualification or acquiring a disqualification; breaching the conflict-of-interest rules in sections 184 or 185; missing more than a quarter of sitting days in a 120-day session without leave; and a final prison sentence, even suspended (except for negligence, petty offences or defamation).\n\nThree items tie an MP to the party:\n- Resigning from the party ends the seat at once (item 8).\n- Expulsion by the party needs at least three-quarters of a joint meeting of the party executive and the party's MPs; the expelled MP then has 30 days to join another party and keeps the seat if they do (item 9).\n- If the party is dissolved, its MPs have 60 days to join another party or lose their seats (item 10).\n\nThe logic balances two dangers. One is MPs switching sides mid-term for a payoff. The other is party bosses using expulsion to silence dissent. The three-quarters threshold and the 30-day window are the buffer. During a House term, parties with MPs may not merge (section 99).\n\nWhen a seat falls vacant: a constituency seat goes to a by-election unless fewer than 180 days remain in the term; a list seat goes to the next name on the party's list, announced by the Speaker in the Royal Gazette within seven days (section 105)."
@@ -148,24 +287,33 @@
     },
     {
       "kind": "case",
-      "title": {"th": "หกสิบวันหลังพรรคถูกยุบ: อนาคตใหม่ 2563 และก้าวไกล 2567", "en": "Sixty days after a dissolution: Future Forward 2020 and Move Forward 2024"},
+      "title": {
+        "th": "หกสิบวันหลังพรรคถูกยุบ: อนาคตใหม่ 2563 และก้าวไกล 2567",
+        "en": "Sixty days after a dissolution: Future Forward 2020 and Move Forward 2024"
+      },
       "year": 2024,
       "body": {
-        "th": "มาตรา 101 (10) เคยถูกใช้จริงในเหตุการณ์ใหญ่สองครั้ง\n\nกุมภาพันธ์ 2563 ศาลรัฐธรรมนูญยุบพรรคอนาคตใหม่ เหตุผลเกี่ยวกับเงินกู้ที่พรรคกู้จากหัวหน้าพรรค ซึ่งศาลเห็นว่าเป็นประโยชน์อื่นใดที่เกินกว่าที่กฎหมายพรรคการเมืองอนุญาต ส.ส. ที่ไม่ใช่กรรมการบริหารพรรคส่วนใหญ่ย้ายเข้าพรรคก้าวไกลภายในกรอบ 60 วัน\n\n7 สิงหาคม 2567 ศาลรัฐธรรมนูญยุบพรรคก้าวไกล จากการรณรงค์แก้ไขประมวลกฎหมายอาญาม. 112 ซึ่งศาลเคยวินิจฉัยไว้ก่อนหน้าว่าเป็นการกระทำเพื่อล้มล้างการปกครองฯ ส.ส. ที่เหลือย้ายเข้าพรรคประชาชนภายในไม่กี่วัน\n\nกฎ 60 วันทำให้ 'ที่นั่ง' อยู่รอดได้แม้ 'พรรค' ไม่รอด รายละเอียดเหตุยุบพรรคและข้อวิจารณ์อยู่ในบทกฎหมายลูก (พ.ร.ป. ว่าด้วยพรรคการเมือง)",
+        "th": "มาตรา 101 (10) เคยถูกใช้จริงในเหตุการณ์ใหญ่สองครั้ง\n\nกุมภาพันธ์ 2563 ศาลรัฐธรรมนูญยุบพรรคอนาคตใหม่ เหตุผลเกี่ยวกับเงินกู้ที่พรรคกู้จากหัวหน้าพรรค ซึ่งศาลเห็นว่าเป็นประโยชน์อื่นใดที่เกินกว่าที่กฎหมายพรรคการเมืองอนุญาต ส.ส. ที่ไม่ใช่กรรมการบริหารพรรคส่วนใหญ่ย้ายเข้าพรรคก้าวไกลภายในกรอบ 60 วัน\n\n7 สิงหาคม 2567 ศาลรัฐธรรมนูญยุบพรรคก้าวไกล จากการรณรงค์แก้ไขประมวลกฎหมายอาญา ม. 112 ซึ่งศาลเคยวินิจฉัยไว้ก่อนหน้าว่าเป็นการกระทำเพื่อล้มล้างการปกครองฯ ส.ส. ที่เหลือย้ายเข้าพรรคประชาชนภายในไม่กี่วัน\n\nกฎ 60 วันทำให้ 'ที่นั่ง' อยู่รอดได้แม้ 'พรรค' ไม่รอด รายละเอียดเหตุยุบพรรคและข้อวิจารณ์อยู่ในบทกฎหมายลูก (พ.ร.ป. ว่าด้วยพรรคการเมือง)",
         "en": "Section 101(10) has been tested twice in major events.\n\nIn February 2020 the Constitutional Court dissolved Future Forward over a loan the party took from its leader, which the Court treated as a benefit beyond what the political-parties law allows. Most of its MPs who were not party executives joined Move Forward within the 60-day window.\n\nOn 7 August 2024 the Court dissolved Move Forward over its campaign to amend s. 112 of the Criminal Code, which the Court had earlier ruled to be an act aimed at overthrowing the democratic regime with the King as Head of State. Its remaining MPs moved to the People's Party within days.\n\nThe 60-day rule lets the seats survive even when the party does not. The grounds for dissolution and the criticism of them are covered in the organic-law chapter (the Organic Act on Political Parties)."
       }
     },
     {
       "kind": "text",
-      "title": {"th": "วุฒิสภา 200 คน เลือกกันเองตามกลุ่ม", "en": "The Senate: 200 members chosen from among groups"},
+      "title": {
+        "th": "วุฒิสภา 200 คน เลือกกันเองตามกลุ่ม",
+        "en": "The Senate: 200 members chosen from among groups"
+      },
       "body": {
-        "th": "มาตรา 107 กำหนดให้วุฒิสภามี 200 คน มาจาก 'การเลือกกันเอง' ของบุคคลที่มีความรู้ ความเชี่ยวชาญ ประสบการณ์ อาชีพ ลักษณะ หรือประโยชน์ร่วมกันในด้านต่าง ๆ ของสังคม การแบ่งกลุ่มต้องทำให้ทุกคนที่มีสิทธิสมัครอยู่ในกลุ่มใดกลุ่มหนึ่งได้ กฎหมายลูกจะกำหนดไม่ให้ผู้สมัครเลือกคนในกลุ่มเดียวกัน หรือให้คัดกรองด้วยวิธีอื่นก็ได้ และต้องดำเนินการตั้งแต่ระดับอำเภอ จังหวัด จนถึงประเทศ รายละเอียดจริงอยู่ใน พ.ร.ป. ว่าด้วยการได้มาซึ่งสมาชิกวุฒิสภา ซึ่งแบ่งเป็น 20 กลุ่ม\n\nคุณสมบัติ (มาตรา 108 ก.): สัญชาติไทยโดยการเกิด อายุไม่ต่ำกว่า 40 ปีในวันสมัคร มีความรู้หรือทำงานในด้านที่สมัครไม่น้อยกว่า 10 ปี และผูกพันกับพื้นที่ที่สมัคร\n\nลักษณะต้องห้าม (มาตรา 108 ข.): นอกจากชุดเดียวกับ ส.ส. ยังห้ามเป็นข้าราชการ ห้ามเป็นสมาชิกพรรค และห้ามเป็นหรือเคยเป็น ส.ส. ผู้ดำรงตำแหน่งในพรรค รัฐมนตรี หรือนักการเมืองท้องถิ่น เว้นแต่พ้นมาแล้วไม่น้อยกว่า 5 ปี ห้ามเป็นพ่อแม่ คู่สมรส หรือลูกของนักการเมืองหรือของผู้สมัคร ส.ว. ในคราวเดียวกัน และห้ามเคยเป็น ส.ว. ตามรัฐธรรมนูญนี้มาก่อน แปลว่า ส.ว. เป็นได้สมัยเดียว\n\nวาระ 5 ปีนับแต่วันประกาศผล และเมื่อหมดวาระให้อยู่ต่อจนกว่าจะมี ส.ว. ชุดใหม่ (มาตรา 109) ส.ว. ต้องไม่ฝักใฝ่หรือยอมอยู่ใต้อาณัติพรรคใด (มาตรา 113) และเมื่อพ้นตำแหน่งแล้ว 2 ปีจึงเป็นรัฐมนตรีหรือผู้ดำรงตำแหน่งทางการเมืองได้ (มาตรา 112)\n\nหมายเหตุ: ช่วงห้าปีแรก ประเทศไทยมีวุฒิสภาเฉพาะกาล 250 คนที่มาจากการแต่งตั้งตามบทเฉพาะกาล (มาตรา 269 ถึง 272) เรื่องนั้นอยู่ในบทบทเฉพาะกาล บทนี้พูดถึงวุฒิสภาตามระบบปกติ",
+        "th": "มาตรา 107 กำหนดให้วุฒิสภามี 200 คน มาจาก 'การเลือกกันเอง' ของบุคคลที่มีความรู้ ความเชี่ยวชาญ ประสบการณ์ อาชีพ ลักษณะ หรือประโยชน์ร่วมกันในด้านต่าง ๆ ของสังคม การแบ่งกลุ่มต้องทำให้ทุกคนที่มีสิทธิสมัครอยู่ในกลุ่มใดกลุ่มหนึ่งได้ กฎหมายลูกจะกำหนดไม่ให้ผู้สมัครเลือกคนในกลุ่มเดียวกัน หรือให้คัดกรองด้วยวิธีอื่นก็ได้ และต้องดำเนินการตั้งแต่ระดับอำเภอ จังหวัด จนถึงประเทศ รายละเอียดจริงอยู่ใน พ.ร.ป. ว่าด้วยการได้มาซึ่งสมาชิกวุฒิสภา ซึ่งแบ่งเป็น 20 กลุ่ม\n\nคุณสมบัติ (มาตรา 108 ก.): สัญชาติไทยโดยการเกิด อายุไม่ต่ำกว่า 40 ปีในวันสมัคร มีความรู้หรือทำงานในด้านที่สมัครไม่น้อยกว่า 10 ปี และผูกพันกับพื้นที่ที่สมัคร\n\nลักษณะต้องห้าม (มาตรา 108 ข.): นอกจากชุดเดียวกับ ส.ส. ยังห้ามเป็นข้าราชการ ห้ามเป็นสมาชิกพรรค และห้ามเป็นหรือเคยเป็น ส.ส. ผู้ดำรงตำแหน่งในพรรค รัฐมนตรี หรือนักการเมืองท้องถิ่น เว้นแต่พ้นมาแล้วไม่น้อยกว่า 5 ปี ห้ามเป็นพ่อแม่ คู่สมรส หรือลูกของนักการเมืองหรือของผู้สมัคร ส.ว. ในคราวเดียวกัน และห้ามเคยเป็น ส.ว. ตามรัฐธรรมนูญนี้มาก่อน แปลว่า ส.ว. เป็นได้สมัยเดียว\n\nวาระ 5 ปีนับแต่วันประกาศผล และเมื่อหมดวาระให้อยู่ต่อจนกว่าจะมี ส.ว. ชุดใหม่ (มาตรา 109) ส.ว. ต้องไม่ฝักใฝ่หรือยอมอยู่ใต้อาณัติพรรคใด (มาตรา 113) และเมื่อพ้นตำแหน่งแล้ว 2 ปีจึงเป็นรัฐมนตรีหรือผู้ดำรงตำแหน่งทางการเมืองได้ (มาตรา 112)\n\nหมายเหตุ: ช่วงห้าปีแรก ประเทศไทยมีวุฒิสภาเฉพาะกาล 250 คนที่มาจากการแต่งตั้งตามบทเฉพาะกาล (มาตรา 269 ถึง 272) เรื่องนั้นอยู่ในบทเฉพาะกาล บทนี้พูดถึงวุฒิสภาตามระบบปกติ",
         "en": "Section 107 sets the Senate at 200 members, chosen 'from among themselves' by people who share knowledge, expertise, experience, occupation, characteristics or interests across different fields of society. The groups must be designed so that everyone eligible to apply fits into one of them. The organic law may bar candidates from voting for people in their own group, or use another screening method, and the process must run at district, provincial and national levels. The working details live in the Organic Act on the Acquisition of Senators, which sets 20 groups.\n\nQualifications (section 108 A): Thai by birth; at least 40 on the application date; at least ten years of knowledge or work in the field applied for; a tie to the area applied in.\n\nDisqualifications (section 108 B): on top of most of the MP list, a senator may not be a civil servant or a party member, and may not be or have been an MP, a party office-holder, a minister or a local politician unless five years have passed. Parents, spouses and children of politicians or of fellow Senate candidates are barred, and so is anyone who has already been a senator under this constitution. In other words, one term only.\n\nThe term is five years from the announcement of results, and senators stay on until a new Senate arrives (section 109). Senators must not be beholden to any party (section 113), and after leaving office must wait two years before becoming a minister or other political office-holder (section 112).\n\nNote: for the first five years Thailand had a transitional, appointed 250-member Senate under sections 269 to 272. That belongs to the transitory-provisions chapter; this one covers the permanent design."
       }
     },
     {
       "kind": "logic",
-      "title": {"th": "ทำไมให้เลือกกันเอง แทนให้ประชาชนเลือกตั้ง", "en": "Why self-selection instead of a popular vote?"},
+      "title": {
+        "th": "ทำไมให้เลือกกันเอง แทนให้ประชาชนเลือกตั้ง",
+        "en": "Why self-selection instead of a popular vote?"
+      },
       "body": {
         "th": "ผู้ร่างรัฐธรรมนูญมีโจทย์สองข้อที่ขัดกันเอง\n\n- ไม่อยากให้วุฒิสภาเป็น 'สภาผัวเมีย' หรือสภาสาขาของพรรค อย่างที่เคยวิจารณ์วุฒิสภาเลือกตั้งในอดีต\n- ไม่อยากให้วุฒิสภามาจากการแต่งตั้งล้วน ๆ เพราะจะขาดความชอบธรรม\n\nคำตอบคือให้คนจากหลายอาชีพมาเลือกกันเอง ห้ามสังกัดพรรค ห้ามญาตินักการเมือง และให้มีการเลือกไขว้ข้ามกลุ่มเพื่อให้ฮั้วยาก ตรรกะคือ ถ้าไม่มีการหาเสียงกับประชาชนทั่วไป ระบบหัวคะแนนของพรรคก็ใช้ไม่ได้\n\nแต่ตรรกะเดียวกันก็สร้างจุดอ่อนใหม่ เมื่อคนที่ลงคะแนนมีแค่ผู้สมัครด้วยกัน จำนวนผู้ลงคะแนนก็น้อยมาก กลุ่มที่จัดตั้งมาดีสามารถส่งคนมาสมัครจำนวนมากเพื่อลงคะแนนให้กันได้ และประชาชนทั่วไปไม่มีส่วนเลือก ดังนั้นสิ่งที่ออกแบบมาเพื่อกันการครอบงำของพรรค อาจเปิดช่องให้การจัดตั้งแบบอื่นเข้ามาแทน\n\nสำหรับข้อสอบ ให้จำอำนาจของวุฒิสภาเป็นสามกอง: กลั่นกรองกฎหมาย ให้ความเห็นชอบบุคคลในตำแหน่งสำคัญ และตรวจสอบรัฐบาลแบบไม่ลงมติ (ตั้งกระทู้ถามตามมาตรา 150 และเปิดอภิปรายทั่วไปตามมาตรา 153) วุฒิสภาไม่มีอำนาจลงมติไม่ไว้วางใจ และหลังบทเฉพาะกาลมาตรา 272 สิ้นผลแล้ว ไม่มีอำนาจร่วมเลือกนายกรัฐมนตรี",
         "en": "The drafters had two goals that pull against each other.\n\n- They did not want the Senate to become a family business or a branch office of the parties, a complaint often made about elected Senates of the past.\n- They did not want a fully appointed Senate, which would lack legitimacy.\n\nTheir answer: let people from many occupations choose among themselves, ban party membership, bar politicians' relatives, and add cross-group voting to make collusion harder. The reasoning is that with no public campaign, the parties' local vote-brokers have nothing to work with.\n\nThe same reasoning creates a new weak point. When only candidates vote, the electorate is tiny. A well-organised network can enter many applicants who then vote for each other, and ordinary citizens have no say. A design meant to keep parties out can let other kinds of organisation in.\n\nFor exams, sort the Senate's powers into three piles: reviewing legislation, approving people for key posts, and scrutinising the government without a vote (questions under section 150 and general debates under section 153). The Senate cannot pass a vote of no confidence, and since the transitional section 272 expired it has no part in choosing the Prime Minister."
@@ -173,16 +321,22 @@
     },
     {
       "kind": "case",
-      "title": {"th": "การเลือก ส.ว. ปี 2567", "en": "The 2024 Senate selection"},
+      "title": {
+        "th": "การเลือก ส.ว. ปี 2567",
+        "en": "The 2024 Senate selection"
+      },
       "year": 2024,
       "body": {
-        "th": "มิถุนายน 2567 เป็นครั้งแรกที่ใช้ระบบเลือกกันเองตามมาตรา 107 จริง ผู้สมัครหลายหมื่นคนจ่ายค่าธรรมเนียม สมัครใน 1 จาก 20 กลุ่ม แล้วเลือกกันเป็นสามระดับ: อำเภอ (9 มิถุนายน) จังหวัด (16 มิถุนายน) และประเทศ (26 มิถุนายน) ในแต่ละระดับ ผู้สมัครเลือกกันเองในกลุ่มก่อน แล้วจึงเลือกไขว้ไปยังกลุ่มอื่น ระดับประเทศได้ ส.ว. กลุ่มละ 10 คน รวม 200 คน และบัญชีสำรองกลุ่มละ 5 คน\n\nก่อนรอบระดับประเทศ มีผู้ร้องว่าบทบัญญัติวิธีเลือกใน พ.ร.ป. ขัดมาตรา 107 วันที่ 18 มิถุนายน 2567 ศาลรัฐธรรมนูญวินิจฉัยว่าไม่ขัด กระบวนการจึงเดินต่อ กกต. รับรองผล ส.ว. 200 คน เมื่อ 10 กรกฎาคม 2567 ท่ามกลางคำร้องเรื่องคุณสมบัติและการฮั้ว\n\nหลังจากนั้นมีข้อกล่าวหาว่ามีการจัดตั้งลงคะแนนเป็นกลุ่มก้อน ปี 2568 คณะกรรมการคดีพิเศษให้ดีเอสไอสอบสวนในมิติฟอกเงินและความผิดอื่น และ กกต. ตั้งคณะทำงานร่วมไต่สวน ผลเชิงกฎหมายยังไม่ยุติ ณ เวลาที่เขียน และมีความเห็นแตกต่างกันในหน่วยงานที่เกี่ยวข้อง ผู้เรียนควรตามข่าวจากแหล่งทางการเพื่อดูผลล่าสุด\n\nไม่ว่าผลจะออกมาอย่างไร กรณีนี้คือการทดสอบจริงครั้งแรกของคำถามในบล็อกก่อนหน้า: ระบบที่ออกแบบให้ฮั้วยาก กันการจัดตั้งได้จริงหรือไม่",
-        "en": "June 2024 was the first real run of section 107's self-selection system. Tens of thousands of applicants paid a fee, registered in one of 20 groups, and voted at three levels: district (9 June), province (16 June) and nation (26 June). At each level candidates first voted within their own group, then voted across into other groups. The national round produced 10 senators per group, 200 in all, plus 5 reserves per group.\n\nBefore the national round, petitioners argued that the voting provisions of the organic act conflicted with section 107. On 18 June 2024 the Constitutional Court ruled they did not, and the process continued. The Election Commission certified the 200 senators on 10 July 2024, with complaints about qualifications and collusion still pending.\n\nAllegations of organised bloc voting followed. In 2025 the Special Case Board assigned the Department of Special Investigation to investigate money laundering and related offences, and the Election Commission set up a joint inquiry panel. At the time of writing the legal outcome was unresolved, with disagreement among the agencies involved; check official sources for the latest position.\n\nWhatever the result, this was the first live test of the question in the previous block: does a system designed to make collusion hard actually stop organised capture?"
+        "th": "มิถุนายน 2567 เป็นครั้งแรกที่ใช้ระบบเลือกกันเองตามมาตรา 107 จริง ผู้สมัครหลายหมื่นคนจ่ายค่าธรรมเนียม สมัครใน 1 จาก 20 กลุ่ม แล้วเลือกกันเป็นสามระดับ: อำเภอ (9 มิถุนายน) จังหวัด (16 มิถุนายน) และประเทศ (26 มิถุนายน) ในแต่ละระดับ ผู้สมัครเลือกกันเองในกลุ่มก่อน แล้วจึงเลือกไขว้ไปยังกลุ่มอื่น ระดับประเทศได้ ส.ว. กลุ่มละ 10 คน รวม 200 คน และบัญชีสำรองกลุ่มละ 5 คน\n\nก่อนรอบระดับประเทศ มีผู้ร้องว่าบทบัญญัติวิธีเลือกใน พ.ร.ป. ขัดมาตรา 107 วันที่ 18 มิถุนายน 2567 ศาลรัฐธรรมนูญวินิจฉัยว่าไม่ขัด กระบวนการจึงเดินต่อ กกต. รับรองผล ส.ว. 200 คน เมื่อ 10 กรกฎาคม 2567 ท่ามกลางคำร้องเรื่องคุณสมบัติและการฮั้ว\n\nหลังจากนั้นมีข้อกล่าวหาว่ามีการจัดตั้งลงคะแนนเป็นกลุ่มก้อน ปี 2568 คณะกรรมการคดีพิเศษให้ดีเอสไอสอบสวนในมิติฟอกเงินและความผิดอื่น และ กกต. ตั้งคณะทำงานร่วมไต่สวน หน่วยงานที่เกี่ยวข้องมีความเห็นไม่ตรงกันหลายช่วง จนเมื่อ 14 กันยายน 2569 กกต. มีมติส่งเรื่องบุคคล 77 คน ในจำนวนนี้เป็น ส.ว. ที่ยังดำรงตำแหน่ง 26 คน ไปยังศาลฎีกา ผลทางคดียังไม่ยุติ ณ เวลาที่เขียน ผู้เรียนควรตามข่าวจากแหล่งทางการเพื่อดูผลล่าสุด\n\nไม่ว่าผลจะออกมาอย่างไร กรณีนี้คือการทดสอบจริงครั้งแรกของคำถามในบล็อกก่อนหน้า: ระบบที่ออกแบบให้ฮั้วยาก กันการจัดตั้งได้จริงหรือไม่",
+        "en": "June 2024 was the first real run of section 107's self-selection system. Tens of thousands of applicants paid a fee, registered in one of 20 groups, and voted at three levels: district (9 June), province (16 June) and nation (26 June). At each level candidates first voted within their own group, then voted across into other groups. The national round produced 10 senators per group, 200 in all, plus 5 reserves per group.\n\nBefore the national round, petitioners argued that the voting provisions of the organic act conflicted with section 107. On 18 June 2024 the Constitutional Court ruled they did not, and the process continued. The Election Commission certified the 200 senators on 10 July 2024, with complaints about qualifications and collusion still pending.\n\nAllegations of organised bloc voting followed. In 2025 the Special Case Board assigned the Department of Special Investigation to investigate money laundering and related offences, and the Election Commission set up a joint inquiry panel. The agencies involved disagreed at several stages. On 14 September 2026 the Election Commission voted to refer 77 people, including 26 sitting senators, to the Supreme Court. At the time of writing the cases were unresolved; check official sources for the latest position.\n\nWhatever the result, this was the first live test of the question in the previous block: does a system designed to make collusion hard actually stop organised capture?"
       }
     },
     {
       "kind": "critique",
-      "title": {"th": "ถกเถียงเรื่องวุฒิสภาแบบเลือกกันเอง", "en": "The debate over a self-selected Senate"},
+      "title": {
+        "th": "ถกเถียงเรื่องวุฒิสภาแบบเลือกกันเอง",
+        "en": "The debate over a self-selected Senate"
+      },
       "by": "Constitution Drafting Commission (stated rationale); iLaw and election observers (criticism)",
       "body": {
         "th": "เหตุผลที่คณะกรรมการร่างรัฐธรรมนูญให้ไว้: วุฒิสภาควรเป็นที่รวมของผู้รู้หลายสาขา เป็นอิสระจากพรรค และไม่ต้องใช้เงินหาเสียงกับประชาชน การเลือกไขว้ข้ามกลุ่มและการคัดกรองหลายระดับมีไว้เพื่อให้การซื้อเสียงทำได้ยาก\n\nข้อวิจารณ์จากกลุ่มเฝ้าระวังอย่าง iLaw และผู้สังเกตการณ์การเลือกตั้ง: กระบวนการนี้ไม่ควรเรียกว่าการเลือกตั้ง เพราะประชาชนทั่วไปไม่ได้ลงคะแนน ค่าสมัครและกติกาที่ซับซ้อนกีดกันคนทั่วไป การห้ามแนะนำตัวในวงกว้างทำให้ผู้สมัครไม่รู้จักกัน และระบบที่ผู้ลงคะแนนมีจำนวนน้อยเปิดช่องให้การจัดตั้ง ผลปี 2567 ที่นักวิเคราะห์หลายฝ่ายชี้ว่า ส.ว. จำนวนมากมีความเชื่อมโยงกับพรรคการเมืองบางพรรค ถูกยกเป็นหลักฐานว่าเป้าหมาย 'อิสระจากพรรค' อาจไม่สำเร็จ\n\nคำถามที่ยังเปิดอยู่: วุฒิสภาที่ไม่ได้มาจากประชาชนโดยตรงควรมีอำนาจให้ความเห็นชอบผู้ดำรงตำแหน่งในศาลรัฐธรรมนูญและองค์กรอิสระมากแค่ไหน",
@@ -191,15 +345,21 @@
     },
     {
       "kind": "text",
-      "title": {"th": "สมัยประชุม องค์ประชุม และคณะกรรมาธิการ", "en": "Sessions, quorum and committees"},
+      "title": {
+        "th": "สมัยประชุม องค์ประชุม และคณะกรรมาธิการ",
+        "en": "Sessions, quorum and committees"
+      },
       "body": {
-        "th": "ภายใน 15 วันหลังประกาศผลเลือกตั้งทั่วไป ต้องเรียกประชุมรัฐสภาครั้งแรก ปีหนึ่งมีสมัยประชุมสามัญ 2 สมัย สมัยละ 120 วัน ขยายได้ แต่ปิดก่อนครบต้องได้รับความเห็นชอบจากรัฐสภา (มาตรา 121) พระมหากษัตริย์ทรงเรียกประชุม ทรงเปิดและทรงปิดประชุม โดยพระราชกฤษฎีกา และอาจเสด็จพระราชดำเนินมาทรงทำรัฐพิธีเปิดประชุมด้วยพระองค์เอง หรือโปรดเกล้าฯ ให้ผู้แทนพระองค์มาทำแทน (มาตรา 122) สมัยวิสามัญเรียกได้เมื่อจำเป็น และ ส.ส. หรือสมาชิกทั้งสองสภารวมกันไม่น้อยกว่าหนึ่งในสามเข้าชื่อขอได้ (มาตรา 123)\n\nเมื่อไม่มีสภาผู้แทนราษฎร วุฒิสภาประชุมไม่ได้ เว้นแต่เรื่องที่ระบุไว้ เช่น เรื่องผู้สำเร็จราชการแทนพระองค์และการสืบราชสมบัติ การประกาศสงคราม หรือการให้ความเห็นชอบบุคคลดำรงตำแหน่ง (มาตรา 126) ตรรกะคือวุฒิสภาไม่ควรกลายเป็นสภาเดี่ยวที่ทำงานแทนประชาชนในช่วงไม่มีผู้แทนที่ประชาชนเลือก\n\nองค์ประชุมคือไม่น้อยกว่ากึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่ มติใช้เสียงข้างมาก สมาชิกคนหนึ่งมีหนึ่งเสียง ถ้าเสียงเท่ากันประธานออกเสียงชี้ขาด บันทึกการลงคะแนนรายคนต้องเปิดเผย และการลงคะแนนเลือกหรือให้ความเห็นชอบบุคคลให้ทำเป็นการลับ เว้นแต่รัฐธรรมนูญบัญญัติไว้เป็นอย่างอื่น (มาตรา 120) การประชุมเปิดเผยเป็นหลัก ประชุมลับได้เมื่อคณะรัฐมนตรีหรือสมาชิกไม่น้อยกว่าหนึ่งในสี่ร้องขอ (มาตรา 127)\n\nคณะกรรมาธิการ: สภาตั้งกรรมาธิการสามัญจากสมาชิก และกรรมาธิการวิสามัญจากคนในหรือนอกสภาได้ กรรมาธิการเรียกเอกสารหรือเรียกบุคคลมาชี้แจงได้ แต่เรียกผู้พิพากษาในเรื่องการพิจารณาคดี และองค์กรอิสระในเรื่องที่เป็นอำนาจโดยตรงไม่ได้ กรรมาธิการสามัญต้องมีสัดส่วนตามจำนวน ส.ส. ของแต่ละพรรค (มาตรา 129) และถ้าร่างกฎหมายเกี่ยวกับเด็ก เยาวชน สตรี ผู้สูงอายุ หรือคนพิการ หรือเป็นร่างที่ประชาชนเข้าชื่อเสนอ กรรมาธิการวิสามัญอย่างน้อยหนึ่งในสามต้องมาจากกลุ่มนั้นหรือผู้แทนผู้เสนอ (มาตรา 128)",
-        "en": "Within 15 days of the general-election results, Parliament must be summoned for its first sitting. Each year has two ordinary sessions of 120 days; they can be extended, and closing one early needs Parliament's approval (section 121). The King convokes, opens and closes Parliament by royal decree, and may preside over the State Opening in person or appoint a representative to do so (section 122). Extraordinary sessions can be called when needed, and at least one-third of MPs, or of both houses combined, may request one (section 123).\n\nWhen there is no House, the Senate may not sit except for listed matters such as the regency and succession, a declaration of war, or approving appointments (section 126). The logic: the Senate should not turn into a one-chamber Parliament standing in for the people while there are no elected representatives.\n\nQuorum is at least half of the existing members. Decisions are by majority; each member has one vote; a tie is broken by the presiding officer's casting vote. Individual voting records must be public, and votes to choose or approve people for posts are secret unless the constitution says otherwise (section 120). Sittings are public by default; they go into closed session if the Cabinet or at least one-quarter of members ask (section 127).\n\nCommittees: each house appoints standing committees from its members and ad hoc committees from members or outsiders. Committees may demand documents and summon people, but not judges about their adjudication, nor independent organs about their core functions. Standing committees must mirror each party's share of MPs (section 129). For bills on children, youth, women, the elderly or people with disabilities, or bills proposed by citizens' petition, at least one-third of the ad hoc committee must come from that group or from the petitioners' representatives (section 128)."
+        "th": "ภายใน 15 วันหลังประกาศผลเลือกตั้งทั่วไป ต้องเรียกประชุมรัฐสภาครั้งแรก ปีหนึ่งมีสมัยประชุมสามัญ 2 สมัย สมัยละ 120 วัน ขยายได้ แต่ปิดก่อนครบต้องได้รับความเห็นชอบจากรัฐสภา (มาตรา 121) พระมหากษัตริย์ทรงเรียกประชุม ทรงเปิดและทรงปิดประชุม การเรียกประชุม การขยายเวลา และการปิดประชุมทำโดยพระราชกฤษฎีกา และอาจเสด็จพระราชดำเนินมาทรงทำรัฐพิธีเปิดประชุมสมัยประชุมสามัญประจำปีครั้งแรกด้วยพระองค์เอง หรือโปรดเกล้าฯ ให้ผู้แทนพระองค์มาทำแทน (มาตรา 122) สมัยวิสามัญเรียกได้เมื่อจำเป็นเพื่อประโยชน์แห่งรัฐ และ ส.ส. หรือสมาชิกทั้งสองสภารวมกัน จำนวนไม่น้อยกว่าหนึ่งในสามของสมาชิกทั้งหมดของทั้งสองสภา เข้าชื่อขอได้ (มาตรา 123)\n\nเมื่อไม่มีสภาผู้แทนราษฎร วุฒิสภาประชุมไม่ได้ เว้นแต่เรื่องที่ระบุไว้ เช่น เรื่องผู้สำเร็จราชการแทนพระองค์และการสืบราชสมบัติ การประกาศสงคราม หรือการให้ความเห็นชอบบุคคลดำรงตำแหน่ง (มาตรา 126) ตรรกะคือวุฒิสภาไม่ควรกลายเป็นสภาเดี่ยวที่ทำงานแทนประชาชนในช่วงไม่มีผู้แทนที่ประชาชนเลือก\n\nองค์ประชุมคือไม่น้อยกว่ากึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่ มติใช้เสียงข้างมาก สมาชิกคนหนึ่งมีหนึ่งเสียง ถ้าเสียงเท่ากันประธานออกเสียงชี้ขาด บันทึกการลงคะแนนรายคนต้องเปิดเผย และการลงคะแนนเลือกหรือให้ความเห็นชอบบุคคลให้ทำเป็นการลับ เว้นแต่รัฐธรรมนูญบัญญัติไว้เป็นอย่างอื่น (มาตรา 120) การประชุมเปิดเผยเป็นหลัก ประชุมลับได้เมื่อคณะรัฐมนตรีหรือสมาชิกไม่น้อยกว่าหนึ่งในสี่ร้องขอ (มาตรา 127)\n\nคณะกรรมาธิการ: สภาตั้งกรรมาธิการสามัญจากสมาชิก และกรรมาธิการวิสามัญจากคนในหรือนอกสภาได้ กรรมาธิการเรียกเอกสารหรือเรียกบุคคลมาชี้แจงได้ แต่เรียกผู้พิพากษาในเรื่องการพิจารณาคดี และองค์กรอิสระในเรื่องที่เป็นอำนาจโดยตรงไม่ได้ กรรมาธิการสามัญต้องมีสัดส่วนตามจำนวน ส.ส. ของแต่ละพรรค (มาตรา 129) และถ้าร่างกฎหมายเกี่ยวกับเด็ก เยาวชน สตรี ผู้สูงอายุ หรือคนพิการ หรือเป็นร่างที่ประชาชนเข้าชื่อเสนอ กรรมาธิการวิสามัญอย่างน้อยหนึ่งในสามต้องมาจากกลุ่มนั้นหรือผู้แทนผู้เสนอ (มาตรา 128)",
+        "en": "Within 15 days of the general-election results, Parliament must be summoned for its first sitting. Each year has two ordinary sessions of 120 days; they can be extended, and closing one early needs Parliament's approval (section 121). The King convokes, opens and closes Parliament; convocation, extension and closure are done by royal decree, and the King may preside over the State Opening of the first annual session in person or appoint a representative to do so (section 122). Extraordinary sessions can be called when needed in the interest of the state, and MPs, or members of both houses together, numbering at least one-third of the total membership of both houses may request one (section 123).\n\nWhen there is no House, the Senate may not sit except for listed matters such as the regency and succession, a declaration of war, or approving appointments (section 126). The logic: the Senate should not turn into a one-chamber Parliament standing in for the people while there are no elected representatives.\n\nQuorum is at least half of the existing members. Decisions are by majority; each member has one vote; a tie is broken by the presiding officer's casting vote. Individual voting records must be public, and votes to choose or approve people for posts are secret unless the constitution says otherwise (section 120). Sittings are public by default; they go into closed session if the Cabinet or at least one-quarter of members ask (section 127).\n\nCommittees: each house appoints standing committees from its members and ad hoc committees from members or outsiders. Committees may demand documents and summon people, but not judges about their adjudication, nor independent organs about their core functions. Standing committees must mirror each party's share of MPs (section 129). For bills on children, youth, women, the elderly or people with disabilities, or bills proposed by citizens' petition, at least one-third of the ad hoc committee must come from that group or from the petitioners' representatives (section 128)."
       }
     },
     {
       "kind": "case",
-      "title": {"th": "เสียบบัตรแทนกัน กับงบประมาณปี 2563", "en": "Proxy voting and the 2020 budget"},
+      "title": {
+        "th": "เสียบบัตรแทนกัน กับงบประมาณปี 2563",
+        "en": "Proxy voting and the 2020 budget"
+      },
       "year": 2020,
       "body": {
         "th": "มกราคม 2563 ระหว่างที่สภาผู้แทนราษฎรลงมติร่าง พ.ร.บ. งบประมาณรายจ่ายประจำปี 2563 มีหลักฐานว่า ส.ส. บางคนไม่ได้อยู่ในห้องประชุม แต่มีการลงคะแนนในชื่อของพวกเขา หรือที่เรียกกันว่าเสียบบัตรแทนกัน\n\nศาลรัฐธรรมนูญวินิจฉัยเมื่อกุมภาพันธ์ 2563 ด้วยเสียง 5 ต่อ 4 ว่าการลงคะแนนแทนกันขัดหลัก 'สมาชิกคนหนึ่งมีเสียงหนึ่ง' แต่ไม่ได้ทำให้ทั้งร่างตกไป ศาลให้วาระแรกมีผล แล้วให้สภาลงมติวาระสองและวาระสามใหม่ สภาลงมติใหม่เมื่อ 13 กุมภาพันธ์ 2563 โดยฝ่ายค้านไม่เข้าร่วม และวุฒิสภาให้ความเห็นชอบในวันถัดมา\n\nทำไมสำคัญ: คดีนี้แสดงว่ามาตรา 120 ไม่ใช่แค่พิธีการ คะแนนเสียงหนึ่งเสียงคือการตัดสินใจของคนหนึ่งคนที่ต้องรับผิดชอบเอง และแสดงว่ามาตรา 148 เปิดให้ร่างกฎหมายถูกตรวจสอบก่อนขึ้นทูลเกล้าฯ ข้อวิจารณ์จากทั้งสองฝั่งคือ ฝ่ายหนึ่งว่าศาลผ่อนเกินไปเพราะความจำเป็นเรื่องเงิน อีกฝ่ายว่าการสั่งลงมติใหม่ทำให้งบประมาณล่าช้าทั้งที่เสียงข้างมากชัดเจนอยู่แล้ว",
@@ -208,7 +368,10 @@
     },
     {
       "kind": "text",
-      "title": {"th": "เอกสิทธิ์และความคุ้มกัน", "en": "Privilege and immunity"},
+      "title": {
+        "th": "เอกสิทธิ์และความคุ้มกัน",
+        "en": "Privilege and immunity"
+      },
       "body": {
         "th": "เอกสิทธิ์ (มาตรา 124): สิ่งที่สมาชิกพูด แสดงความเห็น หรือลงคะแนนในที่ประชุม เป็นเอกสิทธิ์เด็ดขาด ใครจะฟ้องร้องสมาชิกด้วยเหตุนั้นไม่ได้ เหตุผลคือสภาเป็นที่เดียวที่ผู้แทนต้องพูดเรื่องอันตรายได้โดยไม่กลัวถูกฟ้องปิดปาก เช่น การกล่าวหาการทุจริตของรัฐมนตรี\n\nแต่มีข้อยกเว้นสำคัญ เอกสิทธิ์ไม่คุ้มครอง ถ้าการประชุมนั้นถ่ายทอดทางวิทยุ โทรทัศน์ หรือช่องทางอื่น ถ้อยคำไปปรากฏนอกรัฐสภา และถ้อยคำนั้นเป็นความผิดอาญาหรือละเมิดทางแพ่งต่อบุคคลภายนอก ซึ่งไม่ใช่รัฐมนตรีหรือสมาชิกสภานั้น ตรรกะคือ คุ้มครองการตรวจสอบระหว่างคนในสนาม แต่ไม่ให้ใช้สภาเป็นเวทีถ่ายทอดสดเพื่อทำร้ายคนนอกที่ไม่มีเวทีตอบโต้ คนนอกที่เสียหายขอให้ประธานสภาเผยแพร่คำชี้แจงของตนได้ และยังฟ้องศาลได้\n\nความคุ้มกัน (มาตรา 125): ระหว่างสมัยประชุม ห้ามจับ คุมขัง หรือหมายเรียกสมาชิกไปสอบสวนในฐานะผู้ต้องหาคดีอาญา เว้นแต่สภาอนุญาต หรือจับขณะกระทำความผิด ถ้าถูกคุมขังอยู่ก่อนสมัยประชุม ประธานสภาขอให้ปล่อยได้ ศาลยังพิจารณาคดีระหว่างสมัยประชุมได้ แต่ต้องไม่ขัดขวางการมาประชุม ความคุ้มกันนี้ไม่ใช่การยกเว้นความผิด แต่เป็นการกันไม่ให้รัฐบาลใช้ตำรวจจับฝ่ายค้านไปขังก่อนวันลงมติสำคัญ",
         "en": "Privilege (section 124): whatever a member states, argues or votes in a sitting is absolutely privileged, and nobody may sue or prosecute them for it. The point is that Parliament is the one place where representatives must be able to say dangerous things, such as accusing a minister of corruption, without fear of being silenced by lawsuits.\n\nThere is an important exception. Privilege does not apply when the sitting is broadcast on radio, TV or any other channel, the words reach the public outside Parliament, and they amount to a crime or a civil wrong against an outsider who is not a minister or a member of that house. The logic: protect scrutiny among the players on the field, but do not let Parliament become a live broadcast for attacking outsiders who have no platform to answer. A harmed outsider may ask the presiding officer to publish their reply, and may still go to court.\n\nImmunity (section 125): during a session, a member may not be arrested, detained or summoned for questioning as a criminal suspect unless their house consents or they are caught in the act. If held before the session began, the presiding officer can request release. Courts may still try the case during the session as long as it does not stop the member attending. Immunity does not excuse crime; it stops a government from using the police to lock up opponents before a key vote."
@@ -216,7 +379,10 @@
     },
     {
       "kind": "logic",
-      "title": {"th": "เส้นทางของร่าง พ.ร.บ. หนึ่งฉบับ", "en": "The journey of an ordinary bill"},
+      "title": {
+        "th": "เส้นทางของร่าง พ.ร.บ. หนึ่งฉบับ",
+        "en": "The journey of an ordinary bill"
+      },
       "body": {
         "th": "คิดเหมือนแข่งวิ่งผลัด แต่ละไม้มีเส้นตายของตัวเอง\n\n- ใครเสนอได้ (มาตรา 133): คณะรัฐมนตรี ส.ส. ไม่น้อยกว่า 20 คน หรือผู้มีสิทธิเลือกตั้งไม่น้อยกว่า 10,000 คนสำหรับร่างตามหมวด 3 หรือหมวด 5 ร่างต้องเข้าสภาผู้แทนราษฎรก่อนเสมอ ถ้าเป็นร่างการเงินที่ ส.ส. หรือประชาชนเสนอ ต้องมีคำรับรองของนายกรัฐมนตรี\n- สภาผู้แทนราษฎร: สามวาระ รับหลักการ แปรญัตติรายมาตรา ลงมติทั้งฉบับ\n- วุฒิสภา (มาตรา 136): 60 วัน ร่างการเงิน 30 วัน ขยายได้อีกไม่เกิน 30 วัน นับเฉพาะวันในสมัยประชุม ถ้าไม่เสร็จในกำหนด ถือว่าเห็นชอบ\n- วุฒิสภามีสามทาง (มาตรา 137): เห็นชอบ ส่งต่อตามมาตรา 81; ไม่เห็นชอบ ยับยั้งและส่งคืน; แก้ไข ส่งกลับให้สภาผู้แทนราษฎร ถ้าสภาไม่เห็นด้วยกับที่แก้ ตั้งกรรมาธิการร่วมกันจำนวนเท่ากันจากสองสภา\n- ยับยั้งแล้วทำอย่างไร (มาตรา 138): สภาผู้แทนราษฎรยกขึ้นพิจารณาใหม่ได้เมื่อพ้น 180 วัน (ร่างการเงิน 10 วัน) ถ้ายืนยันด้วยเสียงเกินกึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่ ถือว่ารัฐสภาเห็นชอบ ระหว่างยับยั้ง ห้ามเสนอร่างหลักการเดียวกันหรือคล้ายกัน (มาตรา 139)\n- ตรวจความชอบด้วยรัฐธรรมนูญ (มาตรา 148): สมาชิกไม่น้อยกว่าหนึ่งในสิบ หรือนายกรัฐมนตรีเอง ส่งศาลรัฐธรรมนูญได้ ถ้าส่วนที่ขัดเป็นสาระสำคัญ ร่างตกไปทั้งฉบับ ถ้าไม่ใช่ ตกไปเฉพาะส่วน\n- ขึ้นทูลเกล้าฯ (มาตรา 81 และ 145): นายกรัฐมนตรีรอ 5 วันเผื่อมีคำร้องตามมาตรา 148 แล้วนำขึ้นทูลเกล้าทูลกระหม่อมถวายภายใน 20 วัน เมื่อทรงลงพระปรมาภิไธยและประกาศในราชกิจจานุเบกษา จึงใช้บังคับ\n- กรณีไม่ทรงเห็นชอบ (มาตรา 146): ถ้าพระราชทานคืน หรือพ้น 90 วันมิได้พระราชทานคืนมา รัฐสภาต้องปรึกษาใหม่ ถ้ายืนยันด้วยเสียงไม่น้อยกว่าสองในสามของสมาชิกทั้งสองสภา นายกรัฐมนตรีนำขึ้นทูลเกล้าฯ อีกครั้ง ถ้ามิได้ทรงลงพระปรมาภิไธยพระราชทานคืนมาภายใน 30 วัน ให้ประกาศใช้เป็นกฎหมายได้เสมือนทรงลงพระปรมาภิไธยแล้ว\n- ถ้าสภาสิ้นอายุหรือยุบ (มาตรา 147): ร่างที่ค้างอยู่ตกไป แต่คณะรัฐมนตรีชุดใหม่ขอให้รัฐสภาพิจารณาต่อได้ภายใน 60 วันนับแต่วันเรียกประชุมครั้งแรก\n\nสังเกตลวดลาย: ทุกด่านมีเส้นตาย และถ้าใครนิ่ง ระบบจะ 'ถือว่าเห็นชอบ' เพื่อไม่ให้ใครแช่แข็งกฎหมายได้ด้วยการไม่ทำอะไร",
         "en": "Think of a relay race in which each leg has its own deadline.\n\n- Who may introduce (section 133): the Cabinet; at least 20 MPs; or at least 10,000 voters for bills under Chapter 3 or Chapter 5. Every bill starts in the House. A money bill proposed by MPs or citizens needs the Prime Minister's endorsement.\n- The House: three readings, accepting the principle, clause-by-clause scrutiny, final vote.\n- The Senate (section 136): 60 days, or 30 for a money bill, extendable once by up to 30 days, counting session days only. If it runs out of time, it is deemed to approve.\n- The Senate's three options (section 137): approve, and the bill moves on under section 81; reject, which suspends the bill and returns it; or amend and send it back. If the House disagrees with the amendments, each house names an equal number to a joint committee.\n- After a veto (section 138): the House may take the bill up again once 180 days have passed (10 days for a money bill). If it reaffirms with more than half of its existing members, Parliament is deemed to have approved. While a bill is suspended, no one may introduce a bill with the same or a similar principle (section 139).\n- Constitutional check (section 148): at least one-tenth of members, or the Prime Minister, may refer the bill to the Constitutional Court. If the offending part is essential, the whole bill falls; if not, only that part falls.\n- Royal assent (sections 81 and 145): the Prime Minister waits five days in case of a section 148 referral, then submits the bill for royal signature within 20 days. Once signed and published in the Royal Gazette, it is law.\n- If royal assent is withheld (section 146): if the King returns the bill, or 90 days pass without its return, Parliament must reconsider. If both houses reaffirm by at least two-thirds of their combined members, the Prime Minister submits it again; if it is not signed and returned within 30 days, the Prime Minister publishes it as law as if it had been signed.\n- If the House expires or is dissolved (section 147): pending bills lapse, but a new Cabinet may ask Parliament to resume them within 60 days of the first sitting.\n\nNotice the pattern: every gate has a deadline, and silence counts as consent, so nobody can freeze a law simply by doing nothing."
@@ -224,7 +390,10 @@
     },
     {
       "kind": "mnemonic",
-      "title": {"th": "เส้นตายในการออกกฎหมาย: เงินรอไม่ได้", "en": "Law-making deadlines: money can't wait"},
+      "title": {
+        "th": "เส้นตายในการออกกฎหมาย: เงินรอไม่ได้",
+        "en": "Law-making deadlines: money can't wait"
+      },
       "body": {
         "th": "หลักจำข้อเดียว: เงินรอไม่ได้ ทุกตัวเลขของร่างการเงินจึงสั้นกว่าเสมอ\n\n- วุฒิสภาพิจารณา: 60 / 30 (+30)\n- สภาผู้แทนราษฎรยืนยันหลังยับยั้ง: 180 / 10\n- งบประมาณ: สภา 105 วัน วุฒิสภา 20 วัน ห้ามแก้ (หลายร้อยวันกลายเป็นยี่สิบ เพราะงบประมาณต้องทันปีงบ)\n\nขั้นทูลเกล้าฯ จำเป็นลำดับ 5-20-90-2/3-30\n- รอ 5 วัน (เผื่อมีคนส่งศาล)\n- นำขึ้นทูลเกล้าฯ ภายใน 20 วัน\n- ถ้ามิได้พระราชทานคืนภายใน 90 วัน รัฐสภาปรึกษาใหม่\n- ยืนยันด้วย 2/3 ของสองสภา\n- นำขึ้นทูลเกล้าฯ อีกครั้ง ถ้ามิได้พระราชทานคืนภายใน 30 วัน ประกาศใช้ได้\n\nร่าง พ.ร.ป. ต่างออกไป: เข้าที่ประชุมร่วม 180 วัน",
         "en": "One rule to remember: money can't wait, so every money-bill number is shorter.\n\n- Senate review: 60 / 30 (+30)\n- House override after a veto: 180 / 10\n- Budget: House 105 days, Senate 20 days and no amendments. Hundreds of days shrink to twenty because the budget must be ready for the fiscal year.\n\nFor royal assent, remember the sequence 5-20-90-2/3-30:\n- wait 5 days (in case of a court referral),\n- submit within 20 days,\n- if not returned within 90 days, Parliament reconsiders,\n- reaffirm by two-thirds of both houses,\n- resubmit; if not returned within 30 days, the bill is published as law.\n\nOrganic bills differ: they go straight to a joint sitting with a 180-day deadline."
@@ -232,7 +401,10 @@
     },
     {
       "kind": "text",
-      "title": {"th": "ร่างการเงินและงบประมาณ", "en": "Money bills and the budget"},
+      "title": {
+        "th": "ร่างการเงินและงบประมาณ",
+        "en": "Money bills and the budget"
+      },
       "body": {
         "th": "ร่างการเงิน (มาตรา 134) คือร่างที่ว่าด้วยภาษีอากร การจัดสรรหรือจ่ายเงินแผ่นดินและการโอนงบประมาณ การกู้เงิน ค้ำประกัน หรือผูกพันทรัพย์สินของรัฐ หรือเงินตรา ถ้าสงสัยว่าร่างใดเป็นร่างการเงิน ผู้ชี้ขาดคือที่ประชุมร่วมของประธานสภาผู้แทนราษฎรกับประธานกรรมาธิการสามัญทุกคณะของสภาผู้แทนราษฎร ไม่ใช่ศาล ถ้าระหว่างพิจารณาร่างที่ ส.ส. หรือประชาชนเสนอถูกแก้จนกลายเป็นร่างการเงิน ต้องขอคำรับรองนายกรัฐมนตรี ถ้าไม่ได้ ต้องแก้ไม่ให้เป็นร่างการเงิน (มาตรา 135)\n\nทำไมต้องให้นายกรัฐมนตรีรับรอง: เพราะรัฐบาลเป็นผู้รับผิดชอบเงินคลังทั้งระบบ ถ้าใครก็เสนอลดภาษีหรือเพิ่มรายจ่ายได้โดยรัฐบาลไม่รู้ งบประมาณจะเหมือนบัญชีบ้านที่ทุกคนในบ้านรูดบัตรได้แต่ไม่มีใครดูยอดรวม\n\nงบประมาณ: จ่ายเงินแผ่นดินได้เฉพาะที่กฎหมายอนุญาต ยกเว้นกรณีจำเป็นรีบด่วนที่ต้องตั้งงบชดใช้ภายหลัง (มาตรา 140) งบประมาณรายจ่ายต้องทำเป็นพระราชบัญญัติ ถ้าออกไม่ทันปีงบประมาณใหม่ ใช้ของปีก่อนไปพลาง และรัฐต้องจัดงบให้รัฐสภา ศาล องค์กรอิสระ และองค์กรอัยการพอทำงานอย่างอิสระ ถ้าไม่พอ ยื่นขอแปรญัตติต่อกรรมาธิการได้โดยตรง (มาตรา 141) ร่างงบต้องแสดงแหล่งรายได้ ผลสัมฤทธิ์ที่คาดหวัง และความสอดคล้องกับยุทธศาสตร์ชาติ (มาตรา 142)\n\nเส้นตาย (มาตรา 143): สภาผู้แทนราษฎร 105 วัน ไม่เสร็จถือว่าเห็นชอบ วุฒิสภา 20 วัน เห็นชอบหรือไม่เห็นชอบเท่านั้น แก้ไขไม่ได้ ถ้าวุฒิสภาไม่เห็นชอบ สภาผู้แทนราษฎรยกขึ้นยืนยันได้ทันที",
         "en": "A money bill (section 134) deals with taxes or duties; allocating, receiving, holding or spending state funds, or transferring budget appropriations; borrowing, guarantees or commitments of state assets; or currency. If there is doubt, the decision belongs to a joint meeting of the Speaker and the chairs of all House standing committees, not to a court. If a bill proposed by MPs or citizens is amended into a money bill, it needs the Prime Minister's endorsement; without it, the House must amend it back (section 135).\n\nWhy the PM's endorsement? Because the government answers for the whole treasury. If anyone could cut taxes or add spending without the government's knowledge, the budget would be a household account where everyone has a card and nobody watches the total.\n\nThe budget: state money may be spent only as the law authorises, except in urgent necessity, which must be covered by a later appropriation (section 140). The expenditure budget must be an Act; if it is late for the new fiscal year, last year's applies in the meantime. The state must fund Parliament, the courts, the independent organs and the public prosecutors enough to work independently, and they may petition the committee directly if it is not enough (section 141). The bill must show revenue sources, expected results and consistency with the National Strategy (section 142).\n\nDeadlines (section 143): the House has 105 days, after which it is deemed to approve. The Senate has 20 days and may only approve or reject, not amend. If the Senate rejects, the House may reaffirm immediately."
@@ -240,7 +412,10 @@
     },
     {
       "kind": "logic",
-      "title": {"th": "มาตรา 144: ปิดประตูงบแปรญัตติเข้ากระเป๋า", "en": "Section 144: shutting the door on pork"},
+      "title": {
+        "th": "มาตรา 144: ปิดประตูงบแปรญัตติเข้ากระเป๋า",
+        "en": "Section 144: shutting the door on pork"
+      },
       "body": {
         "th": "ปัญหาเก่าของการเมืองไทยคือ ส.ส. หรือกรรมาธิการแปรญัตติดึงงบลงโครงการที่ตนมีส่วนได้เสีย หรือคุมการใช้เงินเอง มาตรา 144 จึงวางกติกาสามชั้น\n\n- ชั้นที่หนึ่ง: ส.ส. แปรญัตติเพิ่มหรือเปลี่ยนรายการไม่ได้ ทำได้แค่ลดหรือตัด และตัดรายจ่ายที่ผูกพันไม่ได้ ได้แก่ เงินต้นเงินกู้ ดอกเบี้ย และเงินที่กฎหมายกำหนดให้จ่าย\n- ชั้นที่สอง: ห้ามการกระทำใดที่ทำให้ ส.ส. ส.ว. หรือกรรมาธิการมีส่วนในการใช้งบไม่ว่าทางตรงหรือทางอ้อม\n- ชั้นที่สาม: บทลงโทษหนัก ถ้าสมาชิกไม่น้อยกว่าหนึ่งในสิบส่งศาลรัฐธรรมนูญ ซึ่งต้องวินิจฉัยใน 15 วัน และศาลเห็นว่าฝ่าฝืน สมาชิกผู้นั้นพ้นตำแหน่งและถูกเพิกถอนสิทธิสมัครรับเลือกตั้ง ถ้าคณะรัฐมนตรีเป็นผู้ทำหรืออนุมัติหรือรู้แล้วไม่ยับยั้ง พ้นทั้งคณะ และผู้กระทำต้องชดใช้เงินคืนพร้อมดอกเบี้ย เรียกคืนได้ภายใน 20 ปี\n\nข้อดีของการออกแบบนี้คือมีทางรอดให้ข้าราชการที่ซื่อตรง: เจ้าหน้าที่ที่รู้ว่ามีการฝ่าฝืน ถ้าบันทึกข้อโต้แย้งไว้หรือแจ้ง ป.ป.ช. จะพ้นความรับผิด และ ป.ป.ช. ต้องปกปิดตัวผู้แจ้ง นี่คือกฎคุ้มครองผู้แจ้งเบาะแสที่ฝังอยู่ในรัฐธรรมนูญ",
         "en": "An old problem in Thai politics: MPs or committee members steering budget amendments into projects they profit from, or controlling the spending themselves. Section 144 builds three layers.\n\n- Layer one: MPs may not add to or change items, only reduce or cut them, and they may not cut committed spending: loan principal, interest, and payments required by law.\n- Layer two: no act may give an MP, senator or committee member any direct or indirect role in spending the budget.\n- Layer three: heavy penalties. If at least one-tenth of members refer a case to the Constitutional Court, which must decide within 15 days, and the Court finds a breach, the member loses the seat and the right to stand for election. If the Cabinet did it, approved it, or knew and failed to stop it, the whole Cabinet goes. Those responsible must repay the money with interest, recoverable for 20 years.\n\nA good feature of the design is the exit it gives honest officials: one who knew of a breach is cleared if they recorded an objection in writing or informed the NACC, and the NACC must keep the informant's identity secret. It is a whistle-blower protection written into the constitution."
@@ -248,7 +423,10 @@
     },
     {
       "kind": "text",
-      "title": {"th": "การตรวจสอบรัฐบาล: กระทู้ อภิปราย และผู้นำฝ่ายค้าน", "en": "Scrutiny: questions, debates and the Opposition Leader"},
+      "title": {
+        "th": "การตรวจสอบรัฐบาล: กระทู้ อภิปราย และผู้นำฝ่ายค้าน",
+        "en": "Scrutiny: questions, debates and the Opposition Leader"
+      },
       "body": {
         "th": "เครื่องมือของสภาเรียงจากเบาไปหนัก\n\n- กระทู้ถาม (มาตรา 150): ส.ส. และ ส.ว. ถามรัฐมนตรีเป็นหนังสือหรือด้วยวาจาได้ และข้อบังคับต้องมีกระทู้ถามสดด้วยวาจาโดยไม่ต้องแจ้งล่วงหน้า รัฐมนตรีไม่ตอบได้ถ้าคณะรัฐมนตรีเห็นว่าเกี่ยวกับความปลอดภัยหรือประโยชน์สำคัญของแผ่นดิน\n- อภิปรายทั่วไปโดยไม่ลงมติ (มาตรา 152): ส.ส. หนึ่งในสิบเข้าชื่อ เพื่อซักถามข้อเท็จจริงหรือเสนอแนะต่อคณะรัฐมนตรี วุฒิสภาก็ทำได้ (มาตรา 153) แต่ต้องใช้หนึ่งในสามของ ส.ว.\n- อภิปรายในที่ประชุมร่วมเรื่องความมั่นคงหรือเศรษฐกิจ (มาตรา 155): ผู้นำฝ่ายค้านขอได้ ประชุมลับ คณะรัฐมนตรีต้องเข้าร่วม และไม่มีการลงมติ\n- อภิปรายไม่ไว้วางใจ (มาตรา 151): ส.ส. หนึ่งในห้าเข้าชื่อ เป็นรายบุคคลหรือทั้งคณะ ห้ามลงมติในวันเดียวกับที่อภิปรายจบ และมติไม่ไว้วางใจต้องได้เกินกึ่งหนึ่งของ ส.ส. ทั้งหมดเท่าที่มีอยู่ ไม่ใช่แค่เกินกึ่งหนึ่งของคนที่มาประชุม เมื่อยื่นญัตติแล้วยุบสภาไม่ได้ รัฐมนตรีที่ย้ายกระทรวงหนีก็ยังถูกอภิปรายต่อ\n\nแต่ละแบบยื่นได้ปีละหนึ่งครั้ง (มาตรา 154) ยกเว้นการอภิปรายไม่ไว้วางใจที่จบลงด้วยมติให้ผ่านระเบียบวาระไป ซึ่งไม่นับเป็นครั้ง\n\nผู้นำฝ่ายค้าน (มาตรา 106): หัวหน้าพรรคที่มี ส.ส. มากที่สุดในบรรดาพรรคที่ไม่มีสมาชิกเป็นรัฐมนตรี ประธานหรือรองประธานสภา พระมหากษัตริย์ทรงแต่งตั้ง โดยประธานสภาผู้แทนราษฎรเป็นผู้ลงนามรับสนองพระบรมราชโองการ ถ้าเสียงเท่ากันให้จับสลาก ตำแหน่งนี้เป็นทางการ เพราะมีบทบาทในกลไกอื่นด้วย เช่น เป็นกรรมการสรรหาตุลาการศาลรัฐธรรมนูญ (มาตรา 203)\n\nข้อสังเกตเชิงประวัติ: รัฐธรรมนูญบางฉบับก่อนหน้านี้กำหนดให้ญัตติไม่ไว้วางใจนายกรัฐมนตรีต้องเสนอชื่อผู้ที่จะเป็นนายกรัฐมนตรีคนใหม่ไปพร้อมกัน มาตรา 151 ไม่มีเงื่อนไขนี้",
         "en": "Parliament's tools, from light to heavy:\n\n- Questions (section 150): MPs and senators may question ministers in writing or orally, and the rules of procedure must allow oral questions without notice. A minister may decline if the Cabinet considers the matter one of national security or vital state interest.\n- General debate without a vote (section 152): one-tenth of MPs may call one to question the Cabinet or offer suggestions. The Senate can do the same (section 153) but needs one-third of senators.\n- Joint-sitting debate on security or the economy (section 155): requested by the Opposition Leader, held in closed session, the Cabinet must attend, and there is no vote.\n- No-confidence debate (section 151): one-fifth of MPs sign, targeting one minister or the whole Cabinet. The vote may not be held on the day the debate ends, and passing it needs more than half of all existing MPs, not just of those present. Once filed, the House cannot be dissolved, and a minister who swaps ministries to dodge it is still debated.\n\nEach kind may be filed once a year (section 154), except that a no-confidence debate ended by a motion to move on to other business does not count.\n\nThe Opposition Leader (section 106) is the leader of the largest party with no member serving as minister, Speaker or Deputy Speaker. The King appoints them, with the Speaker countersigning; a tie is settled by drawing lots. The post is formal because it plugs into other machinery, for example a seat on the committee that selects Constitutional Court judges (section 203).\n\nA historical note: some earlier Thai constitutions required a no-confidence motion against the Prime Minister to name a replacement at the same time. Section 151 has no such requirement."
@@ -256,7 +434,10 @@
     },
     {
       "kind": "case",
-      "title": {"th": "สี่ศึกซักฟอกของรัฐบาลประยุทธ์", "en": "Four no-confidence debates against the Prayut government"},
+      "title": {
+        "th": "สี่ศึกซักฟอกของรัฐบาลประยุทธ์",
+        "en": "Four no-confidence debates against the Prayut government"
+      },
       "year": 2022,
       "body": {
         "th": "ระหว่างปี 2563 ถึง 2565 ฝ่ายค้านยื่นอภิปรายไม่ไว้วางใจตามมาตรา 151 ต่อพลเอกประยุทธ์ จันทร์โอชา และรัฐมนตรีอื่นสี่ครั้ง คือ กุมภาพันธ์ 2563 กุมภาพันธ์ 2564 สิงหาคมถึงกันยายน 2564 และกรกฎาคม 2565 นายกรัฐมนตรีผ่านทุกครั้ง\n\nบทเรียนเชิงระบบคือ เกณฑ์ 'เกินกึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่' ทำให้ฝ่ายค้านต้องได้เสียงจากพรรครัฐบาลด้วยจึงจะชนะ การอภิปรายไม่ไว้วางใจในระบบรัฐสภาจึงมักไม่ได้มีไว้ล้มรัฐบาลจริง แต่เป็นเวทีตรวจสอบที่ถ่ายทอดสดให้ประชาชนเห็นข้อมูลและพิจารณาเอง แล้วไปตัดสินในการเลือกตั้งครั้งต่อไป ข้อมูลที่ถูกเปิดในสภายังกลายเป็นจุดเริ่มของการร้องต่อ ป.ป.ช. หรือศาลในบางเรื่องด้วย\n\nส่วนการอภิปรายทั่วไปโดยไม่ลงมติตามมาตรา 152 ถูกใช้เช่นกัน เช่นในเดือนเมษายน 2567 ฝ่ายค้านเปิดอภิปรายรัฐบาลเศรษฐา ทวีสิน โดยไม่มีการลงมติ",
@@ -265,7 +446,10 @@
     },
     {
       "kind": "mnemonic",
-      "title": {"th": "สัดส่วนเข้าชื่อ: อาวุธยิ่งหนัก ยิ่งต้องใช้คนมาก", "en": "Signature thresholds: the heavier the weapon, the more hands needed"},
+      "title": {
+        "th": "สัดส่วนเข้าชื่อ: อาวุธยิ่งหนัก ยิ่งต้องใช้คนมาก",
+        "en": "Signature thresholds: the heavier the weapon, the more hands needed"
+      },
       "body": {
         "th": "- 1/10: ส่งศาลรัฐธรรมนูญเรื่องสมาชิกภาพ (มาตรา 82) ส่งร่างกฎหมายให้ศาลตรวจ (มาตรา 148) ส่งเรื่องงบแปรญัตติ (มาตรา 144) ส.ส. เสนอร่าง พ.ร.ป. (มาตรา 131) อภิปรายทั่วไปไม่ลงมติ (มาตรา 152) ทั้งหมดคือ 'ขอให้คนอื่นตรวจ' ใช้คนน้อย\n- 1/5: อภิปรายไม่ไว้วางใจ (มาตรา 151) เพราะเป็นการขอปลดรัฐบาล ต้องใช้คนมากขึ้น\n- 1/4: ขอประชุมลับ (มาตรา 127)\n- 1/3: ขอเปิดสมัยวิสามัญ (มาตรา 123) และ ส.ว. ขออภิปรายทั่วไป (มาตรา 153) วุฒิสภามีคนน้อยกว่าและไม่มีมติตามมา จึงใช้สัดส่วนสูงกว่าเพื่อกันการใช้พร่ำเพรื่อ\n- 20 คน: ส.ส. เสนอร่าง พ.ร.บ. ทั่วไป (มาตรา 133) ตัวเลขจำนวนคน ไม่ใช่สัดส่วน\n- 10,000 คน: ประชาชนเสนอร่าง พ.ร.บ. (มาตรา 133)\n\nวิธีจำแบบไทย: 'สิบตรวจ ห้าปลด สี่ปิด สามเปิด'",
         "en": "- 1/10: refer membership to the Constitutional Court (section 82), refer a bill for review (section 148), refer budget meddling (section 144), MPs proposing an organic bill (section 131), general debate without a vote (section 152). All of these say 'let someone else check', so few hands are needed.\n- 1/5: no-confidence debate (section 151). It seeks to remove a government, so it needs more.\n- 1/4: request a closed sitting (section 127).\n- 1/3: request an extraordinary session (section 123), and senators requesting a general debate (section 153). The Senate is smaller and no vote follows, so a higher share guards against overuse.\n- 20 people: MPs introducing an ordinary bill (section 133). A head count, not a fraction.\n- 10,000 people: citizens introducing a bill (section 133).\n\nA short English hook: 'ten to check, five to fire, four to close, three to open.'"
@@ -273,7 +457,10 @@
     },
     {
       "kind": "critique",
-      "title": {"th": "ระบบเลือกตั้งที่ดี คือระบบที่ใครได้ประโยชน์", "en": "A good electoral system for whom?"},
+      "title": {
+        "th": "ระบบเลือกตั้งที่ดี คือระบบที่ใครได้ประโยชน์",
+        "en": "A good electoral system for whom?"
+      },
       "by": "Small parties and proportional-representation advocates; supporters of the 2021 amendment in the larger parties",
       "body": {
         "th": "ฝ่ายสนับสนุนระบบคู่ขนานบัตรสองใบให้เหตุผลว่า เข้าใจง่าย ตรวจสอบเองได้ ให้ผู้เลือกตั้งแยกการเลือกคนกับพรรค และทำให้ได้รัฐบาลที่มีเสียงข้างมากชัดเจน ลดปัญหาสภาที่แตกเป็นสองสิบกว่าพรรคแบบปี 2562\n\nฝ่ายวิจารณ์ โดยเฉพาะพรรคเล็กและผู้สนับสนุนระบบสัดส่วน ชี้ว่าเมื่อบัญชีรายชื่อมีแค่ 100 ที่นั่งและคิดแยกจากเขต สัดส่วนที่นั่งในสภาจะห่างจากสัดส่วนคะแนนนิยม พรรคที่ชนะเขตมากได้ที่นั่งเกินคะแนนนิยม และประชาชนที่เลือกพรรคเล็กมีเสียงในสภาน้อยลง\n\nสิ่งที่ผู้เรียนควรเห็นคือ กติกาเลือกตั้งไม่เคยเป็นกลางทางคณิตศาสตร์ ทุกสูตรเลือกแล้วว่าจะให้คุณค่ากับอะไรมากกว่า ระหว่างความสะท้อนเสียงประชาชน กับเสถียรภาพของรัฐบาล และคนที่แก้กติกามักเป็นคนที่อยู่ในเกมเอง ประเทศไทยเปลี่ยนสูตรเลือกตั้งหลายครั้งในยี่สิบปี ซึ่งก็คือภาพเล็กของการที่ประเทศเปลี่ยนรัฐธรรมนูญมาแล้ว 20 ฉบับนับจากปี 2475",
@@ -282,20 +469,201 @@
     },
     {
       "kind": "check",
-      "title": {"th": "ทดสอบตัวเอง", "en": "Check yourself"},
+      "title": {
+        "th": "ทดสอบตัวเอง",
+        "en": "Check yourself"
+      },
       "items": [
-        {"q": {"th": "ปัจจุบันมี ส.ส. แบบแบ่งเขตและบัญชีรายชื่ออย่างละกี่คน และใช้บัตรกี่ใบ", "en": "How many constituency and party-list MPs are there now, and how many ballots?"}, "a": {"th": "เขต 400 บัญชีรายชื่อ 100 รวม 500 ใช้บัตรสองใบ ตามมาตรา 83 ที่แก้ไขปี 2564", "en": "400 constituency and 100 list, 500 in all, with two ballots, under section 83 as amended in 2021."}, "sections": [83]},
-        {"q": {"th": "ถ้าคะแนน 'ไม่เลือกผู้ใด' ชนะในเขตหนึ่ง จะเกิดอะไรขึ้น", "en": "What happens if 'vote for no one' wins in a district?"}, "a": {"th": "จัดเลือกตั้งใหม่ ผู้สมัครเดิมทุกคนลงซ้ำไม่ได้ และคะแนนนั้นไม่นำไปคำนวณบัญชีรายชื่อ", "en": "A new election is held, none of the original candidates may stand, and those votes are not used in the list calculation."}, "sections": [85, 92]},
-        {"q": {"th": "ส.ส. ลาออกจากพรรค กับ ถูกพรรคขับออก ผลต่างกันอย่างไร", "en": "How do resigning from the party and being expelled by it differ in effect?"}, "a": {"th": "ลาออกจากพรรคพ้นจาก ส.ส. ทันที ถูกขับด้วยมติสามในสี่ ยังมีเวลา 30 วันหาพรรคใหม่", "en": "Resigning ends the seat at once; an MP expelled by a three-quarters vote has 30 days to join another party and keep the seat."}, "sections": [101]},
-        {"q": {"th": "ผู้สมัคร ส.ว. ต้องอายุเท่าไร และ ส.ว. เป็นได้กี่สมัย", "en": "What is the minimum age for a Senate candidate, and how many terms may a senator serve?"}, "a": {"th": "ไม่ต่ำกว่า 40 ปี และเป็นได้สมัยเดียว เพราะผู้เคยเป็น ส.ว. ตามรัฐธรรมนูญนี้มีลักษณะต้องห้าม", "en": "At least 40, and one term only, because anyone who has been a senator under this constitution is disqualified."}, "sections": [108]},
-        {"q": {"th": "วุฒิสภาไม่พิจารณาร่าง พ.ร.บ. ให้เสร็จภายใน 60 วัน ผลคืออะไร", "en": "What if the Senate does not finish an ordinary bill within 60 days?"}, "a": {"th": "ถือว่าวุฒิสภาเห็นชอบ และส่งต่อไปตามมาตรา 81", "en": "The Senate is deemed to approve, and the bill proceeds under section 81."}, "sections": [136, 137]},
-        {"q": {"th": "ในการพิจารณางบประมาณ ส.ส. แปรญัตติเพิ่มรายการได้หรือไม่", "en": "May MPs amend the budget bill to add items?"}, "a": {"th": "ไม่ได้ ลดหรือตัดได้เท่านั้น และตัดเงินต้น ดอกเบี้ยเงินกู้ และเงินที่กฎหมายกำหนดให้จ่ายไม่ได้", "en": "No. They may only reduce or cut, and may not cut loan principal, interest, or payments required by law."}, "sections": [144]},
-        {"q": {"th": "ยื่นอภิปรายไม่ไว้วางใจต้องใช้ ส.ส. เท่าไร และมติไม่ไว้วางใจต้องได้เสียงเท่าไร", "en": "How many MPs are needed to file a no-confidence motion, and how many votes to pass it?"}, "a": {"th": "เข้าชื่อหนึ่งในห้า มติต้องเกินกึ่งหนึ่งของ ส.ส. ทั้งหมดเท่าที่มีอยู่ และห้ามลงมติวันเดียวกับที่อภิปรายจบ", "en": "One-fifth to file; more than half of all existing MPs to pass; and no vote on the day the debate ends."}, "sections": [151]},
-        {"q": {"th": "เอกสิทธิ์ของสมาชิกไม่คุ้มครองในกรณีใด", "en": "When does parliamentary privilege not protect a member?"}, "a": {"th": "เมื่อการประชุมถ่ายทอดออกไป ถ้อยคำปรากฏนอกรัฐสภา และเป็นความผิดอาญาหรือละเมิดทางแพ่งต่อบุคคลที่ไม่ใช่รัฐมนตรีหรือสมาชิกสภานั้น", "en": "When the sitting is broadcast, the words reach the public outside Parliament, and they are a crime or civil wrong against someone who is not a minister or member of that house."}, "sections": [124]}
+        {
+          "q": {
+            "th": "ปัจจุบันมี ส.ส. แบบแบ่งเขตและบัญชีรายชื่ออย่างละกี่คน และใช้บัตรกี่ใบ",
+            "en": "How many constituency and party-list MPs are there now, and how many ballots?"
+          },
+          "a": {
+            "th": "เขต 400 บัญชีรายชื่อ 100 รวม 500 ใช้บัตรสองใบ ตามมาตรา 83 ที่แก้ไขปี 2564",
+            "en": "400 constituency and 100 list, 500 in all, with two ballots, under section 83 as amended in 2021."
+          },
+          "sections": [
+            83
+          ]
+        },
+        {
+          "q": {
+            "th": "ถ้าคะแนน 'ไม่เลือกผู้ใด' ชนะในเขตหนึ่ง จะเกิดอะไรขึ้น",
+            "en": "What happens if 'vote for no one' wins in a district?"
+          },
+          "a": {
+            "th": "จัดเลือกตั้งใหม่ ผู้สมัครเดิมทุกคนลงซ้ำไม่ได้ และคะแนนนั้นไม่นำไปคำนวณบัญชีรายชื่อ",
+            "en": "A new election is held, none of the original candidates may stand, and those votes are not used in the list calculation."
+          },
+          "sections": [
+            85,
+            92
+          ]
+        },
+        {
+          "q": {
+            "th": "ส.ส. ลาออกจากพรรค กับ ถูกพรรคขับออก ผลต่างกันอย่างไร",
+            "en": "How do resigning from the party and being expelled by it differ in effect?"
+          },
+          "a": {
+            "th": "ลาออกจากพรรคพ้นจาก ส.ส. ทันที ถูกขับด้วยมติสามในสี่ ยังมีเวลา 30 วันหาพรรคใหม่",
+            "en": "Resigning ends the seat at once; an MP expelled by a three-quarters vote has 30 days to join another party and keep the seat."
+          },
+          "sections": [
+            101
+          ]
+        },
+        {
+          "q": {
+            "th": "ผู้สมัคร ส.ว. ต้องอายุเท่าไร และ ส.ว. เป็นได้กี่สมัย",
+            "en": "What is the minimum age for a Senate candidate, and how many terms may a senator serve?"
+          },
+          "a": {
+            "th": "ไม่ต่ำกว่า 40 ปี และเป็นได้สมัยเดียว เพราะผู้เคยเป็น ส.ว. ตามรัฐธรรมนูญนี้มีลักษณะต้องห้าม",
+            "en": "At least 40, and one term only, because anyone who has been a senator under this constitution is disqualified."
+          },
+          "sections": [
+            108
+          ]
+        },
+        {
+          "q": {
+            "th": "วุฒิสภาไม่พิจารณาร่าง พ.ร.บ. ให้เสร็จภายใน 60 วัน ผลคืออะไร",
+            "en": "What if the Senate does not finish an ordinary bill within 60 days?"
+          },
+          "a": {
+            "th": "ถือว่าวุฒิสภาเห็นชอบ และส่งต่อไปตามมาตรา 81",
+            "en": "The Senate is deemed to approve, and the bill proceeds under section 81."
+          },
+          "sections": [
+            136,
+            137
+          ]
+        },
+        {
+          "q": {
+            "th": "ในการพิจารณางบประมาณ ส.ส. แปรญัตติเพิ่มรายการได้หรือไม่",
+            "en": "May MPs amend the budget bill to add items?"
+          },
+          "a": {
+            "th": "ไม่ได้ ลดหรือตัดได้เท่านั้น และตัดเงินต้น ดอกเบี้ยเงินกู้ และเงินที่กฎหมายกำหนดให้จ่ายไม่ได้",
+            "en": "No. They may only reduce or cut, and may not cut loan principal, interest, or payments required by law."
+          },
+          "sections": [
+            144
+          ]
+        },
+        {
+          "q": {
+            "th": "ยื่นอภิปรายไม่ไว้วางใจต้องใช้ ส.ส. เท่าไร และมติไม่ไว้วางใจต้องได้เสียงเท่าไร",
+            "en": "How many MPs are needed to file a no-confidence motion, and how many votes to pass it?"
+          },
+          "a": {
+            "th": "เข้าชื่อหนึ่งในห้า มติต้องเกินกึ่งหนึ่งของ ส.ส. ทั้งหมดเท่าที่มีอยู่ และห้ามลงมติวันเดียวกับที่อภิปรายจบ",
+            "en": "One-fifth to file; more than half of all existing MPs to pass; and no vote on the day the debate ends."
+          },
+          "sections": [
+            151
+          ]
+        },
+        {
+          "q": {
+            "th": "เอกสิทธิ์ของสมาชิกไม่คุ้มครองในกรณีใด",
+            "en": "When does parliamentary privilege not protect a member?"
+          },
+          "a": {
+            "th": "เมื่อการประชุมถ่ายทอดออกไป ถ้อยคำปรากฏนอกรัฐสภา และเป็นความผิดอาญาหรือละเมิดทางแพ่งต่อบุคคลที่ไม่ใช่รัฐมนตรีหรือสมาชิกสภานั้น",
+            "en": "When the sitting is broadcast, the words reach the public outside Parliament, and they are a crime or civil wrong against someone who is not a minister or member of that house."
+          },
+          "sections": [
+            124
+          ]
+        }
       ]
     }
   ],
-  "sections": [79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157],
+  "sections": [
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157
+  ],
   "sources": [
     "Constitution of the Kingdom of Thailand B.E. 2560 (2017), consolidated with the Constitution Amendment (No. 1) B.E. 2564 (2021), Thai text",
     "Organic Act on the Election of Members of the House of Representatives B.E. 2561 (2018), as amended",
@@ -306,6 +674,7 @@
     "Constitutional Court of Thailand, ruling on the Senate selection provisions (18 June 2024), as reported by Prachatai English and Thai PBS World",
     "ISEAS Perspective 2019/42 and Khaosod English reporting on the 2019 party-list allocation",
     "International IDEA, 'Thailand's Senate elections results: what now?' (2024)",
-    "Apipol Sae-Tung, 'Juridification, Legitimacy, and Authoritarian Survival in Thai Politics from the 2014 Military Coup', Asian Review 38(1) (2025)"
+    "Apipol Sae-Tung, 'Juridification, Legitimacy, and Authoritarian Survival in Thai Politics from the 2014 Military Coup', Asian Review 38(1) (2025)",
+    "Khaosod English and The Nation, reporting on the Election Commission's 14 September 2026 referral of the 2024 Senate selection case to the Supreme Court"
   ]
 }
