@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useStudy } from "./Provider";
 import { choiceLetter, fisherYates } from "@/lib/shuffle";
 import { sectionLabel, tr } from "@/lib/i18n";
@@ -33,6 +33,8 @@ export function seenSide(): string[] {
 /** One exam question met along the way. Guess, check, read why; it never touches the score. */
 export function SideQuestionCard({ q, onDone, doneLabel }: { q: SideQuestion; onDone: () => void; doneLabel?: string }) {
   const { lang } = useStudy();
+  const heading = useRef<HTMLHeadingElement>(null);
+  useEffect(() => { heading.current?.focus(); }, [q.id]);
   const [order] = useState(() => fisherYates(q.choices.map((_, i) => i)));
   const [choice, setChoice] = useState<number | null>(null);
   const [checked, setChecked] = useState(false);
@@ -46,7 +48,7 @@ export function SideQuestionCard({ q, onDone, doneLabel }: { q: SideQuestion; on
         {tr(lang, "คำถามข้างทาง · แนวข้อสอบนายอำเภอและท้องถิ่น · ไม่นับคะแนน", "Along the way · district-chief and local-government exam topics · not scored", "沿途一题 · 县长与地方公务员考试题型 · 不计分")}
         {q.sections.length === 0 && tr(lang, " · นอกตัวบทรัฐธรรมนูญ", " · beyond the constitution", " · 宪法以外")}
       </p>
-      <h1 id="quiz-heading" tabIndex={-1}>
+      <h1 ref={heading} id="quiz-heading" tabIndex={-1}>
         {q.prompt[lang]}
       </h1>
       <fieldset disabled={checked}>

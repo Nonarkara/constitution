@@ -36,3 +36,9 @@ SHA256: `b11fbbb8db99266a5b62cd77185511116059bc4073cc6e911a6a1019a8bbed87`
 Fresh independent agent identified the legal/source issues, visually checked official pages and rechecked fixes. Independent suite passed104tests. No further material issue confirmed in the inspected changes. This is not a native-speaker certification or a complete human proofread of every historical narrative.
 
 Verification and publication closeout follows below.
+
+## Browser finding and final checks
+
+A phone continuation test found that the supplementary Next button left focus onBODY and the next heading202pxabove the viewport. SideQuestion now focuses its own keyed heading on each question. Independent source review confirmed the focus/ref setup and deterministic initialisation; live confirmation follows.
+
+All43exported indexHTMLpages returned200and matched the build byte-for-byte after initial publication `eac1dd1` / Worker `82083ac3-041d-4749-8434-90028c5c7880`. Live representative paths: Chinese guide→recall→chapter11warm-up; supplemental answer→datedsource→next; section-number158search→recordingplay/pause (50secondrecording, noaudioelementerror); amendment eligibilitycheck→reasoning; Chinese cramcover→onefactreveal; English amendmentpaper→blanksubmission (0wrong/25unanswered, authored due countunchanged). No horizontal overflow onguide/supplement375, cram768, examresults1280. Remaining surfaces were route/source/store/test checked, not all manually completed end-to-end in every language.
