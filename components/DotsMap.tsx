@@ -180,7 +180,7 @@ export function DotsMap({
         <span><i className="dot known" />{tr(lang, "มั่นใจ", "confident", "已掌握")}</span>
         <span><i className="dot due" />{tr(lang, "รอทบทวน", "due", "待复习")}</span>
         <span><i className="dot mine" />{tr(lang, "จุดที่คุณจด", "your marks", "你的标记")}</span>
-        <span><i className="dot next" />{tr(lang, "จุดถัดไป", "next dot", "下一个点")}</span>
+        <span><i className="dot next" />{tr(lang, "จุดที่ยังไม่อ่าน", "unread dot", "还没读的点")}</span>
         <span><i className="stroke solid" />{tr(lang, "ตัวบทเขียนถึงกัน", "the text cites", "条文互引")}</span>
         <span><i className="stroke dashed" />{tr(lang, "ดัชนีจัดไว้ด้วยกัน", "grouped by our index", "索引归类")}</span>
       </figcaption>
@@ -403,7 +403,7 @@ export function Thread({ mine, next, onGo }: { mine: number[]; next: { n: number
       )}
       {next.length > 0 && (
         <>
-          <h3>{tr(lang, "จุดถัดไปที่ควรอ่าน", "Next dots to read", "接下来读这些")}</h3>
+          <h3>{tr(lang, "จุดที่ควรอ่านต่อ", "Dots still to read", "还可以读这些点")}</h3>
           <ul className="thread-list">
             {next.map((d) => (
               <li key={d.n}>

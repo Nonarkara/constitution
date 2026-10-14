@@ -12,19 +12,19 @@ export const DOORS: { id: Door; href: string; label: Text }[] = [
 ];
 
 export const GUIDE = [
-  { slug: "history", chapters: [] as number[], label: text("ประวัติ", "the history", "历史") },
-  { slug: "how-to-read", chapters: [1], label: text("วิธีอ่าน", "how to read", "如何阅读") },
-  { slug: "general-and-king", chapters: [1, 2], label: text("บททั่วไปและพระมหากษัตริย์", "general provisions and the King", "总则与国王") },
-  { slug: "rights", chapters: [3], label: text("สิทธิ", "rights", "权利") },
-  { slug: "duties-state-policy", chapters: [4, 5, 6], label: text("หน้าที่และแนวนโยบาย", "duties and policy", "义务与政策") },
-  { slug: "parliament", chapters: [7], label: text("รัฐสภา", "parliament", "国会") },
-  { slug: "organic-laws", chapters: [] as number[], label: text("กฎหมายประกอบรัฐธรรมนูญ", "organic laws", "组织法") },
-  { slug: "cabinet", chapters: [8, 9], label: text("คณะรัฐมนตรี", "the cabinet", "内阁") },
-  { slug: "courts", chapters: [10, 11], label: text("ศาล", "the courts", "法院") },
-  { slug: "independent-organs", chapters: [12, 13], label: text("องค์กรอิสระ", "independent organs", "独立机构") },
-  { slug: "local-and-amendment", chapters: [14, 15, 16], label: text("ท้องถิ่นและการแก้ไข", "local government and amendment", "地方与修宪") },
-  { slug: "transitory", chapters: [17], label: text("บทเฉพาะกาล", "transitory provisions", "过渡条款") },
-  { slug: "exam-method", chapters: [] as number[], label: text("วิธีทำข้อสอบ", "how to answer", "答题方法") },
+  { slug: "history", chapters: [] as number[], label: text("ประวัติ", "the history", "历史"), title: text("ประวัติ", "History", "历史") },
+  { slug: "how-to-read", chapters: [1], label: text("วิธีอ่าน", "how to read", "如何阅读"), title: text("วิธีอ่าน", "How to read", "如何阅读") },
+  { slug: "general-and-king", chapters: [1, 2], label: text("บททั่วไปและพระมหากษัตริย์", "general provisions and the King", "总则与国王"), title: text("บททั่วไปและพระมหากษัตริย์", "General provisions and the King", "总则与国王") },
+  { slug: "rights", chapters: [3], label: text("สิทธิ", "rights", "权利"), title: text("สิทธิ", "Rights", "权利") },
+  { slug: "duties-state-policy", chapters: [4, 5, 6], label: text("หน้าที่และแนวนโยบาย", "duties and policy", "义务与政策"), title: text("หน้าที่และแนวนโยบาย", "Duties and policy", "义务与政策") },
+  { slug: "parliament", chapters: [7], label: text("รัฐสภา", "parliament", "国会"), title: text("รัฐสภา", "Parliament", "国会") },
+  { slug: "organic-laws", chapters: [] as number[], label: text("กฎหมายประกอบรัฐธรรมนูญ", "organic laws", "组织法"), title: text("กฎหมายประกอบรัฐธรรมนูญ", "Organic laws", "组织法") },
+  { slug: "cabinet", chapters: [8, 9], label: text("คณะรัฐมนตรี", "the cabinet", "内阁"), title: text("คณะรัฐมนตรี", "Cabinet", "内阁") },
+  { slug: "courts", chapters: [10, 11], label: text("ศาล", "the courts", "法院"), title: text("ศาล", "Courts", "法院") },
+  { slug: "independent-organs", chapters: [12, 13], label: text("องค์กรอิสระ", "independent organs", "独立机构"), title: text("องค์กรอิสระ", "Independent organs", "独立机构") },
+  { slug: "local-and-amendment", chapters: [14, 15, 16], label: text("ท้องถิ่นและการแก้ไข", "local government and amendment", "地方与修宪"), title: text("ท้องถิ่นและการแก้ไข", "Local government and amendment", "地方与修宪") },
+  { slug: "transitory", chapters: [17], label: text("บทเฉพาะกาล", "transitory provisions", "过渡条款"), title: text("บทเฉพาะกาล", "Transitory provisions", "过渡条款") },
+  { slug: "exam-method", chapters: [] as number[], label: text("วิธีทำข้อสอบ", "how to answer", "答题方法"), title: text("วิธีทำข้อสอบ", "How to answer", "答题方法") },
 ];
 
 /** Every page route, including each study-guide chapter. `/learn/` redirects to `/`. */
@@ -144,7 +144,7 @@ function guideBySlug(slug: string) {
   return GUIDE.find((item) => item.slug === slug);
 }
 
-export type NavContext = { section?: number };
+export type NavContext = { section?: number; check?: number; drill?: number };
 
 export function crumbsFor(path: string, ctx: NavContext = {}): NavLink[] {
   const p = normalizePath(path);
@@ -162,7 +162,22 @@ export function crumbsFor(path: string, ctx: NavContext = {}): NavLink[] {
   if (p.startsWith("/bible/") && p !== "/bible/") {
     const slug = p.split("/").filter(Boolean)[1];
     const guide = guideBySlug(slug);
-    return [...head, { href: p, label: guide?.label ?? text(slug, slug, slug) }];
+    return [...head, { href: p, label: guide?.title ?? text(slug, slug, slug) }];
+  }
+  if (p === "/practice/" && ctx.check) {
+    const chapter = ctx.check;
+    return [
+      doorLink("learn"),
+      { href: `/read/?c=${chapter}`, label: text(`หมวด ${chapter}`, `Ch ${chapter}`, `第${chapter}章`) },
+      { href: `/practice/?check=${chapter}`, label: text("ตรวจสั้น ๆ", "Short check", "小测") },
+    ];
+  }
+  if (p === "/practice/" && ctx.drill) {
+    const n = ctx.drill;
+    return [
+      doorLink("practise"),
+      { href: `/practice/?session=drill&section=${n}`, label: text(`ฝึก ม.${n}`, `Drill s.${n}`, `练习第${n}条`) },
+    ];
   }
   if (p === "/section/") {
     const n = ctx.section;
@@ -182,6 +197,10 @@ export function crumbsFor(path: string, ctx: NavContext = {}): NavLink[] {
 export function backFor(path: string, ctx: NavContext = {}): NavLink | null {
   const p = normalizePath(path);
   if (p === "/") return null;
+  if (p === "/practice/" && ctx.drill) {
+    const n = ctx.drill;
+    return { href: `/section/?n=${n}`, label: backLabel(text(`ม.${n}`, `s.${n}`, `第${n}条`)) };
+  }
   const crumbs = crumbsFor(p, ctx);
   if (crumbs.length < 2) return { href: "/", label: backLabel(home) };
   const parent = crumbs[crumbs.length - 2];

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import { Suspense, useMemo } from "react";
+import { createContext, Suspense, useContext, useEffect, useMemo, useState } from "react";
 import { useStudy } from "./Provider";
 import { labels, tr, type Lang } from "@/lib/i18n";
 import { SWATCH, THEMES, THEME_NAME } from "@/lib/theme";
@@ -10,18 +10,33 @@ import { questionIndex } from "@/lib/outline";
 import { dueQuestions } from "@/lib/learning";
 import { knowSummary, sectionSignals } from "@/lib/knowledge";
 import { DOORS, backFor, crumbsFor, doorFor, nextFor } from "@/lib/nav";
+
+const PageFocus = createContext<((delta: 1 | -1) => void) | null>(null);
+
+/** Hide the page-level Next and Back while a practice session or mock exam is open. */
+export function useHidePageNext(busy: boolean) {
+  const shift = useContext(PageFocus);
+  useEffect(() => {
+    if (!busy || !shift) return;
+    shift(1);
+    return () => shift(-1);
+  }, [busy, shift]);
+}
+
 function useNavContext() {
   const path = usePathname() || "/";
   const params = useSearchParams();
   const section = Number(params.get("n")) || undefined;
-  return { path, section };
+  const check = Number(params.get("check")) || undefined;
+  const drill = params.get("session") === "drill" ? Number(params.get("section")) || undefined : undefined;
+  return { path, section, check, drill };
 }
 
-function PageChrome() {
+function PageChrome({ focused }: { focused: boolean }) {
   const { lang } = useStudy();
-  const { path, section } = useNavContext();
-  const crumbs = crumbsFor(path, { section });
-  const back = backFor(path, { section });
+  const { path, section, check, drill } = useNavContext();
+  const crumbs = crumbsFor(path, { section, check, drill });
+  const back = backFor(path, { section, check, drill });
   return (
     <>
       {crumbs.length > 0 && (
@@ -39,7 +54,7 @@ function PageChrome() {
           </ol>
         </nav>
       )}
-      {back && (
+      {back && !focused && (
         <p className="page-back">
           <Link href={back.href}>{back.label[lang]}</Link>
         </p>
@@ -50,8 +65,8 @@ function PageChrome() {
 
 function PageNext() {
   const { lang } = useStudy();
-  const { path, section } = useNavContext();
-  const next = nextFor(path, { section });
+  const { path, section, check, drill } = useNavContext();
+  const next = nextFor(path, { section, check, drill });
   if (!next) return null;
   return (
     <p className="page-next">
@@ -62,6 +77,9 @@ function PageNext() {
 
 export function Shell({ children }: { children: React.ReactNode }) {
   const { lang, setLang, progress, storageError, ready, online, marks, annotations, read, large, setLarge } = useStudy();
+  const [focusHolders, setFocusHolders] = useState(0);
+  const shiftFocus = (delta: 1 | -1) => setFocusHolders((count) => count + delta);
+  const focused = focusHolders > 0;
   const path = usePathname() || "/";
   const door = doorFor(path);
   const theme = useTheme();
@@ -74,7 +92,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
     };
   }, [progress, marks, annotations, read]);
   return (
-    <>
+    <PageFocus.Provider value={shiftFocus}>
       <a className="skip" href="#content">
         {tr(lang, "ข้ามไปเนื้อหา", "Skip to content", "跳转到正文")}
       </a>
@@ -126,7 +144,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           ))}
         </div>
         <Link className="header-settings" href="/settings/">
-          {labels.settings[lang]}
+          {tr(lang, "ตั้งค่า", "Settings", "设置")}
         </Link>
         <div className="languages" aria-label={tr(lang, "ภาษา", "Language", "语言")}>
           {(["th", "en", "zh"] as Lang[]).map((l) => (
@@ -210,11 +228,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </p>
           )}
           <Suspense fallback={null}>
-            <PageChrome />
+            <PageChrome focused={focused} />
           </Suspense>
           {children}
           <Suspense fallback={null}>
-            <PageNext />
+            {focused ? null : <PageNext />}
           </Suspense>
         </main>
       </div>
@@ -232,6 +250,6 @@ export function Shell({ children }: { children: React.ReactNode }) {
           )}
         </Link>
       </footer>
-    </>
+    </PageFocus.Provider>
   );
 }

@@ -4,7 +4,7 @@ import { readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { defaultProgress, type Question } from "../lib/learning.ts";
 import { continueTarget, nextGuideHref, weakSection } from "../lib/continue.ts";
-import { APP_ROUTES, DOORS, backFor, doorFor, nextFor, type Door } from "../lib/nav.ts";
+import { APP_ROUTES, DOORS, backFor, crumbsFor, doorFor, nextFor, type Door } from "../lib/nav.ts";
 
 function pageRoutes(dir = join(process.cwd(), "app"), prefix = ""): string[] {
   const found: string[] = [];
@@ -77,6 +77,14 @@ test("every page except home ends with one Next link and a Back link", () => {
   assert.equal(nextFor("/review/")?.href, "/bible/");
   assert.match(backFor("/bible/courts/")!.label.en, /Back to Learn/);
   assert.match(backFor("/section/", { section: 36 })!.label.en, /Back to Ch 3/);
+  assert.equal(crumbsFor("/bible/history/")[1].label.en, "History");
+  assert.equal(crumbsFor("/bible/cabinet/")[1].label.en, "Cabinet");
+  assert.equal(crumbsFor("/bible/transitory/")[1].label.en, "Transitory provisions");
+  const check = crumbsFor("/practice/", { check: 3 });
+  assert.deepEqual(check.map((crumb) => crumb.label.en), ["Learn", "Ch 3", "Short check"]);
+  assert.equal(backFor("/practice/", { check: 3 })?.href, "/read/?c=3");
+  assert.match(crumbsFor("/practice/", { drill: 36 })[1].label.en, /Drill s\.36/);
+  assert.equal(backFor("/practice/", { drill: 36 })?.href, "/section/?n=36");
 });
 
 test("home continue prefers due review, then a weak-section drill, then the guide", () => {

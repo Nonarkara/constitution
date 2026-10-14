@@ -194,7 +194,7 @@ export function ReadAll() {
         </button>
         <Link href="/notes/">{tr(lang, "ดูว่าจุดของคุณเชื่อมกันอย่างไร", "See how your dots connect", "看看你的点如何相连")} →</Link>
         <button disabled={chapterNumber === 17} onClick={() => go(chapterNumber + 1)}>
-          {tr(lang, "หมวดถัดไป", "Next chapter", "下一章")} →
+          {chapters.find((item) => item.number === chapterNumber + 1)?.title[lang] ?? chapter.title[lang]} →
         </button>
       </div>
 

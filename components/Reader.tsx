@@ -296,7 +296,7 @@ export function Reader() {
               disabled={section.number === 279}
               onClick={() => open(section.number + 1)}
             >
-              {tr(lang, "ถัดไป", "Next", "下一条")} →
+              {tr(lang, `มาตรา ${section.number + 1}`, `Section ${section.number + 1}`, `第${section.number + 1}条`)} →
             </button>
           </div>
           <Ask sections={[section.number]} key={section.number} />

@@ -3678,3 +3678,43 @@ footer { flex-wrap:wrap; gap:16px; }
     display: block;
   }
 }
+@media (max-width: 480px) {
+  .header {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+  .brand {
+    min-width: 0;
+    flex: 1;
+    gap: 8px;
+  }
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+    flex: none;
+  }
+  .brand > span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .header-controls {
+    width: auto;
+    flex: none;
+    gap: 4px;
+  }
+  .themes {
+    display: none;
+  }
+  .header-settings,
+  .languages button {
+    min-height: 36px;
+    white-space: nowrap;
+  }
+  .languages button {
+    min-width: 36px;
+    padding: 4px 8px;
+  }
+}

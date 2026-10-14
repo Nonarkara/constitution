@@ -3427,14 +3427,14 @@
         "zh": "所有参议院永久都有250人"
       },
       {
-        "th": "เป็นจำนวน ส.ส. แบบแบ่งเขต",
-        "en": "It is the constituency MP count",
-        "zh": "这是选区众议员人数"
+        "th": "เป็นจำนวนถาวรของวุฒิสภาตามมาตรา 107",
+        "en": "It is the permanent number of senators in section 107",
+        "zh": "这是第107条规定的参议员永久人数"
       },
       {
-        "th": "เป็นจำนวนรัฐมนตรี",
-        "en": "It is the minister count",
-        "zh": "这是部长人数"
+        "th": "เป็นจำนวน ส.ว. ที่ร่วมเลือกนายกรัฐมนตรีตามมาตรา 272",
+        "en": "It is how many senators join the Prime Minister vote under section 272",
+        "zh": "这是依第272条参与总理表决的参议员人数"
       }
     ],
     "answer": 0,
@@ -17572,14 +17572,14 @@
         "zh": "不得损害权利的核心实质内容，且必须符合比例原则"
       },
       {
-        "th": "จำกัดได้ทั้งหมดหากคณะรัฐมนตรีเห็นว่าเป็นประโยชน์ทางเศรษฐกิจ",
-        "en": "Can restrict entirely if the Cabinet deems economically beneficial",
-        "zh": "只要内阁认为具有经济效益即可全面限制"
+        "th": "ตราเป็นพระราชบัญญัติแล้วจำกัดได้ แม้จะกระทบสาระสำคัญแห่งสิทธิ",
+        "en": "Once enacted as an Act, a restriction may remove the essential substance of the right",
+        "zh": "只要制定为法律，限制就可以取消权利的实质内容"
       },
       {
-        "th": "ต้องให้ประชาชนทุกคนลงประชามติเห็นชอบก่อนประกาศใช้",
-        "en": "Must hold a nationwide referendum prior to enactment",
-        "zh": "必须在颁布前经全体全民公投通过"
+        "th": "หลักความได้สัดส่วนใช้เฉพาะพระราชกำหนด ไม่ใช้กับพระราชบัญญัติ",
+        "en": "Proportionality applies only to an emergency decree, not to an Act",
+        "zh": "比例原则只适用于紧急法令，不适用于普通法律"
       },
       {
         "th": "ทำได้เฉพาะในพื้นที่ที่มีการประกาศสถานการณ์ฉุกเฉินเท่านั้น",

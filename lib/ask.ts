@@ -295,7 +295,12 @@ export function stripFabricatedSources(answer: string): string {
 const SECTION_36_EXCEPTION = /หรือมีเหตุอย่างอื่น|other grounds|其他理由|法律规定的其他|或法律另有规定/;
 
 /** If the answer drops section 36's statutory exception, put that exception back. */
-export function keepStatutoryExceptions(answer: string, lang: Lang, sections: number[]): string {
+export function keepStatutoryExceptions(
+  answer: string,
+  lang: Lang,
+  sections: number[],
+  noteFirst = false,
+): string {
   if (!sections.includes(36) || SECTION_36_EXCEPTION.test(answer)) return answer;
   const note = tr(
     lang,
@@ -303,7 +308,9 @@ export function keepStatutoryExceptions(answer: string, lang: Lang, sections: nu
     "Section 36 bars censorship, detention or disclosure of a communication except by a court order or warrant, or where there are other grounds as provided by law. No court order, by itself, does not settle the question.",
     "第36条禁止检查、扣留或披露人们之间的通信，除非有法院的命令或令状，或者另有法律规定的其他理由。仅没有法院命令，并不能单独决定这个问题。",
   );
-  return `${answer.trim()}\n\n${note}`.trim();
+  const body = answer.trim();
+  if (!body) return note;
+  return noteFirst ? `${note}\n\n${body}` : `${body}\n\n${note}`;
 }
 
 const THAI_LETTERS = /[\u0E00-\u0E7F]/g;
@@ -328,25 +335,60 @@ export function dominantLanguage(text: string): Lang | null {
   return ranked[0][0] as Lang;
 }
 
+/**
+ * Quoted Thai statute text is the law, not the language of the answer.
+ * English and Chinese pages ignore those letters before the script check.
+ */
+export function proseForLanguage(text: string): string {
+  THAI_RUN.lastIndex = 0;
+  THAI_LETTERS.lastIndex = 0;
+  return text
+    .replace(/[“"「『«][^”"」』»]*[\u0E00-\u0E7F][^”"」』»]*[”"」』»]/g, " ")
+    .replace(THAI_RUN, " ")
+    .replace(THAI_LETTERS, " ");
+}
+
 /** The answer must be in the language of the page. A Thai reply on a Chinese page is not. */
 export function answerMatchesUi(text: string, lang: Lang): boolean {
-  return dominantLanguage(text) === lang;
+  const sample = lang === "th" ? text : proseForLanguage(text);
+  return dominantLanguage(sample) === lang;
 }
 
 function unsafeRefusal(sentence: string): boolean {
   const value = sentence.toLowerCase();
-  const refusal = /may refuse|can refuse|could refuse|refuse without|right to refuse|ปฏิเสธได้|มีสิทธิ์?ปฏิเสธ|สามารถปฏิเสธ|可以拒绝|有权拒绝|无权/;
+  const denial =
+    /authority is lacking|lacks (?:the |their )?authority|no (?:\w+ )?authority|no power to|exceeds their power|beyond their power|do not have to comply|no obligation to (?:cooperate|comply)|no reason to comply|do not consent|not consent to|legal basis to tell|违反第36条|属于违法|越权|ไม่ต้องยอม|ไม่ยินยอม|เกินอำนาจ/;
+  if (denial.test(value)) return true;
+  const refusal =
+    /may refuse|can refuse|could refuse|refuse without|right to refuse|allows you to refuse|right to demand|ปฏิเสธได้|มีสิทธิ์?ปฏิเสธ|สามารถปฏิเสธ|可以拒绝|有权拒绝|无权/;
+  if (refusal.test(value)) return true;
   const search = /search|ค้น|搜查|ตรวจค้น|dwelling|premises|บ้าน/;
-  const order = /court order|warrant|หมาย|法院命令|令状/;
-  const noAuthority = /no authority|ไม่มีอำนาจ|无权|没有权力|没有搜查/;
-  if (noAuthority.test(value) && (search.test(value) || order.test(value))) return true;
-  return refusal.test(value) && (search.test(value) || order.test(value));
+  const order = /court order|warrant|หมาย|法院命令|令状|without a court order/;
+  const noAuthority = /no authority|no provision that grants|automatic power|ไม่มีอำนาจ|无权|没有权力|没有搜查/;
+  return noAuthority.test(value) && (search.test(value) || order.test(value) || /inspect|examin|message|communication|ตรวจ|通信/.test(value));
 }
 
-/** Drop a sentence that says the person may refuse a search, or that no court order means no authority. */
+const SENTENCE_SPLIT = /\n+|(?<=[.。！？!?])\s+|…+|;\s+/;
+
+/** A sentence that is only an empty quotation mark is not an answer. */
+export function dropEmptyQuotes(answer: string): string {
+  const kept = answer.split(SENTENCE_SPLIT).filter((part) => {
+    const bare = part.replace(/[“”„«»"'「」『』\s.…—–\-]+/g, "");
+    return bare.length > 0;
+  });
+  return kept
+    .join("\n")
+    .replace(/[“「『"][^A-Za-z\u0E00-\u0E7F\u4E00-\u9FFF]{0,12}[”」』"]/g, "")
+    .replace(/\s+[”」』"]/g, "")
+    .replace(/\*\*/g, "")
+    .replace(/[ ]{2,}/g, " ")
+    .trim();
+}
+
+/** Drop a sentence that says the person may refuse a search, or that authority is lacking. */
 export function dropUnsafeRefusals(answer: string): string {
   const kept = answer
-    .split(/\n+|(?<=[.。！？!?])\s+/)
+    .split(SENTENCE_SPLIT)
     .filter((part) => part.trim() && !unsafeRefusal(part));
   return kept.join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
@@ -354,7 +396,10 @@ export function dropUnsafeRefusals(answer: string): string {
 /** English answers cite a section, not an article. */
 export function citeAsSection(answer: string, lang: Lang): string {
   if (lang !== "en") return answer;
-  return answer.replace(/\bArticles\b/g, "Sections").replace(/\bArticle\b/g, "Section");
+  const titled = (word: string, replacement: string) => (word[0] === "A" ? replacement : replacement.toLowerCase());
+  return answer
+    .replace(/\barticles\b/gi, (word) => titled(word, "Sections"))
+    .replace(/\barticle\b/gi, (word) => titled(word, "Section"));
 }
 
 export function shapeAskAnswer(
@@ -363,12 +408,13 @@ export function shapeAskAnswer(
   sections: number[],
   translations: string[] = [],
 ): string {
-  const cleaned = citeAsSection(dropUnsafeRefusals(stripFabricatedSources(answer)), lang);
-  return quotesInAnswerLanguage(
-    keepStatutoryExceptions(cleaned, lang, sections),
-    lang,
-    translations,
-  );
+  const stripped = stripFabricatedSources(answer);
+  const refused = dropUnsafeRefusals(stripped);
+  const cited = citeAsSection(refused, lang);
+  const glossed = quotesInAnswerLanguage(cited, lang, translations);
+  const cleaned = dropEmptyQuotes(glossed);
+  const dropped = refused.trim() !== stripped.trim() || cleaned.trim() !== glossed.trim();
+  return keepStatutoryExceptions(cleaned, lang, sections, dropped);
 }
 
 /** Shown when a retry still comes back in the wrong language. No confidence badge. */

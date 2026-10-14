@@ -141,19 +141,21 @@ test("a fresh profile does not invent a Parliament focus", () => {
   assert.match(profile.recommendation.en, /Chapter 4/);
 });
 
-test("teaching steps name the item and do not repeat the prompt", () => {
+test("teaching steps quote the rule, name the trap, and do not repeat the explanation", () => {
   const [a, b] = bank;
   const left = teachingBodies(a, "en", 1, "section text a");
   const right = teachingBodies(b, "en", 1, "section text b");
-  assert.equal(left.length, 10);
-  const rightChoice = a.choices[a.answer].en.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").slice(0, 24);
-  for (const index of [4, 6, 8, 9]) assert.notEqual(left[index], right[index]);
-  assert.match(left[4], new RegExp(String(a.sections[0])));
-  assert.match(left[4], /condition in this item/i);
-  assert.notEqual(left[5], a.prompt.en);
-  assert.match(left[5], /Applied to this item/);
-  assert.match(left[5], new RegExp(rightChoice));
-  assert.match(left[9], new RegExp(rightChoice));
+  assert.equal(left.length, 3);
+  assert.match(left[0], /section text a/);
+  assert.match(left[0], new RegExp(`section ${a.sections[0]}`, "i"));
+  assert.match(left[1], /fails this item/);
+  assert.match(left[2], /If the fact were/);
+  assert.notEqual(left[1], right[1]);
+  for (const step of left) {
+    assert.notEqual(step.trim(), a.choices[a.answer].en.trim());
+    assert.equal(step.includes(a.explanation.en), false);
+    assert.notEqual(step, a.prompt.en);
+  }
 });
 
 test("paper 28 balances transitory coverage with the blueprint chapters", () => {
@@ -199,6 +201,11 @@ test("chapter labels stay in the selected language", () => {
   assert.equal(chapterPickerLabel("zh", last).includes("Ch "), false);
   assert.match(chapterPickerLabel("en", last), /Transitory Provisions/);
   assert.match(chapterPickerLabel("th", last), /บทเฉพาะกาล/);
+  const single = outline.chapters.find((chapter) => chapter.start === chapter.end)!;
+  assert.match(chapterPickerLabel("en", single), /Section 50\)/);
+  assert.equal(chapterPickerLabel("en", single).includes("Sections 50–50"), false);
+  assert.match(chapterPickerLabel("th", single), /ม\. 50\)/);
+  assert.match(chapterPickerLabel("zh", single), /第50条\)/);
 });
 
 test("the eleven implausible distractors are gone and the answer index is unchanged", () => {
@@ -236,6 +243,19 @@ test("the eleven implausible distractors are gone and the answer index is unchan
   assert.equal(bank.find((q) => q.id === "s112-a")!.answer, 2);
   assert.equal(bank.find((q) => q.id === "s128-b")!.answer, 1);
   assert.equal(bank.find((q) => q.id === "s260-b")!.answer, 1);
+  for (const [id, phrase] of [
+    ["comp-10", "economically beneficial"],
+    ["comp-10", "nationwide referendum"],
+    ["c17-01", "minister count"],
+    ["c17-01", "constituency MP count"],
+  ] as const) {
+    const q = bank.find((item) => item.id === id)!;
+    const blob = q.choices.map((choice) => `${choice.th} ${choice.en} ${choice.zh}`).join("\n");
+    assert.equal(blob.toLowerCase().includes(phrase.toLowerCase()), false, `${id} still has ${phrase}`);
+    assert.equal(q.answer, 0);
+  }
+  assert.match(bank.find((q) => q.id === "comp-10")!.choices[1].en, /essential substance/);
+  assert.match(bank.find((q) => q.id === "c17-01")!.choices[2].en, /section 107/);
 });
 
 test("a search answer never says the person may refuse, and it cites a section", () => {
@@ -248,6 +268,54 @@ test("a search answer never says the person may refuse, and it cites a section",
   assert.match(shaped, /Section/);
   assert.match(shaped, /other grounds as provided by law/);
   assert.equal(citeAsSection("See Article 33 and Articles 36.", "en"), "See Section 33 and Sections 36.");
+  assert.equal(citeAsSection("This article is the rule.", "en"), "This section is the rule.");
+  const rawEn = "The reason is that this article bars disclosure. “ ”. If there is no provision in the law, the authority is lacking — therefore a request to disclose the communication exceeds their power. You do not have to comply with that request.";
+  const shapedEn = shapeAskAnswer(rawEn, "en", [36], []);
+  assert.equal(/authority is lacking|exceeds their power|do not have to comply/i.test(shapedEn), false);
+  assert.equal(/[“”]\s*[“”]|“\s*”/.test(shapedEn), false);
+  assert.equal(/\barticle\b/i.test(shapedEn), false);
+  assert.match(shapedEn, /this section bars disclosure/i);
+  assert.ok(shapedEn.indexOf("other grounds as provided by law") < shapedEn.toLowerCase().indexOf("this section"));
+  const live = shapeAskAnswer(
+    "You may refuse the police to examine your messages. Section 36 provides the rule. Therefore you have the right to demand that they show authority, and your constitutional right allows you to refuse until there is a court order.",
+    "en",
+    [36],
+    [],
+  );
+  assert.equal(/may refuse|allows you to refuse|right to demand|no legal authority/i.test(live), false);
+  const authority = shapeAskAnswer(
+    "If none of those conditions are met, the police have no legal authority to compel you to reveal the messages.",
+    "en",
+    [36],
+    [],
+  );
+  assert.equal(/no legal authority/i.test(authority), false);
+  const messy = shapeAskAnswer(
+    "It shall not be done “.” ** **. If officials do not cite a provision, you have no obligation to cooperate.",
+    "en",
+    [36],
+    [],
+  );
+  assert.equal(/no obligation|\*\*|“\.”/.test(messy), false);
+  const dangling = shapeAskAnswer("It shall not be restricted ”. Section 36 is the rule.", "en", [36], []);
+  assert.equal(dangling.includes("”"), false);
+  const consent = shapeAskAnswer(
+    "The right remains unless there is a court order or another ground in law; you thus have a legal basis to tell the police “I do not consent to inspection”.",
+    "en",
+    [36],
+    [],
+  );
+  assert.equal(/do not consent|legal basis to tell/i.test(consent), false);
+  assert.match(consent, /court order or another ground/);
+  const power = shapeAskAnswer(
+    "If there is no court order, the authorities have no power to conduct a direct search. **There is no reason to comply.** Section 36 still needs another ground in law.",
+    "en",
+    [36],
+    [],
+  );
+  assert.equal(/no power to|no reason to comply|\*\*/i.test(power), false);
+  assert.match(power, /other grounds as provided by law/);
+  assert.match(live, /other grounds as provided by law/);
 });
 
 test("a Chinese page does not keep a Thai answer or a SOLID badge", () => {
@@ -261,6 +329,9 @@ test("a Chinese page does not keep a Thai answer or a SOLID badge", () => {
   assert.equal(honest.answer.includes("有依据"), false);
   assert.match(honest.answer, /语言/);
   assert.equal(/[\u0E00-\u0E7F]/.test(honest.answer), false);
+  const rawZh = "您可以拒绝——根据宪法第36条…“将不得进行 เว้นแต่มีคำสั่งหรือหมายของศาล หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ”…未持法院令而扣押信息仍然违反第36条…并予以拒绝。";
+  assert.equal(answerMatchesUi(rawZh, "zh"), true);
+  assert.equal(answerMatchesUi(rawZh, "en"), false);
 });
 
 test("the mixed session folds review, drills and recall into one queue", () => {
@@ -274,6 +345,10 @@ test("the mixed session folds review, drills and recall into one queue", () => {
   assert.equal(mixed[0].id, due.id);
   assert.ok(mixed.some((item) => item.id.startsWith("drill-")));
   assert.ok(mixed.some((item) => item.id === known.id));
+  const fresh = buildMixedSession(bank, defaultProgress(), Date.now());
+  assert.ok(fresh[0].chapter === 1 || fresh[0].chapter === 2);
+  assert.equal(fresh[0].id.startsWith("drill-"), false);
+  assert.equal(fresh.slice(0, 5).filter((item) => item.id.startsWith("drill-")).length, 1);
 });
 
 test("mixed practice no longer uses a biased sort", () => {

@@ -140,7 +140,7 @@ export function DoublePageReader() {
             )}
           </span>
           <button onClick={nextSpread} disabled={leftSecNum >= 279}>
-            {tr(lang, "คู่หน้าถัดไป", "Next Spread", "下一对页")} →
+            {tr(lang, "อีกสองมาตรา", "Two more sections", "再翻两条")} →
           </button>
         </div>
 
@@ -477,7 +477,7 @@ export function DoublePageReader() {
           {leftSecNum} {rightSecNum ? `& ${rightSecNum}` : ""} / 279
         </span>
         <button onClick={nextSpread} disabled={leftSecNum >= 279}>
-          {tr(lang, "ถัดไป", "Next", "下一页")} →
+          {tr(lang, "อีกสองมาตรา", "Two more sections", "再翻两条")} →
         </button>
       </footer>
     </div>

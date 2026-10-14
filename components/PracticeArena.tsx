@@ -15,6 +15,7 @@ import { makeDrill } from "@/lib/drills";
 import { TeachingSteps } from "./TeachingSteps";
 import { ExplainBack } from "./LearningCoach";
 import { StudyArt } from "./StudyArt";
+import { useHidePageNext } from "./Shell";
 
 type Question = (typeof questions)[number];
 
@@ -39,6 +40,7 @@ export function PracticeArena() {
   const [showExplanation, setShowExplanation] = useState<boolean>(false);
   const [sessionCompleted, setSessionCompleted] = useState<boolean>(false);
   const [sessionNotice, setSessionNotice] = useState("");
+  useHidePageNext(isActive);
 
   const startSession = (
     chosenMode: "competition" | "weak" | "sprint" | "real-life" | "endless" | "chapter",
@@ -358,7 +360,7 @@ export function PracticeArena() {
                 {currentQ.sections.some((s) => annotations[s]?.note) && (
                   <div className="user-note-callout micro">
                     <span className="mono font-bold text-accent">
-                      ✍️ {tr(lang, "บันทึกช่วยจำของคุณในมาตรานี้:", "Your personal note for this section:", "您在相关法条记录的笔记:")}
+                      {tr(lang, "บันทึกช่วยจำของคุณในมาตรานี้:", "Your personal note for this section:", "您在相关法条记录的笔记:")}
                     </span>
                     <p>
                       {currentQ.sections
@@ -376,7 +378,7 @@ export function PracticeArena() {
                       href={`/notebook/?jump=${s}`}
                       className="link-underlined"
                     >
-                      📖 {tr(lang, `เปิดดู ม.${s} ในสมุดคู่หน้า →`, `Open Sec ${s} in Notebook →`, `在双页开本中阅读第${s}条 →`)}
+                      {tr(lang, `เปิดดู ม.${s} ในสมุดคู่หน้า →`, `Open Sec ${s} in Notebook →`, `在双页开本中阅读第${s}条 →`)}
                     </Link>
                   ))}
                   <Link
@@ -390,7 +392,7 @@ export function PracticeArena() {
                 <div className="next-btn-container">
                   <button className="primary btn-next-q" onClick={handleNext}>
                     {currentIndex < queue.length - 1
-                      ? tr(lang, "ข้อถัดไป →", "Next Question →", "下一题 →")
+                      ? tr(lang, `ข้อ ${currentIndex + 2} →`, `Question ${currentIndex + 2} →`, `第${currentIndex + 2}题 →`)
                       : tr(lang, "ดูสรุปผลคะแนน →", "View Final Score →", "查看考试成绩 →")}
                   </button>
                 </div>

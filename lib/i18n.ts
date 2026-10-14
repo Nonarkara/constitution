@@ -53,11 +53,17 @@ export function chapterPickerLabel(
           `第${chapter.number}章`,
         );
   const range =
-    lang === "zh"
-      ? `第${chapter.start}–${chapter.end}条`
-      : lang === "en"
-        ? `Sections ${chapter.start}–${chapter.end}`
-        : `ม. ${chapter.start}–${chapter.end}`;
+    chapter.start === chapter.end
+      ? lang === "zh"
+        ? `第${chapter.start}条`
+        : lang === "en"
+          ? `Section ${chapter.start}`
+          : `ม. ${chapter.start}`
+      : lang === "zh"
+        ? `第${chapter.start}–${chapter.end}条`
+        : lang === "en"
+          ? `Sections ${chapter.start}–${chapter.end}`
+          : `ม. ${chapter.start}–${chapter.end}`;
   const name = chapter.number === 17 ? "" : ` — ${chapter.title[lang]}`;
   return `${head}${name} (${range})`;
 }

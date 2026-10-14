@@ -181,9 +181,6 @@ export function BibleChapterView({ chapter }: { chapter: BibleChapter; prev: Lin
           "A study guide, not legal advice. The Thai text is the law. Critiques belong to the people named, not to this app.",
         )}
       </p>
-      <p className="page-back">
-        <Link href="/bible/">{tr(lang, "← กลับไปเรียน", "← Back to Learn", "← 返回学习")}</Link>
-      </p>
     </article>
   );
 }

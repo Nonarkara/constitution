@@ -15,6 +15,7 @@ import { MemoryCue } from "./MemoryCue";
 import { RecallFirst, ConfidenceCheck, ExplainBack } from "./LearningCoach";
 import { emptyCalibration, recordCalibration, nextReviewAt, type Confidence } from "@/lib/coach";
 import { TeachingSteps } from "./TeachingSteps";
+import { useHidePageNext } from "./Shell";
 import { Puzzle } from "./Puzzle";
 import type { Question } from "@/lib/learning";
 
@@ -30,6 +31,7 @@ export function Quiz({
   onExit: () => void;
 }) {
   const { lang, progress, save, annotations } = useStudy();
+  useHidePageNext(true);
   const [lesson] = useState(() => chapter ? fisherYates(chapterPuzzles(cases, chapter)).slice(0, 1) : []);
   const bank = supplied ?? questions;
   const opening = supplied ?? (ids
@@ -307,7 +309,7 @@ export function Quiz({
           <button className="primary" onClick={advance}>
             {index === list.length - 1 && (retried || missed.length === 0)
               ? tr(lang, "ดูผลรอบนี้", "Finish session", "查看结果")
-              : tr(lang, "ข้อต่อไป", "Next question", "下一题")}{" "}
+              : tr(lang, `ข้อ ${index + 2}`, `Question ${index + 2}`, `第${index + 2}题`)}{" "}
             →
           </button>
         </>

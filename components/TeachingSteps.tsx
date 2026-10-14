@@ -16,23 +16,17 @@ export function TeachingSteps({
 }) {
   const { lang } = useStudy();
   const [step, setStep] = useState(0);
-  const titles = [
-    tr(lang, "ใจความเดียว", "One key idea", "一个核心概念"),
-    tr(lang, "ทำไมคำตอบนี้", "Why this answer", "为什么选它"),
-    tr(lang, "ดูตัวบท", "Read the rule", "看条文"),
-    tr(lang, "ตัวลวงต่างตรงไหน", "Compare a tempting choice", "比较迷惑选项"),
-    tr(lang, "เงื่อนไขที่ห้ามข้าม", "Check the conditions", "核对条件"),
-    tr(lang, "ใช้กับโจทย์นี้", "Apply to this case", "应用到本题"),
-    tr(lang, "เปลี่ยนหนึ่งข้อเท็จจริง", "Change one fact", "改变一个事实"),
-    tr(lang, "ตัวเลขหรือคำสำคัญ", "Numbers and key words", "数字与关键词"),
-    tr(lang, "เรียกภาพกลับมา", "Recall the picture", "回想图像"),
-    tr(lang, "เล่าให้คนอื่นเข้าใจ", "Explain to someone", "讲给别人听"),
-  ];
   const wrong =
     selected !== undefined && selected !== q.answer
       ? selected
       : (q.answer + 1) % q.choices.length;
   const bodies = teachingBodies(q, lang, wrong, sectionBody(q.sections[0], lang));
+  const titles = [
+    tr(lang, "ตัวบท", "The rule", "条文"),
+    tr(lang, "ตัวเลือกที่ชวนเชื่อ", "Why that option fails", "为什么那个选项不成立"),
+    tr(lang, "เปลี่ยนหนึ่งข้อเท็จจริง", "Change one fact", "改一个事实"),
+  ].slice(0, bodies.length);
+  const last = Math.max(bodies.length - 1, 0);
   return (
     <details className="teaching-steps">
       <summary>
@@ -52,7 +46,7 @@ export function TeachingSteps({
       </nav>
       <h3>{titles[step]}</h3>
       <p>{bodies[step]}</p>
-      {step === 8 && <MemoryCue item={q} />}
+      <MemoryCue item={q} />
       <p>
         {q.sections.map((n) => (
           <Link className="citation" href={`/section/?n=${n}`} key={n}>
@@ -64,8 +58,8 @@ export function TeachingSteps({
         <button disabled={!step} onClick={() => setStep(step - 1)}>
           ← {tr(lang, "ก่อนหน้า", "Previous", "上一步")}
         </button>
-        <button disabled={step === 9} onClick={() => setStep(step + 1)}>
-          {tr(lang, "มุมถัดไป", "Next angle", "下一角度")} →
+        <button disabled={step === last} onClick={() => setStep(step + 1)}>
+          {tr(lang, "อีกมุม", "Another angle", "换一个角度")} →
         </button>
       </div>
     </details>

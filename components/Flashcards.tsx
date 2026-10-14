@@ -430,7 +430,7 @@ export function Flashcards() {
               ← {tr(lang, "ใบก่อนหน้า", "Previous", "上一张")}
             </button>
             <button onClick={handleNext} className="micro">
-              {tr(lang, "ใบถัดไป", "Next", "下一张")} →
+              {tr(lang, "อีกใบ", "Another card", "再看一张")} →
             </button>
           </div>
         </section>

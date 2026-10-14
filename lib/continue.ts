@@ -42,6 +42,21 @@ export function weakSection(
   return best;
 }
 
+/** How many missed questions sit on this section. */
+export function missCount(
+  questions: Pick<Question, "id" | "sections">[],
+  progress: Progress,
+  section: number,
+): number {
+  let count = 0;
+  for (const question of questions) {
+    const record = progress.questions[question.id];
+    if (!record || record.correct) continue;
+    if (question.sections.includes(section)) count += 1;
+  }
+  return count;
+}
+
 export function nextGuideHref(lastSection: number | null): string {
   if (!lastSection) return `/bible/${GUIDE[0].slug}/`;
   const chapter = chapterOfSection(lastSection);
