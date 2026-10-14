@@ -8,6 +8,7 @@ const PRECACHE = /*__PRECACHE__*/ [
   "/flashcards/",
   "/cheatsheet/",
   "/rights/",
+  "/cram/",
   "/read/",
   "/notes/",
   "/practice/",

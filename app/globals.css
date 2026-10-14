@@ -3407,3 +3407,52 @@ footer { flex-wrap:wrap; gap:16px; }
 .teaching-steps nav button[aria-pressed="true"] { background:var(--accent); color:var(--accent-ink); }
 .hub-list > button { display:flex; flex-direction:column; align-items:flex-start; text-align:left; padding:1rem; border:0; border-bottom:1px solid var(--line); background:var(--paper); color:var(--ink); }
 #poll-note { width:100%; display:block; font:inherit; padding:.75rem; background:var(--paper); color:var(--ink); border:1px solid var(--edge); }
+.cram-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+.cram-group {
+  margin: 32px 0;
+}
+.cram-list > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 16px;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+.cram-list dd {
+  margin: 0;
+  text-align: right;
+}
+.cram-cover {
+  min-height: 44px;
+  font-weight: 500;
+  border-style: dashed;
+}
+.cram-traps li {
+  margin: 10px 0;
+}
+@media (max-width: 480px) {
+  .cram-list > div {
+    grid-template-columns: 1fr;
+  }
+  .cram-list dd {
+    text-align: left;
+  }
+}
+@media print {
+  .header,
+  .sidebar,
+  .study-strip,
+  .cram-tools,
+  .skip {
+    display: none !important;
+  }
+  .app-grid {
+    display: block;
+  }
+}

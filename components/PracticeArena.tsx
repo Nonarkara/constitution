@@ -159,6 +159,9 @@ export function PracticeArena() {
 
           {/* Quick Sub-navigation Bar */}
           <nav className="practice-subnav" aria-label="Practice sub-navigation">
+            <Link href="/cram/" className="subnav-pill">
+              {tr(lang, "สรุปก่อนสอบ", "Night-before sheet", "考前一页通")}
+            </Link>
             <Link href="/review/" className="subnav-pill">
               {tr(lang, "ทบทวนตามรอบ", "Spaced review", "间隔复习")}
             </Link>

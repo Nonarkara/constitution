@@ -87,7 +87,7 @@ export function Learn() {
         </div>
       </section>
       <p className="notice">{tr(lang,"เดา 1 เรื่อง → อ่านเหตุผล → ลอง 5 ข้อ → เล่าด้วยคำของตัวเอง → กลับมาตามเวลาทบทวน","Guess one case → read why → try five questions → explain it yourself → return when review is due","猜一个情境 → 读理由 → 试五题 → 自己解释 → 到期再复习")}</p>
-      <p><Link href="/drills/">{tr(lang,"4,700 แบบฝึก","4,700 exercises","4,700道练习")} →</Link> · <Link href="/exam/">{tr(lang,"30 ชุดฝึกจับเวลา","30 timed study papers","30套计时练习卷")} →</Link> · <Link href="/polls/">{tr(lang,"10 คำถามส่วนตัว","Ten private polls","十个私人问卷")} →</Link></p>
+      <p><Link href="/cram/">{tr(lang,"สรุปก่อนสอบหน้าเดียว","The night-before sheet","考前一页通")} →</Link> · <Link href="/drills/">{tr(lang,"4,700 แบบฝึก","4,700 exercises","4,700道练习")} →</Link> · <Link href="/exam/">{tr(lang,"30 ชุดฝึกจับเวลา","30 timed study papers","30套计时练习卷")} →</Link> · <Link href="/polls/">{tr(lang,"10 คำถามส่วนตัว","Ten private polls","十个私人问卷")} →</Link></p>
       <WhereYouAre signals={signals} chapter={next.number} />
       <div className="section-heading">
         <div>

@@ -11,3 +11,10 @@ test("every number in the games is proved by the Thai text of its section", () =
     for (const l of ["th", "en", "zh"]) assert.ok(f.label[l] && f.value[l], `${f.id} ${l}`);
   }
 });
+
+test("every cram-sheet number and trap is proved by the Thai text of its section", () => {
+  const corpus = read("constitution.json"), cram = read("cram.json");
+  const items = [...cram.time, ...cram.votes, ...cram.traps];
+  assert.equal(new Set(items.map((f: { id: string }) => f.id)).size, items.length);
+  for (const f of items) assert.ok(corpus.sections[f.section - 1].th.includes(f.proof), `${f.id}: "${f.proof}" not in section ${f.section}`);
+});
