@@ -25,7 +25,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
   const nav = [
     ["/learn/", labels.learn, ["/", "/learn/"]],
     ["/read/", labels.read, ["/read/", "/section/", "/notebook/"]],
-    ["/practice/", labels.practice, ["/practice/", "/review/", "/exam/", "/drills/", "/flashcards/", "/games/", "/cram/"]],
+    ["/practice/", labels.practice, ["/practice/", "/review/", "/exam/", "/drills/", "/flashcards/", "/games/", "/cram/", "/along/"]],
     ["/notes/", labels.notes, ["/notes/"]],
     ["/library/", labels.library, ["/library/", "/amend/", "/news/", "/research/", "/bible/", "/rights/", "/cheatsheet/", "/topics/", "/glossary/", "/sources/", "/settings/", "/polls/", "/memory/", "/civic/"]],
   ] as const;

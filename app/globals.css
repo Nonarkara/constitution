@@ -3614,3 +3614,17 @@ footer { flex-wrap:wrap; gap:16px; }
     display: block;
   }
 }
+/* A question along the way: set apart by a rule, not a box. */
+.side-question {
+  border-top: 3px solid var(--accent);
+  padding-top: 18px;
+}
+.side-kicker {
+  margin: 0 0 8px;
+}
+.side-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}

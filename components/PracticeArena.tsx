@@ -180,6 +180,9 @@ export function PracticeArena() {
             <Link href="/games/" className="subnav-pill">
               {tr(lang, "เกมจับคู่ตัวเลข", "Number games", "数字游戏")}
             </Link>
+            <Link href="/along/" className="subnav-pill">
+              {tr(lang, "แนวข้อสอบนายอำเภอ", "District-chief exam topics", "县长考试题型")}
+            </Link>
           </nav>
 
           {/* THE ADAPTIVE LEARNING DIAGNOSTIC RADAR */}

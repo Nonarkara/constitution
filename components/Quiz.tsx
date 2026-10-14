@@ -15,6 +15,8 @@ import { RecallFirst, ConfidenceCheck, ExplainBack } from "./LearningCoach";
 import { emptyCalibration, recordCalibration, nextReviewAt, type Confidence } from "@/lib/coach";
 import { TeachingSteps } from "./TeachingSteps";
 import { Puzzle } from "./Puzzle";
+import { SideQuestionCard, seenSide } from "./SideQuestion";
+import { pickSide } from "@/lib/side";
 import type { Question } from "@/lib/learning";
 
 export function Quiz({
@@ -30,6 +32,9 @@ export function Quiz({
 }) {
   const { lang, progress, save, annotations } = useStudy();
   const [lesson] = useState(() => chapter ? fisherYates(chapterPuzzles(cases, chapter)).slice(0, 1) : []);
+  // One exam topic met along the way, after the second answer; chapter lessons only.
+  const [side] = useState(() => (chapter ? pickSide(chapter, seenSide()) : null));
+  const [sideDone, setSideDone] = useState(false);
   const bank = supplied ?? questions;
   const opening = supplied ?? (ids
     ? ids.flatMap((id) => questions.filter((q) => q.id === id))
@@ -153,6 +158,8 @@ export function Quiz({
         </button>
       </section>
     );
+  if (side && !sideDone && !checked && index === Math.min(2, Math.max(firstTotal - 1, 0)))
+    return <SideQuestionCard key={side.id} q={side} onDone={() => setSideDone(true)} />;
   const openLaw = sections.filter((s) => q.sections.includes(s.number));
   const check = () => {
     if (choice === null || checked) return;
