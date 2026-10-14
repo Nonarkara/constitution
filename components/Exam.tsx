@@ -88,6 +88,8 @@ export function Exam() {
             "题目为学习而编写，并非真实考题或考试统计。",
           )}
         </p>
+        <p className="notice">{tr(lang,"ชุดจับเวลาทั้ง 30 ชุดนี้ใช้คลังรัฐธรรมนูญ ส่วน 90 คำถามนายอำเภอและท้องถิ่นเป็นแบบฝึกเสริมแยก ไม่รวมในคะแนนหรือเกณฑ์ผ่านหมวด","These 30 timed papers use the Constitution bank. The 90 district-chief and local topics are separate, unscored extras and do not change chapter mastery.","这30套计时卷使用宪法题库。90道县长与地方考试题为单独、不计分的补充题，不改变章节掌握标准。")}</p>
+        <p><Link href="/along/">{tr(lang,"ลองแนวข้อสอบเสริม","Try the extra exam topics","试做补充题")} →</Link> · <Link href="/bible/exam-method/">{tr(lang,"อ่านวิธีทำข้อสอบ","Read the exam method","阅读答题方法")} →</Link></p>
         <div className="exam-formats">
           {FORMATS.map((f, i) => (
             <button

@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { lessonChapter } from "@/lib/guide-path";
 import Link from "next/link";
 import { chapters, questionIndex as questions } from "@/lib/outline";
 import { chapterMastery } from "@/lib/learning";
@@ -29,6 +30,11 @@ export function Learn() {
     [progress, marks, annotations, read],
   );
   const [chapter, setChapter] = useState<number | null>(null);
+  useEffect(() => {
+    if (!ready) return;
+    const requested = lessonChapter(new URLSearchParams(window.location.search).get("chapter"));
+    if (requested) setChapter(requested);
+  }, [ready]);
   const mastered = chapters.filter(
     (c) =>
       c.number !== 17 && chapterMastery(questions, progress, c.number).mastered,

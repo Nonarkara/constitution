@@ -6,8 +6,22 @@ import { LawText, LawRef, Peek } from "./LawRef";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel, type Lang } from "@/lib/i18n";
 import { useState } from "react";
+import { guidePaths } from "@/lib/guide-path";
 
 type Pair = { th: string; en: string };
+function GuideEntry({ slug }: { slug: string }) {
+  const { lang } = useStudy();
+  const path = guidePaths[slug];
+  if (!path) return null;
+  return <section className="source-card guide-entry" aria-label={tr(lang,"เริ่มจากใจความนี้","Start with this idea","从这个概念开始")}>
+    <h2>{tr(lang,"หนึ่งเรื่องก่อน","One idea first","先懂一个概念")}</h2>
+    <p>{path.idea[lang]}</p>
+    <details><summary>{path.question[lang]}</summary><p>{path.answer[lang]}</p></details>
+    <p className="micro">{tr(lang,"ลองตอบก่อนเปิดเหตุผล แล้วตรวจตัวบท","Try answering before opening the reasoning, then check the rule.","先回答，再展开理由，最后核对条文。")}</p>
+    <p>{path.sections.map(n => <Link className="citation" key={n} href={`/section/?n=${n}`}>{sectionLabel(lang,n)} →</Link>)}</p>
+    <p>{path.chapters.map(c => <Link className="citation" key={c} href={`/learn/?chapter=${c}`}>{tr(lang,`ฝึก 5 ข้อ · หมวด ${c}`,`Try five · Chapter ${c}`,`练五题 · 第${c}章`)} →</Link>)}</p>
+  </section>;
+}
 // The guide is written in Thai and English; Chinese readers get the English edition.
 const bookLang = (lang: Lang): "th" | "en" => (lang === "th" ? "th" : "en");
 const text = (p: Pair | undefined, lang: Lang) => (p ? p[bookLang(lang)] : "");
@@ -143,11 +157,14 @@ export function BibleChapterView({ chapter, prev, next }: { chapter: BibleChapte
   const titled = chapter.blocks.map((b, i) => ({ b, i })).filter(({ b }) => "title" in b && b.title);
   return (
     <article className="bible">
-      <h1>{text(chapter.title, lang)}</h1>
-      <p className="bible-lede">
+      <h1>{lang === "zh" ? guidePaths[chapter.slug]?.title.zh ?? text(chapter.title, lang) : text(chapter.title, lang)}</h1>
+      <GuideEntry slug={chapter.slug} />
+      {lang === "zh" && <p className="micro">上方为中文学习提要，条文与练习也提供中文。下方完整长篇指南目前只有泰文与英文，不是完整中文译本。</p>}
+      <details className="guide-depth" open={lang !== "zh"} key={lang}>
+      <summary>{tr(lang,"อ่านคู่มือเต็มและกรณีศึกษา","Read the full guide and case studies","阅读完整英文指南与案例")}</summary>
+      <p className="bible-lede" lang={l}>
         <LawText text={text(chapter.lede, lang)} lang={l} />
       </p>
-      {lang === "zh" && <p className="micro">本指南提供泰文与英文版，此处显示英文版。</p>}
       {titled.length > 4 && (
         <details className="bible-toc">
           <summary>{tr(lang, "ในบทนี้", "In this chapter", "本章内容")}</summary>
@@ -165,7 +182,7 @@ export function BibleChapterView({ chapter, prev, next }: { chapter: BibleChapte
       ))}
       {chapter.sources?.length ? (
         <section className="bible-block">
-          <span className="mono bible-label">{tr(lang, "แหล่งอ้างอิง", "SOURCES", "SOURCES")}</span>
+          <span className="mono bible-label">{tr(lang, "แหล่งอ้างอิง", "SOURCES", "资料来源")}</span>
           <ul className="micro">
             {chapter.sources.map((s) => (
               <li key={s}>{s}</li>
@@ -173,18 +190,19 @@ export function BibleChapterView({ chapter, prev, next }: { chapter: BibleChapte
           </ul>
         </section>
       ) : null}
+      </details>
       <p className="micro">
         {tr(
           lang,
           "คู่มือนี้เป็นสื่อการเรียน ไม่ใช่คำแนะนำทางกฎหมาย ตัวบทภาษาไทยเป็นหลัก ข้อวิจารณ์เป็นความเห็นของผู้ที่ระบุชื่อ ไม่ใช่ข้อสรุปของแอป",
           "A study guide, not legal advice. The Thai text is the law. Critiques belong to the people named, not to this app.",
-          "A study guide, not legal advice. The Thai text is the law. Critiques belong to the people named, not to this app.",
+          "本指南用于学习，不提供法律意见。以泰文法律原文为准。批评属于署名者的观点，不代表本应用的结论。",
         )}
       </p>
       <div className="reader-navigation">
-        {prev ? <Link href={`/bible/${prev.slug}/`}>← {text(prev.title, lang)}</Link> : <span />}
+        {prev ? <Link href={`/bible/${prev.slug}/`}>← {lang === "zh" ? guidePaths[prev.slug]?.title.zh ?? text(prev.title, lang) : text(prev.title, lang)}</Link> : <span />}
         <Link href="/bible/">{tr(lang, "สารบัญ", "Contents", "目录")}</Link>
-        {next ? <Link href={`/bible/${next.slug}/`}>{text(next.title, lang)} →</Link> : <span />}
+        {next ? <Link href={`/bible/${next.slug}/`}>{lang === "zh" ? guidePaths[next.slug]?.title.zh ?? text(next.title, lang) : text(next.title, lang)} →</Link> : <span />}
       </div>
     </article>
   );
@@ -203,13 +221,14 @@ export function BibleIndex({ chapters }: { chapters: { slug: string; order: numb
           "把宪法当作一个系统来读，而不是背诵清单。本指南提供泰文与英文版。",
         )}
       </p>
+      <p className="notice">{tr(lang,"เลือกบทเดียว อ่านใจความ ลองตอบ แล้วไปฝึก ไม่ต้องอ่าน 13 บทให้จบก่อน คู่มือเต็มมีไทยและอังกฤษ ส่วนใจความสั้นและแบบฝึกมีสามภาษา","Choose one chapter: read the idea, recall, then practise. You need not finish all 13 first. The full guide is Thai/English; short entries and exercises are trilingual.","先选一章：读概念、试回忆、再练习，不必先读完13章。完整指南为泰文与英文；简短提要和练习提供三种语言。")}</p>
       <div className="chapter-route">
         {chapters.map((c) => (
           <article className="chapter-row" key={c.slug}>
             <div className="route-number mono">{String(c.order).padStart(2, "0")}</div>
             <div className="chapter-info">
-              <h3>{text(c.title, lang)}</h3>
-              <span className="micro">{text(c.lede, lang).slice(0, 140)}…</span>
+              <h3>{lang === "zh" ? guidePaths[c.slug]?.title.zh ?? text(c.title, lang) : text(c.title, lang)}</h3>
+              <span className="micro">{guidePaths[c.slug]?.idea[lang] ?? text(c.lede, lang).slice(0, 140)}</span>
             </div>
             <div className="chapter-actions">
               <Link href={`/bible/${c.slug}/`}>{tr(lang, "อ่าน", "Read", "阅读")} →</Link>

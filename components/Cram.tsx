@@ -13,7 +13,7 @@ const SourceTag = ({ source, note }: { source?: string; note?: Record<Lang, stri
   if (!source || source === "constitution") return null;
   const { lang } = useStudy();
   const text = note?.[lang] ?? (source === "oaccp" ? "Organic Act" : source);
-  return <span className="cram-source-tag" title="not from the constitution — verify against the cited act">· {text}</span>;
+  return <a href="https://www.senate.go.th/assets/portals/93/fileups/257/files/rk/47_62/2561/217.pdf" target="_blank" rel="noreferrer" className="cram-source-tag" title={tr(lang,"มาจากกฎหมายประกอบรัฐธรรมนูญ ตรวจฉบับเต็ม","From the Organic Act; check the full Act","来自组织法，请核对全文")}>· {text} ↗</a>;
 };
 
 // Everything an exam asks as a number, on one page. Covering the answers turns
@@ -55,7 +55,7 @@ export function Cram() {
 
   return (
     <>
-      <span className="page-kicker mono">BEFORE THE EXAM · 03</span>
+      <span className="page-kicker mono">{tr(lang,"ก่อนสอบ","BEFORE THE EXAM","考前复习")} · 03</span>
       <h1>{tr(lang, "สรุปก่อนเข้าห้องสอบ", "The night before", "考前一页通")}</h1>
       <p>
         {tr(
@@ -82,7 +82,7 @@ export function Cram() {
       </div>
       {covered && (
         <p className="micro" role="status">
-          {tr(lang, `นึกได้แล้ว ${shown.size} ข้อ`, `${shown.size} revealed`, `已翻开${shown.size}项`)}
+          {tr(lang, `เปิดดูแล้ว ${shown.size} ข้อ`, `${shown.size} revealed`, `已翻开${shown.size}项`)}
         </p>
       )}
       {table(tr(lang, "คนและวาระ", "People, terms and ages", "人数、任期与年龄"), facts as Row[])}

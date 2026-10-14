@@ -10,7 +10,7 @@ Everything a learner does stays on her own device: no account, no server copy of
 
 - **The whole text, in three languages.** All 279 sections in Thai, including the 2021 amendments to sections 83, 86 and 91. English is the Council of State translation, with study corrections against the Thai Gazette for sections 37, 98, 101, 134 and 256. Chinese is a full study translation, clearly marked as such.
 - **What you know** (`/notes/`). Everything she reads, highlights, notes and practises is drawn on one map. Each chapter is a line and each section is a station. Lines join her sections wherever the law itself connects them. A written thread explains each connection in plain words, and a panel lets her dig from one section to the next.
-- **454 practice questions** covering every section, in three languages. Each question cites its sections and explains the answer. Missed questions return after 10 minutes; correct ones come back after 1, 3, 7 and 14 days. A chapter counts as passed at 80% of its distinct questions.
+- **470 practice questions** covering every section, in three languages. Each question cites its sections and explains the answer. Missed questions return after 10 minutes; correct ones come back after 1, 3, 7 and 14 days. A chapter counts as passed at 80% of its distinct questions.
 - **20 real-life puzzles** (`/rights/`). She guesses first, without a score, then reads the answer. Every quote is checked byte for byte against the Thai text.
 - **Diagrams** (`/cheatsheet/`): the hierarchy of laws, the amendment gates, emergency decrees and proportionality.
 - **Audio.** 837 recorded section readings, three podcast feeds (`/podcast/th.xml`, `en.xml`, `zh.xml`) and links to the Senate's own recordings.

@@ -190,17 +190,17 @@
         "zh": "监察专员 → 依第213条直接诉愿"
       },
       "value": {
-        "th": "60 วัน (ถ้าไม่มีคำสั่ง) / ไม่รับ",
-        "en": "60 days (if no order) / decline",
-        "zh": "60天（无命令）／拒绝受理"
+        "th": "พิจารณาส่งศาลภายใน 60 วัน; ไม่ส่ง/ไม่ส่งในเวลา → ยื่นตรงตามเงื่อนไข",
+        "en": "Referral considered within 60 days; non-referral/no referral in time → direct filing subject to conditions",
+        "zh": "60天内考虑移送；不移送或逾期未移送 → 按条件直接提交"
       },
       "source": "oaccp",
-      "actKey": "46",
+      "actKey": "48(1)",
       "actProof": "ภายในหกสิบวัน",
       "note": {
-        "th": "Organic Act on Constitutional Court Procedure §46 para 2 (2018)",
-        "en": "Organic Act on Constitutional Court Procedure §46 para 2 (2018)",
-        "zh": "宪法法院程序法 §46 第2款（2018）"
+        "th": "พ.ร.ป. วิธีพิจารณาศาลรัฐธรรมนูญ ม.48 (1)–(2), 46 (1)",
+        "en": "Court Procedure Organic Act §§48(1)–(2), 46(1)",
+        "zh": "宪法法院程序组织法第48条第1至2款、第46条第1款"
       }
     }
   ],
@@ -320,9 +320,9 @@
         "zh": "修宪三读"
       },
       "value": {
-        "th": "> กึ่งหนึ่ง + ฝ่ายค้าน ≥ 20% + ส.ว. ≥ 1/3",
-        "en": "> half + ≥ 20% of opposition MPs + ≥ 1/3 of senators",
-        "zh": "过半数＋反对党议员≥20%＋参议员≥1/3"
+        "th": "> กึ่งหนึ่งของสองสภา + ส.ว. ≥ 1/3 + ≥ 20% ของ ส.ส. ทุกพรรคที่สมาชิกไม่เป็นรัฐมนตรี ประธานหรือรองประธานสภาผู้แทนราษฎร รวมกัน",
+        "en": "> half of both Houses + ≥ 1/3 of senators + ≥ 20% of combined MPs from parties whose members are not ministers, House Speaker or Deputy Speakers",
+        "zh": "两院超过半数＋参议员至少1/3＋成员未任部长、众议院议长或副议长的各党议员合计至少20%"
       }
     }
   ],
@@ -392,17 +392,17 @@
       "section": 213,
       "proof": "ภายในหกสิบวัน",
       "text": {
-        "th": "คำร้องตามมาตรา 213 ต้องไปผู้ตรวจการแผ่นดินก่อน ยื่นตรงต่อศาลรัฐธรรมนูญได้ก็ต่อเมื่อผู้ตรวจการแผ่นดินมีคำสั่งไม่รับคำร้อง หรือไม่มีคำสั่งภายใน 60 วัน (ข้อ 46 วรรคสอง ของ พ.ร.ป. ว่าด้วยวิธีพิจารณาของศาลรัฐธรรมนูญ พ.ศ. 2561)",
-        "en": "A section 213 petition must first go to the Ombudsman. Direct filing at the Constitutional Court is allowed only after the Ombudsman declines the petition, or does not issue an order within 60 days (clause 46 paragraph 2 of the Organic Act on Constitutional Court Procedure B.E. 2561 (2018)).",
-        "zh": "第213条的诉愿必须先提交监察专员。直接向宪法法院提交，需在监察专员拒绝受理或在60天内未作出命令之后。"
+        "th": "มาตรา 213 ต้องอ่านร่วมกับ พ.ร.ป. วิธีพิจารณาศาลรัฐธรรมนูญ ม.46–48: ยื่นผู้ตรวจการแผ่นดินก่อนภายใน 90 วันนับแต่รู้หรือควรรู้ถึงการละเมิด (เว้นแต่ยังละเมิดต่อเนื่อง) ผู้ตรวจการแผ่นดินพิจารณาส่งศาลภายใน 60 วัน หากไม่ส่งหรือไม่ส่งภายในเวลา ยื่นตรงต่อศาลได้ตามเงื่อนไข โดยต้องยื่นภายใน 90 วันหลังได้รับแจ้งความเห็นหรือพ้นกำหนดไม่ส่งเรื่อง อ่านข้อยกเว้น ม.47 ด้วย",
+        "en": "Read section 213 with Organic Act sections 46–48: first petition the Ombudsmen within 90 days of knowing or when one should have known of the violation, except a continuing violation. They consider referral within 60 days. Non-referral or no referral in time permits direct filing subject to conditions; file within 90 days of notification of their opinion or expiry without referral. Check section 47 exclusions too.",
+        "zh": "第213条须结合组织法第46至48条：知悉或应知侵权后90天内先向监察专员提出，持续侵权除外。监察专员在60天内考虑移送。不移送或逾期未移送时，可按条件直接向法院提交，须在收到意见通知或移送期限届满后90天内提出。还须核对第47条排除情形。"
       },
       "source": "oaccp",
-      "actKey": "46",
+      "actKey": "48(1)",
       "actProof": "ภายในหกสิบวัน",
       "note": {
-        "th": "Organic Act on Constitutional Court Procedure §46 para 2 (2018)",
-        "en": "Organic Act on Constitutional Court Procedure §46 para 2 (2018)",
-        "zh": "宪法法院程序法 §46 第2款（2018）"
+        "th": "พ.ร.ป. วิธีพิจารณาศาลรัฐธรรมนูญ ม.48 (1)–(2), 46 (1)",
+        "en": "Court Procedure Organic Act §§48(1)–(2), 46(1)",
+        "zh": "宪法法院程序组织法第48条第1至2款、第46条第1款"
       }
     }
   ]
