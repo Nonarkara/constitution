@@ -137,7 +137,7 @@ function BlockView({ block, lang, index }: { block: Block; lang: Lang; index: nu
 }
 
 type Link_ = { slug: string; title: Pair } | null;
-export function BibleChapterView({ chapter, prev, next }: { chapter: BibleChapter; prev: Link_; next: Link_ }) {
+export function BibleChapterView({ chapter }: { chapter: BibleChapter; prev: Link_; next: Link_ }) {
   const { lang } = useStudy();
   const l = bookLang(lang);
   const titled = chapter.blocks.map((b, i) => ({ b, i })).filter(({ b }) => "title" in b && b.title);
@@ -181,11 +181,9 @@ export function BibleChapterView({ chapter, prev, next }: { chapter: BibleChapte
           "A study guide, not legal advice. The Thai text is the law. Critiques belong to the people named, not to this app.",
         )}
       </p>
-      <div className="reader-navigation">
-        {prev ? <Link href={`/bible/${prev.slug}/`}>← {text(prev.title, lang)}</Link> : <span />}
-        <Link href="/bible/">{tr(lang, "สารบัญ", "Contents", "目录")}</Link>
-        {next ? <Link href={`/bible/${next.slug}/`}>{text(next.title, lang)} →</Link> : <span />}
-      </div>
+      <p className="page-back">
+        <Link href="/bible/">{tr(lang, "← กลับไปเรียน", "← Back to Learn", "← 返回学习")}</Link>
+      </p>
     </article>
   );
 }

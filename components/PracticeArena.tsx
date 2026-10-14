@@ -1,6 +1,7 @@
 "use client";
-import { useState, useMemo, useEffect } from "react";
+import { Suspense, useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import questions from "@/data/questions.json";
 import { chapters } from "@/lib/outline";
 import { recordAnswer } from "@/lib/learning";
@@ -8,13 +9,9 @@ import { useStudy } from "./Provider";
 import { choiceLetter, fisherYates } from "@/lib/shuffle";
 import { preparePracticeQuestion, practiceSessionScore } from "@/lib/practice-session";
 import { tr, sectionLabel, chapterPickerLabel } from "@/lib/i18n";
-import {
-  analyzeUserLearning,
-  detectTopicWeaknesses,
-  buildPracticeQueue,
-  type TopicWeakness,
-} from "@/lib/adaptive";
-import { attemptedCount } from "@/lib/review-queue";
+import { buildPracticeQueue } from "@/lib/adaptive";
+import { buildMixedSession } from "@/lib/mixed";
+import { makeDrill } from "@/lib/drills";
 import { TeachingSteps } from "./TeachingSteps";
 import { ExplainBack } from "./LearningCoach";
 import { StudyArt } from "./StudyArt";
@@ -24,7 +21,8 @@ type Question = (typeof questions)[number];
 
 
 export function PracticeArena() {
-  const { lang, progress, save, annotations, examTarget } = useStudy();
+  const { lang, progress, save, annotations, ready } = useStudy();
+  const autostarted = useRef(false);
 
   const [mode, setMode] = useState<
     "competition" | "weak" | "sprint" | "real-life" | "endless" | "chapter"
@@ -42,29 +40,18 @@ export function PracticeArena() {
   const [sessionCompleted, setSessionCompleted] = useState<boolean>(false);
   const [sessionNotice, setSessionNotice] = useState("");
 
-  // Adaptive profile and weaknesses
-  const profile = useMemo(() => {
-    return analyzeUserLearning(questions, progress, annotations, examTarget);
-  }, [progress, annotations, examTarget]);
-
-  const topicWeaknesses = useMemo(() => {
-    return detectTopicWeaknesses(questions, progress);
-  }, [progress]);
-
-  const topTroubleSpots = useMemo(() => {
-    return topicWeaknesses.filter((t) => t.errorCount > 0);
-  }, [topicWeaknesses]);
-
   const startSession = (
     chosenMode: "competition" | "weak" | "sprint" | "real-life" | "endless" | "chapter",
-    chNum?: number
+    chNum?: number,
+    limit?: number,
   ) => {
-    const qList = buildPracticeQueue(
+    const built = buildPracticeQueue(
       questions,
       progress,
       chosenMode,
       chNum ?? selectedChapter
     );
+    const qList = limit ? fisherYates(built).slice(0, limit) : built;
     if (!qList.length) {
       setSessionNotice(tr(lang, "ไม่มีข้อที่ต้องซ่อมตอนนี้ เลือกโหมดอื่นเพื่อฝึกต่อได้", "No questions need repair right now. Choose another mode to keep practising.", "目前没有待强化的题目，请选择其他模式继续练习。"));
       setIsActive(false);
@@ -81,6 +68,45 @@ export function PracticeArena() {
     setSessionCompleted(false);
     setIsActive(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const begin = (items: Question[], chosen: typeof mode = "weak") => {
+    if (!items.length) {
+      setSessionNotice(tr(lang, "ยังไม่มีข้อในชุดนี้", "This set has no questions yet.", "这组还没有题目。"));
+      setIsActive(false);
+      return;
+    }
+    setSessionNotice("");
+    setMode(chosen);
+    setQueue(items.map((question) => preparePracticeQuestion(question)));
+    setCurrentIndex(0);
+    setSelectedChoice(null);
+    setSessionAnswers({});
+    setShowExplanation(false);
+    setSessionCompleted(false);
+    setIsActive(true);
+  };
+
+  const startMixed = () => begin(buildMixedSession(questions, progress, Date.now()), "weak");
+
+  const startSectionDrill = (section: number) => {
+    const own = fisherYates(questions.filter((question) => question.sections.includes(section))).slice(0, 4);
+    const drills = [0, 1, 2].map((index) => makeDrill((section * 17 + index) % 4230));
+    begin([...own, ...drills].slice(0, 5), "weak");
+  };
+
+  const openFromQuery = (session: string | null, check: number, section: number) => {
+    if (autostarted.current) return;
+    if (session === "mixed") {
+      autostarted.current = true;
+      startMixed();
+    } else if (session === "drill" && section) {
+      autostarted.current = true;
+      startSectionDrill(section);
+    } else if (check) {
+      autostarted.current = true;
+      startSession("chapter", check, 5);
+    }
   };
 
   const currentQ = queue[currentIndex];
@@ -114,23 +140,11 @@ export function PracticeArena() {
     }
   };
 
-  const startTopicDrill = (topic: TopicWeakness) => {
-    const secSet = new Set(topic.sections);
-    const topicQ = questions.filter((q) => q.sections.some((s) => secSet.has(s)));
-    const shuffled = fisherYates(topicQ);
-    setMode("weak");
-    setQueue(shuffled.slice(0, 15).map((question) => preparePracticeQuestion(question)));
-    setCurrentIndex(0);
-    setSelectedChoice(null);
-    setSessionAnswers({});
-    setShowExplanation(false);
-    setSessionCompleted(false);
-    setIsActive(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <div className="practice-arena">
+      <Suspense fallback={null}>
+        <SessionFromQuery ready={ready} onOpen={openFromQuery} />
+      </Suspense>
 
       {!isActive ? (
         <>
@@ -157,298 +171,50 @@ export function PracticeArena() {
             </div>
           </header>
 
-          {/* Quick Sub-navigation Bar */}
-          <nav className="practice-subnav" aria-label="Practice sub-navigation">
-            <Link href="/cram/" className="subnav-pill">
-              {tr(lang, "สรุปก่อนสอบ", "Night-before sheet", "考前一页通")}
-            </Link>
-            <Link href="/review/" className="subnav-pill">
-              {tr(lang, "ทบทวนตามรอบ", "Spaced review", "间隔复习")}
-            </Link>
-            <Link href="/exam/" className="subnav-pill">
-              {tr(lang, "สอบจำลองจับเวลา", "Timed mock exam", "计时模考")}
-            </Link>
-            <Link href="/drills/" className="subnav-pill">
-              {tr(lang, "เจาะตัวเลข 4,230 ข้อ", "4,230 number drills", "4,230道数字速练")}
-            </Link>
-            <Link href="/flashcards/" className="subnav-pill">
-              {tr(lang, "การ์ดความจำ", "Flashcards", "记忆闪卡")}
-            </Link>
-            <Link href="/cheatsheet/" className="subnav-pill">
-              {tr(lang, "สูตรและแผนภาพ", "Cheat sheets", "速查图解")}
-            </Link>
-            <Link href="/games/" className="subnav-pill">
-              {tr(lang, "เกมจับคู่ตัวเลข", "Number games", "数字游戏")}
-            </Link>
-          </nav>
-
-          {/* THE ADAPTIVE LEARNING DIAGNOSTIC RADAR */}
-          <section className="adaptive-diagnostic-box">
-            <div className="diag-head">
-              <h2>
-                {tr(
-                  lang,
-                  "เรื่องที่คุณพลาดบ่อย",
-                  "Where your answers slip",
-                  "你常出错的主题"
-                )}
-              </h2>
-              <span className="micro mono">
-                {tr(
-                  lang,
-                  `ฝึกแล้ว ${attemptedCount(questions, progress)} ข้อ / ${questions.length}`,
-                  `Attempted ${attemptedCount(questions, progress)} / ${questions.length}`,
-                  `已练 ${attemptedCount(questions, progress)} / ${questions.length} 题`
-                )}
-              </span>
-            </div>
-
-            <p className="diag-recommendation-text">{profile.recommendation[lang]}</p>
-
-            {topTroubleSpots.length > 0 ? (
-              <div className="trouble-spots-grid">
-                {topTroubleSpots.map((topic) => (
-                  <div className="trouble-spot-card" key={topic.id}>
-                    <div className="spot-head">
-                      <span className="spot-title font-bold">{topic.title[lang]}</span>
-                      <span className="spot-badge-error mono">
-                        {topic.errorCount} {tr(lang, "ข้อผิด", "missed", "处做错")}
-                      </span>
-                    </div>
-                    <p className="micro spot-desc">{topic.description[lang]}</p>
-                    <div className="spot-actions">
-                      <span className="micro mono">
-                        {tr(lang, "ความแม่นยำ:", "Accuracy:", "正确率:")}{" "}
-                        <strong>{topic.accuracy}%</strong>
-                      </span>
-                      <button
-                        className="btn-drill-spot micro"
-                        onClick={() => startTopicDrill(topic)}
-                      >
-                        {tr(lang, "ฝึกเรื่องนี้", "Practise this", "练这个主题")} →
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="all-clear-notice micro">
-                <span>
-                  {tr(
-                    lang,
-                    "ยังไม่มีเรื่องที่พลาดซ้ำ ลองฝึกสักชุด แล้วกลับมาดูที่นี่",
-                    "Nothing you keep missing yet. Try a set, then come back here.",
-                    "还没有反复出错的主题。先练一组，再回来看看。"
-                  )}
-                </span>
-              </div>
+          <div className="practice-choices">
+            <button className="primary" onClick={startMixed}>
+              {tr(lang, "เริ่มรอบฝึก", "Start session", "开始练习")} →
+            </button>
+          </div>
+          <p>
+            {tr(
+              lang,
+              "รอบนี้รวมข้อที่ถึงเวลาทบทวน ข้อที่ยังพลาด แบบฝึกตัวเลข และการ์ดที่เคยตอบถูก สอบจำลองอยู่ที่ท้ายหน้า",
+              "This session mixes what is due, what you miss, number drills and cards you already know. The mock exam is the step at the end of the page.",
+              "这一轮混合到期的复习、你还错过的题、数字练习和已经答对的卡片。模拟考试在页面末尾。",
             )}
-          </section>
-
-          {/* PRACTICE MODE SELECTOR */}
-          <section className="practice-mode-selector">
-            <h2>
-              {tr(lang, "เลือกวิธีฝึก", "Choose how to practise", "选择练习方式")}
-            </h2>
-
-            <div className="mode-cards-grid">
-              {/* Competition & Court Drill */}
-              <div
-                className="mode-card featured-mode"
-                onClick={() => startSession("competition")}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") startSession("competition");
-                }}
+          </p>
+          <details className="inside-session">
+            <summary>{tr(lang, "ในรอบฝึก", "Inside the session", "练习里面")}</summary>
+            <p>
+              <Link href="/review/">{tr(lang, "ทบทวน", "Review", "复习")}</Link>
+              {" · "}
+              <Link href="/flashcards/">{tr(lang, "การ์ด", "Flashcards", "闪卡")}</Link>
+              {" · "}
+              <Link href="/drills/">{tr(lang, "แบบฝึกตัวเลข", "Drills", "数字练习")}</Link>
+              {" · "}
+              <Link href="/cheatsheet/">{tr(lang, "สูตร", "Formulas", "公式")}</Link>
+              {" · "}
+              <Link href="/games/">{tr(lang, "จับคู่", "Match", "配对")}</Link>
+            </p>
+            <div className="chapter-dropdown-row">
+              <select
+                value={selectedChapter}
+                onChange={(e) => setSelectedChapter(Number(e.target.value))}
+                aria-label={tr(lang, "เลือกหมวด", "Select a chapter", "选择章节")}
               >
-                <div className="mode-card-main">
-                  <h3>
-                    {tr(
-                      lang,
-                      "แนวแข่งขันตอบปัญหาศาลรัฐธรรมนูญ",
-                      "Constitutional Court quiz-competition style",
-                      "宪法法院知识竞赛风格",
-                    )}
-                  </h3>
-                  <p>
-                    {tr(
-                      lang,
-                      "30 ข้อที่เขียนขึ้นในแนวการแข่งขัน: การยื่นคำร้อง ม.212/213 ผู้รับสนองพระบรมราชโองการ พระราชกำหนด และการขัดกันแห่งผลประโยชน์",
-                      "30 questions written in the competition style: s.212/213 petitions, royal countersignature, emergency decrees and conflicts of interest.",
-                      "按竞赛风格编写的30道题：第212/213条申请、王室谕令副署、紧急法令及利益冲突。",
-                    )}
-                  </p>
-                </div>
-                <span className="mode-card-action primary" aria-hidden="true">
-                  {tr(lang, "เริ่ม 30 ข้อ", "Start 30", "开始30题")} →
-                </span>
-              </div>
-
-              {/* Adaptive Weakness Drill */}
-              <div
-                className="mode-card"
-                onClick={() => startSession("weak")}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") startSession("weak");
-                }}
-              >
-                <div className="mode-card-main">
-                  <h3>
-                    {tr(
-                      lang,
-                      "ข้อที่เคยพลาด",
-                      "What you missed",
-                      "你答错过的题",
-                    )}
-                  </h3>
-                  <p>
-                    {tr(
-                      lang,
-                      "ข้อที่คุณตอบผิด และหมวดที่ยังไม่ผ่านเกณฑ์ วนกลับมาให้ลองใหม่",
-                      "Questions you got wrong and chapters not yet passed, brought back to try again.",
-                      "你答错的题和尚未达标的章节，再来一次。",
-                    )}
-                  </p>
-                </div>
-                <span className="mode-card-action" aria-hidden="true">
-                  {tr(lang, "ลองใหม่ 20 ข้อ", "Retry 20", "重练20题")} →
-                </span>
-              </div>
-
-              {/* 10-Question Sprint */}
-              <div
-                className="mode-card"
-                onClick={() => startSession("sprint")}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") startSession("sprint");
-                }}
-              >
-                <div className="mode-card-main">
-                  <h3>
-                    {tr(lang, "สุ่ม 10 ข้อ", "Ten at random", "随机10题")}
-                  </h3>
-                  <p>
-                    {tr(
-                      lang,
-                      "สิบข้อจากทั้งเล่ม พอดีช่วงพักสั้น ๆ เฉลยพร้อมวิธีคิดหลังตอบทุกข้อ",
-                      "Ten from the whole text, for a short break. Each answer comes with the reasoning.",
-                      "从全文随机抽十题，适合短暂休息时练。每题答后附解题思路。",
-                    )}
-                  </p>
-                </div>
-                <span className="mode-card-action" aria-hidden="true">
-                  {tr(lang, "เริ่ม 10 ข้อ", "Start 10", "开始10题")} →
-                </span>
-              </div>
-
-              {/* Real-Life Situations */}
-              <div
-                className="mode-card"
-                onClick={() => startSession("real-life")}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") startSession("real-life");
-                }}
-              >
-                <div className="mode-card-main">
-                  <h3>
-                    {tr(
-                      lang,
-                      "เรื่องในชีวิตจริง",
-                      "Everyday situations",
-                      "日常生活情境",
-                    )}
-                  </h3>
-                  <p>
-                    {tr(
-                      lang,
-                      "การค้นบ้านโดยไม่มีหมาย การฟ้องหน่วยงานรัฐ การชุมนุม และหลักความได้สัดส่วนตามมาตรา 26",
-                      "Searches without a warrant, suing a state agency, gathering to protest and the s.26 proportionality test.",
-                      "无令搜查、起诉国家机关、集会抗议及第26条比例原则。",
-                    )}
-                  </p>
-                </div>
-                <span className="mode-card-action" aria-hidden="true">
-                  {tr(lang, "เริ่ม", "Start", "开始")} →
-                </span>
-              </div>
-
-              {/* Endless Marathon */}
-              <div
-                className="mode-card"
-                onClick={() => startSession("endless")}
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") startSession("endless");
-                }}
-              >
-                <div className="mode-card-main">
-                  <h3>
-                    {tr(
-                      lang,
-                      `ทั้งคลัง ${questions.length} ข้อ`,
-                      `The whole bank, ${questions.length}`,
-                      `全部${questions.length}题`,
-                    )}
-                  </h3>
-                  <p>
-                    {tr(
-                      lang,
-                      "คำถามจากทั้งคลัง ทีละข้อต่อกันไป หยุดเมื่อไรก็ได้",
-                      "Questions from the whole bank, one after another, until you stop.",
-                      "从整个题库连续出题，一题接一题，随时可停。",
-                    )}
-                  </p>
-                </div>
-                <span className="mode-card-action" aria-hidden="true">
-                  {tr(lang, "เริ่ม", "Start", "开始")} →
-                </span>
-              </div>
-
-              {/* Specific Chapter Filter */}
-              <div className="mode-card chapter-select-mode">
-                <div className="mode-card-main">
-                  <h3>
-                    {tr(lang, "ทีละหมวด", "One chapter", "按章节")}
-                  </h3>
-                  <p>
-                    {tr(
-                      lang,
-                      "หมวด 1 ถึง 16 หรือบทเฉพาะกาล",
-                      "Chapters 1–16 or the transitory provisions.",
-                      "第1至16章或过渡条款。",
-                    )}
-                  </p>
-                </div>
-                <div className="chapter-dropdown-row">
-                  <select
-                    value={selectedChapter}
-                    onChange={(e) => setSelectedChapter(Number(e.target.value))}
-                    aria-label={tr(lang, "เลือกหมวด", "Select a chapter", "选择章节")}
-                  >
-                    {chapters.map((c) => (
-                      <option key={c.number} value={c.number}>
-                        {chapterPickerLabel(lang, c)}
-                      </option>
-                    ))}
-                  </select>
-                  <button
-                    className="primary"
-                    onClick={() => startSession("chapter", selectedChapter)}
-                  >
-                    {tr(lang, "ฝึกหมวดนี้", "Practise", "练习本章")} →
-                  </button>
-                </div>
-              </div>
+                {chapters.map((c) => (
+                  <option key={c.number} value={c.number}>
+                    {chapterPickerLabel(lang, c)}
+                  </option>
+                ))}
+              </select>
+              <button onClick={() => startSession("chapter", selectedChapter, 5)}>
+                {tr(lang, "ตรวจหมวดนี้ 5 ข้อ", "Check this chapter, 5", "本章小测5题")} →
+              </button>
             </div>
-          </section>
+          </details>
+
         </>
       ) : sessionCompleted ? (
         /* SESSION RESULT SCREEN */
@@ -475,18 +241,12 @@ export function PracticeArena() {
             </p>
 
             <div className="result-actions-row">
-              <button
-                className="primary"
-                onClick={() => startSession(mode, selectedChapter)}
-              >
-                ↻ {tr(lang, "อีกรอบ", "Again", "再来一轮")}
+              <button className="primary" onClick={startMixed}>
+                {tr(lang, "อีกรอบ", "Again", "再来一轮")} →
               </button>
               <button onClick={() => setIsActive(false)}>
-                ← {tr(lang, "เลือกวิธีฝึกใหม่", "Choose another way", "换一种方式")}
+                {tr(lang, "← กลับไปฝึก", "← Back to Practise", "← 返回练习")}
               </button>
-              <Link href="/review/" className="button">
-                {tr(lang, "ไปหน้าทบทวน", "Go to review", "前往复习")} →
-              </Link>
             </div>
           </div>
         </div>
@@ -641,4 +401,23 @@ export function PracticeArena() {
       )}
     </div>
   );
+}
+
+function SessionFromQuery({
+  ready,
+  onOpen,
+}: {
+  ready: boolean;
+  onOpen: (session: string | null, check: number, section: number) => void;
+}) {
+  const params = useSearchParams();
+  const started = useRef(false);
+  const openRef = useRef(onOpen);
+  openRef.current = onOpen;
+  useEffect(() => {
+    if (!ready || started.current) return;
+    started.current = true;
+    openRef.current(params.get("session"), Number(params.get("check")) || 0, Number(params.get("section")) || 0);
+  }, [params, ready]);
+  return null;
 }

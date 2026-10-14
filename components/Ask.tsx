@@ -8,6 +8,7 @@ import {
   ASK_ORIGIN,
   ASK_RETRIES,
   ATTEMPT_BUDGET_MS,
+  answerMatchesUi,
   askRequest,
   classify,
   confidenceLabel,
@@ -27,6 +28,7 @@ import {
   shapeAskAnswer,
   showGroundedMark,
   studyDisclaimer,
+  wrongLanguageResult,
   type AskExcerpt,
 } from "@/lib/ask";
 
@@ -54,7 +56,16 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
     [consent, setConsent] = useState(false),
     [state, setState] = useState<State>({ kind: "idle" });
   const run = useRef(0);
+  const [elapsed, setElapsed] = useState(0);
+  const waitingAttempt = state.kind === "waiting" ? state.attempt : -1;
   useEffect(() => () => void run.current++, []);
+  useEffect(() => {
+    if (waitingAttempt < 0) return;
+    const started = Date.now();
+    setElapsed(0);
+    const id = window.setInterval(() => setElapsed(Date.now() - started), 1000);
+    return () => window.clearInterval(id);
+  }, [waitingAttempt]);
   useEffect(() => setQuestion(initial), [initial]);
   const length = question.trim().length;
   const busy = state.kind === "waiting";
@@ -75,13 +86,17 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
       setState({ kind: "waiting", position: 0, attempt });
       const outcome = await runAsk(mine, attempt);
       if (run.current !== mine || outcome === "done" || outcome === "stopped") return;
+      if (outcome === "language" && attempt + 1 >= tries) {
+        settle(wrongLanguageResult(lang, excerpts));
+        return;
+      }
     }
     if (run.current !== mine) return;
     if (excerpts.length) return settle(notebookFallback(lang, excerpts));
     fail(friendlyAskError("timeout", lang));
   }
 
-  async function runAsk(mine: number, attempt: number): Promise<"done" | "retry" | "stopped"> {
+  async function runAsk(mine: number, attempt: number): Promise<"done" | "retry" | "stopped" | "language"> {
     let res: Response;
     try {
       res = await fetch(`${ASK_ORIGIN}/api/laws`, {
@@ -114,6 +129,7 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
         if (!poll.ok || job.error) return "retry";
         if (job.status === "done") {
           if (looksLikeProviderError(String(job.answer ?? ""))) return "retry";
+          if (!answerMatchesUi(String(job.answer ?? ""), lang)) return "language";
           settle(job);
           return "done";
         }
@@ -202,13 +218,22 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
       </button>
       <div role="status" aria-live="polite">
         {state.kind === "waiting" && (
-          <p className="micro">
-            {state.attempt > 0
-              ? tr(lang, "รอบแรกไม่กลับมา กำลังถามอีกครั้งหนึ่ง", "The first try did not come back. Asking once more.", "第一次没有返回。正在再问一次。")
-              : state.position > 0
-                ? tr(lang, `อยู่ในคิวลำดับที่ ${state.position}`, `In queue · position ${state.position}`, `排队中 · 第${state.position}位`)
-                : tr(lang, "กำลังค้นตัวบทและเขียนคำตอบ ถ้าไม่กลับมาภายในประมาณหนึ่งนาที จะถามใหม่หนึ่งครั้ง", "Searching the law and writing. If nothing returns within about a minute, it asks once more.", "正在检索法条并撰写答案。若大约一分钟内没有返回，会再问一次。")}
-          </p>
+          <div className="ask-wait">
+            <progress
+              value={Math.min(elapsed, ATTEMPT_BUDGET_MS)}
+              max={ATTEMPT_BUDGET_MS}
+              aria-label={tr(lang, "ความคืบหน้าของการค้น", "Search progress", "检索进度")}
+            />
+            <p className="micro">
+              {state.attempt > 0
+                ? tr(lang, "รอบแรกไม่กลับมา กำลังถามอีกครั้งหนึ่ง", "The first try did not come back. Asking once more.", "第一次没有返回。正在再问一次。")
+                : state.position > 0
+                  ? tr(lang, `อยู่ในคิวลำดับที่ ${state.position}`, `In queue · position ${state.position}`, `排队中 · 第${state.position}位`)
+                  : tr(lang, "กำลังค้นตัวบทและเขียนคำตอบ", "Searching the law and writing.", "正在检索法条并撰写答案。")}
+              {" · "}
+              {tr(lang, `${Math.round(elapsed / 1000)} วินาที`, `${Math.round(elapsed / 1000)}s`, `${Math.round(elapsed / 1000)}秒`)}
+            </p>
+          </div>
         )}
         {state.kind === "error" && (
           <div className="feedback">

@@ -306,17 +306,95 @@ export function keepStatutoryExceptions(answer: string, lang: Lang, sections: nu
   return `${answer.trim()}\n\n${note}`.trim();
 }
 
+const THAI_LETTERS = /[\u0E00-\u0E7F]/g;
+const CJK_LETTERS = /[\u4E00-\u9FFF]/g;
+const LATIN_LETTERS = /[A-Za-z]/g;
+
+/** Dominant script of a model answer. Mixed or tiny answers are not a language. */
+export function dominantLanguage(text: string): Lang | null {
+  const thai = text.match(THAI_LETTERS)?.length ?? 0;
+  const cjk = text.match(CJK_LETTERS)?.length ?? 0;
+  const latin = text.match(LATIN_LETTERS)?.length ?? 0;
+  const total = thai + cjk + latin;
+  if (total < 8) return null;
+  const ranked = [
+    ["th", thai],
+    ["zh", cjk],
+    ["en", latin],
+  ].sort((a, b) => Number(b[1]) - Number(a[1]));
+  const top = Number(ranked[0][1]);
+  const second = Number(ranked[1][1]);
+  if (top / total < 0.6 || second > top * 0.45) return null;
+  return ranked[0][0] as Lang;
+}
+
+/** The answer must be in the language of the page. A Thai reply on a Chinese page is not. */
+export function answerMatchesUi(text: string, lang: Lang): boolean {
+  return dominantLanguage(text) === lang;
+}
+
+function unsafeRefusal(sentence: string): boolean {
+  const value = sentence.toLowerCase();
+  const refusal = /may refuse|can refuse|could refuse|refuse without|right to refuse|ปฏิเสธได้|มีสิทธิ์?ปฏิเสธ|สามารถปฏิเสธ|可以拒绝|有权拒绝|无权/;
+  const search = /search|ค้น|搜查|ตรวจค้น|dwelling|premises|บ้าน/;
+  const order = /court order|warrant|หมาย|法院命令|令状/;
+  const noAuthority = /no authority|ไม่มีอำนาจ|无权|没有权力|没有搜查/;
+  if (noAuthority.test(value) && (search.test(value) || order.test(value))) return true;
+  return refusal.test(value) && (search.test(value) || order.test(value));
+}
+
+/** Drop a sentence that says the person may refuse a search, or that no court order means no authority. */
+export function dropUnsafeRefusals(answer: string): string {
+  const kept = answer
+    .split(/\n+|(?<=[.。！？!?])\s+/)
+    .filter((part) => part.trim() && !unsafeRefusal(part));
+  return kept.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+}
+
+/** English answers cite a section, not an article. */
+export function citeAsSection(answer: string, lang: Lang): string {
+  if (lang !== "en") return answer;
+  return answer.replace(/\bArticles\b/g, "Sections").replace(/\bArticle\b/g, "Section");
+}
+
 export function shapeAskAnswer(
   answer: string,
   lang: Lang,
   sections: number[],
   translations: string[] = [],
 ): string {
+  const cleaned = citeAsSection(dropUnsafeRefusals(stripFabricatedSources(answer)), lang);
   return quotesInAnswerLanguage(
-    keepStatutoryExceptions(stripFabricatedSources(answer), lang, sections),
+    keepStatutoryExceptions(cleaned, lang, sections),
     lang,
     translations,
   );
+}
+
+/** Shown when a retry still comes back in the wrong language. No confidence badge. */
+export function wrongLanguageResult(lang: Lang, excerpts: AskExcerpt[]) {
+  const lead = tr(
+    lang,
+    "คำตอบกลับมาเป็นคนละภาษากับหน้าที่เปิดอยู่ จึงไม่แสดงข้อความนั้น",
+    "The answer came back in a different language from this page, so it is not shown.",
+    "回答所用的语言与当前页面不一致，因此不显示那段文字。",
+  );
+  const body = excerpts
+    .map((excerpt) =>
+      tr(
+        lang,
+        `มาตรา ${excerpt.number}\n${excerpt.text}`,
+        `Section ${excerpt.number}\n${excerpt.text}`,
+        `第${excerpt.number}条\n${excerpt.text}`,
+      ),
+    )
+    .join("\n\n");
+  return {
+    answer: [lead, body].filter(Boolean).join("\n\n"),
+    confidence: null,
+    grounded: false,
+    sources: [] as AskSource[],
+  };
 }
 
 export function notebookFallback(lang: Lang, excerpts: AskExcerpt[]) {

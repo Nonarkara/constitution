@@ -4,11 +4,11 @@ export const tr = (lang: Lang, th: string, en: string, zh: string) =>
   ({ th, en, zh })[lang];
 export const labels = {
   title: { th: "รัฐธรรมนูญ", en: "The Constitution", zh: "泰国宪法" },
-  learn: { th: "เส้นทางเรียน", en: "Learn", zh: "学习路径" },
+  learn: { th: "เรียน", en: "Learn", zh: "学习" },
   read: { th: "อ่านทั้งฉบับ", en: "Read", zh: "阅读全文" },
-  practice: { th: "ฝึกตอบ", en: "Practice", zh: "练习" },
-  notes: { th: "สิ่งที่คุณรู้", en: "What you know", zh: "你所知道的" },
-  library: { th: "ห้องสมุด", en: "Library", zh: "资料库" },
+  practice: { th: "ฝึก", en: "Practise", zh: "练习" },
+  notes: { th: "ความก้าวหน้าของคุณ", en: "Your progress", zh: "你的进度" },
+  library: { th: "สำรวจ", en: "Explore", zh: "探索" },
   notebook: {
     th: "สมุดคู่หน้า 279 มาตรา",
     en: "Double-page notebook",
@@ -58,6 +58,6 @@ export function chapterPickerLabel(
       : lang === "en"
         ? `Sections ${chapter.start}–${chapter.end}`
         : `ม. ${chapter.start}–${chapter.end}`;
-  const name = chapter.number === 17 ? "" : `: ${chapter.title[lang]}`;
+  const name = chapter.number === 17 ? "" : ` — ${chapter.title[lang]}`;
   return `${head}${name} (${range})`;
 }

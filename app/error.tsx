@@ -11,7 +11,7 @@ export default function ErrorPage({ retry }: { error: Error & { digest?: string 
       <button className="primary" onClick={() => retry()}>
         ลองอีกครั้ง · Try again →
       </button>{" "}
-      <Link href="/learn/">กลับสู่เส้นทางเรียน · Back to learning</Link>
+      <Link href="/">← กลับไปหน้าแรก · Back to home</Link>
     </section>
   );
 }

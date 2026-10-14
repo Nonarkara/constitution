@@ -50,7 +50,7 @@ export function Notes() {
   const empty = !highlights.length && !bookmarks.length && !sectionNotes.length;
   return (
     <>
-      <h1>{tr(lang, "สิ่งที่คุณรู้", "What you know", "你所知道的")}</h1>
+      <h1>{tr(lang, "ความก้าวหน้าของคุณ", "Your progress", "你的进度")}</h1>
       <p>
         {tr(
           lang,

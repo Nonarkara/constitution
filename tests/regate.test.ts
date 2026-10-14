@@ -11,18 +11,23 @@ import {
   pollSteps,
   quotesInAnswerLanguage,
   readConfidence,
+  answerMatchesUi,
+  citeAsSection,
+  dropUnsafeRefusals,
   shapeAskAnswer,
   showGroundedMark,
   stripFabricatedSources,
+  wrongLanguageResult,
 } from "../lib/ask.ts";
 import { analyzeUserLearning } from "../lib/adaptive.ts";
+import { buildMixedSession } from "../lib/mixed.ts";
 import { topicFor, memoryCueFor, matchingWhys } from "../lib/cues.ts";
 import { ministerialRemoval, drillMembership, DRILL_COUNT } from "../lib/drills.ts";
 import { enNoun, formatCount } from "../lib/grammar.ts";
 import { chapterPickerLabel } from "../lib/i18n.ts";
 import { defaultProgress, type Question } from "../lib/learning.ts";
 import { makePaper, papers } from "../lib/papers.ts";
-import { sessionSummary, sessionTotals } from "../lib/session.ts";
+import { sessionCounter, sessionSummary, sessionTotals } from "../lib/session.ts";
 import { teachingBodies } from "../lib/teaching.ts";
 
 const bank = JSON.parse(
@@ -111,6 +116,9 @@ test("a re-queued session uses one total for the header and the summary", () => 
   assert.deepEqual(sessionTotals(3, 7), { correct: 3, total: 7 });
   assert.match(sessionSummary(3, 7, "en"), /3 of 7/);
   assert.equal(sessionSummary(3, 7, "en").includes("3 of 5"), false);
+  assert.deepEqual(sessionCounter(4, 5, 0), { n: 5, total: 5 });
+  assert.deepEqual(sessionCounter(5, 5, 2), { n: 1, total: 2 });
+  assert.notEqual(sessionCounter(5, 5, 2).total, 10);
 });
 
 test("ministerial drills never answer 0 and neighbours are not +1 MP", () => {
@@ -148,12 +156,18 @@ test("teaching steps name the item and do not repeat the prompt", () => {
   assert.match(left[9], new RegExp(rightChoice));
 });
 
-test("paper 28 is filled from the transitory provisions", () => {
+test("paper 28 balances transitory coverage with the blueprint chapters", () => {
   const paper = papers.find((item) => item.number === 28)!;
   const made = makePaper(bank, paper);
+  const transitory = made.filter((q) => q.chapter === 17).length;
   assert.equal(made.length, 25);
-  assert.ok(made.filter((q) => q.chapter === 17).length >= 20);
-  assert.equal(made.every((q) => q.chapter === 17), true);
+  assert.deepEqual(paper.chapters, [1, 7, 8, 15, 17]);
+  assert.deepEqual(paper.core, [17]);
+  assert.ok(transitory >= 8, `transitory count ${transitory}`);
+  assert.ok(transitory < made.length);
+  for (const chapter of paper.chapters) {
+    assert.ok(made.some((q) => q.chapter === chapter), `missing chapter ${chapter}`);
+  }
 });
 
 test("explanations do not end with a doubled period", () => {
@@ -174,13 +188,13 @@ test("counts and English nouns agree", () => {
 test("chapter labels stay in the selected language", () => {
   const first = outline.chapters[0];
   const last = outline.chapters.find((chapter) => chapter.number === 17)!;
-  assert.match(chapterPickerLabel("th", first), /^หมวด 1:/);
+  assert.match(chapterPickerLabel("th", first), /^หมวด 1 —/);
   assert.match(chapterPickerLabel("th", first), /ม\. 1–5/);
   assert.equal(chapterPickerLabel("th", first).includes("Ch "), false);
-  assert.match(chapterPickerLabel("en", first), /^Chapter 1:/);
+  assert.match(chapterPickerLabel("en", first), /^Chapter 1 —/);
   assert.match(chapterPickerLabel("en", first), /Sections 1–5/);
   assert.equal(chapterPickerLabel("en", first).includes("ม."), false);
-  assert.match(chapterPickerLabel("zh", first), /^第1章:/);
+  assert.match(chapterPickerLabel("zh", first), /^第1章 —/);
   assert.match(chapterPickerLabel("zh", first), /第1–5条/);
   assert.equal(chapterPickerLabel("zh", last).includes("Ch "), false);
   assert.match(chapterPickerLabel("en", last), /Transitory Provisions/);
@@ -222,6 +236,44 @@ test("the eleven implausible distractors are gone and the answer index is unchan
   assert.equal(bank.find((q) => q.id === "s112-a")!.answer, 2);
   assert.equal(bank.find((q) => q.id === "s128-b")!.answer, 1);
   assert.equal(bank.find((q) => q.id === "s260-b")!.answer, 1);
+});
+
+test("a search answer never says the person may refuse, and it cites a section", () => {
+  const unsafe = "You may refuse a search without a court order. Officials have no authority to search. Article 36 is the rule.";
+  const cleaned = dropUnsafeRefusals(unsafe);
+  assert.equal(/may refuse|no authority to search/i.test(cleaned), false);
+  const shaped = shapeAskAnswer(unsafe, "en", [36], ["or other grounds as provided by law"]);
+  assert.equal(/may refuse|no authority to search/i.test(shaped), false);
+  assert.equal(shaped.includes("Article"), false);
+  assert.match(shaped, /Section/);
+  assert.match(shaped, /other grounds as provided by law/);
+  assert.equal(citeAsSection("See Article 33 and Articles 36.", "en"), "See Section 33 and Sections 36.");
+});
+
+test("a Chinese page does not keep a Thai answer or a SOLID badge", () => {
+  const thai = "ตำรวจไม่มีอำนาจค้นบ้านถ้าไม่มีหมายศาล และคุณปฏิเสธได้";
+  assert.equal(answerMatchesUi(thai, "zh"), false);
+  assert.equal(answerMatchesUi(thai, "th"), true);
+  assert.equal(answerMatchesUi("第36条禁止检查通信，除非有法院命令或法律规定的其他理由。", "zh"), true);
+  const honest = wrongLanguageResult("zh", [{ number: 36, text: "或法律规定的其他理由" }]);
+  assert.equal(honest.confidence, null);
+  assert.equal(honest.grounded, false);
+  assert.equal(honest.answer.includes("有依据"), false);
+  assert.match(honest.answer, /语言/);
+  assert.equal(/[\u0E00-\u0E7F]/.test(honest.answer), false);
+});
+
+test("the mixed session folds review, drills and recall into one queue", () => {
+  const progress = defaultProgress();
+  const due = bank[0];
+  progress.questions[due.id] = { correct: false, level: 0, due: 0 };
+  const known = bank[1];
+  progress.questions[known.id] = { correct: true, level: 2, due: Date.now() + 86_400_000 };
+  const mixed = buildMixedSession(bank, progress, Date.now());
+  assert.ok(mixed.length >= 5 && mixed.length <= 12);
+  assert.equal(mixed[0].id, due.id);
+  assert.ok(mixed.some((item) => item.id.startsWith("drill-")));
+  assert.ok(mixed.some((item) => item.id === known.id));
 });
 
 test("mixed practice no longer uses a biased sort", () => {

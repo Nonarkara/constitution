@@ -1,4 +1,5 @@
-import { Learn } from "@/components/Learn";
-export default function Home() {
-  return <Learn />;
+import { Home } from "@/components/Home";
+
+export default function Page() {
+  return <Home />;
 }

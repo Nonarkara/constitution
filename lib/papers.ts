@@ -100,8 +100,16 @@ export function makePaper(
   const random = seededRandom(paper.number * 104729);
   const coreChapters = paper.core ?? [];
   const coreBank = bank.filter((q) => coreChapters.includes(q.chapter));
+  // A named core is the largest share, not the whole paper and not a token few.
+  const coreQuota =
+    coreChapters.length && paper.chapters.length
+      ? Math.min(
+          paper.count,
+          Math.max(1, Math.round((paper.count * coreChapters.length) / paper.chapters.length) * 2),
+        )
+      : paper.count;
   const core = coreChapters.length
-    ? balanced(coreBank, Math.min(coreBank.length, paper.count), random)
+    ? balanced(coreBank, Math.min(coreBank.length, coreQuota), random)
     : [];
   const used = new Set(core.map((q) => q.id));
   const preferred = bank.filter(

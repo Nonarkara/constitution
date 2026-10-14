@@ -933,9 +933,13 @@ html[data-large="true"] {
     --display: 32px;
   }
   .header {
-    padding: calc(16px + env(safe-area-inset-top, 0px)) calc(16px + env(safe-area-inset-right, 0px)) 16px calc(16px + env(safe-area-inset-left, 0px));
-    gap: 10px;
+    padding: calc(10px + env(safe-area-inset-top, 0px)) calc(16px + env(safe-area-inset-right, 0px)) 10px calc(16px + env(safe-area-inset-left, 0px));
+    gap: 8px;
     flex-wrap: wrap;
+  }
+  .themes button {
+    white-space: nowrap;
+    padding: 4px 8px;
   }
   .brand {
     gap: 10px;
@@ -969,7 +973,7 @@ html[data-large="true"] {
   }
   .sidebar nav {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0;
     border-bottom: 1px solid var(--line);
   }
@@ -1144,6 +1148,60 @@ html[data-large="true"] {
 }
 .study-strip a.due b {
   color: var(--accent-deep);
+}
+.crumbs {
+  margin: 0 0 12px;
+}
+.crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.crumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.crumbs li + li::before {
+  content: "›";
+  color: var(--muted);
+}
+.crumbs a {
+  text-decoration: none;
+}
+.page-back {
+  margin: 0 0 16px;
+}
+.page-next {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.header-settings {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: var(--micro);
+  font-weight: 600;
+}
+.ask-wait progress {
+  display: block;
+  width: min(100%, 420px);
+  height: 8px;
+  margin: 8px 0;
+}
+.practice-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+.inside-session {
+  margin-top: 24px;
 }
 .audio-player {
   margin: 16px 0;
@@ -2402,7 +2460,10 @@ mark.hl.has-note {
     border-bottom: 0;
   }
   .hero-art img {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 2 / 1;
+    max-height: 160px;
+    width: 100%;
+    object-fit: cover;
   }
   .hero-copy .page-kicker {
     margin-bottom: 10px;

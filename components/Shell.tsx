@@ -1,17 +1,69 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
+import { Suspense, useMemo } from "react";
 import { useStudy } from "./Provider";
 import { labels, tr, type Lang } from "@/lib/i18n";
 import { SWATCH, THEMES, THEME_NAME } from "@/lib/theme";
 import { useTheme } from "@/lib/use-theme";
-import { useMemo } from "react";
 import { questionIndex } from "@/lib/outline";
 import { dueQuestions } from "@/lib/learning";
 import { knowSummary, sectionSignals } from "@/lib/knowledge";
+import { DOORS, backFor, crumbsFor, doorFor, nextFor } from "@/lib/nav";
+function useNavContext() {
+  const path = usePathname() || "/";
+  const params = useSearchParams();
+  const section = Number(params.get("n")) || undefined;
+  return { path, section };
+}
+
+function PageChrome() {
+  const { lang } = useStudy();
+  const { path, section } = useNavContext();
+  const crumbs = crumbsFor(path, { section });
+  const back = backFor(path, { section });
+  return (
+    <>
+      {crumbs.length > 0 && (
+        <nav className="crumbs" aria-label={tr(lang, "ตำแหน่งในสมุด", "Where you are", "你在这里")}>
+          <ol>
+            {crumbs.map((crumb, index) => (
+              <li key={`${crumb.href}-${index}`}>
+                {index === crumbs.length - 1 ? (
+                  <span>{crumb.label[lang]}</span>
+                ) : (
+                  <Link href={crumb.href}>{crumb.label[lang]}</Link>
+                )}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+      {back && (
+        <p className="page-back">
+          <Link href={back.href}>{back.label[lang]}</Link>
+        </p>
+      )}
+    </>
+  );
+}
+
+function PageNext() {
+  const { lang } = useStudy();
+  const { path, section } = useNavContext();
+  const next = nextFor(path, { section });
+  if (!next) return null;
+  return (
+    <p className="page-next">
+      <Link href={next.href}>{next.label[lang]}</Link>
+    </p>
+  );
+}
+
 export function Shell({ children }: { children: React.ReactNode }) {
   const { lang, setLang, progress, storageError, ready, online, marks, annotations, read, large, setLarge } = useStudy();
-  const path = usePathname();
+  const path = usePathname() || "/";
+  const door = doorFor(path);
   const theme = useTheme();
   // What she knows, not points: counted from her own reading, marks and answers.
   const known = useMemo(() => {
@@ -21,21 +73,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
       due: dueQuestions(questionIndex, progress, now).length,
     };
   }, [progress, marks, annotations, read]);
-  // Five destinations; every other page belongs to one of them for the active state.
-  const nav = [
-    ["/learn/", labels.learn, ["/", "/learn/"]],
-    ["/read/", labels.read, ["/read/", "/section/", "/notebook/"]],
-    ["/practice/", labels.practice, ["/practice/", "/review/", "/exam/", "/drills/", "/flashcards/", "/games/", "/cram/"]],
-    ["/notes/", labels.notes, ["/notes/"]],
-    ["/library/", labels.library, ["/library/", "/amend/", "/news/", "/research/", "/bible/", "/rights/", "/cheatsheet/", "/topics/", "/glossary/", "/sources/", "/settings/", "/polls/", "/memory/", "/civic/"]],
-  ] as const;
   return (
     <>
       <a className="skip" href="#content">
         {tr(lang, "ข้ามไปเนื้อหา", "Skip to content", "跳转到正文")}
       </a>
       <header className="header">
-        <Link href="/learn/" className="brand">
+        <Link href="/" className="brand">
           <span className="brand-mark" aria-hidden="true">
             ๒๕๖๐
           </span>
@@ -81,6 +125,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </button>
           ))}
         </div>
+        <Link className="header-settings" href="/settings/">
+          {labels.settings[lang]}
+        </Link>
         <div className="languages" aria-label={tr(lang, "ภาษา", "Language", "语言")}>
           {(["th", "en", "zh"] as Lang[]).map((l) => (
             <button
@@ -99,14 +146,14 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <div className="app-grid">
         <aside className="sidebar">
           <nav aria-label={tr(lang, "เมนูหลัก", "Main navigation", "主导航")}>
-            {nav.map(([href, title, match]) => (
+            {DOORS.map((item) => (
               <Link
-                aria-current={(match as readonly string[]).includes(path) ? "page" : undefined}
-                className={(match as readonly string[]).includes(path) ? "nav-active" : ""}
-                key={href}
-                href={href}
+                aria-current={door === item.id ? "page" : undefined}
+                className={door === item.id ? "nav-active" : ""}
+                key={item.id}
+                href={item.href}
               >
-                {title[lang]}
+                {item.label[lang]}
               </Link>
             ))}
           </nav>
@@ -131,9 +178,6 @@ export function Shell({ children }: { children: React.ReactNode }) {
               )}
             </p>
           </div>
-          <Link className="device-link" href="/settings/">
-            {labels.settings[lang]} →
-          </Link>
         </aside>
         <main id="content">
           {!online && (
@@ -147,18 +191,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </p>
           )}
           {ready && (
-            <nav className="study-strip micro" aria-label={tr(lang, "สิ่งที่คุณรู้แล้ว", "What you know", "你已掌握的")}>
+            <nav className="study-strip micro" aria-label={labels.notes[lang]}>
               <Link href="/notes/">
-                <b>{known.met}/279</b> {tr(lang, "มาตราที่รู้จักแล้ว", "sections met", "条已接触")}
-              </Link>
-              <Link href="/notes/">
-                <b>{known.marked}</b> {tr(lang, "มาตราที่จดไว้", "marked", "条已标记")}
-              </Link>
-              <Link href="/notes/">
-                <b>{known.known}</b> {tr(lang, "มาตราที่มั่นใจ", "confident", "条已掌握")}
-              </Link>
-              <Link href="/review/" className={known.due ? "due" : undefined}>
-                <b>{known.due}</b> {tr(lang, "ข้อรอทบทวน", "due for review", "题待复习")}
+                {labels.notes[lang]}
+                {" · "}
+                <b>{known.met}/279</b> {tr(lang, "มาตรา", "sections", "条")}
               </Link>
             </nav>
           )}
@@ -172,7 +209,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
               )}
             </p>
           )}
+          <Suspense fallback={null}>
+            <PageChrome />
+          </Suspense>
           {children}
+          <Suspense fallback={null}>
+            <PageNext />
+          </Suspense>
         </main>
       </div>
       <footer>

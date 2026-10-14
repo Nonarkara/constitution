@@ -5,6 +5,16 @@ export function sessionTotals(correct: number, queueLength: number) {
   return { correct, total: queueLength };
 }
 
+/**
+ * The denominator stays fixed for the pass in progress.
+ * A retry is its own pass: 5/5 does not become 6/10.
+ */
+export function sessionCounter(index: number, planned: number, retryTotal: number) {
+  const inRetry = retryTotal > 0 && index >= planned;
+  if (!inRetry) return { n: index + 1, total: planned };
+  return { n: index - planned + 1, total: retryTotal };
+}
+
 export function sessionSummary(correct: number, total: number, lang: Lang): string {
   if (correct === total) {
     return tr(
