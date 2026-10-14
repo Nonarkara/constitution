@@ -12,16 +12,27 @@ import { tr, sectionLabel, chapterPickerLabel } from "@/lib/i18n";
 import { buildPracticeQueue } from "@/lib/adaptive";
 import { buildMixedSession } from "@/lib/mixed";
 import { makeDrill } from "@/lib/drills";
+import dynamic from "next/dynamic";
 import { TeachingSteps } from "./TeachingSteps";
 import { ExplainBack } from "./LearningCoach";
 import { StudyArt } from "./StudyArt";
 import { useHidePageNext } from "./Shell";
+import { PracticeTabs } from "./PracticeTabs";
+
+const PokklongPractice = dynamic(() =>
+  import("./PokklongPractice").then((mod) => mod.PokklongPractice),
+);
 
 type Question = (typeof questions)[number];
 
 
 
-export function PracticeArena() {
+export function PracticeArena({ guessFirst = false }: { guessFirst?: boolean } = {}) {
+  if (guessFirst) return <PokklongPractice />;
+  return <ConstitutionArena />;
+}
+
+function ConstitutionArena() {
   const { lang, progress, save, annotations, ready } = useStudy();
   const autostarted = useRef(false);
 
@@ -150,6 +161,7 @@ export function PracticeArena() {
 
       {!isActive ? (
         <>
+          <PracticeTabs />
           {sessionNotice && <p role="status">{sessionNotice}</p>}
           <header className="practice-header">
             <div className="intro-copy">

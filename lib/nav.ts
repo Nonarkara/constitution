@@ -40,6 +40,7 @@ export const APP_ROUTES = [
   "/glossary/",
   "/topics/",
   "/practice/",
+  "/practice/pokklong/",
   "/review/",
   "/exam/",
   "/drills/",
@@ -60,7 +61,7 @@ export const APP_ROUTES = [
 ];
 
 const LEARN = new Set(["/bible/", "/read/", "/section/", "/notebook/", "/cram/", "/glossary/", "/topics/"]);
-const PRACTISE = new Set(["/practice/", "/review/", "/exam/", "/drills/", "/flashcards/", "/games/", "/cheatsheet/"]);
+const PRACTISE = new Set(["/practice/", "/practice/pokklong/", "/review/", "/exam/", "/drills/", "/flashcards/", "/games/", "/cheatsheet/"]);
 const EXPLORE = new Set(["/library/", "/rights/", "/polls/", "/civic/", "/amend/", "/news/", "/memory/", "/sources/", "/research/"]);
 
 const PAGE: Record<string, Text> = {
@@ -69,6 +70,7 @@ const PAGE: Record<string, Text> = {
   "/cram/": text("สรุปก่อนสอบ", "Night-before sheet", "考前一页"),
   "/glossary/": text("อภิธาน", "Glossary", "术语"),
   "/topics/": text("ดัชนีเรื่อง", "Subject index", "主题索引"),
+  "/practice/pokklong/": text("ปกครอง", "Pokklong", "治理"),
   "/review/": text("ทบทวน", "Review", "复习"),
   "/exam/": text("สอบจำลอง", "Mock exam", "模拟考试"),
   "/drills/": text("แบบฝึกตัวเลข", "Drills", "数字练习"),
@@ -231,6 +233,7 @@ export function nextFor(path: string, ctx: NavContext = {}): NavLink | null {
     "/glossary/": { href: "/read/", label: nextLabel("อ่านตัวบท", "read the text", "阅读条文") },
     "/topics/": { href: "/read/", label: nextLabel("อ่านตัวบท", "read the text", "阅读条文") },
     "/practice/": { href: "/exam/", label: nextLabel("สอบจำลอง", "the mock exam", "模拟考试") },
+    "/practice/pokklong/": { href: "/practice/", label: nextLabel("รอบฝึก", "the practice session", "练习") },
     "/review/": { href: "/bible/", label: nextLabel("เรียนส่วนที่ยังไม่แน่น", "learn the weak part", "学习还不熟的部分") },
     "/exam/": { href: "/practice/?session=mixed", label: nextLabel("ฝึกข้อที่พลาด", "practise what you missed", "练习错过的题") },
     "/drills/": { href: "/practice/", label: nextLabel("รอบฝึก", "the practice session", "练习") },

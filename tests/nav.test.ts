@@ -32,7 +32,7 @@ for (const route of APP_ROUTES) {
     expected[route] = "learn";
   }
 }
-for (const route of ["/practice/", "/review/", "/exam/", "/drills/", "/flashcards/", "/games/", "/cheatsheet/"]) {
+for (const route of ["/practice/", "/practice/pokklong/", "/review/", "/exam/", "/drills/", "/flashcards/", "/games/", "/cheatsheet/"]) {
   expected[route] = "practise";
 }
 for (const route of ["/library/", "/rights/", "/polls/", "/civic/", "/amend/", "/news/", "/memory/", "/sources/", "/research/"]) {
@@ -50,6 +50,7 @@ test("every page route maps to one door, and the active door matches", () => {
   assert.deepEqual(DOORS.map((door) => door.id), ["learn", "practise", "explore"]);
   assert.equal(doorFor("/bible/rights/"), "learn");
   assert.equal(doorFor("/practice/"), "practise");
+  assert.equal(doorFor("/practice/pokklong/"), "practise");
   assert.equal(doorFor("/news/"), "explore");
   assert.equal(doorFor("/"), null);
 });

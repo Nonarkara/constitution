@@ -1,0 +1,133 @@
+import type { Lang, Text } from "./i18n.ts";
+import { fisherYates } from "./shuffle.ts";
+
+/** Separate from constitution-progress so Pokklong answers never enter constitution stats. */
+export const POKKLONG_KEY = "pokklong-progress";
+export const CITATION_PENDING = "citation to be confirmed";
+export const STEP_COUNT = 12;
+
+export type PokklongSource = {
+  act: Text;
+  section: string;
+  verified: boolean;
+  note?: string;
+};
+
+export type PokklongQuestion = {
+  id: string;
+  step: number;
+  step_name: Text;
+  prompt: Text;
+  options: Text[];
+  answer: number;
+  why: Text;
+  logic_so_far: Text;
+  mnemonic: Text | null;
+  source: PokklongSource;
+};
+
+export type PokklongStep = {
+  name: Text;
+  logic_so_far: Text;
+};
+
+export type PokklongBank = {
+  meta: {
+    title: Text;
+    version: string;
+    languages: string[];
+    mode: string;
+    credit: string;
+    steps: Record<string, PokklongStep>;
+  };
+  questions: PokklongQuestion[];
+};
+
+export type PokklongProgress = {
+  answers: Record<string, boolean>;
+};
+
+export function emptyPokklong(): PokklongProgress {
+  return { answers: {} };
+}
+
+/** Missing or blank text falls back to Thai, the source language. */
+export function textOf(value: Text | null | undefined, lang: Lang): string {
+  if (!value) return "";
+  const chosen = value[lang];
+  if (typeof chosen === "string" && chosen.trim()) return chosen;
+  return typeof value.th === "string" ? value.th : "";
+}
+
+export function questionReady(question: PokklongQuestion, lang: Lang): boolean {
+  return (
+    textOf(question.prompt, lang).length > 0 &&
+    question.options.length === 4 &&
+    question.options.every((option) => textOf(option, lang).length > 0)
+  );
+}
+
+/** Steps in order. Questions are shuffled inside a step, never across steps. */
+export function buildPokklongQueue(
+  questions: readonly PokklongQuestion[],
+  startStep: number,
+  random: () => number = Math.random,
+): PokklongQuestion[] {
+  const queue: PokklongQuestion[] = [];
+  for (let step = startStep; step <= STEP_COUNT; step++) {
+    const group = questions.filter((question) => question.step === step && questionReady(question, "th"));
+    queue.push(...fisherYates(group, random));
+  }
+  return queue;
+}
+
+export function stepHeader(lang: Lang, step: number, name: string): string {
+  if (lang === "zh") return `第${step}步，共${STEP_COUNT}步：${name}`;
+  if (lang === "en") return `Step ${step} of ${STEP_COUNT}: ${name}`;
+  return `ขั้นที่ ${step} จาก ${STEP_COUNT}: ${name}`;
+}
+
+export function parsePokklong(input: unknown): PokklongProgress {
+  const answers: Record<string, boolean> = {};
+  if (!input || typeof input !== "object" || Array.isArray(input)) return { answers };
+  const raw = (input as { answers?: unknown }).answers;
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) return { answers };
+  for (const [id, value] of Object.entries(raw as Record<string, unknown>)) {
+    if (id.startsWith("PK-") && typeof value === "boolean") answers[id] = value;
+  }
+  return { answers };
+}
+
+export function recordPokklong(progress: PokklongProgress, id: string, correct: boolean): PokklongProgress {
+  return { answers: { ...progress.answers, [id]: correct } };
+}
+
+export function stepAccuracy(
+  questions: readonly Pick<PokklongQuestion, "id" | "step">[],
+  progress: PokklongProgress,
+  step: number,
+) {
+  const ids = questions.filter((question) => question.step === step).map((question) => question.id);
+  const answered = ids.filter((id) => Object.hasOwn(progress.answers, id));
+  const correct = answered.filter((id) => progress.answers[id]).length;
+  return { correct, answered: answered.length, total: ids.length };
+}
+
+export function loadPokklongProgress(): PokklongProgress {
+  if (typeof localStorage === "undefined") return emptyPokklong();
+  try {
+    return parsePokklong(JSON.parse(localStorage.getItem(POKKLONG_KEY) ?? "null"));
+  } catch {
+    return emptyPokklong();
+  }
+}
+
+export function savePokklongProgress(progress: PokklongProgress): boolean {
+  if (typeof localStorage === "undefined") return false;
+  try {
+    localStorage.setItem(POKKLONG_KEY, JSON.stringify(progress));
+    return true;
+  } catch {
+    return false;
+  }
+}

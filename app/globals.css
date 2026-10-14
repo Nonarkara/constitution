@@ -2756,9 +2756,13 @@ mark.hl.has-note {
   transition: all 120ms ease;
 }
 .subnav-pill:hover,
-.subnav-pill:focus-visible {
+.subnav-pill:focus-visible,
+.subnav-pill[aria-current="page"] {
   background: var(--paper);
   border-color: var(--ink);
+}
+.subnav-pill[aria-current="page"] {
+  font-weight: 600;
 }
 
 /* Adaptive Diagnostic Box */
@@ -3725,4 +3729,92 @@ footer { flex-wrap:wrap; gap:16px; }
     min-width: 36px;
     padding: 4px 8px;
   }
+}
+
+.pokklong-session {
+  overflow-wrap: anywhere;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.pokklong-session [hidden] {
+  display: none !important;
+}
+.pokklong-session .primary,
+.pokklong-session .btn-next-q {
+  min-width: 0;
+}
+button.guess-choice {
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  font-weight: 400;
+  font-size: var(--body);
+  gap: 14px;
+  padding: 14px 16px;
+  white-space: normal;
+  height: auto;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+button.guess-choice .choice-text {
+  flex: 1;
+  min-width: 0;
+}
+button.guess-choice:disabled {
+  opacity: 1;
+  cursor: default;
+}
+.guess-mark {
+  font-size: var(--micro);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.pokklong-intro {
+  background: var(--wash);
+  border-left: 4px solid var(--ink);
+  padding: 16px;
+  margin: 16px 0 24px;
+}
+.pokklong-credit {
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  margin-top: 28px;
+  padding-top: 16px;
+}
+.pokklong-unverified {
+  color: var(--muted);
+}
+.pokklong-steps {
+  list-style: none;
+  width: 100%;
+  text-align: left;
+  margin: 12px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+.pokklong-steps li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.pokklong-steps button {
+  width: 100%;
+  min-width: 0;
+  justify-content: space-between;
+  text-align: left;
+  font-weight: 400;
+  border: 0;
+  background: transparent;
+  gap: 12px;
+}
+.pokklong-session select {
+  max-width: 100%;
+}
+.pokklong-session .quiz-top-bar p {
+  min-width: 0;
+  margin: 0;
+}
+.pokklong-session .quiz-top-bar {
+  align-items: flex-start;
 }
