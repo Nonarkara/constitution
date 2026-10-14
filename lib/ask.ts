@@ -332,9 +332,128 @@ function section36Note(lang: Lang): string {
   return tr(
     lang,
     "มาตรา 36 ห้ามตรวจ กัก หรือเปิดเผยข้อมูลที่สื่อสารถึงกัน เว้นแต่มีคำสั่งหรือหมายของศาล หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ การไม่มีหมายศาลอย่างเดียวจึงยังไม่จบคำถาม",
-    "Section 36 bars censorship, detention or disclosure of a communication except by a court order or warrant, or where there are other grounds as provided by law. No court order, by itself, does not settle the question.",
+    "Section 36 bars censorship, detention or disclosure of a communication except by a court order or warrant, or where there are other grounds as provided by law. The lack of a court order does not, by itself, settle the question.",
     "第36条禁止检查、扣留或披露人们之间的通信，除非有法院的命令或令状，或者另有法律规定的其他理由。仅没有法院命令，并不能单独决定这个问题。",
   );
+}
+
+function section33Note(lang: Lang): string {
+  return tr(
+    lang,
+    "มาตรา 33 ห้ามเข้าหรือค้นเคหสถานโดยปราศจากความยินยอม เว้นแต่มีคำสั่งหรือหมายของศาล หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ การไม่ยินยอมอย่างเดียวจึงยังไม่จบคำถาม",
+    "Section 33 bars entry into a dwelling, or a search of it, without the possessor's consent, except by a court order or warrant, or where there are other grounds as provided by law. The lack of consent does not, by itself, settle the question.",
+    "第33条禁止未经占有人同意进入或搜查住宅，除非有法院的命令或令状，或者另有法律规定的其他理由。仅没有同意，并不能单独决定这个问题。",
+  );
+}
+
+function whatToDo(lang: Lang): string {
+  return tr(
+    lang,
+    "ขอให้แสดงฐานทางกฎหมายที่ใช้ บันทึกข้อที่อ้าง และติดต่อทนายความ",
+    "Ask them to name the legal basis they rely on, write down what they cite, and contact a lawyer.",
+    "请对方说明所依据的法律，把引用的内容记下来，并联系律师。",
+  );
+}
+
+export type EnforcementTopic = "communication" | "dwelling" | "both";
+
+/** A rights question where a wrong answer can hurt someone in an encounter with officials. */
+export function enforcementTopic(question: string, sections: number[]): EnforcementTopic | null {
+  const on36 = sections.includes(36);
+  const on33 = sections.includes(33);
+  if (on36 && on33) return "both";
+  if (on36) return "communication";
+  if (on33) return "dwelling";
+  const q = question;
+  const official = /ตำรวจ|police|警察|เจ้าหน้าที่|official|หมาย|warrant|court order|法院|ค้น|search|搜查|ตรวจ/i.test(q);
+  const communication = /line|ข้อความ|แชต|แชท|สื่อสาร|message|e-?mail|อีเมล|โทรศัพท์|phone|通信|聊天|消息/i.test(q);
+  const dwelling = /ค้นบ้าน|ค้นเคห|เคหสถาน|search your home|dwelling|住宅|搜查家/i.test(q);
+  if (communication && official) return "communication";
+  if (dwelling && official) return "dwelling";
+  return null;
+}
+
+/** The answer itself. The model does not write this. */
+export function rightsTemplate(lang: Lang, topic: EnforcementTopic): string {
+  const notes = [
+    topic === "dwelling" ? "" : section36Note(lang),
+    topic === "communication" ? "" : section33Note(lang),
+    whatToDo(lang),
+  ].filter(Boolean);
+  return notes.join("\n\n");
+}
+
+export const RIGHTS_CONTEXT_MARK = "\n<<<context>>>\n";
+
+export function splitRightsAnswer(text: string): { lead: string; context: string } {
+  const [lead, context = ""] = text.split(RIGHTS_CONTEXT_MARK);
+  return { lead: lead.trim(), context: context.trim() };
+}
+
+/** 传票 is a subpoena. In a search answer the model means a warrant. */
+export function normalizeWarrantTerms(text: string, lang: Lang): string {
+  if (lang !== "zh") return text;
+  return text.replace(/法院传票/g, "法院搜查令").replace(/传票/g, "搜查令");
+}
+
+function statesOpenException(value: string): boolean {
+  return /หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ|ต้องมี(?:คำสั่ง|หมาย)(?:ศาล)?หรือกฎหมายอื่น|other grounds as provided by law|another ground in law|names a ground in law|must expressly permit|法律规定的其他|其他理由|或其他法律/.test(value);
+}
+
+function statesPracticalStep(value: string): boolean {
+  return /ขอให้แสดงฐาน|บันทึกข้อที่อ้าง|ติดต่อทนาย|ask them to name the legal basis|write down what they cite|contact a lawyer|说明所依据的法律|记下来|联系律师/.test(value);
+}
+
+/** The sentence tells the reader the exception does not apply. */
+function rebutsOtherGrounds(value: string): boolean {
+  if (/ไม่มีการอ้างอิงถึงกฎหมาย|จึงไม่สามารถใช้เป็นเหตุผล|ไม่มีกฎหมายใดที่ให้|no law (?:grants|allows|permits|provides)|no such (?:law|provision|statute)/i.test(value)) return true;
+  if (/หากไม่มีกฎหมายอื่น|ถ้าไม่มีกฎหมาย|如果没有.{0,40}或其他法律规定/.test(value)) return true;
+  if (/ไม่มี\S{0,15}(?:กฎหมาย|อำนาจ|สิทธิ์)/.test(value)) return true;
+  if (/(?:没有|无)\S{0,8}(?:权力|权限|授权)/.test(value)) return true;
+  return false;
+}
+
+/** The sentence concludes that officials lack power. */
+function claimsNoAuthority(value: string): boolean {
+  return /no (?:legal )?(?:power|authority)|lack(?:s|ing)? (?:the |their |legal )?(?:power|authority)|(?:没有|无)\S{0,8}(?:权力|权限|授权)|ไม่มีอำนาจ|无权|ไม่มีสิทธิ์/i.test(value);
+}
+
+function advisesRefusal(value: string): boolean {
+  return unsafeRefusal(value);
+}
+
+/** ฎีกา 466/2541 is about section 31 detention, not communications. */
+function citesUnrelatedRuling(value: string, topic: EnforcementTopic): boolean {
+  if (/466\s*\/\s*2541/.test(value)) return true;
+  const cited = /ฎีกา|判例|supreme court|คำพิพากษา|\d{2,4}\s*\/\s*\d{4}/i.test(value);
+  if (!cited) return false;
+  const about36 = /มาตรา\s*36|section\s*36|第\s*36\s*条|สื่อสาร|communication|通信|ข้อความ|聊天/i.test(value);
+  const about33 = /มาตรา\s*33|section\s*33|第\s*33\s*条|เคหสถาน|dwelling|住宅/i.test(value);
+  if (topic === "communication") return !about36;
+  if (topic === "dwelling") return !about33;
+  return !(about36 || about33);
+}
+
+/**
+ * Keep a model sentence only when its meaning is a still-open exception or the
+ * practical step. Refusal, lack of power, a rebuttal of “other grounds”, an
+ * unrelated ruling, or anything uncertain is dropped.
+ */
+export function isSafeRightsContext(sentence: string, topic: EnforcementTopic): boolean {
+  const value = outsideQuotes(sentence).replace(/\s+/g, " ").trim();
+  if (!value || isQuoteFragment(sentence) || isBrokenStump(value)) return false;
+  if (advisesRefusal(value) || claimsNoAuthority(value) || rebutsOtherGrounds(value) || citesUnrelatedRuling(value, topic)) return false;
+  return statesOpenException(value) || statesPracticalStep(value);
+}
+
+export function showRuling(
+  item: { caseId?: string; year?: string; headnote?: string },
+  topic: EnforcementTopic | null,
+): boolean {
+  if (!topic) return true;
+  const blob = `${item.caseId ?? ""}/${item.year ?? ""} ${item.headnote ?? ""}`.trim();
+  if (!item.headnote?.trim()) return false;
+  return !citesUnrelatedRuling(blob, topic);
 }
 
 /** If the answer drops section 36's statutory exception, put that exception back. */
@@ -491,12 +610,7 @@ export function citeAsSection(answer: string, lang: Lang): string {
     .replace(/\barticle\b/gi, (word) => titled(word, "Section"));
 }
 
-export function shapeAskAnswer(
-  answer: string,
-  lang: Lang,
-  sections: number[],
-  translations: string[] = [],
-): string {
+function legacyShape(answer: string, lang: Lang, sections: number[], translations: string[]): string {
   const stripped = stripFabricatedSources(answer);
   const thaiBefore = lang !== "th" && /[\u0E00-\u0E7F]/.test(stripped);
   const refused = dropUnsafeRefusals(stripped);
@@ -508,6 +622,47 @@ export function shapeAskAnswer(
   return keepStatutoryExceptions(cleaned, lang, sections, dropped);
 }
 
+/** Model prose that may sit under the template. Uncertain sentences are omitted. */
+export function rightsContext(answer: string, lang: Lang, topic: EnforcementTopic, translations: string[] = []): string {
+  const prepared = normalizeWarrantTerms(
+    dropBrokenStumps(stripDanglingColons(dropEmptyQuotes(quotesInAnswerLanguage(citeAsSection(stripFabricatedSources(answer), lang), lang, translations)))),
+    lang,
+  );
+  const template = rightsTemplate(lang, topic);
+  const kept = splitSentences(prepared).filter((sentence) => {
+    if (template.includes(sentence.trim())) return false;
+    return isSafeRightsContext(sentence, topic);
+  });
+  return kept.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+}
+
+export function shapeAskAnswer(
+  answer: string,
+  lang: Lang,
+  sections: number[],
+  translations: string[] = [],
+  question = "",
+): string {
+  const topic = enforcementTopic(question, sections);
+  if (!topic) return legacyShape(answer, lang, sections, translations);
+  const lead = rightsTemplate(lang, topic);
+  const context = rightsContext(answer, lang, topic, translations);
+  return context ? `${lead}${RIGHTS_CONTEXT_MARK}${context}` : lead;
+}
+
+function excerptBody(lang: Lang, excerpts: AskExcerpt[]): string {
+  return excerpts
+    .map((excerpt) =>
+      tr(
+        lang,
+        `มาตรา ${excerpt.number}\n${excerpt.text}`,
+        `Section ${excerpt.number}\n${excerpt.text}`,
+        `第${excerpt.number}条\n${excerpt.text}`,
+      ),
+    )
+    .join("\n\n");
+}
+
 /** Shown when a retry still comes back in the wrong language. No confidence badge. */
 export function wrongLanguageResult(lang: Lang, excerpts: AskExcerpt[]) {
   const lead = tr(
@@ -516,51 +671,49 @@ export function wrongLanguageResult(lang: Lang, excerpts: AskExcerpt[]) {
     "The answer came back in a different language from this page, so it is not shown.",
     "回答所用的语言与当前页面不一致，因此不显示那段文字。",
   );
-  const body = excerpts
-    .map((excerpt) =>
-      tr(
-        lang,
-        `มาตรา ${excerpt.number}\n${excerpt.text}`,
-        `Section ${excerpt.number}\n${excerpt.text}`,
-        `第${excerpt.number}条\n${excerpt.text}`,
-      ),
-    )
-    .join("\n\n");
+  const sections = excerpts.map((excerpt) => excerpt.number);
+  const topic = enforcementTopic("", sections);
+  const body = excerptBody(lang, excerpts);
+  const answer = topic
+    ? [rightsTemplate(lang, topic), lead, body].filter(Boolean).join("\n\n")
+    : keepStatutoryExceptions([lead, body].filter(Boolean).join("\n\n"), lang, sections, true);
   return {
-    answer: keepStatutoryExceptions(
-      [lead, body].filter(Boolean).join("\n\n"),
-      lang,
-      excerpts.map((excerpt) => excerpt.number),
-      true,
-    ),
+    answer,
     confidence: null,
     grounded: false,
     sources: [] as AskSource[],
+    shaped: true as const,
   };
 }
 
-export function notebookFallback(lang: Lang, excerpts: AskExcerpt[]) {
-  const lead = tr(
+export function fallbackLead(lang: Lang, reason: "timeout" | "early"): string {
+  if (reason === "early") {
+    return tr(
+      lang,
+      "Non-Laws ตอบตอนนี้ไม่ได้ ด้านล่างคือตัวบทที่ใช้ถาม อ่านทุกข้อยกเว้น ไม่ใช่แค่เงื่อนไขเดียว",
+      "Non-Laws could not answer right now. Below is the section you were reading. Read every exception, not only one condition.",
+      "Non-Laws 现在无法回答。下面是你正在读的条文。请读每一项例外，而不只是一个条件。",
+    );
+  }
+  return tr(
     lang,
     "Non-Laws ยังไม่ส่งคำตอบกลับในเวลาที่กำหนด ด้านล่างคือตัวบทที่ใช้ถาม อ่านทุกข้อยกเว้น ไม่ใช่แค่เงื่อนไขเดียว",
     "Non-Laws did not answer in time. Below is the section you were reading. Read every exception, not only one condition.",
     "Non-Laws 没有在时限内返回。下面是你正在读的条文。请读每一项例外，而不只是一个条件。",
   );
-  const body = excerpts
-    .map((excerpt) =>
-      tr(
-        lang,
-        `มาตรา ${excerpt.number}\n${excerpt.text}`,
-        `Section ${excerpt.number}\n${excerpt.text}`,
-        `第${excerpt.number}条\n${excerpt.text}`,
-      ),
-    )
-    .join("\n\n");
+}
+
+export function notebookFallback(lang: Lang, excerpts: AskExcerpt[], reason: "timeout" | "early" = "timeout") {
+  const sections = excerpts.map((excerpt) => excerpt.number);
+  const topic = enforcementTopic("", sections);
+  const note = topic ? rightsTemplate(lang, topic) : "";
+  const lead = fallbackLead(lang, reason);
   return {
-    answer: [lead, body].filter(Boolean).join("\n\n"),
+    answer: (topic ? [note, lead] : [lead]).concat(excerptBody(lang, excerpts)).filter(Boolean).join("\n\n"),
     confidence: "MIXED" as const,
     grounded: false,
     sources: [] as AskSource[],
+    shaped: true as const,
   };
 }
 

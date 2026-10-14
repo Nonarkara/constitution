@@ -14,6 +14,7 @@ import {
   confidenceLabel,
   consentCopy,
   deepLink,
+  enforcementTopic,
   friendlyAskError,
   groundedLabel,
   localConstitution,
@@ -27,6 +28,8 @@ import {
   readSources,
   shapeAskAnswer,
   showGroundedMark,
+  showRuling,
+  splitRightsAnswer,
   studyDisclaimer,
   wrongLanguageResult,
   type AskExcerpt,
@@ -70,12 +73,23 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
   const busy = state.kind === "waiting";
   const fail = (message: string, link = true) => setState({ kind: "error", message, link });
   const excerpts: AskExcerpt[] = sections.map((n) => ({ number: n, text: sectionBody(n, lang) }));
-  const settle = (result: Answer, attempts: number, startedAt: number) => {
+  const settle = (result: Answer & { shaped?: boolean }, attempts: number, startedAt: number) => {
     const translations = excerpts.map((excerpt) => excerpt.text);
-    const shaped = shapeAskAnswer(result.answer ?? "", lang, sections, translations);
+    const topic = enforcementTopic(question, sections);
+    const answer = result.shaped
+      ? result.answer
+      : shapeAskAnswer(result.answer ?? "", lang, sections, translations, question);
     setState({
       kind: "done",
-      result: { ...result, answer: shaped },
+      result: {
+        ...result,
+        answer,
+        ...(topic
+          ? result.confidence == null && result.shaped
+            ? { grounded: false }
+            : { confidence: "MIXED" as const, grounded: false }
+          : {}),
+      },
       attempts,
       elapsed: Date.now() - startedAt,
     });
@@ -86,26 +100,28 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
     const startedAt = Date.now();
     if (!navigator.onLine) return fail(friendlyAskError("offline", lang));
     const tries = ASK_RETRIES + 1;
+    let sawTimeout = false;
     for (let attempt = 0; attempt < tries; attempt++) {
       if (run.current !== mine) return;
       setState({ kind: "waiting", position: 0, attempt, started: startedAt });
       const outcome = await runAsk(mine, attempt, startedAt);
       if (run.current !== mine || outcome === "done" || outcome === "stopped") return;
+      if (outcome === "timeout") sawTimeout = true;
       if (outcome === "language" && attempt + 1 >= tries) {
         settle(wrongLanguageResult(lang, excerpts), tries, startedAt);
         return;
       }
     }
     if (run.current !== mine) return;
-    if (excerpts.length) return settle(notebookFallback(lang, excerpts), tries, startedAt);
-    fail(friendlyAskError("timeout", lang));
+    if (excerpts.length) return settle(notebookFallback(lang, excerpts, sawTimeout ? "timeout" : "early"), tries, startedAt);
+    fail(friendlyAskError(sawTimeout ? "timeout" : "lost", lang));
   }
 
   async function runAsk(
     mine: number,
     attempt: number,
     startedAt: number,
-  ): Promise<"done" | "retry" | "stopped" | "language"> {
+  ): Promise<"done" | "retry" | "timeout" | "stopped" | "language"> {
     const deadline = AbortSignal.timeout(ATTEMPT_BUDGET_MS);
     const pause = (ms: number) =>
       new Promise<void>((resolve, reject) => {
@@ -132,7 +148,7 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
         signal: deadline,
       });
     } catch {
-      return "retry";
+      return deadline.aborted ? "timeout" : "retry";
     }
     const body = await res.json().catch(() => ({}));
     const outcome = classify(res.status, body);
@@ -144,10 +160,10 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
     const started = Date.now();
     try {
       for (const delay of pollSteps()) {
-        if (Date.now() - started >= ATTEMPT_BUDGET_MS) return "retry";
+        if (Date.now() - started >= ATTEMPT_BUDGET_MS) return "timeout";
         await pause(delay);
         if (run.current !== mine) return "stopped";
-        if (deadline.aborted || Date.now() - started >= ATTEMPT_BUDGET_MS) return "retry";
+        if (deadline.aborted || Date.now() - started >= ATTEMPT_BUDGET_MS) return "timeout";
         const poll = await fetch(`${ASK_ORIGIN}/api/ask/${encodeURIComponent(body.id)}`, {
           signal: deadline,
         });
@@ -163,9 +179,10 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
         setState({ kind: "waiting", position: Number(job.position) || 0, attempt, started: startedAt });
       }
     } catch {
-      return run.current === mine ? "retry" : "stopped";
+      if (run.current !== mine) return "stopped";
+      return deadline.aborted ? "timeout" : "retry";
     }
-    return "retry";
+    return "timeout";
   }
 
   const open = (
@@ -185,6 +202,8 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
   );
   const presented =
     state.kind === "done" ? presentAnswer(state.result.answer, readSources(state.result)) : null;
+  const rightsParts = presented ? splitRightsAnswer(presented.text) : null;
+  const topic = enforcementTopic(question, sections);
   const confidenceLevel = state.kind === "done" ? readConfidence(state.result) : null;
   const confidenceText = confidenceLevel
     ? confidenceLabel(confidenceLevel, lang)
@@ -290,7 +309,15 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
               )}
             </p>
           )}
-          <p className="ask-text">{presented?.text}</p>
+          <p className="ask-text">{rightsParts?.lead}</p>
+          {rightsParts?.context && (
+            <div className="ask-context">
+              <p className="micro">
+                {tr(lang, "จากคำค้น แยกไว้ต่างหาก", "From the search, set apart", "检索补充，另行列出")}
+              </p>
+              <p className="micro">{rightsParts.context}</p>
+            </div>
+          )}
           {confidenceText && <p className="micro">{confidenceText}</p>}
           {(presented?.sources.length ?? 0) > 0 && (
             <ol className="ask-sources">
@@ -326,7 +353,7 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
               {s.text && <p lang="th">{s.text}</p>}
             </div>
           ))}
-          {(appendix?.deka ?? []).map((d, i) => (
+          {(appendix?.deka ?? []).filter((d) => showRuling(d, topic)).map((d, i) => (
             <p className="micro" key={`d${i}`}>
               {d.url?.startsWith("https://") ? (
                 <a href={d.url} target="_blank" rel="noopener noreferrer nofollow">

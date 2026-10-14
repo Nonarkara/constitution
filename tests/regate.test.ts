@@ -9,6 +9,7 @@ import {
   keepStatutoryExceptions,
   notebookFallback,
   pollSteps,
+  showRuling,
   quotesInAnswerLanguage,
   readConfidence,
   answerMatchesUi,
@@ -92,7 +93,15 @@ test("one Ask attempt stays inside 120 seconds and retries once", () => {
   assert.equal(fallback.confidence, "MIXED");
   assert.equal(fallback.grounded, false);
   assert.match(fallback.answer, /其他理由/);
+  assert.match(fallback.answer, /没有在时限内返回/);
   assert.equal(fallback.answer.includes("答案没有回来"), false);
+  const early = notebookFallback("en", [{ number: 36, text: "other grounds as provided by law" }], "early");
+  assert.match(early.answer, /could not answer right now/);
+  assert.equal(/did not answer in time|in time/i.test(early.answer), false);
+  assert.match(early.answer, /The lack of a court order does not, by itself, settle the question/);
+  assert.equal(showRuling({ caseId: "466", year: "2541", headnote: "การควบคุมตัวตามมาตรา 31" }, "communication"), false);
+  assert.equal(showRuling({ caseId: "1", year: "2560", headnote: "มาตรา 36 ข้อมูลที่สื่อสารถึงกัน" }, "communication"), true);
+  assert.equal(showRuling({ caseId: "9", year: "2560", headnote: "" }, "communication"), false);
 });
 
 test("mnemonics follow the question, not the chapter picture", () => {
@@ -327,8 +336,9 @@ test("a search answer never says the person may refuse, and it cites a section",
   assert.equal(/authority is lacking|exceeds their power|do not have to comply/i.test(shapedEn), false);
   assert.equal(/[“”]\s*[“”]|“\s*”/.test(shapedEn), false);
   assert.equal(/\barticle\b/i.test(shapedEn), false);
-  assert.match(shapedEn, /this section bars disclosure/i);
-  assert.ok(shapedEn.indexOf("other grounds as provided by law") < shapedEn.toLowerCase().indexOf("this section"));
+  assert.equal(/this section bars disclosure/i.test(shapedEn), false);
+  assert.match(shapedEn, /^Section 36 bars/);
+  assert.match(shapedEn, /contact a lawyer/);
   const live = shapeAskAnswer(
     "You may refuse the police to examine your messages. Section 36 provides the rule. Therefore you have the right to demand that they show authority, and your constitutional right allows you to refuse until there is a court order.",
     "en",
@@ -359,7 +369,7 @@ test("a search answer never says the person may refuse, and it cites a section",
     [],
   );
   assert.equal(/do not consent|legal basis to tell/i.test(consent), false);
-  assert.match(consent, /court order or another ground/);
+  assert.match(consent, /other grounds as provided by law/);
   const power = shapeAskAnswer(
     "If there is no court order, the authorities have no power to conduct a direct search. **There is no reason to comply.** Section 36 still needs another ground in law.",
     "en",
@@ -384,7 +394,8 @@ test("a search answer never says the person may refuse, and it cites a section",
   assert.match(thGive, /^มาตรา 36/);
   assert.match(thGive, /การตรวจต้องมีหมายหรือกฎหมายอื่น/);
   assert.match(shapedThSoft, /^มาตรา 36/);
-  assert.match(shapedThSoft, /สิทธิของคุณตามมาตรา 36 ยังคงอยู่/);
+  assert.match(shapedThSoft, /ติดต่อทนายความ/);
+  assert.equal(/สิทธิของคุณตามมาตรา 36 ยังคงอยู่/.test(shapedThSoft), false);
   assert.equal(shapedTh.startsWith("จะกระทำมิได้"), false);
   assert.equal(/^[”"“]/.test(shapedTh), false);
   assert.match(shapedTh, /^มาตรา 36/);
@@ -393,7 +404,7 @@ test("a search answer never says the person may refuse, and it cites a section",
     "You may refuse the search. “the freedom of communication … shall not be interfered with.” The constitutional exception is clear: “เว้นแต่มีคำสั่งหรือหมายของศาล หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ” Therefore, the section still names a ground in law.";
   const shapedQuote = shapeAskAnswer(rawEnQuote, "en", [36], []);
   assert.equal(shapedQuote.startsWith("shall not"), false);
-  assert.match(shapedQuote, /“the freedom of communication … shall not be interfered with\.”/);
+  assert.equal(/shall not be interfered with/.test(shapedQuote), false);
   assert.equal(/clear:\s*Therefore/.test(shapedQuote), false);
   assert.match(shapedQuote, /^Section 36/);
   assert.match(shapedQuote, /Therefore, the section still names a ground/);
@@ -401,9 +412,9 @@ test("a search answer never says the person may refuse, and it cites a section",
   const liveSoft =
     "The Constitution, Section 36, grants freedom of communication without any inspection. Police may claim authority, but under the exemption text of Section 36 such actions must have or otherwise inspecting personal data constitutes a violation of rights. No court order — no legal reason — you do not have to give it.";
   const shapedSoft = shapeAskAnswer(liveSoft, "en", [36], []);
-  assert.equal(/do not have to give|must have or|no legal reason|no court order\s*[—–-]\s*no/i.test(shapedSoft), false);
+  assert.equal(/do not have to give|must have or|no legal reason|no court order\s*[—–-]\s*no|without any inspection/i.test(shapedSoft), false);
   assert.match(shapedSoft, /^Section 36 bars/);
-  assert.match(shapedSoft, /grants freedom of communication/);
+  assert.match(shapedSoft, /The lack of a court order does not, by itself, settle the question/);
   const stump = shapeAskAnswer(
     "Section 36 states that “เว้นแต่มีคำสั่งหรือหมายของศาล”. such actions must have or otherwise inspecting personal data.",
     "en",
@@ -415,9 +426,33 @@ test("a search answer never says the person may refuse, and it cites a section",
   const liveZh =
     "警方可能声称其他刑事法律允许在没有法院搜查令的情况下进行检查，但根据宪法原则及最高法院判例 466/2541，任何影响权利和自由的行为必须依据法律规定的权力进行，在个人信息检查的情况下必须有法院的搜查令 [2]。 因此，如果没有法院搜查令或其他明确的法律依据，您可以告诉警方“没有法院命令，故拒绝”，并要求他们在进行任何操作前出示相关法律依据的证据。 总结：没有法院命令——您无需允许检查您的信息。";
   const shapedZh = shapeAskAnswer(liveZh, "zh", [36], []);
-  assert.equal(/拒绝|您无需|没有法院命令——/.test(shapedZh), false);
+  assert.equal(/拒绝|您无需|没有法院命令——|466\/2541/.test(shapedZh), false);
   assert.match(shapedZh, /^第36条禁止/);
-  assert.match(shapedZh, /警方可能声称/);
+  assert.match(shapedZh, /联系律师/);
+  const thFail = shapeAskAnswer(
+    "บางคนอาจโต้ว่า 'ตำรวจมีอำนาจตามกฎหมายทั่วไป' … ไม่มีการอ้างอิงถึงกฎหมายใดที่ให้สิทธิ์เช่นนั้น [2] จึงไม่สามารถใช้เป็นเหตุผลอ้างอิงได้ ฎีกา 466/2541",
+    "th",
+    [36],
+    [],
+  );
+  assert.match(thFail, /^มาตรา 36/);
+  assert.match(thFail, /หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ/);
+  assert.match(thFail, /ติดต่อทนายความ/);
+  assert.equal(/ไม่มีการอ้างอิงถึงกฎหมาย|จึงไม่สามารถใช้เป็นเหตุผล|466\/2541|อำนาจตามกฎหมายทั่วไป/.test(thFail), false);
+  const zhFail = shapeAskAnswer(
+    "如果没有法院命令或其他法律规定，未持法院传票在检查站检查的警察没有法律权力查看你的LINE聊天记录。",
+    "zh",
+    [36],
+    [],
+  );
+  assert.match(zhFail, /^第36条禁止/);
+  assert.match(zhFail, /令状/);
+  assert.match(zhFail, /联系律师/);
+  assert.equal(/没有法律权力|传票|未持法院|查看你的LINE/.test(zhFail), false);
+  const warrant = shapeAskAnswer("检查须依法院传票或法律规定的其他理由。", "zh", [36], []);
+  assert.equal(warrant.includes("传票"), false);
+  assert.match(warrant, /搜查令/);
+  assert.match(warrant, /法律规定的其他理由/);
 });
 
 test("a Chinese page does not keep a Thai answer or a SOLID badge", () => {

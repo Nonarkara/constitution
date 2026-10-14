@@ -1379,6 +1379,14 @@ html[data-large="true"] {
   white-space: pre-line;
   margin-top: 24px;
 }
+.ask-context {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+.ask-context .micro {
+  white-space: pre-line;
+}
 
 /* Cheat Sheet & Algorithmic Diagrams */
 .cheatsheet-page {
