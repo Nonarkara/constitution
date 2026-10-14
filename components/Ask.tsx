@@ -44,8 +44,8 @@ type Answer = {
 };
 type State =
   | { kind: "idle" }
-  | { kind: "waiting"; position: number; attempt: number }
-  | { kind: "done"; result: Answer }
+  | { kind: "waiting"; position: number; attempt: number; started: number }
+  | { kind: "done"; result: Answer; attempts: number; elapsed: number }
   | { kind: "error"; message: string; link: boolean };
 
 // Questions the notebook cannot answer go to Non-Laws, which retrieves real
@@ -57,56 +57,82 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
     [state, setState] = useState<State>({ kind: "idle" });
   const run = useRef(0);
   const [elapsed, setElapsed] = useState(0);
-  const waitingAttempt = state.kind === "waiting" ? state.attempt : -1;
+  const waitStarted = state.kind === "waiting" ? state.started : 0;
   useEffect(() => () => void run.current++, []);
   useEffect(() => {
-    if (waitingAttempt < 0) return;
-    const started = Date.now();
-    setElapsed(0);
-    const id = window.setInterval(() => setElapsed(Date.now() - started), 1000);
+    if (!waitStarted) return;
+    setElapsed(Date.now() - waitStarted);
+    const id = window.setInterval(() => setElapsed(Date.now() - waitStarted), 1000);
     return () => window.clearInterval(id);
-  }, [waitingAttempt]);
+  }, [waitStarted]);
   useEffect(() => setQuestion(initial), [initial]);
   const length = question.trim().length;
   const busy = state.kind === "waiting";
   const fail = (message: string, link = true) => setState({ kind: "error", message, link });
   const excerpts: AskExcerpt[] = sections.map((n) => ({ number: n, text: sectionBody(n, lang) }));
-  const settle = (result: Answer) => {
+  const settle = (result: Answer, attempts: number, startedAt: number) => {
     const translations = excerpts.map((excerpt) => excerpt.text);
     const shaped = shapeAskAnswer(result.answer ?? "", lang, sections, translations);
-    setState({ kind: "done", result: { ...result, answer: shaped } });
+    setState({
+      kind: "done",
+      result: { ...result, answer: shaped },
+      attempts,
+      elapsed: Date.now() - startedAt,
+    });
   };
 
   async function ask() {
     const mine = ++run.current;
+    const startedAt = Date.now();
     if (!navigator.onLine) return fail(friendlyAskError("offline", lang));
     const tries = ASK_RETRIES + 1;
     for (let attempt = 0; attempt < tries; attempt++) {
       if (run.current !== mine) return;
-      setState({ kind: "waiting", position: 0, attempt });
-      const outcome = await runAsk(mine, attempt);
+      setState({ kind: "waiting", position: 0, attempt, started: startedAt });
+      const outcome = await runAsk(mine, attempt, startedAt);
       if (run.current !== mine || outcome === "done" || outcome === "stopped") return;
       if (outcome === "language" && attempt + 1 >= tries) {
-        settle(wrongLanguageResult(lang, excerpts));
+        settle(wrongLanguageResult(lang, excerpts), tries, startedAt);
         return;
       }
     }
     if (run.current !== mine) return;
-    if (excerpts.length) return settle(notebookFallback(lang, excerpts));
+    if (excerpts.length) return settle(notebookFallback(lang, excerpts), tries, startedAt);
     fail(friendlyAskError("timeout", lang));
   }
 
-  async function runAsk(mine: number, attempt: number): Promise<"done" | "retry" | "stopped" | "language"> {
+  async function runAsk(
+    mine: number,
+    attempt: number,
+    startedAt: number,
+  ): Promise<"done" | "retry" | "stopped" | "language"> {
+    const deadline = AbortSignal.timeout(ATTEMPT_BUDGET_MS);
+    const pause = (ms: number) =>
+      new Promise<void>((resolve, reject) => {
+        if (deadline.aborted) {
+          reject(deadline.reason);
+          return;
+        }
+        const timer = setTimeout(resolve, ms);
+        deadline.addEventListener(
+          "abort",
+          () => {
+            clearTimeout(timer);
+            reject(deadline.reason);
+          },
+          { once: true },
+        );
+      });
     let res: Response;
     try {
       res = await fetch(`${ASK_ORIGIN}/api/laws`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(askRequest(question, lang, sections, excerpts)),
-        signal: AbortSignal.timeout(20_000),
+        signal: deadline,
       });
     } catch {
-      return attempt + 1 < ASK_RETRIES + 1 ? "retry" : "retry";
+      return "retry";
     }
     const body = await res.json().catch(() => ({}));
     const outcome = classify(res.status, body);
@@ -116,13 +142,14 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
     }
     if (outcome !== "accepted") return "retry";
     const started = Date.now();
-    for (const delay of pollSteps()) {
-      await new Promise((r) => setTimeout(r, delay));
-      if (run.current !== mine) return "stopped";
-      if (Date.now() - started > ATTEMPT_BUDGET_MS) return "retry";
-      try {
+    try {
+      for (const delay of pollSteps()) {
+        if (Date.now() - started >= ATTEMPT_BUDGET_MS) return "retry";
+        await pause(delay);
+        if (run.current !== mine) return "stopped";
+        if (deadline.aborted || Date.now() - started >= ATTEMPT_BUDGET_MS) return "retry";
         const poll = await fetch(`${ASK_ORIGIN}/api/ask/${encodeURIComponent(body.id)}`, {
-          signal: AbortSignal.timeout(15_000),
+          signal: deadline,
         });
         const job = await poll.json();
         if (run.current !== mine) return "stopped";
@@ -130,13 +157,13 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
         if (job.status === "done") {
           if (looksLikeProviderError(String(job.answer ?? ""))) return "retry";
           if (!answerMatchesUi(String(job.answer ?? ""), lang)) return "language";
-          settle(job);
+          settle(job, attempt + 1, startedAt);
           return "done";
         }
-        setState({ kind: "waiting", position: Number(job.position) || 0, attempt });
-      } catch {
-        return "retry";
+        setState({ kind: "waiting", position: Number(job.position) || 0, attempt, started: startedAt });
       }
+    } catch {
+      return run.current === mine ? "retry" : "stopped";
     }
     return "retry";
   }
@@ -220,8 +247,8 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
         {state.kind === "waiting" && (
           <div className="ask-wait">
             <progress
-              value={Math.min(elapsed, ATTEMPT_BUDGET_MS)}
-              max={ATTEMPT_BUDGET_MS}
+              value={Math.min(elapsed, ATTEMPT_BUDGET_MS * (ASK_RETRIES + 1))}
+              max={ATTEMPT_BUDGET_MS * (ASK_RETRIES + 1)}
               aria-label={tr(lang, "ความคืบหน้าของการค้น", "Search progress", "检索进度")}
             />
             <p className="micro">
@@ -230,6 +257,13 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
                 : state.position > 0
                   ? tr(lang, `อยู่ในคิวลำดับที่ ${state.position}`, `In queue · position ${state.position}`, `排队中 · 第${state.position}位`)
                   : tr(lang, "กำลังค้นตัวบทและเขียนคำตอบ", "Searching the law and writing.", "正在检索法条并撰写答案。")}
+              {" · "}
+              {tr(
+                lang,
+                `ครั้งที่ ${state.attempt + 1} จาก ${ASK_RETRIES + 1}`,
+                `try ${state.attempt + 1} of ${ASK_RETRIES + 1}`,
+                `第${state.attempt + 1}次，共${ASK_RETRIES + 1}次`,
+              )}
               {" · "}
               {tr(lang, `${Math.round(elapsed / 1000)} วินาที`, `${Math.round(elapsed / 1000)}s`, `${Math.round(elapsed / 1000)}秒`)}
             </p>
@@ -246,6 +280,16 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
       </div>
       {state.kind === "done" && (
         <div className="ask-answer">
+          {state.attempts > 1 && (
+            <p className="micro">
+              {tr(
+                lang,
+                `ถามซ้ำอัตโนมัติแล้วหนึ่งครั้ง รวม ${Math.round(state.elapsed / 1000)} วินาที`,
+                `Asked again automatically once. ${Math.round(state.elapsed / 1000)}s in all.`,
+                `已自动再问一次。一共${Math.round(state.elapsed / 1000)}秒。`,
+              )}
+            </p>
+          )}
           <p className="ask-text">{presented?.text}</p>
           {confidenceText && <p className="micro">{confidenceText}</p>}
           {(presented?.sources.length ?? 0) > 0 && (

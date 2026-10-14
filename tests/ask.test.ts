@@ -19,11 +19,12 @@ test("languages, polling and outcomes map to what the server understands", () =>
   const delays = Array.from({ length: 6 }, (_, i) => pollDelay(i));
   assert.deepEqual(delays, [...delays].sort((a, b) => a - b));
   const budget = pollSteps().reduce((sum, delay) => sum + delay, 0);
+  assert.equal(ATTEMPT_BUDGET_MS, 120_000);
   assert.ok(budget <= ATTEMPT_BUDGET_MS);
   assert.ok(budget > 60_000);
   assert.equal(POLL_LIMIT, pollSteps().length);
   assert.equal(ASK_RETRIES, 1);
-  assert.ok((ASK_RETRIES + 1) * ATTEMPT_BUDGET_MS < 180_000);
+  assert.ok((ASK_RETRIES + 1) * ATTEMPT_BUDGET_MS <= 240_000);
   assert.equal(classify(202, {}), "accepted");
   assert.equal(classify(429, {}), "rate");
   assert.equal(classify(422, { refused: true }), "refused");

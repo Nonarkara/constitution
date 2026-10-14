@@ -10,9 +10,9 @@ export function deepLink(question: string, sections: number[] = []) {
   return `${ASK_ORIGIN}/#laws?${p}`;
 }
 
-// One attempt stays under about 75 seconds. A single retry still finishes
-// well inside three minutes, instead of hanging for six.
-export const ATTEMPT_BUDGET_MS = 75_000;
+// One attempt is capped at two minutes of wall-clock time, including the
+// request and every poll. One automatic retry still finishes inside four minutes.
+export const ATTEMPT_BUDGET_MS = 120_000;
 export const ASK_RETRIES = 1;
 export const pollDelay = (attempt: number) =>
   [1500, 2000, 3000, 5000][Math.min(attempt, 3)];
@@ -294,6 +294,40 @@ export function stripFabricatedSources(answer: string): string {
 
 const SECTION_36_EXCEPTION = /หรือมีเหตุอย่างอื่น|other grounds|其他理由|法律规定的其他|或法律另有规定/;
 
+const QUOTE_PAIRS: Record<string, string> = { "“": "”", "「": "」", "『": "』", "«": "»" };
+
+/** Quoted spans stay intact so a splitter cannot cut an ellipsis inside them. */
+function maskQuotes(text: string): { masked: string; spans: string[] } {
+  const spans: string[] = [];
+  let out = "";
+  let i = 0;
+  while (i < text.length) {
+    const ch = text[i];
+    const close = ch === '"' ? '"' : QUOTE_PAIRS[ch];
+    if (close) {
+      const end = text.indexOf(close, i + 1);
+      if (end > i) {
+        spans.push(text.slice(i, end + 1));
+        out += `⟦${spans.length - 1}⟧`;
+        i = end + 1;
+        continue;
+      }
+    }
+    out += ch;
+    i++;
+  }
+  return { masked: out, spans };
+}
+
+function unmask(text: string, spans: string[]): string {
+  return text.replace(/⟦(\d+)⟧/g, (_, n) => spans[Number(n)] ?? "");
+}
+
+/** Prose with quotations removed, so a Thai statute quote is not the answer. */
+export function outsideQuotes(text: string): string {
+  return maskQuotes(text).masked.replace(/⟦\d+⟧/g, " ");
+}
+
 /** If the answer drops section 36's statutory exception, put that exception back. */
 export function keepStatutoryExceptions(
   answer: string,
@@ -301,7 +335,7 @@ export function keepStatutoryExceptions(
   sections: number[],
   noteFirst = false,
 ): string {
-  if (!sections.includes(36) || SECTION_36_EXCEPTION.test(answer)) return answer;
+  if (!sections.includes(36) || SECTION_36_EXCEPTION.test(outsideQuotes(answer))) return answer;
   const note = tr(
     lang,
     "มาตรา 36 ห้ามตรวจ กัก หรือเปิดเผยข้อมูลที่สื่อสารถึงกัน เว้นแต่มีคำสั่งหรือหมายของศาล หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ การไม่มีหมายศาลอย่างเดียวจึงยังไม่จบคำถาม",
@@ -368,11 +402,38 @@ function unsafeRefusal(sentence: string): boolean {
   return noAuthority.test(value) && (search.test(value) || order.test(value) || /inspect|examin|message|communication|ตรวจ|通信/.test(value));
 }
 
-const SENTENCE_SPLIT = /\n+|(?<=[.。！？!?])\s+|…+|;\s+/;
+const SENTENCE_SPLIT = /\n+|(?<=[.。！？!?])\s+|;\s+/;
+
+/** Split on sentence ends, never on an ellipsis and never inside a quotation. */
+export function splitSentences(text: string): string[] {
+  const { masked, spans } = maskQuotes(text);
+  return masked
+    .split(SENTENCE_SPLIT)
+    .map((part) => unmask(part, spans).trim())
+    .filter(Boolean);
+}
+
+/** A leftover tail such as `shall not be interfered with.”` is not a sentence. */
+export function isQuoteFragment(sentence: string): boolean {
+  const trimmed = sentence.trim();
+  if (/^[”」』»]/.test(trimmed)) return true;
+  const open = trimmed.search(/[“「『«"]/);
+  const close = trimmed.search(/[”」』»]/);
+  return close >= 0 && (open < 0 || close < open);
+}
+
+/** A colon left behind when a Thai quotation was removed. */
+export function stripDanglingColons(answer: string): string {
+  return answer
+    .replace(/:\s*(?=(?:Therefore|ดังนั้น|因此)\b)/g, ". ")
+    .replace(/:\s*$/g, "")
+    .replace(/[ ]{2,}/g, " ")
+    .trim();
+}
 
 /** A sentence that is only an empty quotation mark is not an answer. */
 export function dropEmptyQuotes(answer: string): string {
-  const kept = answer.split(SENTENCE_SPLIT).filter((part) => {
+  const kept = splitSentences(answer).filter((part) => {
     const bare = part.replace(/[“”„«»"'「」『』\s.…—–\-]+/g, "");
     return bare.length > 0;
   });
@@ -387,9 +448,7 @@ export function dropEmptyQuotes(answer: string): string {
 
 /** Drop a sentence that says the person may refuse a search, or that authority is lacking. */
 export function dropUnsafeRefusals(answer: string): string {
-  const kept = answer
-    .split(SENTENCE_SPLIT)
-    .filter((part) => part.trim() && !unsafeRefusal(part));
+  const kept = splitSentences(answer).filter((part) => !unsafeRefusal(part) && !isQuoteFragment(part));
   return kept.join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
@@ -412,7 +471,7 @@ export function shapeAskAnswer(
   const refused = dropUnsafeRefusals(stripped);
   const cited = citeAsSection(refused, lang);
   const glossed = quotesInAnswerLanguage(cited, lang, translations);
-  const cleaned = dropEmptyQuotes(glossed);
+  const cleaned = stripDanglingColons(dropEmptyQuotes(glossed));
   const dropped = refused.trim() !== stripped.trim() || cleaned.trim() !== glossed.trim();
   return keepStatutoryExceptions(cleaned, lang, sections, dropped);
 }

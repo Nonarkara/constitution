@@ -52,12 +52,14 @@ export function Reader() {
   return (
     <>
       <h1 id="reader-title" tabIndex={-1}>
-        {tr(
-          lang,
-          "เปิดมาตรา\nหาคำตอบ",
-          "Find the section.\nRead the source.",
-          "查找条文，\n回到原文。",
-        )}
+        {section && !query.trim()
+          ? sectionLabel(lang, section.number)
+          : tr(
+              lang,
+              "เปิดมาตรา\nหาคำตอบ",
+              "Find the section.\nRead the source.",
+              "查找条文，\n回到原文。",
+            )}
       </h1>
       <form
         className="search-form"

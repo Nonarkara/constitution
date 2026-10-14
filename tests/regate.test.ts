@@ -81,12 +81,13 @@ test("section 36 grounding keeps the statutory exception and refuses an invented
   assert.equal(/[\u0E00-\u0E7F]/.test(shaped), false);
 });
 
-test("one Ask attempt stays inside 75 seconds and a retry stays inside three minutes", () => {
+test("one Ask attempt stays inside 120 seconds and retries once", () => {
   const budget = pollSteps().reduce((sum, delay) => sum + delay, 0);
+  assert.equal(ATTEMPT_BUDGET_MS, 120_000);
   assert.ok(budget <= ATTEMPT_BUDGET_MS);
   assert.ok(budget > 60_000);
   assert.equal(ASK_RETRIES, 1);
-  assert.ok((ASK_RETRIES + 1) * ATTEMPT_BUDGET_MS < 180_000);
+  assert.ok((ASK_RETRIES + 1) * ATTEMPT_BUDGET_MS <= 240_000);
   const fallback = notebookFallback("zh", [{ number: 36, text: "或法律规定的其他理由" }]);
   assert.equal(fallback.confidence, "MIXED");
   assert.equal(fallback.grounded, false);
@@ -141,21 +142,59 @@ test("a fresh profile does not invent a Parliament focus", () => {
   assert.match(profile.recommendation.en, /Chapter 4/);
 });
 
-test("teaching steps quote the rule, name the trap, and do not repeat the explanation", () => {
+test("teaching steps quote the rule, name why the wrong option tempts, and change a real fact", () => {
   const [a, b] = bank;
   const left = teachingBodies(a, "en", 1, "section text a");
   const right = teachingBodies(b, "en", 1, "section text b");
-  assert.equal(left.length, 3);
+  assert.equal(left.length, 2);
   assert.match(left[0], /section text a/);
   assert.match(left[0], new RegExp(`section ${a.sections[0]}`, "i"));
-  assert.match(left[1], /fails this item/);
-  assert.match(left[2], /If the fact were/);
+  assert.match(left[1], /An amendment under the ordinary procedure may divide it/);
+  assert.match(left[1], /tempting because the question asks/);
+  assert.equal(/does not use that condition/i.test(left[1]), false);
+  assert.equal(left.some((step) => /If the fact were/i.test(step)), false);
   assert.notEqual(left[1], right[1]);
   for (const step of left) {
     assert.notEqual(step.trim(), a.choices[a.answer].en.trim());
     assert.equal(step.includes(a.explanation.en), false);
     assert.notEqual(step, a.prompt.en);
   }
+  const withCase = teachingBodies(
+    a,
+    "en",
+    1,
+    "Thailand is one Kingdom. However, if a later amendment tried to split the realm, a province could leave the Kingdom.",
+  );
+  assert.equal(withCase.length, 3);
+  assert.match(withCase[2], /Change one fact/);
+  assert.match(withCase[2], /a later amendment tried to split the realm/);
+  assert.match(withCase[2], /a province could leave the Kingdom/);
+  assert.equal(/If the fact were/i.test(withCase[2]), false);
+  const regent = bank.find((q) => q.id === "s022-a")!;
+  const corpus = JSON.parse(readFileSync(new URL("../data/constitution.json", import.meta.url), "utf8")) as {
+    sections: { number: number; th: string; en: string }[];
+  };
+  const sec22 = corpus.sections.find((item) => item.number === 22)!;
+  const zh22 = (
+    JSON.parse(readFileSync(new URL("../data/translations/zh-001-139.json", import.meta.url), "utf8")) as {
+      "22": { zh: string };
+    }
+  )["22"].zh.replace(/^第\s*22\s*条\s*/, "");
+  const regency = teachingBodies(regent, "en", 1, sec22.en);
+  assert.match(regency[1], /The Prime Minister/);
+  assert.match(regency[1], /tempting because the question asks/);
+  assert.equal(/does not use that condition/i.test(regency[1]), false);
+  assert.equal(regency.some((step) => /If the fact were “The Prime Minister”/.test(step)), false);
+  assert.equal(regency.length, 3);
+  assert.match(regency[2], /Change one fact/);
+  assert.match(regency[2], /Regent has been appointed/);
+  assert.match(regency[2], /shall continue to be the Regent/);
+  const regencyTh = teachingBodies(regent, "th", 1, sec22.th);
+  assert.equal(regencyTh.length, 3);
+  assert.match(regencyTh[2], /เปลี่ยนหนึ่งข้อเท็จจริง/);
+  const regencyZh = teachingBodies(regent, "zh", 1, zh22);
+  assert.equal(regencyZh.length, 3);
+  assert.match(regencyZh[2], /事实改掉|改一个事实/);
 });
 
 test("paper 28 balances transitory coverage with the blueprint chapters", () => {
@@ -256,6 +295,20 @@ test("the eleven implausible distractors are gone and the answer index is unchan
   }
   assert.match(bank.find((q) => q.id === "comp-10")!.choices[1].en, /essential substance/);
   assert.match(bank.find((q) => q.id === "c17-01")!.choices[2].en, /section 107/);
+  for (const [id, phrase] of [
+    ["c08-05", "nationwide referendum"],
+    ["c08-05", "ประชามติ"],
+    ["civic-09", "Only likes"],
+    ["civic-09", "ยอดไลก์"],
+    ["civic-09", "点赞"],
+  ] as const) {
+    const q = bank.find((item) => item.id === id)!;
+    const blob = q.choices.map((choice) => `${choice.th} ${choice.en} ${choice.zh}`).join("\n");
+    assert.equal(blob.toLowerCase().includes(phrase.toLowerCase()), false, `${id} still has ${phrase}`);
+    assert.equal(q.answer, 0);
+  }
+  assert.match(bank.find((q) => q.id === "c08-05")!.choices[3].en, /Senate rejects the decree/);
+  assert.match(bank.find((q) => q.id === "civic-09")!.choices[1].en, /provincial governor/);
 });
 
 test("a search answer never says the person may refuse, and it cites a section", () => {
@@ -316,6 +369,22 @@ test("a search answer never says the person may refuse, and it cites a section",
   assert.equal(/no power to|no reason to comply|\*\*/i.test(power), false);
   assert.match(power, /other grounds as provided by law/);
   assert.match(live, /other grounds as provided by law/);
+  const rawTh =
+    "คุณสามารถปฏิเสธการค้นได้ “ห้ามเปิดเผยข้อมูล…จะกระทำมิได้ เว้นแต่มีคำสั่งหรือหมายของศาล หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ”";
+  const shapedTh = shapeAskAnswer(rawTh, "th", [36], []);
+  assert.equal(shapedTh.startsWith("จะกระทำมิได้"), false);
+  assert.equal(/^[”"“]/.test(shapedTh), false);
+  assert.match(shapedTh, /^มาตรา 36/);
+  assert.equal(/สามารถปฏิเสธ/.test(shapedTh), false);
+  const rawEnQuote =
+    "You may refuse the search. “the freedom of communication … shall not be interfered with.” The constitutional exception is clear: “เว้นแต่มีคำสั่งหรือหมายของศาล หรือมีเหตุอย่างอื่นตามที่กฎหมายบัญญัติ” Therefore, the section still names a ground in law.";
+  const shapedQuote = shapeAskAnswer(rawEnQuote, "en", [36], []);
+  assert.equal(shapedQuote.startsWith("shall not"), false);
+  assert.match(shapedQuote, /“the freedom of communication … shall not be interfered with\.”/);
+  assert.equal(/clear:\s*Therefore/.test(shapedQuote), false);
+  assert.match(shapedQuote, /^Section 36/);
+  assert.match(shapedQuote, /Therefore, the section still names a ground/);
+  assert.equal(/may refuse/i.test(shapedQuote), false);
 });
 
 test("a Chinese page does not keep a Thai answer or a SOLID badge", () => {

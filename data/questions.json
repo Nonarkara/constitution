@@ -1688,9 +1688,9 @@
         "zh": "等待满五年后再提交国会"
       },
       {
-        "th": "ต้องจัดให้มีการออกเสียงประชามติของประชาชนทั้งประเทศทุกกรณี",
-        "en": "Must hold a nationwide referendum in all cases",
-        "zh": "在任何情况下都必须举行全民公决"
+        "th": "ถ้าวุฒิสภาไม่ให้ความเห็นชอบ พระราชกำหนดตกไป แม้สภาผู้แทนราษฎรจะยืนยันด้วยคะแนนเสียงมากกว่ากึ่งหนึ่งของสมาชิกทั้งหมดเท่าที่มีอยู่",
+        "en": "If the Senate rejects the decree, it lapses even though the House reaffirms by more than half of its existing members",
+        "zh": "参议院不批准时，即使众议院以超过现有议员半数的票数确认，紧急法令也即行失效"
       }
     ],
     "answer": 0,
@@ -18775,9 +18775,9 @@
         "zh": "和平、非武装集会自由及法律规定的限制"
       },
       {
-        "th": "จำนวนยอดไลก์เท่านั้น",
-        "en": "Only likes",
-        "zh": "只看点赞数"
+        "th": "ใบอนุญาตจากผู้ว่าราชการจังหวัด ซึ่งมาตรา 44 กำหนดให้ต้องมีก่อนการชุมนุมทุกครั้ง",
+        "en": "A permit from the provincial governor, which section 44 requires before any assembly",
+        "zh": "事先取得省长许可，而第44条把这规定为任何集会的前提"
       },
       {
         "th": "ฝ่ายการเมืองของผู้ชุมนุมเท่านั้น",
