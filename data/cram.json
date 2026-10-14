@@ -187,7 +187,7 @@
       "label": {
         "th": "ผู้ตรวจการแผ่นดิน → ยื่นศาลรัฐธรรมนูญตามมาตรา 213",
         "en": "Ombudsman → direct petition under section 213",
-        "zh": "监察人民众 → 依第213条直接诉愿"
+        "zh": "监察专员 → 依第213条直接诉愿"
       },
       "value": {
         "th": "60 วัน (ถ้าไม่มีคำสั่ง) / ไม่รับ",
@@ -386,7 +386,7 @@
       "text": {
         "th": "คำร้องตามมาตรา 213 ต้องไปผู้ตรวจการแผ่นดินก่อน ยื่นตรงต่อศาลรัฐธรรมนูญได้ก็ต่อเมื่อผู้ตรวจการแผ่นดินมีคำสั่งไม่รับคำร้อง หรือไม่มีคำสั่งภายใน 60 วัน (มาตรา 46 วรรคสอง พ.ร.ป. ว่าด้วยวิธีพิจารณาของศาลรัฐธรรมนูญ พ.ศ. 2561)",
         "en": "A section 213 petition must first go to the Ombudsman. Direct filing at the Constitutional Court is allowed only after the Ombudsman declines the petition, or does not issue an order within 60 days (section 46 paragraph 2 of the Organic Act on Constitutional Court Procedure B.E. 2561 (2018)).",
-        "zh": "第213条的诉愿必须先提交监察人民众。直接向宪法法院提交，需在监察人民众拒绝受理或在60天内未作出命令之后。"
+        "zh": "第213条的诉愿必须先提交监察专员。直接向宪法法院提交，需在监察专员拒绝受理或在60天内未作出命令之后。"
       }
     }
   ]
