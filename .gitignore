@@ -29,3 +29,5 @@ token*.json
 
 .wrangler/
 .openai/news-seed.sql
+
+.DS_Store
