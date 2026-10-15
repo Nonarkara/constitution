@@ -59,3 +59,9 @@ test("every chapter lesson meets a question along the way, and it is a fresh one
   const spread = new Set(bank.map((q: { answer: number }) => q.answer));
   assert.equal(spread.size, 4, "correct answers should not sit in one position");
 });
+
+// Choices are shuffled on screen, so "the first option" would point at the wrong one.
+export const POSITIONAL = /(first|second|third|fourth|last) (option|choice|distractor)|option [1-4A-D]\b|ตัวเลือก(แรก|สุดท้าย|ที่สอง|ที่สาม)|ตัวลวงข้อ(แรก|ที่)|第[一二三四]个(选项|干扰项)|最后一个(选项|干扰项)/i;
+test("explanations name a wrong choice by what it says, never by its position", () => {
+  for (const q of bank) for (const l of LANGS) assert.ok(!POSITIONAL.test(q.explanation[l]), `${q.id} ${l} points at a choice by position`);
+});
