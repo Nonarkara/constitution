@@ -12,7 +12,10 @@
   "blocks": [
     {
       "kind": "text",
-      "title": { "th": "กติกาสำหรับคนเขียนกติกา", "en": "A rulebook for the people who write the rules" },
+      "title": {
+        "th": "กติกาสำหรับคนเขียนกติกา",
+        "en": "A rulebook for the people who write the rules"
+      },
       "body": {
         "th": "ลองนึกถึงฟุตบอลหนึ่งนัด ผู้เล่นต้องทำตามกติกา กรรมการเป่านกหวีดเมื่อมีคนทำผิด แต่ใครเป็นคนเขียนกติกา และถ้ากรรมการเองเป่าผิด ใครจะตัดสิน\n\nกฎหมายทั่วไปคือกติกาสำหรับประชาชน รัฐธรรมนูญคือกติกาสำหรับคนที่มีอำนาจออกกฎหมาย ใช้กฎหมาย และตัดสินคดี มันตอบคำถามสามข้อ ใครมีอำนาจอะไร ได้อำนาจนั้นมาอย่างไร และถ้าใช้อำนาจเกินเลยจะถูกหยุดอย่างไร\n\nทุกมาตราในรัฐธรรมนูญตอบหนึ่งในสามคำถามนี้ เมื่อเจอมาตราใหม่ ให้ถามก่อนเลยว่ามาตรานี้กำลังมอบอำนาจ กำหนดวิธีได้อำนาจ หรือกำหนดวิธีหยุดอำนาจ แค่นี้คุณก็รู้แล้วว่ามันอยู่ตรงไหนของเครื่องจักร",
         "en": "Picture a football match. Players follow the rules, and the referee blows the whistle when someone breaks them. But who wrote the rules? And when the referee gets it wrong, who decides?\n\nOrdinary law is a rulebook for citizens. A constitution is a rulebook for the people who make laws, run the government and judge cases. It answers three questions: who holds which power, how they get it, and how they are stopped when they overreach.\n\nEvery section in the constitution answers one of those three. When you meet a new section, first ask whether it grants power, sets the route to power, or sets the brake on power. That alone tells you where it sits in the machine."
@@ -20,7 +23,10 @@
     },
     {
       "kind": "text",
-      "title": { "th": "กฎหมายสูงสุด: มาตรา 5", "en": "The supreme law: section 5" },
+      "title": {
+        "th": "กฎหมายสูงสุด: มาตรา 5",
+        "en": "The supreme law: section 5"
+      },
       "body": {
         "th": "มาตรา 5 วรรคหนึ่งพูดสั้นมาก รัฐธรรมนูญเป็นกฎหมายสูงสุดของประเทศ กฎหมาย กฎ ข้อบังคับ หรือการกระทำใดที่ขัดหรือแย้งกับรัฐธรรมนูญ ใช้บังคับไม่ได้\n\nคำว่า “การกระทำใด” สำคัญ มันไม่ได้คุมแค่ตัวบทกฎหมาย แต่คุมการกระทำของรัฐด้วย คำสั่งของรัฐมนตรี มติคณะรัฐมนตรี การตัดสินใจของหน่วยงาน ล้วนต้องอยู่ใต้รัฐธรรมนูญ\n\nเพื่อจำลำดับชั้น ให้นึกถึงบันไดที่ขั้นล่างต้องไม่ขัดขั้นบน\n- รัฐธรรมนูญ\n- พระราชบัญญัติประกอบรัฐธรรมนูญ (กฎหมายลูกที่รัฐธรรมนูญสั่งให้มี มาตรา 130)\n- พระราชบัญญัติ และพระราชกำหนด (มาตรา 172)\n- พระราชกฤษฎีกา (มาตรา 175)\n- กฎกระทรวง ระเบียบ ประกาศ\n- ข้อบัญญัติท้องถิ่น\n\nบันไดนี้มีความหมายในทางปฏิบัติ ถ้าตัวบทระดับพระราชบัญญัติขัดรัฐธรรมนูญ เรื่องไปศาลรัฐธรรมนูญ (มาตรา 210 และมาตรา 212) ถ้าเป็นกฎหรือคำสั่งของฝ่ายปกครองที่ขัดรัฐธรรมนูญหรือกฎหมาย โดยหลักเรื่องไปศาลปกครอง (มาตรา 231 วางเส้นแบ่งนี้ไว้ชัดสำหรับผู้ตรวจการแผ่นดิน)",
         "en": "Section 5, paragraph one, is short. The constitution is the supreme law of the country. Any law, rule, regulation or act that conflicts with it cannot be enforced.\n\nThe words “or act” matter. Section 5 does not only police statutes. It polices what the state does: a minister's order, a Cabinet resolution, an agency's decision. All of them sit under the constitution.\n\nTo remember the hierarchy, picture a staircase where no lower step may contradict a higher one:\n- the Constitution\n- organic acts (laws the constitution itself orders into being, section 130)\n- Acts of Parliament, and emergency decrees (section 172)\n- royal decrees (section 175)\n- ministerial regulations, rules and notifications\n- local ordinances\n\nThe staircase has practical consequences. If a provision of an Act conflicts with the constitution, the question goes to the Constitutional Court (sections 210 and 212). If an administrative rule or order conflicts with the constitution or a statute, it generally goes to the Administrative Court. Section 231 draws exactly this line for the Ombudsman."
@@ -28,15 +34,21 @@
     },
     {
       "kind": "logic",
-      "title": { "th": "ทำไมกฎหมายสูงสุดต้องมีกรรมการ", "en": "Why a supreme law needs a referee" },
+      "title": {
+        "th": "ทำไมกฎหมายสูงสุดต้องมีกรรมการ",
+        "en": "Why a supreme law needs a referee"
+      },
       "body": {
-        "th": "ประโยค “ใช้บังคับไม่ได้” ไม่มีแรงในตัวเอง ใครสักคนต้องเป็นผู้บอกว่าอะไรขัด\n\nโซ่เหตุผลเป็นแบบนี้\n- รัฐธรรมนูญสูงกว่ากฎหมายอื่น (มาตรา 5)\n- ดังนั้นต้องมีองค์กรที่ชี้ขาดว่ากฎหมายใดขัด (มาตรา 210 (1))\n- ศาลทั่วไปที่เจอปัญหานี้ระหว่างพิจารณาคดีต้องส่งเรื่องให้ศาลรัฐธรรมนูญ ไม่ตัดสินเอง (มาตรา 212) เพื่อให้คำตอบเป็นหนึ่งเดียวทั้งประเทศ\n- คำวินิจฉัยต้องผูกพันทุกองค์กร (มาตรา 211) ไม่อย่างนั้นแต่ละหน่วยงานจะตีความกันเอง\n- แต่เมื่อผู้ชี้ขาดมีอำนาจเด็ดขาด ผู้ชี้ขาดเองก็ต้องถูกคุม จึงมีคณะกรรมการสรรหา การให้ความเห็นชอบของวุฒิสภา และวาระเดียว 7 ปี (มาตรา 203 มาตรา 204 มาตรา 207)\n\nจำโครงนี้ไว้ เพราะมันจะซ้ำอีกหลายครั้ง ทุกครั้งที่รัฐธรรมนูญให้อำนาจ มันจะสร้างตัวคุมไว้ข้าง ๆ เสมอ คำถามที่ดีที่สุดเวลาอ่านคือ “แล้วใครคุมคนนี้”",
-        "en": "The phrase “cannot be enforced” has no force by itself. Someone must say what conflicts.\n\nThe chain runs like this:\n- The constitution outranks every other law (section 5).\n- So some body must decide whether a law conflicts (section 210 (1)).\n- An ordinary court that meets the question mid-trial must send it to the Constitutional Court instead of deciding it alone (section 212), so the country gets one answer, not many.\n- The ruling must bind every organ (section 211), or each agency would read the constitution its own way.\n- But a referee with final say must itself be checked, which is why judges pass through a selection committee, Senate approval, and a single seven-year term (sections 203, 204, 207).\n\nKeep this skeleton. It repeats throughout the document. Whenever the constitution grants a power, it builds a check next to it. The most useful question while reading is: who checks this person?"
+        "th": "ประโยค “ใช้บังคับไม่ได้” ไม่มีแรงในตัวเอง ใครสักคนต้องเป็นผู้บอกว่าอะไรขัด\n\nโซ่เหตุผลเป็นแบบนี้\n- รัฐธรรมนูญสูงกว่ากฎหมายอื่น (มาตรา 5)\n- ดังนั้นต้องมีองค์กรที่ชี้ขาดว่ากฎหมายใดขัด (มาตรา 210 (1))\n- ศาลทั่วไปที่เจอปัญหานี้ระหว่างพิจารณาคดีต้องส่งความเห็นให้ศาลรัฐธรรมนูญ หากยังไม่มีคำวินิจฉัยเกี่ยวกับบทบัญญัตินั้น ระหว่างรอพิจารณาคดีต่อได้ แต่ต้องรอการพิพากษาไว้ (มาตรา 212)\n- คำวินิจฉัยต้องผูกพันทุกองค์กร (มาตรา 211) ไม่อย่างนั้นแต่ละหน่วยงานจะตีความกันเอง\n- แต่เมื่อผู้ชี้ขาดมีอำนาจเด็ดขาด ผู้ชี้ขาดเองก็ต้องถูกคุม จึงมีคณะกรรมการสรรหา การให้ความเห็นชอบของวุฒิสภา และวาระเดียว 7 ปี (มาตรา 203 มาตรา 204 มาตรา 207)\n\nจำโครงนี้ไว้ เพราะมันจะซ้ำอีกหลายครั้ง ทุกครั้งที่รัฐธรรมนูญให้อำนาจ มันจะสร้างตัวคุมไว้ข้าง ๆ เสมอ คำถามที่ดีที่สุดเวลาอ่านคือ “แล้วใครคุมคนนี้”",
+        "en": "The phrase “cannot be enforced” has no force by itself. Someone must say what conflicts.\n\nThe chain runs like this:\n- The constitution outranks every other law (section 5).\n- So some body must decide whether a law conflicts (section 210 (1)).\n- An ordinary court that meets the question mid-trial must refer it to the Constitutional Court if that Court has not already ruled on the provision (section 212). The trial may continue, but judgment must wait for the Constitutional Court’s decision.\n- The ruling must bind every organ (section 211), or each agency would read the constitution its own way.\n- But a referee with final say must itself be checked, which is why judges pass through a selection committee, Senate approval, and a single seven-year term (sections 203, 204, 207).\n\nKeep this skeleton. It repeats throughout the document. Whenever the constitution grants a power, it builds a check next to it. The most useful question while reading is: who checks this person?"
       }
     },
     {
       "kind": "text",
-      "title": { "th": "เมื่อรัฐธรรมนูญเงียบ: มาตรา 5 วรรคสอง", "en": "When the text is silent: section 5, paragraph two" },
+      "title": {
+        "th": "เมื่อรัฐธรรมนูญเงียบ: มาตรา 5 วรรคสอง",
+        "en": "When the text is silent: section 5, paragraph two"
+      },
       "body": {
         "th": "ไม่มีรัฐธรรมนูญฉบับใดเขียนครอบคลุมทุกสถานการณ์ มาตรา 5 วรรคสองจึงวางทางออกไว้ เมื่อไม่มีบทบัญญัติใดใช้บังคับแก่กรณีใด ให้ทำหรือวินิจฉัยไปตามประเพณีการปกครองประเทศไทยในระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข\n\nมาตรานี้เป็นช่องว่างที่ตั้งใจเว้นไว้ เหมือนข้อสุดท้ายในสัญญาเช่าที่เขียนว่า “กรณีอื่นให้เป็นไปตามธรรมเนียมที่ปฏิบัติกันมา” มันกันไม่ให้ระบบติดขัดเพราะไม่มีตัวอักษรรองรับ แต่มันก็เปิดคำถามยากว่า ประเพณีคืออะไร และใครเป็นผู้บอก\n\nในรัฐธรรมนูญฉบับก่อน ๆ บทบัญญัติแบบเดียวกันนี้อยู่ที่ม. 7 คนรุ่นที่ผ่านปี 2549 จึงคุ้นกับชื่อ “ม. 7” มากกว่า",
         "en": "No constitution covers every situation. Section 5, paragraph two, supplies the fallback: where no provision applies to a case, act or decide according to the constitutional conventions of Thailand's democratic regime with the King as Head of State.\n\nThis is a gap left on purpose, like the last clause in a lease that says “anything else follows established practice.” It stops the system from jamming when the text runs out. It also raises a hard question: what counts as convention, and who gets to say?\n\nIn earlier charters the same clause was s. 7, which is why people who lived through 2006 still call it “s. 7.”"
@@ -44,7 +56,10 @@
     },
     {
       "kind": "case",
-      "title": { "th": "ปี 2549: คำขอใช้ “ม. 7” เพื่อนายกฯ พระราชทาน", "en": "2006: the call to use “s. 7” for a royally appointed prime minister" },
+      "title": {
+        "th": "ปี 2549: คำขอใช้ “ม. 7” เพื่อนายกฯ พระราชทาน",
+        "en": "2006: the call to use “s. 7” for a royally appointed prime minister"
+      },
       "year": 2006,
       "body": {
         "th": "ต้นปี 2549 ระหว่างวิกฤตการเมืองและการเลือกตั้งที่พรรคฝ่ายค้านหลักไม่ส่งผู้สมัคร มีกลุ่มผู้ชุมนุมและนักวิชาการบางส่วนเสนอให้ใช้ม. 7 ของรัฐธรรมนูญ 2540 ขอนายกรัฐมนตรีพระราชทาน โดยให้เหตุผลว่าเป็นสถานการณ์ที่ไม่มีบทบัญญัติรองรับ\n\nเมื่อวันที่ 25 เมษายน 2549 พระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร พระราชทานพระราชดำรัสแก่ผู้พิพากษา ทรงชี้ว่าม. 7 ไม่ได้ให้พระราชอำนาจทำการใดได้ตามพระราชหฤทัย และการขอนายกรัฐมนตรีพระราชทานไม่ใช่วิถีทางประชาธิปไตย จากนั้นทรงขอให้ศาลช่วยแก้ปัญหาตามหน้าที่ของศาล\n\nบทเรียนเชิงระบบคือ บทบัญญัติช่องว่างไม่ใช่ประตูหลังสำหรับข้ามบทบัญญัติที่มีอยู่แล้ว เมื่อรัฐธรรมนูญเขียนวิธีได้มาซึ่งนายกรัฐมนตรีไว้ชัด (ปัจจุบันคือมาตรา 158 และมาตรา 159) ก็ไม่มี “ช่องว่าง” ให้ประเพณีเข้ามาแทน",
@@ -53,7 +68,10 @@
     },
     {
       "kind": "text",
-      "title": { "th": "อำนาจเป็นของใคร: มาตรา 1 ถึงมาตรา 4", "en": "Whose power is it: sections 1 to 4" },
+      "title": {
+        "th": "อำนาจเป็นของใคร: มาตรา 1 ถึงมาตรา 4",
+        "en": "Whose power is it: sections 1 to 4"
+      },
       "body": {
         "th": "สี่มาตราแรกคือฐานราก\n- มาตรา 1 ประเทศไทยเป็นราชอาณาจักรอันหนึ่งอันเดียว แบ่งแยกมิได้\n- มาตรา 2 รูปแบบการปกครองคือระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข\n- มาตรา 3 อำนาจอธิปไตยเป็นของปวงชนชาวไทย พระมหากษัตริย์ทรงใช้อำนาจนั้นทางรัฐสภา คณะรัฐมนตรี และศาล\n- มาตรา 4 ศักดิ์ศรีความเป็นมนุษย์ สิทธิ เสรีภาพ และความเสมอภาคได้รับความคุ้มครอง\n\nมาตรา 3 แยกสองเรื่องที่คนมักรวมกัน เจ้าของอำนาจคือประชาชน ส่วนผู้ใช้อำนาจในนามของรัฐคือพระมหากษัตริย์ โดยใช้ผ่านสามองค์กร คิดแบบบ้านเช่า เจ้าของบ้านคือประชาชน แต่ทุกการกระทำในบ้านต้องผ่านช่องทางที่สัญญากำหนด\n\nวรรคสองของมาตรา 3 เพิ่มเงื่อนไขที่คนมองข้าม รัฐสภา คณะรัฐมนตรี ศาล องค์กรอิสระ และหน่วยงานของรัฐ ต้องปฏิบัติหน้าที่ตามรัฐธรรมนูญ กฎหมาย และหลักนิติธรรม เพื่อประโยชน์ส่วนรวม หลักนิติธรรมแปลง่าย ๆ ว่า อำนาจทุกชนิดต้องมีกฎหมายรองรับ และกฎหมายนั้นต้องเป็นธรรม ไม่ใช่แค่มีตัวอักษร",
         "en": "The first four sections are the foundation:\n- Section 1: Thailand is one indivisible Kingdom.\n- Section 2: the form of government is democracy with the King as Head of State.\n- Section 3: sovereign power belongs to the Thai people; the King exercises it through the National Assembly, the Council of Ministers and the Courts.\n- Section 4: human dignity, rights, liberties and equality are protected.\n\nSection 3 separates two ideas people tend to merge. The owner of sovereign power is the people. The one who exercises it in the name of the state is the King, through three institutions. Think of a rented house: the people own it, but everything done in the house must go through the channels the contract sets.\n\nParagraph two of section 3 adds a condition many readers skip. The National Assembly, the Cabinet, the courts, the independent organs and every state agency must act under the constitution, the law and the rule of law, for the common good. In plain terms, the rule of law means every power needs a legal basis, and that law must itself be fair, not merely written down."
@@ -61,7 +79,10 @@
     },
     {
       "kind": "logic",
-      "title": { "th": "สามอำนาจ ใครคุมใคร", "en": "Three powers: who checks whom" },
+      "title": {
+        "th": "สามอำนาจ ใครคุมใคร",
+        "en": "Three powers: who checks whom"
+      },
       "body": {
         "th": "เริ่มจากสภาผู้แทนราษฎร เพราะเป็นองค์กรเดียวที่ประชาชนเลือกโดยตรงทั้งหมด (มาตรา 83)\n- สภาผู้แทนราษฎรเลือกนายกรัฐมนตรี (มาตรา 159) และลงมติไม่ไว้วางใจได้ (มาตรา 151)\n- ดังนั้นคณะรัฐมนตรีต้องมีเสียงสนับสนุนในสภาจึงจะอยู่ได้ นี่คือแก่นของระบบรัฐสภา\n- ในทางกลับกัน นายกรัฐมนตรีขอให้ยุบสภาได้ (มาตรา 103) ฝ่ายบริหารจึงมีอาวุธตอบโต้ แต่เมื่อมีการยื่นญัตติไม่ไว้วางใจแล้ว จะยุบสภาหนีไม่ได้ (มาตรา 151 วรรคสอง)\n- วุฒิสภาไม่ได้มาจากการเลือกตั้งโดยประชาชนทั่วไป จึงไม่มีอำนาจล้มรัฐบาล แต่มีอำนาจกลั่นกรองกฎหมายและให้ความเห็นชอบบุคคลในองค์กรอิสระและศาลรัฐธรรมนูญ (มาตรา 204 มาตรา 222)\n- ศาลตรวจว่ากฎหมายและการกระทำชอบด้วยรัฐธรรมนูญหรือไม่ (มาตรา 210)\n- องค์กรอิสระตรวจการเลือกตั้ง การทุจริต การใช้เงินแผ่นดิน และสิทธิมนุษยชน (หมวด 12)\n- ประชาชนคุมทั้งหมดผ่านการเลือกตั้งทุกสี่ปี (มาตรา 99) การเข้าชื่อเสนอกฎหมาย และการร้องเรียน\n\nถ้าข้อสอบถามว่า “องค์กรใดมีอำนาจ…” ให้ถามกลับว่าอำนาจนั้นเป็นอำนาจแบบไหน ล้มรัฐบาลได้ต้องมาจากประชาชนโดยตรง ชี้ขาดข้อกฎหมายต้องเป็นศาล ตรวจสอบต้องเป็นองค์กรที่ไม่ขึ้นกับคนถูกตรวจ",
         "en": "Start with the House of Representatives, the only body elected entirely and directly by the people (section 83).\n- The House chooses the prime minister (section 159) and can pass a vote of no confidence (section 151).\n- So the Cabinet survives only while it keeps the House's support. That is the core of a parliamentary system.\n- In return, the prime minister can seek a dissolution of the House (section 103), so the executive has a counter-weapon. But once a no-confidence motion is filed, the House cannot be dissolved to escape it (section 151, paragraph two).\n- The Senate is not elected by the general public, so it cannot bring down a government. It reviews bills and approves appointments to the independent organs and the Constitutional Court (sections 204, 222).\n- The courts test whether laws and acts conform to the constitution (section 210).\n- The independent organs watch elections, corruption, public money and human rights (Chapter 12).\n- The people check all of it through elections every four years (section 99), citizen bills and complaints.\n\nWhen a question asks “which body has the power to…”, ask what kind of power it is. Removing a government requires a body chosen directly by the people. Settling a point of law requires a court. Auditing requires a body that does not answer to the audited."
@@ -69,7 +90,10 @@
     },
     {
       "kind": "text",
-      "title": { "th": "แผนที่ทั้งเล่ม: 16 หมวด กับบทเฉพาะกาล", "en": "The whole map: 16 chapters plus transitory provisions" },
+      "title": {
+        "th": "แผนที่ทั้งเล่ม: 16 หมวด กับบทเฉพาะกาล",
+        "en": "The whole map: 16 chapters plus transitory provisions"
+      },
       "body": {
         "th": "แต่ละหมวดตอบคำถามหนึ่งข้อ จำคำถาม แล้วคุณจะรู้ว่าต้องเปิดหมวดไหน\n- หมวด 1 บททั่วไป (มาตรา 1–5): ประเทศนี้คืออะไร อำนาจเป็นของใคร อะไรสูงสุด\n- หมวด 2 พระมหากษัตริย์ (มาตรา 6–24): ประมุขของรัฐ องคมนตรี ผู้สำเร็จราชการ การสืบราชสมบัติ\n- หมวด 3 สิทธิและเสรีภาพ (มาตรา 25–49): รัฐห้ามทำอะไรกับคุณ\n- หมวด 4 หน้าที่ของปวงชนชาวไทย (มาตรา 50): คุณต้องทำอะไรให้ส่วนรวม\n- หมวด 5 หน้าที่ของรัฐ (มาตรา 51–63): รัฐ “ต้อง” ทำอะไรให้คุณ\n- หมวด 6 แนวนโยบายแห่งรัฐ (มาตรา 64–78): รัฐ “พึง” มุ่งไปทางไหน\n- หมวด 7 รัฐสภา (มาตรา 79–157): ใครออกกฎหมาย ใช้เงิน และตรวจรัฐบาล\n- หมวด 8 คณะรัฐมนตรี (มาตรา 158–183): ใครบริหาร มาอย่างไร พ้นอย่างไร\n- หมวด 9 การขัดกันแห่งผลประโยชน์ (มาตรา 184–187): ห้ามใช้ตำแหน่งหาประโยชน์\n- หมวด 10 ศาล (มาตรา 188–199): ใครตัดสินคดี\n- หมวด 11 ศาลรัฐธรรมนูญ (มาตรา 200–214): ใครตัดสินข้อพิพาทเรื่องรัฐธรรมนูญ\n- หมวด 12 องค์กรอิสระ (มาตรา 215–247): ใครตรวจสอบนักการเมืองและรัฐ\n- หมวด 13 องค์กรอัยการ (มาตรา 248): ใครฟ้องคดีแทนรัฐ\n- หมวด 14 การปกครองส่วนท้องถิ่น (มาตรา 249–254): ท้องถิ่นปกครองตนเองแค่ไหน\n- หมวด 15 การแก้ไขเพิ่มเติมรัฐธรรมนูญ (มาตรา 255–256): เปลี่ยนกติกานี้อย่างไร\n- หมวด 16 การปฏิรูปประเทศ (มาตรา 257–261): จะปฏิรูปอะไร\n- บทเฉพาะกาล (มาตรา 262–279): สะพานจากระบบเก่าสู่ระบบใหม่\n\nสังเกตสัดส่วน หมวด 7 รัฐสภาหมวดเดียวกินไปเกือบ 80 มาตรา ตัวเลขและขั้นตอนของรัฐสภาจึงเป็นส่วนใหญ่ของตัวบททั้งฉบับ",
         "en": "Each chapter answers one question. Remember the question and you know where to look.\n- Chapter 1 General Provisions (sections 1–5): what is this country, whose power is it, what is supreme?\n- Chapter 2 The King (sections 6–24): the Head of State, the Privy Council, the Regent, succession.\n- Chapter 3 Rights and Liberties (sections 25–49): what the state may not do to you.\n- Chapter 4 Duties of the Thai People (section 50): what you owe the community.\n- Chapter 5 Duties of the State (sections 51–63): what the state “shall” do for you.\n- Chapter 6 Directive Principles of State Policies (sections 64–78): where the state “should” aim.\n- Chapter 7 The National Assembly (sections 79–157): who makes law, spends money and scrutinises government.\n- Chapter 8 The Council of Ministers (sections 158–183): who governs, how they arrive and how they leave.\n- Chapter 9 Conflict of Interests (sections 184–187): no using office for gain.\n- Chapter 10 The Courts (sections 188–199): who decides cases.\n- Chapter 11 The Constitutional Court (sections 200–214): who decides constitutional disputes.\n- Chapter 12 Independent Organs (sections 215–247): who audits politicians and the state.\n- Chapter 13 State Attorney Organ (section 248): who prosecutes for the state.\n- Chapter 14 Local Administration (sections 249–254): how far localities govern themselves.\n- Chapter 15 Amendment (sections 255–256): how these rules change.\n- Chapter 16 National Reform (sections 257–261): what is to be reformed.\n- Transitory Provisions (sections 262–279): the bridge from the old order to the new.\n\nNotice the weights. Chapter 7 alone takes almost 80 sections, so parliamentary numbers and procedure make up a large share of the text itself."
@@ -77,15 +101,21 @@
     },
     {
       "kind": "text",
-      "title": { "th": "แบบแผนที่ 1: แม่แบบขององค์กรตรวจสอบ", "en": "Pattern 1: the watchdog template" },
+      "title": {
+        "th": "แบบแผนที่ 1: แม่แบบขององค์กรตรวจสอบ",
+        "en": "Pattern 1: the watchdog template"
+      },
       "body": {
-        "th": "ศาลรัฐธรรมนูญและองค์กรอิสระเกือบทุกแห่งใช้แม่แบบเดียวกัน เรียนแม่แบบครั้งเดียว แล้วค่อยจำข้อยกเว้น\n- คณะกรรมการสรรหาคัดเลือก (มาตรา 203 และมาตรา 217 ซึ่งให้นำกลไกของมาตรา 203 มาใช้กับองค์กรอิสระ ยกเว้น กสม. ที่การสรรหาเป็นไปตาม พ.ร.ป. ตามมาตรา 246)\n- วุฒิสภาให้ความเห็นชอบ (มาตรา 204 สำหรับศาลรัฐธรรมนูญ และ “ตามคำแนะนำของวุฒิสภา” ในมาตรา 222 มาตรา 228 มาตรา 232 มาตรา 238 มาตรา 246)\n- พระมหากษัตริย์ทรงแต่งตั้ง\n- วาระ 7 ปี ดำรงตำแหน่งได้วาระเดียว (มาตรา 207 มาตรา 223 มาตรา 229 มาตรา 233 มาตรา 239 มาตรา 246)\n\nสิ่งที่ต่างกันคือจำนวนคน ศาลรัฐธรรมนูญ 9 คน กกต. 7 คน ผู้ตรวจการแผ่นดิน 3 คน ป.ป.ช. 9 คน คตง. 7 คน กสม. 7 คน และที่มาย่อยบางส่วน เช่น กกต. 2 ใน 7 คนมาจากการคัดเลือกของที่ประชุมใหญ่ศาลฎีกา (มาตรา 222) ส่วน กสม. ต้องให้ผู้แทนองค์กรเอกชนด้านสิทธิมนุษยชนมีส่วนในการสรรหา (มาตรา 246)\n\nทำไมต้องวาระเดียว คนที่หวังได้ต่อวาระจะเกรงใจคนที่ต่อวาระให้ ตัดวาระที่สองทิ้ง ก็ตัดแรงจูงใจที่จะเอาใจใครทิ้งไปด้วย ทำไมต้อง 7 ปี เพราะยาวกว่าอายุสภาผู้แทนราษฎร (4 ปี) และวุฒิสภา (5 ปี) องค์กรตรวจสอบจึงไม่เกิดและตายไปพร้อมรัฐบาลชุดใดชุดหนึ่ง",
-        "en": "The Constitutional Court and almost every independent organ follow one template. Learn it once, then learn the exceptions.\n- A selection committee shortlists candidates (section 203, and section 217, which applies the section 203 machinery to the independent organs except the human rights commission, whose selection follows its organic act under section 246).\n- The Senate approves (section 204 for the Court, and “on the advice of the Senate” in sections 222, 228, 232, 238 and 246).\n- The King appoints.\n- The term is seven years, and only one term (sections 207, 223, 229, 233, 239, 246).\n\nWhat varies is headcount: Constitutional Court 9, Election Commission 7, Ombudsmen 3, National Anti-Corruption Commission 9, State Audit Commission 7, National Human Rights Commission 7. Some sourcing details vary too: two of the seven election commissioners are chosen by the general assembly of the Supreme Court (section 222), and human rights NGOs must take part in selecting the human rights commissioners (section 246).\n\nWhy a single term? Someone hoping for reappointment will defer to whoever reappoints them. Remove the second term and you remove the incentive to please. Why seven years? It outlasts both the House (four years) and the Senate (five), so a watchdog is not born and buried with any one government."
+        "th": "ศาลรัฐธรรมนูญและองค์กรอิสระเกือบทุกแห่งใช้แม่แบบเดียวกัน เรียนแม่แบบครั้งเดียว แล้วค่อยจำข้อยกเว้น\n- คณะกรรมการสรรหาคัดเลือก (มาตรา 203 และมาตรา 217 ซึ่งให้นำกลไกของมาตรา 203 มาใช้กับองค์กรอิสระ ยกเว้น กสม. ที่การสรรหาเป็นไปตาม พ.ร.ป. ตามมาตรา 246)\n- วุฒิสภาให้ความเห็นชอบ (มาตรา 204 สำหรับศาลรัฐธรรมนูญ และ “ตามคำแนะนำของวุฒิสภา” ในมาตรา 222 มาตรา 228 มาตรา 232 มาตรา 238 มาตรา 246)\n- พระมหากษัตริย์ทรงแต่งตั้ง\n- วาระ 7 ปี ดำรงตำแหน่งได้วาระเดียว (มาตรา 207 มาตรา 223 มาตรา 229 มาตรา 233 มาตรา 239 มาตรา 246)\n\nสิ่งที่ต่างกันคือจำนวนคน ศาลรัฐธรรมนูญ 9 คน กกต. 7 คน ผู้ตรวจการแผ่นดิน 3 คน ป.ป.ช. 9 คน คตง. 7 คน กสม. 7 คน และที่มาย่อยบางส่วน เช่น กกต. 2 ใน 7 คนมาจากการคัดเลือกของที่ประชุมใหญ่ศาลฎีกา (มาตรา 222) ส่วน กสม. ต้องให้ผู้แทนองค์กรเอกชนด้านสิทธิมนุษยชนมีส่วนในการสรรหา (มาตรา 246)\n\nทำไมต้องวาระเดียว คนที่หวังได้ต่อวาระจะเกรงใจคนที่ต่อวาระให้ ตัดวาระที่สองทิ้ง ก็ตัดแรงจูงใจที่จะเอาใจใครทิ้งไปด้วย ทำไมต้อง 7 ปี เพราะยาวกว่าอายุสภาผู้แทนราษฎร (4 ปี) และวุฒิสภา (5 ปี) องค์กรตรวจสอบจึงไม่เกิดและตายไปพร้อมรัฐบาลชุดใดชุดหนึ่ง\n\nข้อควรระวัง: มาตรา 217 ยกเว้น กสม. จากกระบวนการทั่วไป การสรรหา กสม. เป็นไปตาม พ.ร.ป. ตามมาตรา 246 ส่วน กกต. 2 คนมาจากที่ประชุมใหญ่ศาลฎีกาตามมาตรา 222 จึงต้องตรวจวิธีได้มาของแต่ละองค์กรด้วย",
+        "en": "The Constitutional Court and almost every independent organ follow one template. Learn it once, then learn the exceptions.\n- A selection committee shortlists candidates (section 203, and section 217, which applies the section 203 machinery to the independent organs except the human rights commission, whose selection follows its organic act under section 246).\n- The Senate approves (section 204 for the Court, and “on the advice of the Senate” in sections 222, 228, 232, 238 and 246).\n- The King appoints.\n- The term is seven years, and only one term (sections 207, 223, 229, 233, 239, 246).\n\nWhat varies is headcount: Constitutional Court 9, Election Commission 7, Ombudsmen 3, National Anti-Corruption Commission 9, State Audit Commission 7, National Human Rights Commission 7. Some sourcing details vary too: two of the seven election commissioners are chosen by the general assembly of the Supreme Court (section 222), and human rights NGOs must take part in selecting the human rights commissioners (section 246).\n\nWhy a single term? Someone hoping for reappointment will defer to whoever reappoints them. Remove the second term and you remove the incentive to please. Why seven years? It outlasts both the House (four years) and the Senate (five), so a watchdog is not born and buried with any one government.\n\nCaution: section 217 excepts the NHRC from the common process; its selection follows the Organic Act under section 246. Two EC members instead come from the Supreme Court plenary under section 222. Check each body’s specific route."
       }
     },
     {
       "kind": "text",
-      "title": { "th": "แบบแผนที่ 2: กฎหมายประกอบรัฐธรรมนูญ และ “ตามที่กฎหมายบัญญัติ”", "en": "Pattern 2: organic acts and “as provided by law”" },
+      "title": {
+        "th": "แบบแผนที่ 2: กฎหมายประกอบรัฐธรรมนูญ และ “ตามที่กฎหมายบัญญัติ”",
+        "en": "Pattern 2: organic acts and “as provided by law”"
+      },
       "body": {
         "th": "รัฐธรรมนูญเขียนหลัก แล้วส่งรายละเอียดไปให้กฎหมายระดับล่าง มีสองช่องทาง\n\nช่องแรกคือพระราชบัญญัติประกอบรัฐธรรมนูญ มาตรา 130 กำหนดไว้ 10 ฉบับ ว่าด้วยการเลือกตั้ง ส.ส. การได้มาซึ่ง ส.ว. กกต. พรรคการเมือง ผู้ตรวจการแผ่นดิน ป.ป.ช. การตรวจเงินแผ่นดิน วิธีพิจารณาของศาลรัฐธรรมนูญ วิธีพิจารณาคดีอาญาของผู้ดำรงตำแหน่งทางการเมือง และ กสม. กฎหมายกลุ่มนี้มีขั้นตอนพิเศษ ผู้เสนอมีเพียงคณะรัฐมนตรี (โดยข้อเสนอแนะของศาลฎีกา ศาลรัฐธรรมนูญ หรือองค์กรอิสระที่เกี่ยวข้อง) หรือ ส.ส. ไม่น้อยกว่าหนึ่งในสิบ (มาตรา 131) และรัฐสภาพิจารณาในที่ประชุมร่วมกันภายใน 180 วัน (มาตรา 132)\n\nช่องที่สองคือวลี “ตามที่กฎหมายบัญญัติ” ที่โผล่ขึ้นหลายสิบครั้ง หมายความว่ารัฐธรรมนูญวางหลัก แล้วให้พระราชบัญญัติธรรมดาเติมรายละเอียด ความเสี่ยงคือถ้ารัฐสภาไม่ออกกฎหมาย สิทธินั้นอาจค้างอยู่บนกระดาษ มาตรา 25 วรรคสามจึงกันไว้ว่า สิทธิที่ให้เป็นไปตามที่กฎหมายบัญญัติ แม้ยังไม่มีกฎหมาย บุคคลก็ใช้สิทธินั้นได้ตามเจตนารมณ์ของรัฐธรรมนูญ\n\nเวลาอ่านข้อสอบ ถ้าตัวเลือกบอกว่า “ต้องรอให้มีกฎหมายก่อนจึงใช้สิทธิได้” ให้สงสัยทันที",
         "en": "The constitution writes the principle and sends the detail down to lower laws, through two channels.\n\nThe first is the organic act. Section 130 lists ten: on the election of MPs, the selection of senators, the Election Commission, political parties, the Ombudsman, anti-corruption, state audit, Constitutional Court procedure, criminal procedure for political office holders, and the human rights commission. These have a special procedure. Only the Cabinet (on the recommendation of the Supreme Court, the Constitutional Court or the relevant independent organ) or at least one tenth of MPs may propose them (section 131), and Parliament considers them in joint sitting within 180 days (section 132).\n\nThe second channel is the phrase “as provided by law,” which appears dozens of times. The constitution sets the principle and an ordinary Act fills in the detail. The risk is that Parliament never passes the Act and the right stays on paper. Section 25, paragraph three, guards against this: a right that is to be “as provided by law” can still be exercised in line with the constitution's intent even before that law exists.\n\nIn an exam, an option saying “the right cannot be used until a law is passed” should make you suspicious at once."
@@ -93,7 +123,10 @@
     },
     {
       "kind": "text",
-      "title": { "th": "แบบแผนที่ 3: นับเสียงให้ถูกฐาน", "en": "Pattern 3: count votes against the right base" },
+      "title": {
+        "th": "แบบแผนที่ 3: นับเสียงให้ถูกฐาน",
+        "en": "Pattern 3: count votes against the right base"
+      },
       "body": {
         "th": "ตัวเลขเสียงในรัฐธรรมนูญมีสองส่วนเสมอ สัดส่วน กับ ฐาน ส่วนใหญ่คนจำสัดส่วนได้แต่ลืมฐาน\n\nฐานที่พบบ่อยที่สุดคือ “จำนวนสมาชิกทั้งหมดเท่าที่มีอยู่” แปลว่านับทุกคนที่ยังเป็นสมาชิกอยู่ ไม่ใช่เฉพาะคนที่มาประชุม ถ้าสภามีสมาชิก 498 คนเพราะว่างไปสองที่ “มากกว่ากึ่งหนึ่ง” คือ 250 เสียงขึ้นไป ไม่ว่าวันนั้นจะมาประชุมกี่คน\n\nถ้อยคำที่ต้องแยกให้ออก\n- “มากกว่ากึ่งหนึ่ง” เช่น มติเห็นชอบนายกรัฐมนตรี (มาตรา 159) และมติไม่ไว้วางใจ (มาตรา 151)\n- “ไม่น้อยกว่ากึ่งหนึ่ง” เช่น องค์ประชุม (มาตรา 120) และวาระแรกของการแก้รัฐธรรมนูญ (มาตรา 256 (3))\n- “ไม่น้อยกว่าสองในสาม” ใช้กับเรื่องหนักที่สุด เช่น ยืนยันร่างกฎหมายที่ไม่ได้รับพระราชทานคืน (มาตรา 146) และการประกาศสงคราม (มาตรา 177)\n- “เสียงข้างมาก” เฉย ๆ ใช้กับการลงมติทั่วไปของผู้มาประชุม\n\nกฎง่าย ๆ ยิ่งเรื่องย้อนกลับยาก ยิ่งต้องใช้เสียงมาก และยิ่งต้องนับจากฐานสมาชิกทั้งหมด ไม่ใช่ฐานผู้มาประชุม",
         "en": "Every vote threshold in the constitution has two parts: a fraction and a base. Most people remember the fraction and forget the base.\n\nThe most common base is “the total number of existing members,” meaning everyone currently holding a seat, not just those present. If the House has 498 members because two seats are vacant, “more than one half” means 250 votes or more, however many turned up that day.\n\nWording to keep apart:\n- “more than one half”: approving a prime minister (section 159) and passing no confidence (section 151)\n- “not less than one half”: the quorum (section 120) and the first reading of a constitutional amendment (section 256 (3))\n- “not less than two thirds”: the heaviest matters, such as reaffirming a bill the King has not returned with assent (section 146) and declaring war (section 177)\n- plain “majority”: ordinary votes of those present\n\nA simple rule: the harder a decision is to reverse, the more votes it needs, and the more likely the base is total membership rather than those present."
@@ -101,7 +134,10 @@
     },
     {
       "kind": "logic",
-      "title": { "th": "แบบแผนที่ 4: ทุกขั้นมีนาฬิกา", "en": "Pattern 4: every step has a clock" },
+      "title": {
+        "th": "แบบแผนที่ 4: ทุกขั้นมีนาฬิกา",
+        "en": "Pattern 4: every step has a clock"
+      },
       "body": {
         "th": "ลองนึกถึงคนที่อยากล้มกฎหมายฉบับหนึ่งโดยไม่ต้องลงมติคัดค้าน วิธีง่ายที่สุดคือดองไว้ไม่พิจารณา รัฐธรรมนูญรู้ทันจึงใส่นาฬิกาไว้เกือบทุกขั้น และหลายจุดใส่ผล “ถือว่าเห็นชอบ” ไว้ด้วย\n- งบประมาณ: สภาผู้แทนราษฎรต้องพิจารณาให้เสร็จใน 105 วัน วุฒิสภา 20 วัน และแก้ไขอะไรไม่ได้ (มาตรา 143)\n- พระราชบัญญัติประกอบรัฐธรรมนูญ: รัฐสภาต้องเสร็จใน 180 วัน ถ้าไม่เสร็จให้ถือว่าเห็นชอบตามร่างที่เสนอ (มาตรา 132)\n- ร่างกฎหมายที่ผ่านรัฐสภา: นายกรัฐมนตรีรอ 5 วัน แล้วนำขึ้นทูลเกล้าทูลกระหม่อมถวายภายใน 20 วัน (มาตรา 145)\n- ร่างแก้รัฐธรรมนูญที่ถูกโต้แย้ง: ศาลรัฐธรรมนูญต้องวินิจฉัยใน 30 วัน (มาตรา 256 (9))\n- ยุบสภา: กกต. ประกาศวันเลือกตั้งภายใน 5 วัน และวันเลือกตั้งต้องอยู่ระหว่าง 45 ถึง 60 วัน (มาตรา 103)\n\nเมื่อเจอข้อสอบตัวเลขวัน ให้ถามว่า นาฬิกานี้กันใครไม่ให้ถ่วงเวลา คำตอบจะช่วยให้จำได้ว่ากำหนดเวลายาวหรือสั้น งานใหญ่ที่ต้องอ่านละเอียดได้เวลายาว งานที่เป็นเพียงการรับรองหรือส่งต่อได้เวลาสั้น",
         "en": "Imagine someone who wants to kill a bill without ever voting against it. The easy way is to sit on it. The constitution anticipates this and puts a clock on almost every step, often with a “deemed approved” consequence.\n- Budget: the House must finish within 105 days, the Senate within 20, and the Senate may not amend it (section 143).\n- Organic acts: Parliament must finish within 180 days, or the bill is deemed approved as proposed (section 132).\n- A bill passed by Parliament: the prime minister waits 5 days, then presents it to the King within 20 days (section 145).\n- A challenged constitutional amendment: the Constitutional Court must rule within 30 days (section 256 (9)).\n- Dissolution: the Election Commission announces polling day within 5 days, and polling day must fall between 45 and 60 days out (section 103).\n\nWhen an exam asks about a number of days, ask who this clock stops from stalling. The answer helps you recall whether the deadline is long or short. Big work that needs careful reading gets long clocks. Steps that only confirm or forward something get short ones."
@@ -109,7 +145,10 @@
     },
     {
       "kind": "text",
-      "title": { "th": "แบบแผนที่ 5: บทเฉพาะกาลมีวันหมดอายุ", "en": "Pattern 5: transitory provisions expire" },
+      "title": {
+        "th": "แบบแผนที่ 5: บทเฉพาะกาลมีวันหมดอายุ",
+        "en": "Pattern 5: transitory provisions expire"
+      },
       "body": {
         "th": "มาตรา 262 ถึงมาตรา 279 เป็นสะพานชั่วคราวจากช่วงรัฐบาล คสช. สู่ระบบตามรัฐธรรมนูญ หลายข้อใช้หมดไปแล้ว เรื่องนี้เป็นกับดัก เพราะคนที่อ่านตำราเก่าจะตอบตามสภาพที่ไม่มีแล้ว\n- วุฒิสภาชุดแรก 250 คนที่แต่งตั้งตามคำแนะนำของ คสช. มีอายุ 5 ปี (มาตรา 269) ครบวาระในปี 2567 วุฒิสภาปัจจุบันเป็นแบบ 200 คนที่มาจากการเลือกกันเองตามมาตรา 107\n- อำนาจของที่ประชุมร่วมสองสภาในการเห็นชอบนายกรัฐมนตรี ใช้เฉพาะห้าปีแรกนับแต่มีรัฐสภาชุดแรก (มาตรา 272) ปัจจุบันกลับไปใช้มาตรา 159 คือสภาผู้แทนราษฎรลงมติฝ่ายเดียว\n- บางมาตรายังมีผลต่อเนื่อง เช่น มาตรา 279 ที่รับรองให้ประกาศและคำสั่งของ คสช. ที่ใช้บังคับอยู่ ยังมีผลจนกว่าจะถูกยกเลิกหรือแก้ไขตามวิธีที่มาตรานั้นกำหนด\n\nวิธีอ่าน: ทุกครั้งที่เจอมาตราในบทเฉพาะกาล ให้หาคำว่า “ในวาระเริ่มแรก” “ห้าปีแรก” หรือ “ภายใน…วันนับแต่วันประกาศใช้” แล้วถามว่าเวลานั้นผ่านไปแล้วหรือยัง",
         "en": "Sections 262 to 279 are a temporary bridge from the NCPO junta period to constitutional government. Many have already run out. This is a trap, because anyone reading an old textbook will answer for a situation that no longer exists.\n- The first Senate of 250 members, appointed on the NCPO's recommendation, had a five-year life (section 269) and ended in 2024. Today's Senate is the 200-member body chosen by self-selection under section 107.\n- The joint sitting's power to approve the prime minister applied only for the first five years after the first Parliament met (section 272). Today section 159 applies: the House votes alone.\n- Some provisions still operate, such as section 279, which keeps NCPO announcements and orders in force until they are repealed or amended by the route that section sets.\n\nHow to read: whenever you meet a transitory section, look for “initially,” “the first five years” or “within … days of promulgation,” and ask whether that time has already passed."
@@ -117,7 +156,10 @@
     },
     {
       "kind": "case",
-      "title": { "th": "ปี 2565: นับแปดปีของนายกรัฐมนตรีเริ่มเมื่อใด", "en": "2022: when does a prime minister's eight years start?" },
+      "title": {
+        "th": "ปี 2565: นับแปดปีของนายกรัฐมนตรีเริ่มเมื่อใด",
+        "en": "2022: when does a prime minister's eight years start?"
+      },
       "year": 2022,
       "body": {
         "th": "มาตรา 158 วรรคสี่ห้ามนายกรัฐมนตรีดำรงตำแหน่งรวมกันเกินแปดปี พลเอกประยุทธ์ จันทร์โอชา เป็นนายกรัฐมนตรีครั้งแรกในเดือนสิงหาคม 2557 ภายใต้รัฐธรรมนูญฉบับชั่วคราว ฝ่ายค้านจึงยื่นให้ศาลรัฐธรรมนูญวินิจฉัยว่าครบแปดปีในเดือนสิงหาคม 2565 แล้ว\n\nวันที่ 30 กันยายน 2565 ศาลรัฐธรรมนูญมีมติ 6 ต่อ 3 ว่ายังไม่ครบ โดยให้นับตั้งแต่วันที่ 6 เมษายน 2560 ซึ่งเป็นวันประกาศใช้รัฐธรรมนูญฉบับนี้ เหตุผลหลักคือมาตรา 264 ทำให้คณะรัฐมนตรีที่อยู่ในวันก่อนประกาศใช้เป็นคณะรัฐมนตรีตามรัฐธรรมนูญนี้ และข้อจำกัดแปดปีเป็นบทบัญญัติที่เกิดขึ้นพร้อมรัฐธรรมนูญนี้ จึงไม่ย้อนไปนับช่วงก่อนหน้า\n\nฝ่ายที่วิจารณ์ชี้ว่าเจตนาของข้อจำกัดแปดปีคือกันการผูกขาดอำนาจ การนับใหม่จากปี 2560 ทำให้ผู้ที่อยู่ในตำแหน่งมาแล้วเกือบสามปีได้เวลาเพิ่ม ส่วนฝ่ายที่เห็นด้วยกับศาลให้เหตุผลเรื่องหลักไม่ใช้กฎหมายย้อนหลังที่เป็นโทษ\n\nสำหรับผู้สอบ บทเรียนคือคำถามเรื่องกำหนดเวลา ต้องดูให้ออกด้วยว่า “เริ่มนับเมื่อใด” และ “อะไรไม่นับ” มาตรา 158 เองก็เขียนว่าไม่นับช่วงที่อยู่รักษาการหลังพ้นตำแหน่ง",
@@ -126,7 +168,10 @@
     },
     {
       "kind": "case",
-      "title": { "th": "ปี 2567: นายกรัฐมนตรีพ้นตำแหน่งเพราะมาตรฐานจริยธรรม", "en": "2024: a prime minister removed over ethical standards" },
+      "title": {
+        "th": "ปี 2567: นายกรัฐมนตรีพ้นตำแหน่งเพราะมาตรฐานจริยธรรม",
+        "en": "2024: a prime minister removed over ethical standards"
+      },
       "year": 2024,
       "body": {
         "th": "คดีนี้แสดงให้เห็นว่ามาตราที่ดูไกลกันหลายมาตราต่อกันเป็นโซ่เดียว\n- มาตรา 160 (4) และ (5) รัฐมนตรีต้องซื่อสัตย์สุจริตเป็นที่ประจักษ์ และไม่ฝ่าฝืนมาตรฐานทางจริยธรรมอย่างร้ายแรง\n- มาตรา 170 (4) ความเป็นรัฐมนตรีสิ้นสุดลงเมื่อขาดคุณสมบัติตามมาตรา 160\n- มาตรา 170 วรรคสาม ให้นำมาตรา 82 มาใช้ คือสมาชิกหนึ่งในสิบของสภาเข้าชื่อร้องต่อประธานสภา แล้วส่งศาลรัฐธรรมนูญ\n\nปี 2567 สมาชิกวุฒิสภากลุ่มหนึ่งเข้าชื่อร้องว่า นายเศรษฐา ทวีสิน แต่งตั้งนายพิชิต ชื่นบาน เป็นรัฐมนตรี ทั้งที่นายพิชิตเคยต้องโทษจำคุกฐานละเมิดอำนาจศาลในปี 2551 วันที่ 14 สิงหาคม 2567 ศาลรัฐธรรมนูญมีมติ 5 ต่อ 4 ว่าความเป็นรัฐมนตรีของนายกรัฐมนตรีสิ้นสุดลง โดยเห็นว่าการแต่งตั้งนั้นขาดความซื่อสัตย์สุจริตเป็นที่ประจักษ์และฝ่าฝืนมาตรฐานทางจริยธรรมอย่างร้ายแรง เมื่อนายกรัฐมนตรีพ้นตำแหน่ง คณะรัฐมนตรีทั้งคณะก็พ้นตามไปด้วย (มาตรา 167 (1))\n\nฝ่ายสนับสนุนมองว่านี่คือหลักนิติธรรมทำงาน คนในตำแหน่งสูงสุดก็ต้องรับผิดชอบการแต่งตั้งของตน ฝ่ายวิจารณ์ชี้ว่าเกณฑ์ “ซื่อสัตย์สุจริตเป็นที่ประจักษ์” และ “จริยธรรมร้ายแรง” กว้างมาก ทำให้ศาลซึ่งไม่ได้มาจากการเลือกตั้งมีอำนาจปลดหัวหน้ารัฐบาลด้วยเกณฑ์ที่ประเมินได้หลายทาง มติที่ห่างกันเพียงเสียงเดียวสะท้อนว่าแม้ในหมู่ตุลาการเองก็อ่านเกณฑ์นี้ต่างกัน",
@@ -135,7 +180,10 @@
     },
     {
       "kind": "case",
-      "title": { "th": "ปี 2564: รัฐสภาเขียนรัฐธรรมนูญใหม่ทั้งฉบับได้หรือไม่", "en": "2021: can Parliament write a whole new constitution?" },
+      "title": {
+        "th": "ปี 2564: รัฐสภาเขียนรัฐธรรมนูญใหม่ทั้งฉบับได้หรือไม่",
+        "en": "2021: can Parliament write a whole new constitution?"
+      },
       "year": 2021,
       "ref": "คำวินิจฉัยศาลรัฐธรรมนูญที่ 4/2564",
       "body": {
@@ -145,7 +193,10 @@
     },
     {
       "kind": "text",
-      "title": { "th": "20 ฉบับใน 90 ปี: ความมั่นคงกับความชอบธรรม", "en": "Twenty charters in ninety years: stability versus legitimacy" },
+      "title": {
+        "th": "20 ฉบับใน 90 ปี: ความมั่นคงกับความชอบธรรม",
+        "en": "Twenty charters in ninety years: stability versus legitimacy"
+      },
       "body": {
         "th": "นับจากปี 2475 ประเทศไทยมีรัฐธรรมนูญมาแล้ว 20 ฉบับ รวมฉบับชั่วคราว ฉบับปัจจุบันคือฉบับที่ 20 ตัวเลขนี้บอกอะไรผู้สอบได้บ้าง\n\nข้อแรก รัฐธรรมนูญแต่ละฉบับเขียนขึ้นเพื่อแก้ปัญหาของฉบับก่อน ฉบับ 2540 มุ่งให้รัฐบาลเข้มแข็งและสร้างองค์กรอิสระ ฉบับ 2550 และ 2560 เพิ่มกลไกตรวจสอบนักการเมืองให้หนักขึ้น หลังเกิดความขัดแย้งเรื่องรัฐบาลพรรคใหญ่ ถ้าคุณเข้าใจว่าผู้ร่างกลัวอะไร คุณจะเดาได้ว่ามาตรานั้นเข้มเพราะอะไร\n\nข้อสอง ฉบับที่อยู่ได้นานต้องมีทั้งความมั่นคงและความชอบธรรม แก้ง่ายเกินไป กติกาจะเปลี่ยนตามผู้ชนะทุกครั้ง แก้ยากเกินไป คนที่ไม่เห็นด้วยจะหาทางออกนอกระบบ มาตรา 256 ของฉบับนี้เลือกอยู่ฝั่งแก้ยาก โดยวาระแรกและวาระสามต้องมี ส.ว. เห็นชอบไม่น้อยกว่าหนึ่งในสาม และวาระสามต้องมี ส.ส. จากพรรคที่ไม่ได้ร่วมรัฐบาลเห็นชอบไม่น้อยกว่าร้อยละยี่สิบ\n\nข้อสาม ความชอบธรรมไม่ได้มาจากตัวอักษรอย่างเดียว แต่มาจากกระบวนการที่คนยอมรับ นี่คือเหตุที่ประชามติปรากฏทั้งในการได้มาของฉบับนี้ (ปี 2559) และในเงื่อนไขการแก้ไขบางเรื่องตามมาตรา 256 (8)",
         "en": "Since 1932 Thailand has had 20 constitutions, counting interim charters. The current one is the twentieth. What does that number teach a student?\n\nFirst, each charter was written to fix what its drafters saw as the failures of the last. The 1997 charter aimed for strong governments and created the independent organs. The 2007 and 2017 charters added heavier checks on politicians after conflicts over dominant elected parties. If you understand what the drafters feared, you can guess why a section is strict.\n\nSecond, a charter that lasts needs both stability and legitimacy. Too easy to amend, and the rules change with every winner. Too hard, and those who disagree look for exits outside the system. Section 256 of this charter leans towards hard: the first and third readings each need at least one third of senators, and the third reading also needs at least 20 percent of MPs from parties outside government.\n\nThird, legitimacy does not come from text alone. It comes from a process people accept. That is why a referendum appears both in how this charter came into being (2016) and in the conditions for certain amendments under section 256 (8)."
@@ -153,7 +204,10 @@
     },
     {
       "kind": "critique",
-      "title": { "th": "ข้อวิจารณ์: รัฐธรรมนูญเพื่อคุมนักการเมือง หรือเพื่อคุมเสียงข้างมาก", "en": "Critique: designed to restrain politicians, or to restrain the majority?" },
+      "title": {
+        "th": "ข้อวิจารณ์: รัฐธรรมนูญเพื่อคุมนักการเมือง หรือเพื่อคุมเสียงข้างมาก",
+        "en": "Critique: designed to restrain politicians, or to restrain the majority?"
+      },
       "by": "Khemthong Tonsakulrungruang (2017); Apipol Sae-Tung (2025); ผู้ร่างรัฐธรรมนูญ 2560 / the 2017 drafters",
       "body": {
         "th": "ฝ่ายผู้ร่างให้เหตุผลว่า การเมืองไทยก่อนปี 2557 ติดอยู่ในวงจรทุจริตและความขัดแย้ง จึงต้องมีมาตรฐานจริยธรรม องค์กรอิสระที่เข้มแข็ง ยุทธศาสตร์ชาติ และบทเฉพาะกาลที่ค่อย ๆ ส่งผ่านอำนาจ เพื่อให้ระบบนิ่งก่อนเปิดเต็มที่\n\nนักวิชาการหลายคนมองต่าง เขมทอง ตันสกุลรุ่งเรือง เสนอในบทความ Entrenching the Minority (2017) ว่าตั้งแต่ปี 2549 ศาลรัฐธรรมนูญใช้ถ้อยคำเรื่องหลักนิติธรรมตรวจสอบนักการเมืองที่มาจากการเลือกตั้งในแบบที่เป็นผลดีกับชนชั้นนำส่วนน้อย และทำให้ความเชื่อมั่นว่าศาลเป็นกรรมการที่เป็นกลางลดลง อภิพล แซ่ตั้ง ในบทความเรื่อง juridification (2025) เสนอว่าหลังรัฐประหาร 2557 รัฐบาลทหารใช้รัฐธรรมนูญ 2560 และยุทธศาสตร์ชาติเป็นเครื่องมือทางกฎหมายเพื่อสร้างความชอบธรรมและรักษาสถานะเดิม\n\nข้อวิจารณ์ที่ถูกยกบ่อยในวงกว้างคือ บทบาทของวุฒิสภาแต่งตั้ง 250 คนในการเลือกนายกรัฐมนตรีช่วงห้าปีแรก (มาตรา 272) ความยากของการแก้ไขตามมาตรา 256 และการที่ยุทธศาสตร์ชาติ (มาตรา 65) ผูกรัฐบาลในอนาคต\n\nเวลาตอบข้อสอบเชิงวิเคราะห์ ให้วางทั้งเหตุผลของผู้ร่างและข้อวิจารณ์คู่กัน และระบุว่าใครเป็นผู้เสนอ ไม่ต้องตัดสินแทนผู้อ่าน",
@@ -162,7 +216,10 @@
     },
     {
       "kind": "logic",
-      "title": { "th": "เปลี่ยนข้อสอบทุกข้อให้เป็นโจทย์ตรรกะ", "en": "Turn any exam question into a logic question" },
+      "title": {
+        "th": "เปลี่ยนข้อสอบทุกข้อให้เป็นโจทย์ตรรกะ",
+        "en": "Turn any exam question into a logic question"
+      },
       "body": {
         "th": "เวลาเจอข้อสอบที่ไม่แน่ใจ ให้ถามสี่คำถามตามลำดับ\n- ใครทำ: องค์กรนี้มาจากประชาชนโดยตรง มาจากการสรรหา หรือเป็นศาล อำนาจที่ถามสอดคล้องกับที่มาของเขาหรือไม่\n- ทำอะไร: เป็นการมอบอำนาจ การได้มาซึ่งอำนาจ หรือการหยุดอำนาจ\n- ด้วยเสียงเท่าไร: เรื่องนี้ย้อนกลับได้ง่ายหรือยาก ถ้ายาก เสียงต้องสูงและนับจากฐานสมาชิกทั้งหมด\n- ภายในเวลาเท่าไร: นาฬิกานี้กันใครไม่ให้ถ่วง ใครเริ่มนับ ถ้าไม่ทันเกิดอะไร\n\nตัวอย่าง: “วุฒิสภามีอำนาจลงมติไม่ไว้วางใจนายกรัฐมนตรี” ถามข้อแรก วุฒิสภาไม่ได้มาจากการเลือกตั้งโดยประชาชนทั่วไป ข้อสอง การไม่ไว้วางใจคือการหยุดอำนาจของรัฐบาล ในระบบรัฐสภาอำนาจนี้ต้องอยู่กับสภาที่ประชาชนเลือก ข้อความนี้จึงผิด และมาตรา 151 ยืนยันว่าเป็นอำนาจของ ส.ส.\n\nตรรกะไม่ได้แทนการอ่านตัวบท แต่มันบอกว่าควรสงสัยตรงไหน แล้วคุณค่อยกลับไปยืนยันด้วยมาตรา",
         "en": "When unsure about a question, ask four things in order:\n- Who acts? Is this body directly elected, selected by committee, or a court? Does the power asked about fit its source?\n- What does it do? Grant power, set the route to power, or stop power?\n- With how many votes? Is the decision easy or hard to reverse? If hard, the threshold will be high and counted on total membership.\n- Within what time? Who does the clock stop from stalling, when does it start, and what happens if it runs out?\n\nExample: “The Senate may pass a vote of no confidence in the prime minister.” First question: the Senate is not elected by the general public. Second: no confidence stops the government's power, and in a parliamentary system that belongs to the chamber the people elect. So the statement is false, and section 151 confirms the power belongs to MPs.\n\nLogic does not replace reading the text. It tells you where to be suspicious, and then you confirm with the section."
@@ -170,38 +227,235 @@
     },
     {
       "kind": "numbers",
-      "title": { "th": "ตัวเลขสำคัญทั้งฉบับ", "en": "The key numbers across the whole constitution" },
+      "title": {
+        "th": "ตัวเลขสำคัญทั้งฉบับ",
+        "en": "The key numbers across the whole constitution"
+      },
       "rows": [
-        { "th": "จำนวนมาตรา / หมวด", "en": "Sections / chapters", "value": "279 มาตรา, 16 หมวด + บทเฉพาะกาล / 279 sections, 16 chapters + transitory", "sections": [] },
-        { "th": "สมาชิกสภาผู้แทนราษฎร (เขต + บัญชีรายชื่อ)", "en": "MPs (constituency + party list)", "value": "500 = 400 + 100", "sections": [83] },
-        { "th": "อายุสภาผู้แทนราษฎร", "en": "Term of the House", "value": "4 ปี / years", "sections": [99] },
-        { "th": "สมาชิกวุฒิสภา / อายุวุฒิสภา", "en": "Senators / Senate term", "value": "200 คน, 5 ปี / 200, 5 years", "sections": [107, 109] },
-        { "th": "วุฒิสภาชุดแรก (หมดอายุแล้ว)", "en": "First Senate (expired)", "value": "250 คน, 5 ปี / 250, 5 years", "sections": [269] },
-        { "th": "คณะรัฐมนตรี", "en": "Council of Ministers", "value": "นายกฯ + ไม่เกิน 35 / PM + up to 35", "sections": [158] },
-        { "th": "นายกรัฐมนตรีดำรงตำแหน่งรวมกัน", "en": "Prime minister's total time in office", "value": "ไม่เกิน 8 ปี / max 8 years", "sections": [158] },
-        { "th": "รายชื่อแคนดิเดตนายกฯ ต่อพรรค", "en": "PM candidates per party", "value": "ไม่เกิน 3 / up to 3", "sections": [88] },
-        { "th": "พรรคที่เสนอชื่อนายกฯ ได้ / ผู้รับรองการเสนอชื่อ", "en": "Party eligible to nominate PM / seconders", "value": "ส.ส. ≥ 5% / ≥ 1/10 ของ ส.ส. / MPs ≥ 5% / ≥ 1/10 of MPs", "sections": [159] },
-        { "th": "มติเห็นชอบนายกรัฐมนตรี", "en": "Vote to approve a prime minister", "value": "> 1/2 ของ ส.ส. ทั้งหมดเท่าที่มีอยู่ (เปิดเผย) / > 1/2 of all MPs (open vote)", "sections": [159] },
-        { "th": "ญัตติไม่ไว้วางใจ: ผู้เข้าชื่อ / มติ", "en": "No confidence: to file / to pass", "value": "≥ 1/5 / > 1/2", "sections": [151] },
-        { "th": "ศาลรัฐธรรมนูญ: จำนวน / องค์คณะ / วาระ", "en": "Constitutional Court: judges / quorum / term", "value": "9 / ≥ 7 / 7 ปีวาระเดียว / 9 / 7 / single 7 years", "sections": [200, 211, 207] },
-        { "th": "กกต. / ผู้ตรวจการแผ่นดิน / ป.ป.ช. / คตง. / กสม.", "en": "EC / Ombudsmen / NACC / State Audit / NHRC", "value": "7 / 3 / 9 / 7 / 7", "sections": [222, 228, 232, 238, 246] },
-        { "th": "วาระองค์กรอิสระ", "en": "Independent organ terms", "value": "7 ปี วาระเดียว / single 7-year term", "sections": [223, 229, 233, 239, 246] },
-        { "th": "องคมนตรี", "en": "Privy Council", "value": "ประธาน 1 + ไม่เกิน 18 / President + up to 18", "sections": [10] },
-        { "th": "อายุ: ผู้มีสิทธิเลือกตั้ง / ส.ส. / รัฐมนตรี / ส.ว.", "en": "Age: voter / MP / minister / senator", "value": "18 / 25 / 35 / 40", "sections": [95, 97, 160, 108] },
-        { "th": "อายุ: ตุลาการศาลรัฐธรรมนูญ / องค์กรอิสระ", "en": "Age: Constitutional Court judge / independent organ", "value": "45 ถึงไม่ถึง 68 (พ้นเมื่อ 75) / 45–70 / 45 to under 68 (out at 75) / 45–70", "sections": [201, 208, 216] },
-        { "th": "เลือกตั้งหลังสภาครบวาระ / หลังยุบสภา", "en": "Election after term ends / after dissolution", "value": "ภายใน 45 วัน / 45–60 วัน / within 45 days / 45–60 days", "sections": [102, 103] },
-        { "th": "สมัยประชุมสามัญ", "en": "Ordinary sessions", "value": "ปีละ 2 สมัย สมัยละ 120 วัน / 2 a year, 120 days each", "sections": [121] },
-        { "th": "งบประมาณ: สภาผู้แทนฯ / วุฒิสภา", "en": "Budget: House / Senate", "value": "105 วัน / 20 วัน / 105 days / 20 days", "sections": [143] },
-        { "th": "ร่างกฎหมายที่ไม่ได้รับพระราชทานคืน", "en": "Bill not returned with assent", "value": "90 วัน, ยืนยัน ≥ 2/3, 30 วัน / 90 days, reaffirm ≥ 2/3, 30 days", "sections": [146] },
-        { "th": "พ.ร.ป. ตามรัฐธรรมนูญ / เวลาพิจารณา", "en": "Organic acts / time to pass", "value": "10 ฉบับ / 180 วัน / 10 / 180 days", "sections": [130, 132] },
-        { "th": "ผู้เสนอแก้รัฐธรรมนูญ", "en": "Who may propose an amendment", "value": "ครม. / ส.ส. 1/5 / ส.ส.+ส.ว. 1/5 / ประชาชน 50,000 / Cabinet, 1/5 MPs, 1/5 both houses, 50,000 voters", "sections": [256] },
-        { "th": "ประกาศสงคราม", "en": "Declaring war", "value": "≥ 2/3 ของสองสภา / ≥ 2/3 of both houses", "sections": [177] },
-        { "th": "การศึกษาที่รัฐต้องจัดให้เด็ก", "en": "Schooling the state must provide", "value": "12 ปี / 12 years", "sections": [54] }
+        {
+          "th": "จำนวนมาตรา / หมวด",
+          "en": "Sections / chapters",
+          "value": "279 มาตรา, 16 หมวด + บทเฉพาะกาล / 279 sections, 16 chapters + transitory",
+          "sections": []
+        },
+        {
+          "th": "สมาชิกสภาผู้แทนราษฎร (เขต + บัญชีรายชื่อ)",
+          "en": "MPs (constituency + party list)",
+          "value": "500 = 400 + 100",
+          "sections": [
+            83
+          ]
+        },
+        {
+          "th": "อายุสภาผู้แทนราษฎร",
+          "en": "Term of the House",
+          "value": "4 ปี / years",
+          "sections": [
+            99
+          ]
+        },
+        {
+          "th": "สมาชิกวุฒิสภา / อายุวุฒิสภา",
+          "en": "Senators / Senate term",
+          "value": "200 คน, 5 ปี / 200, 5 years",
+          "sections": [
+            107,
+            109
+          ]
+        },
+        {
+          "th": "วุฒิสภาชุดแรก (หมดอายุแล้ว)",
+          "en": "First Senate (expired)",
+          "value": "250 คน, 5 ปี / 250, 5 years",
+          "sections": [
+            269
+          ]
+        },
+        {
+          "th": "คณะรัฐมนตรี",
+          "en": "Council of Ministers",
+          "value": "นายกฯ + ไม่เกิน 35 / PM + up to 35",
+          "sections": [
+            158
+          ]
+        },
+        {
+          "th": "นายกรัฐมนตรีดำรงตำแหน่งรวมกัน",
+          "en": "Prime minister's total time in office",
+          "value": "ไม่เกิน 8 ปี / max 8 years",
+          "sections": [
+            158
+          ]
+        },
+        {
+          "th": "รายชื่อแคนดิเดตนายกฯ ต่อพรรค",
+          "en": "PM candidates per party",
+          "value": "ไม่เกิน 3 / up to 3",
+          "sections": [
+            88
+          ]
+        },
+        {
+          "th": "พรรคที่เสนอชื่อนายกฯ ได้ / ผู้รับรองการเสนอชื่อ",
+          "en": "Party eligible to nominate PM / seconders",
+          "value": "ส.ส. ≥ 5% / ≥ 1/10 ของ ส.ส. / MPs ≥ 5% / ≥ 1/10 of MPs",
+          "sections": [
+            159
+          ]
+        },
+        {
+          "th": "มติเห็นชอบนายกรัฐมนตรี",
+          "en": "Vote to approve a prime minister",
+          "value": "> 1/2 ของ ส.ส. ทั้งหมดเท่าที่มีอยู่ (เปิดเผย) / > 1/2 of all MPs (open vote)",
+          "sections": [
+            159
+          ]
+        },
+        {
+          "th": "ญัตติไม่ไว้วางใจ: ผู้เข้าชื่อ / มติ",
+          "en": "No confidence: to file / to pass",
+          "value": "≥ 1/5 / > 1/2",
+          "sections": [
+            151
+          ]
+        },
+        {
+          "th": "ศาลรัฐธรรมนูญ: จำนวน / องค์คณะ / วาระ",
+          "en": "Constitutional Court: judges / quorum / term",
+          "value": "9 / ≥ 7 / 7 ปีวาระเดียว / 9 / 7 / single 7 years",
+          "sections": [
+            200,
+            211,
+            207
+          ]
+        },
+        {
+          "th": "กกต. / ผู้ตรวจการแผ่นดิน / ป.ป.ช. / คตง. / กสม.",
+          "en": "EC / Ombudsmen / NACC / State Audit / NHRC",
+          "value": "7 / 3 / 9 / 7 / 7",
+          "sections": [
+            222,
+            228,
+            232,
+            238,
+            246
+          ]
+        },
+        {
+          "th": "วาระองค์กรอิสระ",
+          "en": "Independent organ terms",
+          "value": "7 ปี วาระเดียว / single 7-year term",
+          "sections": [
+            223,
+            229,
+            233,
+            239,
+            246
+          ]
+        },
+        {
+          "th": "องคมนตรี",
+          "en": "Privy Council",
+          "value": "ประธาน 1 + ไม่เกิน 18 / President + up to 18",
+          "sections": [
+            10
+          ]
+        },
+        {
+          "th": "อายุ: ผู้มีสิทธิเลือกตั้ง / ส.ส. / รัฐมนตรี / ส.ว.",
+          "en": "Age: voter / MP / minister / senator",
+          "value": "18 / 25 / 35 / 40",
+          "sections": [
+            95,
+            97,
+            160,
+            108
+          ]
+        },
+        {
+          "th": "อายุ: ตุลาการศาลรัฐธรรมนูญ / องค์กรอิสระ",
+          "en": "Age: Constitutional Court judge / independent organ",
+          "value": "45 ถึงไม่ถึง 68 (พ้นเมื่อ 75) / 45–70 / 45 to under 68 (out at 75) / 45–70",
+          "sections": [
+            201,
+            208,
+            216
+          ]
+        },
+        {
+          "th": "เลือกตั้งหลังสภาครบวาระ / หลังยุบสภา",
+          "en": "Election after term ends / after dissolution",
+          "value": "ภายใน 45 วัน / 45–60 วัน / within 45 days / 45–60 days",
+          "sections": [
+            102,
+            103
+          ]
+        },
+        {
+          "th": "สมัยประชุมสามัญ",
+          "en": "Ordinary sessions",
+          "value": "ปีละ 2 สมัย สมัยละ 120 วัน / 2 a year, 120 days each",
+          "sections": [
+            121
+          ]
+        },
+        {
+          "th": "งบประมาณ: สภาผู้แทนฯ / วุฒิสภา",
+          "en": "Budget: House / Senate",
+          "value": "105 วัน / 20 วัน / 105 days / 20 days",
+          "sections": [
+            143
+          ]
+        },
+        {
+          "th": "ร่างกฎหมายที่ไม่ได้รับพระราชทานคืน",
+          "en": "Bill not returned with assent",
+          "value": "90 วัน, ยืนยัน ≥ 2/3, 30 วัน / 90 days, reaffirm ≥ 2/3, 30 days",
+          "sections": [
+            146
+          ]
+        },
+        {
+          "th": "พ.ร.ป. ตามรัฐธรรมนูญ / เวลาพิจารณา",
+          "en": "Organic acts / time to pass",
+          "value": "10 ฉบับ / 180 วัน / 10 / 180 days",
+          "sections": [
+            130,
+            132
+          ]
+        },
+        {
+          "th": "ผู้เสนอแก้รัฐธรรมนูญ",
+          "en": "Who may propose an amendment",
+          "value": "ครม. / ส.ส. 1/5 / ส.ส.+ส.ว. 1/5 / ประชาชน 50,000 / Cabinet, 1/5 MPs, 1/5 both houses, 50,000 voters",
+          "sections": [
+            256
+          ]
+        },
+        {
+          "th": "ประกาศสงคราม",
+          "en": "Declaring war",
+          "value": "≥ 2/3 ของสองสภา / ≥ 2/3 of both houses",
+          "sections": [
+            177
+          ]
+        },
+        {
+          "th": "การศึกษาที่รัฐต้องจัดให้เด็ก",
+          "en": "Schooling the state must provide",
+          "value": "12 ปี / 12 years",
+          "sections": [
+            54
+          ]
+        }
       ]
     },
     {
       "kind": "mnemonic",
-      "title": { "th": "บันได 4-5-7-8", "en": "The 4-5-7-8 ladder" },
+      "title": {
+        "th": "บันได 4-5-7-8",
+        "en": "The 4-5-7-8 ladder"
+      },
       "body": {
         "th": "สี่ตัวเลขนี้เรียงจากใกล้ประชาชนที่สุดไปหาข้อจำกัดอำนาจ\n- 4 ปี สภาผู้แทนราษฎร (มาตรา 99) สั้นที่สุด เพราะต้องกลับไปหาประชาชนบ่อยที่สุด\n- 5 ปี วุฒิสภา (มาตรา 109) ยาวกว่าเล็กน้อย เพื่อไม่ให้สภาที่สองเปลี่ยนพร้อมสภาแรก\n- 7 ปี องค์กรตรวจสอบ วาระเดียว (มาตรา 207 มาตรา 223) ยาวกว่าทั้งสองสภา เพื่อไม่ให้ผูกกับรัฐบาลใด\n- 8 ปี เพดานนายกรัฐมนตรี (มาตรา 158) เป็นเพดานรวม ไม่ใช่วาระ\n\nจำว่า “สี่เลือก ห้ากลั่น เจ็ดตรวจ แปดหยุด”",
         "en": "These four numbers run from closest-to-the-voters to the limit on power:\n- 4 years, the House (section 99): shortest, because it must return to the people most often.\n- 5 years, the Senate (section 109): a little longer, so the second chamber does not turn over with the first.\n- 7 years, single term, the watchdogs (sections 207, 223): longer than both chambers, so they belong to no single government.\n- 8 years, the prime minister's cap (section 158): a lifetime total, not a term.\n\nRemember it as “four to elect, five to review, seven to audit, eight to stop.”"
@@ -209,7 +463,10 @@
     },
     {
       "kind": "mnemonic",
-      "title": { "th": "หนึ่งในสิบ กับ หนึ่งในห้า", "en": "One tenth versus one fifth" },
+      "title": {
+        "th": "หนึ่งในสิบ กับ หนึ่งในห้า",
+        "en": "One tenth versus one fifth"
+      },
       "body": {
         "th": "สองเศษส่วนนี้โผล่ซ้ำหลายสิบครั้ง ใช้หลักนี้ช่วยจำ\n- หนึ่งในสิบ คือ “ส่งเรื่อง/ตั้งคำถาม” เช่น ร้องว่าสมาชิกภาพสิ้นสุด (มาตรา 82) รับรองชื่อแคนดิเดตนายกฯ (มาตรา 159) เสนอร่าง พ.ร.ป. (มาตรา 131) ส่งร่างกฎหมายให้ศาลตรวจ (มาตรา 148) อภิปรายทั่วไปแบบไม่ลงมติ (มาตรา 152)\n- หนึ่งในห้า คือ “ลงสนามสู้” เช่น ยื่นไม่ไว้วางใจ (มาตรา 151) เสนอแก้รัฐธรรมนูญ (มาตรา 256 (1)) โต้แย้งพระราชกำหนดที่ใช้บังคับแล้ว (มาตรา 173)\n\nข้อสังเกตช่วยจำ: ร่างกฎหมายยังไม่มีผล การส่งตรวจจึงใช้เสียงน้อยกว่า พระราชกำหนดมีผลเป็นกฎหมายแล้ว การโต้แย้งจึงต้องใช้เสียงมากกว่า",
         "en": "These two fractions recur dozens of times. A rule of thumb helps:\n- One tenth is “refer or ask”: petition that a member's seat has ended (section 82), second a PM nomination (section 159), propose an organic act bill (section 131), send a bill for constitutional review (section 148), hold a general debate without a vote (section 152).\n- One fifth is “step into the ring”: file no confidence (section 151), propose a constitutional amendment (section 256 (1)), challenge an emergency decree already in force (section 173).\n\nA memory aid: a bill is not yet law, so sending it for review takes fewer names; an emergency decree already has the force of law, so challenging it takes more."
@@ -217,47 +474,175 @@
     },
     {
       "kind": "check",
-      "title": { "th": "ทดสอบตัวเอง", "en": "Check yourself" },
+      "title": {
+        "th": "ทดสอบตัวเอง",
+        "en": "Check yourself"
+      },
       "items": [
         {
-          "q": { "th": "ศาลยุติธรรมกำลังพิจารณาคดีแล้วเห็นว่าบทบัญญัติของพระราชบัญญัติที่จะใช้ขัดรัฐธรรมนูญ ศาลต้องทำอย่างไร", "en": "A court of justice, mid-trial, thinks a provision of an Act it must apply is unconstitutional. What must it do?" },
-          "a": { "th": "ส่งความเห็นให้ศาลรัฐธรรมนูญวินิจฉัย ไม่วินิจฉัยเอง", "en": "Refer the question to the Constitutional Court rather than decide it itself." },
-          "sections": [212]
+          "q": {
+            "th": "ศาลยุติธรรมกำลังพิจารณาคดีแล้วเห็นว่าบทบัญญัติของพระราชบัญญัติที่จะใช้ขัดรัฐธรรมนูญ ศาลต้องทำอย่างไร",
+            "en": "A court of justice, mid-trial, thinks a provision of an Act it must apply is unconstitutional. What must it do?"
+          },
+          "a": {
+            "th": "ถ้ายังไม่มีคำวินิจฉัยของศาลรัฐธรรมนูญเกี่ยวกับบทบัญญัตินั้น ให้ส่งความเห็นให้ศาลรัฐธรรมนูญวินิจฉัย ระหว่างนั้นพิจารณาคดีต่อได้ แต่ต้องรอการพิพากษาไว้ตามมาตรา 212",
+            "en": "If the Constitutional Court has not already ruled on that provision, refer it under section 212. The trial may continue, but judgment must wait for the Constitutional Court’s decision."
+          },
+          "sections": [
+            212
+          ]
         },
         {
-          "q": { "th": "อำนาจอธิปไตยเป็นของใคร และใช้ผ่านองค์กรใด", "en": "To whom does sovereign power belong, and through which bodies is it exercised?" },
-          "a": { "th": "เป็นของปวงชนชาวไทย พระมหากษัตริย์ทรงใช้ทางรัฐสภา คณะรัฐมนตรี และศาล", "en": "The Thai people; the King exercises it through the National Assembly, the Council of Ministers and the Courts." },
-          "sections": [3]
+          "q": {
+            "th": "อำนาจอธิปไตยเป็นของใคร และใช้ผ่านองค์กรใด",
+            "en": "To whom does sovereign power belong, and through which bodies is it exercised?"
+          },
+          "a": {
+            "th": "เป็นของปวงชนชาวไทย พระมหากษัตริย์ทรงใช้ทางรัฐสภา คณะรัฐมนตรี และศาล",
+            "en": "The Thai people; the King exercises it through the National Assembly, the Council of Ministers and the Courts."
+          },
+          "sections": [
+            3
+          ]
         },
         {
-          "q": { "th": "แม่แบบขององค์กรอิสระมีสี่ขั้นอะไรบ้าง", "en": "What are the four steps of the independent-organ template?" },
-          "a": { "th": "คณะกรรมการสรรหา วุฒิสภาให้ความเห็นชอบ พระมหากษัตริย์ทรงแต่งตั้ง วาระ 7 ปีวาระเดียว", "en": "Selection committee, Senate approval, royal appointment, single seven-year term." },
-          "sections": [203, 204, 217, 207]
+          "q": {
+            "th": "แม่แบบขององค์กรอิสระมีสี่ขั้นอะไรบ้าง",
+            "en": "What are the four steps of the independent-organ template?"
+          },
+          "a": {
+            "th": "โดยทั่วไป: สรรหา วุฒิสภาเห็นชอบ พระมหากษัตริย์ทรงแต่งตั้ง วาระ 7 ปีวาระเดียว แต่ต้องตรวจวิธีได้มาของแต่ละองค์กร: กกต. 2 คนมาจากที่ประชุมใหญ่ศาลฎีกา (ม.222) และ กสม. มีกระบวนการสรรหาเฉพาะตาม พ.ร.ป. (ม.246)",
+            "en": "Common pattern: selection, Senate approval, royal appointment, one seven-year term. Check each body’s route: two EC members come from the Supreme Court plenary (s.222); NHRC selection follows its specific Organic Act (s.246)."
+          },
+          "sections": [
+            217,
+            222,
+            223,
+            246
+          ]
         },
         {
-          "q": { "th": "ถ้ายังไม่มีกฎหมายที่รัฐธรรมนูญสั่งให้ตรา บุคคลใช้สิทธิตามรัฐธรรมนูญได้หรือไม่", "en": "If the law the constitution calls for has not been passed, can a person still exercise the right?" },
-          "a": { "th": "ได้ ตามเจตนารมณ์ของรัฐธรรมนูญ", "en": "Yes, in line with the constitution's intent." },
-          "sections": [25]
+          "q": {
+            "th": "ถ้ายังไม่มีกฎหมายที่รัฐธรรมนูญสั่งให้ตรา บุคคลใช้สิทธิตามรัฐธรรมนูญได้หรือไม่",
+            "en": "If the law the constitution calls for has not been passed, can a person still exercise the right?"
+          },
+          "a": {
+            "th": "ได้ ตามเจตนารมณ์ของรัฐธรรมนูญ",
+            "en": "Yes, in line with the constitution's intent."
+          },
+          "sections": [
+            25
+          ]
         },
         {
-          "q": { "th": "ปัจจุบันใครลงมติเห็นชอบบุคคลเป็นนายกรัฐมนตรี", "en": "Who currently votes to approve a prime minister?" },
-          "a": { "th": "สภาผู้แทนราษฎร ตามมาตรา 159 เพราะช่วงห้าปีแรกตามมาตรา 272 สิ้นสุดแล้ว", "en": "The House of Representatives under section 159; the five-year period in section 272 has ended." },
-          "sections": [159, 272]
+          "q": {
+            "th": "ปัจจุบันใครลงมติเห็นชอบบุคคลเป็นนายกรัฐมนตรี",
+            "en": "Who currently votes to approve a prime minister?"
+          },
+          "a": {
+            "th": "สภาผู้แทนราษฎร ตามมาตรา 159 เพราะช่วงห้าปีแรกตามมาตรา 272 สิ้นสุดแล้ว",
+            "en": "The House of Representatives under section 159; the five-year period in section 272 has ended."
+          },
+          "sections": [
+            159,
+            272
+          ]
         },
         {
-          "q": { "th": "ถ้ารัฐสภาพิจารณาร่าง พ.ร.ป. ไม่เสร็จใน 180 วัน ผลเป็นอย่างไร", "en": "What happens if Parliament does not finish an organic act bill within 180 days?" },
-          "a": { "th": "ถือว่ารัฐสภาเห็นชอบตามร่างที่เสนอ", "en": "Parliament is deemed to have approved the bill as proposed." },
-          "sections": [132]
+          "q": {
+            "th": "ถ้ารัฐสภาพิจารณาร่าง พ.ร.ป. ไม่เสร็จใน 180 วัน ผลเป็นอย่างไร",
+            "en": "What happens if Parliament does not finish an organic act bill within 180 days?"
+          },
+          "a": {
+            "th": "ถือว่ารัฐสภาเห็นชอบตามร่างที่เสนอ",
+            "en": "Parliament is deemed to have approved the bill as proposed."
+          },
+          "sections": [
+            132
+          ]
         },
         {
-          "q": { "th": "เมื่อมีการยื่นญัตติไม่ไว้วางใจแล้ว ยุบสภาได้หรือไม่", "en": "Once a no-confidence motion has been filed, can the House be dissolved?" },
-          "a": { "th": "ไม่ได้ เว้นแต่ถอนญัตติหรือการลงมติไม่ได้คะแนนตามที่กำหนด", "en": "No, unless the motion is withdrawn or the vote fails to reach the required majority." },
-          "sections": [151]
+          "q": {
+            "th": "เมื่อมีการยื่นญัตติไม่ไว้วางใจแล้ว ยุบสภาได้หรือไม่",
+            "en": "Once a no-confidence motion has been filed, can the House be dissolved?"
+          },
+          "a": {
+            "th": "ไม่ได้ เว้นแต่ถอนญัตติหรือการลงมติไม่ได้คะแนนตามที่กำหนด",
+            "en": "No, unless the motion is withdrawn or the vote fails to reach the required majority."
+          },
+          "sections": [
+            151
+          ]
         }
       ]
     }
   ],
-  "sections": [1, 2, 3, 4, 5, 25, 54, 82, 83, 88, 95, 97, 99, 102, 103, 107, 108, 109, 120, 121, 130, 131, 132, 143, 145, 146, 148, 151, 152, 158, 159, 160, 167, 170, 172, 173, 175, 177, 201, 203, 204, 207, 208, 210, 211, 212, 216, 217, 222, 223, 228, 229, 231, 232, 233, 238, 239, 246, 255, 256, 264, 269, 272, 279],
+  "sections": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    25,
+    54,
+    82,
+    83,
+    88,
+    95,
+    97,
+    99,
+    102,
+    103,
+    107,
+    108,
+    109,
+    120,
+    121,
+    130,
+    131,
+    132,
+    143,
+    145,
+    146,
+    148,
+    151,
+    152,
+    158,
+    159,
+    160,
+    167,
+    170,
+    172,
+    173,
+    175,
+    177,
+    201,
+    203,
+    204,
+    207,
+    208,
+    210,
+    211,
+    212,
+    216,
+    217,
+    222,
+    223,
+    228,
+    229,
+    231,
+    232,
+    233,
+    238,
+    239,
+    246,
+    255,
+    256,
+    264,
+    269,
+    272,
+    279
+  ],
   "sources": [
     "รัฐธรรมนูญแห่งราชอาณาจักรไทย พุทธศักราช 2560 แก้ไขเพิ่มเติม (ฉบับที่ 1) พ.ศ. 2564",
     "Khemthong Tonsakulrungruang, Entrenching the Minority: The Constitutional Court in Thailand's Political Conflict, Washington International Law Journal 26(2) (2017)",

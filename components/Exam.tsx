@@ -97,11 +97,12 @@ export function Exam() {
               disabled={!ready}
               className={"exam-paper-card" + (i === 0 ? " primary" : "")}
               onClick={() => {
+                const started = Date.now();
                 setAnswers({});
                 setIndex(0);
                 setDone(false);
-                setNow(Date.now());
-                setPaper({ list: makePaper(questions, f), ends: Date.now() + f.minutes * 60_000 });
+                setNow(started);
+                setPaper({ list: makePaper(questions, f), ends: started + f.minutes * 60_000 });
               }}
             >
               <div className="paper-card-top">

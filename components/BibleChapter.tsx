@@ -16,8 +16,13 @@ function GuideEntry({ slug }: { slug: string }) {
   return <section className="source-card guide-entry" aria-label={tr(lang,"เริ่มจากใจความนี้","Start with this idea","从这个概念开始")}>
     <h2>{tr(lang,"หนึ่งเรื่องก่อน","One idea first","先懂一个概念")}</h2>
     <p>{path.idea[lang]}</p>
-    <details><summary>{path.question[lang]}</summary><p>{path.answer[lang]}</p></details>
     <p className="micro">{tr(lang,"ลองตอบก่อนเปิดเหตุผล แล้วตรวจตัวบท","Try answering before opening the reasoning, then check the rule.","先回答，再展开理由，最后核对条文。")}</p>
+    <details><summary>{path.question[lang]}</summary><p>{path.answer[lang]}</p></details>
+    {path.steps.map((step, i) => <details key={i}>
+      <summary>{step.question[lang]}</summary>
+      <p>{step.answer[lang]}</p>
+      {step.sections.length > 0 && <p>{step.sections.map(n => <Link className="citation" key={n} href={`/section/?n=${n}`}>{sectionLabel(lang, n)} →</Link>)}</p>}
+    </details>)}
     <p>{path.sections.map(n => <Link className="citation" key={n} href={`/section/?n=${n}`}>{sectionLabel(lang,n)} →</Link>)}</p>
     <p>{path.chapters.map(c => <Link className="citation" key={c} href={`/learn/?chapter=${c}`}>{tr(lang,`ฝึก 5 ข้อ · หมวด ${c}`,`Try five · Chapter ${c}`,`练五题 · 第${c}章`)} →</Link>)}</p>
   </section>;
@@ -159,7 +164,7 @@ export function BibleChapterView({ chapter, prev, next }: { chapter: BibleChapte
     <article className="bible">
       <h1>{lang === "zh" ? guidePaths[chapter.slug]?.title.zh ?? text(chapter.title, lang) : text(chapter.title, lang)}</h1>
       <GuideEntry slug={chapter.slug} />
-      {lang === "zh" && <p className="micro">上方为中文学习提要，条文与练习也提供中文。下方完整长篇指南目前只有泰文与英文，不是完整中文译本。</p>}
+      {lang === "zh" && <p className="micro">上方三题为中文短课，条文与练习也提供中文。下方完整长篇指南目前只有泰文与英文，不是完整中文译本。</p>}
       <details className="guide-depth" open={lang !== "zh"} key={lang}>
       <summary>{tr(lang,"อ่านคู่มือเต็มและกรณีศึกษา","Read the full guide and case studies","阅读完整英文指南与案例")}</summary>
       <p className="bible-lede" lang={l}>
@@ -221,7 +226,7 @@ export function BibleIndex({ chapters }: { chapters: { slug: string; order: numb
           "把宪法当作一个系统来读，而不是背诵清单。本指南提供泰文与英文版。",
         )}
       </p>
-      <p className="notice">{tr(lang,"เลือกบทเดียว อ่านใจความ ลองตอบ แล้วไปฝึก ไม่ต้องอ่าน 13 บทให้จบก่อน คู่มือเต็มมีไทยและอังกฤษ ส่วนใจความสั้นและแบบฝึกมีสามภาษา","Choose one chapter: read the idea, recall, then practise. You need not finish all 13 first. The full guide is Thai/English; short entries and exercises are trilingual.","先选一章：读概念、试回忆、再练习，不必先读完13章。完整指南为泰文与英文；简短提要和练习提供三种语言。")}</p>
+      <p className="notice">{tr(lang,"เลือกบทเดียว อ่านใจความ ลองสามข้อ แล้วไปฝึก ไม่ต้องอ่าน 13 บทให้จบก่อน คู่มือเต็มมีไทยและอังกฤษ ส่วนบทเรียนสั้นและแบบฝึกมีสามภาษา","Choose one chapter: read the idea, try three checks, then practise. You need not finish all 13 first. The full guide is Thai/English; the short lesson and exercises are trilingual.","先选一章：读概念、试三题、再练习，不必先读完13章。完整长篇指南为泰文与英文；短课和练习提供三种语言。")}</p>
       <div className="chapter-route">
         {chapters.map((c) => (
           <article className="chapter-row" key={c.slug}>

@@ -797,6 +797,9 @@ summary {
   margin-top: 12px;
   margin-bottom: 16px;
 }
+.guide-entry details + details {
+  border-top: 1px solid var(--line);
+}
 .ask-sources {
   margin: 12px 0 0;
   padding-left: 1.4em;

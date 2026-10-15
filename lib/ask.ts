@@ -72,7 +72,7 @@ export function showGroundedMark(result: { grounded?: boolean } | null | undefin
 }
 
 export function looksLikeProviderError(text: string): boolean {
-  return /429|openrouter|rate-?limit|HTTP\s+\d{3}|gemma|groq|gpt-oss|temporarily/i.test(text);
+  return /rate[\s_-]*limit|too many requests|HTTP\s+(?:429|5\d{2})\b|temporarily unavailable|(?:openrouter|gemma|groq|gpt-oss).{0,80}(?:error|quota|unavailable)|^\s*(?:error[:\s]+)?429\s*[-:{]/i.test(text);
 }
 
 export function friendlyAskError(
@@ -151,17 +151,23 @@ export function outcomeError(
 }
 
 export type ShownSource = { n: number; title: string; url?: string };
+export function safeAskURL(raw: unknown): string | undefined {
+  if (typeof raw !== "string") return undefined;
+  try {
+    const url = new URL(raw);
+    return url.protocol === "https:" && !url.username && !url.password ? url.href : undefined;
+  } catch { return undefined; }
+}
 
 /** Keep [n] only when that source can be listed. Otherwise strip the marker. */
 export function presentAnswer(answer: string, sources: AskSource[] = []) {
   const list = sources
     .map((source) => ({
-      title: (source.title || source.url || "").trim(),
-      url: source.url && /^https:\/\//.test(source.url) ? source.url : undefined,
-    }))
-    .filter((source) => source.title);
+      title: (source.title || safeAskURL(source.url) || "").trim(),
+      url: safeAskURL(source.url),
+    }));
   const withMarks = answer.replace(/\[(\d+)\]/g, (token, n) =>
-    list[Number(n) - 1] ? token : "",
+    list[Number(n) - 1]?.title ? token : "",
   );
   const tidy = (value: string) =>
     value
@@ -170,7 +176,7 @@ export function presentAnswer(answer: string, sources: AskSource[] = []) {
       .trim();
   const cited = [...withMarks.matchAll(/\[(\d+)\]/g)].map((match) => Number(match[1]));
   const shown: ShownSource[] = [...new Set(cited)]
-    .filter((n) => list[n - 1])
+    .filter((n) => list[n - 1]?.title)
     .map((n) => ({ n, title: list[n - 1].title, url: list[n - 1].url }));
   if (!shown.length) {
     return { text: tidy(withMarks.replace(/\s*\[\d+\]/g, "")), sources: [] as ShownSource[] };
@@ -182,14 +188,15 @@ export function readGrounded(job: { grounded?: boolean; final?: { grounded?: boo
   return job?.grounded === true || job?.final?.grounded === true;
 }
 
-export function readSources(job: {
-  sources?: AskSource[];
-  final?: { sources?: AskSource[] };
-} | null): AskSource[] {
-  const raw = job?.sources ?? job?.final?.sources ?? [];
-  return raw.map((source) => ({
-    title: source.title,
-    url: source.url,
+export function readSources(job: unknown): AskSource[] {
+  if (!job || typeof job !== "object") return [];
+  const j = job as Record<string, unknown>;
+  const final = j.final && typeof j.final === "object" ? j.final as Record<string, unknown> : {};
+  const raw = j.sources ?? final.sources ?? [];
+  if (!Array.isArray(raw)) return [];
+  return raw.slice(0, 100).map((source) => ({
+    title: typeof source?.title === "string" ? source.title : undefined,
+    url: typeof source?.url === "string" ? source.url : undefined,
   }));
 }
 

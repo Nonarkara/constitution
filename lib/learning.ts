@@ -77,7 +77,8 @@ export function recordAnswer(
       ...progress.questions,
       [question.id]: { correct, level, due },
     },
-    xp: progress.xp + (correct && (!previous?.correct || eligible) ? 10 : 0),
+    // Immediate correction updates understanding, but only due retrieval earns XP.
+    xp: progress.xp + (correct && eligible ? 10 : 0),
     streak,
     lastStudyDay: day,
     // Kept so saved progress still round-trips. It is no longer spent:

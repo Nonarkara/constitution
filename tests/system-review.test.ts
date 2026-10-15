@@ -9,6 +9,17 @@ test('every deep-guide route has a trilingual entry and a valid practice/source 
   if (!f.endsWith('.json')) continue;
   const slug=f.replace(/^\d+-/,'').replace(/\.json$/,''); const p=guidePaths[slug]; assert.ok(p,slug);
   for (const l of ['th','en','zh'] as const) for (const field of ['title','idea','question','answer'] as const) assert.ok(p[field][l].trim(),`${slug} ${field} ${l}`);
+  assert.equal(p.steps.length,2,slug);
+  const norm=(s:string)=>s.replace(/\s+/g,' ').trim();
+  const checks=(JSON.parse(readFileSync(new URL(`../data/bible/${f}`,import.meta.url),'utf8')).blocks as {kind:string;items?:{q:{th:string};a:{th:string}}[]}[])
+    .filter(b=>b.kind==='check').flatMap(b=>b.items??[]);
+  for (const step of p.steps) {
+    for (const l of ['th','en','zh'] as const) { assert.ok(step.question[l].trim(),slug); assert.ok(step.answer[l].trim(),slug); }
+    assert.ok(checks.some(it=>norm(it.q.th)===norm(step.question.th)&&norm(it.a.th)===norm(step.answer.th)),`${slug} step not in chapter checks`);
+    for (const n of [...step.answer.en.matchAll(/\d+/g)].map(m=>m[0])) assert.ok(step.answer.zh.includes(n),`${slug} zh answer missing ${n}`);
+    for (const n of [...step.question.en.matchAll(/\d+/g)].map(m=>m[0])) assert.ok(step.question.zh.includes(n),`${slug} zh question missing ${n}`);
+    assert.ok(step.sections.every(n=>n>=1&&n<=279));
+  }
   assert.ok(p.chapters.every(c=>lessonChapter(String(c))===c));
   assert.ok(p.sections.every(n=>n>=1&&n<=279));
  }
@@ -28,4 +39,10 @@ test('Organic Act excerpts are pinned to the independently checked official PDF 
  const court=read('bible/08-courts.json').blocks[16].body;
  assert.ok(court.en.includes('combined membership')&&court.en.includes('70 signatories')&&court.en.includes('90 days of notification'));
  assert.ok(cram.votes.find((v:{id:string;value:Record<string,string>})=>v.id==='v-amend-third').value.en.includes('Deputy Speakers'));
+});
+test('section 212 explanation keeps the prior-ruling condition in the full lesson', () => {
+ const body=read('bible/01-how-to-read.json').blocks[2].body;
+ assert.ok(body.th.includes('หากยังไม่มีคำวินิจฉัยเกี่ยวกับบทบัญญัตินั้น'));
+ assert.ok(body.en.includes('if that Court has not already ruled on the provision'));
+ assert.ok(body.en.includes('judgment must wait'));
 });

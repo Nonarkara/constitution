@@ -6,37 +6,25 @@ import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
 import {
   ASK_ORIGIN,
-  askRequest,
-  classify,
   consentCopy,
   deepLink,
   friendlyAskError,
   groundedLabel,
   localConstitution,
-  looksLikeProviderError,
-  outcomeError,
-  pollDelay,
-  POLL_LIMIT,
   presentAnswer,
   readGrounded,
   readSources,
   showGroundedMark,
   studyDisclaimer,
+  safeAskURL,
 } from "@/lib/ask";
 
-type Statute = { cite?: string; law?: string; section?: string; text?: string };
-type Deka = { caseId?: string; year?: string; headnote?: string; url?: string };
-type Answer = {
-  answer: string;
-  grounded?: boolean;
-  sources?: { title?: string; url?: string }[];
-  final?: { grounded?: boolean; sources?: { title?: string; url?: string }[] };
-  appendix?: { disclaimer?: string; statutes?: Statute[]; deka?: Deka[] } | null;
-};
+import { requestAsk, AskClientError, type AskAnswer } from "@/lib/ask-client";
+
 type State =
   | { kind: "idle" }
   | { kind: "waiting"; position: number }
-  | { kind: "done"; result: Answer }
+  | { kind: "done"; result: AskAnswer }
   | { kind: "error"; message: string; link: boolean };
 
 // Questions the notebook cannot answer go to Non-Laws, which retrieves real
@@ -47,7 +35,8 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
     [consent, setConsent] = useState(false),
     [state, setState] = useState<State>({ kind: "idle" });
   const run = useRef(0);
-  useEffect(() => () => void run.current++, []);
+  const activeRequest = useRef<AbortController | null>(null);
+  useEffect(() => () => { run.current++; activeRequest.current?.abort(); }, []);
   useEffect(() => setQuestion(initial), [initial]);
   const length = question.trim().length;
   const busy = state.kind === "waiting";
@@ -57,41 +46,17 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
     const mine = ++run.current;
     if (!navigator.onLine) return fail(friendlyAskError("offline", lang));
     setState({ kind: "waiting", position: 0 });
-    let res: Response;
+    activeRequest.current?.abort();
+    const controller = new AbortController();
+    activeRequest.current = controller;
     try {
-      res = await fetch(`${ASK_ORIGIN}/api/laws`, {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(askRequest(question, lang, sections)),
-      });
-    } catch {
-      return fail(friendlyAskError("unreachable", lang));
-    }
-    const body = await res.json().catch(() => ({}));
-    const outcome = classify(res.status, body);
-    if (outcome !== "accepted") return fail(outcomeError(outcome, lang));
-    for (let attempt = 0; attempt < POLL_LIMIT; attempt++) {
-      await new Promise((r) => setTimeout(r, pollDelay(attempt)));
-      if (run.current !== mine) return;
-      try {
-        const poll = await fetch(`${ASK_ORIGIN}/api/ask/${encodeURIComponent(body.id)}`);
-        const job = await poll.json();
-        if (run.current !== mine) return;
-        if (!poll.ok || job.error) {
-          const raw = String(job.error ?? "");
-          return fail(friendlyAskError(looksLikeProviderError(raw) ? "rate" : "lost", lang));
-        }
-        if (job.status === "done") {
-          if (looksLikeProviderError(String(job.answer ?? "")))
-            return fail(friendlyAskError("rate", lang));
-          return setState({ kind: "done", result: job });
-        }
-        setState({ kind: "waiting", position: Number(job.position) || 0 });
-      } catch {
-        return fail(friendlyAskError("lost", lang));
-      }
-    }
-    fail(friendlyAskError("timeout", lang));
+      const result = await requestAsk(question.trim(), lang, sections, controller.signal,
+        (position) => { if (run.current === mine) setState({kind:"waiting",position}); });
+      if (run.current === mine) setState({kind:"done",result});
+    } catch (error) {
+      if (run.current !== mine || controller.signal.aborted) return;
+      fail(friendlyAskError(error instanceof AskClientError ? error.kind : "unreachable", lang));
+    } finally { if (activeRequest.current === controller) activeRequest.current = null; }
   }
 
   const open = (
@@ -164,6 +129,12 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
       <button className="primary" disabled={!consent || busy || length < 8} onClick={ask}>
         {tr(lang, "ถาม Non-Laws", "Ask Non-Laws", "询问 Non-Laws")} →
       </button>
+      {busy && <>
+        <button onClick={() => { run.current++; activeRequest.current?.abort(); setState({kind:"idle"}); }}>
+          {tr(lang, "หยุดรอ", "Stop waiting", "停止等待")}
+        </button>
+        <p className="micro">{tr(lang,"หยุดรอได้ คำถามที่ส่งไปแล้วจะยังอยู่กับ Non-Laws","You can stop waiting. The submitted question remains with Non-Laws.","可以停止等待，但已提交的问题仍由 Non-Laws 保存。")}</p>
+      </>}
       <div role="status" aria-live="polite">
         {state.kind === "waiting" && (
           <p className="micro">
@@ -221,8 +192,8 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
           ))}
           {(appendix?.deka ?? []).map((d, i) => (
             <p className="micro" key={`d${i}`}>
-              {d.url?.startsWith("https://") ? (
-                <a href={d.url} target="_blank" rel="noopener noreferrer nofollow">
+              {safeAskURL(d.url) ? (
+                <a href={safeAskURL(d.url)} target="_blank" rel="noopener noreferrer nofollow">
                   ฎีกาที่ {d.caseId} ↗
                 </a>
               ) : (
