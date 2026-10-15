@@ -38,3 +38,17 @@ Core progress and notes stay in each browser; clearing browser storage loses the
 The optional Non-Laws service is separately operated. CORS preflight was checked. Its private server authentication, billing controls, rate limits, retention implementation and model quality cannot be certified from this repository. Client failure tests do not establish those server guarantees. Core learning, recorded audio, authored exams and news do not require that AI service.
 
 Physical iPad microphone, Safari home-screen installation and real learner retention remain human/device checks. No claim is made that Tikky has tested this release or that gamification proves improved memory. Political reflections and polls do not grade a learner's opinions.
+
+## Published verification
+
+Source commits: `6e0d8af` (release hardening and incoming guide integration), `f3b29ea` (reading instructions after skipping). Final Worker version: `b9035d69-4cae-41f0-ac3d-1dd05fbd8465`; offline revision `4e3f4cb0a7f98e4b` (315 shell assets).
+
+- All 42 normal published HTML routes match the final local build byte-for-byte. The separate 404 page is excluded from this count. The published offline manifest matches the build.
+- Live `/api/news` returned 200; POST returned 405. CSP, content-type protection, referrer policy and permissions policy are present.
+- Real browser: new guide answers reveal the corrected section 212 condition; Chinese entry shows three checks and accurately discloses the long-guide translation boundary. Its practice link enters guess → optional reading → answer. A skip-path copy error discovered during this walkthrough was corrected in TH/EN/ZH and confirmed on the final deployment.
+- Phone width 375 and tablet width 768 had matching document/scroll widths. The temporary viewport was reset to desktop. Amendment paper 19 opened with 25 questions and 30:00; no paper was submitted merely to manufacture a test score.
+- Existing learner state survived navigation and deployment. Reading section 5 was recorded (3 to 4 sections met). Settings exported a parseable version-4 backup with progress, marks, annotations, reflection and read fields; import did not overwrite existing learner data during this audit. Offline-ready status was visible.
+- Optional AI form: unchecked retention consent and disabled submission verified. No learner question or personal information was sent to Non-Laws during this audit. Timeouts, cancellation and malformed-response cases were exercised with test transports, not claimed as an external-service success.
+- No application console errors captured in the reviewed browser journey. The browser automation tool itself emitted blocked telemetry requests; these were separate from application logs.
+
+Final verification and production build passed after the last copy edit. Independent reviewer confirmed both final copy corrections and reported no remaining material finding in the reviewed changes.
