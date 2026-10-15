@@ -1,4 +1,3 @@
-@import url("/fonts/fonts.css");
 /* Four reading themes. `auto` resolves to light, dark or contrast before first
    paint (inline script in app/layout.tsx); the media blocks cover no-JS. Amber is
    the only UI accent in every theme. tests/theme.test.ts checks contrast. */
@@ -278,8 +277,8 @@ small,
   justify-content: space-between;
   align-items: center;
   gap: 14px;
-  padding: calc(23px + env(safe-area-inset-top, 0px)) calc(32px + env(safe-area-inset-right, 0px)) 23px calc(32px + env(safe-area-inset-left, 0px));
-  max-width: 1600px;
+  padding: calc(12px + env(safe-area-inset-top, 0px)) calc(32px + env(safe-area-inset-right, 0px)) 12px calc(32px + env(safe-area-inset-left, 0px));
+  max-width: 1280px;
   margin: auto;
 }
 .brand {
@@ -294,8 +293,8 @@ small,
   color: var(--paper);
   display: grid;
   place-content: center;
-  width: 64px;
-  height: 64px;
+  width: 44px;
+  height: 44px;
   font-size: var(--body);
 }
 .brand small {
@@ -331,8 +330,11 @@ small,
   padding: 8px 14px;
 }
 .languages button[aria-pressed="true"] {
-  background: var(--accent);
-  color: var(--accent-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-deep);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+  color: var(--ink);
 }
 .app-grid {
   display: grid;
@@ -2288,9 +2290,9 @@ mark.hl.has-note {
 /* Composition, 12 Oct 2026: two columns, one hero per page, quiet chrome.
    The darkest, largest thing on a page is the thing to do next. */
 .app-grid {
-  grid-template-columns: 200px minmax(0, 1fr);
+  grid-template-columns: 176px minmax(0, 1fr);
   max-width: 1280px;
-  gap: 56px;
+  gap: 48px;
 }
 .study-strip {
   display: flex;
@@ -2308,16 +2310,19 @@ mark.hl.has-note {
 }
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 32px;
   align-items: center;
-  padding-bottom: 48px;
-  margin-bottom: 40px;
+  padding: 20px 0 28px;
+  margin-bottom: 0;
   border-bottom: 1px solid var(--line);
 }
 .hero-art {
   margin: 0;
+  grid-column: 2;
+  grid-row: 1;
 }
+.hero-copy { grid-column: 1; grid-row: 1; }
 .hero-art img {
   display: block;
   width: 100%;
@@ -2332,8 +2337,8 @@ mark.hl.has-note {
 .hero-cta {
   display: flex;
   width: 100%;
-  max-width: 440px;
-  padding: 14px 20px;
+  max-width: 360px;
+  padding: 12px 18px;
   text-align: left;
   align-items: center;
   gap: 16px;
@@ -2371,18 +2376,18 @@ mark.hl.has-note {
     display: block;
   }
   .hero {
-    grid-template-columns: 1fr;
-    gap: 22px;
-    padding-bottom: 32px;
-    margin-bottom: 28px;
+    grid-template-columns: minmax(0, 1fr) 100px;
+    gap: 12px;
+    padding-bottom: 24px;
+    margin-bottom: 0;
   }
   .hero-art {
-    margin: 0 -18px;
+    align-self: start;
+    margin: 0;
   }
   .hero-art img {
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    object-position: center 38%;
+    aspect-ratio: 1;
+    object-fit: contain;
   }
   .hero-cta {
     max-width: none;
@@ -2402,7 +2407,7 @@ mark.hl.has-note {
     border-bottom: 0;
   }
   .hero-art img {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 1;
   }
   .hero-copy .page-kicker {
     margin-bottom: 10px;
@@ -3630,4 +3635,69 @@ footer { flex-wrap:wrap; gap:16px; }
   flex-wrap: wrap;
   gap: 12px;
   align-items: center;
+}
+
+/* Palette composition: controls recede, the lesson leads, drawings stay small.
+   Existing theme roles and all learning-state colours remain authoritative. */
+:root { --space-1: 8px; --space-2: 16px; --space-3: 24px; --space-4: 32px; }
+.reading-menu { position: relative; font-size: var(--micro); }
+.reading-menu > summary {
+  min-height: 44px; display: flex; align-items: center; gap: var(--space-1);
+  cursor: pointer; padding-inline: var(--space-1); list-style: none;
+}
+.reading-menu > summary::-webkit-details-marker { display: none; }
+.reading-menu > summary::after { content: "▾"; }
+.reading-menu[open] > summary::after { content: "▴"; }
+.reading-menu .themes {
+  position: absolute; z-index: 6; right: 0; top: calc(100% + var(--space-1));
+  padding: var(--space-2); background: var(--paper); border: 2px solid var(--ink);
+}
+.header .brand { min-height: 44px; }
+.header .brand small { font-size: var(--micro); }
+.sidebar nav .nav-active { background: transparent; }
+.sidebar-note { margin-top: var(--space-4); }
+.study-strip { margin-bottom: var(--space-2); }
+.lesson-method { font-size: var(--micro); color: var(--muted); border-bottom: 1px solid var(--line); }
+.lesson-method > summary { cursor: pointer; padding-block: var(--space-2); min-height: 44px; }
+.lesson-method p { max-width: 64ch; margin-bottom: var(--space-2); }
+.study-resources {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-2);
+  padding-block: var(--space-1); font-size: var(--micro);
+}
+.study-resources a { min-height: 44px; display: inline-flex; align-items: center; }
+.civic-shortcuts { margin-bottom: var(--space-4); border-block: 1px solid var(--line); font-size: var(--micro); }
+.where { margin-top: var(--space-2); margin-bottom: var(--space-2); }
+.chapter-info > a { float: right; margin: 0 0 var(--space-1) var(--space-2); }
+.chapter-info .palace-picture-small { width: 64px; }
+.chapter-info .stations { clear: none; }
+.chapter-info { display: flow-root; min-width: 0; }
+.chapter-info h3 { overflow-wrap: anywhere; }
+.section-heading { gap: var(--space-2); align-items: end; }
+@media (min-width: 900px) {
+  .where { grid-template-columns: 1fr 1.2fr 1.6fr; }
+}
+@media (min-width: 721px) and (max-width: 1100px) {
+  .hero { grid-template-columns: minmax(0, 1fr) 180px; gap: var(--space-2); }
+  .hero-copy h1 { font-size: var(--display); }
+}
+@media (max-width: 720px) {
+  .header { flex-wrap: nowrap; gap: var(--space-1); padding-block: var(--space-1); }
+  .header-controls { width: auto; gap: 0; }
+  .brand { gap: var(--space-1); font-size: var(--micro); }
+  .brand-mark { width: 36px; height: 36px; flex-shrink: 0; }
+  .languages button { padding-inline: 6px; }
+  .reading-menu > summary { padding-inline: 6px; gap: 4px; }
+  .reading-menu .themes { right: -110px; }
+  main { padding-top: var(--space-1); }
+  .study-strip { gap: 0 var(--space-2); padding-bottom: var(--space-1); border-bottom: 1px solid var(--line); }
+  .hero { position: relative; display: block; padding-top: var(--space-3); }
+  .hero-art { position: absolute; right: 0; top: var(--space-3); width: 100px; }
+  .hero-copy h1 { padding-right: 104px; margin-bottom: var(--space-3); }
+  .hero-copy p { max-width: none; }
+  .hero-cta { max-width: none; }
+  .hero-cta + .micro { margin-bottom: 0; }
+  .study-resources { gap: 0 var(--space-1); }
+  .where-item { padding-block: var(--space-2); }
+  .civic-shortcuts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--space-2); padding-block: var(--space-1); }
+  .section-heading { flex-wrap: wrap; }
 }

@@ -54,15 +54,14 @@ export function Learn() {
     );
   return (
     <>
-      {/* One dominant element: the drawing and the next step read as a single block. */}
-      <div className="civic-shortcuts"><Link href="/memory/">{tr(lang,"บ้านความจำ 16 ห้อง","16-room memory house","十六间记忆屋")} →</Link><Link href="/civic/">{tr(lang,"ตรวจคำสัญญา","Check the promise","核查承诺")} →</Link><Link href="/amend/">{tr(lang, "ถ้าเราอยากแก้รัฐธรรมนูญ", "If we want to amend it", "如果我们想修宪")} →</Link><Link href="/news/">{tr(lang, "ข่าวสั้น", "Headlines", "新闻标题")} →</Link></div>
+      {/* The next lesson leads; the drawing stays beside it as a memory cue. */}
       <section className="hero">
         <figure className="hero-art" aria-hidden="true">
-          <Image src="/illustrations/reading-pastel.webp" alt="" width={720} height={720} priority sizes="(max-width: 720px) 100vw, 46vw" />
+          <Image src="/illustrations/reading-pastel.webp" alt="" width={720} height={720} priority sizes="(max-width: 720px) 120px, 280px" />
         </figure>
         <div className="hero-copy">
           <h1>
-            {tr(lang, "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ", "One section.\nOne small step.", "一条一条读，\n一点一点懂。")}
+            {tr(lang, "รัฐธรรมนูญ\nทีละเรื่อง", "Learn the\nConstitution.", "读懂宪法，\n一次一个概念。")}
           </h1>
           <p>
             {tr(
@@ -92,9 +91,10 @@ export function Learn() {
           </p>
         </div>
       </section>
-      <p className="notice">{tr(lang,"เดา 1 เรื่อง → อ่านเหตุผล → ลอง 5 ข้อ → เล่าด้วยคำของตัวเอง → กลับมาตามเวลาทบทวน","Guess one case → read why → try five questions → explain it yourself → return when review is due","猜一个情境 → 读理由 → 试五题 → 自己解释 → 到期再复习")}</p>
-      <p><Link href="/cram/">{tr(lang,"สรุปก่อนสอบหน้าเดียว","The night-before sheet","考前一页通")} →</Link> · <Link href="/drills/">{tr(lang,"4,700 แบบฝึก","4,700 exercises","4,700道练习")} →</Link> · <Link href="/exam/">{tr(lang,"30 ชุดฝึกจับเวลา","30 timed study papers","30套计时练习卷")} →</Link> · <Link href="/polls/">{tr(lang,"10 คำถามส่วนตัว","Ten private polls","十个私人问卷")} →</Link></p>
+      <details className="lesson-method"><summary>{tr(lang,"ในหนึ่งบทเรียน","Inside a lesson","一节课怎么学")}</summary><p>{tr(lang,"เดา 1 เรื่อง → อ่านเหตุผล → ลอง 5 ข้อ → เล่าด้วยคำของตัวเอง → กลับมาตามเวลาทบทวน","Guess one case → read why → try five questions → explain it yourself → return when review is due","猜一个情境 → 读理由 → 试五题 → 自己解释 → 到期再复习")}</p></details>
+      <nav className="study-resources" aria-label={tr(lang,"เตรียมสอบ","Exam preparation","备考资料")}><Link href="/cram/">{tr(lang,"สรุปก่อนสอบหน้าเดียว","The night-before sheet","考前一页通")} →</Link> <Link href="/drills/">{tr(lang,"4,700 แบบฝึก","4,700 exercises","4,700道练习")} →</Link> <Link href="/exam/">{tr(lang,"30 ชุดฝึกจับเวลา","30 timed study papers","30套计时练习卷")} →</Link> <Link href="/polls/">{tr(lang,"10 คำถามส่วนตัว","Ten private polls","十个私人问卷")} →</Link></nav>
       <WhereYouAre signals={signals} chapter={next.number} />
+      <nav className="civic-shortcuts" aria-label={tr(lang,"เรียนรู้จากภาพและเรื่องใกล้ตัว","Pictures and civic questions","图像与公民问题")}><Link href="/memory/">{tr(lang,"บ้านความจำ 16 ห้อง","16-room memory house","十六间记忆屋")} →</Link><Link href="/civic/">{tr(lang,"ตรวจคำสัญญา","Check the promise","核查承诺")} →</Link><Link href="/amend/">{tr(lang, "ถ้าเราอยากแก้รัฐธรรมนูญ", "If we want to amend it", "如果我们想修宪")} →</Link><Link href="/news/">{tr(lang, "ข่าวสั้น", "Headlines", "新闻标题")} →</Link></nav>
       <div className="section-heading">
         <div>
           <span className="mono">2560 / 2017</span>
@@ -124,6 +124,7 @@ export function Learn() {
                 {c.number === 17 ? "T" : String(c.number).padStart(2, "0")}
               </div>
               <div className="chapter-info">
+                {c.number<=16&&<Link href={`/memory/#room-${c.number}`} aria-label={tr(lang,"ภาพช่วยจำหมวดนี้","This chapter’s memory picture","本章记忆图像")}><PalacePicture chapter={c.number} small/></Link>}
                 <span className="micro">
                   {c.number === 17
                     ? tr(
@@ -142,7 +143,6 @@ export function Learn() {
                   )}
                 </span>
                 <h3>{c.title[lang]}</h3>
-                {c.number<=16&&<Link href={`/memory/#room-${c.number}`} aria-label={tr(lang,"ภาพช่วยจำหมวดนี้","This chapter’s memory picture","本章记忆图像")}><PalacePicture chapter={c.number} small/></Link>}
                 <Stations start={c.start} end={c.end} signals={signals} />
                 <div className="mastery-line" aria-label={`${m.percent}%`}>
                   <span style={{ transform: `scaleX(${m.percent / 100})` }} />

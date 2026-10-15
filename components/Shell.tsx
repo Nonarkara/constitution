@@ -52,6 +52,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </span>
         </Link>
         <div className="header-controls">
+        <details className="reading-menu">
+          <summary>{tr(lang, "หน้าจอ", "Display", "显示")}</summary>
         <div className="themes" role="group" aria-label={tr(lang, "สีหน้าจอ", "Screen colours", "屏幕配色")}>
           {/* Each swatch is the theme itself: its paper, its ink. */}
           {THEMES.map((t) => (
@@ -67,6 +69,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </button>
           ))}
         </div>
+        </details>
         <div className="languages" aria-label={tr(lang, "ภาษา", "Language", "语言")}>
           {(["th", "en", "zh"] as Lang[]).map((l) => (
             <button
@@ -97,7 +100,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             ))}
           </nav>
           <div className="sidebar-note">
-            <span className="mono">
+            <span className="micro">
               {tr(lang, "สมุดของติ๊กกี้", "Tikky's notebook", "Tikky 的笔记本")}
             </span>
             <p>

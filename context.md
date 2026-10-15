@@ -71,3 +71,11 @@ Research distinguishes high-utility practice testing/spacing from task-dependent
 ## Three checks per guide chapter — 14 October 2026
 
 Each of the 13 guide routes still opens with one idea, then two more checks copied from that chapter's own self-test. Thai and English match those checks; Chinese follows the study translation's terms. The long literary guide stays Thai and English. The checks do not change mastery. A test rejects a check whose Thai is not in the chapter, and rejects a Chinese answer that drops a number present in the English.
+
+## Palette composition pass — 15 October 2026
+
+Design read: a working Thai Constitution notebook, with one open lesson, small pastel memory drawings and a chapter index that can be scanned without reading a dashboard. Reference: the Senate's printed Constitution for text hierarchy; Vignelli's 1972 route map for chapter continuity. Civic register; variance 4, motion 1, density 4. Motion confirms presses only.
+
+Palette intent: make the next useful action obvious while legal reading stays quiet. Relationship: neutral white/charcoal carries the text; amber interrupts sparingly; the existing muted crayon scenes supply the bounded companion field. Roles: paper/ink for reading, line/ink for hierarchy, amber for the next action and focus, existing green/red for actual answer states. Budget: predominantly neutral, small art fields, sparse amber. This uses the Wada-inspired relationship method, not a claimed historical plate. Pastel artwork is explicitly requested by the user; it is preserved, not extended into UI controls. Risks: multi-script wrapping, long chapter names, theme/large-text shifts. Proof: existing contrast tests, real 375/768/1280 browser views, dark/contrast/large-text checks and a working lesson entry.
+
+Preserve every route, chapter picture, diagram, source, exam, saved record and accessibility theme. Change composition/chrome only. No gradients, shadows, textures, new fonts, decorative movement or new packages. Theme controls remain available through a labelled disclosure; selected language uses an underline rather than competing with the lesson's amber action. Secondary study resources belong after the lesson invitation, not before it. Mono is for numbers, not the notebook's label voice.

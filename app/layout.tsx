@@ -39,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="th" suppressHydrationWarning>
       <head>
+        <link rel="stylesheet" href="/fonts/fonts.css" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
