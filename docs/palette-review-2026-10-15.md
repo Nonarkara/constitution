@@ -29,4 +29,10 @@ The Chinese next-lesson button opened the initial real-life puzzle with native a
 
 `npx --yes axiom-audit . --strict` could not run: the npm registry returned E404 for `axiom-audit`. No automated anti-slop score or strict scanner pass is claimed. This review uses source inspection, existing contrast tests and rendered browser checks. It does not claim a new exhaustive accessibility audit or human usability study.
 
-Production build and live release evidence follow below after deployment.
+## Release proof
+
+Source commit `88160e5` is pushed. The production build passed; a final webpack build plus offline generation includes the chapter-picture alignment correction. Cloudflare Worker version `2147794f-32b6-4370-98c7-5df43269da47` is live at https://constitution.nonarkara.org/learn/ . Offline revision: `7afb9a3e2ad81f47`, 315 shell assets.
+
+All 42 normal exported HTML pages returned HTTP 200 and matched the local export byte for byte. The live offline manifest and font stylesheet also matched. Live Thai screenshots at phone and desktop sizes confirmed the compact header, next lesson and aligned chapter pictures. The existing 4 sections met and 2 due-for-review counts remained visible.
+
+Local proof: `.openai/qa/palette-live-phone.png`, `.openai/qa/palette-live-desktop.png`, `.openai/qa/palette-live.json`, `.openai/qa/palette-verify.txt`, `.openai/qa/palette-final-build.txt`. Temporary browser size overrides were reset. No database migration or backend mutation was needed.
