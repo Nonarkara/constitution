@@ -181,7 +181,7 @@ export function PracticeArena() {
               {tr(lang, "เกมจับคู่ตัวเลข", "Number games", "数字游戏")}
             </Link>
             <Link href="/along/" className="subnav-pill">
-              {tr(lang, "สอบจริง 80 หัวข้อ", "Sit the real 80", "真实考试80题")}
+              {tr(lang, "ลองสอบ 90 ข้อ · 80 หัวข้อ", "Try 90 questions · 80 topics", "练习90题 · 80个主题")}
             </Link>
           </nav>
 

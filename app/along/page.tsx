@@ -1,7 +1,7 @@
 import { BlindExam } from "@/components/BlindExam";
 export const metadata = {
-  title: "สอบจริง แล้วค่อยเรียน · Sit the test",
-  description: "ข้อสอบนายอำเภอและท้องถิ่น ปี 2568 ทั้ง 80 หัวข้อ ไม่มีเอกสารให้เปิดล่วงหน้า ทุกข้อที่ตอบผิดจะกลับมาจนกว่าคุณจะตัดตัวเลือกที่เหลือออกได้ด้วยเหตุผล",
+  title: "ลองสอบ แล้วค่อยเรียน · Try first",
+  description: "แบบฝึก 90 ข้อ ครอบคลุม 80 หัวข้อ ลองตอบก่อน ดูหลักคิดของข้อที่พลาด แล้วซ่อนเฉลยเพื่อลองใหม่ บันทึกอัตโนมัติในเบราว์เซอร์",
   alternates: { canonical: "/along/" },
 };
 export default function Page() {

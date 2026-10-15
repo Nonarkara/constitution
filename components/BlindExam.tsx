@@ -10,6 +10,8 @@ import {
   type BlindQuestion, type Sitting,
 } from "@/lib/blind";
 
+import { readCheckpoint, writeCheckpoint } from "@/lib/blind-checkpoint";
+
 const byId = new Map<string, BlindQuestion>(bank.map((q) => [q.id, q as BlindQuestion]));
 
 type Phase = "brief" | "sit" | "answers" | "handoff";
@@ -17,16 +19,16 @@ type Phase = "brief" | "sit" | "answers" | "handoff";
 /**
  * The blind sitting. Nothing to read first: the point is to find out what you do not
  * know. Every miss then owes an answer, and the answer has to arrive by reasoning,
- * not by recognising the sentence. A question is not finished until it is answered
- * right the second time.
+ * with the explanation hidden. Correct retries are practice, not proof of mastery.
  */
 export function BlindExam() {
   const { lang } = useStudy();
   const [phase, setPhase] = useState<Phase>("brief");
   const [s, setS] = useState<Sitting | null>(null);
   const [pick, setPick] = useState<number | null>(null);
-  const [revealed, setRevealed] = useState(false);
-  const [took, setTook] = useState<number | null>(null);
+  const [retrying, setRetrying] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const [saveFailed, setSaveFailed] = useState(false);
   const [last, setLast] = useState<"right" | "wrong" | null>(null);
   const [earnedId, setEarnedId] = useState<string | null>(null);
   const head = useRef<HTMLHeadingElement>(null);
@@ -35,22 +37,34 @@ export function BlindExam() {
   const open = queue[0] ?? null;
   const q = open ? (byId.get(open) ?? null) : null;
 
-  // every new question starts clean: no leftover marks, no leftover verdict
+  const shownId = phase === "sit" ? s?.order[s.at] : earnedId ?? q?.id;
+  const choiceOrder = useMemo(() => fisherYates([0, 1, 2, 3]), [shownId, retrying]);
   useEffect(() => {
-    if (!q) return;
-    head.current?.focus();
-    setPick(null);
-    setTook(null);
-    setRevealed(false);
-    setLast(null);
-  }, [q?.id]);
+    try {
+      const saved = readCheckpoint(window.localStorage.getItem("constitution-blind-v1"), bank);
+      if (saved) {
+        setS(saved.sitting);
+        setPhase(saved.phase);
+        setEarnedId(saved.earnedId);
+      }
+    } catch { setSaveFailed(true); }
+    setLoaded(true);
+  }, []);
+  useEffect(() => {
+    if (!loaded) return;
+    try {
+      writeCheckpoint(window.localStorage, { sitting: s, phase, earnedId }, bank);
+      setSaveFailed(false);
+    } catch { setSaveFailed(true); }
+  }, [loaded, s, phase, earnedId]);
+  useEffect(() => { head.current?.focus(); }, [loaded, phase, shownId, retrying, last]);
 
   const begin = () => {
     setS(startSitting(fisherYates(bank.map((q) => q.id))));
     setPhase("sit");
     setLast(null);
     setEarnedId(null);
-    setRevealed(false);
+    setRetrying(false);
     setPick(null);
     window.scrollTo(0, 0);
   };
@@ -68,52 +82,56 @@ export function BlindExam() {
     const next = submitRetry(s, id, pick, right);
     setS(next);
     setLast(right ? "right" : "wrong");
-    setTook(right ? null : pick);
-    setRevealed(!right);
+    setRetrying(false);
     if (right) {
       setPick(null);
       // Hold here. Jumping straight on would wipe the rule the instant the next
-      // question mounts, and this is the one beat where the learner finds out
-      // that the reasoning actually worked.
+      // question mounts. Give the learner time to restate the rule.
       setEarnedId(id);
       if (!outstanding(next).length) return; // the interstitial offers the way out
     }
   };
 
+  if (!loaded) return <p role="status">{tr(lang, "กำลังเปิดแบบฝึก…", "Opening practice…", "正在打开练习…")}</p>;
+  const savedNotice = <p className="micro" role="status">{saveFailed
+    ? tr(lang, "บันทึกในเบราว์เซอร์ไม่ได้ หากออกจากหน้านี้ คำตอบอาจหาย", "This browser could not save your sitting. Leaving may lose your answers.", "此浏览器无法保存进度，离开页面可能会丢失答案。")
+    : tr(lang, "บันทึกอัตโนมัติในเบราว์เซอร์นี้ กลับมาทำต่อได้ · ไม่ซิงก์ข้ามเครื่อง", "Saved in this browser. Return to continue · no cross-device sync.", "进度保存在此浏览器，可随时回来继续 · 不跨设备同步。")}</p>;
+
   // ---------- the brief: no reading, and the expectation set honestly ----------
   if (phase === "brief")
     return (
       <section className="blind">
-        <h1>{tr(lang, "สอบจริง แล้วค่อยเรียน", "The test first. Study after.", "先考试，后学习")}</h1>
+        {savedNotice}
+        <h1 ref={head} tabIndex={-1}>{tr(lang, "ลองสอบ แล้วค่อยเรียน", "Try first. Study after.", "先试一试，再学解析")}</h1>
         <p>
           {tr(
             lang,
-            `ข้อสอบนายอำเภอและท้องถิ่น ปี 2568 มีหัวข้อประเมิน 80 หัวข้อ นี่คือการสอบจริงตัวหนึ่ง ไม่ใช่การอ่าน ไม่มีเอกสารให้เปิดล่วงหน้า ไม่มีเฉลยระหว่างทำ`,
-            `The 2025 district-chief and local-government exam assesses 80 topics. This is one sitting of it. It is not a reading session: nothing to open first, and no answers while you work.`,
-            `2025年县长与地方公务员考试评估80个主题。这是一场真实考试，不是阅读：开始前没有可打开的材料，做题时不显示答案。`,
+            `แบบฝึกที่เรียบเรียงขึ้น 90 ข้อ ครอบคลุม 80 หัวข้อ ลองตอบจากสิ่งที่รู้ก่อน ไม่จับเวลา และยังไม่แสดงเฉลยจนกว่าจะส่งครบทุกข้อ`,
+            `90 authored practice questions across 80 topics. Start with what you know. There is no timer, and answers stay hidden until you submit all questions.`,
+            `这套自编练习共90题，覆盖80个主题。先用已有知识作答，不限时，全部提交后才显示答案。`,
           )}
         </p>
         <p>
           {tr(
             lang,
-            "คุณจะพลาดมาก และนั่นถูกต้อง ถ้าคุณยังไม่ได้อ่านเรื่องนี้มาก่อนเลย การพลาดคือข้อมูลที่มีค่าที่สุดในห้องนี้ เพราะมันบอกว่าคุณต้องไปเรียนอะไรต่อ",
-            "You will get a great many wrong, and that is the correct outcome. If you have not read any of this before, the misses are the most valuable thing in the room: they tell you what to go and learn.",
-            "你会错很多，而这正是预期结果。如果你之前完全没读过，错题就是这里最有价值的东西——它告诉你接下来该学什么。",
+            "ถ้ายังไม่เคยอ่าน ตอบผิดได้ ไม่เป็นไร ใช้ข้อที่พลาดเป็นแผนว่าควรเรียนเรื่องไหนต่อ",
+            "New to these topics? Mistakes are useful: they show you what to study next.",
+            "如果还没学过，答错也没关系。错题能帮你找到接下来要学的内容。",
           )}
         </p>
         <p>
           {tr(
             lang,
-            "ทุกข้อที่ตอบผิด จะกลับมาอีกจนกว่าคุณจะตอบถูก ไม่ใช่เพราะจำได้ แต่เพราะตัดตัวเลือกที่เหลือออกได้ด้วยเหตุผล นั่นคือทักษะที่ข้อสอบจริงวัด",
-            "Every question you miss comes back until you answer it right — not because you remembered it, but because you can rule the other three out by reasoning. That is the skill a real exam measures.",
-            "每道错题都会回来，直到你答对——不是因为你记住了，而是因为你能用推理排除另外三项。这才是真实考试衡量的能力。",
+            "หลังส่งครบ อ่านหลักคิดของข้อที่พลาด แล้วซ่อนเฉลยเพื่อลองใหม่ ฝึกอธิบายด้วยว่าทำไมตัวเลือกอื่นจึงไม่ใช่",
+            "After submitting, read the rule for each miss, then hide the explanation and retry. Practise explaining why the other choices do not fit.",
+            "交卷后，先读错题的判断方法，再隐藏解析重试。试着说清楚：其他选项为什么不合适？",
           )}
         </p>
         <p className="notice">
-          {tr(lang, "ไม่ใช่ข้อสอบจริง ไม่มีคะแนน ไม่เข้าบัญชีความก้าวหน้าของรัฐธรรมนูญ และตัวเลขหรือข่าวที่มีที่มากำกับ ตรวจกับแหล่งล่าสุดก่อนสอบ", "Not an official paper. Unscored, and kept out of constitution progress. Figures and news carry a source and a date; check the latest before the exam.", "非官方真题。不计分，也不计入宪法学习进度。数字与时事均注明来源与日期，考前请核对最新资料。")}
+          {tr(lang, "ไม่ใช่ข้อสอบทางการ แสดงคะแนนครั้งแรกแยกจากความก้าวหน้ารายบท ข้อที่มีแหล่งอ้างอิงจะแสดงที่มาและวันที่ในเฉลย ควรตรวจข้อมูลล่าสุดก่อนสอบ", "Not an official paper. Your first-attempt score is separate from chapter mastery. Available sources and dates appear in the review; check dated facts before your exam.", "非官方试卷。首次成绩与各章学习进度分开记录。解析中列出已有来源和日期；考前请核对时效性资料。")}
         </p>
         <button className="primary" onClick={begin}>
-          {tr(lang, "เริ่มสอบ 80 หัวข้อ", "Begin · 80 topics", "开始 · 80个主题")} →
+          {tr(lang, "เริ่มสอบ 90 ข้อ", "Begin · 90 questions", "开始 · 90题")} →
         </button>
       </section>
     );
@@ -127,7 +145,8 @@ export function BlindExam() {
     if (!question)
       return (
         <section className="blind">
-          <h1>{tr(lang, "ส่งแล้ว", "Submitted", "已交卷")}</h1>
+        {savedNotice}
+          <h1 ref={head} tabIndex={-1}>{tr(lang, "ส่งแล้ว", "Submitted", "已交卷")}</h1>
           <p>
             {tr(
               lang,
@@ -140,7 +159,7 @@ export function BlindExam() {
             className="primary"
             onClick={() => {
               setLast(null);
-              setRevealed(false);
+              setRetrying(false);
               setPick(null);
               setPhase(s.owed.length ? "answers" : "handoff");
             }}
@@ -154,6 +173,7 @@ export function BlindExam() {
       );
     return (
       <section className="quiz blind">
+        {savedNotice}
         <div className="section-heading">
           <span className="mono">
             {String(s.at + 1).padStart(2, "0")} / {String(s.order.length).padStart(2, "0")}
@@ -167,7 +187,7 @@ export function BlindExam() {
         </h1>
         <fieldset>
           <legend className="micro">{tr(lang, "เลือกคำตอบที่ถูกต้องที่สุด", "Choose the best answer", "选择最合适的答案")}</legend>
-          {question.choices.map((c, i) => (
+          {choiceOrder.map((i, position) => (
             <label className={"answer " + (pick === i ? "selected" : "")} key={i}>
               <input
                 type="radio"
@@ -175,8 +195,8 @@ export function BlindExam() {
                 checked={pick === i}
                 onChange={() => setPick(i)}
               />
-              <span className="answer-letter mono">{choiceLetter(lang, i)}</span>
-              <span>{c[lang]}</span>
+              <span className="answer-letter mono">{choiceLetter(lang, position)}</span>
+              <span>{question.choices[i][lang]}</span>
             </label>
           ))}
         </fieldset>
@@ -197,23 +217,22 @@ export function BlindExam() {
   // ---------- earned: the same rule, now that it has just been used correctly ----------
   if (phase === "answers" && earnedId) {
     const c = byId.get(earnedId);
-    if (!c) setEarnedId(null);
-    else {
+    if (c) {
       const left = outstanding(s).length;
       return (
         <section className="quiz blind">
+        {savedNotice}
           <p className="blind-earned" role="status">
             {tr(
               lang,
-              "ได้แล้ว ครั้งนี้คุณตัดตัวเลือกที่เหลือออกได้ด้วยกุญแจนี้",
-              "Earned. This time you ruled the rest out with that rule.",
-              "答对了。这一次你用这条规则排除了其余选项。",
+              "ได้แล้ว ลองอธิบายด้วยว่าทำไมตัวเลือกอื่นจึงไม่ใช่",
+              "Correct on this retry. Can you explain why the other choices do not fit?",
+              "这次答对了。你能解释其他选项为什么不合适吗？",
             )}
           </p>
-          <h2 className="blind-reask">{c.prompt[lang]}</h2>
+          <h2 ref={head} tabIndex={-1} className="blind-reask">{c.prompt[lang]}</h2>
           <p className="micro">
-            {tr(lang, "คำตอบคือ", "The answer is", "答案是")} {choiceLetter(lang, c.answer)} —{" "}
-            {c.choices[c.answer][lang]}
+            {tr(lang, "คำตอบคือ", "The answer is", "答案是")} {c.choices[c.answer][lang]}
           </p>
           {c.logic && (
             <div className="feedback" role="status">
@@ -226,8 +245,7 @@ export function BlindExam() {
             onClick={() => {
               setEarnedId(null);
               setPick(null);
-              setTook(null);
-              setRevealed(false);
+              setRetrying(false);
               setLast(null);
               if (!left) setPhase("handoff");
             }}
@@ -246,12 +264,15 @@ export function BlindExam() {
     const answer = q.answer;
     return (
       <section className="quiz blind">
+        {savedNotice}
         <p className="micro">
           {tr(lang, "เฉลยและเหตุผล", "The answer and the reasoning", "答案与理由")} ·{" "}
           {tr(lang, `เหลือ ${queue.length} ข้อ`, `${queue.length} still owed`, `还剩${queue.length}题`)} ·{" "}
           {tr(lang, `เคยตอบผิด ${s.retries[q.id] ?? 0} ครั้ง`, `missed ${s.retries[q.id] ?? 0}× since`, `此后错${s.retries[q.id] ?? 0}次`)}
         </p>
 
+        <h2 ref={head} tabIndex={-1} className="blind-reask">{q.prompt[lang]}</h2>
+        {!retrying && <>
         <div className="feedback" role="status">
           {q.logic && (
             <>
@@ -260,6 +281,7 @@ export function BlindExam() {
             </>
           )}
           <p>{q.explanation[lang]}</p>
+          {q.source && <p className="micro"><a href={q.source.url} target="_blank" rel="noopener noreferrer">{q.source.title} ↗</a> · {tr(lang, "ข้อมูล ณ", "As of", "资料日期")} {q.source.asOf}</p>}
           {q.sections.length > 0 && (
             <div className="micro">
               {tr(lang, "ไปต่อที่ตัวบท", "Go further in the text", "继续读条文")}:{" "}
@@ -275,60 +297,32 @@ export function BlindExam() {
         <details className="blind-recap" open>
           <summary>{tr(lang, "คุณเลือกอะไรไป", "What you picked", "你选了什么")}</summary>
           <p className="micro">
-            {tr(lang, "คุณเลือก", "You chose", "你选了")} {choiceLetter(lang, s.firstTry[q.id])} —{" "}
-            {q.choices[s.firstTry[q.id]]?.[lang]}
+            {tr(lang, "คุณเลือก", "You chose", "你选了")} {q.choices[s.firstTry[q.id]]?.[lang]}
           </p>
           <p className="micro">
-            {tr(lang, "คำตอบคือ", "The answer is", "答案是")} {choiceLetter(lang, answer)} — {q.choices[answer][lang]}
+            {tr(lang, "คำตอบคือ", "The answer is", "答案是")} {q.choices[answer][lang]}
           </p>
         </details>
 
-        <h2 className="blind-reask">{q.prompt[lang]}</h2>
-
-        <fieldset disabled={revealed}>
-          <legend className="micro">
-            {tr(lang, "ตอบอีกครั้ง โดยไม่ดูเฉลย", "Answer it again, without the text", "不看解析，再答一次")}
-          </legend>
-          {q.choices.map((c, i) => {
-            const right = revealed && i === answer;
-            const wrong = revealed && i === took;
-            return (
-              <label className={"answer " + (pick === i ? "selected " : "") + (right ? "answer-correct " : "") + (wrong ? "answer-wrong" : "")} key={i}>
-                <input type="radio" name={`retry-${q.id}`} checked={pick === i} onChange={() => setPick(i)} />
-                <span className="answer-letter mono">{choiceLetter(lang, i)}</span>
-                <span>{c[lang]}</span>
-                {right && <span aria-label={tr(lang, "ถูก", "Correct", "正确")}>✓</span>}
-                {wrong && <span aria-label={tr(lang, "ยังผิด", "Still wrong", "仍错")}>×</span>}
-              </label>
-            );
-          })}
+        {last === "wrong" && <p className="notice" role="status">{tr(lang, "ยังไม่ใช่ อ่านหลักคิดอีกครั้ง แล้วลองใหม่ ข้อนี้ยังอยู่ในคิว", "Not yet. Read the rule, then try again. This question stays in your queue.", "还不对。再读一遍判断方法，然后重试。这题仍在待练习列表中。")}</p>}
+        <button className="primary" onClick={() => { setPick(null); setLast(null); setRetrying(true); }}>
+          {tr(lang, "ซ่อนเฉลย แล้วลองใหม่", "Hide explanation and retry", "隐藏解析，再试一次")} →
+        </button>
+        </>}
+        {retrying && <>
+        <fieldset>
+          <legend className="micro">{tr(lang, "ลองตอบโดยไม่ดูเฉลย", "Try without the explanation", "不看解析，再答一次")}</legend>
+          {choiceOrder.map((i, position) => <label className={"answer " + (pick === i ? "selected" : "")} key={i}>
+            <input type="radio" name={`retry-${q.id}`} checked={pick === i} onChange={() => setPick(i)} />
+            <span className="answer-letter mono">{choiceLetter(lang, position)}</span>
+            <span>{q.choices[i][lang]}</span>
+          </label>)}
         </fieldset>
-
-        {revealed && took !== null && (
-          <p className="notice" role="status">
-            {tr(
-              lang,
-              "ยังไม่ใช่ ดูกุญแจด้านบนอีกครั้ง แล้วลองใหม่ ข้อนี้จะไม่ปล่อยไปจนกว่าจะถูก",
-              "Not yet. Read the rule again, then try once more. This one does not leave until it is right.",
-              "还不对。再读一遍上面的规则，然后重试。这题不会离开，直到你答对。",
-            )}
-          </p>
-        )}
-
         <button className="primary" disabled={pick === null} onClick={() => onRetryPick(q.id)}>
           {tr(lang, "ตรวจ", "Check", "检查")} →
         </button>
+        </>}
 
-        {last === "right" && (
-          <p className="blind-earned" role="status">
-            {tr(
-              lang,
-              "ได้แล้ว ครั้งนี้คุณตัดตัวเลือกที่เหลือออกด้วยกุญแจข้างบน ไม่ใช่การจำประโยค",
-              "Earned. This time you ruled the rest out with the rule above, not by remembering the sentence.",
-              "答对了。这一次你是用上面的规则排除其余选项，而不是记住了那句话。",
-            )}
-          </p>
-        )}
       </section>
     );
   }
@@ -337,15 +331,16 @@ export function BlindExam() {
   const score = blindScore(s);
   return (
     <section className="blind">
-      <h1>
-        {tr(lang, `ผ่าน ${score.right} / ${score.total}`, `${score.right} of ${score.total} first time`, `首次答对${score.right}/${score.total}`)}
+        {savedNotice}
+      <h1 ref={head} tabIndex={-1}>
+        {tr(lang, `ครั้งแรกได้ ${score.right} / ${score.total}`, `${score.right} of ${score.total} first time`, `首次答对${score.right}/${score.total}`)}
       </h1>
       <p>
         {tr(
           lang,
-          `ตอบผิด ${score.wrong} ข้อ และตอบถูกทุกข้อนั้นแล้วด้วยการใช้เหตุผล ข้อที่ผ่านแล้วคือข้อที่คุณตอบถูกเองเมื่อเจอซ้ำ`,
-          `${score.wrong} missed, and all ${score.wrong} then answered right by reasoning. A question only passes once you get it right yourself, second time round.`,
-          `错${score.wrong}题，并且这${score.wrong}题都已被你用推理答对。一道题只有第二次你自己答对才算通过。`,
+          `ตอบผิด ${score.wrong} ข้อ และลองใหม่จนตอบถูกครบแล้ว การตอบถูกทันทีหลังดูเฉลยยังไม่แปลว่าจำได้ระยะยาว กลับมาฝึกวันถัดไปและลองโจทย์ใหม่ด้วย`,
+          `${score.wrong} missed; all have now been answered correctly on retry. An immediate retry does not establish lasting recall. Return another day and try fresh questions too.`,
+          `首次错${score.wrong}题，现已全部重试答对。刚看完解析就答对，还不能说明已经长期记住。改天再来复习，也试试新题。`,
         )}
       </p>
       <p>
@@ -363,7 +358,7 @@ export function BlindExam() {
           setS(null);
           setPhase("brief");
           setPick(null);
-          setRevealed(false);
+          setRetrying(false);
           setLast(null);
           setEarnedId(null);
         }}

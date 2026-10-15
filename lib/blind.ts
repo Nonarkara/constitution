@@ -41,7 +41,7 @@ export function currentId(s: Sitting): string | null {
 
 /** The blind pass. Record the pick, remember the miss, explain nothing here. */
 export function submitBlind(s: Sitting, id: string, pick: number, right: boolean): Sitting {
-  if (id in s.firstTry) return s;
+  if (id !== currentId(s) || id in s.firstTry || !Number.isInteger(pick) || pick < 0 || pick > 3) return s;
   return {
     ...s,
     at: s.at + 1,
@@ -52,7 +52,7 @@ export function submitBlind(s: Sitting, id: string, pick: number, right: boolean
 
 /** The answers pass. Right clears the debt for good; wrong keeps it and counts the attempt. */
 export function submitRetry(s: Sitting, id: string, pick: number, right: boolean): Sitting {
-  if (!s.owed.includes(id) || s.cleared.includes(id)) return s;
+  if (s.at !== s.order.length || !s.owed.includes(id) || s.cleared.includes(id) || !Number.isInteger(pick) || pick < 0 || pick > 3) return s;
   return {
     ...s,
     cleared: right ? [...s.cleared, id] : s.cleared,
