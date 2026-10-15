@@ -121,9 +121,9 @@ export function Quiz({
         <p>
           {tr(
             lang,
-            "คุณเดาไปแล้ว การอ่านไม่ใช่ประตูที่ล็อกข้อสอบ อ่านมาตราเหล่านี้ หรือไปตอบได้เลย",
-            "You have already guessed. Reading is not a gate. Read these sections, or go straight to the questions.",
-            "你已经猜过了。阅读不是一道门锁。可以读这些条文，也可以直接作答。",
+            "อ่านมาตราเหล่านี้ก่อนตอบ หรือไปตอบคำถามได้เลย แล้วค่อยกลับมาอ่าน",
+            "Read these sections before answering, or go straight to the questions and return to the text later.",
+            "可以先读这些条文，也可以直接作答，之后再回来核对。",
           )}
         </p>
         {related.map((s) => (
