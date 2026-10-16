@@ -9,6 +9,8 @@
 **[Read it · 12,000 exam takers and counting](https://constitution.nonarkara.org)** ·
 [เริ่มอ่าน](https://constitution.nonarkara.org)
 
+[English (README.md)](./README.md) · [ภาษาไทย (README.th.md)](./README.th.md) · [中文 (README.zh.md)](./README.zh.md)
+
 </div>
 
 ---

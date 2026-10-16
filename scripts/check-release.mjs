@@ -18,6 +18,8 @@
  *      resolve to a file that exists, and every sitemap URL must be real.
  *   5. Runtime images          Every image path the browser builds from JS or
  *      data (see scripts/runtime-images.mjs) must exist in public/ and out/.
+ *   6. Mangled unicode         No U+FFFD replacement characters in the READMEs
+ *      or in any built page. They reach the reader as black diamonds.
  */
 import { readFile, readdir } from "node:fs/promises";
 import { existsSync, statSync, readFileSync } from "node:fs";
@@ -314,6 +316,35 @@ const { REDIRECT_ROUTES: redirectRoutes } = await import("../lib/nav.ts");
   notes.push(`runtime images: ${refs.size} referenced from source, checked in public/ and out/`);
 }
 
+// --------------------------------------------------- 6. mangled unicode text
+// U+FFFD is what a decoder leaves behind when it gives up on bytes it cannot
+// read. It reaches a reader as a black diamond in the middle of a sentence and
+// no build step objects. README.th.md shipped with three of them in its
+// tagline: "อะไรแ���้จะ" instead of "วิธีที่เรียนรู้แล้วได้ผลจริง".
+{
+  const targets = [];
+  for (const name of ["README.md", "README.th.md", "README.zh.md", "CLAUDE.md", "AGENTS.md"]) {
+    if (existsSync(path.join(process.cwd(), name))) targets.push(name);
+  }
+  for (const p of await walk(OUT)) {
+    if (p.endsWith(".html")) targets.push(path.relative(process.cwd(), p));
+  }
+  for (const rel of targets) {
+    const text = readFileSync(path.resolve(process.cwd(), rel), "utf8");
+    const lines = text.split("\n");
+    for (let i = 0; i < lines.length; i++) {
+      const n = (lines[i].match(/�/g) ?? []).length;
+      if (n) {
+        failures.push(
+          `text: ${rel}:${i + 1} has ${n} U+FFFD replacement character(s) — ` +
+            `mangled encoding, readable garbage to anyone: "${lines[i].slice(0, 60)}"`,
+        );
+      }
+    }
+  }
+  notes.push(`text: ${targets.length} files checked for mangled unicode`);
+}
+
 // ---------------------------------------------------------------------- report
 const scored = worst.filter((w) => w.min > 0);
 scored.sort((a, b) => a.r / a.min - b.r / b.min);
@@ -331,5 +362,5 @@ if (failures.length) {
   process.exit(1);
 }
 console.log(
-  `\nPASS — CSS comment integrity, undefined vars, theme contrast, built links and runtime images all clean.`,
+  `\nPASS — CSS comment integrity, undefined vars, theme contrast, built links, runtime images and text encoding all clean.`,
 );
