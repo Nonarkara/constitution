@@ -2357,6 +2357,18 @@ mark.hl.has-note {
   width: 100%;
   height: auto;
 }
+/* The hero is a wide De Stijl / Bauhaus band, so it spans the measure instead of
+   sitting in the 280px column it inherited from the square pastel illustration. */
+.hero-art {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin: 8px 0 0;
+}
+.hero-copy {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  max-width: 640px;
+}
 .hero-copy h1 {
   margin: 0 0 18px;
 }
@@ -2397,7 +2409,7 @@ mark.hl.has-note {
     display: block;
   }
   .hero {
-    grid-template-columns: minmax(0, 1fr) 100px;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
     padding-bottom: 24px;
     margin-bottom: 0;
@@ -2405,10 +2417,14 @@ mark.hl.has-note {
   .hero-art {
     align-self: start;
     margin: 0;
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
+  /* the old rule forced a 1:1 box for the square pastel illustration; the hero
+     is a wide band and must keep its own proportions or it is letterboxed */
   .hero-art img {
-    aspect-ratio: 1;
-    object-fit: contain;
+    aspect-ratio: auto;
+    object-fit: fill;
   }
   .hero-cta {
     max-width: none;
@@ -2426,9 +2442,6 @@ mark.hl.has-note {
     padding-bottom: 10px;
     margin-bottom: 0;
     border-bottom: 0;
-  }
-  .hero-art img {
-    aspect-ratio: 1;
   }
   .hero-copy .page-kicker {
     margin-bottom: 10px;
@@ -2721,7 +2734,8 @@ mark.hl.has-note {
 .subnav-pill[aria-current="page"] {
   font-weight: 600;
 }
-/* Ways to practise read as a ruled list, like the chapter route: one row{
+/* Ways to practise read as a ruled list, like the chapter route: one row, one choice. */
+.mode-card {
   border-top: 1px solid var(--line);
   padding: 16px 12px;
   display: grid;
@@ -3537,8 +3551,11 @@ footer { flex-wrap:wrap; gap:16px; }
   main { padding-top: var(--space-1); }
   .study-strip { gap: 0 var(--space-2); padding-bottom: var(--space-1); border-bottom: 1px solid var(--line); }
   .hero { position: relative; display: block; padding-top: var(--space-3); }
-  .hero-art { position: absolute; right: 0; top: var(--space-3); width: 100px; }
-  .hero-copy h1 { padding-right: 104px; margin-bottom: var(--space-3); }
+  /* this used to float a 100px thumbnail in the top-right corner and pad the
+     h1 around it, which suited the square pastel illustration. The hero is a
+     full-width band now, so it just stacks under the copy like the desktop. */
+  .hero-art { position: static; width: auto; margin-top: var(--space-2); }
+  .hero-copy h1 { margin-bottom: var(--space-3); }
   .hero-copy p { max-width: none; }
   .hero-cta { max-width: none; }
   .hero-cta + .micro { margin-bottom: 0; }

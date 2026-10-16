@@ -2,16 +2,19 @@
 /**
  * Release gate for the built site. Runs after `next build` and fails loudly.
  *
- * Three checks, all deterministic and all aimed at what a learner actually
+ * Four checks, all deterministic and all aimed at what a learner actually
  * trips over rather than at tidiness:
  *
- *   1. CSS custom properties  Every var(--x) must be defined in at least one
+ *   1. Balanced CSS comments  A single unterminated /* turns every following
+ *      rule into a comment. The build stays green; the page just loses its
+ *      layout. Found once already, 950 lines at a time.
+ *   2. CSS custom properties  Every var(--x) must be defined in at least one
  *      theme block. `var(--x, #555)` silently falls back when --x is missing,
  *      and that is how the cram source tags ended up at 2.47:1 in dark mode:
  *      readable-looking CSS, unreadable text.
- *   2. Theme contrast          Each theme's text-on-surface pairs must clear
+ *   3. Theme contrast          Each theme's text-on-surface pairs must clear
  *      WCAG AA for their size.
- *   3. Built link integrity    Every internal href in every built page must
+ *   4. Built link integrity    Every internal href in every built page must
  *      resolve to a file that exists, and every sitemap URL must be real.
  */
 import { readFile, readdir } from "node:fs/promises";
@@ -43,8 +46,55 @@ const ratio = (a, b) => {
   return (x + 0.05) / (y + 0.05);
 };
 
-// ------------------------------------------------------------ 1. undefined vars
+// ------------------------------------------------- 1. CSS comment integrity
+// The dead-CSS sweep in 6779a49 deleted the two rules above a comment and then
+// merged that comment with the selector beneath it, leaving one line:
+//   /* Ways to practise read as a ruled list, like the chapter route: one row{
+// Because CSS comments do not nest, the next */ anywhere below — 39 lines
+// later, on an unrelated /* Active Quiz Container */ heading — closed it. The
+// result was valid CSS by every parser: build green, gate green, `.mode-card`
+// and the whole chapter dropdown simply gone. A balance check would not have
+// caught it, because nothing was unbalanced.
+//
+// The tell is that a comment body containing a brace is not a comment, it is a
+// swallowed rule. No real comment in this stylesheet has one.
 const css = await readFile(CSS, "utf8");
+{
+  const lineOf = (idx) => css.slice(0, idx).split("\n").length;
+  let p = 0;
+  while (p < css.length) {
+    const open = css.indexOf("/*", p);
+    const close = css.indexOf("*/", p);
+    if (close !== -1 && (open === -1 || close < open)) {
+      failures.push(`CSS: stray "*/" on line ${lineOf(close)} with no opening "/*" above it`);
+      p = close + 2;
+      continue;
+    }
+    if (open === -1) break;
+    const end = css.indexOf("*/", open + 2);
+    if (end === -1) {
+      const start = lineOf(open);
+      const total = css.split("\n").length;
+      failures.push(
+        `CSS: comment opened on line ${start} is never closed — lines ${start}–${total} ` +
+          `(${total - start + 1} lines) are dead`,
+      );
+      break;
+    }
+    const body = css.slice(open + 2, end);
+    if (/[{}]/.test(body)) {
+      const start = lineOf(open);
+      const stop = lineOf(end);
+      failures.push(
+        `CSS: the comment on line ${start} contains a brace, so lines ${start + 1}–${stop - 1} ` +
+          `(${stop - start - 1} lines of CSS) are dead, not commented: "${body.slice(0, 70).replace(/\s+/g, " ")}"`,
+      );
+    }
+    p = end + 2;
+  }
+}
+
+// ------------------------------------------------------------ 2. undefined vars
 const defined = new Set([...css.matchAll(/(--[a-z0-9-]+)\s*:/gi)].map((m) => m[1]));
 const used = [...css.matchAll(/var\(\s*(--[a-z0-9-]+)\s*(,)?/gi)];
 const withFallback = new Map();
@@ -270,4 +320,6 @@ if (failures.length) {
   for (const f of failures) console.error(`  ✗ ${f}`);
   process.exit(1);
 }
-console.log(`\nPASS — undefined vars, theme contrast and built links all clean.`);
+console.log(
+  `\nPASS — CSS comment integrity, undefined vars, theme contrast and built links all clean.`,
+);
