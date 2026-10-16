@@ -102,4 +102,8 @@ The earlier "sitemap and feeds point at /learn/" report did not hold: `/learn/` 
 
 ## Outstanding — 16 October 2026
 
-Two decisions reach beyond this repository and are not code: Cloudflare "Always Use HTTPS" (affects every nonarkara.org site) and enabling Dependabot/secret scanning (repository settings). Unused CSS remains (~37 classes) and is safe to delete but harmless to keep.
+**GitHub (done).** Dependabot vulnerability alerts and automated security fixes are enabled on the private repository; Dependabot currently reports zero alerts. **Secret scanning could not be enabled:** GitHub refuses with "Secret scanning is not available for this repository" (HTTP 422). On a private repository it requires GitHub Advanced Security, which is a paid licence rather than a setting. Push protection is likewise unavailable until then. If the repo is ever made public, secret scanning switches on by itself and needs no action.
+
+**Cloudflare Always Use HTTPS (blocked, needs a credential).** Dr Non authorised this on 16 October. It cannot be set from this machine: the only Cloudflare credential present is wrangler's OAuth token, whose scopes are `account:read`, `user:read`, `workers:write` and similar — it includes `zone:read` but no scope that permits writing zone settings, and the settings API answers it with an authentication error. Changing `always_use_https` needs an API token with **Zone Settings: Edit** for the nonarkara.org zone (zone id `8809ee955a8edb681c34f45ed8f5b765`), or a dashboard toggle. Remember it is zone-wide: it affects every nonarkara.org site on the account, and anything still calling one of them over plain HTTP will start failing.
+
+**Leftover.** Eight unreachable CSS rules remain inside `@media` blocks; the pruner deliberately does not recurse into at-rules, so they are untouched and harmless.
