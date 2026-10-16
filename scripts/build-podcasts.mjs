@@ -98,7 +98,9 @@ for (const lang of languages) {
       return `<item><title>${title}</title><link>${origin}/section/?n=${r.section}</link><guid isPermaLink="false">constitution-${lang}-${r.section}-${r.audioSha256.slice(0, 16)}</guid><description>${escape(descriptions[lang])}</description><enclosure url="${origin}${r.url}" length="${r.bytes}" type="audio/mpeg"/><itunes:duration>${Math.round(r.durationSeconds)}</itunes:duration><itunes:episode>${r.section}</itunes:episode><itunes:episodeType>full</itunes:episodeType></item>`;
     })
     .join("\n");
-  const feed = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>${titles[lang]}</title><link>${origin}/learn/</link><description>${escape(descriptions[lang])}</description><language>${lang}</language><itunes:author>Constitution Study</itunes:author><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:image href="${origin}/podcast-cover.png"/><atom:link href="${origin}/podcast/${lang}.xml" rel="self" type="application/rss+xml"/>${items}</channel></rss>`;
+  // the channel points at the home page: /learn/ is a forwarder, not a page, and a
+  // podcast client would store that address as the feed's permanent home.
+  const feed = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>${titles[lang]}</title><link>${origin}/</link><description>${escape(descriptions[lang])}</description><language>${lang}</language><itunes:author>Constitution Study</itunes:author><itunes:explicit>false</itunes:explicit><itunes:type>serial</itunes:type><itunes:image href="${origin}/podcast-cover.png"/><atom:link href="${origin}/podcast/${lang}.xml" rel="self" type="application/rss+xml"/>${items}</channel></rss>`;
   await writeFile(`public/podcast/${lang}.xml`, feed + "\n");
 }
 await writeFile("public/audio-recordings.json", JSON.stringify(records) + "\n");

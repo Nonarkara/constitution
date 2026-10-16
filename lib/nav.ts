@@ -27,6 +27,14 @@ export const GUIDE = [
   { slug: "exam-method", chapters: [] as number[], label: text("วิธีทำข้อสอบ", "how to answer", "答题方法"), title: text("วิธีทำข้อสอบ", "How to answer", "答题方法") },
 ];
 
+/**
+ * Routes that exist only to forward somewhere else. They are real files, so a
+ * link check passes them, but they have no content of their own and must never
+ * be advertised as pages: the sitemap and the podcast feeds both filter this out,
+ * and `npm run check:release` fails if one slips back in.
+ */
+export const REDIRECT_ROUTES: string[] = ["/learn/"];
+
 /** Every page route, including each study-guide chapter. `/learn/` redirects to `/`. */
 export const APP_ROUTES = [
   "/",

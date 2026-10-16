@@ -15,7 +15,7 @@
  *      resolve to a file that exists, and every sitemap URL must be real.
  */
 import { readFile, readdir } from "node:fs/promises";
-import { existsSync, statSync } from "node:fs";
+import { existsSync, statSync, readFileSync } from "node:fs";
 import path from "node:path";
 
 const CSS = "app/globals.css";
@@ -206,6 +206,50 @@ if (!existsSync(OUT)) {
     }
     notes.push(`podcast ${lang}: ${(xml.match(/<item>/g) ?? []).length} episodes, links resolve`);
   }
+
+  // A stub passes every existence check and still is the wrong thing to advertise:
+// /learn/ returned 200, its file existed, and link integrity was happy, while its
+// entire <main> was the single word "Home" and the router swapped it for "/".
+//
+// This cannot be detected by measuring the built HTML. A client-rendered page
+// such as /flashcards/ also ships an almost empty static <main>, so "short main"
+// flags real pages too, and "looks for router.replace" fails because in a client
+// component that call lives in the JS bundle. They are indistinguishable from the
+// server's output. So the route owner declares them instead, in one place, and
+// this check verifies the declaration is honoured rather than guessing.
+const { REDIRECT_ROUTES: redirectRoutes } = await import("../lib/nav.ts");
+  const isRedirectStub = (url) => {
+    try {
+      const path = new URL(url).pathname;
+      return redirectRoutes.includes(path);
+    } catch {
+      return false;
+    }
+  };
+
+  const advertised = new Set();
+  const smPath2 = path.join(OUT, "sitemap.xml");
+  if (existsSync(smPath2)) {
+    const sm = readFileSync(smPath2, "utf8");
+    const origin2 = "https://constitution.nonarkara.org";
+    for (const u of [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])) {
+      if (isRedirectStub(u)) {
+        failures.push(`sitemap: ${u} is a declared redirect stub, not a page — drop it from the sitemap`);
+      }
+      advertised.add(u.slice(origin2.length).replace(/^\/|\/$/g, ""));
+    }
+  }
+  for (const lang of ["th", "en", "zh"]) {
+    const p = path.join(OUT, "podcast", `${lang}.xml`);
+    if (!existsSync(p)) continue;
+    const xml = readFileSync(p, "utf8");
+    const origin3 = "https://constitution.nonarkara.org";
+    const channel = xml.match(/<channel>[\s\S]*?<link>([^<]+)<\/link>/)?.[1];
+    if (channel && isRedirectStub(channel)) {
+      failures.push(`podcast ${lang}: channel link ${channel} is a declared redirect stub — point it at a real page`);
+    }
+  }
+  void advertised;
 
   notes.push(`pages: ${html.length} html files checked`);
 }
