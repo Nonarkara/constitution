@@ -32,3 +32,5 @@ token*.json
 .openai/news-seed.sql
 
 .DS_Store
+*.orig
+*.rej

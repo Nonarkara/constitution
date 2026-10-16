@@ -1,10 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { askJSON, requestAsk, parseAskAnswer, AskClientError } from '../lib/ask-client.ts';
+import { askJSON, parseAskAnswer, AskClientError } from '../lib/ask-client.ts';
 import { readSources, presentAnswer, safeAskURL, looksLikeProviderError } from '../lib/ask.ts';
 import { defaultProgress, recordAnswer } from '../lib/learning.ts';
 const signal = () => new AbortController().signal;
-const immediate = async () => {};
 test('malformed AI payloads are rejected before rendering and helpers tolerate invalid source containers', () => {
  for(const value of [null,{}, {answer:4}, {answer:'ok',sources:{}}, {answer:'ok',sources:[null]}, {answer:'ok',appendix:{statutes:[{cite:5}]}}, {answer:'ok',appendix:{deka:{}}}, {answer:'x'.repeat(60001)}]) assert.equal(parseAskAnswer(value),null);
  assert.equal(parseAskAnswer({answer:'ok',sources:[{}, {title:'Law',url:'https://example.org/law'}]})?.answer,'ok');
@@ -30,18 +29,12 @@ test('oversized responses are refused and cancellation exits waiting even if tra
  const pending=askJSON('https://example.org',{},controller.signal,100,async()=>new Promise(()=>{}));
  controller.abort(); await assert.rejects(pending,{name:'AbortError'});
 });
-test('completed job is validated, queue is reported, and invalid acceptance cannot start polling', async () => {
- const values=[new Response('{"id":"job-1"}',{status:202}),Response.json({status:'running',position:2}),Response.json({status:'done',answer:'Read [2].',sources:[{},{title:'Law'}]})];
- const positions:number[]=[];
- const answer=await requestAsk('A study question','en',[256],signal(),n=>positions.push(n),{fetcher:async()=>values.shift()!,wait:immediate});
- assert.deepEqual(positions,[2]); assert.equal(answer.answer,'Read [2].');
- await assert.rejects(requestAsk('A study question','en',[],signal(),()=>{},{fetcher:async()=>new Response('{}',{status:202}),wait:immediate}),AskClientError);
- const malformed=[new Response('{"id":"job-2"}',{status:202}),Response.json({status:'done',sources:{}})];
- await assert.rejects(requestAsk('A study question','en',[],signal(),()=>{},{fetcher:async()=>malformed.shift()!,wait:immediate}),AskClientError);
-});
-test('whole-job deadline applies across multiple successful requests',async()=>{
- const fetcher:typeof fetch=async(_u,init)=> init?.method==='POST'? new Response('{"id":"job"}',{status:202}):Response.json({status:'running'});
- await assert.rejects(requestAsk('A study question','en',[],signal(),()=>{},{fetcher,totalMs:20,wait:async ms=>new Promise(r=>setTimeout(r,ms))}),(e:unknown)=>e instanceof AskClientError&&e.kind==='timeout');
+test('a finished answer is validated before the page shows it', () => {
+ assert.equal(parseAskAnswer({status:'done',answer:'Read [2].',sources:[{},{title:'Law'}]})?.answer,'Read [2].');
+ assert.equal(parseAskAnswer({status:'done',sources:{}}),null);
+ assert.equal(parseAskAnswer({status:'done',answer:'x',sources:{}}),null);
+ assert.equal(parseAskAnswer({status:'done',answer:'x',grounded:'yes'}),null);
+ assert.equal(parseAskAnswer({status:'done',answer:'x'.repeat(60_001)}),null);
 });
 test('wrong/right cycles cannot farm XP, and due retrieval remains rewarded without changing existing XP',()=>{
  const now=Date.parse('2026-10-15T12:00:00Z'), q={id:'q'};

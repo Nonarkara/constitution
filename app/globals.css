@@ -766,7 +766,7 @@ progress::-moz-progress-bar {
 
 /* Blind sitting: the rule has to outrank the explanation, so it gets its own weight. */
 .blind {
-  max-width: var(--measure, 68ch);
+  max-width: 68ch;
 }
 .blind .feedback {
   border-left-width: 3px;
@@ -3739,9 +3739,9 @@ footer { flex-wrap:wrap; gap:16px; }
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--ink-2, #555);
-  border: 1px solid var(--line, #ccc);
-  background: var(--bg-2, transparent);
+  color: var(--muted);
+  border: 1px solid var(--line);
+  background: transparent;
 }
 .cram-traps li {
   margin: 10px 0;

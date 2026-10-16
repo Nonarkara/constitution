@@ -1,5 +1,4 @@
-import { ASK_ORIGIN, askRequest, classify, looksLikeProviderError, pollDelay, POLL_LIMIT } from './ask.ts';
-import type { Lang } from './i18n.ts';
+// components/Ask.tsx sends every request through askJSON and checks every answer with parseAskAnswer.
 import type { AskSource } from './ask.ts';
 export type AskAnswer = {
   answer: string;
@@ -76,40 +75,4 @@ export async function askJSON(url: string, init: RequestInit, signal: AbortSigna
     signal.removeEventListener('abort', cancel);
     controller.abort();
   }
-}
-function delay(ms: number, signal: AbortSignal): Promise<void> {
-  if (signal.aborted) return Promise.reject(abortError());
-  return new Promise((resolve,reject) => {
-    const cancel = () => { clearTimeout(timer); reject(abortError()); };
-    const timer = setTimeout(() => { signal.removeEventListener('abort',cancel); resolve(); },ms);
-    signal.addEventListener('abort',cancel,{once:true});
-  });
-}
-export async function requestAsk(question: string, lang: Lang, sections: number[], signal: AbortSignal, onPosition: (n:number)=>void, options: { fetcher?: typeof fetch; requestMs?:number; totalMs?:number; wait?:typeof delay } = {}): Promise<AskAnswer> {
-  const expires = Date.now() + (options.totalMs ?? ASK_TOTAL_MS);
-  const call = (url:string,init:RequestInit) => askJSON(url,init,signal,Math.min(options.requestMs ?? ASK_REQUEST_MS, expires-Date.now()),options.fetcher);
-  const first = await call(`${ASK_ORIGIN}/api/laws`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(askRequest(question,lang,sections))});
-  const envelope = object(first.body) ? first.body : {};
-  const outcome = classify(first.status,{refused:envelope.refused===true});
-  if (outcome !== 'accepted') throw new AskClientError(outcome);
-  if (typeof envelope.id !== 'string' || !/^[\w-]{1,200}$/.test(envelope.id)) throw new AskClientError('server');
-  for (let attempt=0;attempt<POLL_LIMIT;attempt++) {
-    const remaining=expires-Date.now();
-    if (remaining<=0) throw new AskClientError('timeout');
-    await (options.wait ?? delay)(Math.min(pollDelay(attempt),remaining),signal);
-    const poll=await call(`${ASK_ORIGIN}/api/ask/${encodeURIComponent(envelope.id)}`,{});
-    if (!object(poll.body)) throw new AskClientError('lost');
-    const job=poll.body;
-    if (poll.status===429 || looksLikeProviderError(String(job.error??''))) throw new AskClientError('rate');
-    if (poll.status!==200 || job.error) throw new AskClientError('lost');
-    if (job.status==='done') {
-      const parsed=parseAskAnswer(job);
-      if (!parsed) throw new AskClientError('lost');
-      if (looksLikeProviderError(parsed.answer)) throw new AskClientError('rate');
-      return parsed;
-    }
-    if (!['queued','running','pending','processing','waiting'].includes(String(job.status))) throw new AskClientError('lost');
-    onPosition(typeof job.position==='number' && Number.isSafeInteger(job.position) && job.position>=0 ? job.position : 0);
-  }
-  throw new AskClientError('timeout');
 }
