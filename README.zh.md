@@ -1,156 +1,305 @@
-# 泰国王国佛历2560年宪法（2017）研习笔记本
+<div align="center">
 
+<img src="public/illustrations/hero.webp" alt="蒙德里安与包豪斯风格的几何构图，融入日本传统麻叶纹与青海波纹样，以及一个正在阅读的小漫画人物" width="100%" />
 
-> **为 Tikky、泰国国家公务员备考者（OCSC / 县长行政官 / 法务官 / 法院检察人员），以及希望系统了解泰国最高宪制运作的学习者精心打造的本地化学习工具。**
->
-> [ภาษาไทย (README.th.md)](./README.th.md) · [English (README.md)](./README.md) · [中文 (README.zh.md)](./README.zh.md)
+# 宪法，按我真正想学的方式来学
 
----
+**一个免费、可离线使用的泰国公务员考试学习网站。作者本人考过这些考试，受够了大家习惯的学法，于是自己摸索出真正有效的办法。**
 
-## 你所知道的，以及把点连起来的线
+**[开始阅读 · 已有 12,000 名考生使用](https://constitution.nonarkara.org)** ·
+[เริ่มอ่าน](https://constitution.nonarkara.org)
 
-你读过、标记过、写过和练过的一切，都会汇集在 `/notes/` 的一张图上：一章是一条线，一条是一个站点。只有当条文本身互相点名（泰文本中共220处），或本笔记的索引把它们归为同一主题时，你的条文之间才会连线。界面始终注明每条线来自条文还是索引。点任意一条即可继续深挖。
+[ภาษาไทย (README.th.md)](./README.th.md) · [English (README.md)](./README.md) · [中文 (README.zh.md)](./README.zh.md)
 
-屏幕配色有四种：浅色、柔和、深色和高对比，默认跟随设备设置。
-
----
-
-## 视觉风格：严谨公民规范与温润蜡笔图解（Crayon Aesthetic）
-
-本平台秉持**“严谨公民制度 + 温暖手绘笔记”**的双重视角：
-- **纯白纸感与清晰炭黑墨迹：** 严格遵循公法研读排版规范，选用 `IBM Plex Sans Thai`、`Source Sans 3`、`Noto Sans SC` 与 `JetBrains Mono` 字体，摒弃杂乱装饰与花哨渐变。
-- **琥珀黄（Amber `#f59e0b`）导向色：** 作为全站唯一交互强调色，精准指引下一步操作与学习焦点。
-- **蜡笔与彩色铅笔手绘场景：** 呈现静心研读、聆听法条、温习小卡的成年学者形象（身着标志性琥珀色毛衣），让法律学习充满人情味。
-- **蜡笔手绘图解体系（`/cheatsheet/`）：** 法律位阶金字塔、修宪三读判定树、比例原则平衡天平与紧急法令流程图，皆以手绘蜡笔质感呈现，生动直观。
+</div>
 
 ---
 
-## 六步深度学习法（Learning Methodology）
+## 写给正在备考的你
+
+你会很累。你会在公交车上、在凌晨一点、或者在考前五周打开这个网站，心想*我应该早点开始的*。这个念头浪费掉的备考时间，比任何一门科目都多。
+
+所以我先说一句没人会说的话：
+
+**第一遍，你大部分都会答错。这正是设计本身。**
+
+这个网站不是先给你讲解，而是一上来就让你在什么都没读的情况下，回答八十个考试主题。你会错掉大部分。每答错一题，网站就把那条*规则*（真正决定答案的那件事）交给你，然后再问你同一道题。答对之前，不会往下走。
+
+这不是励志技巧。它借鉴的是关于记忆如何形成的真实研究，也是这个网站与一堆闪卡最根本的区别。
+
+在决定怎么用之前，请先读下面的[学习循环](#学习循环一个概念五遍)。只要四分钟，能为你省下好几周。
+
+---
+
+## 为什么要做这个
+
+我是顾问，不是律师，也不是程序员。我看过很多人备考，也看过自己备考得很糟糕。我发现，几乎所有人都像学历史一样学宪法：读一章，划出重点句，感觉良好，然后考得很差。
+
+这种做法有三个问题，这个网站分别给出了答案。
+
+### 1. 阅读不等于学习
+
+划重点让人觉得在用功，因为它费力。但正因如此，它并不能证明你学会了。几十年的研究结论一致：**自我测试和间隔复习**的效果远远好于重读和划重点；而自我解释、交错练习和图像联想是否有帮助，取决于具体任务和学习者（[Dunlosky 等，2013](https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html)）。间隔效应本身是公认的真实效应（[Cepeda 等，2006](https://www.psychologicalscience.org/publications/journals/pspi/spacing.pdf)），近期也有一篇更细致的综述讨论应如何安排提取练习（[Carpenter 等，2022](https://www.nature.com/articles/s44159-022-00089-1)）。
+
+所以，这里的每一道题都是一次测试。答题*本身*就是学习。
+
+### 2. 错误答案是整页上最有价值的东西
+
+大多数应用把答错当作惩罚，标成红色，然后跳过。这等于把最有用的信息扔掉了。一次答错准确地告诉你，你哪里不懂，而那正是接下来一小时最值得投入的地方。
+
+在这里，答错会产生一笔**欠账**。它会一直回来，直到你答对为止。不是背下那句话就算，也不是点两次跳过就算，而是要能用推理排除另外三个选项。这才是考试真正考的能力，也是唯一考的能力。
+
+### 3. 规则可以迁移，句子不能
+
+如果你背的是*“第213条的申诉要先经过监察专员”*，它只能帮你答一道题。如果你学会的是*“请求必须先交给行政机关，只有在该机关拒绝或60天不作回应时，才能诉诸法院”*，这条规则既能回答第213条，也能回答下一道同类题目。
+
+本站全部 284 道 Pokklong 题和 90 道全真模拟题，在解析之外都附有一条明确的**规则**。有一项测试专门确保没有两道题共用同一条规则，因为被复制的规则只能用一次。
+
+---
+
+## 学习循环：一个概念，五遍
+
+这就是整个产品。其他一切都只是通往它的入口。
+
+```svg
+<svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="The learning loop: sit blind, miss, learn the rule, answer again, earn it">
+  <style>
+    .box { fill: none; stroke: #111; stroke-width: 2; }
+    .fill-a { fill: #E4002B; }   /* primary red   */
+    .fill-b { fill: #F5C518; }   /* primary yellow*/
+    .fill-c { fill: #0057B7; }   /* primary blue  */
+    .lbl { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #111; }
+    .lbl-w { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 15px; fill: #fff; }
+    .num { font-family: ui-monospace, monospace; font-size: 13px; fill: #111; }
+  </style>
+
+  <!-- step 1: blind -->
+  <rect class="box fill-a" x="10" y="40" width="150" height="96"/>
+  <text class="lbl-w" x="85" y="72" text-anchor="middle">Sit it blind</text>
+  <text class="lbl-w" x="85" y="94" text-anchor="middle">80 topics.</text>
+  <text class="lbl-w" x="85" y="114" text-anchor="middle">Nothing to read.</text>
+  <text class="num" x="16" y="30">01</text>
+
+  <!-- step 2: miss -->
+  <line x1="160" y1="88" x2="205" y2="88" stroke="#111" stroke-width="2"/>
+  <polygon points="205,88 195,83 195,93" fill="#111"/>
+  <rect class="box" x="207" y="40" width="150" height="96"/>
+  <text class="lbl" x="282" y="72" text-anchor="middle">You miss it.</text>
+  <text class="lbl" x="282" y="94" text-anchor="middle">Most of them.</text>
+  <text class="lbl" x="282" y="114" text-anchor="middle">That is the point.</text>
+  <text class="num" x="213" y="30">02</text>
+
+  <!-- step 3: the rule -->
+  <line x1="357" y1="88" x2="402" y2="88" stroke="#111" stroke-width="2"/>
+  <polygon points="402,88 392,83 392,93" fill="#111"/>
+  <rect class="box fill-b" x="404" y="40" width="180" height="96"/>
+  <text class="lbl" x="494" y="70" text-anchor="middle">Get the rule.</text>
+  <text class="lbl" x="494" y="92" text-anchor="middle">The thing that</text>
+  <text class="lbl" x="494" y="112" text-anchor="middle">decides the answer.</text>
+  <text class="num" x="410" y="30">03</text>
+
+  <!-- step 4: again -->
+  <line x1="584" y1="88" x2="629" y2="88" stroke="#111" stroke-width="2"/>
+  <polygon points="629,88 619,83 619,93" fill="#111"/>
+  <rect class="box fill-c" x="631" y="40" width="150" height="96"/>
+  <text class="lbl-w" x="706" y="72" text-anchor="middle">Answer again.</text>
+  <text class="lbl-w" x="706" y="94" text-anchor="middle">Rule out the</text>
+  <text class="lbl-w" x="706" y="114" text-anchor="middle">other three.</text>
+  <text class="num" x="637" y="30">04</text>
+
+  <!-- earned -->
+  <rect x="700" y="170" width="150" height="52" fill="#111"/>
+  <text x="775" y="202" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif"
+        font-size="16" fill="#fff">Earned →</text>
+  <path d="M 706 136 L 706 158 Q 706 170 718 170 L 700 170" fill="none" stroke="#111" stroke-width="2"/>
+
+  <!-- loop back -->
+  <path d="M 85 136 L 85 196 Q 85 208 97 208 L 620 208 Q 632 208 632 196 L 632 140"
+        fill="none" stroke="#111" stroke-width="2" stroke-dasharray="6 5"/>
+  <polygon points="632,136 627,146 637,146" fill="#111"/>
+  <text x="358" y="228" text-anchor="middle" font-family="ui-monospace,monospace"
+        font-size="13" fill="#111">wrong again → the rule stays up, and it comes right back</text>
+
+  <text x="10" y="250" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" fill="#555">
+    A question is not finished when you have seen the answer. It is finished when you can derive it.
+  </text>
+</svg>
+```
+
+再读一遍最后一行。它就是这个项目的全部论点：一道题不是看过答案就算完成，而是能自己推导出答案才算完成。
+
+---
+
+## 里面有什么
+
+| | |
+|---|---|
+| **279 条条文** | 佛历2560年（2017）宪法全文，含2021年修正案。泰文为权威原文，附国务委员会英文译本和中文学习译本 |
+| **837 段录音** | 每一条都有泰、英、中三种语言的朗读，在本地生成，并与原文逐条校验 |
+| **470 道题** | 依据条文编写的练习题，附解析和出处 |
+| **284 道 Pokklong 题** | 一条十二级阶梯，带你走完泰国地方行政管理 |
+| **90 道全真模拟题** | 县长考试的 80 个考核主题，每题附一条排除规则 |
+| **13 章指南** | 十三章内容，教的是推理，而不是清单 |
+| **可离线使用** | 可安装，无需账号，不做追踪。学习进度只保存在你的设备上 |
+
+---
+
+## Pokklong：十二步
+
+大多数想学 *ปกครอง*（行政治理）的人都在背条文编号。这里反其道而行：从最基础开始，一步一步搭建逻辑，每一步只依赖前一步。
+
+```svg
+<svg viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg" role="img"
+     aria-label="The twelve Pokklong steps from why a state needs administration to control and accountability">
+  <style>
+    .s { stroke:#111; stroke-width:2; }
+    .t { font-family: ui-sans-serif,system-ui,sans-serif; font-size:12.5px; fill:#111; }
+    .n { font-family: ui-monospace,monospace; font-size:12px; fill:#111; }
+  </style>
+  <!-- asanoha-inspired grid of twelve cells -->
+  <g>
+    <rect class="s" fill="#E4002B" x="10"  y="20"  width="130" height="80"/>
+    <rect class="s" fill="#fff"    x="150" y="20"  width="130" height="80"/>
+    <rect class="s" fill="#0057B7" x="290" y="20"  width="130" height="80"/>
+    <rect class="s" fill="#F5C518" x="430" y="20"  width="130" height="80"/>
+    <rect class="s" fill="#fff"    x="570" y="20"  width="130" height="80"/>
+    <rect class="s" fill="#111"    x="710" y="20"  width="130" height="80"/>
+    <rect class="s" fill="#fff"    x="10"  y="110" width="130" height="80"/>
+    <rect class="s" fill="#F5C518" x="150" y="110" width="130" height="80"/>
+    <rect class="s" fill="#fff"    x="290" y="110" width="130" height="80"/>
+    <rect class="s" fill="#0057B7" x="430" y="110" width="130" height="80"/>
+    <rect class="s" fill="#fff"    x="570" y="110" width="130" height="80"/>
+    <rect class="s" fill="#E4002B" x="710" y="110" width="130" height="80"/>
+  </g>
+  <text class="n" x="16"  y="14">01</text><text class="t" x="16"  y="44">Why a state</text><text class="t" x="16"  y="62">needs</text><text class="t" x="16"  y="80">administration</text>
+  <text class="n" x="156" y="14">02</text><text class="t" x="156" y="44">The three</text><text class="t" x="156" y="62">tiers</text>
+  <text class="n" x="296" y="14">03</text><text class="t" x="296" y="44">The centre:</text><text class="t" x="296" y="62">who heads what</text>
+  <text class="n" x="436" y="14">04</text><text class="t" x="436" y="44">Province</text><text class="t" x="436" y="62">and district</text>
+  <text class="n" x="576" y="14">05</text><text class="t" x="576" y="44">Self-rule</text>
+  <text class="n" x="716" y="14">06</text><text class="t" x="716" y="44">Chain of</text><text class="t" x="716" y="62">command</text>
+  <text class="n" x="16"  y="104">07</text><text class="t" x="16"  y="134">Legal acts:</text><text class="t" x="16"  y="152">orders and rules</text>
+  <text class="n" x="156" y="104">08</text><text class="t" x="156" y="134">Who may</text><text class="t" x="156" y="152">decide</text>
+  <text class="n" x="296" y="104">09</text><text class="t" x="296" y="134">Fair</text><text class="t" x="296" y="152">procedure</text>
+  <text class="n" x="436" y="104">10</text><text class="t" x="436" y="134">Appeal,</text><text class="t" x="436" y="152">revocation</text>
+  <text class="n" x="576" y="104">11</text><text class="t" x="576" y="134">Enforcement</text><text class="t" x="576" y="152">and notice</text>
+  <text class="n" x="716" y="104">12</text><text class="t" x="716" y="134">Control and</text><text class="t" x="716" y="152">accountability</text>
+
+  <text x="10" y="225" font-family="ui-sans-serif,system-ui,sans-serif" font-size="14" fill="#111">
+    <tspan font-weight="600">Guess first, then the why, then the logic so far.</tspan>
+  </text>
+  <text x="10" y="248" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" fill="#555">
+    Each step adds one idea to a running summary. By step 12 you can rebuild Thai
+  </text>
+  <text x="10" y="266" font-family="ui-sans-serif,system-ui,sans-serif" font-size="13" fill="#555">
+    bureaucratic logic from first principles instead of recalling section numbers.
+  </text>
+</svg>
+```
+
+每一步都在累积的摘要里加入一个概念：先猜，再看原因，再看到目前为止的逻辑。到第 12 步，你就能从基本原理重建泰国官僚体系的逻辑，而不是回忆条文编号。
+
+**出处，以及“借来、改进、注明来源”的说明。** 主题清单，以及爱考数字和期限的出题习惯，来自 ประพันธ์ เวารัมย์ 编写的 *แนวข้อสอบ พ.ร.บ.วิธีปฏิบัติราชการทางปกครอง พ.ศ. 2539*。这里的每道题都经过重写，**没有一道逐字照搬**，法律文本均对照泰文维基文库核实。我们还更正了该资料中的错误（列于 `source/slideshare-2539-INDEX.md`），并补充了它完全没有涉及的两个领域：国家结构，以及依据佛历2539年《官员侵权责任法》和佛历2540年《政府信息法》的问责机制。
+
+这就是这个项目的全部原则：拿来好的结构，改正错误，并说明出处。
+
+---
+
+## 背后的心理学，以及我从哪里学来
+
+我不是心理学家，这些也不是我的研究发现。下面是我读过、觉得有说服力的内容，以及每一项如何变成代码里的具体决定，也包括我刻意**没有**照做的地方。
+
+| 概念 | 它说了什么 | 在这里改变了什么 |
+|---|---|---|
+| **测试效应**（提取练习） | 从记忆中提取信息，比往里装信息更能强化记忆 | 每道题先是测试。解析总在作答之后出现，从不提前 |
+| **间隔效应**（Cepeda 等 2006） | 分散在几天里的复习胜过集中突击 | 答错的卡片会在 10 分钟后回来，然后是 1、3、7、14 天 |
+| **高效用排名**（Dunlosky 等 2013） | 练习测试和间隔复习效用高，重读和划重点效用低 | 划重点和重读功能已从产品中彻底移除 |
+| **效果因任务而异**（Carpenter 等 2022） | 自我解释、交错练习和图像联想对不同学习者、不同任务效果不同 | 这些只作为选项提供，从不断言。网站从不承诺你的成绩 |
+| **先回忆再看选项** | 先回忆再选择，胜过不回忆直接选择 | 你先回忆，再看到选项。可以跳过，但这是默认设置 |
+| **合意困难** | 在恰当时机的一点挣扎，换来之后的轻松 | 全真模拟不给你先读的机会。这份阻力就是功能本身 |
+
+### 我拒绝声称的事
+
+- **1/3/7/14 天**的复习间隔只是一个起步的经验法则，不是最优解。没有人证明过它对你最好。
+- 本应用**不会给**你写的解释**打分**。它只保存并展示给你看。一台假装能评判它无法评估的推理的机器，比沉默更糟糕。
+- 这里**没有 AI 教练**。没有模型在给你打分、追踪你的政治立场，或决定你该相信什么。一切都在你的浏览器里运行。这是自适应的提取练习，不是训练出来的系统，也不对你的观点作任何判断。
+- **本站对你成绩的实际效果尚未经过检验。**我没有做过对照研究。我有的只是推理和一套测试。
+
+### 我仍可能出错的地方
+
+我是一个写法律的顾问。我仔细读过原文，每一章都请不为我工作的人对照泰文原文核对过。但**这不是法律意见，也不是官方考试大纲；法律体系中的一个错字，远比菜单上的错字严重。**每一页都标明出处和日期，请自行核对。如果与政府公报不一致，以政府公报为准，也请告诉我。
+
+---
+
+## 它是怎么构建的
+
+Next.js 静态导出，由 Cloudflare Worker 提供服务。没有后端，没有账号，没有分析统计，没有追踪。可以安装到主屏幕，断网也能用。
 
 ```
-[第一步：生活实境谜题] ──> [第二步：回归法定原条文] ──> [第三步：算法公式解析]
-   (先猜再读激活思考)          (泰/英/中三语对照+朗读)       (蜡笔流程图与判定门)
-            │
-            ▼
-[第四步：情境实战练习] ──> [第五步：间隔重复复习] ──> [第六步：助记故事与口诀]
-   (470道全覆盖考题)           (Spaced Repetition)         (轻松锁定关键数字)
+app/          路由：每个页面都是静态 HTML
+components/   交互界面
+lib/          条文读取、学习模型、导航
+data/         宪法、题目、指南，全部是纯 JSON
+scripts/      校验器、构建步骤和发布关卡
+tests/        测试：条文、题目、翻译、案例、界面
 ```
 
-1. **第一步：生活实境谜题（Life-First Puzzles）：** 每个章节均以日常切身问题引入（如手机通信隐私、行政搜查、环境诉讼），先猜再读，借助认知意外增强长时记忆。
-2. **第二步：权威法条三语对照（Verbatim Trilingual Corpus）：** 泰文政府公报原文居核心权威地位；辅以泰国枢密院国务委员会英文官方译文及2021年修订对照，以及279条中文完整学习译文与摘要，279条条文均有泰英中三语朗读，共837个音频。
-3. **第三步：算法化逻辑拆解（Algorithmic Logic Gates）：** 将复杂的修宪门槛、紧急法令颁布条件、违宪审查途径提炼为清晰的计算机逻辑门（Logic Gates）。
-4. **第四步：470道精编情境练习（Deliberate Practice）：** 16个章节及过渡条款，题库覆盖全部条文，并含30道竞赛练习题，配有法定条款出处、解题算法公式与记忆口诀。
-5. **第五步：科学艾宾浩斯间隔复习（Spaced Repetition）：** 错题10分钟后重现；答对题目分别于第1天、第3天、第7天及第14天依次进入复习序列。
-6. **第六步：趣味助记口诀与故事（Mnemonics & Stories）：** 提炼押韵口诀与生活类比，牢牢锁定制宪会议议席、任期上限与投票比例。
+两条被强制执行、而不只是“打算遵守”的设计规则：
 
----
+**每个数字都必须有条文为证。**一项测试会逐条检查全部 41 条速记表条目，确认每条引用的短语确实出现在所引条文的泰文原文中。如果期限写错，构建就会停止。
 
-## 泰国宪法核心算法速查（Constitutional Algorithms）
+**每个说法都保留出处。**数据和新闻都附有来源和获取日期。来源之间有分歧时，页面会如实说明分歧，而不是挑一个方便的说法。
 
-### 算法一：宪法最高性与违宪审查（第5条、第212条）
-$$\text{任何法规或行为} \land \text{抵触宪法} \implies \text{自始无效且不可执行（第5条）}$$
+### 发布关卡
 
-```
-                ┌───────────────────────────────┐
-                │        任何法律或行政规章      │
-                └───────────────┬───────────────┘
-                                │
-                        是否与宪法条款抵触？
-                         /             \
-                      [是]             [否]
-                       /                 \
-        ┌─────────────────────────┐   ┌──────────────────────┐
-        │  无效且不得执行 (第5条)   │   │     合法有效执行      │
-        │ 法院中止审理送交宪法法院   │   └──────────────────────┘
-        │      (依据第212条)       │
-        └─────────────────────────┘
-```
-
----
-
-### 算法二：修宪三读法定三重锁门槛（第255条、第256条）
-```
-[提案主体] (内阁 / 100名众议员 / 140名国会议员 / 50,000名选民联署)
-    │
-    ▼
-[第一读：接受原则] ──> 国会两院现有议员总数不少于半数赞成 (≥ 350 / 700 票)
-                      ∧ 且参议员赞成票不得少于三分之一 (≥ 67 / 200 票)
-    │
-    ▼
-[第二读：逐条审议] ──> 投票成员简单多数票表决
-    │
-    ▼
-[强制冷却期] ──> 审完第二读后强制等待 15 天
-    │
-    ▼
-[第三读：最终通过] ──> 三重锁门槛 (Triple Lock):
-                      1. 国会两院现有议员总数过半数赞成 (700席全部在任时 ≥ 351 票)
-                      2. 参议员赞成票不得少于三分之一 (≥ 67 票)
-                      3. 没有成员担任部长、众议院议长或副议长的各政党，其众议员合计总数至少 20% 赞成
-    │
-    ▼
-[全民公投门] ──> 若符合第256条第8项条件（见下文）
-                 ⟹ 必须在呈请御准前举行全民公投通过！
-```
-
-提案及表决的比例均以**现有议员**为分母。100、140、350、351、67等数字仅为众议院500席及参议院200席全部在任时的例子。第一读须不少于半数，第三读须超过半数。
-
-第256条第8项要求下列修宪先经公投通过，再依第7项办理：修改第1、2或15章；宪法规定的各类公职人员的任职资格或禁止任职情形；法院或独立机构的职责或权限；或导致这些机构无法履行职责或行使权限的事项。第三读通过后，第7项另要求**等待15日**，再呈请国王御准，并准用第81条。若有第9项的申请，在宪法法院审理期间不得呈请御准。
-
-**绝对禁止条款（第255条）：** 严禁任何导致改变以国王为国家元首的民主政体、或改变国家单一王国形式的修宪案！
-
----
-
-### 算法三：紧急法令四道判定门（พระราชกำหนด - 第172条）
-$$\text{紧急法令} = \text{迫切不可拖延} \land \text{四大法定事由之一} \land \text{下次国会即刻提请审查}$$
-
-- **事由限定：** 仅限于国家安全、公共安全、国家经济安全或消除公共灾难。
-- **国会审查：** 两院均批准，或参议院否决后众议院以超过现有众议员半数再次确认，法令继续具有法律效力。众议院否决，或参议院否决且众议院再次确认未超过半数，法令失效。不批准自刊登政府公报的次日起生效，不影响实施期间已作出的行为；被修改或废止的原法律依第172条第4款恢复效力。若等待常会会造成延误，须召集特别会议。
-- **宪法法院关卡（第173条）：** 本院批准前，至少五分之一现有议员可经本院议长提出意见，审查法令是否符合第172条**第1款**（四项目的）。议长须在3日内提交法院，国会暂停审议直至收到裁决。法院须在60日内裁决；认定不符合第1款须获现有法官至少三分之二赞成，法令**自始无效**。
-
----
-
-### 算法四：权利限制比例原则四阶审查（第26条）
-天平仅说明比例问题，不能单凭平衡图就认定合宪。第26条规定：
-1. 限制权利或自由的法律，须符合宪法规定的条件。
-2. 宪法未规定条件时，法律不得违反法治原则，不得过度增加负担或限制权利自由，亦不得损害人的尊严。
-3. 在上述情况下，还须说明限制权利与自由的理由和必要性。
-4. 法律须普遍适用，不得专门针对某个案件或个人。
-
----
-
-## 核心数字对照表
-
-| 核心数据 | 宪法内涵与法定规范 | 宪法条款 |
-| :--- | :--- | :--- |
-| **500席** | 众议院议员总数（400选区席位 + 100政党名单席位，2021年修正） | 第83、86条 |
-| **200席** | 参议院常态人数（20个专业群体互选，任期5年，单任制，无党派） | 第107、109条 |
-| **36人** | 内阁成员法定上限（总理1人 + 其他部长不超过35人） | 第158条第1款 |
-| **8年** | 总理任期累计上限（不论连续任职与否，累计不得超过8年；离任后继续履行职责的期间不计入） | 第158条第4款 |
-| **19人** | 枢密院法定上限（枢密院院长1人 + 枢密院顾问不超过18人） | 第10条 |
-| **9人 / 7年** | 宪法法院法官共9人，任期7年，单任制（不得连任） | 第200、201条 |
-| **7-3-9-7-7** | 五大独立机构人数：选委会(7)、监察员(3)、反贪委(9)、审计委(7)、人权委(7) | 第12章 |
-| **50,000人** | 公民联署提出宪法修正案所需的合格选民人数门槛 | 第256条第1项 |
-| **10,000人** | 公民就权利或国家职责事项联署提出普通法案的人数门槛 | 第133条第3项 |
-| **1/5 比例** | 众议院提出对总理或部长不信任动议的现有议员比例（500席全部在任时为100人） | 第151条 |
-| **1/10 比例** | 众议院提出一般性质询辩论（不表决）的现有议员比例（500席全部在任时为50人） | 第152条 |
-| **15日** | 修宪审议第二读与第三读之间的法定强制冷却等待时间 | 第256条第5项 |
-| **12年** | 国家必须保障儿童自学前至义务教育阶段享受的免费优质教育年限 | 第54条 |
-
----
-
-## 本地运行与检验指令
+发布不等于“编译通过”：
 
 ```bash
-# 安装依赖
-npm ci
-
-# 启动本地开发服务
-npm run dev
-
-# 运行全套严格校验套件 (法条语料 + 翻译校验 + 案例真伪 + 470道考题 + 类型检查)
-npm run verify
-
-# 编译静态离线部署版本
-npm run build
+npm run release   # 校验 → 测试 → 构建 → 生成文件漂移 → 链接、颜色、对比度
 ```
+
+- **生成文件漂移**：构建会重新生成四个 `data/*.json` 文件，它们被提交进仓库以便网站导入。如果与全新构建的结果不一致，说明提交带上了过时的索引。
+- **链接完整性**：每个构建页面中的每个内部链接，以及站点地图和三个播客订阅源，都必须能解析。
+- **未定义的颜色变量**：任何主题都没定义的 `var(--x)` 会悄悄回退，速记表就曾因此在深色模式下只有 2.47:1 的对比度。
+- **按 WCAG 类别检查对比度**：正文 4.5:1，组件边界 3:1，装饰性细线只报告、不判失败。一刀切的标准会在边框上误报，却漏掉真正的文字问题。
+- **重定向路由靠声明，不靠猜**：一个转发页能通过所有存在性检查，却不值得被收录。所以 `lib/nav.ts` 中的 `REDIRECT_ROUTES` 明确列出它们，一旦被推广，关卡就会失败。
+
+---
+
+## 自己运行
+
+```bash
+git clone https://github.com/Nonarkara/constitution.git
+cd constitution
+npm ci
+npm run dev        # http://localhost:3000
+npm run release    # 完整关卡
+```
+
+需要 Node 24 及以上版本。无需 API 密钥，无需数据库，无需账号。
+
+---
+
+## 许可与致谢
+
+代码以 **MIT 许可证**发布，详见 [LICENSE](LICENSE)。
+
+宪法本身是公共文件。泰文为权威文本，英文译本出自国务委员会，每页注明学习性更正。中文为学习译本，并已如此标注。
+
+条文录音为合成语音，依据泰文原文在本地生成并逐条校验。它们不是国务委员会或参议院的录音；那些音频另行链接，并保留其原有条款。
+
+Pokklong 的主题结构归功于 ประพันธ์ เวารัมย์ 的佛历2539年考试资料，如上所述：已重写、已更正、已注明出处。
+
+研究文献：[Dunlosky 等 2013](https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html) ·
+[Cepeda 等 2006](https://www.psychologicalscience.org/publications/journals/pspi/spacing.pdf) ·
+[Carpenter 等 2022](https://www.nature.com/articles/s44159-022-00089-1)
+
+---
+
+<div align="center">
+
+**祝你好运。第一次就答错吧，那正是有效的部分。**
+
+由 [Dr. Non Arkaraprasertkul](https://constitution.nonarkara.org/research) 和一小群被要求检查他的智能体共同构建。
+
+</div>

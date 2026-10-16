@@ -16,6 +16,8 @@
  *      WCAG AA for their size.
  *   4. Built link integrity    Every internal href in every built page must
  *      resolve to a file that exists, and every sitemap URL must be real.
+ *   5. Runtime images          Every image path the browser builds from JS or
+ *      data (see scripts/runtime-images.mjs) must exist in public/ and out/.
  */
 import { readFile, readdir } from "node:fs/promises";
 import { existsSync, statSync, readFileSync } from "node:fs";
@@ -304,6 +306,14 @@ const { REDIRECT_ROUTES: redirectRoutes } = await import("../lib/nav.ts");
   notes.push(`pages: ${html.length} html files checked`);
 }
 
+// ------------------------------------------------------------ 5. runtime images
+{
+  const { checkRuntimeImages } = await import("./runtime-images.mjs");
+  const { refs, failures: imgFailures } = checkRuntimeImages(process.cwd());
+  failures.push(...imgFailures);
+  notes.push(`runtime images: ${refs.size} referenced from source, checked in public/ and out/`);
+}
+
 // ---------------------------------------------------------------------- report
 const scored = worst.filter((w) => w.min > 0);
 scored.sort((a, b) => a.r / a.min - b.r / b.min);
@@ -321,5 +331,5 @@ if (failures.length) {
   process.exit(1);
 }
 console.log(
-  `\nPASS — CSS comment integrity, undefined vars, theme contrast and built links all clean.`,
+  `\nPASS — CSS comment integrity, undefined vars, theme contrast, built links and runtime images all clean.`,
 );
