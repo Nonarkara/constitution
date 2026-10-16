@@ -88,24 +88,26 @@ export async function readSnapshot(db: DB): Promise<NewsSnapshot> {
 }
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
-    if (new URL(request.url).pathname === "/api/news") {
-      if (request.method !== "GET")
-        return new Response("Method not allowed", {
-          status: 405,
-          headers: { Allow: "GET" },
-        });
+    const url = new URL(request.url);
+    if (url.pathname === "/api/news") {
+      const secure = { "Strict-Transport-Security": "max-age=31536000; includeSubDomains", "X-Content-Type-Options": "nosniff" };
+      if (url.protocol === "http:") return Response.redirect(`https://${url.host}${url.pathname}`, 308);
+      if (request.method !== "GET" && request.method !== "HEAD")
+        return new Response("Method not allowed", { status: 405, headers: { Allow: "GET, HEAD", ...secure } });
+      // Serve from the edge cache for five minutes so traffic cannot turn into unbounded D1 reads.
+      // The edge cache exists on Cloudflare; tests and local runs go straight to D1.
+      const cache = (globalThis as unknown as { caches?: { default?: Cache } }).caches?.default;
+      const key = new Request(`https://${url.host}/api/news`);
+      const hit = await cache?.match(key);
+      if (hit) return request.method === "HEAD" ? new Response(null, hit) : hit;
       try {
-        return Response.json(await readSnapshot(env.NEWS), {
-          headers: {
-            "Cache-Control": "public, max-age=300",
-            "X-Content-Type-Options": "nosniff",
-          },
+        const fresh = Response.json(await readSnapshot(env.NEWS), {
+          headers: { "Cache-Control": "public, max-age=300", ...secure },
         });
+        await cache?.put(key, fresh.clone());
+        return request.method === "HEAD" ? new Response(null, fresh) : fresh;
       } catch {
-        return Response.json(
-          { error: "Headlines unavailable" },
-          { status: 503 },
-        );
+        return Response.json({ error: "Headlines unavailable" }, { status: 503, headers: secure });
       }
     }
     return env.ASSETS.fetch(request);

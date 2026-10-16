@@ -351,3 +351,15 @@ test("200 headline writes fit the actual D1 free invocation and binding limits",
   assert.equal(queries, 16);
   sqlite.close();
 });
+
+test("a feed redirected off its publisher's host is refused", async () => {
+  const fake: typeof fetch = async (input) => {
+    const response = new Response(xml(item("รัฐธรรมนูญ")));
+    const landed = String(input).includes("matichon") ? "https://evil.example/feed" : String(input);
+    Object.defineProperty(response, "url", { value: landed });
+    return response;
+  };
+  const snapshot = await harvestNews(fake, now);
+  // Both Matichon feeds were sent elsewhere and are refused; The Active still arrives.
+  for (const s of snapshot.sources) assert.equal(s.status, s.id.startsWith("matichon") ? "error" : "ok", s.id);
+});

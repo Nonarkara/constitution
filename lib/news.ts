@@ -234,6 +234,8 @@ export async function harvestNews(
           signal: AbortSignal.timeout(15000),
         });
         if (!response.ok) throw new Error("Publisher unavailable");
+        // A redirect may only land on the publisher's own https host.
+        if (response.url && !publisherURL(response.url, feed.host)) throw new Error("Redirected off the publisher");
         // Read with a bounded stream; ignore all article bodies/descriptions.
         const reader = response.body?.getReader();
         if (!reader) throw new Error("Empty feed");

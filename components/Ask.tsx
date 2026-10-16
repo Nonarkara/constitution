@@ -100,6 +100,8 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
   };
 
   async function ask() {
+    // Nothing leaves the device without the box ticked, whatever enables the button.
+    if (!consent || question.trim().length < 8) return;
     const mine = ++run.current;
     const startedAt = Date.now();
     if (!navigator.onLine) return fail(friendlyAskError("offline", lang));

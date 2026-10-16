@@ -102,9 +102,9 @@ export function askRequest(
 export function consentCopy(lang: Lang): string {
   return tr(
     lang,
-    "คำถามนี้ถูกบันทึกไว้เพื่อการศึกษาโดย Non-Laws (nonwriter.nonarkara.org) ตลอดไป อย่าใส่ชื่อจริงหรือเลขประจำตัว",
-    "Saved forever for study by Non-Laws (nonwriter.nonarkara.org). Leave out real names and ID numbers.",
-    "此问题由 Non-Laws（nonwriter.nonarkara.org）永久保存供研究。请勿填写真实姓名或证件号码。",
+    "คำถามนี้ถูกบันทึกไว้เพื่อการศึกษาโดย Non-Laws (nonwriter.nonarkara.org) ตลอดไป และเซิร์ฟเวอร์จะเห็นที่อยู่ IP ของเครื่องคุณ อย่าใส่ชื่อจริงหรือเลขประจำตัว",
+    "Saved forever for study by Non-Laws (nonwriter.nonarkara.org), whose server also sees your device's IP address. Leave out real names and ID numbers.",
+    "此问题由 Non-Laws（nonwriter.nonarkara.org）永久保存供研究，其服务器也会看到你设备的IP地址。请勿填写真实姓名或证件号码。",
   );
 }
 

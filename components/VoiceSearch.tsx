@@ -136,9 +136,9 @@ export function VoiceSearch({
             : available
               ? tr(
                   lang,
-                  "พูดคำค้นหรือเลขมาตรา • เสียงใช้บริการของเบราว์เซอร์",
-                  "Say a keyword or section number · Uses the browser’s speech service",
-                  "说关键词或条文编号 · 使用浏览器语音服务",
+                  "พูดคำค้นหรือเลขมาตรา • เบราว์เซอร์บางตัว เช่น Chrome ส่งเสียงไปถอดความที่เซิร์ฟเวอร์ของผู้ผลิต",
+                  "Say a keyword or section number · Some browsers, such as Chrome, send the audio to their maker's servers to transcribe",
+                  "说关键词或条文编号 · 部分浏览器（如 Chrome）会把录音发送到其厂商的服务器转写",
                 )
               : tr(
                   lang,
