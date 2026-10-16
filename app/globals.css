@@ -1401,9 +1401,15 @@ html[data-large="true"] {
     justify-content: center;
   }
 }
+.ask {
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 .ask textarea {
   display: block;
   width: 100%;
+  max-width: 100%;
   min-height: 96px;
   margin: 8px 0 12px;
   border: 1px solid var(--edge);
@@ -1415,10 +1421,35 @@ html[data-large="true"] {
 }
 .ask-consent {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   align-items: flex-start;
   min-height: 44px;
   margin: 12px 0;
+  max-width: 100%;
+  min-width: 0;
+}
+.ask-consent span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.ask-open {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-height: 44px;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+.ask .primary {
+  max-width: 100%;
+}
+.ask-text,
+.ask p {
+  overflow-wrap: anywhere;
+  max-width: 100%;
 }
 .ask-text {
   white-space: pre-line;

@@ -226,3 +226,17 @@ test("memorisation traps have a hook, and joke answers are gone", () => {
   ];
   for (const phrase of spaced) assert.equal(corpusRaw.includes(phrase), false, phrase);
 });
+
+test("the Non-Laws opener stays inside the phone column", () => {
+  const ask = readFileSync(new URL("../components/Ask.tsx", import.meta.url), "utf8");
+  const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(ask, /className="ask-open"/);
+  const rule = css.match(/\.ask-open\s*\{[^}]+\}/)?.[0] ?? "";
+  assert.match(rule, /max-width:\s*100%/);
+  assert.match(rule, /min-height:\s*44px/);
+  assert.match(rule, /overflow-wrap:\s*anywhere/);
+  assert.match(rule, /white-space:\s*normal/);
+  const panel = css.match(/\.ask\s*\{[^}]+\}/)?.[0] ?? "";
+  assert.match(panel, /min-width:\s*0/);
+  assert.match(panel, /overflow-wrap:\s*anywhere/);
+});

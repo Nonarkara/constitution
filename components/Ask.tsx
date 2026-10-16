@@ -181,6 +181,7 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
 
   const open = (
     <a
+      className="ask-open"
       href={deepLink(question, sections)}
       target="_blank"
       rel="noopener noreferrer"
