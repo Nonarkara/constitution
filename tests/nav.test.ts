@@ -32,7 +32,7 @@ for (const route of APP_ROUTES) {
     expected[route] = "learn";
   }
 }
-for (const route of ["/practice/", "/practice/pokklong/", "/review/", "/exam/", "/drills/", "/flashcards/", "/games/", "/cheatsheet/"]) {
+for (const route of ["/practice/", "/practice/pokklong/", "/along/", "/review/", "/exam/", "/drills/", "/flashcards/", "/games/", "/cheatsheet/"]) {
   expected[route] = "practise";
 }
 for (const route of ["/library/", "/rights/", "/polls/", "/civic/", "/amend/", "/news/", "/memory/", "/sources/", "/research/"]) {

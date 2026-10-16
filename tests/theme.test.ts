@@ -63,3 +63,13 @@ test("swatches and browser-bar colours match the stylesheet", () => {
     assert.equal(hex(sw.ink), hex(t.ink), `${name} ink`);
   }
 });
+
+test("the stylesheet's blocks all close (a merge once split a media query)", () => {
+  const bare = css.replace(/\/\*[\s\S]*?\*\//g, "").replace(/"[^"]*"|'[^']*'/g, "");
+  let depth = 0;
+  for (const c of bare) {
+    if (c === "{") depth++;
+    if (c === "}") assert.ok(--depth >= 0, "a stray closing brace");
+  }
+  assert.equal(depth, 0, "an unclosed block");
+});

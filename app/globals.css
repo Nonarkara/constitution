@@ -3844,6 +3844,7 @@ footer { flex-wrap:wrap; gap:16px; }
   .where-item { padding-block: var(--space-2); }
   .civic-shortcuts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--space-2); padding-block: var(--space-1); }
   .section-heading { flex-wrap: wrap; }
+}
 @media (max-width: 480px) {
   .header {
     flex-wrap: nowrap;
