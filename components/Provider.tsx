@@ -18,6 +18,7 @@ import type { ExamTarget } from "@/lib/adaptive";
 import { MARKS_KEY, emptyMarks, parseMarks, type Marks } from "@/lib/marks";
 import { workerMessage, type OfflineStatus } from "@/lib/offline";
 import type { Lang } from "@/lib/i18n";
+import { keepBackup } from "@/lib/local-data";
 import { READ_KEY, markRead, parseRead, type ReadLog } from "@/lib/knowledge";
 import type { ImportedBackup } from "@/lib/backup";
 type State = {
@@ -69,7 +70,7 @@ export function Provider({ children }: { children: ReactNode }) {
         } catch {}
         if (parsed) setP(parsed);
         else {
-          localStorage.setItem(`constitution-progress-backup-${Date.now()}`, p);
+          keepBackup(localStorage, "constitution-progress", p);
           setStorageError(true);
         }
       }
@@ -82,7 +83,10 @@ export function Provider({ children }: { children: ReactNode }) {
           parsedMarks = parseMarks(JSON.parse(storedMarks));
         } catch {}
         if (parsedMarks) setM(parsedMarks);
-        else localStorage.setItem(`${MARKS_KEY}-backup-${Date.now()}`, storedMarks);
+        else {
+          keepBackup(localStorage, MARKS_KEY, storedMarks);
+          setStorageError(true);
+        }
       }
       try {
         setR(parseRead(JSON.parse(localStorage.getItem(READ_KEY) ?? "{}")) ?? {});

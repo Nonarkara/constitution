@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { keepBackup } from "@/lib/local-data";
 import Link from "next/link";
 import { useStudy } from "./Provider";
 import { StudyArt } from "./StudyArt";
@@ -206,7 +207,7 @@ export function AmendmentJourney() {
         const saved = parseReflection(JSON.parse(raw));
         if (saved) setReflection(saved);
         else {
-          localStorage.setItem(`${REFLECTION_KEY}-backup-${Date.now()}`, raw);
+          keepBackup(localStorage, REFLECTION_KEY, raw);
           setStatus("error");
         }
       }

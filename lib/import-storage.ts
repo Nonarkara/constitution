@@ -22,6 +22,9 @@ export function persistImport(storage: Store, backup: ImportedBackup) {
       backup.reflection === null ? null : JSON.stringify(backup.reflection);
   if (backup.read !== undefined)
     values["constitution-read-v1"] = JSON.stringify(backup.read);
+  if (backup.pokklong !== undefined)
+    values["pokklong-progress"] = JSON.stringify(backup.pokklong);
+  if (backup.blind !== undefined) values["constitution-blind-v1"] = backup.blind;
   const previous: Record<string, string | null> = {};
   try {
     for (const key of Object.keys(values)) previous[key] = storage.getItem(key);

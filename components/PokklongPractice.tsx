@@ -10,6 +10,7 @@ import {
   loadPokklongProgress,
   recordPokklong,
   savePokklongProgress,
+  POKKLONG_KEY,
   sectionLine,
   stepAccuracy,
   stepHeader,
@@ -31,7 +32,6 @@ type Phase = "home" | "intro" | "question" | "done";
 export function PokklongPractice() {
   const { lang } = useStudy();
   const [progress, setProgress] = useState<PokklongProgress>({ answers: {} });
-  const [stored, setStored] = useState(false);
   const [phase, setPhase] = useState<Phase>("home");
   const [startStep, setStartStep] = useState(1);
   const [queue, setQueue] = useState<PokklongQuestion[]>([]);
@@ -45,12 +45,11 @@ export function PokklongPractice() {
 
   useEffect(() => {
     setProgress(loadPokklongProgress());
-    setStored(true);
+    // Another tab answered: adopt its record instead of overwriting it on the next answer.
+    const sync = (e: StorageEvent) => e.key === POKKLONG_KEY && setProgress(loadPokklongProgress());
+    window.addEventListener("storage", sync);
+    return () => window.removeEventListener("storage", sync);
   }, []);
-
-  useEffect(() => {
-    if (stored) savePokklongProgress(progress);
-  }, [progress, stored]);
 
   const current = queue[index];
 
@@ -77,7 +76,12 @@ export function PokklongPractice() {
     setRevealed(true);
     setRunAnswered((n) => n + 1);
     if (correct) setRunCorrect((n) => n + 1);
-    setProgress((prev) => recordPokklong(prev, current.id, correct));
+    // Save only a real answer; opening the page never writes, so nothing unreadable is overwritten.
+    setProgress((prev) => {
+      const next = recordPokklong(prev, current.id, correct);
+      savePokklongProgress(next);
+      return next;
+    });
   };
 
   const goNext = () => {

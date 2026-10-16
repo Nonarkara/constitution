@@ -1,4 +1,5 @@
 import type { Lang, Text } from "./i18n.ts";
+import { keepBackup } from "./local-data.ts";
 import { fisherYates } from "./shuffle.ts";
 
 /** Separate from constitution-progress so Pokklong answers never enter constitution stats. */
@@ -154,13 +155,23 @@ export function stepAccuracy(
   return { correct, answered: answered.length, total: ids.length };
 }
 
+/** Read saved answers. Anything unreadable, or any entry the parser drops, is kept as a backup copy. */
 export function loadPokklongProgress(): PokklongProgress {
   if (typeof localStorage === "undefined") return emptyPokklong();
+  const raw = localStorage.getItem(POKKLONG_KEY);
+  if (!raw) return emptyPokklong();
+  let parsed: PokklongProgress | null = null;
+  let kept = 0;
   try {
-    return parsePokklong(JSON.parse(localStorage.getItem(POKKLONG_KEY) ?? "null"));
-  } catch {
-    return emptyPokklong();
-  }
+    const value = JSON.parse(raw);
+    parsed = parsePokklong(value);
+    kept = Object.keys(value?.answers ?? {}).length;
+  } catch {}
+  if (!parsed || Object.keys(parsed.answers).length !== kept)
+    try {
+      keepBackup(localStorage, POKKLONG_KEY, raw);
+    } catch {}
+  return parsed ?? emptyPokklong();
 }
 
 export function savePokklongProgress(progress: PokklongProgress): boolean {

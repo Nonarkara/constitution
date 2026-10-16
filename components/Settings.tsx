@@ -7,8 +7,9 @@ import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
 import { questionIndex as questions } from "@/lib/outline";
 import { createBackup, parseBackup } from "@/lib/backup";
+import { eraseLearnerData } from "@/lib/local-data";
+import { loadPokklongProgress } from "@/lib/pokklong";
 import { REFLECTION_KEY } from "@/lib/amendment";
-import { defaultProgress } from "@/lib/learning";
 import { THEMES, THEME_NAME, type ThemeChoice } from "@/lib/theme";
 import { useTheme } from "@/lib/use-theme";
 export function Settings() {
@@ -38,6 +39,7 @@ export function Settings() {
         annotations,
         localStorage.getItem(REFLECTION_KEY),
         read,
+        { pokklong: loadPokklongProgress(), blind: localStorage.getItem("constitution-blind-v1") },
       );
       const url = URL.createObjectURL(
         new Blob([JSON.stringify(backup, null, 2)], {
@@ -266,18 +268,22 @@ export function Settings() {
             <p>
               {tr(
                 lang,
-                "ลบความก้าวหน้าทั้งหมดบนเครื่องนี้? ส่งออกไว้ก่อนถ้าต้องการเก็บ",
-                "Clear all progress on this device? Export first if you want to keep it.",
-                "确定清除本设备全部进度？如需保留，请先导出。",
+                "ลบทุกอย่างที่สมุดเก็บไว้บนเครื่องนี้? คำตอบ ไฮไลต์ โน้ต ประวัติการอ่าน ความคิดเรื่องการแก้รัฐธรรมนูญ คำตอบโพล ปกครอง และข้อสอบที่ทำค้างไว้ จะหายทั้งหมด สีหน้าจอและภาษายังอยู่ ส่งออกไว้ก่อนถ้าต้องการเก็บ",
+                "Erase everything this notebook keeps on this device? Answers, highlights, notes, reading history, your amendment reflection, poll answers, Pokklong and any unfinished exam all go. Screen colours and language stay. Export first if you want to keep them.",
+                "清除本笔记在这台设备上保存的全部内容？答案、标记、笔记、阅读记录、修宪思考、问卷回答、治理练习和未完成的考试都会删除。屏幕配色和语言保留。如需保留，请先导出。",
               )}
             </p>
             <button
               onClick={() => {
-                save(defaultProgress());
-                setConfirm(false);
+                try {
+                  eraseLearnerData(localStorage);
+                  document.cookie = "constitution-civic-room=; max-age=0; path=/; SameSite=Lax";
+                } catch {}
+                // Reload so no page keeps an old copy in memory and writes it back.
+                location.reload();
               }}
             >
-              {tr(lang, "ลบความก้าวหน้า", "Clear progress", "确认清除")}
+              {tr(lang, "ลบทั้งหมด", "Erase everything", "全部清除")}
             </button>{" "}
             <button onClick={() => setConfirm(false)}>
               {tr(lang, "ยกเลิก", "Cancel", "取消")}
