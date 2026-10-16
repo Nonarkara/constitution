@@ -1,5 +1,8 @@
 # Every push and pull request must pass the same gate as a local release:
-# corpus and question validators, all tests, the typecheck, and a full static build.
+# corpus and question validators, all tests, the typecheck, a full static build,
+# and then the two checks that only a finished build can answer: whether the
+# build products are still in step with their sources, and whether every link,
+# colour token and feed in the shipped site actually resolves.
 name: Verify & Tests
 on:
   push:
@@ -25,3 +28,9 @@ jobs:
       - run: npm ci
       - run: npm run verify
       - run: npm run build
+      # The build regenerates data/*.json. If those changed, the commit that
+      # triggered this run shipped indexes that do not match their sources.
+      - run: node scripts/check-generated.mjs
+      # Undefined CSS vars, per-class WCAG contrast, and link integrity across
+      # every built page, the sitemap and all three podcast feeds.
+      - run: npm run check:release

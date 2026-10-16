@@ -7,7 +7,9 @@
     "build": "node scripts/build-indexes.mjs && node --experimental-strip-types scripts/validate-drills.mjs && node scripts/validate-translations.mjs && node scripts/validate-cases.mjs && node scripts/validate-questions.mjs && node scripts/build-podcasts.mjs && next build --webpack && node scripts/build-offline.mjs",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
+    "check:release": "node scripts/check-release.mjs",
     "verify": "node scripts/build-indexes.mjs && node --experimental-strip-types scripts/validate-drills.mjs && node scripts/validate-corpus.mjs && node scripts/validate-translations.mjs && node scripts/validate-cases.mjs && node scripts/validate-questions.mjs && npm test && npm run typecheck",
+    "release": "npm run verify && npm run build && node scripts/check-generated.mjs && npm run check:release",
     "news:harvest": "node --experimental-strip-types scripts/harvest-news.mjs"
   },
   "dependencies": {

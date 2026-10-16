@@ -380,10 +380,6 @@ small,
 .sidebar-note p {
   margin-top: 12px;
 }
-.device-link {
-  font-size: var(--micro);
-  margin: 20px 10px;
-}
 main {
   min-width: 0;
   padding: 38px 0 64px;
@@ -468,19 +464,6 @@ main {
 .chapter-info h3 {
   margin: 6px 0 8px;
 }
-.mastery-line {
-  height: 3px;
-  background: var(--line);
-  margin: 10px 0 7px;
-  max-width: 250px;
-  overflow: hidden;
-}
-.mastery-line span {
-  display: block;
-  height: 3px;
-  background: var(--accent-deep);
-  transform-origin: left;
-}
 .chapter-actions {
   display: flex;
   flex-direction: column;
@@ -504,30 +487,8 @@ main {
 .margin > .mono {
   color: var(--muted);
 }
-.stat {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--line);
-}
-.stat strong {
-  font-size: var(--display);
-  display: block;
-  letter-spacing: -1px;
-  font-weight: 400;
-}
-.stat span {
-  font-size: var(--micro);
-}
 .margin > p {
   margin-top: 20px;
-}
-.margin-rule {
-  height: 3px;
-  background: var(--ink);
-  margin-top: 36px;
-}
-.margin .margin-rule + p {
-  font-size: var(--micro);
-  font-weight: 600;
 }
 footer {
   border-top: 1px solid var(--line);
@@ -652,14 +613,6 @@ footer {
   display: block;
   margin-top: 16px;
   min-height: 44px;
-}
-.audio-note {
-  margin: 30px 0;
-  padding: 20px;
-  background: var(--wash);
-}
-.audio-note p {
-  margin: 12px 0;
 }
 .reader-navigation {
   display: flex;
@@ -880,11 +833,6 @@ summary {
   min-height: 44px;
   margin-bottom: 20px;
 }
-.law-flow {
-  border-top: 3px solid var(--ink);
-  margin-top: 30px;
-  padding-top: 20px;
-}
 .flow-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -919,9 +867,6 @@ summary {
   padding: 22px;
   background: var(--wash);
   animation: enter 180ms ease-out;
-}
-.law-flow > a {
-  font-size: var(--micro);
 }
 @keyframes enter {
   from {
@@ -1248,17 +1193,6 @@ html[data-large="true"] {
 .inside-session {
   margin-top: 24px;
 }
-.audio-player {
-  margin: 16px 0;
-}
-.audio-player iframe {
-  border: 1px solid var(--edge);
-  margin: 12px 0;
-  background: var(--paper);
-}
-.audio-player p {
-  margin: 8px 0;
-}
 /* Original crayon scenes stay secondary to the learning task. */
 .study-art {
   margin: 0;
@@ -1290,16 +1224,6 @@ html[data-large="true"] {
   margin: 12px 0 18px 22px;
 }
 .review-intro::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.audio-note > .study-art {
-  float: right;
-  width: 150px;
-  margin: 0 0 14px 22px;
-}
-.audio-note::after {
   content: "";
   display: block;
   clear: both;
@@ -1359,35 +1283,6 @@ html[data-large="true"] {
 }
 .recorded-audio p {
   margin: 10px 0 0;
-}
-.podcast-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 16px 0;
-}
-.institution-map {
-  margin: 32px 0;
-  border-top: 3px solid var(--ink);
-  padding-top: 22px;
-}
-.institution-map svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.institution-map svg text {
-  font-size: var(--micro);
-  font-family: inherit;
-}
-.institution-tabs {
-  grid-template-columns: repeat(3, 1fr);
-}
-.institution-map .flow-detail p {
-  margin-bottom: 12px;
-}
-.institution-map > .micro:last-child {
-  margin-top: 18px;
 }
 @media (max-width: 480px) {
   .institution-map svg text {
@@ -2033,12 +1928,6 @@ html[data-large="true"] {
   align-items: center;
   gap: 6px;
 }
-.micro-select {
-  font-size: var(--micro);
-  padding: 4px 8px;
-  border: 1px solid var(--line);
-  background: var(--paper);
-}
 .adaptive-text {
   font-size: var(--micro);
   line-height: 1.6;
@@ -2488,14 +2377,6 @@ mark.hl.has-note {
   flex-direction: column;
   gap: 2px;
 }
-.hero-cta-label {
-  font-size: var(--micro);
-  font-weight: 500;
-}
-.hero-cta-title {
-  font-size: var(--body);
-  font-weight: 600;
-}
 .route-number {
   border-color: var(--line);
   color: var(--muted);
@@ -2840,112 +2721,7 @@ mark.hl.has-note {
 .subnav-pill[aria-current="page"] {
   font-weight: 600;
 }
-
-/* Adaptive Diagnostic Box */
-.adaptive-diagnostic-box {
-  background: var(--wash);
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--accent);
-  padding: 20px;
-  margin: 24px 0 32px;
-}
-.diag-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 10px;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 10px;
-  margin-bottom: 12px;
-}
-.diag-head h2 {
-  margin: 0;
-  font-size: var(--body);
-}
-.diag-recommendation-text {
-  font-size: var(--body);
-  line-height: 1.6;
-  margin: 0 0 16px;
-}
-.trouble-spots-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 12px;
-  margin-top: 14px;
-}
-.trouble-spot-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.spot-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-.spot-title {
-  font-size: var(--micro);
-  line-height: 1.4;
-}
-.spot-badge-error {
-  font-size: var(--micro);
-  background: var(--bad-wash);
-  color: var(--bad);
-  border: 1px solid var(--bad-line);
-  padding: 2px 6px;
-  white-space: nowrap;
-}
-.spot-desc {
-  color: var(--muted);
-  line-height: 1.5;
-  margin: 0 0 12px;
-}
-.spot-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px dashed var(--line);
-  padding-top: 8px;
-  margin-top: auto;
-}
-.btn-drill-spot {
-  padding: 4px 10px;
-  background: var(--accent-wash);
-  border: 1px solid var(--accent-deep);
-  color: var(--accent-deep);
-  cursor: pointer;
-  font-weight: 600;
-}
-.btn-drill-spot:hover {
-  background: var(--accent-wash);
-}
-.all-clear-notice {
-  background: var(--ok-wash);
-  border: 1px solid var(--ok-line);
-  padding: 10px 14px;
-  color: var(--ok);
-}
-
-/* Practice Modes Grid */
-.practice-mode-selector {
-  margin: 32px 0;
-}
-.practice-mode-selector h2 {
-  font-size: var(--body);
-  margin-bottom: 16px;
-}
-.mode-cards-grid {
-  display: grid;
-  border-bottom: 1px solid var(--line);
-}
-/* Ways to practise read as a ruled list, like the chapter route: one row, one choice. */
-.mode-card {
+/* Ways to practise read as a ruled list, like the chapter route: one row{
   border-top: 1px solid var(--line);
   padding: 16px 12px;
   display: grid;
@@ -2955,58 +2731,6 @@ mark.hl.has-note {
   cursor: pointer;
   position: relative;
   transition: background 120ms ease;
-}
-.mode-card:hover {
-  background: var(--wash);
-}
-.mode-card:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 2px;
-}
-.featured-mode {
-  border-left: 4px solid var(--accent);
-  background: var(--wash);
-}
-.mode-card-main {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.mode-card h3 {
-  margin: 0;
-  font-size: var(--body);
-  font-weight: 600;
-  line-height: 1.35;
-}
-.mode-card p {
-  font-size: var(--micro);
-  color: var(--muted);
-  line-height: 1.5;
-  margin: 0;
-}
-.mode-card-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  font-size: var(--micro);
-  font-weight: 600;
-  padding: 8px 16px;
-  border: 1px solid var(--edge);
-  background: var(--paper);
-  white-space: nowrap;
-  pointer-events: none;
-  min-height: 40px;
-  transition: all 120ms ease;
-}
-.mode-card:hover .mode-card-action {
-  border-color: var(--ink);
-  background: var(--wash);
-}
-.featured-mode .mode-card-action {
-  background: var(--ink);
-  color: var(--paper);
-  border-color: var(--ink);
 }
 @media (max-width: 600px) {
   .mode-card {
@@ -3581,20 +3305,6 @@ footer { flex-wrap:wrap; gap:16px; }
   border-top: 1px solid var(--line);
   margin-bottom: 40px;
 }
-.where-item {
-  display: grid;
-  gap: 4px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
-  text-decoration: none;
-}
-.where-item strong {
-  font-weight: 600;
-}
-.where-item:hover strong {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
 @media (min-width: 900px) {
   .where {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3801,14 +3511,6 @@ footer { flex-wrap:wrap; gap:16px; }
 .sidebar nav .nav-active { background: transparent; }
 .sidebar-note { margin-top: var(--space-4); }
 .study-strip { margin-bottom: var(--space-2); }
-.lesson-method { font-size: var(--micro); color: var(--muted); border-bottom: 1px solid var(--line); }
-.lesson-method > summary { cursor: pointer; padding-block: var(--space-2); min-height: 44px; }
-.lesson-method p { max-width: 64ch; margin-bottom: var(--space-2); }
-.study-resources {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-2);
-  padding-block: var(--space-1); font-size: var(--micro);
-}
-.study-resources a { min-height: 44px; display: inline-flex; align-items: center; }
 .civic-shortcuts { margin-bottom: var(--space-4); border-block: 1px solid var(--line); font-size: var(--micro); }
 .where { margin-top: var(--space-2); margin-bottom: var(--space-2); }
 .chapter-info > a { float: right; margin: 0 0 var(--space-1) var(--space-2); }

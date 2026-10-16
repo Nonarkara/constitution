@@ -79,3 +79,27 @@ Design read: a working Thai Constitution notebook, with one open lesson, small p
 Palette intent: make the next useful action obvious while legal reading stays quiet. Relationship: neutral white/charcoal carries the text; amber interrupts sparingly; the existing muted crayon scenes supply the bounded companion field. Roles: paper/ink for reading, line/ink for hierarchy, amber for the next action and focus, existing green/red for actual answer states. Budget: predominantly neutral, small art fields, sparse amber. This uses the Wada-inspired relationship method, not a claimed historical plate. Pastel artwork is explicitly requested by the user; it is preserved, not extended into UI controls. Risks: multi-script wrapping, long chapter names, theme/large-text shifts. Proof: existing contrast tests, real 375/768/1280 browser views, dark/contrast/large-text checks and a working lesson entry.
 
 Preserve every route, chapter picture, diagram, source, exam, saved record and accessibility theme. Change composition/chrome only. No gradients, shadows, textures, new fonts, decorative movement or new packages. Theme controls remain available through a labelled disclosure; selected language uses an underline rather than competing with the lesson's amber action. Secondary study resources belong after the lesson invitation, not before it. Mono is for numbers, not the notebook's label voice.
+
+## Blind sitting, and Pokklong beside it — 15–16 October 2026
+
+User's premise: you learn fastest from the real test, not from reading. Sit it blind, miss most of it on purpose, and let each miss teach the rule that makes the next question solvable.
+
+`/along/` was a walkthrough — each question arrived with its own answer and you walked past, so a wrong answer was marked seen and never returned. It is now four phases. The brief states that you will miss most of these and that this is the intended outcome, so an all-wrong sitting is not a failure state. The blind pass shows prompt and four options and nothing else; answers are withheld to the end, as in a real sitting. Each blind miss becomes a debt in `lib/blind.ts` (pure, unit-tested) and stays owed until answered correctly on the retry. The answers pass leads with the elimination rule, then the reasoning, then what you picked against the answer, then re-asks the same question; a correct retry holds on an interstitial restating the rule rather than jumping on, because that is the beat where the learner discovers the reasoning worked. Handoff points into the guide, the night-before sheet, practice and the sections.
+
+Every question in `data/exam-topics.json` gained a `logic` field in th/en/zh: the discriminator that transfers to the next question of that kind, distinct from the existing explanation. Two tests guard it — no Thai may survive inside an en/zh string (one did), and no two questions may share a rule. A length-ratio check was tried and removed: it flagged good rules that are tight one-liners against wordy options, and obeying it would have degraded correct content.
+
+Pokklong (`/practice/pokklong/`, 270 checked questions; 14 unconfirmed ones hidden) is the per-chapter guess-first drill and is a sibling of `/along/`, not a replacement for it: one is a single full sitting, the other is topic-by-topic within practice.
+
+A jsdom test plays an entire sitting (`tests/blind-ui.test.ts`). It caught two real defects: the re-ask never rendered the question, and the earned confirmation was wiped by the per-question effect before it could be seen.
+
+## Release gate — 16 October 2026
+
+`scripts/check-release.mjs` fails a release on three things a learner actually trips over: a `var(--x)` that no theme defines (which silently falls back and produced the 2.47:1 cram tags), theme contrast measured per WCAG class rather than one bar for everything, and every internal link across all built pages plus the sitemap and all three podcast feeds. Contrast pairs are classified text 4.5 / ui 3.0 / decorative reported-only, because `--edge` is a border colour and `--line` is a hairline — one flat bar produced false failures on decoration.
+
+`scripts/check-generated.mjs` fails when `data/outline.json`, `graph.json`, `question-index.json` or `audio-recordings.json` no longer match a fresh build. Both run in CI after the build and in `npm run release`.
+
+The earlier "sitemap and feeds point at /learn/" report did not hold: `/learn/` is a real page and all 41 sitemap URLs and 837 episode links resolve. Likewise 837 is not a wrong number — it is 279 sections × 3 languages, the count of recordings. Only the Thai and Chinese READMEs conflated recordings with sections; both now say 279 sections, 837 recordings.
+
+## Outstanding — 16 October 2026
+
+Two decisions reach beyond this repository and are not code: Cloudflare "Always Use HTTPS" (affects every nonarkara.org site) and enabling Dependabot/secret scanning (repository settings). Unused CSS remains (~37 classes) and is safe to delete but harmless to keep.
