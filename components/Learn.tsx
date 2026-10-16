@@ -74,7 +74,7 @@ export function Learn() {
           <button className="primary hero-cta" disabled={!ready} onClick={() => setChapter(next.number)}>
             <span>
               <span className="hero-cta-label">
-                {tr(lang, "บทเรียนต่อไป", "Next lesson", "下一课")} ·{" "}
+                {tr(lang, "บทเรียน", "Lesson", "课程")} ·{" "}
                 {next.number === 17 ? tr(lang, "บทเฉพาะกาล", "Transitory", "过渡条款") : `${labels.chapter[lang]} ${next.number}`}
               </span>
               <span className="hero-cta-title">{next.title[lang]}</span>

@@ -12,6 +12,7 @@ const PRECACHE = /*__PRECACHE__*/ [
   "/read/",
   "/notes/",
   "/practice/",
+  "/practice/pokklong/",
   "/library/",
   "/section/",
   "/review/",

@@ -11,6 +11,8 @@ import { Quiz } from "./Quiz";
 import { recordAnswer } from "@/lib/learning";
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
+import { enNoun } from "@/lib/grammar";
+import { useHidePageNext } from "./Shell";
 
 type Question = (typeof questions)[number];
 const FORMATS = papers;
@@ -29,6 +31,7 @@ export function Exam() {
   const [index, setIndex] = useState(0);
   const [done, setDone] = useState(false);
   const [now, setNow] = useState(0);
+  useHidePageNext((Boolean(paper) && !done) || repair !== null);
 
   useEffect(() => {
     if (!paper || done) return;
@@ -155,7 +158,7 @@ export function Exam() {
             `正确率${Math.round((result.right / paper.list.length) * 100)}%。错题及解析、条文见下方。`,
           )}
         </p>
-        <p>{tr(lang, `ตอบผิด ${result.wrong} ข้อ · ยังไม่ตอบ ${result.blanks} ข้อ`, `${result.wrong} wrong answers · ${result.blanks} unanswered`, `答错${result.wrong}题 · 未答${result.blanks}题`)}</p>
+        <p>{tr(lang, `ตอบผิด ${result.wrong} ข้อ · ยังไม่ตอบ ${result.blanks} ข้อ`, `${enNoun(result.wrong, "wrong answer", "wrong answers")} · ${enNoun(result.blanks, "unanswered item", "unanswered items")}`, `答错${result.wrong}题 · 未答${result.blanks}题`)}</p>
         <table className="exam-table">
           <thead>
             <tr>
@@ -239,7 +242,7 @@ export function Exam() {
         </button>
         {index < paper.list.length - 1 ? (
           <button className="primary" onClick={() => setIndex(index + 1)}>
-            {tr(lang, "ข้อถัดไป", "Next", "下一题")} →
+            {tr(lang, `ข้อ ${index + 2}`, `Question ${index + 2}`, `第${index + 2}题`)} →
           </button>
         ) : (
           <button className="primary" onClick={finish}>

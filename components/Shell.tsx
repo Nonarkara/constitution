@@ -1,17 +1,87 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
+import { createContext, Suspense, useContext, useEffect, useMemo, useState } from "react";
 import { useStudy } from "./Provider";
 import { labels, tr, type Lang } from "@/lib/i18n";
 import { SWATCH, THEMES, THEME_NAME } from "@/lib/theme";
 import { useTheme } from "@/lib/use-theme";
-import { useMemo } from "react";
 import { questionIndex } from "@/lib/outline";
 import { dueQuestions } from "@/lib/learning";
 import { knowSummary, sectionSignals } from "@/lib/knowledge";
+import { DOORS, backFor, crumbsFor, doorFor, nextFor } from "@/lib/nav";
+
+const PageFocus = createContext<((delta: 1 | -1) => void) | null>(null);
+
+/** Hide the page-level Next and Back while a practice session or mock exam is open. */
+export function useHidePageNext(busy: boolean) {
+  const shift = useContext(PageFocus);
+  useEffect(() => {
+    if (!busy || !shift) return;
+    shift(1);
+    return () => shift(-1);
+  }, [busy, shift]);
+}
+
+function useNavContext() {
+  const path = usePathname() || "/";
+  const params = useSearchParams();
+  const section = Number(params.get("n")) || undefined;
+  const check = Number(params.get("check")) || undefined;
+  const drill = params.get("session") === "drill" ? Number(params.get("section")) || undefined : undefined;
+  return { path, section, check, drill };
+}
+
+function PageChrome({ focused }: { focused: boolean }) {
+  const { lang } = useStudy();
+  const { path, section, check, drill } = useNavContext();
+  const crumbs = crumbsFor(path, { section, check, drill });
+  const back = backFor(path, { section, check, drill });
+  return (
+    <>
+      {crumbs.length > 0 && (
+        <nav className="crumbs" aria-label={tr(lang, "ตำแหน่งในสมุด", "Where you are", "你在这里")}>
+          <ol>
+            {crumbs.map((crumb, index) => (
+              <li key={`${crumb.href}-${index}`}>
+                {index === crumbs.length - 1 ? (
+                  <span>{crumb.label[lang]}</span>
+                ) : (
+                  <Link href={crumb.href}>{crumb.label[lang]}</Link>
+                )}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+      {back && !focused && (
+        <p className="page-back">
+          <Link href={back.href}>{back.label[lang]}</Link>
+        </p>
+      )}
+    </>
+  );
+}
+
+function PageNext() {
+  const { lang } = useStudy();
+  const { path, section, check, drill } = useNavContext();
+  const next = nextFor(path, { section, check, drill });
+  if (!next) return null;
+  return (
+    <p className="page-next">
+      <Link href={next.href}>{next.label[lang]}</Link>
+    </p>
+  );
+}
+
 export function Shell({ children }: { children: React.ReactNode }) {
-  const { lang, setLang, progress, storageError, ready, online, marks, annotations, read } = useStudy();
-  const path = usePathname();
+  const { lang, setLang, progress, storageError, ready, online, marks, annotations, read, large, setLarge } = useStudy();
+  const [focusHolders, setFocusHolders] = useState(0);
+  const shiftFocus = (delta: 1 | -1) => setFocusHolders((count) => count + delta);
+  const focused = focusHolders > 0;
+  const path = usePathname() || "/";
+  const door = doorFor(path);
   const theme = useTheme();
   // What she knows, not points: counted from her own reading, marks and answers.
   const known = useMemo(() => {
@@ -21,21 +91,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
       due: dueQuestions(questionIndex, progress, now).length,
     };
   }, [progress, marks, annotations, read]);
-  // Five destinations; every other page belongs to one of them for the active state.
-  const nav = [
-    ["/learn/", labels.learn, ["/", "/learn/"]],
-    ["/read/", labels.read, ["/read/", "/section/", "/notebook/"]],
-    ["/practice/", labels.practice, ["/practice/", "/review/", "/exam/", "/drills/", "/flashcards/", "/games/", "/cram/", "/along/"]],
-    ["/notes/", labels.notes, ["/notes/"]],
-    ["/library/", labels.library, ["/library/", "/amend/", "/news/", "/research/", "/bible/", "/rights/", "/cheatsheet/", "/topics/", "/glossary/", "/sources/", "/settings/", "/polls/", "/memory/", "/civic/"]],
-  ] as const;
   return (
-    <>
+    <PageFocus.Provider value={shiftFocus}>
       <a className="skip" href="#content">
         {tr(lang, "ข้ามไปเนื้อหา", "Skip to content", "跳转到正文")}
       </a>
       <header className="header">
-        <Link href="/learn/" className="brand">
+        <Link href="/" className="brand">
           <span className="brand-mark" aria-hidden="true">
             ๒๕๖๐
           </span>
@@ -54,22 +116,40 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <div className="header-controls">
         <details className="reading-menu">
           <summary>{tr(lang, "หน้าจอ", "Display", "显示")}</summary>
-        <div className="themes" role="group" aria-label={tr(lang, "สีหน้าจอ", "Screen colours", "屏幕配色")}>
+        <div className="themes" role="group" aria-label={tr(lang, "ขนาดตัวอักษรและสีหน้าจอ", "Text size and screen colours", "字号与屏幕配色")}>
           {/* Each swatch is the theme itself: its paper, its ink. */}
+          <button
+            type="button"
+            aria-pressed={large}
+            aria-label={tr(lang, "ขนาดตัวอักษร", "Text size", "字号")}
+            title={tr(lang, "ขนาดตัวอักษร", "Text size", "字号")}
+            onClick={() => setLarge(!large)}
+          >
+            {tr(lang, "ขนาด", "Size", "字号")}
+          </button>
           {THEMES.map((t) => (
             <button
               key={t}
+              type="button"
               aria-pressed={theme.shown === t}
-              aria-label={THEME_NAME[t][lang]}
+              aria-label={tr(
+                lang,
+                `สีหน้าจอ ${THEME_NAME[t].th}`,
+                `Theme: ${THEME_NAME[t].en}`,
+                `配色：${THEME_NAME[t].zh}`,
+              )}
               title={THEME_NAME[t][lang]}
               style={{ background: SWATCH[t].paper, color: SWATCH[t].ink }}
               onClick={() => theme.choose(t)}
             >
-              <span aria-hidden="true">{{ th: "ก", en: "A", zh: "文" }[lang]}</span>
+              {THEME_NAME[t][lang]}
             </button>
           ))}
         </div>
         </details>
+        <Link className="header-settings" href="/settings/">
+          {tr(lang, "ตั้งค่า", "Settings", "设置")}
+        </Link>
         <div className="languages" aria-label={tr(lang, "ภาษา", "Language", "语言")}>
           {(["th", "en", "zh"] as Lang[]).map((l) => (
             <button
@@ -88,14 +168,14 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <div className="app-grid">
         <aside className="sidebar">
           <nav aria-label={tr(lang, "เมนูหลัก", "Main navigation", "主导航")}>
-            {nav.map(([href, title, match]) => (
+            {DOORS.map((item) => (
               <Link
-                aria-current={(match as readonly string[]).includes(path) ? "page" : undefined}
-                className={(match as readonly string[]).includes(path) ? "nav-active" : ""}
-                key={href}
-                href={href}
+                aria-current={door === item.id ? "page" : undefined}
+                className={door === item.id ? "nav-active" : ""}
+                key={item.id}
+                href={item.href}
               >
-                {title[lang]}
+                {item.label[lang]}
               </Link>
             ))}
           </nav>
@@ -120,9 +200,6 @@ export function Shell({ children }: { children: React.ReactNode }) {
               )}
             </p>
           </div>
-          <Link className="device-link" href="/settings/">
-            {labels.settings[lang]} →
-          </Link>
         </aside>
         <main id="content">
           {!online && (
@@ -136,18 +213,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </p>
           )}
           {ready && (
-            <nav className="study-strip micro" aria-label={tr(lang, "สิ่งที่คุณรู้แล้ว", "What you know", "你已掌握的")}>
+            <nav className="study-strip micro" aria-label={labels.notes[lang]}>
               <Link href="/notes/">
-                <b>{known.met}/279</b> {tr(lang, "มาตราที่รู้จักแล้ว", "sections met", "条已接触")}
-              </Link>
-              <Link href="/notes/">
-                <b>{known.marked}</b> {tr(lang, "มาตราที่จดไว้", "marked", "条已标记")}
-              </Link>
-              <Link href="/notes/">
-                <b>{known.known}</b> {tr(lang, "มาตราที่มั่นใจ", "confident", "条已掌握")}
-              </Link>
-              <Link href="/review/" className={known.due ? "due" : undefined}>
-                <b>{known.due}</b> {tr(lang, "ข้อรอทบทวน", "due for review", "题待复习")}
+                {labels.notes[lang]}
+                {" · "}
+                <b>{known.met}/279</b> {tr(lang, "มาตรา", "sections", "条")}
               </Link>
             </nav>
           )}
@@ -161,7 +231,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
               )}
             </p>
           )}
+          <Suspense fallback={null}>
+            <PageChrome focused={focused} />
+          </Suspense>
           {children}
+          <Suspense fallback={null}>
+            {focused ? null : <PageNext />}
+          </Suspense>
         </main>
       </div>
       <footer>
@@ -178,6 +254,6 @@ export function Shell({ children }: { children: React.ReactNode }) {
           )}
         </Link>
       </footer>
-    </>
+    </PageFocus.Provider>
   );
 }

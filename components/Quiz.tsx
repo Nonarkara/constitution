@@ -7,13 +7,15 @@ import { sections, chapters, sectionBody } from "@/lib/corpus";
 import { recordAnswer, lessonQueue } from "@/lib/learning";
 import { chapterPuzzles } from "@/lib/puzzles";
 import { choiceLetter, fisherYates } from "@/lib/shuffle";
-import { sessionSummary } from "@/lib/session";
+import { sessionCounter, sessionSummary, sessionTotals } from "@/lib/session";
+import { matchingWhys } from "@/lib/cues";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
 import { MemoryCue } from "./MemoryCue";
 import { RecallFirst, ConfidenceCheck, ExplainBack } from "./LearningCoach";
 import { emptyCalibration, recordCalibration, nextReviewAt, type Confidence } from "@/lib/coach";
 import { TeachingSteps } from "./TeachingSteps";
+import { useHidePageNext } from "./Shell";
 import { Puzzle } from "./Puzzle";
 import { SideQuestionCard, seenSide } from "./SideQuestion";
 import { pickSide } from "@/lib/side";
@@ -31,6 +33,7 @@ export function Quiz({
   onExit: () => void;
 }) {
   const { lang, progress, save, annotations } = useStudy();
+  useHidePageNext(true);
   const [lesson] = useState(() => chapter ? fisherYates(chapterPuzzles(cases, chapter)).slice(0, 1) : []);
   // One exam topic met along the way, after the second answer; chapter lessons only.
   const [side] = useState(() => (chapter ? pickSide(chapter, seenSide()) : null));
@@ -57,6 +60,9 @@ export function Quiz({
   const [recallDraft, setRecallDraft] = useState("");
   const [confidence, setConfidence] = useState<Confidence | null>(null);
   const [calibration, setCalibration] = useState(emptyCalibration);
+  const retryTotal = retried ? Math.max(list.length - firstTotal, 0) : 0;
+  const counter = sessionCounter(index, firstTotal, retryTotal);
+  const totals = sessionTotals(correct, firstTotal);
   const puzzle = lesson[puzzleAt] ?? null;
   const q = list[index];
   const readSections = [
@@ -87,13 +93,12 @@ export function Quiz({
             "今天又前进了一点。",
           )}
         </h1>
-        <p>{sessionSummary(correct, firstTotal, lang)}</p>
+        <p>{sessionSummary(totals.correct, totals.total, lang)}</p>
         {calibration.sure > 0 && <p>{tr(lang, `มั่นใจ ${calibration.sure} ข้อ แต่พลาด ${calibration.sureMissed} ข้อ จุดนี้เหมาะกลับไปถามว่ากฎต่างจากที่คิดตรงไหน`, `High-confidence responses: ${calibration.sure}; incorrect: ${calibration.sureMissed}. Revisit where the rule differed from your expectation.`, `你对${calibration.sure}题很确定，其中${calibration.sureMissed}题答错了。回顾规则与预期不同之处。`)}</p>}
         {calibration.uncertainCorrect > 0 && <p>{tr(lang, `ไม่มั่นใจแต่ตอบถูก ${calibration.uncertainCorrect} ข้อ ลองอธิบายเหตุผลเพื่อแยกความเข้าใจจากการเดา`, `Correct while unsure: ${calibration.uncertainCorrect}. Explain why to distinguish understanding from a lucky guess.`, `有${calibration.uncertainCorrect}题虽然不确定却答对了。解释理由，以区分理解与猜中。`)}</p>}
         <p>{tr(lang,"ตอบซ้ำทันทีช่วยแก้ความเข้าใจ แต่ยังไม่พิสูจน์ว่าจำได้หลังเว้นเวลา","An immediate retry helps correct your understanding; it does not yet prove delayed retention.","立即重试有助于纠正理解，但尚不能证明隔一段时间仍能记住。")}</p>
         {nextReviewAt(progress, list.map(q=>q.id), Date.now()) !== null && <p>{tr(lang,"กลับมาทบทวนเร็วที่สุด:","Earliest next review:","最早下次复习：")} {new Date(nextReviewAt(progress,list.map(q=>q.id),Date.now())!).toLocaleString(lang === "th" ? "th-TH" : lang === "zh" ? "zh-CN" : "en-GB", {timeZone:"Asia/Bangkok",month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"})} · {tr(lang,"เวลาไทย","Bangkok time","曼谷时间")}</p>}
         {missed.length > 0 && <details><summary>{tr(lang,"จุดที่ควรกลับมาอธิบายใหม่","Ideas to explain again","值得重新解释的概念")}</summary><ul>{missed.map(id=>{const item=bank.find(q=>q.id===id);return item?<li key={id}><Link href={`/section/?n=${item.sections[0]}`}>{item.prompt[lang]} →</Link></li>:null;})}</ul></details>}
-        <p><Link href="/review/">{tr(lang,"ทบทวนแบบสลับเรื่อง","Mix topics for review","交错复习不同主题")} →</Link> · <Link href="/memory/">{tr(lang,"เดินบ้านความจำโดยไม่ดูเฉลย","Recall the memory house without answers","不看答案回忆记忆屋")} →</Link></p>
         <button className="primary" onClick={onExit}>
           {tr(lang, "กลับสู่เส้นทาง", "Back to your path", "返回学习路径")} →
         </button>
@@ -167,7 +172,7 @@ export function Quiz({
     const ok = picked === q.answer;
     save(recordAnswer(progress, q, ok, Date.now()));
     if (index < firstTotal) setCalibration(c => recordCalibration(c, confidence, ok));
-    if (ok && index < firstTotal) setCorrect((x) => x + 1);
+    if (ok) setCorrect((x) => x + 1);
     if (!ok && !retried) setMissed((ids) => (ids.includes(q.id) ? ids : [...ids, q.id]));
     setChecked(true);
   };
@@ -204,9 +209,9 @@ export function Quiz({
         <span className="mono">
           {tr(
             lang,
-            `ทบทวน ${String(index + 1).padStart(2, "0")} / ${String(list.length).padStart(2, "0")}`,
-            `Recall ${String(index + 1).padStart(2, "0")} / ${String(list.length).padStart(2, "0")}`,
-            `回忆 ${String(index + 1).padStart(2, "0")} / ${String(list.length).padStart(2, "0")}`,
+            `ทบทวน ${String(counter.n).padStart(2, "0")} / ${String(counter.total).padStart(2, "0")}`,
+            `Recall ${String(counter.n).padStart(2, "0")} / ${String(counter.total).padStart(2, "0")}`,
+            `回忆 ${String(counter.n).padStart(2, "0")} / ${String(counter.total).padStart(2, "0")}`,
           )}
         </span>
         <span className="micro">
@@ -214,8 +219,8 @@ export function Quiz({
         </span>
       </div>
       <progress
-        value={index}
-        max={list.length}
+        value={Math.max(counter.n - 1, 0)}
+        max={counter.total}
         aria-label={tr(lang, "ความก้าวหน้าในรอบนี้", "Session progress", "本次练习进度")}
       />
       <h1 id="quiz-heading" tabIndex={-1}>
@@ -283,13 +288,11 @@ export function Quiz({
             </strong>
             <p>{q.explanation[lang]}</p>
             {recallDraft.trim() && <p className="micro">{tr(lang,"ความคิดก่อนเห็นตัวเลือก:","Your thought before the options:","看选项前的想法：")} {recallDraft}</p>}
-            {cases
-              .filter((item) => item.sections.some((n) => q.sections.includes(n)))
-              .map((item) => (
+            {matchingWhys(cases, q).map((item) => (
                 <p key={item.id}>{item.why[lang]}</p>
               ))}
             {"hook" in q && q.hook ? <p className="micro">{q.hook[lang]}</p> : null}
-            <MemoryCue chapter={q.chapter}/>
+            <MemoryCue item={q}/>
             {q.sections.some((n) => annotations[n]?.note) && (
               <div className="note" style={{ margin: "12px 0", borderLeft: "3px solid var(--accent)" }}>
                 <strong className="micro">
@@ -313,7 +316,7 @@ export function Quiz({
           <button className="primary" onClick={advance}>
             {index === list.length - 1 && (retried || missed.length === 0)
               ? tr(lang, "ดูผลรอบนี้", "Finish session", "查看结果")
-              : tr(lang, "ข้อต่อไป", "Next question", "下一题")}{" "}
+              : tr(lang, `ข้อ ${index + 2}`, `Question ${index + 2}`, `第${index + 2}题`)}{" "}
             →
           </button>
         </>

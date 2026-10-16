@@ -52,12 +52,14 @@ export function Reader() {
   return (
     <>
       <h1 id="reader-title" tabIndex={-1}>
-        {tr(
-          lang,
-          "เปิดมาตรา\nหาคำตอบ",
-          "Find the section.\nRead the source.",
-          "查找条文，\n回到原文。",
-        )}
+        {section && !query.trim()
+          ? sectionLabel(lang, section.number)
+          : tr(
+              lang,
+              "เปิดมาตรา\nหาคำตอบ",
+              "Find the section.\nRead the source.",
+              "查找条文，\n回到原文。",
+            )}
       </h1>
       <form
         className="search-form"
@@ -296,7 +298,7 @@ export function Reader() {
               disabled={section.number === 279}
               onClick={() => open(section.number + 1)}
             >
-              {tr(lang, "ถัดไป", "Next", "下一条")} →
+              {tr(lang, `มาตรา ${section.number + 1}`, `Section ${section.number + 1}`, `第${section.number + 1}条`)} →
             </button>
           </div>
           <Ask sections={[section.number]} key={section.number} />

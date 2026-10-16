@@ -1,10 +1,15 @@
-import { Learn } from "@/components/Learn";
-export const metadata = {
-  title: "เส้นทางเรียน · Learn",
-  description: "เรียนรัฐธรรมนูญทีละหมวด เริ่มจากโจทย์ชีวิตจริง อ่านตัวบท แล้วลองตอบ",
-  alternates: { canonical: "/" },
-};
+"use client";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
-  return <Learn />;
+  const router = useRouter();
+  useEffect(() => {
+    router.replace("/");
+  }, [router]);
+  return (
+    <p>
+      <a href="/">Home</a>
+    </p>
+  );
 }

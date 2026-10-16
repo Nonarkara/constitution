@@ -1,30 +1,56 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { sections as corpus } from "@/lib/corpus";
+import { sectionBody } from "@/lib/corpus";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
 import {
   ASK_ORIGIN,
+  ASK_RETRIES,
+  ATTEMPT_BUDGET_MS,
+  answerMatchesUi,
+  askRequest,
+  classify,
+  confidenceLabel,
   consentCopy,
   deepLink,
+  enforcementTopic,
   friendlyAskError,
   groundedLabel,
   localConstitution,
+  looksLikeProviderError,
+  notebookFallback,
+  outcomeError,
+  pollSteps,
   presentAnswer,
+  readConfidence,
   readGrounded,
   readSources,
+  shapeAskAnswer,
   showGroundedMark,
-  studyDisclaimer,
   safeAskURL,
+  showRuling,
+  splitRightsAnswer,
+  studyDisclaimer,
+  wrongLanguageResult,
+  type AskExcerpt,
 } from "@/lib/ask";
+import { askJSON, parseAskAnswer, AskClientError } from "@/lib/ask-client";
 
-import { requestAsk, AskClientError, type AskAnswer } from "@/lib/ask-client";
-
+type Statute = { cite?: string; law?: string; section?: string; text?: string };
+type Deka = { caseId?: string; year?: string; headnote?: string; url?: string };
+type Answer = {
+  answer: string;
+  grounded?: boolean;
+  confidence?: string | null;
+  sources?: { title?: string; url?: string }[];
+  final?: { grounded?: boolean; confidence?: string | null; sources?: { title?: string; url?: string }[] };
+  appendix?: { disclaimer?: string; statutes?: Statute[]; deka?: Deka[] } | null;
+};
 type State =
   | { kind: "idle" }
-  | { kind: "waiting"; position: number }
-  | { kind: "done"; result: AskAnswer }
+  | { kind: "waiting"; position: number; attempt: number; started: number }
+  | { kind: "done"; result: Answer; attempts: number; elapsed: number }
   | { kind: "error"; message: string; link: boolean };
 
 // Questions the notebook cannot answer go to Non-Laws, which retrieves real
@@ -35,28 +61,122 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
     [consent, setConsent] = useState(false),
     [state, setState] = useState<State>({ kind: "idle" });
   const run = useRef(0);
-  const activeRequest = useRef<AbortController | null>(null);
-  useEffect(() => () => { run.current++; activeRequest.current?.abort(); }, []);
+  const [elapsed, setElapsed] = useState(0);
+  const waitStarted = state.kind === "waiting" ? state.started : 0;
+  // Leaving the page cancels the request in flight, not only its result.
+  const active = useRef<AbortController | null>(null);
+  useEffect(() => () => { run.current++; active.current?.abort(); }, []);
+  useEffect(() => {
+    if (!waitStarted) return;
+    setElapsed(Date.now() - waitStarted);
+    const id = window.setInterval(() => setElapsed(Date.now() - waitStarted), 1000);
+    return () => window.clearInterval(id);
+  }, [waitStarted]);
   useEffect(() => setQuestion(initial), [initial]);
   const length = question.trim().length;
   const busy = state.kind === "waiting";
   const fail = (message: string, link = true) => setState({ kind: "error", message, link });
+  const excerpts: AskExcerpt[] = sections.map((n) => ({ number: n, text: sectionBody(n, lang) }));
+  const settle = (result: Answer & { shaped?: boolean }, attempts: number, startedAt: number) => {
+    const translations = excerpts.map((excerpt) => excerpt.text);
+    const topic = enforcementTopic(question, sections);
+    const answer = result.shaped
+      ? result.answer
+      : shapeAskAnswer(result.answer ?? "", lang, sections, translations, question);
+    setState({
+      kind: "done",
+      result: {
+        ...result,
+        answer,
+        ...(topic
+          ? result.confidence == null && result.shaped
+            ? { grounded: false }
+            : { confidence: "MIXED" as const, grounded: false }
+          : {}),
+      },
+      attempts,
+      elapsed: Date.now() - startedAt,
+    });
+  };
 
   async function ask() {
     const mine = ++run.current;
+    const startedAt = Date.now();
     if (!navigator.onLine) return fail(friendlyAskError("offline", lang));
-    setState({ kind: "waiting", position: 0 });
-    activeRequest.current?.abort();
-    const controller = new AbortController();
-    activeRequest.current = controller;
+    active.current?.abort();
+    active.current = new AbortController();
+    const tries = ASK_RETRIES + 1;
+    let sawTimeout = false;
+    for (let attempt = 0; attempt < tries; attempt++) {
+      if (run.current !== mine) return;
+      setState({ kind: "waiting", position: 0, attempt, started: startedAt });
+      const outcome = await runAsk(mine, attempt, startedAt);
+      if (run.current !== mine || outcome === "done" || outcome === "stopped") return;
+      if (outcome === "timeout") sawTimeout = true;
+      if (outcome === "language" && attempt + 1 >= tries) {
+        settle(wrongLanguageResult(lang, excerpts), tries, startedAt);
+        return;
+      }
+    }
+    if (run.current !== mine) return;
+    if (excerpts.length) return settle(notebookFallback(lang, excerpts, sawTimeout ? "timeout" : "early"), tries, startedAt);
+    fail(friendlyAskError(sawTimeout ? "timeout" : "lost", lang));
+  }
+
+  async function runAsk(
+    mine: number,
+    attempt: number,
+    startedAt: number,
+  ): Promise<"done" | "retry" | "timeout" | "stopped" | "language"> {
+    // Every response is size-capped and validated (lib/ask-client) before it reaches the page.
+    const signal = active.current!.signal;
+    const started = Date.now();
+    const left = () => ATTEMPT_BUDGET_MS - (Date.now() - started);
+    const pause = (ms: number) =>
+      new Promise<void>((resolve, reject) => {
+        if (signal.aborted) return reject(signal.reason);
+        const timer = setTimeout(resolve, ms);
+        signal.addEventListener("abort", () => { clearTimeout(timer); reject(signal.reason); }, { once: true });
+      });
+    const stopped = () => run.current !== mine || signal.aborted;
     try {
-      const result = await requestAsk(question.trim(), lang, sections, controller.signal,
-        (position) => { if (run.current === mine) setState({kind:"waiting",position}); });
-      if (run.current === mine) setState({kind:"done",result});
+      const first = await askJSON(`${ASK_ORIGIN}/api/laws`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(askRequest(question, lang, sections, excerpts)),
+      }, signal, left());
+      const body = (first.body && typeof first.body === "object" ? first.body : {}) as Record<string, unknown>;
+      const outcome = classify(first.status, body);
+      if (outcome === "refused" || outcome === "invalid") {
+        fail(outcomeError(outcome, lang));
+        return "stopped";
+      }
+      if (outcome !== "accepted") return "retry";
+      if (typeof body.id !== "string" || !/^[\w-]{1,200}$/.test(body.id)) return "retry";
+      for (const delay of pollSteps()) {
+        if (left() <= 0) return "timeout";
+        await pause(Math.min(delay, left()));
+        if (stopped()) return "stopped";
+        if (left() <= 0) return "timeout";
+        const poll = await askJSON(`${ASK_ORIGIN}/api/ask/${encodeURIComponent(body.id)}`, {}, signal, left());
+        if (stopped()) return "stopped";
+        const job = (poll.body && typeof poll.body === "object" ? poll.body : {}) as Record<string, unknown>;
+        if (poll.status !== 200 || job.error) return "retry";
+        if (job.status === "done") {
+          const parsed = parseAskAnswer(job);
+          if (!parsed || looksLikeProviderError(parsed.answer)) return "retry";
+          if (!answerMatchesUi(parsed.answer, lang)) return "language";
+          settle({ ...(job as object), ...parsed } as Answer, attempt + 1, startedAt);
+          return "done";
+        }
+        const position = typeof job.position === "number" && Number.isSafeInteger(job.position) && job.position >= 0 ? job.position : 0;
+        setState({ kind: "waiting", position, attempt, started: startedAt });
+      }
     } catch (error) {
-      if (run.current !== mine || controller.signal.aborted) return;
-      fail(friendlyAskError(error instanceof AskClientError ? error.kind : "unreachable", lang));
-    } finally { if (activeRequest.current === controller) activeRequest.current = null; }
+      if (stopped()) return "stopped";
+      return error instanceof AskClientError && error.kind === "timeout" ? "timeout" : "retry";
+    }
+    return "timeout";
   }
 
   const open = (
@@ -76,7 +196,14 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
   );
   const presented =
     state.kind === "done" ? presentAnswer(state.result.answer, readSources(state.result)) : null;
-  const grounded = state.kind === "done" && showGroundedMark({ grounded: readGrounded(state.result) });
+  const rightsParts = presented ? splitRightsAnswer(presented.text) : null;
+  const topic = enforcementTopic(question, sections);
+  const confidenceLevel = state.kind === "done" ? readConfidence(state.result) : null;
+  const confidenceText = confidenceLevel
+    ? confidenceLabel(confidenceLevel, lang)
+    : state.kind === "done" && showGroundedMark({ grounded: readGrounded(state.result) })
+      ? groundedLabel(lang)
+      : null;
   const appendix = state.kind === "done" ? state.result.appendix : null;
   const ours = localConstitution(appendix?.statutes);
   const others = (appendix?.statutes ?? []).filter((s) => !s.cite?.startsWith("รธน."));
@@ -129,19 +256,36 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
       <button className="primary" disabled={!consent || busy || length < 8} onClick={ask}>
         {tr(lang, "ถาม Non-Laws", "Ask Non-Laws", "询问 Non-Laws")} →
       </button>
-      {busy && <>
-        <button onClick={() => { run.current++; activeRequest.current?.abort(); setState({kind:"idle"}); }}>
+      {busy && (
+        <button type="button" onClick={() => { run.current++; active.current?.abort(); setState({ kind: "idle" }); }}>
           {tr(lang, "หยุดรอ", "Stop waiting", "停止等待")}
         </button>
-        <p className="micro">{tr(lang,"หยุดรอได้ คำถามที่ส่งไปแล้วจะยังอยู่กับ Non-Laws","You can stop waiting. The submitted question remains with Non-Laws.","可以停止等待，但已提交的问题仍由 Non-Laws 保存。")}</p>
-      </>}
+      )}
       <div role="status" aria-live="polite">
         {state.kind === "waiting" && (
-          <p className="micro">
-            {state.position > 0
-              ? tr(lang, `อยู่ในคิวลำดับที่ ${state.position}`, `In queue · position ${state.position}`, `排队中 · 第${state.position}位`)
-              : tr(lang, "กำลังค้นตัวบทและเขียนคำตอบ อาจใช้เวลาหนึ่งถึงสองนาที", "Searching the law and writing. This can take a minute or two.", "正在检索法条并撰写答案，可能需要一两分钟。")}
-          </p>
+          <div className="ask-wait">
+            <progress
+              value={Math.min(elapsed, ATTEMPT_BUDGET_MS * (ASK_RETRIES + 1))}
+              max={ATTEMPT_BUDGET_MS * (ASK_RETRIES + 1)}
+              aria-label={tr(lang, "ความคืบหน้าของการค้น", "Search progress", "检索进度")}
+            />
+            <p className="micro">
+              {state.attempt > 0
+                ? tr(lang, "รอบแรกไม่กลับมา กำลังถามอีกครั้งหนึ่ง", "The first try did not come back. Asking once more.", "第一次没有返回。正在再问一次。")
+                : state.position > 0
+                  ? tr(lang, `อยู่ในคิวลำดับที่ ${state.position}`, `In queue · position ${state.position}`, `排队中 · 第${state.position}位`)
+                  : tr(lang, "กำลังค้นตัวบทและเขียนคำตอบ", "Searching the law and writing.", "正在检索法条并撰写答案。")}
+              {" · "}
+              {tr(
+                lang,
+                `ครั้งที่ ${state.attempt + 1} จาก ${ASK_RETRIES + 1}`,
+                `try ${state.attempt + 1} of ${ASK_RETRIES + 1}`,
+                `第${state.attempt + 1}次，共${ASK_RETRIES + 1}次`,
+              )}
+              {" · "}
+              {tr(lang, `${Math.round(elapsed / 1000)} วินาที`, `${Math.round(elapsed / 1000)}s`, `${Math.round(elapsed / 1000)}秒`)}
+            </p>
+          </div>
         )}
         {state.kind === "error" && (
           <div className="feedback">
@@ -154,8 +298,26 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
       </div>
       {state.kind === "done" && (
         <div className="ask-answer">
-          <p className="ask-text">{presented?.text}</p>
-          {grounded && <p className="micro">{groundedLabel(lang)}</p>}
+          {state.attempts > 1 && (
+            <p className="micro">
+              {tr(
+                lang,
+                `ถามซ้ำอัตโนมัติแล้วหนึ่งครั้ง รวม ${Math.round(state.elapsed / 1000)} วินาที`,
+                `Asked again automatically once. ${Math.round(state.elapsed / 1000)}s in all.`,
+                `已自动再问一次。一共${Math.round(state.elapsed / 1000)}秒。`,
+              )}
+            </p>
+          )}
+          <p className="ask-text">{rightsParts?.lead}</p>
+          {rightsParts?.context && (
+            <div className="ask-context">
+              <p className="micro">
+                {tr(lang, "จากคำค้น แยกไว้ต่างหาก", "From the search, set apart", "检索补充，另行列出")}
+              </p>
+              <p className="micro">{rightsParts.context}</p>
+            </div>
+          )}
+          {confidenceText && <p className="micro">{confidenceText}</p>}
           {(presented?.sources.length ?? 0) > 0 && (
             <ol className="ask-sources">
               {presented?.sources.map((source) => (
@@ -174,7 +336,7 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
           {ours.map((n) => (
             <div className="reading-excerpt" key={`c${n}`}>
               <h3>{sectionLabel(lang, n)}</h3>
-              <p lang="th">{corpus[n - 1].th}</p>
+              <p lang={lang}>{sectionBody(n, lang)}</p>
               <Link href={`/section/?n=${n}`}>
                 {tr(lang, "อ่านในสมุด", "Read in the notebook", "在笔记中阅读")} →
               </Link>
@@ -190,7 +352,7 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
               {s.text && <p lang="th">{s.text}</p>}
             </div>
           ))}
-          {(appendix?.deka ?? []).map((d, i) => (
+          {(appendix?.deka ?? []).filter((d) => showRuling(d, topic)).map((d, i) => (
             <p className="micro" key={`d${i}`}>
               {safeAskURL(d.url) ? (
                 <a href={safeAskURL(d.url)} target="_blank" rel="noopener noreferrer nofollow">

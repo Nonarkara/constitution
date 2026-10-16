@@ -9,8 +9,8 @@ export default function NotFound() {
       <p>
         ลิงก์อาจพิมพ์ผิดหรือหน้าถูกย้ายแล้ว · This page doesn&apos;t exist or has moved. · 页面不存在或已移动。
       </p>
-      <Link className="button primary" href="/learn/">
-        กลับสู่เส้นทางเรียน · Back to learning →
+      <Link className="button primary" href="/">
+        ← กลับไปหน้าแรก · Back to home
       </Link>
     </section>
   );

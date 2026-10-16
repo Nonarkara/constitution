@@ -156,7 +156,7 @@ function BlockView({ block, lang, index }: { block: Block; lang: Lang; index: nu
 }
 
 type Link_ = { slug: string; title: Pair } | null;
-export function BibleChapterView({ chapter, prev, next }: { chapter: BibleChapter; prev: Link_; next: Link_ }) {
+export function BibleChapterView({ chapter }: { chapter: BibleChapter; prev: Link_; next: Link_ }) {
   const { lang } = useStudy();
   const l = bookLang(lang);
   const titled = chapter.blocks.map((b, i) => ({ b, i })).filter(({ b }) => "title" in b && b.title);
@@ -204,11 +204,6 @@ export function BibleChapterView({ chapter, prev, next }: { chapter: BibleChapte
           "本指南用于学习，不提供法律意见。以泰文法律原文为准。批评属于署名者的观点，不代表本应用的结论。",
         )}
       </p>
-      <div className="reader-navigation">
-        {prev ? <Link href={`/bible/${prev.slug}/`}>← {lang === "zh" ? guidePaths[prev.slug]?.title.zh ?? text(prev.title, lang) : text(prev.title, lang)}</Link> : <span />}
-        <Link href="/bible/">{tr(lang, "สารบัญ", "Contents", "目录")}</Link>
-        {next ? <Link href={`/bible/${next.slug}/`}>{lang === "zh" ? guidePaths[next.slug]?.title.zh ?? text(next.title, lang) : text(next.title, lang)} →</Link> : <span />}
-      </div>
     </article>
   );
 }

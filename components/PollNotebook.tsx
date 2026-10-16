@@ -117,7 +117,7 @@ export function PollNotebook() {
           ← {tr(lang, "ก่อนหน้า", "Previous", "上一题")}
         </button>
         <button disabled={at === 9} onClick={() => setAt(at + 1)}>
-          {tr(lang, "ถัดไป", "Next", "下一题")} →
+          {tr(lang, `คำถาม ${at + 2}`, `Question ${at + 2}`, `第${at + 2}题`)} →
         </button>
       </div>
       <button

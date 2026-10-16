@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { makeDrill, DRILL_COUNT } from "../lib/drills.ts";
+import { makeDrill, DRILL_COUNT, drillMembership, petitionGap, ministerialRemoval } from "../lib/drills.ts";
 import { papers, makePaper } from "../lib/papers.ts";
 import { polls, parsePolls } from "../lib/polls.ts";
 import {
@@ -22,9 +22,7 @@ test("4230 unique drills have trilingual distinct choices and independently corr
     const q = makeDrill(i),
       f = Math.floor(i / 423),
       s = i % 423,
-      H = 72 + s,
-      S = 40 + (s % 161),
-      E = 10 + (s % 70);
+      { H, S, E } = drillMembership(s);
     assert.ok(!seen.has(q.id));
     seen.add(q.id);
     assert.ok(!prompts.has(q.prompt.th));
@@ -35,7 +33,7 @@ test("4230 unique drills have trilingual distinct choices and independently corr
       assert.equal(new Set(q.choices.map((c) => c[l])).size, 4);
     }
     if (f < 6) {
-      const n = Number(q.choices[q.answer].en.split(" ")[0]);
+      const n = Number(q.choices[q.answer].en.replace(/,/g, "").split(" ")[0]);
       const D = [H + S, H + S, S, E, H, H + S][f],
         div = [2, 2, 3, 5, 5, 5][f];
       if (f === 1) {
@@ -43,15 +41,15 @@ test("4230 unique drills have trilingual distinct choices and independently corr
       } else assert.ok(n * div >= D && (n - 1) * div < D);
     }
     if (f === 8) {
-      const need = s % 2 === 0 ? 50000 : 10000,
-        have =
-          s % 2 === 0 ? 10000 + ((s * 89) % 39000) : 3000 + ((s * 17) % 6900);
-      assert.equal(Number(q.choices[q.answer].en.split(" ")[0]), need - have);
+      assert.equal(
+        Number(q.choices[q.answer].en.replace(/,/g, "").split(" ")[0]),
+        petitionGap(s).missing,
+      );
     }
     if (f === 9)
       assert.equal(
-        Number(q.choices[q.answer].en.split(" ")[0]),
-        Math.max(0, 20 + (s % 16) + 1 + Math.floor(s / 16) - 35),
+        Number(q.choices[q.answer].en.replace(/,/g, "").split(" ")[0]),
+        ministerialRemoval(s).remove,
       );
   }
   assert.equal(seen.size + bank.length, 4700);
