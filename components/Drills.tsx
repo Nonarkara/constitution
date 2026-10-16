@@ -84,7 +84,7 @@ export function Drills() {
         ))}
       </nav>
       <p>
-        <Link href="/learn/">
+        <Link href="/bible/">
           {tr(
             lang,
             "กลับไปเข้าใจเรื่องก่อน",

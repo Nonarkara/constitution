@@ -43,7 +43,7 @@ export function Flashcards() {
   }, [progress, annotations, examTarget]);
 
   // Construct card deck based on deckType
-  const deck: FlashcardItem[] = useMemo(() => {
+  const fullDeck: FlashcardItem[] = useMemo(() => {
     if (deckType === "annotated") {
       const annotatedSecNums = Object.keys(annotations)
         .map(Number)
@@ -117,6 +117,11 @@ export function Flashcards() {
       };
     });
   }, [deckType, annotations, profile.weakestChapters]);
+
+  // "Practise s.N" links here with ?sec=N: show that section's cards, with a way back to all.
+  const [focus, setFocus] = useState(() => (Number.isInteger(querySec) && querySec >= 1 && querySec <= 279 ? querySec : 0));
+  const focused = focus ? fullDeck.filter((card) => card.sections.includes(focus)) : [];
+  const deck = focused.length ? focused : fullDeck;
 
   const currentCard = deck[currentIndex];
 
@@ -199,6 +204,15 @@ export function Flashcards() {
         </div>
         <p className="adaptive-text">{profile.recommendation[lang]}</p>
       </section>
+
+      {focused.length > 0 && (
+        <p className="notice" role="status">
+          {tr(lang, `การ์ดของมาตรา ${focus} · ${focused.length} ใบ`, `Cards for section ${focus} · ${focused.length}`, `第${focus}条的卡片 · ${focused.length}张`)}{" "}
+          <button className="text-button" onClick={() => { setFocus(0); setCurrentIndex(0); setIsFlipped(false); }}>
+            {tr(lang, "ดูการ์ดทั้งหมด", "Show all cards", "显示全部卡片")}
+          </button>
+        </p>
+      )}
 
       {/* Deck Selector Tabs */}
       <nav

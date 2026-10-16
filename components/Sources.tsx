@@ -135,7 +135,7 @@ export function Sources() {
           </a>
           <br />
           <a
-            href="https://laplab.ucsd.edu/articles/Cepeda_etal_2006.pdf"
+            href="https://doi.org/10.1037/0033-2909.132.3.354"
             target="_blank"
             rel="noreferrer"
           >

@@ -24,7 +24,7 @@ function GuideEntry({ slug }: { slug: string }) {
       {step.sections.length > 0 && <p>{step.sections.map(n => <Link className="citation" key={n} href={`/section/?n=${n}`}>{sectionLabel(lang, n)} →</Link>)}</p>}
     </details>)}
     <p>{path.sections.map(n => <Link className="citation" key={n} href={`/section/?n=${n}`}>{sectionLabel(lang,n)} →</Link>)}</p>
-    <p>{path.chapters.map(c => <Link className="citation" key={c} href={`/learn/?chapter=${c}`}>{tr(lang,`ฝึก 5 ข้อ · หมวด ${c}`,`Try five · Chapter ${c}`,`练五题 · 第${c}章`)} →</Link>)}</p>
+    <p>{path.chapters.map(c => <Link className="citation" key={c} href={`/practice/?check=${c}`}>{tr(lang,`ฝึก 5 ข้อ · หมวด ${c}`,`Try five · Chapter ${c}`,`练五题 · 第${c}章`)} →</Link>)}</p>
   </section>;
 }
 // The guide is written in Thai and English; Chinese readers get the English edition.
