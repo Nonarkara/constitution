@@ -133,102 +133,131 @@ export function Home() {
         </div>
       </section>
 
-      {/* 4 Core Learning Pathways */}
-      <section className="home-pathways" aria-label={tr(lang, "เส้นทางการเรียน", "Learning pathways", "学习路径")}>
-        <div className="pathway-card">
-          <div className="pathway-head">
-            <span className="pathway-tag mono">{tr(lang, "อ่าน", "READ", "阅读")}</span>
-            <span className="micro text-muted">279 {tr(lang, "มาตรา", "sections", "条")}</span>
+      {/* Editorial Learning Architecture: One Dominant Anchor + Two Engines + Reference Shelf */}
+      <section className="home-architecture" aria-label={tr(lang, "เส้นทางการเรียน", "Learning pathways", "学习路径")}>
+        {/* Tier 1: Dominant Anchor - Double-Page Notebook */}
+        <div className="home-anchor">
+          <div className="anchor-badge mono">
+            <span className="anchor-tag">{tr(lang, "แกนหลักการเรียน", "PRIMARY STUDY DESK", "核心研读台")}</span>
+            <span className="bullet" aria-hidden="true">·</span>
+            <span className="text-muted">279 {tr(lang, "มาตรา", "sections", "条")}</span>
           </div>
-          <h3>
-            <Link href="/notebook/">
-              {tr(lang, "สมุดคู่หน้า 279 มาตรา", "Double-Page Notebook", "双页开本宪法全书")}
-            </Link>
-          </h3>
-          <p className="micro">
-            {tr(
-              lang,
-              "อ่านเปิดกางเหมือนหนังสือบนโต๊ะ ไฮไลต์ 4 สี จดโน้ตข้างตัวบท พร้อมเทียบภาษาไทย อังกฤษ และจีน",
-              "Open like a book on the desk. 4-colour highlighters, margin notes and 3-language side-by-side text.",
-              "像摊开在桌上的书一样阅读。4色高亮、条文边注及中英泰三语对照。",
-            )}
-          </p>
-          <div className="pathway-actions micro">
-            <Link href="/notebook/">{tr(lang, "เปิดสมุดคู่หน้า", "Spread View", "双页视图")} →</Link>
-            <Link href="/read/" className="pulse-link">{tr(lang, "อ่านทีละมาตรา", "Single Section", "单条阅读")}</Link>
-          </div>
-        </div>
-
-        <div className="pathway-card">
-          <div className="pathway-head">
-            <span className="pathway-tag mono">{tr(lang, "จำ", "RECALL", "记忆")}</span>
-            <span className="micro text-muted">16 {tr(lang, "ห้อง", "rooms", "房间")}</span>
-          </div>
-          <h3>
-            <Link href="/memory/">
-              {tr(lang, "วังความจำ & การ์ดช่วยจำ", "Memory Palace & Flashcards", "记忆宫殿与闪卡")}
-            </Link>
-          </h3>
-          <p className="micro">
-            {tr(
-              lang,
-              "จำโครงสร้างด้วยภาพอาคาร 16 ห้อง พลิกการ์ดทวนความจำ และแผ่นสรุปตัวเลข 41 ค่าที่ออกสอบบ่อย",
-              "16-room spatial memory palace, flip-to-recall flashcards, and a 41-number exam cram sheet.",
-              "16间空间记忆宫殿、翻转闪卡和41个高频考点核心数字速记表。",
-            )}
-          </p>
-          <div className="pathway-actions micro">
-            <Link href="/memory/">{tr(lang, "เดินชมวังความจำ", "Memory Palace", "记忆宫殿")} →</Link>
-            <Link href="/cram/" className="pulse-link">{tr(lang, "สูตรตัวเลข", "Cram Sheet", "数字速记")}</Link>
-            <Link href="/flashcards/" className="pulse-link">{tr(lang, "การ์ด", "Cards", "闪卡")}</Link>
+          <div className="anchor-content">
+            <div className="anchor-copy">
+              <h2>
+                <Link href="/notebook/">
+                  {tr(lang, "สมุดคู่หน้า 279 มาตรา", "Double-Page Notebook", "双页开本宪法全书")}
+                </Link>
+              </h2>
+              <p>
+                {tr(
+                  lang,
+                  "อ่านเปิดกางเหมือนหนังสือบนโต๊ะ ไฮไลต์ 4 สี จดโน้ตข้างตัวบท พร้อมเทียบภาษาไทย อังกฤษ และจีน บันทึกทั้งหมดจะเชื่อมโยงไปสู่รอบทบทวนความจำโดยอัตโนมัติ",
+                  "Open spread like a physical desk book. 4-colour highlighters, margin notes and 3-language side-by-side text, automatically wired into your spaced review sessions.",
+                  "如桌面展卷。4色高亮、条文边注及中英泰三语对照，所有学习笔记自动联动到间隔复习队列。",
+                )}
+              </p>
+              <div className="anchor-actions">
+                <Link className="primary" href="/notebook/">
+                  <span>{tr(lang, "เปิดสมุดคู่หน้า", "Open Notebook", "打开双页")}</span>
+                  <span aria-hidden="true">→</span>
+                </Link>
+                <Link href="/read/" className="pulse-link micro">
+                  {tr(lang, "อ่านทีละมาตรา", "Single Section", "单条阅读")} →
+                </Link>
+              </div>
+            </div>
+            <div className="anchor-features mono micro">
+              <div className="feature-chip">
+                <b>279</b> {tr(lang, "มาตราครบถ้วน", "sections", "条宪法全文")}
+              </div>
+              <div className="feature-chip">
+                <b>3</b> {tr(lang, "ภาษาเคียงกัน", "scripts", "三语对照")}
+              </div>
+              <div className="feature-chip">
+                <b>4</b> {tr(lang, "สีไฮไลต์ + โน้ต", "highlighters", "色高亮批注")}
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="pathway-card">
-          <div className="pathway-head">
-            <span className="pathway-tag mono">{tr(lang, "ฝึก", "DRILL", "练习")}</span>
-            <span className="micro text-muted">4,700 {tr(lang, "ข้อ", "exercises", "题")}</span>
+        {/* Tier 2: Two Asymmetrical Study Engines - Practice vs Memory */}
+        <div className="home-engines">
+          {/* Practice Engine */}
+          <div className="engine-column">
+            <div className="engine-head">
+              <span className="engine-tag mono">{tr(lang, "ฝึกทำโจทย์", "DRILL & EXAM", "刷题实战")}</span>
+              <span className="mono micro text-muted">4,700 {tr(lang, "ข้อ", "exercises", "题")}</span>
+            </div>
+            <h3>
+              <Link href="/practice/">
+                {tr(lang, "สนามฝึกตอบ & ข้อสอบจำลอง", "Practice Arena & Mock Exams", "练习场与模拟考")}
+              </Link>
+            </h3>
+            <p className="micro">
+              {tr(
+                lang,
+                "รอบฝึกผสมแบบปรับตัวตามผู้เรียน เจาะจุดที่พลาดบ่อย และ 30 ชุดข้อสอบจำลองจับเวลาพร้อมตรวจผล",
+                "Adaptive mixed practice sessions, targeted weak-point drills, and 30 timed mock papers.",
+                "自适应混合练习、错题针对性巩固以及30套计时全真模拟考卷。",
+              )}
+            </p>
+            <div className="engine-links micro">
+              <Link href="/practice/">{tr(lang, "เริ่มรอบฝึก", "Start Practice", "开始练习")} →</Link>
+              <Link href="/exam/" className="pulse-link">{tr(lang, "ข้อสอบจำลอง 30 ชุด", "30 Mock Papers", "30套模拟卷")}</Link>
+              <Link href="/along/" className="pulse-link">{tr(lang, "90 ประเด็นสอบนายอำเภอ", "90 District Topics", "90道实务考点")}</Link>
+            </div>
           </div>
-          <h3>
-            <Link href="/practice/">
-              {tr(lang, "สนามฝึกตอบ & ข้อสอบจำลอง", "Practice Arena & Mock Exams", "练习场与模拟考")}
-            </Link>
-          </h3>
-          <p className="micro">
-            {tr(
-              lang,
-              "รอบฝึกผสมแบบปรับตัวตามผู้เรียน เจาะจุดที่พลาดบ่อย และ 30 ชุดข้อสอบจำลองจับเวลาพร้อมตรวจผล",
-              "Adaptive mixed practice sessions, targeted weak-point drills, and 30 timed mock papers.",
-              "自适应混合练习、错题针对性巩固以及30套计时全真模拟考卷。",
-            )}
-          </p>
-          <div className="pathway-actions micro">
-            <Link href="/practice/">{tr(lang, "เริ่มรอบฝึก", "Start Practice", "开始练习")} →</Link>
-            <Link href="/exam/" className="pulse-link">{tr(lang, "ข้อสอบจำลอง", "30 Mock Papers", "模拟考卷")}</Link>
+
+          {/* Memory Engine */}
+          <div className="engine-column">
+            <div className="engine-head">
+              <span className="engine-tag mono">{tr(lang, "ความจำเชิงพื้นที่", "RECALL & PALACE", "空间记忆")}</span>
+              <span className="mono micro text-muted">16 {tr(lang, "ห้อง", "rooms", "房间")}</span>
+            </div>
+            <h3>
+              <Link href="/memory/">
+                {tr(lang, "วังความจำ & การ์ดช่วยจำ", "Memory Palace & Flashcards", "记忆宫殿与闪卡")}
+              </Link>
+            </h3>
+            <p className="micro">
+              {tr(
+                lang,
+                "จำโครงสร้างด้วยภาพอาคาร 16 ห้อง พลิกการ์ดทวนความจำ และแผ่นสรุปตัวเลข 41 ค่าที่ออกสอบบ่อย พร้อม 7 กับดักสำคัญ",
+                "16-room spatial memory palace, flip-to-recall flashcards, and a 41-number exam cram sheet with 7 high-yield traps.",
+                "16间空间记忆宫殿、翻转闪卡以及41个核心数字与7大高频陷阱速记表。",
+              )}
+            </p>
+            <div className="engine-links micro">
+              <Link href="/memory/">{tr(lang, "เดินชมวังความจำ", "Memory Palace", "记忆宫殿")} →</Link>
+              <Link href="/cram/" className="pulse-link">{tr(lang, "สูตรตัวเลข 41 ค่า", "41 Cram Numbers", "41个考点数字")}</Link>
+              <Link href="/flashcards/" className="pulse-link">{tr(lang, "การ์ดความจำ", "Flashcards", "记忆闪卡")}</Link>
+            </div>
           </div>
         </div>
 
-        <div className="pathway-card">
-          <div className="pathway-head">
-            <span className="pathway-tag mono">{tr(lang, "เข้าใจ", "GUIDE", "指南")}</span>
-            <span className="micro text-muted">{GUIDE_CHAPTERS} {tr(lang, "บท", "chapters", "章")}</span>
+        {/* Tier 3: Reference & Civic Knowledge Shelf */}
+        <div className="home-reference">
+          <div className="reference-lead">
+            <span className="reference-tag mono micro">{tr(lang, "คู่มือและหลักการ", "GUIDE & PRINCIPLES", "导读与宪政原则")}</span>
+            <h3>
+              <Link href="/bible/">
+                {tr(lang, `คู่มือเจาะลึก ${GUIDE_CHAPTERS} บท & สิทธิพลเมือง ${RIGHTS_COUNT} ด้าน`, `Study Bible (${GUIDE_CHAPTERS} Chapters) & Civic Rights (${RIGHTS_COUNT})`, `深入指南（${GUIDE_CHAPTERS}章）与公民权利（${RIGHTS_COUNT}项）`)}
+              </Link>
+            </h3>
+            <p className="micro">
+              {tr(
+                lang,
+                `คู่มืออ่านกฎหมาย ${GUIDE_CHAPTERS} บท แผนผังกลไก สิทธิพลเมือง ${RIGHTS_COUNT} ด้าน และ 90 แนวข้อสอบสำคัญระดับอำเภอ`,
+                `${GUIDE_CHAPTERS}-chapter study guide, constitutional diagrams, ${RIGHTS_COUNT} civic rights, and 90 district exam topics.`,
+                `${GUIDE_CHAPTERS}章法理导读、机构运行图解、${RIGHTS_COUNT}项公民基本权利与90道关键考点。`,
+              )}
+            </p>
           </div>
-          <h3>
-            <Link href="/bible/">
-              {tr(lang, "คู่มือเจาะลึก & สิทธิพลเมือง", "Study Bible & Civic Rights", "深入指南与公民权利")}
-            </Link>
-          </h3>
-          <p className="micro">
-            {tr(
-              lang,
-              `คู่มืออ่านกฎหมาย ${GUIDE_CHAPTERS} บท แผนผังกลไก สิทธิพลเมือง ${RIGHTS_COUNT} ด้าน และ 90 แนวข้อสอบสำคัญระดับอำเภอ`,
-              `${GUIDE_CHAPTERS}-chapter study guide, constitutional diagrams, ${RIGHTS_COUNT} civic rights, and 90 district exam topics.`,
-              `${GUIDE_CHAPTERS}章法理导读、机构运行图解、${RIGHTS_COUNT}项公民基本权利与90道关键考点。`,
-            )}
-          </p>
-          <div className="pathway-actions micro">
-            <Link href="/bible/">{tr(lang, `อ่านคู่มือ ${GUIDE_CHAPTERS} บท`, "Read Guide", "阅读指南")} →</Link>
-            <Link href="/rights/" className="pulse-link">{tr(lang, "สิทธิพลเมือง", "Civic Rights", "公民权利")}</Link>
+          <div className="reference-nav micro">
+            <Link href="/bible/">{tr(lang, `อ่านคู่มือ ${GUIDE_CHAPTERS} บท`, `Read ${GUIDE_CHAPTERS} Chapters`, `阅读${GUIDE_CHAPTERS}章指南`)} →</Link>
+            <Link href="/rights/" className="pulse-link">{tr(lang, `สิทธิพลเมือง ${RIGHTS_COUNT} ด้าน`, `${RIGHTS_COUNT} Civic Rights`, `${RIGHTS_COUNT}项公民权利`)}</Link>
+            <Link href="/cheatsheet/" className="pulse-link">{tr(lang, "แผ่นสรุปสูตร", "Cheat Sheet", "速记表")}</Link>
           </div>
         </div>
       </section>
