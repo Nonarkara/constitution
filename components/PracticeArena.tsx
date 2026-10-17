@@ -210,129 +210,162 @@ function ConstitutionArena() {
               </button>
             </div>
 
-            {/* Targeted Practice Modes */}
-            <div className="practice-grid">
-              {/* Chapter Check */}
-              <div className="practice-mode-card">
-                <div className="mode-card-top">
-                  <span className="mono micro font-bold">{tr(lang, "ตรวจรายหมวด", "Chapter Drill", "按章抽测")}</span>
-                  <span className="micro text-muted">5 {tr(lang, "ข้อ", "items", "题")}</span>
-                </div>
-                <h3>{tr(lang, "เลือกหมวดที่ต้องการฝึก", "Drill a specific chapter", "选择指定章节练习")}</h3>
+            {/* Track 1: Real Exam Simulation & Timed Papers (Top Priority for Passing) */}
+            <div className="practice-section">
+              <div className="practice-section-header">
+                <span className="mono micro text-accent font-bold">
+                  {tr(lang, "สนามสอบเสมือนจริง", "EXAM SIMULATION", "全真模拟考场")}
+                </span>
+                <h2>
+                  {tr(lang, "ข้อสอบจับเวลาและประเด็นสอบสำคัญ", "Timed Papers & High-Yield Topics", "计时模考与核心考点")}
+                </h2>
                 <p className="micro">
-                  {tr(lang, "เจาะเฉพาะหมวดที่คุณต้องการทบทวนเป็นพิเศษ", "Target a specific chapter you want to solidify.", "重点强化你需要攻克的特定章节。")}
+                  {tr(
+                    lang,
+                    "สร้างความคุ้นเคยกับข้อสอบจริงด้วยการจับเวลา ไม่แสดงเฉลยระหว่างทำ พร้อมเจาะลึก 90 ประเด็นสำคัญระดับอำเภอ",
+                    "Build exam stamina under timed conditions with hidden answers and drill 90 high-yield district officer topics.",
+                    "严格计时模拟真实考场环境，交卷后全面剖析，并深度攻克90道关键实务考点。",
+                  )}
                 </p>
-                <div className="chapter-drill-action">
-                  <select
-                    value={selectedChapter}
-                    onChange={(e) => setSelectedChapter(Number(e.target.value))}
-                    aria-label={tr(lang, "เลือกหมวด", "Select a chapter", "选择章节")}
-                  >
-                    {chapters.map((c) => (
-                      <option key={c.number} value={c.number}>
-                        {chapterPickerLabel(lang, c)}
-                      </option>
-                    ))}
-                  </select>
-                  <button onClick={() => startSession("chapter", selectedChapter, 5)}>
-                    {tr(lang, "ตรวจ 5 ข้อ", "Drill 5", "测5题")} →
-                  </button>
-                </div>
               </div>
 
-              {/* Number Drills */}
-              <div className="practice-mode-card">
-                <div className="mode-card-top">
-                  <span className="mono micro font-bold">{tr(lang, "แบบฝึกตัวเลข", "Number Drills", "数字专项")}</span>
-                  <span className="micro text-muted">4,230 {tr(lang, "โจทย์", "drills", "题")}</span>
-                </div>
-                <h3>
-                  <Link href="/drills/">
-                    {tr(lang, "ฝึกจำตัวเลข 41 ค่าสำคัญ", "41 Key Constitutional Numbers", "41个核心宪法数字速记")}
+              <div className="practice-featured-grid">
+                {/* 30 Mock Papers - Lead Winner */}
+                <div className="practice-featured-card">
+                  <div className="mode-card-top">
+                    <span className="mono micro font-bold">{tr(lang, "ข้อสอบจำลองจับเวลา", "Timed Mock Exams", "全真模拟考")}</span>
+                    <span className="micro text-muted">30 {tr(lang, "ชุด", "papers", "套")}</span>
+                  </div>
+                  <h3>
+                    <Link href="/exam/">
+                      {tr(lang, "30 ชุดข้อสอบจำลองจับเวลา", "30 Timed Practice Papers", "30套全真计时考卷")}
+                    </Link>
+                  </h3>
+                  <p className="micro">
+                    {tr(lang, "จำลองบรรยากาศสอบจริง ไม่แสดงเฉลยระหว่างทำ เฉลยละเอียดพร้อมวิเคราะห์คะแนนหลังส่ง", "Timed exam conditions. Answers hidden until submission, followed by detailed section diagnostics.", "模拟真实考场计时环境，交卷后一次性展示全面解析与法条诊断。")}
+                  </p>
+                  <Link href="/exam/" className="mode-card-link micro">
+                    {tr(lang, "เข้าห้องสอบจำลอง 30 ชุด", "Enter 30 Mock Papers", "进入30套模拟考")} →
                   </Link>
+                </div>
+
+                {/* 90 District Exam Topics */}
+                <div className="practice-featured-card">
+                  <div className="mode-card-top">
+                    <span className="mono micro font-bold">{tr(lang, "แนวข้อสอบพิเศษ", "District Chief Topics", "县长与实务考点")}</span>
+                    <span className="micro text-muted">90 {tr(lang, "ประเด็น", "topics", "点")}</span>
+                  </div>
+                  <h3>
+                    <Link href="/along/">
+                      {tr(lang, "90 ประเด็นสอบนายอำเภอและท้องถิ่น", "90 District & Local Exam Topics", "90个县长与地方实务考点")}
+                    </Link>
+                  </h3>
+                  <p className="micro">
+                    {tr(lang, "แนวข้อสอบตำแหน่งปลัดอำเภอ นิติกร และข้าราชการส่วนท้องถิ่น เจาะตัวบทที่ต้องใช้จริง", "High-yield topics for district officer, legal officer, and local civil service examinations.", "精选面向助理县长、法制官与地方公职人员的高频实务考点。")}
+                  </p>
+                  <Link href="/along/" className="mode-card-link micro">
+                    {tr(lang, "ดูแนวข้อสอบ 90 ข้อ", "View 90 Exam Topics", "查看90道考点")} →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Track 2: Precision Drills & Active Recall (Targeted Weaknesses) */}
+            <div className="practice-section">
+              <div className="practice-section-header">
+                <span className="mono micro text-muted font-bold">
+                  {tr(lang, "ฝึกเจาะจุดและช่วยจำ", "PRECISION DRILLS & RECALL", "专项攻坚与记忆工具")}
+                </span>
+                <h3>
+                  {tr(lang, "แบบฝึกเฉพาะจุดและเครื่องมือทบทวนความจำ", "Focused Drills & Memory Aids", "专项练习与记忆工具")}
                 </h3>
-                <p className="micro">
-                  {tr(lang, "ฝึกจำนวนวัน สัดส่วน ส.ส./ส.ว. และองค์ประชุมที่ออกสอบบ่อยที่สุด", "Drill days, quorum, MP/senate ratios and numbers most tested.", "专练最常考的天数、法定人数、议员比例与会议门槛。")}
-                </p>
-                <Link href="/drills/" className="mode-card-link micro">
-                  {tr(lang, "เปิดแบบฝึกตัวเลข", "Open Number Drills", "打开数字专项")} →
-                </Link>
               </div>
 
-              {/* Flashcards */}
-              <div className="practice-mode-card">
-                <div className="mode-card-top">
-                  <span className="mono micro font-bold">{tr(lang, "การ์ดความจำ", "Flashcards", "闪卡")}</span>
-                  <span className="micro text-muted">279 {tr(lang, "มาตรา", "sections", "条")}</span>
-                </div>
-                <h3>
-                  <Link href="/flashcards/">
-                    {tr(lang, "นึกก่อนแล้วพลิกดูตัวบท", "Recall First, Then Flip", "先回想再翻面")}
+              <div className="practice-grid">
+                {/* Number Drills */}
+                <div className="practice-mode-card">
+                  <div className="mode-card-top">
+                    <span className="mono micro font-bold">{tr(lang, "แบบฝึกตัวเลข", "Number Drills", "数字专项")}</span>
+                    <span className="micro text-muted">4,230 {tr(lang, "โจทย์", "drills", "题")}</span>
+                  </div>
+                  <h3>
+                    <Link href="/drills/">
+                      {tr(lang, "ฝึกจำตัวเลข 41 ค่าสำคัญ", "41 Key Constitutional Numbers", "41个核心宪法数字速记")}
+                    </Link>
+                  </h3>
+                  <p className="micro">
+                    {tr(lang, "ฝึกจำนวนวัน สัดส่วน ส.ส./ส.ว. และองค์ประชุมที่ออกสอบบ่อยที่สุด", "Drill days, quorum, MP/senate ratios and numbers most tested.", "专练最常考的天数、法定人数、议员比例与会议门槛。")}
+                  </p>
+                  <Link href="/drills/" className="mode-card-link micro">
+                    {tr(lang, "เปิดแบบฝึกตัวเลข", "Open Number Drills", "打开数字专项")} →
                   </Link>
-                </h3>
-                <p className="micro">
-                  {tr(lang, "ฝึกระลึกหลักการของมาตรา พร้อมทบทวนโน้ตย่อที่คุณจดไว้ข้างตัวบท", "Active recall for section rules, plus your own margin notes.", "主动回想条文要点，并结合你在页边记录的个人笔记。")}
-                </p>
-                <Link href="/flashcards/" className="mode-card-link micro">
-                  {tr(lang, "เปิดการ์ดความจำ", "Open Flashcards", "打开记忆闪卡")} →
-                </Link>
-              </div>
+                </div>
 
-              {/* 30 Mock Papers */}
-              <div className="practice-mode-card">
-                <div className="mode-card-top">
-                  <span className="mono micro font-bold">{tr(lang, "ข้อสอบจำลอง", "Mock Exam", "模拟考")}</span>
-                  <span className="micro text-muted">30 {tr(lang, "ชุด", "papers", "套")}</span>
+                {/* Chapter Check */}
+                <div className="practice-mode-card">
+                  <div className="mode-card-top">
+                    <span className="mono micro font-bold">{tr(lang, "ตรวจรายหมวด", "Chapter Drill", "按章抽测")}</span>
+                    <span className="micro text-muted">5 {tr(lang, "ข้อ", "items", "题")}</span>
+                  </div>
+                  <h3>{tr(lang, "เลือกหมวดที่ต้องการฝึก", "Drill a specific chapter", "选择指定章节练习")}</h3>
+                  <p className="micro">
+                    {tr(lang, "เจาะเฉพาะหมวดที่คุณต้องการทบทวนเป็นพิเศษ", "Target a specific chapter you want to solidify.", "重点强化你需要攻克的特定章节。")}
+                  </p>
+                  <div className="chapter-drill-action">
+                    <select
+                      value={selectedChapter}
+                      onChange={(e) => setSelectedChapter(Number(e.target.value))}
+                      aria-label={tr(lang, "เลือกหมวด", "Select a chapter", "选择章节")}
+                    >
+                      {chapters.map((c) => (
+                        <option key={c.number} value={c.number}>
+                          {chapterPickerLabel(lang, c)}
+                        </option>
+                      ))}
+                    </select>
+                    <button onClick={() => startSession("chapter", selectedChapter, 5)}>
+                      {tr(lang, "ตรวจ 5 ข้อ", "Drill 5", "测5题")} →
+                    </button>
+                  </div>
                 </div>
-                <h3>
-                  <Link href="/exam/">
-                    {tr(lang, "30 ชุดข้อสอบจับเวลา", "30 Timed Practice Papers", "30套全真计时考卷")}
-                  </Link>
-                </h3>
-                <p className="micro">
-                  {tr(lang, "จำลองบรรยากาศสอบจริง ไม่แสดงเฉลยระหว่างทำ เฉลยละเอียดหลังส่ง", "Timed exam conditions. Answers hidden until submission, then fully reviewed.", "模拟真实考场计时环境，交卷后一次性展示全面解析。")}
-                </p>
-                <Link href="/exam/" className="mode-card-link micro">
-                  {tr(lang, "ไปห้องสอบจำลอง", "Go to Mock Exams", "前往全真模考")} →
-                </Link>
-              </div>
 
-              {/* 90 District Exam Topics */}
-              <div className="practice-mode-card">
-                <div className="mode-card-top">
-                  <span className="mono micro font-bold">{tr(lang, "แนวข้อสอบพิเศษ", "District Chief", "县长与行政法考点")}</span>
-                  <span className="micro text-muted">90 {tr(lang, "ประเด็น", "topics", "点")}</span>
-                </div>
-                <h3>
-                  <Link href="/along/">
-                    {tr(lang, "90 ประเด็นสอบนายอำเภอและท้องถิ่น", "90 District & Local Exam Topics", "90个县长与地方实务考点")}
+                {/* Flashcards */}
+                <div className="practice-mode-card">
+                  <div className="mode-card-top">
+                    <span className="mono micro font-bold">{tr(lang, "การ์ดความจำ", "Flashcards", "闪卡")}</span>
+                    <span className="micro text-muted">279 {tr(lang, "มาตรา", "sections", "条")}</span>
+                  </div>
+                  <h3>
+                    <Link href="/flashcards/">
+                      {tr(lang, "นึกก่อนแล้วพลิกดูตัวบท", "Recall First, Then Flip", "先回想再翻面")}
+                    </Link>
+                  </h3>
+                  <p className="micro">
+                    {tr(lang, "ฝึกระลึกหลักการของมาตรา พร้อมทบทวนโน้ตย่อที่คุณจดไว้ข้างตัวบท", "Active recall for section rules, plus your own margin notes.", "主动回想条文要点，并结合你在页边记录的个人笔记。")}
+                  </p>
+                  <Link href="/flashcards/" className="mode-card-link micro">
+                    {tr(lang, "เปิดการ์ดความจำ", "Open Flashcards", "打开记忆闪卡")} →
                   </Link>
-                </h3>
-                <p className="micro">
-                  {tr(lang, "แนวข้อสอบตำแหน่งปลัดอำเภอ นิติกร และข้าราชการส่วนท้องถิ่น", "High-yield topics for district officer, legal officer, and local civil service.", "精选面向助理县长、法制官与地方公职人员的高频考点。")}
-                </p>
-                <Link href="/along/" className="mode-card-link micro">
-                  {tr(lang, "ดูแนวข้อสอบ 90 ข้อ", "View 90 Exam Topics", "查看90道考点")} →
-                </Link>
-              </div>
+                </div>
 
-              {/* Match & Formula Sheet */}
-              <div className="practice-mode-card">
-                <div className="mode-card-top">
-                  <span className="mono micro font-bold">{tr(lang, "สูตร & เกม", "Formulas & Match", "公式与速配")}</span>
-                  <span className="micro text-muted">{tr(lang, "สรุป", "Cheat Sheet", "速记")}</span>
-                </div>
-                <h3>
-                  <Link href="/cheatsheet/">
-                    {tr(lang, "แผ่นสรุปสูตร & เกมจับคู่", "Cheat Sheet & Matching Game", "速记公式与条文配对")}
-                  </Link>
-                </h3>
-                <p className="micro">
-                  {tr(lang, "สูตรช่วยจำสัดส่วนทางกฎหมาย และมินิเกมจับคู่สาระสำคัญ", "Mnemonic formula sheets and rapid concept-matching mini-games.", "法律比例速记公式与条文核心要点快速配对游戏。")}
-                </p>
-                <div className="card-dual-links micro">
-                  <Link href="/cheatsheet/">{tr(lang, "แผ่นสรุปสูตร", "Formula Sheet", "速记公式")} →</Link>
-                  <Link href="/games/">{tr(lang, "เกมจับคู่", "Match Game", "配对游戏")} →</Link>
+                {/* Match & Formula Sheet */}
+                <div className="practice-mode-card">
+                  <div className="mode-card-top">
+                    <span className="mono micro font-bold">{tr(lang, "สูตร & เกม", "Formulas & Match", "公式与速配")}</span>
+                    <span className="micro text-muted">{tr(lang, "สรุป", "Cheat Sheet", "速记")}</span>
+                  </div>
+                  <h3>
+                    <Link href="/cheatsheet/">
+                      {tr(lang, "แผ่นสรุปสูตร & เกมจับคู่", "Cheat Sheet & Matching Game", "速记公式与条文配对")}
+                    </Link>
+                  </h3>
+                  <p className="micro">
+                    {tr(lang, "สูตรช่วยจำสัดส่วนทางกฎหมาย และมินิเกมจับคู่สาระสำคัญ", "Mnemonic formula sheets and rapid concept-matching mini-games.", "法律比例速记公式与条文核心要点快速配对游戏。")}
+                  </p>
+                  <div className="card-dual-links micro">
+                    <Link href="/cheatsheet/">{tr(lang, "แผ่นสรุปสูตร", "Formula Sheet", "速记公式")} →</Link>
+                    <Link href="/games/">{tr(lang, "เกมจับคู่", "Match Game", "配对游戏")} →</Link>
+                  </div>
                 </div>
               </div>
             </div>

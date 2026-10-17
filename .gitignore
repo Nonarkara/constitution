@@ -34,3 +34,4 @@ token*.json
 .DS_Store
 *.orig
 *.rej
+.mavis/

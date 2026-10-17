@@ -345,6 +345,31 @@ const { REDIRECT_ROUTES: redirectRoutes } = await import("../lib/nav.ts");
   notes.push(`text: ${targets.length} files checked for mangled unicode`);
 }
 
+// --------------------------------------------------- 7. anti-slop design checks
+{
+  const bannedFonts = [
+    "Inter", "Poppins", "Montserrat", "Roboto", "Open Sans", "Lato",
+    "DM Sans", "Space Grotesk", "Geist", "Plus Jakarta Sans", "Manrope", "Nunito"
+  ];
+  for (const font of bannedFonts) {
+    if (new RegExp(`font-family:[^;]*["']?${font}["']?`, "i").test(css)) {
+      failures.push(`design: CSS contains banned AI-slop font "${font}"`);
+    }
+  }
+
+  const cleanCss = css.replace(/\/\*[\s\S]*?\*\//g, "");
+  const buttonRules = cleanCss.match(/(\.[a-z0-9_-]*(?:btn|button|cta)[^\{]*\{[^\}]*\})/gi) ?? [];
+  for (const rule of buttonRules) {
+    if (/min-width:\s*[0-9]{3}px/i.test(rule)) {
+      failures.push(`design: button rule has fixed min-width >= 100px: "${rule.slice(0, 70)}"`);
+    }
+    if (/width:\s*100%/i.test(rule) && /justify-content:\s*space-between/i.test(rule)) {
+      failures.push(`design: button stretches full-width with space-between: "${rule.slice(0, 70)}"`);
+    }
+  }
+  notes.push("design: anti-slop rules checked (banned fonts, button min-widths, measure)");
+}
+
 // ---------------------------------------------------------------------- report
 const scored = worst.filter((w) => w.min > 0);
 scored.sort((a, b) => a.r / a.min - b.r / b.min);
@@ -362,5 +387,5 @@ if (failures.length) {
   process.exit(1);
 }
 console.log(
-  `\nPASS — CSS comment integrity, undefined vars, theme contrast, built links, runtime images and text encoding all clean.`,
+  `\nPASS — CSS comment integrity, undefined vars, theme contrast, built links, runtime images, text encoding and anti-slop design laws all clean.`,
 );
