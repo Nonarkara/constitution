@@ -9,6 +9,13 @@ import { GUIDE } from "@/lib/nav";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
 import { knowSummary, sectionSignals } from "@/lib/knowledge";
+import { RIGHT_GROUPS } from "@/lib/rights";
+
+// Counted from the data, never typed in. These were both wrong as literals
+// once: the homepage said 10 guide chapters (there are 13) and 22 civic
+// rights (there are 15), while the README already had 13 right.
+const GUIDE_CHAPTERS = GUIDE.length;
+const RIGHTS_COUNT = RIGHT_GROUPS.reduce((n, g) => n + g.ids.length, 0);
 
 export function Home() {
   const { lang, progress, read, annotations, marks } = useStudy();
@@ -204,7 +211,7 @@ export function Home() {
         <div className="pathway-card">
           <div className="pathway-head">
             <span className="pathway-tag mono">{tr(lang, "เข้าใจ", "GUIDE", "指南")}</span>
-            <span className="micro text-muted">10 {tr(lang, "บท", "chapters", "章")}</span>
+            <span className="micro text-muted">{GUIDE_CHAPTERS} {tr(lang, "บท", "chapters", "章")}</span>
           </div>
           <h3>
             <Link href="/bible/">
@@ -214,13 +221,13 @@ export function Home() {
           <p className="micro">
             {tr(
               lang,
-              "คู่มืออ่านกฎหมาย 10 บท แผนผังกลไก สิทธิพลเมือง 22 ด้าน และ 90 แนวข้อสอบสำคัญระดับอำเภอ",
-              "10-chapter study guide, constitutional diagrams, 22 civic rights, and 90 district exam topics.",
-              "10章法理导读、机构运行图解、22项公民基本权利与90道关键考点。",
+              `คู่มืออ่านกฎหมาย ${GUIDE_CHAPTERS} บท แผนผังกลไก สิทธิพลเมือง ${RIGHTS_COUNT} ด้าน และ 90 แนวข้อสอบสำคัญระดับอำเภอ`,
+              `${GUIDE_CHAPTERS}-chapter study guide, constitutional diagrams, ${RIGHTS_COUNT} civic rights, and 90 district exam topics.`,
+              `${GUIDE_CHAPTERS}章法理导读、机构运行图解、${RIGHTS_COUNT}项公民基本权利与90道关键考点。`,
             )}
           </p>
           <div className="pathway-actions micro">
-            <Link href="/bible/">{tr(lang, "อ่านคู่มือ 10 บท", "Read Guide", "阅读指南")} →</Link>
+            <Link href="/bible/">{tr(lang, `อ่านคู่มือ ${GUIDE_CHAPTERS} บท`, "Read Guide", "阅读指南")} →</Link>
             <Link href="/rights/" className="pulse-link">{tr(lang, "สิทธิพลเมือง", "Civic Rights", "公民权利")}</Link>
           </div>
         </div>
