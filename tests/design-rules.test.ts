@@ -1,91 +1,74 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync, readdirSync, statSync } from "node:fs";
-import path from "node:path";
+import { readFileSync } from "node:fs";
+// @ts-ignore plain ESM helper shared with the release gate
+import { designViolations, designCheck, parseRules } from "../scripts/design-laws.mjs";
 
+const root = process.cwd();
 const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
 const fontsCss = readFileSync(new URL("../public/fonts/fonts.css", import.meta.url), "utf8");
-const homeSrc = readFileSync(new URL("../components/Home.tsx", import.meta.url), "utf8");
-const practiceSrc = readFileSync(new URL("../components/PracticeArena.tsx", import.meta.url), "utf8");
 
-test("no AI-slop fonts are referenced as design typefaces", () => {
-  const bannedFonts = [
-    "Inter",
-    "Poppins",
-    "Montserrat",
-    "Roboto",
-    "Open Sans",
-    "Lato",
-    "DM Sans",
-    "Space Grotesk",
-    "Geist",
-    "Plus Jakarta Sans",
-    "Manrope",
-    "Nunito",
-  ];
-
-  for (const font of bannedFonts) {
-    const re = new RegExp(`font-family:[^;]*["']?${font}["']?`, "i");
-    assert.ok(!re.test(css), `app/globals.css must not use banned font ${font}`);
-    assert.ok(!re.test(fontsCss), `public/fonts/fonts.css must not use banned font ${font}`);
-  }
+test("the stylesheet as it stands obeys every anti-slop law", () => {
+  const { failures } = designCheck(root);
+  assert.deepEqual(failures, [], failures.join("\n"));
 });
 
-test("Bauhaus Universal lookalike font (Jost) and non-looped Thai are enforced", () => {
-  assert.ok(css.includes('"Jost"'), 'app/globals.css must specify "Jost" as primary Latin geometric face');
+test("the detector sees the whole stylesheet, not a sample of it", () => {
+  // Guards the silent failure where the regex stops matching anything and the
+  // suite passes because it found nothing to complain about.
+  const { ruleCount } = designCheck(root);
+  assert.ok(ruleCount > 500, `only parsed ${ruleCount} rules; the parser has stopped seeing the css`);
+  assert.ok(parseRules(css).length === ruleCount, "parseRules and designCheck disagree");
+});
+
+// Each row below is a behaviour the detector must have, not a restatement of
+// the current stylesheet. The previous version of this file asserted its own
+// class names and font choices, so it could only ever prove that nothing had
+// changed since the day it was written.
+const MUST_FAIL = [
+  ["descendant selector", "button { color: red }\n.quiz-bottom button { min-width: 240px; }"],
+  ["bare element selector", "button { min-width: 160px; }"],
+  ["class carrying btn", ".btn-next-q { min-width: 160px; }"],
+  ["link inside a cta", ".hero-cta a { min-width: 220px; }"],
+  ["looped Thai face", "body { font-family: Sarabun, sans-serif; }"],
+  ["AI-slop face", "body { font-family: Inter, sans-serif; }"],
+] as const;
+
+const MUST_PASS = [
+  // A chapter dropdown needs a floor or it collapses to an unreadable sliver.
+  ["select keeps its minimum", ".jump-controls select { min-width: 140px; }"],
+  ["a small minimum is not bloat", ".btn-tiny { min-width: 90px; }"],
+  // Label left, question count right: a contents page, not a chasm.
+  [
+    "list row may use space-between",
+    ".pokklong-steps button { width: 100%; justify-content: space-between; }",
+  ],
+] as const;
+
+for (const [name, snippet] of MUST_FAIL) {
+  test(`detects: ${name}`, () => {
+    const { failures } = designViolations(`p { color: red }\n${snippet}`, { minRules: 0 });
+    assert.ok(failures.length > 0, `slipped through: ${snippet.trim()}`);
+  });
+}
+
+for (const [name, snippet] of MUST_PASS) {
+  test(`allows: ${name}`, () => {
+    const { failures } = designViolations(`p { color: red }\n${snippet}`, { minRules: 0 });
+    assert.deepEqual(failures, [], `false positive on: ${snippet.trim()}`);
+  });
+}
+
+test("an unreadable stylesheet fails instead of passing quietly", () => {
+  const { failures } = designViolations("", { minRules: 25 });
   assert.ok(
-    css.includes('"IBM Plex Sans Thai"'),
-    'app/globals.css must specify "IBM Plex Sans Thai" as non-looped Thai face',
-  );
-  assert.ok(fontsCss.includes("'Jost'"), "public/fonts/fonts.css must declare @font-face for Jost");
-  assert.ok(
-    fontsCss.includes("'IBM Plex Sans Thai'"),
-    "public/fonts/fonts.css must declare @font-face for IBM Plex Sans Thai",
+    failures.some((f) => f.includes("stopped seeing the stylesheet")),
+    "a detector that parsed nothing must not report clean",
   );
 });
 
-test("buttons and action links hug their content without arbitrary bloated min-widths", () => {
-  // Strip CSS comments before testing rules
-  const cleanCss = css.replace(/\/\*[\s\S]*?\*\//g, "");
-
-  // Match any button or anchor selector that sets min-width >= 100px
-  const buttonRules = cleanCss.match(/(\.[a-z0-9_-]*(?:btn|button|cta)[^\{]*\{[^\}]*\})/gi) ?? [];
-  for (const rule of buttonRules) {
-    assert.ok(
-      !/min-width:\s*[0-9]{3}px/i.test(rule),
-      `Button rule has arbitrary fixed min-width: ${rule.slice(0, 100)}`,
-    );
-    assert.ok(
-      !(/width:\s*100%/i.test(rule) && /justify-content:\s*space-between/i.test(rule)),
-      `Button rule stretches 100% with space-between chasm: ${rule.slice(0, 100)}`,
-    );
-  }
-});
-
-test("body paragraphs and prose are constrained to readable A4/A5 measure", () => {
-  // Check that generic p tag has a max-width <= 68ch
-  const pMatch = css.match(/p\s*\{[^}]*max-width:\s*([0-9]+)ch/);
-  assert.ok(pMatch, "globals.css must set max-width in ch on p elements");
-  const chLimit = Number(pMatch[1]);
-  assert.ok(chLimit <= 68 && chLimit >= 45, `p max-width should be 45-68ch (A4/A5 measure), got ${chLimit}ch`);
-});
-
-test("home page uses tiered editorial architecture without equal 4-box card wall", () => {
-  assert.ok(!homeSrc.includes("home-pathways"), "Home.tsx must not use flat home-pathways grid");
-  assert.ok(!homeSrc.includes("pathway-card"), "Home.tsx must not use flat pathway-card components");
-
-  assert.ok(homeSrc.includes("home-anchor"), "Home.tsx must feature home-anchor as dominant Tier 1 focus");
-  assert.ok(homeSrc.includes("home-engines"), "Home.tsx must feature home-engines for Practice & Memory");
-  assert.ok(homeSrc.includes("home-reference"), "Home.tsx must feature home-reference for Study Bible");
-});
-
-test("practice arena ranks exam simulation over secondary tools", () => {
-  assert.ok(
-    practiceSrc.includes("practice-featured-grid"),
-    "PracticeArena.tsx must feature practice-featured-grid for real exam papers",
-  );
-  assert.ok(
-    practiceSrc.includes("practice-featured-card"),
-    "PracticeArena.tsx must use practice-featured-card for prominent simulation focus",
-  );
+test("font faces are declared for the faces the design system uses", () => {
+  assert.ok(fontsCss.includes("IBM Plex Sans Thai"), "the non-looped Thai face must be declared");
+  assert.ok(/src:\s*url\(\/fonts\/jost\.woff2\)/.test(fontsCss), "Jost must be self-hosted, not CDN");
+  assert.ok(!/fonts\.googleapis|fonts\.gstatic/.test(fontsCss), "no third-party font CDN");
 });

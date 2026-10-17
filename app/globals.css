@@ -213,6 +213,11 @@ h3,
 p {
   margin: 0 0 18px;
 }
+/* Long-form prose stops at a readable measure. On a 990px column the
+   constitutional text ran to ~110 characters per line, which is roughly the
+   point where the eye loses the start of the next one. Capping it also leaves
+   the law-text paragraphs in the double-page spread alone: they sit in much
+   narrower columns already, so the cap never binds there. */
 p {
   max-width: 65ch;
 }
