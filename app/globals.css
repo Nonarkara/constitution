@@ -31,7 +31,7 @@
   --art: none;
   --micro: 13px;
   --body: 18px;
-  --display: 36px;
+  --display: 44px;
 }
 /* Mild: warm paper, lower blue light, softer ink — a desk lamp at night. */
 [data-theme="mild"] {
@@ -89,7 +89,7 @@
   --spine: #26241d;
   --spine-line: #3c392f;
   --spine-dark: #545044;
-  --art: brightness(0.78) contrast(0.92);
+  --art: brightness(0.58) contrast(0.96);
 }
 /* High contrast: black on white, heavier rules, links always underlined. */
 [data-theme="contrast"] {
@@ -128,7 +128,7 @@
     --accent-wash: #2a2214; --accent-wash-strong: #4a3714; --focus: #f5b544;
     --ok: #7fd6a3; --ok-line: #3f9a68; --ok-wash: #15271d; --bad: #f49a9a; --bad-line: #d0565a;
     --bad-wash: #2e1817; --hl-org: #5aaed6; --org-wash: #14222b; --spine: #26241d;
-    --spine-line: #3c392f; --spine-dark: #545044; --art: brightness(0.78) contrast(0.92);
+    --spine-line: #3c392f; --spine-dark: #545044; --art: brightness(0.58) contrast(0.96);
   }
 }
 [data-theme="contrast"] main a { text-decoration: underline; text-decoration-thickness: 2px; }
@@ -213,13 +213,14 @@ h3,
 p {
   margin: 0 0 18px;
 }
-/* Long-form prose stops at a readable measure. On a 990px column the
-   constitutional text ran to ~110 characters per line, which is roughly the
-   point where the eye loses the start of the next one. Capping it also leaves
-   the law-text paragraphs in the double-page spread alone: they sit in much
-   narrower columns already, so the cap never binds there. */
+/* Prose stops at A4 measure. Measured on /practice/: 65ch rendered 702px and
+   ran to 81 Thai characters on the long lines, past the 75 ceiling. 58ch lands
+   near 620px, which is the text width of A4 at 11pt. Thai carries more per
+   character than Latin, so the physical measure is what governs, not the count.
+   Narrow columns — the practice cards, the double-page spread — sit well under
+   this, so the cap never binds there and leaves them alone. */
 p {
-  max-width: 65ch;
+  max-width: 58ch;
 }
 h1 {
   font-family: "Jost", "IBM Plex Sans Thai", sans-serif;
@@ -361,6 +362,11 @@ small,
   padding-top: 38px;
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  align-self: start;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 .sidebar nav {
   display: flex;
@@ -382,7 +388,7 @@ small,
   font-weight: 600;
 }
 .sidebar-note {
-  margin-top: 74px;
+  margin-top: auto;
   padding: 20px 10px;
   border-top: 1px solid var(--line);
   color: var(--muted);
@@ -891,7 +897,7 @@ summary {
 html[data-large="true"] {
   --body: 22px;
   --micro: 16px;
-  --display: 40px;
+  --display: 48px;
 }
 @media (min-width: 1200px) {
   .app-grid:has(.legal-reader) {
@@ -1214,17 +1220,33 @@ html[data-large="true"] {
   width: 100%;
   height: auto;
 }
+/* The plate used to be absolutely positioned in the top-right corner while the
+   h1 reserved 185px for it and carried min-height:160px to clear it. That is
+   the orphan block the composition rules ban, and the min-height is the "fixed
+   height leaving empty space under short text" rule. Give the plate a column
+   of its own so nothing floats and nothing reserves space. */
 .intro-copy {
-  position: relative;
-}
-.intro-copy > .study-art {
-  position: absolute;
-  top: 0;
-  right: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  column-gap: 36px;
+  align-items: start;
 }
 .intro-copy > h1 {
-  padding-right: 185px;
-  min-height: 160px;
+  grid-column: 1;
+  grid-row: 1;
+  padding-right: 0;
+  min-height: 0;
+}
+.intro-copy > .study-art {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  position: static;
+  width: 200px;
+}
+.intro-copy > p {
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: 14px;
 }
 .review-intro {
   position: relative;
@@ -1239,13 +1261,15 @@ html[data-large="true"] {
   clear: both;
 }
 @media (max-width: 720px) {
+  .intro-copy {
+    grid-template-columns: minmax(0, 1fr) 104px;
+    column-gap: 16px;
+  }
   .intro-copy > .study-art {
-    width: 120px;
-    top: 0;
+    width: 104px;
   }
   .intro-copy > h1 {
-    padding-right: 126px;
-    min-height: 115px;
+    min-height: 0;
   }
   .review-intro > .study-art {
     width: 120px;
@@ -2350,9 +2374,9 @@ mark.hl.has-note {
 }
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
-  gap: 32px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 40px;
+  align-items: start;
   padding: 24px 0 32px;
   margin-bottom: 0;
   border-bottom: 1px solid var(--line);
@@ -3177,9 +3201,13 @@ mark.hl.has-note {
     width: fit-content;
     max-width: 100%;
   }
+  /* minmax(0, 1fr), not 1fr: a bare 1fr resolves its auto minimum to the
+     item's min-content width, and the chapter-drill <select> carries a
+     50-character option. That pushed this track to 461px inside a 354px
+     column, so the whole phone layout scrolled sideways. */
   .practice-featured-grid,
   .practice-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 /* Ways to practise read as a ruled list, like the chapter route: one row, one choice. */
@@ -3196,7 +3224,7 @@ mark.hl.has-note {
 }
 @media (max-width: 600px) {
   .mode-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
   .mode-card-action {
@@ -3973,7 +4001,7 @@ footer { flex-wrap:wrap; gap:16px; }
 .header .brand { min-height: 44px; }
 .header .brand small { font-size: var(--micro); }
 .sidebar nav .nav-active { background: transparent; }
-.sidebar-note { margin-top: var(--space-4); }
+.sidebar-note { margin-top: auto; }
 .study-strip { margin-bottom: var(--space-2); }
 .civic-shortcuts { margin-bottom: var(--space-4); border-block: 1px solid var(--line); font-size: var(--micro); }
 .where { margin-top: var(--space-2); margin-bottom: var(--space-2); }
