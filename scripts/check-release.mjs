@@ -15,7 +15,12 @@
  *   3. Theme contrast          Each theme's text-on-surface pairs must clear
  *      WCAG AA for their size.
  *   4. Built link integrity    Every internal href in every built page must
- *      resolve to a file that exists, and every sitemap URL must be real.
+ *      resolve to a file that exists, every sitemap URL must be real, and every
+ *      `#fragment` must name an id that is actually on the page it points at.
+ *      The fragment check was added after an audit found 374 same-page anchors
+ *      being skipped outright by an early `continue`: a dead anchor breaks
+ *      nothing, builds green, and is invisible in a screenshot, so nothing else
+ *      would ever catch it.
  *   5. Runtime images          Every image path the browser builds from JS or
  *      data (see scripts/runtime-images.mjs) must exist in public/ and out/.
  *   6. Mangled unicode         No U+FFFD replacement characters in the READMEs
@@ -204,23 +209,93 @@ if (!existsSync(OUT)) {
   const html = files.filter((f) => f.endsWith(".html"));
   const seen = new Map();
   const external = new Set();
+  let fragChecked = 0;
+  let samePageFrag = 0;
+  let crossPageFrag = 0;
+
+  /**
+   * Every id and name in every built page, so a fragment can be checked against
+   * the page it points at. This used to be skipped outright: `href="#..."`
+   * matched the early-continue and 374 fragments were never verified. A dead
+   * anchor is invisible in a screenshot and never breaks a build, which is
+   * exactly why it needs a gate.
+   */
+  const idsByFile = new Map();
+  for (const f of html) {
+    const src = await readFile(f, "utf8");
+    const ids = new Set();
+    for (const m of src.matchAll(/\sid="([^"]+)"/g)) ids.add(m[1]);
+    for (const m of src.matchAll(/\sname="([^"]+)"/g)) ids.add(m[1]);
+    idsByFile.set(f, ids);
+  }
+
+  /**
+   * Resolve a route to what it actually is. Pages are HTML and carry ids that a
+   * fragment can be checked against; assets are not and must not be. The first
+   * attempt of this treated every href as a page and reported 276 failures for
+   * stylesheets and chunks that exist perfectly well.
+   */
+  const resolveTarget = (route) => {
+    const clean = route.split("#")[0].split("?")[0];
+    if (!clean) return { ok: true, file: null, isHtml: false };
+    const p = path.join(OUT, clean);
+    if (existsSync(p) && statSync(p).isDirectory()) {
+      const idx = path.join(p, "index.html");
+      return existsSync(idx) ? { ok: true, file: idx, isHtml: true } : { ok: false, file: null };
+    }
+    if (existsSync(p) && statSync(p).isFile()) return { ok: true, file: p, isHtml: p.endsWith(".html") };
+    if (existsSync(`${p}.html`)) return { ok: true, file: `${p}.html`, isHtml: true };
+    const idx = path.join(p, "index.html");
+    if (existsSync(idx)) return { ok: true, file: idx, isHtml: true };
+    return { ok: false, file: null };
+  };
+
+  const check = (fromRel, href) => {
+    const frag = href.includes("#") ? decodeURIComponent(href.split("#")[1]) : "";
+    const target = resolveTarget(href);
+    if (!target.ok) {
+      seen.set(`${fromRel} -> ${href} does not resolve in out/`, true);
+      return;
+    }
+    if (frag && target.isHtml) {
+      if (!(idsByFile.get(target.file) || new Set()).has(frag)) {
+        seen.set(
+          `${fromRel} -> ${href} points at id="${frag}", which does not exist in ${path.relative(OUT, target.file)}`,
+          true,
+        );
+      }
+    }
+  };
 
   for (const f of html) {
-    const rel = path.relative(OUT, f);
+    const rel = path.relative(OUT, f).split(path.sep).join("/");
     const src = await readFile(f, "utf8");
     for (const m of src.matchAll(/href="([^"]+)"/g)) {
       const href = m[1];
-      if (/^(https?:|mailto:|tel:|data:|#)/.test(href)) {
+      if (/^(https?:|mailto:|tel:|data:)/.test(href)) {
         if (/^https?:/.test(href)) external.add(href);
         continue;
       }
-      if (!href.startsWith("/")) continue; // relative hrefs are not used here
-      if (!exists(href)) {
-        seen.set(`${rel} -> ${href}`, true);
+      if (href.startsWith("#")) {
+        // Same-page fragment.
+        const frag = decodeURIComponent(href.slice(1));
+        if (frag) samePageFrag++;
+        if (frag && !(idsByFile.get(f) || new Set()).has(frag)) {
+          seen.set(`${rel} -> ${href} points at id="${frag}", which is not on this page`, true);
+        }
+        continue;
       }
+      if (href.includes("#")) { fragChecked++; crossPageFrag++; }
+      let route = href;
+      if (!route.startsWith("/")) {
+        // Relative href: resolve against the page's own directory.
+        const base = path.posix.dirname(`/${rel}`);
+        route = path.posix.join(base === "/" ? "/" : base, route);
+      }
+      check(rel, href);
     }
   }
-  for (const [k] of seen) failures.push(`link: ${k} does not resolve in out/`);
+  for (const [k] of seen) failures.push(`link: ${k}`);
 
   // sitemap must only advertise pages that exist
   const smPath = path.join(OUT, "sitemap.xml");
@@ -305,7 +380,10 @@ const { REDIRECT_ROUTES: redirectRoutes } = await import("../lib/nav.ts");
   }
   void advertised;
 
-  notes.push(`pages: ${html.length} html files checked`);
+  notes.push(
+    `pages: ${html.length} html files checked; ${samePageFrag} same-page and ` +
+      `${crossPageFrag} cross-page fragments verified against real ids`,
+  );
 }
 
 // ------------------------------------------------------------ 5. runtime images

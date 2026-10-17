@@ -39,6 +39,11 @@ export function Home() {
 
   const notesCount = useMemo(() => Object.keys(annotations).length, [annotations]);
 
+  // A pulse bar of three zeros and two divider rules tells a first-time visitor
+  // nothing they can act on. Show the counters only once there is something in
+  // them; the notebook link always stays.
+  const showPulse = known.met > 0 || plan.due > 0 || notesCount > 0;
+
   const { target } = plan;
   const guide = GUIDE.find((item) => target.href.endsWith(`/${item.slug}/`));
   const guideIndex = guide ? GUIDE.indexOf(guide) + 1 : 1;
@@ -109,23 +114,30 @@ export function Home() {
         </figure>
       </section>
 
-      {/* Pulse Summary Bar */}
+      {/* Pulse Summary Bar. Rendered as three zeros, two divider rules and a
+          link to a first-time visitor — three counters that can only say zero
+          before anyone has studied. The link is actionable, so it stays; the
+          zeros and the rules they were separated by do not. */}
       <section className="home-pulse" aria-label={tr(lang, "สรุปการเรียนของคุณ", "Your study pulse", "学习概览")}>
-        <div className="pulse-item">
-          <span className="mono pulse-num">{known.met}<b>/279</b></span>
-          <span className="pulse-label micro">{tr(lang, "มาตราที่อ่านแล้ว", "Sections read", "已读法条")}</span>
-        </div>
-        <div className="pulse-divider" aria-hidden="true" />
-        <div className="pulse-item">
-          <span className="mono pulse-num">{plan.due}</span>
-          <span className="pulse-label micro">{tr(lang, "ข้อที่ถึงเวลาทบทวน", "Due for review", "到期复习")}</span>
-        </div>
-        <div className="pulse-divider" aria-hidden="true" />
-        <div className="pulse-item">
-          <span className="mono pulse-num">{notesCount}</span>
-          <span className="pulse-label micro">{tr(lang, "มาตราที่มีบันทึก", "Annotated sections", "笔记条数")}</span>
-        </div>
-        <div className="pulse-divider" aria-hidden="true" />
+        {showPulse && (
+          <>
+            <div className="pulse-item">
+              <span className="mono pulse-num">{known.met}<b>/279</b></span>
+              <span className="pulse-label micro">{tr(lang, "มาตราที่อ่านแล้ว", "Sections read", "已读法条")}</span>
+            </div>
+            <div className="pulse-divider" aria-hidden="true" />
+            <div className="pulse-item">
+              <span className="mono pulse-num">{plan.due}</span>
+              <span className="pulse-label micro">{tr(lang, "ข้อที่ถึงเวลาทบทวน", "Due for review", "到期复习")}</span>
+            </div>
+            <div className="pulse-divider" aria-hidden="true" />
+            <div className="pulse-item">
+              <span className="mono pulse-num">{notesCount}</span>
+              <span className="pulse-label micro">{tr(lang, "มาตราที่มีบันทึก", "Annotated sections", "笔记条数")}</span>
+            </div>
+            <div className="pulse-divider" aria-hidden="true" />
+          </>
+        )}
         <div className="pulse-item">
           <Link href="/notebook/" className="pulse-link micro">
             {tr(lang, "เปิดสมุดคู่หน้า", "Open Notebook", "打开双页")} →
