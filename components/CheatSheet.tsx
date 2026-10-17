@@ -441,9 +441,6 @@ export function CheatSheet() {
     <div className="cheatsheet-page">
       
       <section className="intro">
-        <div className="intro-index mono" aria-hidden="true">
-          §
-        </div>
         <div className="intro-copy">
           <StudyArt scene="review" />
           <h1>

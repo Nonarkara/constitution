@@ -423,20 +423,19 @@ main {
 }
 .intro {
   display: grid;
-  grid-template-columns: 90px 1fr;
+  /* One column. This was `90px 1fr` to make room for the .intro-index box that
+     no longer exists — and leaving the column behind is worse than leaving the
+     box: the single remaining child landed in the 90px track and the page
+     rendered as overlapping columns. Removing a grid child does not remove its
+     track. */
+  grid-template-columns: 1fr;
   gap: 24px;
   padding-bottom: 34px;
 }
-.intro-index {
-  font-size: var(--display);
-  color: var(--muted);
-  width: 84px;
-  height: 84px;
-  border: 1px solid var(--line);
-  display: grid;
-  place-items: center;
-  margin-top: 22px;
-}
+/* Removed: .intro-index — an 84x84 bordered box holding one decorative glyph
+   ("ก" on flashcards, "§" on cheatsheet). aria-hidden, meaning nothing to any
+   reader, and it read as a broken image placeholder that also stole the width
+   the headline needed. Rule 5: if removing it loses no meaning, remove it. */
 .intro h1 {
   margin-top: 14px;
 }
@@ -1026,9 +1025,6 @@ html[data-large="true"] {
   .intro {
     grid-template-columns: 1fr;
     gap: 0;
-  }
-  .intro-index {
-    display: none;
   }
   .intro h1 {
     margin-top: 0;
@@ -2745,7 +2741,9 @@ mark.hl.has-note {
 .exam-paper-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* space-between stretched three short lines across 127px and opened a hole
+     under the title. The grid already stretches cards in a row to match. */
+  justify-content: flex-start;
   align-items: stretch;
   padding: 14px 16px;
   text-align: left;
@@ -2762,6 +2760,12 @@ mark.hl.has-note {
 .exam-paper-card.primary {
   border-left: 4px solid var(--accent);
   background: var(--wash);
+  /* The global .primary utility sets color: var(--accent-ink) for text that sits
+     ON an amber background. This card paints --wash instead, so the inherited
+     amber-ink became near-black on near-black: measured rgb(21,20,15) on
+     rgb(31,29,23), 1.03:1 — the featured card was the least legible thing on
+     the page. Token bleed: re-assert the ink. */
+  color: var(--ink);
 }
 .paper-card-top {
   display: flex;
@@ -2775,12 +2779,13 @@ mark.hl.has-note {
   font-weight: 700;
   color: var(--muted);
 }
+/* Was an amber-bordered badge on every one of the six cards — the accent then
+   meant nothing, because it was everywhere. Now plain text, so the amber
+   left-rule on the featured paper is the only accent in the row. */
 .paper-card-time {
   font-size: var(--micro);
-  background: var(--accent-wash);
-  color: var(--accent-deep);
-  border: 1px solid var(--accent);
-  padding: 1px 6px;
+  color: var(--muted);
+  padding: 0;
 }
 .paper-card-title {
   font-weight: 600;

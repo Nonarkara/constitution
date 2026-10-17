@@ -171,9 +171,6 @@ export function Flashcards() {
     <div className="flashcards-page">
 
       <header className="intro">
-        <div className="intro-index mono" aria-hidden="true">
-          ก
-        </div>
         <div className="intro-copy">
           <StudyArt scene="listening" compact />
           <h1>
@@ -331,7 +328,7 @@ export function Flashcards() {
           >
             <div className="flashcard-inner">
               {/* CARD FRONT */}
-              <div className="flashcard-face card-front">
+              <div className="flashcard-face card-front" aria-hidden={isFlipped}>
                 <div className="card-top-row">
                   <span className="mono card-ch-tag">
                     {cardChapter?.number === 17
@@ -357,7 +354,11 @@ export function Flashcards() {
               </div>
 
               {/* CARD BACK */}
-              <div className="flashcard-face card-back">
+              {/* backface-visibility only hides pixels, not the accessibility
+                  tree, so without this a screen reader reads the answer before
+                  the card is ever flipped — which is the one thing this page
+                  exists to prevent ("นึกก่อน แล้วค่อยพลิก"). */}
+              <div className="flashcard-face card-back" aria-hidden={!isFlipped}>
                 <div className="card-top-row">
                   <span className="mono card-ch-tag font-bold">
                     REVEALED · {cardChapter?.title[lang]}

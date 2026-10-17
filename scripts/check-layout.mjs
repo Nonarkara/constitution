@@ -38,7 +38,7 @@
  */
 import { createServer } from "node:http";
 import { readdir } from "node:fs/promises";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, rmSync } from "node:fs";
 import { execFile } from "node:child_process";
 import { tmpdir } from "node:os";
 import path from "node:path";
@@ -269,6 +269,26 @@ const port = await new Promise((resolve) => {
 });
 const prof = `${tmpdir()}/layoutgate-${process.pid}-${Date.now()}`;
 
+/**
+ * Chrome is not reliably reaped by execFile: killing the direct child leaves its
+ * helper processes behind, and a profile directory behind that. Repeated gate
+ * runs then stack up — measured at 380 orphaned Chrome processes and a load
+ * average above 100, which made later runs so slow they looked hung. Clean the
+ * profile on every exit path.
+ */
+let cleaned = false;
+function cleanup() {
+  if (cleaned) return;
+  cleaned = true;
+  try {
+    rmSync(prof, { recursive: true, force: true });
+  } catch {
+    /* best effort; a stray profile must never fail the gate */
+  }
+}
+process.on("exit", cleanup);
+for (const sig of ["SIGINT", "SIGTERM"]) process.on(sig, () => { cleanup(); process.exit(130); });
+
 let dom = "";
 try {
   dom = await new Promise((resolve, reject) => {
@@ -286,16 +306,18 @@ try {
         "--dump-dom",
         `http://127.0.0.1:${port}/_layout-probe?r=${encodeURIComponent(JSON.stringify(routes))}`,
       ],
-      { maxBuffer: 128 * 1024 * 1024, timeout: 300000 },
+      { maxBuffer: 128 * 1024 * 1024, timeout: 300000, killSignal: "SIGKILL" },
       (err, stdout) => (err ? reject(new Error(err.message)) : resolve(stdout)),
     );
   });
 } catch (e) {
   server.close();
+  cleanup();
   console.error(`\nFAIL — layout gate could not measure: Chrome failed (${e.message}).\n`);
   process.exit(1);
 }
 server.close();
+cleanup();
 
 const m = /RESULTS:(\[.*?\])(?:<\/pre>|$)/s.exec(dom);
 const harnessError = /RESULTS:ERROR:([\s\S]*?)(?:<\/pre>|$)/.exec(dom);

@@ -32,6 +32,32 @@ const MIN_WIDTH_TARGET = /(^|[\s>+~,])(?:button|a)\b|\b[\w-]*(?:btn|button|cta|a
  */
 const SPACE_BETWEEN_TARGET = /(^|[\s>+~,])button\b|\b[\w-]*btn[\w-]*\b/i;
 
+/**
+ * Token bleed: a broad utility class whose whole job is "this thing IS amber"
+ * sets color to the on-amber ink. Anything that borrows the class and repaints
+ * the background inherits a colour that was chosen for the surface it just
+ * replaced.
+ *
+ * This is not hypothetical. `.exam-paper-card.primary` borrowed `.primary`,
+ * overrode background to --wash, and left color: var(--accent-ink) behind —
+ * rgb(21,20,15) text on rgb(31,29,23) paper, measured at 1.09:1. The featured
+ * mock paper was the least readable thing on the page, and every token-level
+ * check passed, because each token was correct on its own.
+ *
+ * The rule is therefore about the PAIR, not the token: if you match a
+ * paint-carrying utility and change the background, you must re-assert the
+ * colour too. Static and deterministic on purpose — the browser-measured
+ * version of this check was tried first and abandoned, because switching
+ * themes by attribute races the page's own script and produced 187 false
+ * positives on one run and 0 on the next for the identical build.
+ */
+// Matches the class token anywhere in the selector, including compound
+// selectors like `.exam-paper-card.primary` — where `.primary` is preceded by
+// the "d" of "card", not by a combinator. Two earlier versions of this regex
+// required a leading separator and therefore matched nothing at all, which is
+// why it has to be falsified before it is believed.
+const PAINT_UTILITY = /\.primary(?![\w-])/i;
+
 /** Fonts that make every product look like the same product. */
 export const SLOP_FONTS = [
   "Inter",
@@ -96,6 +122,17 @@ export function designViolations(css, { minRules = 25 } = {}) {
   }
 
   for (const rule of rules) {
+    if (
+      PAINT_UTILITY.test(rule.selector) &&
+      /\bbackground(?:-color)?\s*:/i.test(rule.body) &&
+      !/\bcolor\s*:/i.test(rule.body)
+    ) {
+      failures.push(
+        `design: "${rule.selector}" borrows the .primary utility and repaints the ` +
+          `background without re-asserting color — it inherits color: var(--accent-ink), ` +
+          `which was chosen for the amber surface it just replaced`,
+      );
+    }
     if (MIN_WIDTH_TARGET.test(rule.selector)) {
       const fixed = rule.body.match(/min-width:\s*(\d+)px/i);
       if (fixed && Number(fixed[1]) >= 100) {
