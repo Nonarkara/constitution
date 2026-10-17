@@ -213,12 +213,15 @@ h3,
 p {
   margin: 0 0 18px;
 }
-/* Prose stops at A4 measure. Measured on /practice/: 65ch rendered 702px and
-   ran to 81 Thai characters on the long lines, past the 75 ceiling. 58ch lands
-   near 620px, which is the text width of A4 at 11pt. Thai carries more per
-   character than Latin, so the physical measure is what governs, not the count.
-   Narrow columns — the practice cards, the double-page spread — sit well under
-   this, so the cap never binds there and leaves them alone. */
+/* Prose stops at A4 measure. Measured on /practice/ at 1440, --body 18px:
+   65ch rendered 702px = 39.0em and ran to 94 Thai characters on the longest
+   line; 58ch renders 626px = 34.8em and 82 characters. So this narrows the
+   measure rather than fixing an overflow — it lands mid-band instead of near
+   the top of it. Counting characters is the wrong metric for Thai anyway;
+   the physical em width is what governs.
+   The cap only binds above ~1200px. Below that the prose column is set by the
+   page grid and is already narrow — 512px at 1024, 209px at 721 before the
+   plate became responsive — so this leaves narrow layouts alone. */
 p {
   max-width: 58ch;
 }
@@ -362,11 +365,19 @@ small,
   padding-top: 38px;
   display: flex;
   flex-direction: column;
-  position: sticky;
-  top: 0;
+  /* The rail is as tall as its content. Stretched to the viewport it was
+     mostly dead space, which is what the owner called "70% empty for no
+     reason". */
   align-self: start;
-  max-height: 100vh;
-  overflow-y: auto;
+}
+/* Sticky only once the rail is a real column. Below 721px .app-grid is
+   display:block, the nav becomes a transparent horizontal strip with no
+   z-index, and a sticky strip pins over the page's own primary CTA. */
+@media (min-width: 721px) {
+  .sidebar {
+    position: sticky;
+    top: 0;
+  }
 }
 .sidebar nav {
   display: flex;
@@ -388,7 +399,11 @@ small,
   font-weight: 600;
 }
 .sidebar-note {
-  margin-top: auto;
+  /* Not `auto`: auto margins only distribute *free* space, and align-self:start
+     above leaves none, so `auto` silently resolved to 0 and welded the note to
+     the last nav item. A real gap, sized for a compact rail — the old 74px
+     was tuned for the tall stretched version and reads as a hole now. */
+  margin-top: 28px;
   padding: 20px 10px;
   border-top: 1px solid var(--line);
   color: var(--muted);
@@ -1225,10 +1240,14 @@ html[data-large="true"] {
    the orphan block the composition rules ban, and the min-height is the "fixed
    height leaving empty space under short text" rule. Give the plate a column
    of its own so nothing floats and nothing reserves space. */
+/* The plate column scales instead of stepping. It used to be a flat 200px
+   above 720px and 104px below, so crossing 721px by a single pixel widened the
+   viewport, shrank the text column from 564px to 209px, and broke the 44px
+   headline across four ragged lines. clamp() keeps one rule and no cliff. */
 .intro-copy {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 200px;
-  column-gap: 36px;
+  grid-template-columns: minmax(0, 1fr) clamp(104px, 18vw, 200px);
+  column-gap: clamp(16px, 3vw, 36px);
   align-items: start;
 }
 .intro-copy > h1 {
@@ -1261,10 +1280,6 @@ html[data-large="true"] {
   clear: both;
 }
 @media (max-width: 720px) {
-  .intro-copy {
-    grid-template-columns: minmax(0, 1fr) 104px;
-    column-gap: 16px;
-  }
   .intro-copy > .study-art {
     width: 104px;
   }
@@ -2637,7 +2652,7 @@ mark.hl.has-note {
   margin: 0;
   color: var(--muted);
   line-height: 1.5;
-  max-width: 65ch;
+  max-width: 58ch;
 }
 .reference-nav {
   display: flex;
@@ -4001,7 +4016,7 @@ footer { flex-wrap:wrap; gap:16px; }
 .header .brand { min-height: 44px; }
 .header .brand small { font-size: var(--micro); }
 .sidebar nav .nav-active { background: transparent; }
-.sidebar-note { margin-top: auto; }
+.sidebar-note { margin-top: 28px; }
 .study-strip { margin-bottom: var(--space-2); }
 .civic-shortcuts { margin-bottom: var(--space-4); border-block: 1px solid var(--line); font-size: var(--micro); }
 .where { margin-top: var(--space-2); margin-bottom: var(--space-2); }

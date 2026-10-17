@@ -27,6 +27,14 @@
  *      SKIPPED loudly and never claims a pass.
  *   2. No hand-picked route list. It walks `out/` and measures everything it
  *      finds, so a new route cannot quietly escape the gate.
+ *
+ * KNOWN LIMIT, stated rather than hidden: this detects overflow, not broken
+ * composition. A page can measure perfectly while looking wrong — a starved
+ * text column is `over = 0`. It also cannot see content clipped by an
+ * intermediate `overflow-x: hidden` wrapper, because a scroll container between
+ * root and content hides the overflow from documentElement.scrollWidth
+ * (root-level clipping does not, which is the common case). Neither is
+ * something a release gate can decide; both need eyes on the render.
  */
 import { createServer } from "node:http";
 import { readdir } from "node:fs/promises";
@@ -38,9 +46,17 @@ import path from "node:path";
 const ROOT = process.cwd();
 const OUT = path.join(ROOT, "out");
 
+// 721 and 860 are here on purpose. They are the two widths where this
+// stylesheet flips from its phone layout to its rail layout, and where a
+// 200px plate used to starve the text column to 209px. A gate that only tests
+// 390/768/1440 walks straight past the discontinuity: 768 and 1024 both looked
+// acceptable, so the composition broke in the gap between them without anyone
+// noticing. Round breakpoints are not where a layout breaks.
 const WIDTHS = [
   { w: 390, h: 900, label: "phone" },
-  { w: 768, h: 1000, label: "tablet" },
+  { w: 721, h: 900, label: "rail-start" },
+  { w: 860, h: 900, label: "mid-rail" },
+  { w: 1024, h: 1000, label: "tablet" },
   { w: 1440, h: 1000, label: "desktop" },
 ];
 
@@ -199,7 +215,14 @@ run();
 </script>`;
 
 const server = createServer((req, res) => {
-  const url = decodeURIComponent((req.url || "/").split("?")[0]);
+  // Normalise before touching the filesystem. `path.join` collapses "..", so
+  // an un-normalised url let /../package.json read outside out/.
+  const raw = decodeURIComponent((req.url || "/").split("?")[0]);
+  const url = path.posix.normalize(raw).replace(/\/+$/, "") || "/";
+  if (url.includes("..")) {
+    res.writeHead(400);
+    return res.end("bad path");
+  }
   if (url === "/_layout-probe") {
     res.writeHead(200, { "content-type": MIME[".html"] });
     return res.end(HARNESS.replace("__WIDTHS__", JSON.stringify(WIDTHS)));
