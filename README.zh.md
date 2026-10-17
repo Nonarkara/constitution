@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/illustrations/hero.webp" alt="蒙德里安与包豪斯风格的几何构图，融入日本传统麻叶纹与青海波纹样，以及一个正在阅读的小漫画人物" width="100%" />
+<img src="public/illustrations/reading-pastel.webp" alt="蜡笔柔色插画：Tikky与小鸡Pokklong在书桌前学习泰国宪法并做笔记" width="480" />
 
 # 宪法，按我真正想学的方式来学
 

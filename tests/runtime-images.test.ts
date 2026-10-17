@@ -7,7 +7,7 @@ import path from 'node:path';
 import { checkRuntimeImages } from '../scripts/runtime-images.mjs';
 
 const root = process.cwd();
-const every = ['hero','civic-palace-pastel','reading-pastel','listening-pastel','review-pastel','palace-1','palace-2','palace-3','palace-4'].map((n) => `/illustrations/${n}.webp`);
+const every = ['civic-palace-pastel','reading-pastel','listening-pastel','review-pastel','palace-1','palace-2','palace-3','palace-4'].map((n) => `/illustrations/${n}.webp`);
 
 test('every illustration used at runtime is found, including ones built from templates', () => {
  const { refs, failures } = checkRuntimeImages(root, { out: '__no_out__' });

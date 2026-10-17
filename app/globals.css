@@ -2339,55 +2339,62 @@ mark.hl.has-note {
 }
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
+  grid-template-columns: minmax(0, 1fr) 260px;
   gap: 32px;
   align-items: center;
-  padding: 20px 0 28px;
+  padding: 24px 0 32px;
   margin-bottom: 0;
   border-bottom: 1px solid var(--line);
+}
+.hero-copy {
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 600px;
 }
 .hero-art {
   margin: 0;
   grid-column: 2;
   grid-row: 1;
 }
-.hero-copy { grid-column: 1; grid-row: 1; }
 .hero-art img {
   display: block;
   width: 100%;
   height: auto;
-}
-/* The hero is a wide De Stijl / Bauhaus band, so it spans the measure instead of
-   sitting in the 280px column it inherited from the square pastel illustration. */
-.hero-art {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  margin: 8px 0 0;
-}
-.hero-copy {
-  grid-column: 1 / -1;
-  grid-row: 1;
-  max-width: 640px;
+  aspect-ratio: 1;
+  object-fit: contain;
 }
 .hero-copy h1 {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
 }
 .hero-copy p {
-  max-width: 520px;
+  max-width: 540px;
+}
+.hero-action-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
 }
 .hero-cta {
-  display: flex;
-  width: 100%;
-  max-width: 360px;
-  padding: 12px 18px;
+  display: inline-flex;
+  width: auto;
+  min-width: 220px;
+  max-width: 100%;
+  padding: 12px 20px;
   text-align: left;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
+  font-weight: 600;
 }
 .hero-cta > span:first-child {
   display: flex;
   flex-direction: column;
   gap: 2px;
+}
+.hero-reason {
+  margin: 0;
+  color: var(--muted);
 }
 .route-number {
   border-color: var(--line);
@@ -2396,6 +2403,105 @@ mark.hl.has-note {
 .chapter-actions button {
   border: 0;
   padding: 0 8px;
+  font-weight: 600;
+}
+/* Home Study Pulse Bar */
+.home-pulse {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.pulse-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.pulse-num {
+  font-size: var(--body);
+  font-weight: 700;
+  color: var(--ink);
+}
+.pulse-num b {
+  font-size: var(--micro);
+  font-weight: 400;
+  color: var(--muted);
+}
+.pulse-label {
+  color: var(--muted);
+}
+.pulse-divider {
+  width: 1px;
+  height: 16px;
+  background: var(--line);
+}
+.pulse-link {
+  font-weight: 600;
+  color: var(--ink);
+}
+.pulse-link:hover {
+  color: var(--accent-deep);
+}
+
+/* Home Pathways Grid */
+.home-pathways {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 28px 0 16px;
+}
+.pathway-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  padding: 18px 20px;
+  background: var(--paper);
+  transition: border-color 140ms ease, background 140ms ease;
+}
+.pathway-card:hover {
+  border-color: var(--edge);
+  background: var(--wash);
+}
+.pathway-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.pathway-tag {
+  font-size: var(--micro);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent-deep);
+}
+.pathway-card h3 {
+  margin: 0 0 8px;
+  font-size: var(--body);
+}
+.pathway-card h3 a {
+  text-decoration: none;
+  color: var(--ink);
+}
+.pathway-card h3 a:hover {
+  text-decoration: underline;
+}
+.pathway-card p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.5;
+  flex-grow: 1;
+}
+.pathway-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.pathway-actions a {
   font-weight: 600;
 }
 @media (max-width: 1100px) {
@@ -2409,7 +2515,7 @@ mark.hl.has-note {
     display: block;
   }
   .hero {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) 100px;
     gap: 12px;
     padding-bottom: 24px;
     margin-bottom: 0;
@@ -2417,17 +2523,23 @@ mark.hl.has-note {
   .hero-art {
     align-self: start;
     margin: 0;
-    grid-column: 1 / -1;
-    grid-row: 2;
+    grid-column: 2;
+    grid-row: 1;
   }
-  /* the old rule forced a 1:1 box for the square pastel illustration; the hero
-     is a wide band and must keep its own proportions or it is letterboxed */
   .hero-art img {
-    aspect-ratio: auto;
-    object-fit: fill;
+    aspect-ratio: 1;
+    object-fit: contain;
   }
   .hero-cta {
     max-width: none;
+    width: 100%;
+  }
+  .home-pathways {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .pulse-divider {
+    display: none;
   }
 }
 .hero-cta + .micro {
@@ -2733,6 +2845,152 @@ mark.hl.has-note {
 }
 .subnav-pill[aria-current="page"] {
   font-weight: 600;
+}
+/* Practice Hub */
+.practice-hub {
+  margin: 24px 0 40px;
+}
+.practice-hero-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--accent-wash);
+  border: 1px solid var(--accent);
+  border-left: 4px solid var(--accent);
+  padding: 24px 28px;
+  margin-bottom: 28px;
+}
+.practice-hero-info {
+  max-width: 540px;
+}
+.practice-tag {
+  display: inline-block;
+  font-size: var(--micro);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent-deep);
+  margin-bottom: 6px;
+}
+.practice-hero-info h2 {
+  margin: 0 0 8px;
+  font-size: var(--body);
+}
+.practice-hero-info p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.practice-start-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.practice-mode-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  padding: 16px 18px;
+  background: var(--paper);
+  transition: border-color 120ms ease, background 120ms ease;
+}
+.practice-mode-card:hover {
+  border-color: var(--edge);
+  background: var(--wash);
+}
+.mode-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.practice-mode-card h3 {
+  margin: 0 0 6px;
+  font-size: var(--body);
+}
+.practice-mode-card h3 a {
+  text-decoration: none;
+  color: var(--ink);
+}
+.practice-mode-card h3 a:hover {
+  text-decoration: underline;
+}
+.practice-mode-card p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.5;
+  flex-grow: 1;
+}
+.mode-card-link {
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.mode-card-link:hover {
+  color: var(--accent-deep);
+  text-decoration: underline;
+}
+.chapter-drill-action {
+  display: flex;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.chapter-drill-action select {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 8px;
+  font-size: var(--micro);
+  background: var(--wash);
+  border: 1px solid var(--line);
+}
+.chapter-drill-action button {
+  padding: 6px 14px;
+  font-size: var(--micro);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.card-dual-links {
+  display: flex;
+  gap: 16px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.card-dual-links a {
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+}
+.card-dual-links a:hover {
+  color: var(--accent-deep);
+  text-decoration: underline;
+}
+@media (max-width: 720px) {
+  .practice-hero-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 18px 20px;
+    gap: 16px;
+  }
+  .practice-start-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .practice-grid {
+    grid-template-columns: 1fr;
+  }
 }
 /* Ways to practise read as a ruled list, like the chapter route: one row, one choice. */
 .mode-card {
@@ -3551,11 +3809,8 @@ footer { flex-wrap:wrap; gap:16px; }
   main { padding-top: var(--space-1); }
   .study-strip { gap: 0 var(--space-2); padding-bottom: var(--space-1); border-bottom: 1px solid var(--line); }
   .hero { position: relative; display: block; padding-top: var(--space-3); }
-  /* this used to float a 100px thumbnail in the top-right corner and pad the
-     h1 around it, which suited the square pastel illustration. The hero is a
-     full-width band now, so it just stacks under the copy like the desktop. */
-  .hero-art { position: static; width: auto; margin-top: var(--space-2); }
-  .hero-copy h1 { margin-bottom: var(--space-3); }
+  .hero-art { position: absolute; right: 0; top: var(--space-3); width: 100px; }
+  .hero-copy h1 { padding-right: 104px; margin-bottom: var(--space-3); }
   .hero-copy p { max-width: none; }
   .hero-cta { max-width: none; }
   .hero-cta + .micro { margin-bottom: 0; }

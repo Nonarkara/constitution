@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/illustrations/hero.webp" alt="Geometric composition in the style of Mondrian and Bauhaus, with traditional Japanese asanoha and seigaiha patterns and a small manga figure reading" width="100%" />
+<img src="public/illustrations/reading-pastel.webp" alt="Pastel crayon illustration of Tikky and Pokklong the chick studying the Thai Constitution at a study desk" width="480" />
 
 # The Constitution, the way I actually wanted to learn it
 
