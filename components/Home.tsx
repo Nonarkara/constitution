@@ -122,7 +122,7 @@ export function Home() {
         <section className="home-pulse" aria-label={tr(lang, "สรุปการเรียนของคุณ", "Your study pulse", "学习概览")}>
           <div className="pulse-item">
             <span className="mono pulse-num">{known.met}<b>/279</b></span>
-            <span className="pulse-label micro">{tr(lang, "มาตราที่อ่านแล้ว", "Sections read", "已读法条")}</span>
+            <span className="pulse-label micro">{tr(lang, "มาตราที่เริ่มเรียนแล้ว", "Sections explored", "已接触的法条")}</span>
           </div>
           <div className="pulse-divider" aria-hidden="true" />
           <div className="pulse-item">

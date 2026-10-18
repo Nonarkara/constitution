@@ -10,8 +10,7 @@ import { choiceLetter, fisherYates } from "@/lib/shuffle";
 import { preparePracticeQuestion, practiceSessionScore } from "@/lib/practice-session";
 import { tr, sectionLabel, chapterPickerLabel } from "@/lib/i18n";
 import { buildPracticeQueue } from "@/lib/adaptive";
-import { buildMixedSession } from "@/lib/mixed";
-import { makeDrill } from "@/lib/drills";
+import { buildMixedSession, buildSectionSession } from "@/lib/mixed";
 import dynamic from "next/dynamic";
 import { TeachingSteps } from "./TeachingSteps";
 import { ExplainBack } from "./LearningCoach";
@@ -103,9 +102,7 @@ function ConstitutionArena() {
   const startMixed = () => begin(buildMixedSession(questions, progress, Date.now()), "weak");
 
   const startSectionDrill = (section: number) => {
-    const own = fisherYates(questions.filter((question) => question.sections.includes(section))).slice(0, 4);
-    const drills = [0, 1, 2].map((index) => makeDrill((section * 17 + index) % 4230));
-    begin([...own, ...drills].slice(0, 5), "weak");
+    begin(buildSectionSession(questions, section), "weak");
   };
 
   const openFromQuery = (session: string | null, check: number, section: number) => {

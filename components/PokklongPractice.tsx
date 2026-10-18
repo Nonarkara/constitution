@@ -32,6 +32,7 @@ type Phase = "home" | "intro" | "question" | "done";
 export function PokklongPractice() {
   const { lang } = useStudy();
   const [progress, setProgress] = useState<PokklongProgress>({ answers: {} });
+  const [storageError, setStorageError] = useState(false);
   const [phase, setPhase] = useState<Phase>("home");
   const [startStep, setStartStep] = useState(1);
   const [queue, setQueue] = useState<PokklongQuestion[]>([]);
@@ -44,9 +45,9 @@ export function PokklongPractice() {
   useHidePageNext(phase === "intro" || phase === "question");
 
   useEffect(() => {
-    setProgress(loadPokklongProgress());
+    setProgress(loadPokklongProgress(() => setStorageError(true)));
     // Another tab answered: adopt its record instead of overwriting it on the next answer.
-    const sync = (e: StorageEvent) => e.key === POKKLONG_KEY && setProgress(loadPokklongProgress());
+    const sync = (e: StorageEvent) => e.key === POKKLONG_KEY && setProgress(loadPokklongProgress(() => setStorageError(true)));
     window.addEventListener("storage", sync);
     return () => window.removeEventListener("storage", sync);
   }, []);
@@ -77,11 +78,9 @@ export function PokklongPractice() {
     setRunAnswered((n) => n + 1);
     if (correct) setRunCorrect((n) => n + 1);
     // Save only a real answer; opening the page never writes, so nothing unreadable is overwritten.
-    setProgress((prev) => {
-      const next = recordPokklong(prev, current.id, correct);
-      savePokklongProgress(next);
-      return next;
-    });
+    const next = recordPokklong(progress, current.id, correct);
+    setStorageError(!savePokklongProgress(next));
+    setProgress(next);
   };
 
   const goNext = () => {
@@ -102,6 +101,14 @@ export function PokklongPractice() {
   return (
     <div className="practice-arena pokklong-session">
       <PracticeTabs />
+      {storageError && (
+        <p className="notice" role="status">
+          {tr(lang,
+            "เบราว์เซอร์บันทึกคำตอบไม่ได้ ยังฝึกต่อได้ แต่ความก้าวหน้าครั้งนี้อาจหายเมื่อออกจากหน้า",
+            "This browser could not save your answers. You can keep practising, but this session’s progress may be lost when you leave.",
+            "此浏览器无法保存答案。你仍可继续练习，但离开页面后，本次进度可能会丢失。")}
+        </p>
+      )}
       {phase === "home" && (
         <Home
           lang={lang}

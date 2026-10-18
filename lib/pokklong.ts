@@ -156,9 +156,15 @@ export function stepAccuracy(
 }
 
 /** Read saved answers. Anything unreadable, or any entry the parser drops, is kept as a backup copy. */
-export function loadPokklongProgress(): PokklongProgress {
-  if (typeof localStorage === "undefined") return emptyPokklong();
-  const raw = localStorage.getItem(POKKLONG_KEY);
+export function loadPokklongProgress(onStorageError?: () => void): PokklongProgress {
+  let raw: string | null;
+  try {
+    if (typeof localStorage === "undefined") return emptyPokklong();
+    raw = localStorage.getItem(POKKLONG_KEY);
+  } catch {
+    onStorageError?.();
+    return emptyPokklong();
+  }
   if (!raw) return emptyPokklong();
   let parsed: PokklongProgress | null = null;
   let kept = 0;
@@ -175,8 +181,8 @@ export function loadPokklongProgress(): PokklongProgress {
 }
 
 export function savePokklongProgress(progress: PokklongProgress): boolean {
-  if (typeof localStorage === "undefined") return false;
   try {
+    if (typeof localStorage === "undefined") return false;
     localStorage.setItem(POKKLONG_KEY, JSON.stringify(progress));
     return true;
   } catch {

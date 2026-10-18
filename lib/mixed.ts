@@ -1,6 +1,6 @@
 import { dueQuestions, type Progress, type Question } from "./learning.ts";
 import { fisherYates } from "./shuffle.ts";
-import { makeDrill } from "./drills.ts";
+import { DRILL_COUNT, makeDrill } from "./drills.ts";
 
 function openingForNewLearner(allQuestions: Question[]): Question[] {
   const concepts = fisherYates(
@@ -34,4 +34,21 @@ export function buildMixedSession(allQuestions: Question[], progress: Progress, 
     if (out.length === 12) break;
   }
   return out;
+}
+
+
+/** Repair a section using only questions that actually cite it. */
+export function buildSectionSession(allQuestions: Question[], section: number): Question[] {
+  if (!Number.isInteger(section) || section < 1 || section > 279) return [];
+  const own = fisherYates(allQuestions.filter(question => question.sections.includes(section))).slice(0, 5);
+  if (own.length === 5) return own;
+  const seen = new Set(own.map(question => question.id));
+  for (const index of fisherYates(Array.from({ length: DRILL_COUNT }, (_, i) => i))) {
+    const drill = makeDrill(index);
+    if (!drill.sections.includes(section) || seen.has(drill.id)) continue;
+    own.push(drill);
+    seen.add(drill.id);
+    if (own.length === 5) break;
+  }
+  return own;
 }
