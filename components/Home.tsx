@@ -138,11 +138,6 @@ export function Home() {
             <div className="pulse-divider" aria-hidden="true" />
           </>
         )}
-        <div className="pulse-item">
-          <Link href="/notebook/" className="pulse-link micro">
-            {tr(lang, "เปิดสมุดคู่หน้า", "Open Notebook", "打开双页")} →
-          </Link>
-        </div>
       </section>
 
       {/* Editorial Learning Architecture: One Dominant Anchor + Two Engines + Reference Shelf */}
@@ -150,15 +145,13 @@ export function Home() {
         {/* Tier 1: Dominant Anchor - Double-Page Notebook */}
         <div className="home-anchor">
           <div className="anchor-badge mono">
-            <span className="anchor-tag">{tr(lang, "แกนหลักการเรียน", "PRIMARY STUDY DESK", "核心研读台")}</span>
-            <span className="bullet" aria-hidden="true">·</span>
             <span className="text-muted">279 {tr(lang, "มาตรา", "sections", "条")}</span>
           </div>
           <div className="anchor-content">
             <div className="anchor-copy">
               <h2>
                 <Link href="/notebook/">
-                  {tr(lang, "สมุดคู่หน้า 279 มาตรา", "Double-Page Notebook", "双页开本宪法全书")}
+                  {tr(lang, "สมุดสองหน้า", "The two-page notebook", "双页笔记本")}
                 </Link>
               </h2>
               <p>
@@ -174,8 +167,8 @@ export function Home() {
                 <Link href="/notebook/">
                   {tr(lang, "เปิดสมุดสองหน้า", "Open the notebook", "打开双页笔记")} →
                 </Link>
-                <Link href="/read/" className="pulse-link micro">
-                  {tr(lang, "อ่านทีละมาตรา", "Single Section", "单条阅读")} →
+                <Link href="/read/">
+                  {tr(lang, "อ่านทั้งฉบับทีละหมวด", "Read the whole text", "阅读全文")} →
                 </Link>
               </div>
             </div>

@@ -55,7 +55,7 @@ export function Cram() {
 
   return (
     <>
-      <span className="page-kicker mono">{tr(lang,"ก่อนสอบ","BEFORE THE EXAM","考前复习")} · 03</span>
+      <span className="page-kicker mono">{tr(lang,"คืนก่อนสอบ","The night before","考前一晚")}</span>
       <h1>{tr(lang, "สรุปก่อนเข้าห้องสอบ", "The night before", "考前一页通")}</h1>
       <p>
         {tr(

@@ -537,7 +537,7 @@ footer {
   padding: 24px;
   margin: 30px 0;
   background: var(--wash);
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid var(--edge);
 }
 .note p:last-child {
   margin-bottom: 0;
@@ -3190,7 +3190,7 @@ mark.hl.has-note {
   border-top: 1px solid var(--line);
 }
 .chapter-drill-action select {
-  flex: 1;
+  flex: 0 1 auto;
   min-width: 0;
   padding: 6px 8px;
   font-size: var(--micro);
@@ -3956,7 +3956,6 @@ footer { flex-wrap:wrap; gap:16px; }
 }
 .cram-list dd {
   margin: 0;
-  text-align: right;
 }
 .cram-cover {
   min-height: 44px;
@@ -4204,27 +4203,31 @@ h1[tabindex="-1"]:focus,
 h2[tabindex="-1"]:focus {
   outline: none;
 }
-/* Reading measure: about 65-70 characters a line in English, 35-40 characters in Chinese.
-   em follows each element's own size, so 13px reference lists get the same line length. */
-:root:lang(en) main p,
-:root:lang(en) ul.micro > li,
-:root:lang(en) .cram-traps li,
-:root:lang(en) .bible-block li {
+/* Reading measure, set by the text's own language (law text keeps its lang attribute):
+   about 65-70 characters a line in English, 35-40 in Chinese, and the same physical width in Thai.
+   em follows each element's own size, so 13px reference lists get the same line length.
+   Only text is capped; rules and boxes keep the column's one right edge. */
+main p:lang(en):not(.page-next),
+main ul.micro > li:lang(en),
+.cram-traps li:lang(en),
+.bible-block li:lang(en) {
   max-width: 27em;
 }
-:root:lang(zh) main p,
-:root:lang(zh) ul.micro > li,
-:root:lang(zh) .cram-traps li,
-:root:lang(zh) .bible-block li {
+main p:lang(zh):not(.page-next),
+main ul.micro > li:lang(zh),
+.cram-traps li:lang(zh),
+.bible-block li:lang(zh) {
   max-width: 38em;
 }
-/* Thai keeps the same physical measure. */
-:root:lang(th) ul.micro > li,
-:root:lang(th) .cram-traps li,
-:root:lang(th) .bible-block li {
-  max-width: 34em;
+main p:lang(th):not(.page-next),
+main ul.micro > li:lang(th),
+.cram-traps li:lang(th),
+.bible-block li:lang(th) {
+  max-width: 30em;
 }
-
+.page-next {
+  max-width: none;
+}
 /* Study-guide index: the number is a reading-order mark, not a tile; the title is the link. */
 .guide-route .chapter-row {
   grid-template-columns: 48px minmax(0, 1fr);
@@ -4240,11 +4243,6 @@ h2[tabindex="-1"]:focus {
   text-underline-offset: 4px;
 }
 
-/* Ruled lists end where their text ends, so a row's rule does not run 900px past a short title. */
-.hub-list,
-.pokklong-steps {
-  max-width: 44em;
-}
 
 /* Practice: the timed paper leads (3:2, amber rule); the exam topics follow on a quiet rule;
    the focused drills read as one ruled list, not a grid of equal cards. */
@@ -4256,11 +4254,33 @@ h2[tabindex="-1"]:focus {
 }
 .practice-grid {
   grid-template-columns: minmax(0, 1fr);
-  max-width: 44em;
   gap: 0;
 }
 @media (max-width: 720px) {
   .practice-featured-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+}
+
+/* Phones: a select fills its line so a long chapter name is not cut off mid-word. */
+@media (max-width: 720px) {
+  .read-head select,
+  .notes-filter,
+  .chapter-drill-action select {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+  .chapter-drill-action {
+    flex-wrap: wrap;
+  }
+  footer {
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 18px;
+  }
+}
+/* Header, grid and footer share one container, so their edges line up. */
+.header,
+footer {
+  max-width: 1440px;
 }
