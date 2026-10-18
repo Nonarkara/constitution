@@ -201,6 +201,20 @@ function measure(route, w, d) {
     }
   }
 
+  // The same defect one level out: the pulse bar's counters were gated in
+  // f760258, but the <section class="home-pulse"> around them was not, so a
+  // first visit got an empty box carrying a 16px pad, a bottom rule and an
+  // aria-label announcing a "study pulse" that contained nothing. A labelled
+  // landmark region that renders with no content is the defect; gate the
+  // wrapper, not just what sits inside it.
+  var emptyLabelled = 0;
+  var regions = d.querySelectorAll('section[aria-label], nav[aria-label], aside[aria-label]');
+  for (var ri = 0; ri < regions.length; ri++) {
+    var rg = regions[ri];
+    if (rg.children.length === 0 && !String(rg.textContent || '').trim()) emptyLabelled++;
+  }
+  if (emptyLabelled > 0) rec.emptyRegions = emptyLabelled;
+
   if (sw > vw + 1) {
     var all = d.querySelectorAll('*'), found = [];
     for (var k = 0; k < all.length; k++) {
@@ -418,6 +432,21 @@ if (zeroStrips.length) {
   process.exit(1);
 }
 
+const emptyRegions = results.filter((r) => r.emptyRegions);
+if (emptyRegions.length) {
+  console.error(
+    `\nFAIL — ${emptyRegions.length} page/width combination(s) render a labelled landmark region with nothing in it:\n`,
+  );
+  for (const e of emptyRegions) {
+    console.error(`  ✗ ${e.route} @${e.w}px (${e.label}) — ${e.emptyRegions} empty region(s)`);
+  }
+  console.error(
+    "\n  An empty section[aria-label] announces itself to screen readers and still paints its\n" +
+      "  padding and rules. Gate the wrapper on the same condition as its contents.\n",
+  );
+  process.exit(1);
+}
+
 const overflow = results.filter((r) => r.over > 1);
 if (overflow.length) {
   console.error(`\nFAIL — ${overflow.length} page/width combination(s) scroll sideways:\n`);
@@ -436,5 +465,5 @@ if (overflow.length) {
 
 console.log(
   `  · layout: ${results.length} measurements across ${routes.length} routes at ` +
-    `${WIDTHS.map((w) => w.w).join("/")}px — no horizontal overflow, no all-zero readouts`,
+    `${WIDTHS.map((w) => w.w).join("/")}px — no horizontal overflow, no all-zero readouts, no empty labelled regions`,
 );

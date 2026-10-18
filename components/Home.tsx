@@ -118,27 +118,25 @@ export function Home() {
           link to a first-time visitor — three counters that can only say zero
           before anyone has studied. The link is actionable, so it stays; the
           zeros and the rules they were separated by do not. */}
-      <section className="home-pulse" aria-label={tr(lang, "สรุปการเรียนของคุณ", "Your study pulse", "学习概览")}>
-        {showPulse && (
-          <>
-            <div className="pulse-item">
-              <span className="mono pulse-num">{known.met}<b>/279</b></span>
-              <span className="pulse-label micro">{tr(lang, "มาตราที่อ่านแล้ว", "Sections read", "已读法条")}</span>
-            </div>
-            <div className="pulse-divider" aria-hidden="true" />
-            <div className="pulse-item">
-              <span className="mono pulse-num">{plan.due}</span>
-              <span className="pulse-label micro">{tr(lang, "ข้อที่ถึงเวลาทบทวน", "Due for review", "到期复习")}</span>
-            </div>
-            <div className="pulse-divider" aria-hidden="true" />
-            <div className="pulse-item">
-              <span className="mono pulse-num">{notesCount}</span>
-              <span className="pulse-label micro">{tr(lang, "มาตราที่มีบันทึก", "Annotated sections", "笔记条数")}</span>
-            </div>
-            <div className="pulse-divider" aria-hidden="true" />
-          </>
-        )}
-      </section>
+      {showPulse && (
+        <section className="home-pulse" aria-label={tr(lang, "สรุปการเรียนของคุณ", "Your study pulse", "学习概览")}>
+          <div className="pulse-item">
+            <span className="mono pulse-num">{known.met}<b>/279</b></span>
+            <span className="pulse-label micro">{tr(lang, "มาตราที่อ่านแล้ว", "Sections read", "已读法条")}</span>
+          </div>
+          <div className="pulse-divider" aria-hidden="true" />
+          <div className="pulse-item">
+            <span className="mono pulse-num">{plan.due}</span>
+            <span className="pulse-label micro">{tr(lang, "ข้อที่ถึงเวลาทบทวน", "Due for review", "到期复习")}</span>
+          </div>
+          <div className="pulse-divider" aria-hidden="true" />
+          <div className="pulse-item">
+            <span className="mono pulse-num">{notesCount}</span>
+            <span className="pulse-label micro">{tr(lang, "มาตราที่มีบันทึก", "Annotated sections", "笔记条数")}</span>
+          </div>
+          <div className="pulse-divider" aria-hidden="true" />
+        </section>
+      )}
 
       {/* Editorial Learning Architecture: One Dominant Anchor + Two Engines + Reference Shelf */}
       <section className="home-architecture" aria-label={tr(lang, "เส้นทางการเรียน", "Learning pathways", "学习路径")}>
