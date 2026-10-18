@@ -175,6 +175,13 @@ function measure(route, w, d) {
     var allZero = true;
     for (var q = 0; q < counters.length; q++) {
       var txt = String(counters[q].textContent || '');
+      // A bare denominator is not a counter. Home renders the total in its own
+      // element (a span holding {met} followed by a b holding /279), and the
+      // sweep visits that b separately. Its text "/279" has no digit before the
+      // slash, so it misses the fraction regex, falls to the bare-number branch
+      // and reads as 279, which clears allZero and hides the exact defect this
+      // check exists to catch. The parent span already carries the full "0/279".
+      if (txt.trim().charAt(0) === '/') continue;
       // Read the NUMERATOR of each fraction, not the digits of the whole string:
       // "0/279" must count as zero, and testing the raw digits reports it as 279.
       var fracs = txt.match(/(\\d+)\\s*\\/\\s*\\d+/g);
@@ -209,9 +216,23 @@ function measure(route, w, d) {
   // wrapper, not just what sits inside it.
   var emptyLabelled = 0;
   var regions = d.querySelectorAll('section[aria-label], nav[aria-label], aside[aria-label]');
+  var PAINTED = /^(IMG|SVG|CANVAS|VIDEO|AUDIO|IFRAME|INPUT|SELECT|TEXTAREA|OBJECT|EMBED|PICTURE)$/;
+  // "has children" is not "has content". A section holding one empty bordered
+  // div is still a painted box with nothing in it, and it still announces its
+  // aria-label to a screen reader. Recurse instead of counting children.
+  function hasContent(node) {
+    if (String(node.textContent || '').trim()) return true;
+    for (var n = 0; n < node.children.length; n++) {
+      var kid = node.children[n];
+      if (PAINTED.test(kid.tagName)) return true;
+      var kcs = win.getComputedStyle(kid);
+      if (kcs && kcs.backgroundImage && kcs.backgroundImage !== 'none') return true;
+      if (hasContent(kid)) return true;
+    }
+    return false;
+  }
   for (var ri = 0; ri < regions.length; ri++) {
-    var rg = regions[ri];
-    if (rg.children.length === 0 && !String(rg.textContent || '').trim()) emptyLabelled++;
+    if (!hasContent(regions[ri])) emptyLabelled++;
   }
   if (emptyLabelled > 0) rec.emptyRegions = emptyLabelled;
 
