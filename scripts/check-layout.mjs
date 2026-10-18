@@ -159,6 +159,48 @@ function measure(route, w, d) {
   var sw = d.documentElement.scrollWidth;
   var rec = { route: route, w: w, label: labelOf(w), clientWidth: vw, scrollWidth: sw, over: sw - vw, culprits: [] };
   if (vw === 0) { rec.error = 'clientWidth 0 — page did not lay out'; return rec; }
+
+  // Cold-visit check. This gate loads every route with empty localStorage, which
+  // is precisely when an all-zero progress readout is a defect: a first-time
+  // reader has studied nothing, so "0/279" states nothing they can act on. It
+  // shipped on the homepage (f760258), then survived again on every other page
+  // in Shell.tsx, because a hand fix in one file is not a law. Measured here
+  // rather than pattern-matched in the source, because a source regex cannot
+  // tell a counter that is zero from an interactive slider that merely reads
+  // like one — an earlier static attempt flagged 5 of 6 sites falsely.
+  var strip = d.querySelector('.study-strip, .home-pulse');
+  if (strip) {
+    var counters = strip.querySelectorAll('b, output, strong, span');
+    var sawNumber = false;
+    var allZero = true;
+    for (var q = 0; q < counters.length; q++) {
+      var txt = String(counters[q].textContent || '');
+      // Read the NUMERATOR of each fraction, not the digits of the whole string:
+      // "0/279" must count as zero, and testing the raw digits reports it as 279.
+      var fracs = txt.match(/(\\d+)\\s*\\/\\s*\\d+/g);
+      if (fracs) {
+        for (var fq = 0; fq < fracs.length; fq++) {
+          var num = Number(String(fracs[fq]).split('/')[0].trim());
+          sawNumber = true;
+          if (num !== 0) { allZero = false; break; }
+        }
+      } else {
+        var bare = txt.match(/\\d+/g);
+        if (bare) {
+          for (var bq = 0; bq < bare.length; bq++) {
+            sawNumber = true;
+            if (Number(bare[bq]) !== 0) { allZero = false; break; }
+          }
+        }
+      }
+      if (!allZero) break;
+    }
+    // A pulse reporting no numbers at all is not a zero readout.
+    if (sawNumber && allZero) {
+      rec.zeroStrip = String(strip.textContent || '').replace(/\\s+/g, ' ').trim().slice(0, 60);
+    }
+  }
+
   if (sw > vw + 1) {
     var all = d.querySelectorAll('*'), found = [];
     for (var k = 0; k < all.length; k++) {
@@ -360,6 +402,22 @@ if (errored.length) {
   process.exit(1);
 }
 
+const zeroStrips = results.filter((r) => r.zeroStrip);
+if (zeroStrips.length) {
+  console.error(
+    `\nFAIL — ${zeroStrips.length} page/width combination(s) show an all-zero progress readout to a first-time reader:\n`,
+  );
+  for (const z of zeroStrips) {
+    console.error(`  ✗ ${z.route} @${z.w}px (${z.label}) — "${z.zeroStrip}"`);
+  }
+  console.error(
+    "\n  A first-time reader has studied nothing, so a row of zeros states nothing they can\n" +
+      "  act on. Gate the readout on the data being non-zero, the way Home.tsx and Shell.tsx\n" +
+      "  already do: `known.met > 0 || due > 0 || notes > 0`.\n",
+  );
+  process.exit(1);
+}
+
 const overflow = results.filter((r) => r.over > 1);
 if (overflow.length) {
   console.error(`\nFAIL — ${overflow.length} page/width combination(s) scroll sideways:\n`);
@@ -378,5 +436,5 @@ if (overflow.length) {
 
 console.log(
   `  · layout: ${results.length} measurements across ${routes.length} routes at ` +
-    `${WIDTHS.map((w) => w.w).join("/")}px — no horizontal overflow`,
+    `${WIDTHS.map((w) => w.w).join("/")}px — no horizontal overflow, no all-zero readouts`,
 );

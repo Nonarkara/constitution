@@ -93,6 +93,10 @@ export function Shell({ children }: { children: React.ReactNode }) {
       due: dueQuestions(questionIndex, progress, now).length,
     };
   }, [progress, marks, annotations, read]);
+  // Same rule as the homepage pulse (f760258): a strip reading "0/279" to
+  // someone who has studied nothing is a row of zeros, not progress. The strip
+  // appears once there is something in it.
+  const showStrip = known.met > 0 || known.due > 0 || Object.keys(annotations).length > 0;
   return (
     <PageFocus.Provider value={shiftFocus}>
       <a className="skip" href="#content">
@@ -214,7 +218,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
               )}
             </p>
           )}
-          {ready && (
+          {ready && showStrip && (
             <nav className="study-strip micro" aria-label={labels.notes[lang]}>
               <Link href="/notes/">
                 {labels.notes[lang]}
