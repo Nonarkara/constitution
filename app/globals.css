@@ -147,7 +147,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family:
-    "Jost", "IBM Plex Sans Thai", "Source Sans 3", "Noto Sans SC", sans-serif;
+    "Jost", "IBM Plex Sans Thai", "Noto Sans SC", sans-serif;
   font-size: var(--body);
   line-height: 1.65;
 }

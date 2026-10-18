@@ -14,7 +14,7 @@ export default async function Image() {
   const [thai, thaiBold, sans, mono] = await Promise.all([
     font("ibm-plex-sans-thai-0.ttf"),
     font("ibm-plex-sans-thai-2.ttf"),
-    font("source-sans-3-0.ttf"),
+    font("jost-400.ttf"),
     font("jetbrains-mono-0.ttf"),
   ]);
   return new ImageResponse(
