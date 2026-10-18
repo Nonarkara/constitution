@@ -165,7 +165,7 @@ function ConstitutionArena() {
           {sessionNotice && <p role="status">{sessionNotice}</p>}
           <header className="practice-header">
             <div className="intro-copy">
-              <StudyArt scene="reading" compact />
+              <StudyArt scene="review" compact />
               <h1>
                 {tr(
                   lang,
@@ -198,9 +198,9 @@ function ConstitutionArena() {
                 <p className="micro">
                   {tr(
                     lang,
-                    "รวมข้อที่ถึงเวลาทบทวน ข้อที่ยังพลาดบ่อย แบบฝึกตัวเลข และการ์ดที่เคยตอบถูกเข้าด้วยกัน เพื่อสร้างความจำระยะยาว",
-                    "Mixes what is due, what you miss, number drills and mastered cards together to cement long-term memory.",
-                    "混合到期复习、高频错题、数字练习及已掌握卡片，打造长效记忆。"
+                    "รวมข้อที่ถึงเวลาทบทวน ข้อที่คุณยังพลาด แบบฝึกตัวเลข และการ์ดที่เคยตอบถูก ไว้ในรอบเดียว",
+                    "One session mixes what is due, what you still miss, number drills and cards you already know.",
+                    "一轮混合到期复习、你仍会答错的题、数字练习和已经答对的卡片。"
                   )}
                 </p>
               </div>
@@ -214,57 +214,57 @@ function ConstitutionArena() {
             <div className="practice-section">
               <div className="practice-section-header">
                 <span className="mono micro text-accent font-bold">
-                  {tr(lang, "สนามสอบเสมือนจริง", "EXAM SIMULATION", "全真模拟考场")}
+                  {tr(lang, "จับเวลา", "Timed", "计时")}
                 </span>
                 <h2>
-                  {tr(lang, "ข้อสอบจับเวลาและประเด็นสอบสำคัญ", "Timed Papers & High-Yield Topics", "计时模考与核心考点")}
+                  {tr(lang, "ชุดจับเวลา และแนวข้อสอบนายอำเภอ", "Timed papers and district-chief exam topics", "计时练习卷与县长考试题型")}
                 </h2>
                 <p className="micro">
                   {tr(
                     lang,
-                    "สร้างความคุ้นเคยกับข้อสอบจริงด้วยการจับเวลา ไม่แสดงเฉลยระหว่างทำ พร้อมเจาะลึก 90 ประเด็นสำคัญระดับอำเภอ",
-                    "Build exam stamina under timed conditions with hidden answers and drill 90 high-yield district officer topics.",
-                    "严格计时模拟真实考场环境，交卷后全面剖析，并深度攻克90道关键实务考点。",
+                    "ทำข้อสอบแบบจับเวลา เฉลยหลังส่ง และฝึก 90 ข้อจากหัวข้อที่ออกสอบนายอำเภอ ปี 2568",
+                    "Sit a timed paper with the answers held until you submit, and practise 90 questions from the topics of the 2025 district-chief exam.",
+                    "限时作答，交卷后看答案；另有90道题，来自2025年县长考试的出题范围。",
                   )}
                 </p>
               </div>
 
               <div className="practice-featured-grid">
-                {/* 30 Mock Papers - Lead Winner */}
+                {/* The timed paper leads; the exam topics follow it on a quieter rule. */}
                 <div className="practice-featured-card">
                   <div className="mode-card-top">
-                    <span className="mono micro font-bold">{tr(lang, "ข้อสอบจำลองจับเวลา", "Timed Mock Exams", "全真模拟考")}</span>
+                    <span className="mono micro font-bold">{tr(lang, "สอบจำลอง", "Mock exam", "模拟考试")}</span>
                     <span className="micro text-muted">30 {tr(lang, "ชุด", "papers", "套")}</span>
                   </div>
                   <h3>
                     <Link href="/exam/">
-                      {tr(lang, "30 ชุดข้อสอบจำลองจับเวลา", "30 Timed Practice Papers", "30套全真计时考卷")}
+                      {tr(lang, "ชุดฝึกจับเวลา 30 ชุด", "30 timed study papers", "30套计时练习卷")}
                     </Link>
                   </h3>
                   <p className="micro">
-                    {tr(lang, "จำลองบรรยากาศสอบจริง ไม่แสดงเฉลยระหว่างทำ เฉลยละเอียดพร้อมวิเคราะห์คะแนนหลังส่ง", "Timed exam conditions. Answers hidden until submission, followed by detailed section diagnostics.", "模拟真实考场计时环境，交卷后一次性展示全面解析与法条诊断。")}
+                    {tr(lang, "สุ่มจากคลังข้อฝึกที่ครอบคลุมทุกมาตรา เฉลยและคะแนนรายหมวดหลังส่ง", "Sampled from a bank that covers every section. Answers and a chapter-by-chapter score after you submit.", "从覆盖全部条文的题库中抽题。交卷后显示答案与各章得分。")}
                   </p>
                   <Link href="/exam/" className="mode-card-link micro">
-                    {tr(lang, "เข้าห้องสอบจำลอง 30 ชุด", "Enter 30 Mock Papers", "进入30套模拟考")} →
+                    {tr(lang, "เริ่มชุดจับเวลา", "Start a timed paper", "开始计时练习")} →
                   </Link>
                 </div>
 
                 {/* 90 District Exam Topics */}
-                <div className="practice-featured-card">
+                <div className="practice-featured-card practice-featured-second">
                   <div className="mode-card-top">
-                    <span className="mono micro font-bold">{tr(lang, "แนวข้อสอบพิเศษ", "District Chief Topics", "县长与实务考点")}</span>
+                    <span className="mono micro font-bold">{tr(lang, "นอกตัวบทด้วย", "Beyond the text too", "也涉及宪法以外")}</span>
                     <span className="micro text-muted">90 {tr(lang, "ประเด็น", "topics", "点")}</span>
                   </div>
                   <h3>
                     <Link href="/along/">
-                      {tr(lang, "90 ประเด็นสอบนายอำเภอและท้องถิ่น", "90 District & Local Exam Topics", "90个县长与地方实务考点")}
+                      {tr(lang, "แนวข้อสอบนายอำเภอและท้องถิ่น 90 ข้อ", "90 district-chief and local exam questions", "县长与地方考试题型90题")}
                     </Link>
                   </h3>
                   <p className="micro">
-                    {tr(lang, "แนวข้อสอบตำแหน่งปลัดอำเภอ นิติกร และข้าราชการส่วนท้องถิ่น เจาะตัวบทที่ต้องใช้จริง", "High-yield topics for district officer, legal officer, and local civil service examinations.", "精选面向助理县长、法制官与地方公职人员的高频实务考点。")}
+                    {tr(lang, "ทุกข้อมีที่มาและวันที่กำกับ บางข้อโยงกับมาตรา บางข้อเป็นความรู้รอบตัวและการบริหาร", "Each carries its source and date. Some tie to a section; others are general knowledge and management.", "每题注明来源与日期。部分与条文相关，其余为常识与管理知识。")}
                   </p>
                   <Link href="/along/" className="mode-card-link micro">
-                    {tr(lang, "ดูแนวข้อสอบ 90 ข้อ", "View 90 Exam Topics", "查看90道考点")} →
+                    {tr(lang, "ฝึก 90 ข้อ", "Practise the 90", "练习90题")} →
                   </Link>
                 </div>
               </div>
@@ -274,10 +274,10 @@ function ConstitutionArena() {
             <div className="practice-section">
               <div className="practice-section-header">
                 <span className="mono micro text-muted font-bold">
-                  {tr(lang, "ฝึกเจาะจุดและช่วยจำ", "PRECISION DRILLS & RECALL", "专项攻坚与记忆工具")}
+                  {tr(lang, "เจาะจุด", "Focused", "专项")}
                 </span>
                 <h3>
-                  {tr(lang, "แบบฝึกเฉพาะจุดและเครื่องมือทบทวนความจำ", "Focused Drills & Memory Aids", "专项练习与记忆工具")}
+                  {tr(lang, "แบบฝึกเฉพาะจุดและเครื่องช่วยจำ", "Focused drills and memory aids", "专项练习与记忆工具")}
                 </h3>
               </div>
 
@@ -294,7 +294,7 @@ function ConstitutionArena() {
                     </Link>
                   </h3>
                   <p className="micro">
-                    {tr(lang, "ฝึกจำนวนวัน สัดส่วน ส.ส./ส.ว. และองค์ประชุมที่ออกสอบบ่อยที่สุด", "Drill days, quorum, MP/senate ratios and numbers most tested.", "专练最常考的天数、法定人数、议员比例与会议门槛。")}
+                    {tr(lang, "ฝึกจำนวนวัน องค์ประชุม และจำนวนที่นั่งที่ตัวบทกำหนด", "Drill the days, quorums and seat counts the text sets.", "专练条文规定的天数、法定人数与席位数。")}
                   </p>
                   <Link href="/drills/" className="mode-card-link micro">
                     {tr(lang, "เปิดแบบฝึกตัวเลข", "Open Number Drills", "打开数字专项")} →

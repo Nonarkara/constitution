@@ -7,7 +7,6 @@ import questions from "@/data/questions.json";
 import { sections, chapters, readingText } from "@/lib/corpus";
 import { tr, sectionLabel, type Lang } from "@/lib/i18n";
 import { analyzeUserLearning } from "@/lib/adaptive";
-import { StudyArt } from "./StudyArt";
 
 type FlashcardItem = {
   id: string;
@@ -172,7 +171,6 @@ export function Flashcards() {
 
       <header className="intro">
         <div className="intro-copy">
-          <StudyArt scene="listening" compact />
           <h1>
             {tr(
               lang,

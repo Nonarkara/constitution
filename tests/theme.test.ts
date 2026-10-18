@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { SWATCH } from "../lib/theme.ts";
 
 // Every theme is read from globals.css itself, so the test checks what ships.
@@ -72,4 +72,16 @@ test("the stylesheet's blocks all close (a merge once split a media query)", () 
     if (c === "}") assert.ok(--depth >= 0, "a stray closing brace");
   }
   assert.equal(depth, 0, "an unclosed block");
+});
+
+test("each drawing appears in one place on the site, never two", () => {
+  const uses = new Map<string, string[]>();
+  for (const f of readdirSync(new URL("../components/", import.meta.url))) {
+    const src = readFileSync(new URL(`../components/${f}`, import.meta.url), "utf8");
+    for (const m of src.matchAll(/scene="(\w+)"|\/illustrations\/([\w-]+)-pastel\.webp/g)) {
+      const scene = m[1] ?? m[2];
+      uses.set(scene, [...(uses.get(scene) ?? []), f]);
+    }
+  }
+  for (const [scene, files] of uses) assert.equal(files.length, 1, `${scene} drawing used in ${files.join(", ")}`);
 });

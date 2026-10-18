@@ -1,5 +1,4 @@
 "use client";
-import { StudyArt } from "./StudyArt";
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import { questionIndex as questions } from "@/lib/outline";
@@ -61,7 +60,6 @@ export function Review() {
   return (
     <>
       <div className="review-intro">
-        <StudyArt scene="review" />
         <h1>
           {tr(
             lang,

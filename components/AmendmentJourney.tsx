@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { keepBackup } from "@/lib/local-data";
 import Link from "next/link";
 import { useStudy } from "./Provider";
-import { StudyArt } from "./StudyArt";
 import { tr, sectionLabel } from "@/lib/i18n";
 import { journey, debates } from "@/lib/journey-content";
 import {
@@ -275,7 +274,6 @@ export function AmendmentJourney() {
             )}
           </p>
         </div>
-        <StudyArt scene="reading" />
       </div>
         <p><Link href="/civic/">{tr(lang,"ฝึกต่อ: ตรวจคำสัญญา 16 ข้อ","Keep practising: check 16 promises","继续练习：核查16个承诺")} →</Link></p>
       <nav

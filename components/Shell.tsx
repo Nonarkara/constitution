@@ -39,7 +39,9 @@ function PageChrome({ focused }: { focused: boolean }) {
   const back = backFor(path, { section, check, drill });
   return (
     <>
-      {crumbs.length > 0 && (
+      {/* One row of wayfinding: a path when there is one, otherwise a way back. A single crumb
+          would only repeat the highlighted door above it. */}
+      {crumbs.length > 1 && (
         <nav className="crumbs" aria-label={tr(lang, "ตำแหน่งในสมุด", "Where you are", "你在这里")}>
           <ol>
             {crumbs.map((crumb, index) => (
@@ -54,7 +56,7 @@ function PageChrome({ focused }: { focused: boolean }) {
           </ol>
         </nav>
       )}
-      {back && !focused && (
+      {back && !focused && crumbs.length < 2 && (
         <p className="page-back">
           <Link href={back.href}>{back.label[lang]}</Link>
         </p>

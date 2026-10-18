@@ -164,15 +164,15 @@ export function Home() {
               <p>
                 {tr(
                   lang,
-                  "อ่านเปิดกางเหมือนหนังสือบนโต๊ะ ไฮไลต์ 4 สี จดโน้ตข้างตัวบท พร้อมเทียบภาษาไทย อังกฤษ และจีน บันทึกทั้งหมดจะเชื่อมโยงไปสู่รอบทบทวนความจำโดยอัตโนมัติ",
-                  "Open spread like a physical desk book. 4-colour highlighters, margin notes and 3-language side-by-side text, automatically wired into your spaced review sessions.",
-                  "如桌面展卷。4色高亮、条文边注及中英泰三语对照，所有学习笔记自动联动到间隔复习队列。",
+                  "อ่านทีละสองมาตราเหมือนสมุดบนโต๊ะ ระบายสีทั้งมาตรา จดโน้ตที่ขอบ และเทียบสามภาษา โน้ตจะกลับมาในรอบทบทวน",
+                  "Two sections at a time, like a book open on the desk. Colour a whole section, write in the margin, compare three languages. Your notes come back in review.",
+                  "像摊在桌上的书，每次读两条。给整条上色、在页边写笔记、对照三种语言。笔记会在复习时出现。",
                 )}
               </p>
               <div className="anchor-actions">
-                <Link className="primary" href="/notebook/">
-                  <span>{tr(lang, "เปิดสมุดคู่หน้า", "Open Notebook", "打开双页")}</span>
-                  <span aria-hidden="true">→</span>
+                {/* Amber marks the one next action (the lesson above); this is a second door, not a second call. */}
+                <Link href="/notebook/">
+                  {tr(lang, "เปิดสมุดสองหน้า", "Open the notebook", "打开双页笔记")} →
                 </Link>
                 <Link href="/read/" className="pulse-link micro">
                   {tr(lang, "อ่านทีละมาตรา", "Single Section", "单条阅读")} →

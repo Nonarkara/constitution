@@ -3,7 +3,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
-import { StudyArt } from "./StudyArt";
 
 export function CheatSheet() {
   const { lang } = useStudy();
@@ -442,7 +441,6 @@ export function CheatSheet() {
       
       <section className="intro">
         <div className="intro-copy">
-          <StudyArt scene="review" />
           <h1>
             {tr(
               lang,

@@ -17,7 +17,6 @@ import {
   updateSectionAnnotation,
   type HighlightColor,
 } from "@/lib/annotations";
-import { StudyArt } from "./StudyArt";
 
 export function DoublePageReader() {
   const { lang, annotations, saveAnnotations } = useStudy();
@@ -102,7 +101,6 @@ export function DoublePageReader() {
 
       <header className="notebook-header">
         <div className="intro-copy">
-          <StudyArt scene="reading" compact />
           <h1>
             {tr(
               lang,

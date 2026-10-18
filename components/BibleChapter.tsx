@@ -222,16 +222,16 @@ export function BibleIndex({ chapters }: { chapters: { slug: string; order: numb
         )}
       </p>
       <p className="notice">{tr(lang,"เลือกบทเดียว อ่านใจความ ลองสามข้อ แล้วไปฝึก ไม่ต้องอ่าน 13 บทให้จบก่อน คู่มือเต็มมีไทยและอังกฤษ ส่วนบทเรียนสั้นและแบบฝึกมีสามภาษา","Choose one chapter: read the idea, try three checks, then practise. You need not finish all 13 first. The full guide is Thai/English; the short lesson and exercises are trilingual.","先选一章：读概念、试三题、再练习，不必先读完13章。完整长篇指南为泰文与英文；短课和练习提供三种语言。")}</p>
-      <div className="chapter-route">
+      <div className="chapter-route guide-route">
         {chapters.map((c) => (
           <article className="chapter-row" key={c.slug}>
-            <div className="route-number mono">{String(c.order).padStart(2, "0")}</div>
+            {/* The method chapter sits outside the 00–11 reading order, so it carries no number. */}
+            <div className="route-number mono">{c.order < 90 ? String(c.order).padStart(2, "0") : ""}</div>
             <div className="chapter-info">
-              <h3>{lang === "zh" ? guidePaths[c.slug]?.title.zh ?? text(c.title, lang) : text(c.title, lang)}</h3>
+              <h3>
+                <Link href={`/bible/${c.slug}/`}>{lang === "zh" ? guidePaths[c.slug]?.title.zh ?? text(c.title, lang) : text(c.title, lang)}</Link>
+              </h3>
               <span className="micro">{guidePaths[c.slug]?.idea[lang] ?? text(c.lede, lang).slice(0, 140)}</span>
-            </div>
-            <div className="chapter-actions">
-              <Link href={`/bible/${c.slug}/`}>{tr(lang, "อ่าน", "Read", "阅读")} →</Link>
             </div>
           </article>
         ))}

@@ -248,7 +248,7 @@ small,
   color: var(--muted);
 }
 .mono {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "IBM Plex Sans Thai", monospace;
   font-size: var(--micro);
 }
 .primary {
@@ -532,6 +532,8 @@ footer {
   color: var(--muted);
 }
 .note {
+  width: fit-content;
+  max-width: min(100%, 38em);
   padding: 24px;
   margin: 30px 0;
   background: var(--wash);
@@ -541,9 +543,11 @@ footer {
   margin-bottom: 0;
 }
 .notice {
+  width: fit-content;
+  max-width: min(100%, 38em);
   padding: 18px;
-  border: 1px solid var(--accent-deep);
-  background: var(--accent-wash);
+  border: 1px solid var(--edge);
+  background: var(--wash);
   font-size: var(--micro);
   margin-bottom: 24px;
 }
@@ -629,7 +633,7 @@ footer {
   align-items: center;
 }
 .speech-controls button {
-  width: 100%;
+  width: auto;
 }
 .speech-controls select {
   font-size: var(--micro);
@@ -772,7 +776,7 @@ progress::-moz-progress-bar {
   margin: 8px 0 0;
 }
 .blind-reask {
-  font-size: 1.15rem;
+  font-size: var(--body);
   line-height: 1.6;
   margin: 24px 0 12px;
 }
@@ -1161,7 +1165,7 @@ html[data-large="true"] {
 }
 .study-strip b {
   color: var(--ink);
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "IBM Plex Sans Thai", monospace;
 }
 .study-strip a.due b {
   color: var(--accent-deep);
@@ -1459,7 +1463,7 @@ html[data-large="true"] {
 }
 .formula-box code {
   display: block;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "IBM Plex Sans Thai", monospace;
   margin-top: 6px;
   color: var(--focus);
   white-space: pre-wrap;
@@ -2185,7 +2189,9 @@ html[data-large="true"] {
 }
 .read-head select {
   display: block;
-  width: 100%;
+  width: auto;
+  min-width: min(100%, 16em);
+  max-width: 100%;
   min-height: 44px;
   margin: 6px 0 12px;
   border: 1px solid var(--edge);
@@ -2315,7 +2321,9 @@ mark.hl.has-note {
 }
 .notes-filter {
   display: block;
-  width: 100%;
+  width: auto;
+  min-width: min(100%, 16em);
+  max-width: 100%;
   min-height: 44px;
   margin: 6px 0 24px;
   border: 1px solid var(--edge);
@@ -2527,7 +2535,7 @@ mark.hl.has-note {
   align-items: center;
 }
 .anchor-copy h2 {
-  font-size: 22px;
+  font-size: var(--body);
   font-weight: 700;
   margin: 0 0 10px;
   letter-spacing: -0.5px;
@@ -2594,7 +2602,7 @@ mark.hl.has-note {
 }
 .engine-column h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: var(--body);
 }
 .engine-column h3 a {
   text-decoration: none;
@@ -2870,7 +2878,7 @@ mark.hl.has-note {
 .match-grid > div:last-child .match-card {
   justify-content: center;
   text-align: center;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "JetBrains Mono", "IBM Plex Sans Thai", monospace;
   font-size: var(--body);
   font-weight: 700;
 }
@@ -3079,11 +3087,11 @@ mark.hl.has-note {
 }
 .practice-section-header h2 {
   margin: 4px 0 6px;
-  font-size: 20px;
+  font-size: var(--body);
 }
 .practice-section-header h3 {
   margin: 4px 0 6px;
-  font-size: 17px;
+  font-size: var(--body);
 }
 .practice-section-header p {
   margin: 0;
@@ -3106,7 +3114,7 @@ mark.hl.has-note {
 }
 .practice-featured-card h3 {
   margin: 0 0 6px;
-  font-size: 19px;
+  font-size: var(--body);
 }
 .practice-featured-card h3 a {
   text-decoration: none;
@@ -3533,7 +3541,7 @@ mark.hl.has-note {
 .feed-provenance { border-top:3px solid var(--ink); padding-top:16px; margin-top:32px; }
 .research-note { max-width:900px; }
 .research-note h2 { border-top:1px solid var(--line); padding-top:28px; margin-top:36px; }
-.research-lead { font-size:24px; max-width:38ch; }
+.research-lead { font-size:var(--body); max-width:38ch; }
 .research-table { border-collapse:collapse; width:100%; table-layout:fixed; }
 .research-table caption { text-align:left; padding:16px 0; }
 .research-table th, .research-table td { text-align:left; vertical-align:top; padding:16px 12px; border-bottom:1px solid var(--line); font-weight:400; overflow-wrap:anywhere; }
@@ -3542,14 +3550,14 @@ footer { flex-wrap:wrap; gap:16px; }
 @media(max-width:720px) {
  .civic-title { align-items:flex-start; gap:10px; }
  .civic-title .study-art { flex:0 0 90px; }
- .civic-title h1 { font-size:28px; }
+ .civic-title h1 { font-size:var(--display); }
  .journey-chapter { padding-left:16px; }
  .vote-inputs { grid-template-columns:1fr; }
  .vote-verdict dl { grid-template-columns:1fr; gap:4px; }
  .vote-verdict dd { margin-bottom:12px; }
- .research-table th, .research-table td { padding:12px 6px; font-size:16px; }
+ .research-table th, .research-table td { padding:12px 6px; font-size:var(--micro); }
  .research-table th:first-child { width:30%; }
- .research-lead { font-size:20px; }
+ .research-lead { font-size:var(--body); }
 }
 @media(max-width:720px) {
  .journey-progress { flex-wrap:nowrap; overflow-x:auto; max-width:100%; }
@@ -3887,7 +3895,7 @@ footer { flex-wrap:wrap; gap:16px; }
 .palace-index span:last-child { font-size:var(--micro); }
 .palace-room { border-top:3px solid var(--ink); padding-top:1rem; max-width:760px; }
 .palace-room figure,.memory-cue figure { display:grid; grid-template-columns:minmax(100px,1fr) minmax(0,2fr); gap:1rem; margin:1rem 0; align-items:center; }
-.palace-number { font-family:"JetBrains Mono",monospace; font-size:var(--display); line-height:1.2; display:block; overflow-wrap:anywhere; }
+.palace-number { font-family:"JetBrains Mono","IBM Plex Sans Thai",monospace; font-size:var(--display); line-height:1.2; display:block; overflow-wrap:anywhere; }
 .memory-cue { margin-block:1rem; border-block:1px solid var(--line); padding-block:.75rem; }
 @media(max-width:1024px){ .palace-index { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:480px){ .palace-index button { padding:.75rem; } .palace-picture-small { width:72px; } .palace-room figure,.memory-cue figure { grid-template-columns:1fr; } .palace-room .palace-picture,.memory-cue .palace-picture { max-width:220px; } }
@@ -3939,7 +3947,8 @@ footer { flex-wrap:wrap; gap:16px; }
 }
 .cram-list > div {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  /* A long answer used to take the auto track and squeeze the label to one word a line. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 4px 16px;
   align-items: center;
   padding: 10px 0;
@@ -3958,7 +3967,7 @@ footer { flex-wrap:wrap; gap:16px; }
   display: inline-block;
   margin-left: 6px;
   padding: 1px 6px;
-  font-size: 0.7rem;
+  font-size: var(--micro);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--muted);
@@ -4047,7 +4056,7 @@ footer { flex-wrap:wrap; gap:16px; }
   .reading-menu > summary { padding-inline: 6px; gap: 4px; }
   .reading-menu .themes { right: -110px; }
   main { padding-top: var(--space-1); }
-  .study-strip { gap: 0 var(--space-2); padding-bottom: var(--space-1); border-bottom: 1px solid var(--line); }
+  .study-strip { gap: 0 var(--space-2); padding-block: 2px var(--space-1); margin-bottom: var(--space-1); border-bottom: 1px solid var(--line); }
   .hero { position: relative; display: block; padding-top: var(--space-3); }
   .hero-art { position: absolute; right: 0; top: var(--space-3); width: 100px; }
   .hero-copy h1 { padding-right: 104px; margin-bottom: var(--space-3); }
@@ -4183,4 +4192,75 @@ button.guess-choice:disabled {
 }
 .pokklong-session .quiz-top-bar {
   align-items: flex-start;
+}
+
+/* Thai never takes tracking: it pulls stacked vowels and tone marks apart. */
+:root:lang(th) * {
+  letter-spacing: normal;
+}
+/* Headings receive focus by script so screen readers announce the new step; that is not a
+   keyboard target, so it draws no ring. Real controls keep theirs. */
+h1[tabindex="-1"]:focus,
+h2[tabindex="-1"]:focus {
+  outline: none;
+}
+/* Reading measure: about 65-70 characters a line in English, 35-40 characters in Chinese.
+   em follows each element's own size, so 13px reference lists get the same line length. */
+:root:lang(en) main p,
+:root:lang(en) ul.micro > li,
+:root:lang(en) .cram-traps li,
+:root:lang(en) .bible-block li {
+  max-width: 27em;
+}
+:root:lang(zh) main p,
+:root:lang(zh) ul.micro > li,
+:root:lang(zh) .cram-traps li,
+:root:lang(zh) .bible-block li {
+  max-width: 38em;
+}
+/* Thai keeps the same physical measure. */
+:root:lang(th) ul.micro > li,
+:root:lang(th) .cram-traps li,
+:root:lang(th) .bible-block li {
+  max-width: 34em;
+}
+
+/* Study-guide index: the number is a reading-order mark, not a tile; the title is the link. */
+.guide-route .chapter-row {
+  grid-template-columns: 48px minmax(0, 1fr);
+}
+.guide-route .route-number {
+  border: 0;
+  background: none;
+}
+.guide-route .chapter-row::after {
+  display: none;
+}
+.guide-route h3 a {
+  text-underline-offset: 4px;
+}
+
+/* Ruled lists end where their text ends, so a row's rule does not run 900px past a short title. */
+.hub-list,
+.pokklong-steps {
+  max-width: 44em;
+}
+
+/* Practice: the timed paper leads (3:2, amber rule); the exam topics follow on a quiet rule;
+   the focused drills read as one ruled list, not a grid of equal cards. */
+.practice-featured-grid {
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+}
+.practice-featured-second {
+  border-top-color: var(--line);
+}
+.practice-grid {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 44em;
+  gap: 0;
+}
+@media (max-width: 720px) {
+  .practice-featured-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
