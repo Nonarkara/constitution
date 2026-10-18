@@ -25,3 +25,9 @@ After repairs: rerun the release pipeline; exercise fresh and returning learner 
 - A local ChunkLoadError occurred while the export directory was being replaced during a rebuild; the settled build reloaded and completed the flow. Browser verification uses completed exports.
 
 Limits: no physical-iPad dictation, native PWA-install or human learner study in this audit. Legal content validators are not a fresh primary-source recertification of every question. Production deployment and byte verification are recorded below after release.
+
+## Deployment verification
+
+Implementation commit `46fb191` pushed to main. Cloudflare deployment `71977493-12ea-45f1-8a5c-efa01570c02a` serves the custom domain; scheduled news harvesting remains every six hours. HTTP 200 and SHA-256 equality confirmed for `/`, `/practice/`, `/practice/pokklong/` and `/offline-manifest.json`; all 20 JavaScript files referenced by the practice HTML match local bytes. Completed the five-question section-158 repair on the live custom domain: every question cited section 158. Live news UI refreshed to 66 headlines.
+
+Local evidence: `.openai/qa/oct18-release-final.log`, `oct18-deploy.log`, `oct18-live-bytes.json`, `oct18-live-chunks.json`, `oct18-live-repair.png`, and `oct18-home-1440-final.png`. No source changes followed the passing release build; this closing update changes documentation only.
