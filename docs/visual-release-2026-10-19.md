@@ -30,3 +30,9 @@ Pending: full release gate, independent diff review, browser journeys at phone/t
 Limits: physical-iPad dictation and native PWA installation still require a device check. This audit does not freshly recertify every legal question. Ordinary Practice preserves saved learning records but not a round's in-memory score across refresh; timed Exam and Blind sittings have checkpoints.
 
 Evidence: `.openai/qa/oct19-release-ship.log`, `oct19-visual-1440.png`, `oct19-visual-1024.png`, `oct19-visual-390.png`, `oct19-map-390-final.png`, `oct19-home-390.png`, `oct19-dependency-audit.json`. Deployment verification follows after publication.
+
+## Live deployment
+
+Implementation commit `f9f0d0a` pushed to main. Cloudflare deployment `a36053ac-7965-49a2-bfa7-d78704ac12fa` serves `constitution.nonarkara.org`; offline revision `24d6e41e68e03256`. All43 checked live files match local SHA-256 bytes: homepage/practice/exam/along HTML, offline manifest, all11 illustrations, and the JavaScript files referenced by practice and exam. Live homepage loaded the new Tikky artwork at1440px without overflow or console errors; screenshot `.openai/qa/oct19-live-home.png`. A full ordered pass through the470-question bank has192 visual stops (regular thirds plus extra exact-rule matches); individual sessions apply cadence to their own displayed order.
+
+Working tree clean after implementation commit; this closing update changes documentation only. Raw photo references remain outside the repository.
