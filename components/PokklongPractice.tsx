@@ -1,4 +1,5 @@
 "use client";
+import { QuestionVisual } from "./QuestionVisual";
 import { useEffect, useRef, useState } from "react";
 import bank from "@/data/pokklong/questions.json";
 import { choiceLetter } from "@/lib/shuffle";
@@ -324,6 +325,7 @@ function Question({
         onChoose={onChoose}
         onNext={onNext}
       />
+      {revealed && <QuestionVisual question={{ id: question.id, sections: [], choices: question.options, answer: question.answer, explanation: question.why, logic: question.logic_so_far }} position={index} selected={selected ?? undefined} lang={lang} />}
     </div>
   );
 }

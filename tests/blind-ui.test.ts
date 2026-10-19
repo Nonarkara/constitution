@@ -1,3 +1,4 @@
+import { questionVisualFor } from "../lib/question-visual.ts";
 /**
  * Drives components/BlindExam.tsx in jsdom as a learner would.
  *
@@ -82,6 +83,10 @@ const registry: Record<string, unknown> = {
 registry["@/lib/blind"] = load("lib/blind.ts", registry);
 registry["./blind.ts"] = registry["@/lib/blind"];
 registry["@/lib/blind-checkpoint"] = load("lib/blind-checkpoint.ts", registry);
+registry["@/lib/question-visual"] = { questionVisualFor };
+registry["./MemoryCue"] = { PalacePicture: () => null };
+registry["next/image"] = { __esModule: true, default: ({src,alt}: {src:string;alt:string}) => React.createElement("img", {src,alt}) };
+registry["./QuestionVisual"] = load("components/QuestionVisual.tsx", registry);
 const { BlindExam } = load("components/BlindExam.tsx", registry) as { BlindExam: () => unknown };
 
 const rootEl = window.document.getElementById("root")!;
@@ -162,6 +167,7 @@ test("the blind pass shows four options and never shows the answer", async () =>
   for (let i = 0; i < bank.length; i++) {
     const rs = radios();
     assert.equal(rs.length, 4, "every question must render");
+    assert.equal(doc.querySelector(".question-visual"), null, "blind sitting contains no answer diagram");
     assert.equal(doc.activeElement, doc.querySelector("h1"), "each new prompt receives keyboard focus");
     const wrong = (rs[0] as HTMLInputElement);
     const current = bank.find((x: Bank[number]) => x.prompt.th === currentPrompt());
@@ -207,6 +213,7 @@ test("every miss is owed and re-asked until it is right", async () => {
   assert.ok(!body().includes(q.logic.th));
   assert.ok(!body().includes(q.explanation.th));
   assert.equal(doc.querySelector(".blind-recap"), null);
+  assert.equal(doc.querySelector(".question-visual"), null, "visual must be removed while retry is concealed");
   await choose((q.answer + 2) % 4);
   await tap(button("ตรวจ"));
   await settle();
@@ -264,6 +271,24 @@ test("a perfect sitting skips review and restarts cleanly", async () => {
   await tap(button("ไปต่อ"));
   assert.match(body(), /ครั้งแรกได้ 90 \/ 90/);
   assert.equal(radios().length, 0);
+});
+
+test("visual stops follow the review queue even when every third blind item was correct", async () => {
+  await tap(button("สอบอีกครั้ง"));
+  await tap(button("เริ่มสอบ"));
+  for (const [i, q] of bank.entries()) {
+    await choose(i % 3 === 2 ? q.answer : (q.answer + 1) % 4);
+    await tap(button("ส่งคำตอบ"));
+  }
+  await tap(button("ดูเฉลยทีละข้อ"));
+  for (let i = 0; i < 2; i++) {
+    const q = bank.find(x => x.prompt.th === currentPrompt())!;
+    await tap(button("ซ่อนเฉลย"));
+    await choose(q.answer);
+    await tap(button("ตรวจ"));
+    await tap(button("ข้อถัดไป"));
+  }
+  assert.ok(doc.querySelector(".question-visual"), "the third owed question gets a visual regardless of its original position");
 });
 
 test("storage failure is visible rather than claiming a save", async () => {

@@ -1,4 +1,5 @@
 "use client";
+import { QuestionVisual } from "./QuestionVisual";
 import { Suspense, useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -504,6 +505,7 @@ function ConstitutionArena() {
                 </div>
 
                 <p className="explanation-body">{currentQ.explanation[lang]}</p>
+                <QuestionVisual question={currentQ} position={currentIndex} selected={selectedChoice ?? undefined} lang={lang} />
                 <TeachingSteps question={currentQ} selected={selectedChoice ?? undefined}/>
                 <ExplainBack section={currentQ.sections[0]}/>
 

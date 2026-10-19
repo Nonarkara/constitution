@@ -1,4 +1,5 @@
 "use client";
+import { QuestionVisual } from "./QuestionVisual";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { choiceLetter, fisherYates } from "@/lib/shuffle";
@@ -281,6 +282,7 @@ export function BlindExam() {
             </>
           )}
           <p>{q.explanation[lang]}</p>
+          <QuestionVisual question={q} position={s.owed.indexOf(q.id)} selected={s.firstTry[q.id]} lang={lang} />
           {q.source && <p className="micro"><a href={q.source.url} target="_blank" rel="noopener noreferrer">{q.source.title} ↗</a> · {tr(lang, "ข้อมูล ณ", "As of", "资料日期")} {q.source.asOf}</p>}
           {q.sections.length > 0 && (
             <div className="micro">

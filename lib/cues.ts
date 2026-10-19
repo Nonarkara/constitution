@@ -66,7 +66,11 @@ export function topicFor(item: MemoryItem): string | null {
   }
   const sections = item.sections ?? [];
   if (sections.includes(255) && !sections.includes(256)) return "unamendable";
-  if (sections.includes(256) && !sections.includes(255)) return "amendment-petition";
+  if (sections.includes(256) && !sections.includes(255)) {
+    const prompt = `${item.prompt?.th ?? ""} ${item.prompt?.en ?? ""} ${item.prompt?.zh ?? ""}`;
+    if (/signature|eligible voters|citizen.*propos|รายชื่อ|ลงชื่อ|ลงนาม|ผู้มีสิทธิเลือกตั้ง.*คน|联署|签名|选民/i.test(prompt)) return "amendment-petition";
+    return null;
+  }
   if (sections.length === 1 && sections[0] === 158) {
     const blob = `${item.prompt?.th ?? ""} ${item.prompt?.en ?? ""} ${item.prompt?.zh ?? ""}`;
     if (/35|สามสิบห้า|三十五|Cabinet size|other ministers|จำนวนคณะรัฐมนตรี|รัฐมนตรีอื่น/.test(blob))

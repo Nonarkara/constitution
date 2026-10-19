@@ -1,3 +1,4 @@
+import { questionVisualFor } from "../lib/question-visual.ts";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -45,8 +46,12 @@ function load(file: string, extras: Record<string, unknown> = {}) {
   new Function("require", "module", "exports", compiled)((id: string) => id in registry ? registry[id] : require(id), module, module.exports);
   return module.exports;
 }
+const visual = load("../components/QuestionVisual.tsx", {
+ "@/lib/question-visual": { questionVisualFor }, "./MemoryCue": { PalacePicture: () => null },
+ "next/image": { __esModule: true, default: ({src,alt}: {src:string;alt:string}) => React.createElement("img", {src,alt}) },
+});
 const card = load("../components/GuessFirstCard.tsx");
-const { PokklongPractice } = load("../components/PokklongPractice.tsx", { "./GuessFirstCard": card });
+const { PokklongPractice } = load("../components/PokklongPractice.tsx", { "./GuessFirstCard": card, "./QuestionVisual": visual });
 
 test("Pokklong remains usable with blocked storage and warns when an answer cannot save", async () => {
   const previous = Object.getOwnPropertyDescriptor(globalThis, "localStorage");

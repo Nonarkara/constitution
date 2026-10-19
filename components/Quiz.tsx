@@ -1,4 +1,5 @@
 "use client";
+import { QuestionVisual } from "./QuestionVisual";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import questions from "@/data/questions.json";
@@ -287,6 +288,7 @@ export function Quiz({
                   )}
             </strong>
             <p>{q.explanation[lang]}</p>
+            <QuestionVisual question={q} position={index} selected={choice === null ? undefined : order[choice]} lang={lang} />
             {recallDraft.trim() && <p className="micro">{tr(lang,"ความคิดก่อนเห็นตัวเลือก:","Your thought before the options:","看选项前的想法：")} {recallDraft}</p>}
             {matchingWhys(cases, q).map((item) => (
                 <p key={item.id}>{item.why[lang]}</p>

@@ -1,4 +1,6 @@
 "use client";
+import { EXAM_CHECKPOINT, parseTimedCheckpoint, paperFingerprint } from "@/lib/exam-checkpoint";
+import { QuestionVisual } from "./QuestionVisual";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import questions from "@/data/questions.json";
@@ -31,6 +33,37 @@ export function Exam() {
   const [index, setIndex] = useState(0);
   const [done, setDone] = useState(false);
   const [now, setNow] = useState(0);
+  const [paperNumber, setPaperNumber] = useState(1);
+  const [checkpointReady, setCheckpointReady] = useState(false);
+  const [checkpointError, setCheckpointError] = useState(false);
+  const [resumed, setResumed] = useState(false);
+  useEffect(() => {
+    if (!ready) return;
+    try {
+      const raw = localStorage.getItem(EXAM_CHECKPOINT);
+      if (raw) {
+        const saved = JSON.parse(raw);
+        const format = FORMATS.find(f => f.number === saved.paperNumber);
+        if (format) {
+          const list = makePaper(questions, format);
+          const checkpoint = parseTimedCheckpoint(raw, list, format.number, Date.now());
+          if (checkpoint) {
+            setPaper({list, ends: checkpoint.ends}); setPaperNumber(format.number);
+            setAnswers(checkpoint.answers); setIndex(checkpoint.index); setNow(Date.now()); setResumed(true);
+          }
+        }
+      }
+    } catch { setCheckpointError(true); }
+    setCheckpointReady(true);
+  }, [ready]);
+  useEffect(() => {
+    if (!checkpointReady) return;
+    try {
+      if (paper && !done) localStorage.setItem(EXAM_CHECKPOINT, JSON.stringify({paperNumber, ends:paper.ends,index,answers,fingerprint:paperFingerprint(paper.list)}));
+      else localStorage.removeItem(EXAM_CHECKPOINT);
+      setCheckpointError(false);
+    } catch { setCheckpointError(true); }
+  }, [checkpointReady, paper, done, paperNumber, index, answers]);
   useHidePageNext((Boolean(paper) && !done) || repair !== null);
 
   useEffect(() => {
@@ -97,10 +130,12 @@ export function Exam() {
           {FORMATS.map((f, i) => (
             <button
               key={f.id}
-              disabled={!ready}
+              disabled={!ready || !checkpointReady}
               className={"exam-paper-card" + (i === 0 ? " primary" : "")}
               onClick={() => {
                 const started = Date.now();
+                setPaperNumber(f.number);
+                setResumed(false);
                 setAnswers({});
                 setIndex(0);
                 setDone(false);
@@ -183,7 +218,7 @@ export function Exam() {
         <button onClick={()=>setRepair(paper.list.filter(q=>answers[q.id]!==q.answer).map(q=>q.id))}>{tr(lang,"ฝึกข้อที่ผิดและข้อที่ยังไม่ตอบ","Practise wrong and unanswered questions","练习错题与未答题")} →</button>
         {paper.list
           .filter((q) => answers[q.id] !== q.answer)
-          .map((q) => (
+          .map((q, visualIndex) => (
             <article className="reading-excerpt" key={q.id}>
               <h3>{q.prompt[lang]}</h3>
               <p className="micro">
@@ -193,6 +228,7 @@ export function Exam() {
                 {tr(lang, "คำตอบ", "Answer", "答案")} {choiceLetter(lang,q.answer)}. {q.choices[q.answer][lang]}
               </p>
               <p>{q.explanation[lang]}</p>
+              <QuestionVisual question={q} position={visualIndex} selected={answers[q.id]} lang={lang} />
               <TeachingSteps question={q} selected={answers[q.id]}/>
               <ExplainBack section={q.sections[0]}/>
               <div>
@@ -214,6 +250,8 @@ export function Exam() {
   const answered = Object.keys(answers).length;
   return (
     <section className="quiz">
+      {resumed && <p className="micro" role="status">{tr(lang,"กลับมาทำต่อจากคำตอบเดิม เวลาเดิมยังเดินต่อ","Your saved paper is restored. The original deadline still applies.","已恢复原来的答卷，仍按原截止时间计时。")}</p>}
+      {checkpointError && <p className="notice" role="status">{tr(lang,"เครื่องนี้บันทึกชุดสอบไม่ได้ อย่าปิดหรือรีเฟรชก่อนส่งคำตอบ","This browser cannot save the active paper. Keep this page open until you submit.","此浏览器无法保存当前答卷，请交卷前不要关闭或刷新页面。")}</p>}
       <div className="section-heading">
         <span className="mono">
           {String(index + 1).padStart(2, "0")} / {String(paper.list.length).padStart(2, "0")}
