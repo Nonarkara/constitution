@@ -87,6 +87,10 @@ registry["@/lib/question-visual"] = { questionVisualFor };
 registry["./MemoryCue"] = { PalacePicture: () => null };
 registry["next/image"] = { __esModule: true, default: ({src,alt}: {src:string;alt:string}) => React.createElement("img", {src,alt}) };
 registry["./QuestionVisual"] = load("components/QuestionVisual.tsx", registry);
+// The brief carries the page's crayon drawing. It is loaded for real, not
+// stubbed away, so the test sees the same DOM the learner does — and the
+// drawing only ever appears on the brief, never during the blind pass.
+registry["./StudyArt"] = load("components/StudyArt.tsx", registry);
 const { BlindExam } = load("components/BlindExam.tsx", registry) as { BlindExam: () => unknown };
 
 const rootEl = window.document.getElementById("root")!;

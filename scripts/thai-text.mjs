@@ -81,15 +81,27 @@ const LIST_MARKER = /[()]*[๐-๙0-9][)๐-๙\]]/g;
  * to be cut in half, and the only way to satisfy it is to damage the law.
  * These are masked out before the markers are looked for.
  *
+ * "ตั้งแต่" is in this list for a different, sharper reason: it is one word
+ * meaning "since", and splitting it at the marker turns it into "ตั้ง" (to
+ * set up) plus "แต่" (but) — which inverts the sense of the sentence. It
+ * appears 29 times in the corpus, so the detector reaches it constantly.
+ *
  * The list is deliberately short. A marker that merely STARTS a compound is
  * still a boundary — "โดยการเกิด" splits before "โดย" — so only markers that
  * sit INSIDE a word are trapped.
+ *
+ * Words that are NOT trapped, and why: "มีแต่" (there is only) and
+ * "เพียงแต่" (only) also contain "แต่", but in those the "แต่" really is the
+ * conjunction, and splitting them reads correctly — "มี" | "แต่ประมวลกฎหมาย"
+ * is "there is" | "only the law-processing". Trapping them would remove a
+ * legitimate split point, so they stay untrapped.
  */
 const COMPOUND_TRAPS = [
   "มหากษัตริย์",
   "แต่งตั้ง",
   "ความต้องการ",
   "ถูกต้อง",
+  "ตั้งแต่",
 ];
 
 export const TH_SOFT = 60;
@@ -101,6 +113,21 @@ export const thaiRuns = (text) =>
     .split(/\s+/)
     .map((s) => s.trim())
     .filter(Boolean);
+
+/**
+ * Thai script, and the CJK block it must not be mixed with.
+ *
+ * A run is a Thai run only if it contains Thai AND no Chinese ideographs.
+ * Presence of Thai alone is not enough: a Chinese explanation that quotes one
+ * Thai term (ทบวงการเมือง) would otherwise be measured as one enormous Thai
+ * stretch, and the Chinese measurement would be skipped entirely.
+ */
+const HAS_THAI = /[\u0E00-\u0E7F]/;
+const HAS_CJK = /[\u3400-\u9FFF\uF900-\uFAFF]/;
+const isThaiRun = (s) => HAS_THAI.test(s) && !HAS_CJK.test(s);
+
+/** Is this stretch Thai text, rather than Chinese or English that merely quotes a Thai term? */
+export { isThaiRun };
 
 /** Blank out compound traps, keeping every index the same. */
 function maskTraps(run) {
@@ -184,6 +211,10 @@ export function isViolation(run) {
 export function thaiViolations(text) {
   const out = [];
   for (const run of thaiRuns(text)) {
+    // Chinese and English text can be passed here by mistake — a Chinese
+    // explanation with no spaces is one enormous "run" and would be measured
+    // as a Thai one. Only a run that is actually Thai is a Thai run.
+    if (!isThaiRun(run)) continue;
     const v = isViolation(run);
     if (v) out.push({ run, ...v });
   }

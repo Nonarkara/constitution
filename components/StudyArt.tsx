@@ -18,6 +18,11 @@ export const STUDY_ART = {
   along: "/illustrations/tikki-along-pastel.webp",
   amend: "/illustrations/tikki-amend-pastel.webp",
   bible: "/illustrations/tikki-bible-pastel.webp",
+  // The guide index and a guide chapter are two different pages, so they get
+  // two different drawings. One picture has to cue one place, or it cues
+  // none: a drawing a learner sees on the chapter list AND on every chapter
+  // tells them nothing they can navigate by.
+  bibleGuide: "/illustrations/tikki-bible-guide-pastel.webp",
   cheatsheet: "/illustrations/tikki-cheatsheet-pastel.webp",
   cram: "/illustrations/tikki-cram-pastel.webp",
   drills: "/illustrations/tikki-drills-pastel.webp",

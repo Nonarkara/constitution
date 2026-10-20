@@ -47,6 +47,16 @@ jobs:
       # size on the page, and no page lets a wall of identical cards compete
       # with itself for the reader's attention.
       - run: npm run check:hierarchy
+      # Sentence gate: no question, choice, explanation or rule is written as
+      # one long compound sentence — in English, Chinese or Thai. It was in the
+      # local release chain only, which meant a pull request could merge a
+      # page of run-ons while every CI job was green.
+      - run: npm run check:sentences
+      # Data-integrity gate: no question, choice, explanation or rule may lose a
+      # number, a section reference or a modal verb. The baseline is the review
+      # surface — a pull request that moves a fact has to move the baseline too,
+      # and the diff says which fact moved.
+      - run: npm run check:data
 
   # A gate that has never failed proves nothing. This job injects one real
   # violation per hierarchy rule into the built site and requires the gate to

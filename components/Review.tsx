@@ -13,7 +13,7 @@ import { analyzeUserLearning } from "@/lib/adaptive";
 import { StudyArt } from "./StudyArt";
 
 export function Review() {
-  const { lang, progress, annotations, examTarget } = useStudy();
+  const { lang, progress, annotations } = useStudy();
   const [now, setNow] = useState(0),
     [active, setActive] = useState(false),
     [mode, setMode] = useState<"due" | "mix" | "annotated" | "weak">("due");
@@ -27,8 +27,8 @@ export function Review() {
   const due = dueQuestions(questions, progress, now);
 
   const profile = useMemo(() => {
-    return analyzeUserLearning(questions, progress, annotations, examTarget);
-  }, [progress, annotations, examTarget]);
+    return analyzeUserLearning(questions, progress, annotations);
+  }, [progress, annotations]);
 
   const annotatedQuestions = useMemo(() => {
     const annotatedSecs = new Set(Object.keys(annotations).map(Number));

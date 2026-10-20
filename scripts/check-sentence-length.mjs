@@ -41,6 +41,7 @@
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { thaiViolations, TH_SOFT, TH_HARD } from "./thai-text.mjs";
+import { bankChunks } from "./bank-fields.mjs";
 
 const EN_WORDS = 32;
 const ZH_CHARS = 60;
@@ -81,11 +82,11 @@ export async function sentenceViolations(root = process.cwd()) {
       continue;
     }
     for (const q of list) {
-      const chunks = [];
-      if (q.prompt) chunks.push(["prompt", q.prompt]);
-      (q.choices || []).forEach((c, i) => chunks.push([`choice${i}`, c]));
-      if (q.explanation) chunks.push(["explanation", q.explanation]);
-      for (const [where, field] of chunks) {
+      // The field list is shared with the rewrite pipeline (scripts/bank-fields.mjs).
+      // It used to be written out twice, and the two copies drifted: `logic` was
+      // measured by neither, so 30 over-long Thai runs and 10 over-long English
+      // sentences shipped in it while every gate was green.
+      for (const [where, field] of bankChunks(q)) {
         if (!field) continue;
         if (field.en) {
           for (const s of enSentences(field.en)) {

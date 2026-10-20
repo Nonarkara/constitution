@@ -14,7 +14,6 @@ import {
   saveStoredAnnotations,
   type UserAnnotations,
 } from "@/lib/annotations";
-import type { ExamTarget } from "@/lib/adaptive";
 import { MARKS_KEY, emptyMarks, parseMarks, type Marks } from "@/lib/marks";
 import { workerMessage, type OfflineStatus } from "@/lib/offline";
 import type { Lang } from "@/lib/i18n";
@@ -34,8 +33,6 @@ type State = {
   read: ReadLog;
   saveRead: (r: ReadLog) => void;
   noteRead: (n: number) => void;
-  examTarget: ExamTarget;
-  setExamTarget: (t: ExamTarget) => void;
   ready: boolean;
   storageError: boolean;
   offline: OfflineStatus;
@@ -50,7 +47,6 @@ export function Provider({ children }: { children: ReactNode }) {
     [annotations, setA] = useState<UserAnnotations>(defaultAnnotations),
     [marks, setM] = useState<Marks>(emptyMarks),
     [read, setR] = useState<ReadLog>({}),
-    [examTarget, setTarget] = useState<ExamTarget>("all"),
     [ready, setReady] = useState(false),
     [storageError, setStorageError] = useState(false),
     [large, setBig] = useState(false);
@@ -91,16 +87,6 @@ export function Provider({ children }: { children: ReactNode }) {
       try {
         setR(parseRead(JSON.parse(localStorage.getItem(READ_KEY) ?? "{}")) ?? {});
       } catch {}
-      const savedTarget = localStorage.getItem("constitution-exam-target") as ExamTarget | null;
-      if (
-        savedTarget === "all" ||
-        savedTarget === "ocsc" ||
-        savedTarget === "governor" ||
-        savedTarget === "legal" ||
-        savedTarget === "civic"
-      ) {
-        setTarget(savedTarget);
-      }
     } catch {
       setStorageError(true);
     }
@@ -230,14 +216,6 @@ export function Provider({ children }: { children: ReactNode }) {
         } catch {}
       return next;
     });
-  const setExamGoal = (t: ExamTarget) => {
-    setTarget(t);
-    try {
-      localStorage.setItem("constitution-exam-target", t);
-    } catch {
-      setStorageError(true);
-    }
-  };
   const setLarge = (b: boolean) => {
     setBig(b);
     try {
@@ -261,8 +239,6 @@ export function Provider({ children }: { children: ReactNode }) {
         read,
         saveRead,
         noteRead,
-        examTarget,
-        setExamTarget: setExamGoal,
         ready,
         storageError,
         offline,

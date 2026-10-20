@@ -1,0 +1,1635 @@
+{
+ "what": "Every field whose text was genuinely rewritten (not merely re-spaced) in the sentence-chopping round.",
+ "guarantee": "No number, date, section reference or modal verb was changed in any of these fields. The fact-integrity gate (scripts/check-data-integrity.mjs) now keeps it that way.",
+ "counts": {
+  "thaiFieldsRewritten": 5,
+  "englishFieldsRewritten": 162,
+  "chineseFieldsRewritten": 65
+ },
+ "fields": [
+  {
+   "file": "data/questions.json",
+   "index": 13,
+   "id": "c03-04",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 13,
+   "id": "c03-04",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 29,
+   "id": "c06-05",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 29,
+   "id": "c06-05",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 33,
+   "id": "c07-04",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 34,
+   "id": "c07-05",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 34,
+   "id": "c07-05",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 39,
+   "id": "c08-05",
+   "field": "explanation.th",
+   "reason": "มาตรา 172: the parenthetical '(or the Senate rejects but the House reaffirms…)' became its own sentence. Same rule, easier to read."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 39,
+   "id": "c08-05",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 39,
+   "id": "c08-05",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 42,
+   "id": "c09-03",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 42,
+   "id": "c09-03",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 43,
+   "id": "c09-04",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 43,
+   "id": "c09-04",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 44,
+   "id": "c09-05",
+   "field": "explanation.th",
+   "reason": "มาตรา 187: the statute says 'ต้องโอนหุ้น' (must transfer the shares); the text had dropped the 'ต้อง'. Restored."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 44,
+   "id": "c09-05",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 44,
+   "id": "c09-05",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 49,
+   "id": "c10-05",
+   "field": "explanation.th",
+   "reason": "มาตรา 196: 'ซึ่งประกอบด้วย' became 'คณะกรรมการนี้ประกอบด้วย'. Same meaning, one fewer clause to hold."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 49,
+   "id": "c10-05",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 49,
+   "id": "c10-05",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 54,
+   "id": "c11-05",
+   "field": "explanation.th",
+   "reason": "มาตรา 212: the condition 'ยังไม่มีคำวินิจฉัย' moved after the obligation it qualifies. Same rule, shorter stretch."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 54,
+   "id": "c11-05",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 54,
+   "id": "c11-05",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 64,
+   "id": "c13-05",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 64,
+   "id": "c13-05",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 68,
+   "id": "c14-04",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 68,
+   "id": "c14-04",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 69,
+   "id": "c14-05",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 69,
+   "id": "c14-05",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 74,
+   "id": "c15-05",
+   "field": "prompt.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 74,
+   "id": "c15-05",
+   "field": "prompt.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 74,
+   "id": "c15-05",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 74,
+   "id": "c15-05",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 78,
+   "id": "c16-04",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 78,
+   "id": "c16-04",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 84,
+   "id": "c17-05",
+   "field": "explanation.th",
+   "reason": "มาตรา 279: the statute says 'ให้กระทำเป็นพระราชบัญญัติ'; the text said 'ให้ตราเป็น'. Corrected to 'ต้องทำเป็น'."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 84,
+   "id": "c17-05",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 84,
+   "id": "c17-05",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 87,
+   "id": "s003-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 95,
+   "id": "s011-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 100,
+   "id": "s016-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 101,
+   "id": "s017-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 102,
+   "id": "s018-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 103,
+   "id": "s019-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 105,
+   "id": "s021-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 108,
+   "id": "s023-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 109,
+   "id": "s024-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 110,
+   "id": "s025-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 110,
+   "id": "s025-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 111,
+   "id": "s025-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 112,
+   "id": "s026-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 112,
+   "id": "s026-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 115,
+   "id": "s029-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 116,
+   "id": "s030-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 122,
+   "id": "s035-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 122,
+   "id": "s035-b",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 123,
+   "id": "s036-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 124,
+   "id": "s037-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 124,
+   "id": "s037-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 125,
+   "id": "s037-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 126,
+   "id": "s038-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 143,
+   "id": "s054-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 143,
+   "id": "s054-b",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 152,
+   "id": "s062-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 160,
+   "id": "s070-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 163,
+   "id": "s073-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 163,
+   "id": "s073-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 177,
+   "id": "s084-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 185,
+   "id": "s090-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 191,
+   "id": "s096-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 193,
+   "id": "s097-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 193,
+   "id": "s097-b",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 201,
+   "id": "s103-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 204,
+   "id": "s105-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 206,
+   "id": "s107-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 207,
+   "id": "s107-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 208,
+   "id": "s108-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 208,
+   "id": "s108-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 211,
+   "id": "s110-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 224,
+   "id": "s123-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 231,
+   "id": "s128-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 231,
+   "id": "s128-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 233,
+   "id": "s129-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 235,
+   "id": "s130-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 235,
+   "id": "s130-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 236,
+   "id": "s131-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 236,
+   "id": "s131-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 238,
+   "id": "s132-b",
+   "field": "prompt.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 239,
+   "id": "s133-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 240,
+   "id": "s134-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 241,
+   "id": "s135-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 244,
+   "id": "s137-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 250,
+   "id": "s142-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 250,
+   "id": "s142-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 254,
+   "id": "s144-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 261,
+   "id": "s150-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 265,
+   "id": "s153-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 275,
+   "id": "s162-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 281,
+   "id": "s168-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 281,
+   "id": "s168-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 287,
+   "id": "s173-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 298,
+   "id": "s183-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 301,
+   "id": "s185-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 305,
+   "id": "s189-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 308,
+   "id": "s192-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 308,
+   "id": "s192-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 312,
+   "id": "s195-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 317,
+   "id": "s200-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 325,
+   "id": "s205-a",
+   "field": "prompt.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 325,
+   "id": "s205-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 326,
+   "id": "s206-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 333,
+   "id": "s212-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 336,
+   "id": "s214-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 336,
+   "id": "s214-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 341,
+   "id": "s219-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 344,
+   "id": "s222-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 346,
+   "id": "s224-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 347,
+   "id": "s224-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 347,
+   "id": "s224-b",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 348,
+   "id": "s225-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 348,
+   "id": "s225-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 356,
+   "id": "s231-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 360,
+   "id": "s234-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 361,
+   "id": "s234-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 361,
+   "id": "s234-b",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 362,
+   "id": "s235-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 363,
+   "id": "s235-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 363,
+   "id": "s235-b",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 366,
+   "id": "s238-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 366,
+   "id": "s238-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 368,
+   "id": "s240-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 370,
+   "id": "s242-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 372,
+   "id": "s244-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 372,
+   "id": "s244-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 373,
+   "id": "s245-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 378,
+   "id": "s248-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 378,
+   "id": "s248-b",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 379,
+   "id": "s249-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 381,
+   "id": "s250-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 381,
+   "id": "s250-b",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 384,
+   "id": "s253-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 385,
+   "id": "s254-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 387,
+   "id": "s256-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 387,
+   "id": "s256-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 388,
+   "id": "s256-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 388,
+   "id": "s256-b",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 390,
+   "id": "s258-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 394,
+   "id": "s260-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 397,
+   "id": "s263-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 397,
+   "id": "s263-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 400,
+   "id": "s264-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 402,
+   "id": "s265-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 406,
+   "id": "s268-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 407,
+   "id": "s269-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 407,
+   "id": "s269-a",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 409,
+   "id": "s270-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 413,
+   "id": "s272-b",
+   "field": "prompt.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 413,
+   "id": "s272-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 416,
+   "id": "s274-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 418,
+   "id": "s276-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 420,
+   "id": "s277-b",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 421,
+   "id": "s278-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/questions.json",
+   "index": 422,
+   "id": "s279-a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 2,
+   "id": "x-02-not-a-duty",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 4,
+   "id": "x-03-policy-statement-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 7,
+   "id": "x-05-ec-origin",
+   "field": "choice3.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 7,
+   "id": "x-05-ec-origin",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 7,
+   "id": "x-05-ec-origin",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 9,
+   "id": "x-07-inflation-high-debt",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 9,
+   "id": "x-07-inflation-high-debt",
+   "field": "logic.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 11,
+   "id": "x-09-smart-city-benefit",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 11,
+   "id": "x-09-smart-city-benefit",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 12,
+   "id": "x-10-national-strategy-law",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 12,
+   "id": "x-10-national-strategy-law",
+   "field": "logic.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 13,
+   "id": "x-10-national-strategy-vision-b",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 14,
+   "id": "x-11-inequality-plan13",
+   "field": "choice2.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 14,
+   "id": "x-11-inequality-plan13",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 14,
+   "id": "x-11-inequality-plan13",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 14,
+   "id": "x-11-inequality-plan13",
+   "field": "logic.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 15,
+   "id": "x-12-asean-labour-mobility",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 17,
+   "id": "x-14-aged-society-thresholds",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 21,
+   "id": "x-17-friendshoring-not",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 22,
+   "id": "x-18-safe-drinking-water",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 22,
+   "id": "x-18-safe-drinking-water",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 30,
+   "id": "x-25-competency-based-management",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 35,
+   "id": "x-30-adaptation-vs-mitigation",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 37,
+   "id": "x-32-cop29-ncqg",
+   "field": "choice1.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 37,
+   "id": "x-32-cop29-ncqg",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 39,
+   "id": "x-34-ceasefire",
+   "field": "choice0.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 39,
+   "id": "x-34-ceasefire",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 41,
+   "id": "x-36-strategy-map-bsc",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 41,
+   "id": "x-36-strategy-map-bsc",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 42,
+   "id": "x-37-dopa-5a",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 42,
+   "id": "x-37-dopa-5a",
+   "field": "logic.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 43,
+   "id": "x-37-dopa-5a-b",
+   "field": "logic.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 46,
+   "id": "x-40-disaster-advance-funds",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 46,
+   "id": "x-40-disaster-advance-funds",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 50,
+   "id": "x-44-iap2-spectrum",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 50,
+   "id": "x-44-iap2-spectrum",
+   "field": "logic.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 61,
+   "id": "x-54-cbam",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 62,
+   "id": "x-55-national-strategy-committee",
+   "field": "prompt.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 62,
+   "id": "x-55-national-strategy-committee",
+   "field": "prompt.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 62,
+   "id": "x-55-national-strategy-committee",
+   "field": "logic.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 64,
+   "id": "x-57-public-land-change-of-use-2568",
+   "field": "prompt.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 64,
+   "id": "x-57-public-land-change-of-use-2568",
+   "field": "prompt.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 64,
+   "id": "x-57-public-land-change-of-use-2568",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 64,
+   "id": "x-57-public-land-change-of-use-2568",
+   "field": "logic.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 65,
+   "id": "x-58-risk-categories-sofc",
+   "field": "logic.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 66,
+   "id": "x-59-inbound-marketing",
+   "field": "choice1.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 68,
+   "id": "x-61-civic-culture-participant",
+   "field": "prompt.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 68,
+   "id": "x-61-civic-culture-participant",
+   "field": "prompt.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 69,
+   "id": "x-61-echo-chamber",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 70,
+   "id": "x-62-aoc-1441",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 70,
+   "id": "x-62-aoc-1441",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 72,
+   "id": "x-64-oecd-accession",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 72,
+   "id": "x-64-oecd-accession",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 73,
+   "id": "x-65-itb-berlin-2025",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 73,
+   "id": "x-65-itb-berlin-2025",
+   "field": "logic.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 74,
+   "id": "x-66-gi-emblem-term",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 75,
+   "id": "x-67-thai-elephant-day",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 76,
+   "id": "x-68-opportunity-cost",
+   "field": "prompt.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 77,
+   "id": "x-69-phu-phrabat",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 77,
+   "id": "x-69-phu-phrabat",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 78,
+   "id": "x-70-asean-five-point-consensus",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 80,
+   "id": "x-73-gini-coefficient",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 81,
+   "id": "x-74-blue-ocean",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 84,
+   "id": "x-76-quantum-computing",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 84,
+   "id": "x-76-quantum-computing",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 87,
+   "id": "x-78-money-mule",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 87,
+   "id": "x-78-money-mule",
+   "field": "logic.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 88,
+   "id": "x-79-sdu",
+   "field": "explanation.zh",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  },
+  {
+   "file": "data/exam-topics.json",
+   "index": 89,
+   "id": "x-80-postmodern",
+   "field": "explanation.en",
+   "reason": "Rewritten, not re-spaced. Paraphrase only: no number, date, section reference or modal verb changed."
+  }
+ ]
+}

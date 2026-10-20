@@ -21,7 +21,7 @@ type FlashcardItem = {
 };
 
 export function Flashcards() {
-  const { lang, progress, annotations, examTarget } = useStudy();
+  const { lang, progress, annotations } = useStudy();
   const searchParams = useSearchParams();
 
   // If URL has ?sec=26, jump or filter to that section
@@ -39,8 +39,8 @@ export function Flashcards() {
 
   // Run adaptive analysis to find user weakness & personalized recommendations
   const profile = useMemo(() => {
-    return analyzeUserLearning(questions, progress, annotations, examTarget);
-  }, [progress, annotations, examTarget]);
+    return analyzeUserLearning(questions, progress, annotations);
+  }, [progress, annotations]);
 
   // Construct card deck based on deckType
   const fullDeck: FlashcardItem[] = useMemo(() => {

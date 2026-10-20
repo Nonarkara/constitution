@@ -5,8 +5,6 @@ import { fisherYates } from "./shuffle.ts";
 
 const chapters = outlineData.chapters;
 
-export type ExamTarget = "all" | "ocsc" | "governor" | "legal" | "civic";
-
 export type ChapterAnalysis = {
   chapter: number;
   title: { th: string; en: string; zh: string };
@@ -19,7 +17,6 @@ export type ChapterAnalysis = {
 };
 
 export type UserLearningProfile = {
-  examTarget: ExamTarget;
   weakestChapters: number[];
   annotatedSectionsCount: number;
   recommendation: {
@@ -29,21 +26,17 @@ export type UserLearningProfile = {
   };
 };
 
-// No exam-frequency weights: without a verified past-paper corpus they would be
-// invented (context.md). Priority comes only from the learner's own answers.
-const EXAM_WEIGHTS: Record<ExamTarget, Record<number, number>> = {
-  all: {},
-  ocsc: {},
-  governor: {},
-  legal: {},
-  civic: {},
-};
-
+// No exam-frequency weights. Without a verified past-paper corpus per exam
+// type they would be invented (context.md), and the corpora the site actually
+// has cannot produce them: data/pokklong/questions.json is organised by the
+// twelve administrative STEPS, not by constitution chapter, and
+// data/exam-topics.json covers 8 of the 16 chapters and is topical rather
+// than a frequency-verified paper set. Priority therefore comes only from the
+// learner's own answers.
 export function analyzeUserLearning(
   questions: Pick<Question, "id" | "chapter">[],
   progress: Progress,
   annotations: UserAnnotations,
-  examTarget: ExamTarget = "all",
 ): UserLearningProfile {
   const chapterStats: Record<
     number,
@@ -74,12 +67,10 @@ export function analyzeUserLearning(
     const stats = chapterStats[c.number];
     const accuracy =
       stats.answered > 0 ? Math.round((stats.correct / stats.answered) * 100) : 0;
-    const targetMultiplier = EXAM_WEIGHTS[examTarget]?.[c.number] ?? 1.0;
-
-    // Priority score: higher when accuracy is low, errors are high, or target weight is high
+    // Priority score: higher when accuracy is low or errors are high.
     const errorWeight = stats.errors * 2.5;
     const unmasteredWeight = (stats.total - stats.correct) * 1.2;
-    const priorityScore = (errorWeight + unmasteredWeight) * targetMultiplier;
+    const priorityScore = errorWeight + unmasteredWeight;
 
     return {
       chapter: c.number,
@@ -130,7 +121,6 @@ export function analyzeUserLearning(
   }
 
   return {
-    examTarget,
     weakestChapters,
     annotatedSectionsCount,
     recommendation: {

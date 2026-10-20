@@ -25,6 +25,7 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { thaiViolations, splitAtClauses } from "./thai-text.mjs";
+import { bankChunks } from "./bank-fields.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CHUNK_DIR = path.join(ROOT, "var", "sentence-chunks");
@@ -87,11 +88,8 @@ function findViolations(file) {
         }
       }
     };
-    pushObject("prompt", q.prompt);
-    (q.choices || []).forEach((c, i) => pushObject(`choice${i}`, c));
-    pushObject("question", q.question);
-    pushObject("explanation", q.explanation);
-    pushObject("hook", q.hook);
+    // The SAME field list the release gate measures, imported from one place.
+    for (const [name, obj] of bankChunks(q)) pushObject(name, obj);
     for (const [field, value] of fields) {
       const lang = field.endsWith("en") ? "en" : field.endsWith("zh") ? "zh" : null;
       if (!lang) continue;
@@ -185,7 +183,6 @@ async function merge() {
       const lang = parts[parts.length - 1];
       const base = parts.slice(0, -1).join(".");
       let holder = q;
-      let key = base;
       if (base.startsWith("choice")) {
         const i = Number(base.slice("choice".length));
         if (!Array.isArray(q.choices) || !q.choices[i]) {
@@ -195,12 +192,14 @@ async function merge() {
         // The choice is itself a {th,en,zh} object, so the language is read
         // from it directly rather than from the array.
         holder = q.choices[i];
-      } else if (base === "explanation" || base === "hook") {
+      } else {
+        // Any other prose field is a property of the question itself. Written
+        // generically on purpose: the list once enumerated `explanation` and
+        // `hook` by name, and every field added to the bank afterwards — the
+        // `logic` field — was silently unmergeable. The field list now lives
+        // in one place (scripts/bank-fields.mjs) and the resolution here
+        // follows it rather than repeating it.
         holder = q[base];
-      } else if (base === "question") {
-        holder = q.question;
-      } else if (base === "prompt") {
-        holder = q.prompt;
       }
       if (!holder || typeof holder !== "object" || typeof holder[lang] !== "string") {
         problems.push(`${it.file}[${it.index}] ${it.field}: field not found`);

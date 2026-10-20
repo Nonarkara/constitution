@@ -75,13 +75,65 @@ test("the stylesheet's blocks all close (a merge once split a media query)", () 
 });
 
 test("each drawing appears in one place on the site, never two", () => {
+  // A drawing is a cue for one page. A learner who sees the same picture on
+  // the chapter list and on every chapter has been given a cue that points
+  // nowhere, which is worse than no picture at all.
+  //
+  // The catalogue (components/StudyArt.tsx) is NOT a place. It is the table
+  // that says which file backs which scene, so counting its entries as uses
+  // made every scene whose file lacked the "tikki-" prefix look like it was
+  // used twice. The catalogue is skipped; only placements are counted.
+  const CATALOGUE = "StudyArt.tsx";
   const uses = new Map<string, string[]>();
   for (const f of readdirSync(new URL("../components/", import.meta.url))) {
+    if (f === CATALOGUE) continue;
     const src = readFileSync(new URL(`../components/${f}`, import.meta.url), "utf8");
     for (const m of src.matchAll(/scene="(\w+)"|\/illustrations\/([\w-]+)-pastel\.webp/g)) {
       const scene = m[1] ?? m[2];
       uses.set(scene, [...(uses.get(scene) ?? []), f]);
     }
   }
-  for (const [scene, files] of uses) assert.equal(files.length, 1, `${scene} drawing used in ${files.join(", ")}`);
+  for (const [scene, places] of uses) {
+    assert.equal(places.length, 1, `${scene} drawing appears in ${places.length} places: ${places.join(", ")}`);
+  }
+});
+
+test("the catalogue is a table, not a place: no drawing is placed twice", () => {
+  // The same rule stated the other way round, so that a future change which
+  // puts a scene back into two components is caught even if the first test is
+  // ever weakened. A drawing that is never placed at all is dead weight and
+  // is reported here too.
+  const CATALOGUE = "StudyArt.tsx";
+  const catalogue = readFileSync(new URL(`../components/${CATALOGUE}`, import.meta.url), "utf8");
+  const scenes = new Set(
+    [...catalogue.matchAll(/^\s{2}(\w+):\s*"\/illustrations\//gm)].map((m) => m[1]),
+  );
+  const placed = new Map<string, number>();
+  for (const f of readdirSync(new URL("../components/", import.meta.url))) {
+    if (f === CATALOGUE) continue;
+    const src = readFileSync(new URL(`../components/${f}`, import.meta.url), "utf8");
+    for (const m of src.matchAll(/scene="(\w+)"/g)) {
+      placed.set(m[1], (placed.get(m[1]) ?? 0) + 1);
+    }
+  }
+  for (const [scene, n] of placed) {
+    assert.equal(n, 1, `${scene} is placed ${n} times`);
+  }
+  // The scenes in the catalogue that are not rendered by scene name are the
+  // ones a component reaches by file path instead (reading, listening). They
+  // must still be placed exactly once somewhere.
+  const byPath = new Map<string, number>();
+  for (const f of readdirSync(new URL("../components/", import.meta.url))) {
+    if (f === CATALOGUE) continue;
+    const src = readFileSync(new URL(`../components/${f}`, import.meta.url), "utf8");
+    for (const m of src.matchAll(/\/illustrations\/([\w-]+)-pastel\.webp/g)) {
+      byPath.set(m[1], (byPath.get(m[1]) ?? 0) + 1);
+    }
+  }
+  for (const scene of scenes) {
+    if (placed.has(scene)) continue;
+    const file = scene.replace(/^tikki-/, "");
+    const n = byPath.get(file) ?? 0;
+    assert.equal(n, 1, `${scene} is in the catalogue but placed ${n} times by path`);
+  }
 });

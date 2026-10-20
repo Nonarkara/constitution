@@ -1696,8 +1696,8 @@
     "answer": 0,
     "explanation": {
       "th": "มาตรา 172 กำหนดให้คณะรัฐมนตรีเสนอพระราชกำหนดต่อรัฐสภา เพื่อพิจารณาโดยไม่ชักช้า ในการประชุมรัฐสภาคราวต่อไป หากอยู่นอกสมัยประชุมและการรอจะเป็นการชักช้า ต้องเรียกประชุมสมัยวิสามัญ ถ้าสภาผู้แทนราษฎรและวุฒิสภาอนุมัติ พระราชกำหนดมีผลใช้บังคับเป็นพระราชบัญญัติต่อไป ถ้าวุฒิสภาไม่อนุมัติ แต่สภาผู้แทนราษฎรยืนยันด้วยคะแนนเสียงมากกว่ากึ่งหนึ่ง ของสมาชิกทั้งหมดเท่าที่มีอยู่ พระราชกำหนดก็มีผลใช้บังคับเป็นพระราชบัญญัติต่อไป ถ้าไม่อนุมัติ พระราชกำหนดตกไป แต่ไม่กระทบกิจการที่ได้เป็นไปในระหว่างใช้บังคับ",
-      "en": "Section 172 requires the Cabinet to submit the Emergency Decree to Parliament without delay at its next sitting. If Parliament is out of session and waiting would cause delay, an extraordinary session must be convened. If both Houses approve, the decree continues in force as an Act. So too where the Senate rejects but the House reaffirms by more than half of its existing members. If it is not approved, it lapses without affecting acts done while it was in force.",
-      "zh": "第172条要求内阁在下次国会会议时不延误地将紧急法令提交国会审议。若在闭会期间且等待会造成延误，须召开特别会议。两院批准的，继续作为法律施行。参议院不批准但众议院以超过现有议员半数的票数确认的，同样继续作为法律施行。未获批准的则失效，但不影响施行期间已进行的事项。"
+      "en": "Section 172 requires the Cabinet to submit the Emergency Decree to Parliament without delay at its next sitting. If Parliament is out of session and waiting would cause delay, an extraordinary session must be convened. If both Houses approve, the decree continues in force as an Act. The same applies where the Senate rejects but the House reaffirms it by more than half of its existing members. If it is not approved, it lapses without affecting acts done while it was in force.",
+      "zh": "第172条要求内阁在下次国会会议时不延误地将紧急法令提交国会审议。若在闭会期间且等待会造成延误，须召开特别会议。两院批准的，紧急法令继续作为法律施行。参议院不批准而众议院以超过现有议员半数的票数确认的，紧急法令同样继续作为法律施行。未获批准的则失效，但不影响施行期间已进行的事项。"
     },
     "hook": {
       "th": "พ.ร.ก. = ฉุกเฉินจำเป็นรีบด่วน + ใช้บังคับได้ทันที + ต้องเสนอรัฐสภาโดยไม่ชักช้า",

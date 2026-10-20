@@ -225,7 +225,7 @@ export function BibleIndex({ chapters }: { chapters: { slug: string; order: numb
   return (
     <>
       <div className="intro-copy">
-        <StudyArt scene="bible" />
+        <StudyArt scene="bibleGuide" />
         <div className="intro-text">
           <h1>{tr(lang, "คัมภีร์รัฐธรรมนูญ", "The study guide", "学习指南")}</h1>
           <p>

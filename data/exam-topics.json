@@ -41,7 +41,7 @@
     ],
     "answer": 2,
     "logic": {
-      "th": "หมวด 5 (ม.51–63) ขึ้นต้นด้วย “รัฐต้อง” และเป็นหมวดเดียวที่ฟ้องร้องได้เมื่อหน้าที่นั้นเป็นประโยชน์แก่ประชาชนโดยตรง ส่วนหมวด 6 (ม.64–78) ขึ้นต้นด้วย “รัฐพึง” เป็นแนวทางตรากฎหมายและกำหนดนโยบาย ฟ้องไม่ได้ ข้อใดที่สลับคำว่า “ต้อง” กับ “พึง” ระหว่างสองหมวดนี้ย่อมผิด",
+      "th": "หมวด 5 (ม.51–63) ขึ้นต้นด้วย “รัฐต้อง” และเป็นหมวดเดียวที่ฟ้องร้องได้ เมื่อหน้าที่นั้นเป็นประโยชน์แก่ประชาชน โดยตรง ส่วนหมวด 6 (ม.64–78) ขึ้นต้นด้วย “รัฐพึง” เป็นแนวทางตรากฎหมายและกำหนดนโยบาย ฟ้องไม่ได้ ข้อใดที่สลับคำว่า “ต้อง” กับ “พึง” ระหว่างสองหมวดนี้ย่อมผิด",
       "en": "Chapter 5 (ss.51–63) says the State “must” and alone can be sued over under s.51; Chapter 6 (ss.64–78) says “should” and only guides law-making and policy. An option that swaps “must” and “should” between the two chapters is wrong.",
       "zh": "第五章（第51至63条）用“国家必须”，也只有这一章可依第51条起诉；第六章（第64至78条）用“国家应当”，只是立法与施政的指引。凡把“必须”“应当”两词在两章之间对调的选项，一律错误。"
     },
@@ -300,7 +300,7 @@
     ],
     "answer": 1,
     "logic": {
-      "th": "สิทธิติดตาม เร่งรัด และฟ้องร้องตาม ม.51 ต้องผ่านสองเงื่อนไขพร้อมกัน คือหน้าที่ต้องเป็นการทำเพื่อให้เกิดประโยชน์แก่ประชาชนโดยตรง และการใช้สิทธิต้องเป็นไปตามหลักเกณฑ์และวิธีการที่กฎหมายบัญญัติ อีกทั้งสิทธินี้ผูกกับ “หมวดนี้” คือหมวด 5 เท่านั้น ไม่ครอบคลุมหมวด 6 ไม่ต้องรอมติคณะรัฐมนตรี และประชาชนเป็นผู้ใช้สิทธิเอง",
+      "th": "สิทธิติดตาม เร่งรัด และฟ้องร้องตาม ม.51 ต้องผ่านสองเงื่อนไขพร้อมกัน คือหน้าที่ต้องเป็นการทำเพื่อให้เกิดประโยชน์แก่ประชาชนโดยตรง และการใช้สิทธิ ต้องเป็นไปตามหลักเกณฑ์ และวิธีการที่กฎหมายบัญญัติ อีกทั้งสิทธินี้ผูกกับ “หมวดนี้” คือหมวด 5 เท่านั้น ไม่ครอบคลุมหมวด 6 ไม่ต้องรอมติคณะรัฐมนตรี และประชาชนเป็นผู้ใช้สิทธิเอง",
       "en": "Two cumulative conditions: the duty must be performed “to benefit the people directly”, and the claim must follow the rules and procedures set by law. The right reaches only Chapter 5, needs no Cabinet resolution, and belongs to the people themselves.",
       "zh": "第51条的权利附带两项累积条件：该职责须属“直接惠及人民”，且须依照法律规定的条件和程序行使。该权利仅及于“本章”即第五章，不及第六章，无需内阁决议，并由人民自己行使。"
     },
@@ -351,7 +351,7 @@
     ],
     "answer": 0,
     "logic": {
-      "th": "แยกอำนาจสององค์กรนี้ตามวัตถุ คตง. ตาม ม.240 ทำเรื่องที่เกี่ยวกับการตรวจเงินและวินัยการเงินการคลัง ได้แก่ วางนโยบายและหลักเกณฑ์การตรวจ กำกับการตรวจ ให้คำปรึกษาการใช้จ่ายเงินแผ่นดิน และสั่งลงโทษทางปกครอง ส่วนการไต่สวนความร่ำรวยผิดปกติและทุจริตของเจ้าหน้าที่รัฐเป็นอำนาจ ป.ป.ช. ตาม ม.234 (2) ไม่ใช่ คตง.",
+      "th": "แยกอำนาจสององค์กรนี้ตามวัตถุ คตง. ตาม ม.240 ทำเรื่องที่เกี่ยวกับการตรวจเงินและวินัยการเงินการคลัง ได้แก่ วางนโยบายและหลักเกณฑ์การตรวจ กำกับการตรวจ ให้คำปรึกษาการใช้จ่ายเงินแผ่นดิน และสั่งลงโทษทางปกครอง ส่วนการไต่สวนความร่ำรวยผิดปกติ และทุจริตของเจ้าหน้าที่รัฐเป็นอำนาจ ป.ป.ช. ตาม ม.234 (2) ไม่ใช่ คตง.",
       "en": "Split the two organs by subject. Section 240 covers audit and public-money discipline only: audit policy and standards, supervision, advice on spending, administrative penalties. Unusual-wealth and corruption investigations of officials belong to the NACC under s.234(2).",
       "zh": "按标的划清两机关的权限。第240条只管审计与公款纪律：审计政策与标准、监督审计、支出咨询、行政处罚；调查官员异常富有与渎职腐败属国家反腐败委员会依第234条第（2）项的权限。"
     },
@@ -506,7 +506,7 @@
     "answer": 3,
     "logic": {
       "th": "ดูว่านโยบายการคลังหนุนหรือขัดกับนโยบายการเงิน เมื่อเงินเฟ้อและหนี้สูงพร้อมกัน ทั้งสองนโยบายต้องเข้มงวดไปทางเดียวกัน ตัวลวงคือขึ้นดอกเบี้ยแต่ยังกู้เงินไปอุดหนุนราคาแบบทั่วไป",
-      "en": "The test is whether the fiscal stance reinforces or fights the monetary stance: when inflation and debt are both high, both must tighten together, and the trap is raising rates while borrowing to fund blanket subsidies.",
+      "en": "The test is whether the fiscal stance reinforces or fights the monetary stance. When inflation and debt are both high, both must tighten together. The trap is raising rates while borrowing to fund blanket subsidies.",
       "zh": "判断标准是财政政策与货币政策同向还是背离：通胀与债务同时高企时，两者必须同向紧缩；最典型的陷阱是加息的同时举债发放普惠补贴。"
     },
     "explanation": {
@@ -667,8 +667,8 @@
     ],
     "answer": 2,
     "logic": {
-      "th": "ยุทธศาสตร์ชาติตาม ม.65 เป็นแนวนโยบายจึงขึ้นต้นด้วย “รัฐพึง” และใช้บังคับเมื่อประกาศในราชกิจจานุเบกษา ไม่ใช่เมื่อรัฐสภาลงมติ ไม่ใช่พระราชกฤษฎีกา และกฎหมายว่าด้วยการจัดทำต้องมีบทเรื่องการมีส่วนร่วมและรับฟังความคิดเห็นของประชาชน ส่วนแผนพัฒนาเศรษฐกิจและสังคมฯ ไม่ได้ถูกยกเลิก เพียงอยู่ใต้ยุทธศาสตร์ชาติ",
-      "en": "A national strategy under s.65 is a directive principle: it takes effect when published in the Government Gazette, not by a parliamentary vote or royal decree, and its preparing statute must provide for public participation. The development plans were never abolished.",
+      "th": "ยุทธศาสตร์ชาติตาม ม.65 เป็นแนวนโยบายจึงขึ้นต้นด้วย “รัฐพึง” และใช้บังคับเมื่อประกาศในราชกิจจานุเบกษา ไม่ใช่เมื่อรัฐสภาลงมติ ไม่ใช่พระราชกฤษฎีกา และกฎหมายว่าด้วยการจัดทำ ต้องมีบทเรื่องการมีส่วนร่วม และรับฟังความคิดเห็นของประชาชน ส่วนแผนพัฒนาเศรษฐกิจและสังคมฯ ไม่ได้ถูกยกเลิก เพียงอยู่ใต้ยุทธศาสตร์ชาติ",
+      "en": "A national strategy under s.65 is a directive principle. It takes effect when published in the Government Gazette, not by a parliamentary vote or royal decree. Its preparing statute must provide for public participation. The development plans were never abolished.",
       "zh": "第65条的国家战略属政策指导原则：在政府公报上公布后即生效，既不待议会表决，也不是以国王敕令形式公布；其制定法须规定民众参与与意见征询。国家经济和社会发展计划并未废止，只是置于国家战略之下。"
     },
     "explanation": {
@@ -722,7 +722,7 @@
     ],
     "answer": 1,
     "logic": {
-      "th": "ดูประโยควิสัยทัศน์ในยุทธศาสตร์ฉบับที่ประกาศ 13 ต.ค. 2561 ประโยคที่มีคติพจน์สามคำและระบุว่าพัฒนาตามหลักปรัชญาของเศรษฐกิจพอเพียง ส่วนถ้อยคำว่า “สังคมก้าวหน้า เศรษฐกิจสร้างมูลค่า” เป็นเป้าหมายของแผนฯ 13 ไม่ใช่วิสัยทัศน์ของยุทธศาสตร์",
+      "th": "ดูประโยควิสัยทัศน์ในยุทธศาสตร์ฉบับที่ประกาศ 13 ต.ค. 2561 ประโยคที่มีคติพจน์สามคำ และระบุว่าพัฒนาตามหลักปรัชญาของเศรษฐกิจพอเพียง ส่วนถ้อยคำว่า “สังคมก้าวหน้า เศรษฐกิจสร้างมูลค่า” เป็นเป้าหมายของแผนฯ 13 ไม่ใช่วิสัยทัศน์ของยุทธศาสตร์",
       "en": "In the strategy gazetted 13 October 2018 the vision is the only sentence carrying the three-part motto plus the Sufficiency Economy Philosophy clause; the progressive-society, value-creating wording belongs to the 13th Plan.",
       "zh": "看2018年10月13日公布的国家战略：愿景句里同时带有三字口诀和“遵循适足经济哲学发展”这一从句；含“进步社会、可持续创造价值的经济”字样的说法是第十三个计划的目标，不属于国家战略。"
     },
@@ -778,7 +778,7 @@
     "answer": 2,
     "logic": {
       "th": "ตัวชี้วัดที่ต้องดึงมาคือส่วนต่างรายได้เฉลี่ยห่างกันเกือบ 16 เท่า กับการกระจุกสินทรัพย์เกือบหนึ่งในสามในมือกลุ่มรายได้สูงสุด 10% ซึ่งเป็นเหตุผลของหมุดหมายที่ 9 ขณะที่ตัวเลขเชิงพื้นที่ สัดส่วน SME และผลของโควิดในตัวแปรกลับด้านกับแผนฯ",
-      "en": "Anchor on the poorest-to-richest average income gap and the top tenth holding nearly a third of assets, which is what drove Milestone 9; the spatial, SME-share and COVID options all invert the Plan.",
+      "en": "Anchor on the poorest-to-richest average income gap and the top tenth holding nearly a third of assets. That is what drove Milestone 9. The spatial, SME-share and COVID options all invert the Plan.",
       "zh": "抓住两个指标：最贫困与最富裕群体的平均收入差距接近16倍，以及收入最高的10%人群集中了全国近三分之一的资产——这正是里程碑9的由来。涉及地区份额、中小企业占比和疫情影响的选项都与计划所述相反。"
     },
     "explanation": {
@@ -936,7 +936,7 @@
     ],
     "answer": 3,
     "logic": {
-      "th": "จำเกณฑ์เป็นคู่ (60+/65+) คือ 10/7 ระดับแรก 20/14 ระดับกลาง และ 20 ที่ 65+ ระดับสุดยอด ข้อที่ถูกคือข้อที่ใช้ตัวเลขของระดับกลางครบทั้งสองค่าโดยไม่สลับชื่อระดับ",
+      "th": "จำเกณฑ์เป็นคู่ (60+/65+) คือ 10/7 ระดับแรก 20/14 ระดับกลาง และ 20 ที่ 65+ ระดับสุดยอด ข้อที่ถูกคือข้อที่ใช้ตัวเลขของระดับกลางครบทั้งสองค่า โดยไม่สลับชื่อระดับ",
       "en": "Memorise the ladder as pairs — 60-plus/65-plus of 10/7, then 20/14, then 20 on 65-plus alone; the right option is the one whose two figures belong to the middle, complete-aged tier, unswapped.",
       "zh": "记成三组配对（60岁以上/65岁以上）：10/7、20/14，以及只按65岁以上20%。正确选项是把中间那一级（完全老龄社会）与20%和14%正确对应、且未把等级名称与数字互换的那一项。"
     },
@@ -988,7 +988,7 @@
     ],
     "answer": 1,
     "logic": {
-      "th": "ตัวชี้วัดที่ต้องจำวัดมูลค่าต่อหัว ไม่ใช่จำนวนคน คือค่าใช้จ่ายต่อวันของนักท่องเที่ยวไทยและต่างชาติที่โตเฉลี่ยร้อยละ 10 ต่อปี ส่วนร้อยละ 15 เป็นของนักท่องเที่ยวกลุ่มเดินทางซ้ำ และเป้าหมายดัชนีคืออันดับไม่เกินที่ 25",
+      "th": "ตัวชี้วัดที่ต้องจำวัดมูลค่าต่อหัว ไม่ใช่จำนวนคน คือค่าใช้จ่ายต่อวันของนักท่องเที่ยวไทย และต่างชาติที่โตเฉลี่ยร้อยละ 10 ต่อปี ส่วนร้อยละ 15 เป็นของนักท่องเที่ยวกลุ่มเดินทางซ้ำ และเป้าหมายดัชนีคืออันดับไม่เกินที่ 25",
       "en": "The indicator to recall measures value per visitor, not headcount: Thai and foreign tourists' daily spending rising about 10 percent a year. The 15 percent belongs to repeat visitors; the index target is a rank no worse than 25th.",
       "zh": "要记的指标衡量的是人均价值而非人数：泰国与外国游客的日均消费年均增长约10%。15%是重游游客的数字；发展指数的目标是排名不低于第25位，并非进入前十。"
     },
@@ -1144,7 +1144,7 @@
     ],
     "answer": 3,
     "logic": {
-      "th": "ติดตามข้อแลกเปลี่ยน การเลือกคู่ค้าตามความไว้วางใจทางการเมืองทำให้แหล่งที่มากระจุกตัวและต้นทุนบางส่วนสูงขึ้น ข้ออ้างว่าหลากหลายขึ้นและต้นทุนโลกลดลงจึงกลับกลไกตรงข้าม",
+      "th": "ติดตามข้อแลกเปลี่ยน การเลือกคู่ค้าตามความไว้วางใจทางการเมือง ทำให้แหล่งที่มากระจุกตัว และต้นทุนบางส่วนสูงขึ้น ข้ออ้างว่าหลากหลายขึ้นและต้นทุนโลกลดลงจึงกลับกลไกตรงข้าม",
       "en": "Follow the trade-off: choosing partners for political trust concentrates sources and raises some costs, so claims of more diversity and cheaper global production reverse the mechanism.",
       "zh": "抓住这个取舍：按政治信任选伙伴会收窄来源、抬高部分成本，因此“来源更多元、全球更便宜”的说法恰好颠倒了机制。"
     },
@@ -1200,7 +1200,7 @@
     ],
     "answer": 0,
     "logic": {
-      "th": "จุดตัดสินคือความเสี่ยงถูกจัดการที่ขั้นใด WHO กำหนดให้ประเมินและควบคุมทุกขั้นตอนตั้งแต่แหล่งน้ำถึงผู้บริโภค การตรวจหรือกรองที่ปลายทางเป็นการแก้ปลายเหตุ",
+      "th": "จุดตัดสินคือความเสี่ยงถูกจัดการที่ขั้นใด WHO กำหนดให้ประเมิน และควบคุมทุกขั้นตอนตั้งแต่แหล่งน้ำถึงผู้บริโภค การตรวจหรือกรองที่ปลายทางเป็นการแก้ปลายเหตุ",
       "en": "The test is where risk is managed: WHO requires assessment and control at every step from catchment to consumer, so end-point testing or end-point filters treat the symptom and leave the cause.",
       "zh": "关键是风险管理做在哪一环：WHO要求从水源到用户每一环都评估管控，只在末端检测或加装过滤只是治标。"
     },
@@ -1853,7 +1853,7 @@
     ],
     "answer": 2,
     "logic": {
-      "th": "ภาระที่หลายชั่วอายุแบกร่วมกันเป็นปัญหาเชิงโครงสร้าง เงินจ่ายครั้งเดียวหรือสั่งให้ลูกคนใดลาออกมาดูแลเต็มเวลาไม่ได้ช่วยอะไร ต้องเป็นระบบที่กระจายภาระออกจากครอบครัวเดียว",
+      "th": "ภาระที่หลายชั่วอายุแบกร่วมกันเป็นปัญหาเชิงโครงสร้าง เงินจ่ายครั้งเดียว หรือสั่งให้ลูกคนใดลาออกมาดูแลเต็มเวลา ไม่ได้ช่วยอะไร ต้องเป็นระบบที่กระจายภาระออกจากครอบครัวเดียว",
       "en": "Burden shared across generations is structural, so a one-off payment or pulling one child out of work leaves the load where it is; only a system can spread it.",
       "zh": "跨代共担的照护是结构性问题，一次性补助或让一个孩子辞职照顾都改变不了重担落点，只有制度才能分摊。"
     },
@@ -1909,7 +1909,7 @@
     ],
     "answer": 0,
     "logic": {
-      "th": "ถามว่ามาตรการนั้นไปยุ่งกับอะไร สิ่งที่ลดการปล่อยก๊าซคือการลดการเปลี่ยนแปลง ส่วนการปรับตัวคือการทำให้คนและระบบอยู่ร่วมกับผลกระทบที่เกิดขึ้นแล้วหรือคาดว่าจะเกิด",
+      "th": "ถามว่ามาตรการนั้นไปยุ่งกับอะไร สิ่งที่ลดการปล่อยก๊าซคือการลดการเปลี่ยนแปลง ส่วนการปรับตัวคือการทำให้คน และระบบอยู่ร่วมกับผลกระทบที่เกิดขึ้นแล้ว หรือคาดว่าจะเกิด",
       "en": "Ask what the measure acts on: anything that cuts emissions is mitigation, while adaptation is what lets people and systems live with the impact already occurring or expected.",
       "zh": "关键看措施作用的对象：凡是减少排放的都是减缓，适应则是让人和系统与已经或将要发生的气候影响共处。"
     },
@@ -1961,7 +1961,7 @@
     ],
     "answer": 3,
     "logic": {
-      "th": "จุดตัดสินคือการไต่ระดับเป้าหมาย ทุกภาคีกำหนดเป้าหมายเองและต้องแจ้งเป้าหมายที่ท้าทายกว่าเดิมทุก 5 ปี ไม่ใช่ตัวเลขที่บังคับเฉพาะประเทศพัฒนาแล้วเหมือนเกียวโต",
+      "th": "จุดตัดสินคือการไต่ระดับเป้าหมาย ทุกภาคีกำหนดเป้าหมายเอง และต้องแจ้งเป้าหมายที่ท้าทายกว่าเดิมทุก 5 ปี ไม่ใช่ตัวเลขที่บังคับเฉพาะประเทศพัฒนาแล้วเหมือนเกียวโต",
       "en": "The test is the ratchet: every Party sets its own target and must report a more ambitious one every five years, unlike Kyoto's binding numbers for developed countries alone.",
       "zh": "关键是逐轮加码：每个缔约方自定目标并须每五年通报更具雄心的新目标，而非像《京都议定书》那样只对发达国家设强制指标。"
     },
@@ -2121,7 +2121,7 @@
     ],
     "answer": 0,
     "logic": {
-      "th": "ขอบเขตคือตัวแยก ข้อตกลงหยุดยิงมีไว้เพียงหยุดหรือระงับการสู้รบระหว่างคู่ขัดแย้ง กำหนดเวลา พื้นที่ และการตรวจสอบ ส่วนสนธิสัญญาสันติภาพต้องแก้ข้อพิพาทนั้นจริง",
+      "th": "ขอบเขตคือตัวแยก ข้อตกลงหยุดยิงมีไว้เพียงหยุด หรือระงับการสู้รบระหว่างคู่ขัดแย้ง กำหนดเวลา พื้นที่ และการตรวจสอบ ส่วนสนธิสัญญาสันติภาพต้องแก้ข้อพิพาทนั้นจริง",
       "en": "Scope separates them: a ceasefire only stops or suspends fighting between the parties with agreed time, area and monitoring, whereas a peace treaty settles the dispute itself.",
       "zh": "靠范围区分：停火只是让冲突各方停止或暂停交战，并约定时间、地区与监督；和平条约才真正解决争端本身。"
     },
@@ -2226,7 +2226,7 @@
     ],
     "answer": 1,
     "logic": {
-      "th": "แผนภาพกลยุทธ์คือแผนผังเชิงเหตุและผลที่โยงวัตถุประสงค์ข้ามสี่มุมมองของ Balanced Scorecard ส่วน SWOT เป็นเพียงการวิเคราะห์สถานการณ์ตามที่เป็นอยู่",
+      "th": "แผนภาพกลยุทธ์คือแผนผังเชิงเหตุ และผลที่โยงวัตถุประสงค์ข้ามสี่มุมมองของ Balanced Scorecard ส่วน SWOT เป็นเพียงการวิเคราะห์สถานการณ์ตามที่เป็นอยู่",
       "en": "A strategy map is a causal diagram: it links objectives across the four perspectives the Balanced Scorecard already defines, whereas SWOT only examines the situation as it stands.",
       "zh": "战略地图是因果图：在平衡计分卡既有的四个维度之间串联目标之间的关系，而SWOT只是分析现状。"
     },
@@ -2280,7 +2280,7 @@
     "answer": 2,
     "logic": {
       "th": "5A คือคำคุณธรรมธรรมดาที่ผูกกับหน้าที่ของแต่ละอำเภอ คือปลอดภัย พูนสุข สุขใจ รักษ์สิทธิ และนายอำเภอในบทบาท Area Manager ส่วนชื่อที่ฟังดูเป็นเรื่องรายได้คือตัวแปรที่หนังสือไม่ได้ระบุไว้",
-      "en": "The five are plain virtue words tied to each district's job — security, quality of life, service, rights, and the district chief as area manager; the odd one is the prosperity-sounding name the circular never lists.",
+      "en": "The five are plain virtue words tied to each district's job: security, quality of life, service, rights, and the district chief as area manager. The odd one is the prosperity-sounding name the circular never lists.",
       "zh": "5A是五个朴素的美德词，各对应一个县的职责：安全、生活品质、服务、权利，以及县长担任地区管理者。那个听起来与财富有关的名称，文件里并未列入。"
     },
     "explanation": {
@@ -2336,7 +2336,7 @@
     "answer": 3,
     "logic": {
       "th": "จับคู่งานกับสิ่งที่แต่ละ A ส่งมอบ ไม่ใช่กับคำคุณธรรมของชื่อ มาตรฐานบริการ การรับรอง GECC บัตรอัจฉริยะ และแอป ThaID เป็นงานพัฒนางานบริการทั้งระบบ ส่วนรักษ์สิทธิดูแลสัญชาติ สถานะบุคคล และสิทธิมนุษยชน",
-      "en": "Match the task to what each A delivers, not to its virtue word: service standards, GECC certification, smart ID cards and ThaID are the whole-system service A; rights covers civil status and human rights.",
+      "en": "Match the task to what each A delivers, not to its virtue word. Service standards, GECC certification, smart ID cards and ThaID are the whole-system service A. Rights covers civil status and human rights.",
       "zh": "要把任务对应到各A交付的成果，而不是对应到名称中的美德词。提升服务标准、争取GECC认证、智能身份证和ThaID都属于全面提升服务的那个A；权利那个A管的是国籍、身份与人权。"
     },
     "explanation": {
@@ -2546,7 +2546,7 @@
     ],
     "answer": 2,
     "logic": {
-      "th": "ถามว่าแรงจูงใจคือการได้เข้ากลุ่มหรือการได้รับการยกย่อง การอยากให้กลุ่มรับเป็นพวกคือความต้องการความรักและการเป็นส่วนหนึ่ง ส่วนการยกย่องคือความต้องการการนับถือ",
+      "th": "ถามว่าแรงจูงใจคือการได้เข้ากลุ่มหรือการได้รับการยกย่อง การอยากให้กลุ่มรับเป็นพวกคือความต้องการความรัก และการเป็นส่วนหนึ่ง ส่วนการยกย่องคือความต้องการการนับถือ",
       "en": "Ask whether the motive is joining a group or being admired: wanting to be accepted by peers is belonging, while esteem is driven by status and recognition from others.",
       "zh": "分辨动机是进群还是受推崇：想被同伴接纳属于爱与归属，追求地位和他人敬重才是尊重需求。"
     },
@@ -2601,7 +2601,7 @@
     ],
     "answer": 1,
     "logic": {
-      "th": "IoT คือสิ่งของที่เชื่อมเข้ากับเครือข่าย คุณค่าเฉพาะของมันต่อภาครัฐคือข้อมูลภาคสนามแบบเรียลไทม์ที่ให้ลงมือได้ก่อนเกิดความเสียหาย ต่างจากเว็บไซต์ แชตบอต หรือบล็อกเชน",
+      "th": "IoT คือสิ่งของที่เชื่อมเข้ากับเครือข่าย คุณค่าเฉพาะของมันต่อภาครัฐ คือข้อมูลภาคสนามแบบเรียลไทม์ ที่ให้ลงมือได้ก่อนเกิดความเสียหาย ต่างจากเว็บไซต์ แชตบอต หรือบล็อกเชน",
       "en": "IoT is physical things connected to a network, and its distinctive public value is real-time field data that lets agencies act before harm occurs, unlike websites, chatbots or blockchains.",
       "zh": "物联网是把实物接入网络，其对政府的独有价值在于实时现场数据，让人能在损害发生前行动；网站、聊天机器人、区块链都不属于这一类。"
     },
@@ -2713,8 +2713,8 @@
     ],
     "answer": 3,
     "logic": {
-      "th": "เรียงระดับโดยดูว่าใครเป็นผู้ตัดสิน เพราะประชาชนเป็นผู้ตัดสินใจสุดท้ายเฉพาะขั้นสูงสุด ขั้นที่ต่ำกว่าตั้งแต่การแจ้งให้ทราบไปจนถึงการรับฟังความเห็นต่อทางเลือกที่รัฐเตรียมไว้",
-      "en": "Order the ladder by who decides: the public makes the final call only at the very top, while lower levels range from being told to being consulted on options the authority already drafted.",
+      "th": "เรียงระดับโดยดูว่าใครเป็นผู้ตัดสิน เพราะประชาชนเป็นผู้ตัดสินใจสุดท้ายเฉพาะขั้นสูงสุด ขั้นที่ต่ำกว่าตั้งแต่การแจ้งให้ทราบ ไปจนถึงการรับฟังความเห็นต่อทางเลือกที่รัฐเตรียมไว้",
+      "en": "Order the ladder by who decides. The public makes the final call only at the very top. Lower levels range from being told to being consulted on options the authority already drafted.",
       "zh": "排序看的是谁拍板：只有最高一级才由公众作最终决定，往下依次是被告知，到就机关已拟好的方案征求意见。"
     },
     "explanation": {
@@ -2872,7 +2872,7 @@
     ],
     "answer": 1,
     "logic": {
-      "th": "คำว่า กำกับทิศทาง หรือ รับใช้ คือตัวตัดสิน แบบที่ใช้กลไกตลาดมองประชาชนเป็นลูกค้าแล้วกำกับเขา ส่วนอีกแบบมองประชาชนเป็นพลเมืองและกำหนดประโยชน์สาธารณะร่วมกับประชาชน",
+      "th": "คำว่า กำกับทิศทาง หรือ รับใช้ คือตัวตัดสิน แบบที่ใช้กลไกตลาดมองประชาชนเป็นลูกค้าแล้วกำกับเขา ส่วนอีกแบบมองประชาชนเป็นพลเมือง และกำหนดประโยชน์สาธารณะร่วมกับประชาชน",
       "en": "Steer or serve is the dividing word: the market-driven model treats the public as customers and steers them, while the civic model serves citizens and defines the public interest together with them.",
       "zh": "分水岭是“掌舵”还是“服务”：以市场机制的一套把民众当顾客来引导，公民式的一套把民众当公民，并与公众共同界定公共利益。"
     },
@@ -3031,7 +3031,7 @@
     ],
     "answer": 2,
     "logic": {
-      "th": "ให้มองที่สถานะการจ้างงาน ไม่ใช่ตารางเวลา เพราะงานแพลตฟอร์มมักยืดหยุ่นขึ้น ช่องว่างที่แท้จริงเปิดขึ้นเมื่อคนทำงานถูกจัดเป็นผู้รับจ้างอิสระจนหลุดความคุ้มครองแรงงานและประกันสังคม",
+      "th": "ให้มองที่สถานะการจ้างงาน ไม่ใช่ตารางเวลา เพราะงานแพลตฟอร์มมักยืดหยุ่นขึ้น ช่องว่างที่แท้จริงเปิดขึ้น เมื่อคนทำงานถูกจัดเป็นผู้รับจ้างอิสระจนหลุดความคุ้มครองแรงงาน และประกันสังคม",
       "en": "Look at employment status, not scheduling: platform work usually adds flexibility, and the real gap opens when workers are classed as contractors and fall outside labour and social-security protection.",
       "zh": "要看的是用工身份而非排班：平台工作通常更灵活，真正的问题是劳动者被归为独立承包人，从而失去劳动保护与社会保险。"
     },
@@ -3138,7 +3138,7 @@
     ],
     "answer": 3,
     "logic": {
-      "th": "อ่านสองแกนแยกกัน หน่วยที่ส่วนแบ่งสูงสร้างเงินสดได้ก็เพราะอัตราการเติบโตของตลาดต่ำ ซึ่งเป็นจุดเดียวที่ต่างจากดาวเหนือ",
+      "th": "อ่านสองแกนแยกกัน หน่วยที่ส่วนแบ่งสูงสร้างเงินสดได้ก็ เพราะอัตราการเติบโตของตลาดต่ำ ซึ่งเป็นจุดเดียวที่ต่างจากดาวเหนือ",
       "en": "Read the two axes separately: a unit with high share earns cash precisely because its market growth is low, which is the only point on which it differs from a star.",
       "zh": "两条轴分开看：份额高的业务之所以产生现金流，正是因为市场增长率低，这也是它与明星唯一的差别。"
     },
@@ -3350,7 +3350,7 @@
     "answer": 1,
     "logic": {
       "th": "ผู้กำหนดวิธีการคือคณะกรรมการที่มีนายกรัฐมนตรีเป็นประธาน ส่วนสศช. เป็นสำนักงานเลขานุการที่ทำธุรการ จัดให้มีส่วนร่วม และรายงานประเมินผล ซึ่งเป็นงานสนับสนุน ไม่ใช่อำนาจกำหนดมาตรการ",
-      "en": "Setting the method belongs to the committee chaired by the Prime Minister; the NESDC is the secretariat that runs administration, participation and evaluation reports, which is support work, not the power to set measures.",
+      "en": "Setting the method belongs to the committee chaired by the Prime Minister. The NESDC is the secretariat that runs administration, participation and evaluation reports. That is support work, not the power to set measures.",
       "zh": "制定办法的权力属于由总理担任主席的委员会；国家经济和社会发展委员会办公室依第22条承担行政、组织公众参与和编写评估报告，属于支持性工作，不等于制定措施的权力。"
     },
     "explanation": {
@@ -3405,7 +3405,7 @@
     ],
     "answer": 2,
     "logic": {
-      "th": "จับคู่หมุดหมายจากผลลัพธ์ ไม่ใช่จากว่าใครเป็นผู้ทำ การค้นหาครัวเรือนยากจนและเชื่อมสิทธิสวัสดิการคือหมุดหมายเรื่องความยากจนข้ามรุ่นและความคุ้มครองทางสังคม ส่วนหมุดหมายภาครัฐที่ทันสมัยพูดถึงการปรับปรุงตัวภาครัฐเอง",
+      "th": "จับคู่หมุดหมายจากผลลัพธ์ ไม่ใช่จากว่าใครเป็นผู้ทำ การค้นหาครัวเรือนยากจน และเชื่อมสิทธิสวัสดิการคือหมุดหมายเรื่องความยากจนข้ามรุ่น และความคุ้มครองทางสังคม ส่วนหมุดหมายภาครัฐที่ทันสมัยพูดถึงการปรับปรุงตัวภาครัฐเอง",
       "en": "Match a milestone by its outcome, not by who does the work: finding poor households and linking them to welfare is the poverty-and-social-protection milestone; the efficient-public-sector milestone is about reforming the sector.",
       "zh": "要按成果而非执行主体来匹配里程碑：找出贫困户并帮助其获得福利，对应的是代际贫困与社会保障的里程碑；而“现代化高效率政府”讲的是公共部门自身的改革。"
     },
@@ -3457,8 +3457,8 @@
     ],
     "answer": 0,
     "logic": {
-      "th": "ผู้ขอต้องเป็นทบวงการเมืองและยื่นเป็นหนังสือต่อผู้ว่าราชการจังหวัดที่ที่ดินตั้งอยู่ ส่วนนายอำเภอมีเพียงเป็นกรรมการหนึ่งคนในคณะกรรมการที่พิจารณาในขั้นหลัง",
-      "en": "The applicant must be a public juristic body and applies in writing to the governor of the province where the land sits; the district chief appears only as one member of the later review committee.",
+      "th": "ผู้ขอ ต้องเป็นทบวงการเมือง และยื่นเป็นหนังสือต่อผู้ว่าราชการจังหวัดที่ที่ดินตั้งอยู่ ส่วนนายอำเภอมีเพียงเป็นกรรมการหนึ่งคนในคณะกรรมการที่พิจารณาในขั้นหลัง",
+      "en": "The applicant must be a public juristic body and applies in writing to the governor of the province where the land sits. The district chief appears only as one member of the later review committee.",
       "zh": "申请人须是地方行政法人，且以书面方式向土地所在府的府尹提出；县长只是后续审议委员会的委员之一，府尹才是受理机关。"
     },
     "explanation": {
@@ -3510,7 +3510,7 @@
     "answer": 3,
     "logic": {
       "th": "อ่านตัวอักษรตามความหมายตรงตัว S คือกลยุทธ์ O คือการดำเนินงาน F คือการเงิน และ C คือการปฏิบัติตามกฎหมาย ความเสี่ยงด้านชื่อเสียงจึงอยู่นอกสี่ด้านนี้ แม้บางหน่วยงานจะเพิ่มเข้าไปเองก็ตาม",
-      "en": "Read the initials literally: S is strategy, O is operations, F is finance and C is compliance, so reputation sits outside the four even if an agency adds it to its own list.",
+      "en": "Read the initials literally. S is strategy, O is operations, F is finance and C is compliance. Reputation sits outside the four, even if an agency adds it to its own list.",
       "zh": "按字母直读：S战略、O运营、F财务、C合规，声誉风险因此不在这四类之内，即便某些机关会自行加上。"
     },
     "explanation": {
@@ -3564,7 +3564,7 @@
     ],
     "answer": 1,
     "logic": {
-      "th": "จุดตัดสินคือใครเริ่มก่อน การตลาดแบบดึงดูดทำเนื้อหาตรงกับคำที่คนกำลังค้นหาแล้วเปิดให้หาเจอง่าย ส่วนแบบผลักออกยิงข้อความเดียวกันไปหาคนจำนวนมากโดยไม่สนใจว่าเขาสนใจหรือไม่",
+      "th": "จุดตัดสินคือใครเริ่มก่อน การตลาดแบบดึงดูดทำเนื้อหาตรงกับคำที่คนกำลังค้นหา แล้วเปิดให้หาเจอง่าย ส่วนแบบผลักออกยิงข้อความเดียวกันไปหาคนจำนวนมาก โดยไม่สนใจว่าเขาสนใจหรือไม่",
       "en": "The test is who initiates: inbound publishes what people are already searching for and lets them find it, whereas outbound pushes the same message regardless of interest.",
       "zh": "分界在于由谁发起：集客式提供人们正在搜索的内容、便于被找到；推播式则不论对方是否感兴趣都推送同一条信息。"
     },
@@ -3672,7 +3672,7 @@
     ],
     "answer": 2,
     "logic": {
-      "th": "ประเด็นแบ่งคือคนถามตัวเองว่าเสียงของตนมีอิทธิพลต่อการตัดสินใจหรือไม่ ถ้าเชื่อว่ามี คือแบบมีส่วนร่วม ส่วนแบบไพร่ฟ้าคือรับผลการตัดสินใจมาโดยไม่คิดว่าจะมีส่วนได้",
+      "th": "ประเด็นแบ่งคือคนถามตัวเองว่าเสียงของตนมีอิทธิพลต่อการตัดสินใจ หรือไม่ ถ้าเชื่อว่ามี คือแบบมีส่วนร่วม ส่วนแบบไพร่ฟ้าคือรับผลการตัดสินใจมาโดยไม่คิดว่าจะมีส่วนได้",
       "en": "The dividing question is whether the citizen believes their own voice can shape decisions: assuming influence is participant culture, while merely accepting official outputs is subject culture.",
       "zh": "分水岭是公民是否相信自己能影响决策：相信即是参与型，只是接受官方产出而不自认能参与的则属依附型。"
     },
@@ -3727,7 +3727,7 @@
     ],
     "answer": 0,
     "logic": {
-      "th": "ห้องเสียงสะท้อนคือการจับกลุ่มกับคนคิดเหมือนและให้ข้อมูลไหลเวียนอยู่แค่ในกลุ่ม ส่วนวงจรเกลียวแห่งความเงียบคือคนฝ่ายน้อยที่เลือกไม่พูดเพราะรู้สึกว่าพูดไปก็ไม่มีใครฟัง",
+      "th": "ห้องเสียงสะท้อนคือการจับกลุ่มกับคนคิดเหมือน และให้ข้อมูลไหลเวียนอยู่แค่ในกลุ่ม ส่วนวงจรเกลียวแห่งความเงียบคือคนฝ่ายน้อยที่เลือกไม่พูด เพราะรู้สึกว่าพูดไปก็ไม่มีใครฟัง",
       "en": "Echo chamber is clustering: like-minded people meet and information circulates only inside the group, whereas the spiral of silence is minorities deciding that speaking up is unsafe.",
       "zh": "回音室是聚集成群：同温层聚集、信息只在圈内流转；沉默的螺旋则是少数派因自觉无人倾听而选择不说话。"
     },
@@ -3935,8 +3935,8 @@
     ],
     "answer": 1,
     "logic": {
-      "th": "ให้มองหาแคมเปญที่เปิดตัวพร้อมโซนนำเสนอเมืองน่าเที่ยว แล้วดูขนาดคูหาว่าโตขึ้นจนประมาณสามเท่าของเดิม ดังนั้นตัวเลือกที่บอกว่าคูหาเล็กลงหรือเน้นเฉพาะเมืองหลักจึงผิด",
-      "en": "Look for the campaign launch plus the hidden-gem city zone, and check the pavilion's direction of travel: it grew to about three times its earlier size, so a smaller pavilion and major-cities-only promotion are both wrong.",
+      "th": "ให้มองหาแคมเปญที่เปิดตัวพร้อมโซนนำเสนอเมืองน่าเที่ยว แล้วดูขนาดคูหาว่าโตขึ้นจนประมาณสามเท่าของเดิม ดังนั้นตัวเลือกที่บอกว่าคูหาเล็กลง หรือเน้นเฉพาะเมืองหลัก จึงผิด",
+      "en": "Look for the campaign launch plus the hidden-gem city zone. Check the pavilion's direction of travel: it grew to about three times its earlier size. A smaller pavilion and major-cities-only promotion are both wrong.",
       "zh": "要找的是活动的启动以及推介“宝藏城市”的展区，并留意展馆是变大还是变小——它扩到了原来的约三倍。因此“缩小展馆”和“只推介主要城市”两项都不成立。"
     },
     "explanation": {
@@ -3987,7 +3987,7 @@
     ],
     "answer": 0,
     "logic": {
-      "th": "ต้องแยกนาฬิกาสองตัว อายุการอนุญาตใช้ตรานับเป็นรอบสองปีและต้องต่ออายุทุกสองปีเพื่อให้ตรวจควบคุมคุณภาพอย่างต่อเนื่อง ส่วนอายุยาวคืออายุจดทะเบียนเครื่องหมายการค้า คนละเรื่อง",
+      "th": "ต้องแยกนาฬิกาสองตัว อายุการอนุญาตใช้ตรานับเป็นรอบสองปี และต้องต่ออายุทุกสองปี เพื่อให้ตรวจควบคุมคุณภาพอย่างต่อเนื่อง ส่วนอายุยาวคืออายุจดทะเบียนเครื่องหมายการค้า คนละเรื่อง",
       "en": "Permission to use the emblem runs a two-year cycle, renewed on the same term so quality control stays continuous; the long term belongs to trademark registration, a different thing entirely.",
       "zh": "要把两个期限分开：标志使用许可是两年一轮、两年续期一次，为的是让质量管控持续不断；那个长年限属于商标注册，是另一回事。"
     },
@@ -4419,7 +4419,7 @@
     ],
     "answer": 2,
     "logic": {
-      "th": "ต้องแยกกรอบตามประเภทตำแหน่งและตามปีของหนังสือ สมรรถนะหลัก 4 ตัวของผู้ปฏิบัติงานตามกรอบปัจจุบันไม่รวมสิ่งที่เป็นสมรรถนะเฉพาะตามลักษณะงานซึ่งหน่วยงานเลือกกำหนดเอง ระวังกรอบเก่าที่มี 5 ด้าน",
+      "th": "ต้องแยกกรอบตามประเภทตำแหน่งและตามปีของหนังสือ สมรรถนะหลัก 4 ตัวของผู้ปฏิบัติงานตามกรอบปัจจุบัน ไม่รวมสิ่งที่เป็นสมรรถนะเฉพาะตามลักษณะงาน ซึ่งหน่วยงานเลือกกำหนดเอง ระวังกรอบเก่าที่มี 5 ด้าน",
       "en": "Split the framework by staff type and by the circular's year. In the current four-item core set for operational staff, analytical thinking sits among the job-specific competencies that agencies pick from; the older frame had five.",
       "zh": "要按岗位类型和文件年份区分框架。按现行四项核心能力，执行人员这一组里不包含属于岗位专业能力、由各机关自行选定的那些项目；同时留意旧框架是五项。"
     },
@@ -4685,8 +4685,8 @@
     ],
     "answer": 1,
     "logic": {
-      "th": "จุดตัดสินคือหน้าที่ของบัญชีหรือบุคคลนั้น คือการรับและส่งต่อเงินที่ได้จากการกระทำผิดแทนผู้อื่นเพื่อปกปิดเส้นทางการเงิน โดยมักหักค่าตอบแทน ไม่ใช่ดูจากความถี่ในการใช้บัญชี",
-      "en": "The purpose defines it: money moves criminal proceeds on someone else's behalf, usually for a fee, so judge the account or person by that function and not by how often it is used.",
+      "th": "จุดตัดสินคือหน้าที่ของบัญชีหรือบุคคลนั้น คือการรับ และส่งต่อเงินที่ได้จากการกระทำผิดแทนผู้อื่น เพื่อปกปิดเส้นทางการเงิน โดยมักหักค่าตอบแทน ไม่ใช่ดูจากความถี่ในการใช้บัญชี",
+      "en": "The purpose defines it. Money moves criminal proceeds on someone else's behalf, usually for a fee. Judge the account or person by that function, not by how often it is used.",
       "zh": "界定标准是用途：为他人转移犯罪所得、掩盖资金流向，通常抽取报酬；判断账户或个人要看这一功能，而非使用频率。"
     },
     "explanation": {

@@ -170,14 +170,18 @@ export function TikkiStory() {
             </Link>
           </div>
         </div>
+        {/* The cover is its own drawing, not scene 1. The story's arc — from a
+            mountain of law to joyful learning — is the page's subject, so the
+            hero has to show the arc; repeating scene 1 here would put the same
+            picture on the page twice and shrink both copies. */}
         <figure className="tikki-hero-art" aria-hidden="true">
           <Image
-            src={SCENES[0].image}
+            src="/illustrations/tikki-story-cover-pastel.webp"
             alt=""
             width={720}
             height={720}
             priority
-            sizes="(max-width: 720px) 140px, 240px"
+            sizes="(max-width: 720px) 150px, 340px"
           />
         </figure>
       </header>
