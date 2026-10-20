@@ -9,10 +9,12 @@
     "typecheck": "tsc --noEmit",
     "check:release": "node scripts/check-release.mjs",
     "verify": "node scripts/build-indexes.mjs && node --experimental-strip-types scripts/validate-drills.mjs && node scripts/validate-corpus.mjs && node scripts/validate-translations.mjs && node scripts/validate-cases.mjs && node scripts/validate-questions.mjs && npm test && npm run typecheck",
-    "release": "npm run verify && npm run build && node scripts/check-generated.mjs && npm run check:release && npm run check:slop && npm run check:layout",
+    "release": "npm run verify && npm run build && node scripts/check-generated.mjs && npm run check:release && npm run check:slop && npm run check:layout && npm run check:hierarchy",
     "news:harvest": "node --experimental-strip-types scripts/harvest-news.mjs",
     "check:layout": "node scripts/check-layout.mjs",
-    "check:slop": "node .non-slop/bin/non-slop.mjs scan ."
+    "check:slop": "node .non-slop/bin/non-slop.mjs scan .",
+    "check:hierarchy": "node scripts/check-hierarchy.mjs",
+    "falsify:hierarchy": "node scripts/falsify-hierarchy.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^5.11.2",

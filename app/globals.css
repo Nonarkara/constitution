@@ -814,11 +814,15 @@ summary {
   margin: 24px 0;
 }
 .review-count strong {
-  font-size: var(--display);
-  font-weight: 400;
+  font-size: var(--body);
+  font-weight: 700;
 }
 .review-count span {
   font-size: var(--micro);
+}
+.review-count-none {
+  font-size: var(--body);
+  margin: 20px 0;
 }
 .source-card {
   border-top: 3px solid var(--ink);
@@ -2755,10 +2759,10 @@ mark.hl.has-note {
 }
 .exam-featured-title {
   font-family: "Jost", "IBM Plex Sans Thai", sans-serif;
-  font-size: 24px;
+  font-size: var(--body);
   font-weight: 600;
-  letter-spacing: -0.4px;
-  line-height: 1.25;
+  letter-spacing: -0.2px;
+  line-height: 1.35;
 }
 .exam-featured-meta {
   color: var(--muted);
@@ -3899,7 +3903,9 @@ footer { flex-wrap:wrap; gap:16px; }
 .palace-index span:last-child { font-size:var(--micro); }
 .palace-room { border-top:3px solid var(--ink); padding-top:1rem; max-width:760px; }
 .palace-room figure,.memory-cue figure { display:grid; grid-template-columns:minmax(100px,1fr) minmax(0,2fr); gap:1rem; margin:1rem 0; align-items:center; }
-.palace-number { font-family:"JetBrains Mono","IBM Plex Sans Thai",monospace; font-size:var(--display); line-height:1.2; display:block; overflow-wrap:anywhere; }
+/* A caption, not a title. At the display size the room number was as loud as
+   the page's h1 — the title no longer won on its own page. */
+.palace-number { font-family:"JetBrains Mono","IBM Plex Sans Thai",monospace; font-size:var(--body); font-weight:700; line-height:1.2; display:block; overflow-wrap:anywhere; }
 .memory-cue { margin-block:1rem; border-block:1px solid var(--line); padding-block:.75rem; }
 @media(max-width:1024px){ .palace-index { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:480px){ .palace-index button { padding:.75rem; } .palace-picture-small { width:72px; } .palace-room figure,.memory-cue figure { grid-template-columns:1fr; } .palace-room .palace-picture,.memory-cue .palace-picture { max-width:220px; } }

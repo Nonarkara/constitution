@@ -1,0 +1,523 @@
+#!/usr/bin/env node
+/**
+ * Hierarchy-of-communication gate for the built site.
+ *
+ * Why this exists. The failure this site kept shipping is not overflow and not
+ * a missing font — it is that every part of a page spoke at the same volume.
+ * On /glossary/ ninety-three terms were bold and body-sized, so nothing was
+ * the heading of anything. On /exam/ thirty cards had identical weight, so the
+ * page's one real action was a plain link in the middle of a wall.
+ *
+ * A human should be able to look at a page and know within a couple of seconds
+ * where to look. Three things make that possible, and all three are measurable
+ * on the rendered page rather than guessed from the source:
+ *
+ *   1. THE TITLE WINS. The h1 must be the largest text on the page.
+ *   2. NOT EVERYTHING SHOUTS. Bold, body-sized text is a scarce resource. When
+ *      a page has dozens of equally loud peers, the eye has nothing to follow,
+ *      and the title stops being the loudest thing simply by being the only
+ *      one with a size advantage over an entire grid.
+ *   3. THE PAGE HAS SOMETHING TO DO. A page with no primary action in the
+ *      first screen is a page that describes itself instead of doing anything.
+ *
+ * The gate holds itself to the same rule as the layout gate: a check that
+ * cannot measure must FAIL, not pass. Fewer measurements than expected, an
+ * unparsable report, or a missing Chrome all fail loudly. Set
+ * HIERARCHY_CHECK=skip to opt out deliberately — it prints SKIPPED and never
+ * claims a pass.
+ *
+ * Run with --report to print the measurements without failing on the
+ * thresholds. The thresholds were set from the measured site, not chosen first:
+ * --report prints the distribution, and every threshold below is a round
+ * number outside the worst page's actual reading.
+ */
+import { createServer } from "node:http";
+import { readdir } from "node:fs/promises";
+import { existsSync, readFileSync, rmSync } from "node:fs";
+import { execFile } from "node:child_process";
+import { tmpdir } from "node:os";
+import path from "node:path";
+
+const ROOT = process.cwd();
+const OUT = path.join(ROOT, "out");
+
+/**
+ * The thresholds, and the reading behind each one.
+ *
+ * boldPeers: the number of bold, body-sized pieces of text on a page. The
+ *   worst page measured 93 (the glossary, one bold word per term). The exam
+ *   page used to measure 34. A page where more than a dozen things are loud
+ *   has no loud thing; the limit is 12.
+ *
+ * peerGroups: distinct (size, weight) pairs among those peers. Ninety-three
+ * terms set in one style are ONE group of ninety-three, and that is a wall
+ * rather than a list. More than two groups of loud text means the page is
+ * competing with itself at more than one volume.
+ *
+ * finePrint: characters at 13px or smaller, over total characters. /bible/
+ *   measured 1342 characters of 13px notes against 691 characters of body
+ *   text — twice as much small print as reading. The limit is 45%: past that
+ *   the page is mostly a footnote.
+ *
+ * titleRatio: the h1's size over the largest size used anywhere else in the
+ *   content. The limit is 1.6. A page where the biggest thing is only 1.6x
+ *   the title has no headline; the measured site is at 44 over 24, which is
+ *   1.83.
+ *
+ * primaryActions: filled primary controls inside the first screen. At least
+ *   one, so the page has something to do. More than one *visible* filled
+ *   button in the first screen is not a problem — a quiz has Submit and
+ *   "submit now" — so this is reported, not failed.
+ */
+const LIMITS = {
+  // The title must outrank every other piece of text on the page. Measured:
+  // /memory/ and /review/ both had a 44px room number and a 44px "0" sitting
+  // level with the 44px h1, so the title was not the title. The limit is 1.6.
+  titleRatio: 1.6,
+  // The title must be a title, not a slightly bigger heading. The house ramp is
+  // 13 / 18 / 44; 44 over 18 is 2.44. The limit is 1.7, which the 32px phone
+  // title over 18px body clears at 1.78.
+  titleVsBody: 1.7,
+  // At most two volumes of loud text. A third means the page is competing with
+  // itself at more than one level.
+  peerGroups: 2,
+  // At most two filled primary actions on a page. One is the main action.
+  // Three means the page has no main action at all, which is the complaint
+  // that started this gate.
+  primaryTotal: 2,
+  // At most twelve card-like actions on a page. /exam/ used to show thirty
+  // identical paper cards; they all had a border on every side and the same
+  // type, so nothing led. A quiet list of rows separated by a hairline is not
+  // a card and does not count.
+  prominentActions: 12,
+};
+
+const WIDTHS = [
+  { w: 390, h: 844, label: "phone" },
+  { w: 1440, h: 1000, label: "desktop" },
+];
+
+const CHROME_CANDIDATES = [
+  process.env.CHROME_PATH,
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "/Applications/Chromium.app/Contents/MacOS/Chromium",
+  "/usr/bin/google-chrome",
+  "/usr/bin/chromium",
+  "/usr/bin/chromium-browser",
+  "C:/Program Files/Google/Chrome/Application/chrome.exe",
+].filter(Boolean);
+
+const CHROME = CHROME_CANDIDATES.find((c) => existsSync(c));
+
+const REPORT = process.argv.includes("--report");
+
+// ------------------------------------------------------------------ exit paths
+if (process.env.HIERARCHY_CHECK === "skip") {
+  console.error(
+    "\n  !! HIERARCHY CHECK SKIPPED (HIERARCHY_CHECK=skip) — nothing was measured.\n" +
+      "     This is NOT a pass. Do not report this run as hierarchy-clean.\n",
+  );
+  process.exit(0);
+}
+if (!CHROME) {
+  console.error(
+    "\nFAIL — hierarchy gate could not measure.\n" +
+      "  No Chrome binary found. Tried:\n" +
+      CHROME_CANDIDATES.map((c) => `    ${c}\n`).join("") +
+      "  Set CHROME_PATH=/path/to/chrome, or HIERARCHY_CHECK=skip to opt out deliberately.\n",
+  );
+  process.exit(1);
+}
+
+const MIME = {
+  ".html": "text/html; charset=utf-8",
+  ".css": "text/css; charset=utf-8",
+  ".js": "text/javascript; charset=utf-8",
+  ".mjs": "text/javascript; charset=utf-8",
+  ".json": "application/json; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8",
+  ".webp": "image/webp",
+  ".png": "image/png",
+  ".jpg": "image/jpeg",
+  ".svg": "image/svg+xml",
+  ".ico": "image/x-icon",
+  ".woff2": "font/woff2",
+  ".woff": "font/woff",
+  ".mp3": "audio/mpeg",
+};
+
+const HARNESS = `<!doctype html><meta charset="utf-8"><title>hierarchy probe</title>
+<style>html,body{margin:0;padding:0;background:#000}iframe{border:0;display:block}</style>
+<iframe id="f"></iframe><pre id="out"></pre>
+<script>
+var WIDTHS = __WIDTHS__;
+var f = document.getElementById('f');
+var out = document.getElementById('out');
+var TAG_OK = 'RESULT' + 'S:';
+var TAG_ERR = 'RESULT' + 'S:ERROR:';
+
+window.onerror = function (msg, src, line, col, err) {
+  out.textContent = TAG_ERR + (err && err.stack ? err.stack : msg) +
+    ' @' + line + ':' + col + ' src=' + String(src).slice(0, 80);
+  return true;
+};
+
+function measureOne(route, w, h, cb) {
+  f.style.width = w + 'px'; f.style.height = h + 'px';
+  f.src = route;
+  f.onload = function () {
+    var tries = 0;
+    (function wait() {
+      var d;
+      try { d = f.contentDocument; } catch (e) { return cb({ route: route, w: w, error: 'cross-origin' }); }
+      if (tries++ > 80) return cb(measure(route, w, d));
+      if (d && d.readyState === 'complete' && d.querySelector('body')) return setTimeout(function () { cb(measure(route, w, d)); }, 220);
+      setTimeout(wait, 60);
+    })();
+  };
+}
+
+function measure(route, w, d) {
+  var win = d.defaultView;
+  var rec = { route: route, w: w };
+  var main = d.querySelector('main#content') || d.querySelector('main') || d.body;
+  if (!main) { rec.error = 'no main'; return rec; }
+
+  var h1 = main.querySelector('h1');
+  if (!h1) { rec.error = 'no h1'; return rec; }
+  var h1cs = win.getComputedStyle(h1);
+  var h1size = parseFloat(h1cs.fontSize);
+  rec.h1Size = h1size;
+
+  // Everything with visible text inside the content area, excluding the h1
+  // and its own descendants (the h1 may wrap a link or a span).
+  var all = main.querySelectorAll('*');
+  var peers = 0;
+  var groups = {};
+  var largest = 0;
+  var microChars = 0;
+  var totalChars = 0;
+  var primaryInFold = 0;
+  var primaryTotal = 0;
+  var prominentActions = 0;
+  var bodySizes = {};
+  var fold = win.innerHeight || 900;
+
+  for (var k = 0; k < all.length; k++) {
+    var el = all[k];
+    var cs = win.getComputedStyle(el);
+    if (cs.display === 'none' || cs.visibility === 'hidden' || Number(cs.opacity) < 0.15) continue;
+    var r = el.getBoundingClientRect();
+    if (!r.width || !r.height) continue;
+
+    // Leaf-ish text nodes only, so a wrapper is not counted twice.
+    var own = '';
+    for (var c = 0; c < el.childNodes.length; c++) {
+      var nd = el.childNodes[c];
+      if (nd.nodeType === 3) own += nd.nodeValue;
+    }
+    own = own.replace(/\\s+/g, ' ').trim();
+    var len = own.length;
+    if (len) {
+      totalChars += len;
+      var size = parseFloat(cs.fontSize);
+      if (size <= 13.5) microChars += len;
+      if (size > largest && el.tagName !== 'H1') {
+        largest = size;
+        rec.largestInfo = { tag: el.tagName.toLowerCase(), cls: String(el.className || '').slice(0, 40), size: size, weight: weight, text: own.slice(0, 40) };
+      }
+      var weight = Number(cs.fontWeight) || 400;
+      if (size >= 14 && size < h1size) bodySizes[Math.round(size)] = (bodySizes[Math.round(size)] || 0) + len;
+      if (weight >= 600 && size >= 15 && size < h1size) {
+        peers++;
+        var gkey = Math.round(size) + '/' + weight;
+        groups[gkey] = (groups[gkey] || 0) + 1;
+      }
+    }
+
+    // A FILLED action: an amber background. One on the page is the main
+    // action. Three or more means the page has no main action at all —
+    // everything is competing. Counted by what it looks like, not by the
+    // class name: a button that paints itself amber is a main action whether
+    // or not it remembered to call itself .primary.
+    if (el.tagName === 'BUTTON' || el.tagName === 'A') {
+      var bg = cs.backgroundColor;
+      var m = bg && bg.match(/rgba?\\((\\d+), (\\d+), (\\d+)/);
+      if (m && Number(m[1]) > 180 && Number(m[2]) > 100 && Number(m[3]) < 90) {
+        primaryTotal++;
+        if (r.top < fold && r.bottom > 0) primaryInFold++;
+      }
+      // A PROMINENT action: something that looks like a card or a filled
+      // button — a background that is not transparent, or a border on every
+      // side. A hairline rule above a row is not a card. Thirty of these on one
+      // page is thirty things shouting at once, which is exactly how /exam/
+      // used to look: thirty identical paper cards, so none of them led.
+      //
+      // The size test has to look at the label, not at the button: the global
+      // button rule sets 13px on the element and the real text sits inside a
+      // child at 18px. Testing the element's own font-size excluded every
+      // button on the site and the rule never fired.
+      var effSize = parseFloat(cs.fontSize);
+      var kids = el.querySelectorAll('*');
+      for (var ki = 0; ki < kids.length && ki < 60; ki++) {
+        var ks = parseFloat(win.getComputedStyle(kids[ki]).fontSize);
+        if (ks > effSize) effSize = ks;
+      }
+      var opaqueBg = bg && bg !== 'transparent' && !/rgba\\(0, 0, 0, 0\\)/.test(bg);
+      var allSides = cs.borderTopWidth !== '0px' && cs.borderRightWidth !== '0px' &&
+                     cs.borderBottomWidth !== '0px' && cs.borderLeftWidth !== '0px' &&
+                     cs.borderTopStyle !== 'none';
+      if ((opaqueBg || allSides) && effSize >= 14) prominentActions++;
+    }
+  }
+
+  rec.boldPeers = peers;
+  rec.peerGroups = Object.keys(groups).length;
+  rec.peerSizes = groups;
+  rec.largestOther = largest;
+  rec.titleRatio = largest ? Math.round((h1size / largest) * 100) / 100 : null;
+  rec.finePrint = totalChars ? Math.round((microChars / totalChars) * 100) / 100 : 0;
+  rec.primaryInFold = primaryInFold;
+  rec.primaryTotal = primaryTotal;
+  rec.prominentActions = prominentActions;
+  rec.totalChars = totalChars;
+  rec.h1Count = main.querySelectorAll('h1').length;
+  // The modal reading size: the size most of the words on the page are set at.
+  var modalSize = 0, modalChars = -1;
+  for (var bk in bodySizes) {
+    if (bodySizes[bk] > modalChars) { modalChars = bodySizes[bk]; modalSize = Number(bk); }
+  }
+  rec.bodySize = modalSize;
+  rec.titleVsBody = modalSize ? Math.round((h1size / modalSize) * 100) / 100 : null;
+  return rec;
+}
+
+function run() {
+  var routes = JSON.parse(decodeURIComponent(location.search.slice(1).split('=')[1] || '[]'));
+  var results = [];
+  var i = 0, j = 0;
+  function step() {
+    if (i >= routes.length) {
+      out.textContent = TAG_OK + JSON.stringify(results);
+      return;
+    }
+    var W = WIDTHS[j];
+    measureOne(routes[i], W.w, W.h, function (rec) {
+      results.push(rec);
+      j++;
+      if (j >= WIDTHS.length) { i++; j = 0; }
+      setTimeout(step, 30);
+    });
+  }
+  document.documentElement.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
+  step();
+}
+run();
+</script>`;
+
+const server = createServer((req, res) => {
+  const raw = decodeURIComponent((req.url || "/").split("?")[0]);
+  const url = path.posix.normalize(raw).replace(/\/+$/, "") || "/";
+  if (url.includes("..")) {
+    res.writeHead(400);
+    return res.end("bad path");
+  }
+  if (url === "/_hierarchy-probe") {
+    res.writeHead(200, { "content-type": MIME[".html"] });
+    return res.end(HARNESS.replace("__WIDTHS__", JSON.stringify(WIDTHS)));
+  }
+  for (const c of [
+    path.join(OUT, url),
+    path.join(OUT, url, "index.html"),
+    path.join(OUT, url + ".html"),
+  ]) {
+    try {
+      if (existsSync(c) && readFileSync(c)) {
+        res.writeHead(200, { "content-type": MIME[path.extname(c)] || "application/octet-stream" });
+        return res.end(readFileSync(c));
+      }
+    } catch {
+      /* not a file — try the next candidate */
+    }
+  }
+  res.writeHead(404);
+  res.end("not found");
+});
+
+const routes = [];
+if (existsSync(path.join(OUT, "index.html"))) routes.push("/");
+for (const e of await readdir(OUT, { withFileTypes: true })) {
+  if (!e.isDirectory()) continue;
+  if (e.name.startsWith("_") || e.name.startsWith(".") || e.name === "404") continue;
+  if (existsSync(path.join(OUT, e.name, "index.html"))) routes.push(`/${e.name}/`);
+}
+routes.sort();
+if (routes.length === 0) {
+  console.error("\nFAIL — hierarchy gate found no built routes in out/. Nothing was measured.\n");
+  process.exit(1);
+}
+
+const expected = routes.length * WIDTHS.length;
+const port = await new Promise((resolve) => {
+  server.listen(0, "127.0.0.1", () => resolve(server.address().port));
+});
+const prof = `${tmpdir()}/hiergate-${process.pid}-${Date.now()}`;
+
+let cleaned = false;
+function cleanup() {
+  if (cleaned) return;
+  cleaned = true;
+  try {
+    rmSync(prof, { recursive: true, force: true });
+  } catch {
+    /* best effort */
+  }
+}
+process.on("exit", cleanup);
+for (const sig of ["SIGINT", "SIGTERM"]) process.on(sig, () => { cleanup(); process.exit(130); });
+
+let dom = "";
+try {
+  dom = await new Promise((resolve, reject) => {
+    execFile(
+      CHROME,
+      [
+        "--headless=new",
+        "--disable-gpu",
+        "--hide-scrollbars",
+        "--no-first-run",
+        "--no-default-browser-check",
+        "--disable-extensions",
+        `--user-data-dir=${prof}`,
+        "--virtual-time-budget=120000",
+        "--dump-dom",
+        `http://127.0.0.1:${port}/_hierarchy-probe?r=${encodeURIComponent(JSON.stringify(routes))}`,
+      ],
+      { maxBuffer: 128 * 1024 * 1024, timeout: 300000, killSignal: "SIGKILL" },
+      (err, stdout) => (err ? reject(new Error(err.message)) : resolve(stdout)),
+    );
+  });
+} catch (e) {
+  server.close();
+  cleanup();
+  console.error(`\nFAIL — hierarchy gate could not measure: Chrome failed (${e.message}).\n`);
+  process.exit(1);
+}
+server.close();
+cleanup();
+
+const m = /RESULTS:(\[.*?\])(?:<\/pre>|$)/s.exec(dom);
+const harnessError = /RESULTS:ERROR:([\s\S]*?)(?:<\/pre>|$)/.exec(dom);
+if (harnessError) {
+  console.error(`\nFAIL — hierarchy gate harness threw. Nothing was verified.\n${harnessError[1].trim()}\n`);
+  process.exit(1);
+}
+if (!m) {
+  console.error(
+    "\nFAIL — hierarchy gate could not measure: the probe never reported results.\n" +
+      "  Nothing was verified.\n",
+  );
+  process.exit(1);
+}
+let results;
+try {
+  results = JSON.parse(m[1].replace(/&quot;/g, '"').replace(/&amp;/g, "&"));
+} catch (e) {
+  console.error(`\nFAIL — hierarchy gate could not parse its own results: ${e.message}\n`);
+  process.exit(1);
+}
+if (results.length !== expected) {
+  console.error(
+    `\nFAIL — hierarchy gate is under-measuring.\n` +
+      `  Expected ${expected} measurements (${routes.length} routes x ${WIDTHS.length} widths), got ${results.length}.\n`,
+  );
+  process.exit(1);
+}
+const errored = results.filter((r) => r.error);
+if (errored.length) {
+  console.error(`\nFAIL — hierarchy gate could not read ${errored.length} page(s):`);
+  for (const e of errored.slice(0, 8)) console.error(`  ✗ ${e.route} @${e.w}px — ${e.error}`);
+  process.exit(1);
+}
+
+if (REPORT) {
+  const rows = results.map((r) => ({
+    route: r.route,
+    w: r.w,
+    h1: r.h1Size,
+    peers: r.boldPeers,
+    groups: r.peerGroups,
+    ratio: r.titleRatio,
+    vsbody: r.titleVsBody,
+    acts: r.prominentActions,
+    prim: r.primaryTotal,
+    fine: r.finePrint,
+    cta: r.primaryInFold,
+    chars: r.totalChars,
+    big: r.largestInfo ? r.largestInfo.tag + '.' + r.largestInfo.cls + ' ' + r.largestInfo.size + 'px "' + r.largestInfo.text + '"' : '',
+  }));
+  console.log(
+    "route".padEnd(20) + "w".padEnd(6) + "h1".padEnd(5) + "peers".padEnd(7) +
+    "grp".padEnd(5) + "ratio".padEnd(7) + "vsBody".padEnd(8) + "acts".padEnd(6) +
+    "fine".padEnd(6) + "cta".padEnd(5) + "chars".padEnd(7) + "biggest non-h1",
+  );
+  for (const r of rows) {
+    console.log(
+      String(r.route).padEnd(20) + String(r.w).padEnd(6) + String(r.h1).padEnd(5) +
+      String(r.peers).padEnd(7) + String(r.groups).padEnd(5) + String(r.ratio).padEnd(7) +
+      String(r.vsbody).padEnd(8) + String(r.acts).padEnd(6) + String(r.prim).padEnd(6) +
+      String(r.fine).padEnd(6) + String(r.cta).padEnd(5) + String(r.chars).padEnd(7) + r.big,
+    );
+  }
+  const desktop = results.filter((r) => r.w === 1440);
+  const worst = (key) => desktop.reduce((a, b) => (b[key] > a[key] ? b : a));
+  console.log("\nworst peers :", worst("boldPeers").route, worst("boldPeers").boldPeers);
+  console.log("worst groups:", worst("peerGroups").route, worst("peerGroups").peerGroups);
+  console.log("worst fine  :", worst("finePrint").route, worst("finePrint").finePrint);
+  console.log("worst acts  :", worst("prominentActions").route, worst("prominentActions").prominentActions);
+  console.log("worst prim  :", worst("primaryTotal").route, worst("primaryTotal").primaryTotal);
+  console.log("worst ratio :", worst("titleRatio").route, worst("titleRatio").titleRatio);
+  console.log("worst vsBody:", worst("titleVsBody").route, worst("titleVsBody").titleVsBody);
+  console.log("no CTA      :", desktop.filter((r) => r.primaryInFold === 0).map((r) => r.route).join(", ") || "(none)");
+  process.exit(0);
+}
+
+// ------------------------------------------------------------------ the gate
+const failures = [];
+for (const r of results) {
+  const label = `${r.route} @${r.w}px`;
+  if (r.h1Count !== 1) {
+    failures.push(`${label} — ${r.h1Count} h1 elements (exactly one title per page)`);
+  }
+  if (r.titleRatio !== null && r.titleRatio < LIMITS.titleRatio) {
+    failures.push(`${label} — title is only ${r.titleRatio}x the next largest text (limit ${LIMITS.titleRatio})`);
+  }
+  if (r.titleVsBody !== null && r.titleVsBody < LIMITS.titleVsBody) {
+    failures.push(`${label} — title is only ${r.titleVsBody}x the body text (limit ${LIMITS.titleVsBody})`);
+  }
+  if (r.peerGroups > LIMITS.peerGroups) {
+    failures.push(`${label} — ${r.peerGroups} groups of loud text (limit ${LIMITS.peerGroups})`);
+  }
+  if (r.primaryTotal > LIMITS.primaryTotal) {
+    failures.push(`${label} — ${r.primaryTotal} filled primary actions (limit ${LIMITS.primaryTotal}); the page has no single main action`);
+  }
+  if (r.prominentActions > LIMITS.prominentActions) {
+    failures.push(`${label} — ${r.prominentActions} card-like actions compete at once (limit ${LIMITS.prominentActions})`);
+  }
+}
+
+if (failures.length) {
+  console.error(`\nFAIL — ${failures.length} hierarchy problem(s):\n`);
+  for (const f of failures) console.error(`  ✗ ${f}`);
+  console.error(
+    "\n  A page where everything is loud has nothing loud. One title, one next action,\n" +
+      "  and the rest of the page quieter than both.\n",
+  );
+  process.exit(1);
+}
+
+console.log(
+  `  · hierarchy: ${results.length} measurements across ${routes.length} routes — ` +
+    `one title, title wins, competing actions capped`,
+);

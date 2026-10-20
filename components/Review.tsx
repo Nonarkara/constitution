@@ -82,12 +82,26 @@ export function Review() {
         </div>
       </div>
 
-      <div className="review-count">
-        <strong className="mono">{due.length}</strong>
-        <span>
-          {tr(lang, "ข้อถึงเวลาทบทวน", "questions due", "题到期复习")}
-        </span>
-      </div>
+      {/* A big "0" is the loudest thing on a page that has nothing to review, and
+          a zero states nothing a reader can act on. The count only appears when
+          there is something due; otherwise the line says what will happen. */}
+      {due.length > 0 ? (
+        <div className="review-count">
+          <strong className="mono">{due.length}</strong>
+          <span>
+            {tr(lang, "ข้อถึงเวลาทบทวน", "questions due", "题到期复习")}
+          </span>
+        </div>
+      ) : (
+        <p className="review-count-none">
+          {tr(
+            lang,
+            "ยังไม่มีข้อถึงเวลาทบทวน คำถามที่ตอบผิดจะกลับมาหลังผ่านไป 1, 3, 7 และ 14 วัน",
+            "Nothing is due for review yet. Questions you miss come back after 1, 3, 7 and 14 days.",
+            "目前没有到期复习的题目。答错的题目会在 1、3、7、14 天后回来。",
+          )}
+        </p>
+      )}
 
       <div className="review-primary-actions">
         <button
