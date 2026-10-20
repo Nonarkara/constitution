@@ -2733,66 +2733,77 @@ mark.hl.has-note {
     margin-bottom: 10px;
   }
 }
-.exam-formats {
+/* The exam page has one thing to do: start a paper. Thirty identical cards
+   used to sit in a grid with exactly the same weight, so nothing led and the
+   page's real action was a plain link in the middle of a wall. The first paper
+   is the way in and carries the only filled button on the page; the other
+   twenty-nine are a quiet list — hairline rules, no fill, no card chrome. */
+.exam-featured {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 10px;
-  margin: 24px 0;
-}
-.exam-paper-card {
-  display: flex;
-  flex-direction: column;
-  /* space-between stretched three short lines across 127px and opened a hole
-     under the title. The grid already stretches cards in a row to match. */
-  justify-content: flex-start;
-  align-items: stretch;
-  padding: 14px 16px;
-  text-align: left;
-  background: var(--paper);
+  gap: 4px;
+  justify-items: start;
+  margin: 24px 0 0;
+  padding: 18px 20px 20px;
   border: 1px solid var(--line);
-  min-height: 80px;
-  cursor: pointer;
-  transition: all 120ms ease;
-}
-.exam-paper-card:hover {
-  background: var(--wash);
-  border-color: var(--ink);
-}
-.exam-paper-card.primary {
   border-left: 4px solid var(--accent);
   background: var(--wash);
-  /* The global .primary utility sets color: var(--accent-ink) for text that sits
-     ON an amber background. This card paints --wash instead, so the inherited
-     amber-ink became near-black on near-black: measured rgb(21,20,15) on
-     rgb(31,29,23), 1.03:1 — the featured card was the least legible thing on
-     the page. Token bleed: re-assert the ink. */
-  color: var(--ink);
 }
-.paper-card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 8px;
-  margin-bottom: 4px;
-}
-.paper-card-num {
+.exam-featured-num {
   font-size: var(--micro);
   font-weight: 700;
   color: var(--muted);
 }
-/* Was an amber-bordered badge on every one of the six cards — the accent then
-   meant nothing, because it was everywhere. Now plain text, so the amber
-   left-rule on the featured paper is the only accent in the row. */
-.paper-card-time {
+.exam-featured-title {
+  font-family: "Jost", "IBM Plex Sans Thai", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  line-height: 1.25;
+}
+.exam-featured-meta {
+  color: var(--muted);
+}
+.exam-start {
+  margin-top: 12px;
+  padding: 12px 26px;
+  font-size: var(--body);
+  font-weight: 600;
+}
+.exam-others-title {
+  font-size: var(--micro);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 36px 0 0;
+}
+.exam-formats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0 28px;
+  margin: 10px 0 24px;
+}
+.exam-paper-row {
+  display: grid;
+  gap: 1px;
+  padding: 11px 0;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--line);
+  cursor: pointer;
+}
+.exam-paper-row:hover .paper-card-title {
+  text-decoration: underline;
+}
+.paper-card-num {
   font-size: var(--micro);
   color: var(--muted);
-  padding: 0;
 }
 .paper-card-title {
-  font-weight: 600;
+  font-weight: 400;
   font-size: var(--body);
   line-height: 1.35;
-  margin-bottom: 6px;
 }
 .paper-card-meta {
   font-size: var(--micro);

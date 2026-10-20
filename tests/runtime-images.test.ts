@@ -15,10 +15,11 @@ const every = [
   // The Tikki series — one mnemonic drawing per route.
   'tikki-along-pastel','tikki-amend-pastel','tikki-bible-pastel','tikki-cheatsheet-pastel',
   'tikki-cram-pastel','tikki-drills-pastel','tikki-exam-pastel','tikki-flashcards-pastel',
-  'tikki-glossary-pastel','tikki-library-pastel','tikki-notebook-pastel','tikki-notes-pastel',
-  'tikki-officer-pastel','tikki-overwhelmed-pastel','tikki-pass-pastel','tikki-polls-pastel',
-  'tikki-review-pastel','tikki-section-pastel','tikki-smart-pastel','tikki-sources-pastel',
-  'tikki-student-pastel','tikki-topics-pastel',
+  'tikki-games-pastel','tikki-glossary-pastel','tikki-library-pastel','tikki-news-pastel',
+  'tikki-notebook-pastel','tikki-notes-pastel','tikki-officer-pastel','tikki-overwhelmed-pastel',
+  'tikki-pass-pastel','tikki-polls-pastel','tikki-practice-pastel','tikki-read-pastel',
+  'tikki-rights-pastel','tikki-review-pastel','tikki-section-pastel','tikki-settings-pastel',
+  'tikki-smart-pastel','tikki-sources-pastel','tikki-student-pastel','tikki-topics-pastel',
 ].map((n) => `/illustrations/${n}.webp`);
 
 test('every illustration used at runtime is found, including ones built from templates', () => {

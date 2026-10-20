@@ -10,6 +10,7 @@ import { useStudy } from "./Provider";
 import { useReadOnScreen } from "./useReadOnScreen";
 import { LawRef } from "./LawRef";
 import { tr, labels, sectionLabel, type Lang } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 
 const glossary = glossaryData as Term[];
 // The Chinese study text repeats its own "第N条" label; the section heading already shows it.
@@ -123,31 +124,36 @@ export function ReadAll() {
     <>
       <span className="page-kicker">{chapterLabel(lang, chapterNumber)}</span>
       <div className="read-head">
-        <h1>{chapter.title[lang]}</h1>
-        <label className="micro" htmlFor="read-chapter">
-          {tr(lang, "เลือกหมวด", "Chapter", "选择章节")}
-        </label>
-        <select id="read-chapter" value={chapterNumber} onChange={(e) => go(Number(e.target.value))}>
-          {chapters.map((c) => (
-            <option key={c.number} value={c.number}>
-              {chapterLabel(lang, c.number)} · {c.title[lang]}
-            </option>
-          ))}
-        </select>
-        <p className="micro">
-          {sectionLabel(lang, chapter.start === chapter.end ? chapter.start : `${chapter.start}–${chapter.end}`)} ·{" "}
-          {tr(
-            lang,
-            "ลากเลือกข้อความเพื่อไฮไลต์ แตะไฮไลต์เพื่อจดโน้ต แตะเลขมาตราเพื่อเปิดดู",
-            "Select words to highlight. Tap a highlight to add a note. Tap a section number to peek.",
-            "选中文字即可标记，点标记写笔记，点条文编号可快速查看。",
-          )}
-        </p>
-        {lang !== "th" && (
-          <p className="micro">
-            {tr(lang, "", "Study translation. The Thai text is the law.", "中文为学习译文，以泰文原文为准。")}
-          </p>
-        )}
+        <div className="intro-copy">
+          <StudyArt scene="read" />
+          <div className="intro-text">
+            <h1>{chapter.title[lang]}</h1>
+            <label className="micro" htmlFor="read-chapter">
+              {tr(lang, "เลือกหมวด", "Chapter", "选择章节")}
+            </label>
+            <select id="read-chapter" value={chapterNumber} onChange={(e) => go(Number(e.target.value))}>
+              {chapters.map((c) => (
+                <option key={c.number} value={c.number}>
+                  {chapterLabel(lang, c.number)} · {c.title[lang]}
+                </option>
+              ))}
+            </select>
+            <p className="micro">
+              {sectionLabel(lang, chapter.start === chapter.end ? chapter.start : `${chapter.start}–${chapter.end}`)} ·{" "}
+              {tr(
+                lang,
+                "ลากเลือกข้อความเพื่อไฮไลต์ แตะไฮไลต์เพื่อจดโน้ต แตะเลขมาตราเพื่อเปิดดู",
+                "Select words to highlight. Tap a highlight to add a note. Tap a section number to peek.",
+                "选中文字即可标记，点标记写笔记，点条文编号可快速查看。",
+              )}
+            </p>
+            {lang !== "th" && (
+              <p className="micro">
+                {tr(lang, "", "Study translation. The Thai text is the law.", "中文为学习译文，以泰文原文为准。")}
+              </p>
+            )}
+          </div>
+        </div>
       </div>
 
       {list.map((s) => {

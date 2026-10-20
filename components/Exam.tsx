@@ -105,7 +105,19 @@ export function Exam() {
   }, [paper, done, answers]);
 
   if (repair) return <Quiz ids={repair} onExit={() => setRepair(null)}/>;
-  if (!paper)
+  if (repair) return <Quiz ids={repair} onExit={() => setRepair(null)}/>;
+  if (!paper) {
+    const [featured, ...rest] = FORMATS;
+    const start = (f: (typeof FORMATS)[number]) => {
+      const started = Date.now();
+      setPaperNumber(f.number);
+      setResumed(false);
+      setAnswers({});
+      setIndex(0);
+      setDone(false);
+      setNow(started);
+      setPaper({ list: makePaper(questions, f), ends: started + f.minutes * 60_000 });
+    };
     return (
       <>
         <div className="intro-copy">
@@ -118,8 +130,29 @@ export function Exam() {
                 `30 ชุดฝึกจากโจทย์เขียนเอง ${questions.length} ข้อ คลังครอบคลุมทุกมาตรา แต่แต่ละชุดเป็นการสุ่มตัวอย่าง ชุดเน้นเรื่องมีโจทย์หมวดอื่นเสริม เฉลยหลังส่ง ข้อที่ตอบผิดจะเข้าคิวทบทวน ข้อว่างยังไม่นับว่าลองตอบ`,
                 `30 study papers from ${questions.length} authored questions. The bank covers every section; each paper samples it. Topic papers include mixed supplements. Answers appear after submission. Wrong submitted answers enter review; blanks remain unattempted.`,
                 `30套练习卷来自${questions.length}道原创题。题库覆盖全部条文，每套只是抽样；主题卷补充其他章节。交卷后显示解析。已答错题进入复习，空白题仍算未尝试。`,
-            )}
+              )}
             </p>
+            {/* One thing to do on this page. Thirty equal cards used to sit here,
+                each with the same weight, so nothing led. The first paper is the
+                way in; the other twenty-nine are a quiet list under it. */}
+            <div className="exam-featured">
+              <span className="mono exam-featured-num">
+                {tr(lang, "ชุดที่ 01", "Paper 01", "第01套")}
+              </span>
+              <span className="exam-featured-title">{featured.title[lang]}</span>
+              <span className="exam-featured-meta micro">
+                {featured.count} {tr(lang, "ข้อ", "questions", "道题")} ·{" "}
+                {featured.minutes} {tr(lang, "นาที", "min", "分钟")} ·{" "}
+                {tr(lang, "เฉลยหลังส่ง", "solutions at the end", "交卷后解析")}
+              </span>
+              <button
+                className="primary exam-start"
+                disabled={!ready || !checkpointReady}
+                onClick={() => start(featured)}
+              >
+                {tr(lang, "เริ่ม", "Start", "开始")} →
+              </button>
+            </div>
           </div>
         </div>
         <p className="micro">
@@ -132,58 +165,36 @@ export function Exam() {
         </p>
         <p className="notice">{tr(lang,"ชุดจับเวลาทั้ง 30 ชุดนี้ใช้คลังรัฐธรรมนูญ ส่วน 90 คำถามนายอำเภอและท้องถิ่นเป็นแบบฝึกเสริมแยก ไม่รวมในคะแนนหรือเกณฑ์ผ่านหมวด","These 30 timed papers use the Constitution bank. The 90 district-chief and local topics are separate, unscored extras and do not change chapter mastery.","这30套计时卷使用宪法题库。90道县长与地方考试题为单独、不计分的补充题，不改变章节掌握标准。")}</p>
         <p><Link href="/along/">{tr(lang,"ลองแนวข้อสอบเสริม","Try the extra exam topics","试做补充题")} →</Link> · <Link href="/bible/exam-method/">{tr(lang,"อ่านวิธีทำข้อสอบ","Read the exam method","阅读答题方法")} →</Link></p>
+        <h2 className="exam-others-title">
+          {tr(lang, "หรือเลือกชุดอื่น", "Or pick another paper", "或选择其他试卷")}
+        </h2>
         <div className="exam-formats">
-          {FORMATS.map((f, i) => (
+          {rest.map((f) => (
             <button
               key={f.id}
               disabled={!ready || !checkpointReady}
-              className={"exam-paper-card" + (i === 0 ? " primary" : "")}
-              onClick={() => {
-                const started = Date.now();
-                setPaperNumber(f.number);
-                setResumed(false);
-                setAnswers({});
-                setIndex(0);
-                setDone(false);
-                setNow(started);
-                setPaper({ list: makePaper(questions, f), ends: started + f.minutes * 60_000 });
-              }}
+              className="exam-paper-row"
+              onClick={() => start(f)}
             >
-              <div className="paper-card-top">
-                <span className="mono paper-card-num">
-                  {tr(
-                    lang,
-                    `ชุดที่ ${String(f.number).padStart(2, "0")}`,
-                    `Paper ${String(f.number).padStart(2, "0")}`,
-                    `第${String(f.number).padStart(2, "0")}套`,
-                  )}
-                </span>
-                <span className="paper-card-time mono">
-                  {f.minutes} {tr(lang, "นาที", "min", "分钟")}
-                </span>
-              </div>
-              <div className="paper-card-title">{f.title[lang]}</div>
-              <div className="paper-card-meta micro">
-                {f.count}{" "}
+              <span className="mono paper-card-num">
                 {tr(
                   lang,
-                  "ข้อสอบจับเวลา",
-                  "timed questions",
-                  "道计时题",
-                  )}{" "}
-                  ·{" "}
-                  {tr(
-                    lang,
-                    "เฉลยหลังส่ง",
-                    "solutions at end",
-                    "交卷后解析",
+                  `ชุดที่ ${String(f.number).padStart(2, "0")}`,
+                  `Paper ${String(f.number).padStart(2, "0")}`,
+                  `第${String(f.number).padStart(2, "0")}套`,
                 )}
-              </div>
+              </span>
+              <span className="paper-card-title">{f.title[lang]}</span>
+              <span className="paper-card-meta micro">
+                {f.count} {tr(lang, "ข้อ", "questions", "道题")} ·{" "}
+                {f.minutes} {tr(lang, "นาที", "min", "分钟")}
+              </span>
             </button>
           ))}
         </div>
       </>
     );
+  }
 
   if (done && result)
     return (

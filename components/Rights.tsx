@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 const Ask = dynamic(() => import("./Ask").then((m) => m.Ask));
 import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 export function Rights() {
   const { lang } = useStudy();
   const [open, setOpen] = useState<Case | null>(null);
@@ -32,22 +33,27 @@ export function Rights() {
     );
   return (
     <>
-      <h1>
-        {tr(
-          lang,
-          "กฎหมายสูงสุด\nในเรื่องธรรมดา",
-          "The supreme law,\nin ordinary life",
-          "最高法律，\n在日常生活里",
-        )}
-      </h1>
-      <p>
-        {tr(
-          lang,
-          "โทรศัพท์ บ้าน ใบอนุญาต น้ำท่วมซอย แต่ละโจทย์ให้คุณเดาก่อน แล้วค่อยเปิดตัวบทที่ตอบมัน",
-          "Your phone, your home, a stalled permit, a flooded street. Each puzzle asks you to guess first, then opens the section that answers it.",
-          "手机、住所、卡住的许可证、积水的街道。每道题都先请你猜，再打开回答它的条文。",
-        )}
-      </p>
+      <div className="intro-copy">
+        <StudyArt scene="rights" />
+        <div className="intro-text">
+          <h1>
+            {tr(
+              lang,
+              "กฎหมายสูงสุด\nในเรื่องธรรมดา",
+              "The supreme law,\nin ordinary life",
+              "最高法律，\n在日常生活里",
+            )}
+          </h1>
+          <p>
+            {tr(
+              lang,
+              "โทรศัพท์ บ้าน ใบอนุญาต น้ำท่วมซอย แต่ละโจทย์ให้คุณเดาก่อน แล้วค่อยเปิดตัวบทที่ตอบมัน",
+              "Your phone, your home, a stalled permit, a flooded street. Each puzzle asks you to guess first, then opens the section that answers it.",
+              "手机、住所、卡住的许可证、积水的街道。每道题都先请你猜，再打开回答它的条文。",
+            )}
+          </p>
+        </div>
+      </div>
       {groups.map((group) => (
         <section key={group.id}>
           <h2>{group.title[lang]}</h2>

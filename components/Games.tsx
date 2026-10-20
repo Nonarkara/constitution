@@ -5,6 +5,7 @@ import facts from "@/data/facts.json";
 import { chapters, readingText, sections } from "@/lib/corpus";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel, type Lang } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 
 type Fact = (typeof facts)[number];
 const shuffle = <T,>(list: T[]) => {
@@ -223,15 +224,20 @@ export function Games() {
   const { lang } = useStudy();
   return (
     <>
-      <h1>{tr(lang, "เกม", "Games", "游戏")}</h1>
-      <p>
-        {tr(
-          lang,
-          "สองเกมสั้น ๆ สำหรับวันที่อยากเล่นมากกว่าอ่าน ทุกตัวเลขพิสูจน์ได้จากตัวบท",
-          "Two short games for days when playing beats reading. Every number is checked against the text.",
-          "两个小游戏，适合想玩不想读的日子。每个数字都与条文核对过。",
-        )}
-      </p>
+      <div className="intro-copy">
+        <StudyArt scene="games" />
+        <div className="intro-text">
+          <h1>{tr(lang, "เกม", "Games", "游戏")}</h1>
+          <p>
+            {tr(
+              lang,
+              "สองเกมสั้น ๆ สำหรับวันที่อยากเล่นมากกว่าอ่าน ทุกตัวเลขพิสูจน์ได้จากตัวบท",
+              "Two short games for days when playing beats reading. Every number is checked against the text.",
+              "两个小游戏，适合想玩不想读的日子。每个数字都与条文核对过。",
+            )}
+          </p>
+        </div>
+      </div>
       <section className="game-block">
         <h2>{tr(lang, "จับคู่ตัวเลข", "Number match", "数字配对")}</h2>
         <NumberMatch />

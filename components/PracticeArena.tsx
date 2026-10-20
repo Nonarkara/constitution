@@ -163,7 +163,7 @@ function ConstitutionArena() {
           {sessionNotice && <p role="status">{sessionNotice}</p>}
           <header className="practice-header">
             <div className="intro-copy">
-              <StudyArt scene="review" compact />
+              <StudyArt scene="practice" />
               <div className="intro-text">
                 <h1>
                   {tr(

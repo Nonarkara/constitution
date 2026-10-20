@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import seed from "@/data/news.json";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 import {
   headlineTrends,
   parseNewsSnapshot,
@@ -72,22 +73,27 @@ export function NewsDesk() {
   return (
     <div className="news-desk">
       <div className="bulletin-heading">
-        <h1>
-          {tr(
-            lang,
-            "ข่าวสั้นหนึ่งแก้ว",
-            "A small cup of headlines",
-            "一小杯新闻标题",
-          )}
-        </h1>
-        <p>
-          {tr(
-            lang,
-            "อ่านหัวข่าว เปิดเรื่องเต็มกับสำนักข่าว",
-            "Read a headline. Open the publisher for the story.",
-            "读标题，去原媒体看全文。",
-          )}
-        </p>
+        <div className="intro-copy">
+          <StudyArt scene="news" />
+          <div className="intro-text">
+            <h1>
+              {tr(
+                lang,
+                "ข่าวสั้นหนึ่งแก้ว",
+                "A small cup of headlines",
+                "一小杯新闻标题",
+              )}
+            </h1>
+            <p>
+              {tr(
+                lang,
+                "อ่านหัวข่าว เปิดเรื่องเต็มกับสำนักข่าว",
+                "Read a headline. Open the publisher for the story.",
+                "读标题，去原媒体看全文。",
+              )}
+            </p>
+          </div>
+        </div>
       </div>
       <div className="news-status" role="status">
         <span>

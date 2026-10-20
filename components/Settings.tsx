@@ -12,6 +12,7 @@ import { loadPokklongProgress } from "@/lib/pokklong";
 import { REFLECTION_KEY } from "@/lib/amendment";
 import { THEMES, THEME_NAME, type ThemeChoice } from "@/lib/theme";
 import { useTheme } from "@/lib/use-theme";
+import { StudyArt } from "./StudyArt";
 export function Settings() {
   const {
     applyBackup,
@@ -72,14 +73,19 @@ export function Settings() {
   };
   return (
     <>
-      <h1>
-        {tr(
-          lang,
-          "บนเครื่อง\nของคุณ",
-          "Your own\nnotebook.",
-          "你的设备，\n你的学习笔记。",
-        )}
-      </h1>
+      <div className="intro-copy">
+        <StudyArt scene="settings" />
+        <div className="intro-text">
+          <h1>
+            {tr(
+              lang,
+              "บนเครื่อง\nของคุณ",
+              "Your own\nnotebook.",
+              "你的设备，\n你的学习笔记。",
+            )}
+          </h1>
+        </div>
+      </div>
       <div className="source-card">
         <h2>{tr(lang, "ติดตั้งบน iPad", "Install on iPad", "安装到iPad")}</h2>
         <p>
