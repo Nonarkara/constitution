@@ -6,6 +6,7 @@ import cram from "@/data/cram.json";
 import { LawRef, LawText, Peek } from "./LawRef";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel, type Lang } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 
 type Row = { id: string; section: number; label: Record<Lang, string>; value: Record<Lang, string>; source?: string; note?: Record<Lang, string> };
 
@@ -56,15 +57,20 @@ export function Cram() {
   return (
     <>
       <span className="page-kicker mono">{tr(lang,"คืนก่อนสอบ","The night before","考前一晚")}</span>
-      <h1>{tr(lang, "สรุปก่อนเข้าห้องสอบ", "The night before", "考前一页通")}</h1>
-      <p>
-        {tr(
-          lang,
-          "ตัวเลข ระยะเวลา คะแนนเสียง และกับดักที่ต้องแม่น ทุกบรรทัดตรวจกับตัวบทแล้ว ชี้ที่เลขมาตราเพื่อเปิดอ่าน",
-          "The numbers, time limits, majorities and traps to get exactly right. Every line is checked against the text; point at a section to read it.",
-          "必须记准的数字、期限、表决门槛与陷阱。每一行都已与条文核对，指向条文编号即可阅读。",
-        )}
-      </p>
+      <div className="intro-copy">
+        <StudyArt scene="cram" />
+        <div className="intro-text">
+          <h1>{tr(lang, "สรุปก่อนเข้าห้องสอบ", "The night before", "考前一页通")}</h1>
+          <p>
+            {tr(
+              lang,
+              "ตัวเลข ระยะเวลา คะแนนเสียง และกับดักที่ต้องแม่น ทุกบรรทัดตรวจกับตัวบทแล้ว ชี้ที่เลขมาตราเพื่อเปิดอ่าน",
+              "The numbers, time limits, majorities and traps to get exactly right. Every line is checked against the text; point at a section to read it.",
+              "必须记准的数字、期限、表决门槛与陷阱。每一行都已与条文核对，指向条文编号即可阅读。",
+          )}
+          </p>
+        </div>
+      </div>
       <div className="cram-tools">
         <button
           className={covered ? "" : "primary"}

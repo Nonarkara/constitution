@@ -4,6 +4,7 @@ import topics from "@/data/topics.json";
 import { LawRef, Peek } from "./LawRef";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 
 // A back-of-book index in everyday words: look up "tax" or "protest", land on the sections.
 export function Topics() {
@@ -16,15 +17,20 @@ export function Topics() {
     .sort((a, b) => a.topic[lang].localeCompare(b.topic[lang], lang === "zh" ? "zh" : lang));
   return (
     <>
-      <h1>{tr(lang, "ดัชนีเรื่อง", "Subject index", "主题索引")}</h1>
-      <p>
-        {tr(
-          lang,
-          `${topics.length} เรื่องในชีวิต จับคู่กับมาตราที่พูดถึงเรื่องนั้นจริง ๆ ชี้ที่เลขมาตราเพื่ออ่านตัวบท`,
-          `${topics.length} everyday topics, each matched to the sections that genuinely address it. Point at a section number to read it.`,
-          `${topics.length}个生活话题，各自对应真正涉及该话题的条文。指向条文编号即可阅读。`,
-        )}
-      </p>
+      <div className="intro-copy">
+        <StudyArt scene="topics" />
+        <div className="intro-text">
+          <h1>{tr(lang, "ดัชนีเรื่อง", "Subject index", "主题索引")}</h1>
+          <p>
+            {tr(
+              lang,
+              `${topics.length} เรื่องในชีวิต จับคู่กับมาตราที่พูดถึงเรื่องนั้นจริง ๆ ชี้ที่เลขมาตราเพื่ออ่านตัวบท`,
+              `${topics.length} everyday topics, each matched to the sections that genuinely address it. Point at a section number to read it.`,
+              `${topics.length}个生活话题，各自对应真正涉及该话题的条文。指向条文编号即可阅读。`,
+          )}
+          </p>
+        </div>
+      </div>
       <label className="micro" htmlFor="topic-filter">
         {tr(lang, "ค้นเรื่อง", "Find a topic", "查找话题")}
       </label>

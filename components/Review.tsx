@@ -10,6 +10,7 @@ import { tr } from "@/lib/i18n";
 import dynamic from "next/dynamic";
 const Quiz = dynamic(() => import("./Quiz").then((m) => m.Quiz));
 import { analyzeUserLearning } from "@/lib/adaptive";
+import { StudyArt } from "./StudyArt";
 
 export function Review() {
   const { lang, progress, annotations, examTarget } = useStudy();
@@ -59,23 +60,26 @@ export function Review() {
   const studied = attemptedCount(questions, progress);
   return (
     <>
-      <div className="review-intro">
-        <h1>
-          {tr(
-            lang,
-            "จำได้ดีขึ้น\nเมื่อกลับมาอีกครั้ง",
-            "Return to what\nyou’ve learned.",
-            "再回顾一次，\n记得更牢。",
+      <div className="intro-copy">
+        <StudyArt scene="review" />
+        <div className="intro-text">
+          <h1>
+            {tr(
+              lang,
+              "จำได้ดีขึ้น\nเมื่อกลับมาอีกครั้ง",
+              "Return to what\nyou’ve learned.",
+              "再回顾一次，\n记得更牢。",
           )}
-        </h1>
-        <p>
-          {tr(
-            lang,
-            "คำถามที่เคยตอบจะกลับมาตามช่วงเวลา ข้อที่พลาดกลับมาเร็ว ข้อที่เข้าใจแล้วเว้นให้นานขึ้น พร้อมโหมดปรับแต่งเฉพาะสำหรับมาตราที่คุณจดโน้ตไว้",
-            "Questions return over time. Missed ones return sooner; correct ones get more breathing room. Includes tailored sessions for your annotated sections.",
-            "学过的题目会按间隔再次出现。错题早点复习，答对的题目间隔更长。亦可针对您做过边注的法条进行专项自适应温习。",
+          </h1>
+          <p>
+            {tr(
+              lang,
+              "คำถามที่เคยตอบจะกลับมาตามช่วงเวลา ข้อที่พลาดกลับมาเร็ว ข้อที่เข้าใจแล้วเว้นให้นานขึ้น พร้อมโหมดปรับแต่งเฉพาะสำหรับมาตราที่คุณจดโน้ตไว้",
+              "Questions return over time. Missed ones return sooner; correct ones get more breathing room. Includes tailored sessions for your annotated sections.",
+              "学过的题目会按间隔再次出现。错题早点复习，答对的题目间隔更长。亦可针对您做过边注的法条进行专项自适应温习。",
           )}
-        </p>
+          </p>
+        </div>
       </div>
 
       <div className="review-count">

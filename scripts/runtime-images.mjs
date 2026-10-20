@@ -35,12 +35,10 @@ function walk(dir) {
 
 /** Values each dynamic image template can take, derived from the code itself. */
 const RESOLVERS = {
-  // components/StudyArt.tsx — the `scene` prop's union type is the full list.
-  "/illustrations/${scene}-pastel.webp": (root) => {
-    const src = readFileSync(path.join(root, "components/StudyArt.tsx"), "utf8");
-    const union = src.match(/scene:\s*((?:"[a-z-]+"\s*\|?\s*)+)/)?.[1] ?? "";
-    return [...union.matchAll(/"([a-z-]+)"/g)].map((m) => `/illustrations/${m[1]}-pastel.webp`);
-  },
+  // components/StudyArt.tsx needs no resolver: STUDY_ART holds every scene's
+  // path as a literal string, so each one is found by the literal scan below.
+  // That is why the map stores full paths and not just file names — a name
+  // would have to be re-assembled at runtime, and the literal scan would miss it.
   // components/MemoryCue.tsx — every atlas number used in lib/palace.ts.
   "/illustrations/palace-${p.atlas}.webp": (root) => {
     const src = readFileSync(path.join(root, "lib/palace.ts"), "utf8");

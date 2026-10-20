@@ -4,6 +4,7 @@ import Link from "next/link";
 import { polls, parsePolls, POLLS_KEY, type PollAnswers } from "@/lib/polls";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 export function PollNotebook() {
   const { lang } = useStudy();
   const [answers, setAnswers] = useState<PollAnswers>({}),
@@ -37,22 +38,27 @@ export function PollNotebook() {
   };
   return (
     <section>
-      <h1>
-        {tr(
-          lang,
-          "คำถามที่เป็นของคุณ",
-          "Questions that belong to you",
-          "属于你的问题",
-        )}
-      </h1>
-      <p>
-        {tr(
-          lang,
-          "10 โพลส่วนตัว ไม่มีคำตอบที่ให้คะแนน ไม่มีสถิติคนอื่น คำตอบอยู่ในเบราว์เซอร์นี้และไม่ได้ส่งขึ้นเซิร์ฟเวอร์ คนใช้เบราว์เซอร์ร่วมกันจะเห็นบันทึกเดียวกัน",
-          "Ten private polls. No graded opinions and no public voting totals. Answers stay in this browser and are not sent to a server. People sharing a browser share these notes.",
-          "十个私人问卷，不给观点评分，也不显示公众投票总数。答案保存在本浏览器，不发送到服务器。共用浏览器就共用记录。",
-        )}
-      </p>
+      <div className="intro-copy">
+        <StudyArt scene="polls" />
+        <div className="intro-text">
+          <h1>
+            {tr(
+              lang,
+              "คำถามที่เป็นของคุณ",
+              "Questions that belong to you",
+              "属于你的问题",
+          )}
+          </h1>
+          <p>
+            {tr(
+              lang,
+              "10 โพลส่วนตัว ไม่มีคำตอบที่ให้คะแนน ไม่มีสถิติคนอื่น คำตอบอยู่ในเบราว์เซอร์นี้และไม่ได้ส่งขึ้นเซิร์ฟเวอร์ คนใช้เบราว์เซอร์ร่วมกันจะเห็นบันทึกเดียวกัน",
+              "Ten private polls. No graded opinions and no public voting totals. Answers stay in this browser and are not sent to a server. People sharing a browser share these notes.",
+              "十个私人问卷，不给观点评分，也不显示公众投票总数。答案保存在本浏览器，不发送到服务器。共用浏览器就共用记录。",
+          )}
+          </p>
+        </div>
+      </div>
       <p className="micro">
         {tr(
           lang,

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 
 export function CheatSheet() {
   const { lang } = useStudy();
@@ -441,22 +442,25 @@ export function CheatSheet() {
       
       <section className="intro">
         <div className="intro-copy">
-          <h1>
-            {tr(
-              lang,
-              "สูตรและแผนภาพ\nของรัฐธรรมนูญ",
-              "The constitution\nas diagrams and steps.",
-              "宪法的\n图解与步骤。",
-            )}
-          </h1>
-          <p>
-            {tr(
-              lang,
-              "ลำดับชั้นของกฎหมาย ขั้นตอนแก้รัฐธรรมนูญ ประตูของพระราชกำหนด หลักความได้สัดส่วน และตัวเลขที่ต้องจำ แต่ละแผนภาพบอกมาตราที่มาไว้ให้กดอ่านต่อ",
-              "The hierarchy of laws, the amendment steps, the gates an emergency decree must pass, proportionality and the numbers worth knowing. Each diagram names its sections so you can open them.",
-              "法律位阶、修宪步骤、紧急法令须通过的关口、比例原则，以及值得记住的数字。每张图都标明出处条文，可点开阅读。",
-            )}
-          </p>
+          <StudyArt scene="cheatsheet" />
+          <div className="intro-text">
+            <h1>
+              {tr(
+                lang,
+                "สูตรและแผนภาพ\nของรัฐธรรมนูญ",
+                "The constitution\nas diagrams and steps.",
+                "宪法的\n图解与步骤。",
+              )}
+            </h1>
+            <p>
+              {tr(
+                lang,
+                "ลำดับชั้นของกฎหมาย ขั้นตอนแก้รัฐธรรมนูญ ประตูของพระราชกำหนด หลักความได้สัดส่วน และตัวเลขที่ต้องจำ แต่ละแผนภาพบอกมาตราที่มาไว้ให้กดอ่านต่อ",
+                "The hierarchy of laws, the amendment steps, the gates an emergency decree must pass, proportionality and the numbers worth knowing. Each diagram names its sections so you can open them.",
+                "法律位阶、修宪步骤、紧急法令须通过的关口、比例原则，以及值得记住的数字。每张图都标明出处条文，可点开阅读。",
+              )}
+            </p>
+          </div>
         </div>
       </section>
 

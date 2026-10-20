@@ -7,7 +7,19 @@ import path from 'node:path';
 import { checkRuntimeImages } from '../scripts/runtime-images.mjs';
 
 const root = process.cwd();
-const every = ['civic-palace-pastel','reading-pastel','listening-pastel','review-pastel','palace-1','palace-2','palace-3','palace-4'].map((n) => `/illustrations/${n}.webp`);
+const every = [
+  // The original crayon scenes.
+  'civic-palace-pastel','core-lock-pastel','listening-pastel','reading-pastel',
+  'term-clock-pastel','thinking-pastel',
+  'palace-1','palace-2','palace-3','palace-4',
+  // The Tikki series — one mnemonic drawing per route.
+  'tikki-along-pastel','tikki-amend-pastel','tikki-bible-pastel','tikki-cheatsheet-pastel',
+  'tikki-cram-pastel','tikki-drills-pastel','tikki-exam-pastel','tikki-flashcards-pastel',
+  'tikki-glossary-pastel','tikki-library-pastel','tikki-notebook-pastel','tikki-notes-pastel',
+  'tikki-officer-pastel','tikki-overwhelmed-pastel','tikki-pass-pastel','tikki-polls-pastel',
+  'tikki-review-pastel','tikki-section-pastel','tikki-smart-pastel','tikki-sources-pastel',
+  'tikki-student-pastel','tikki-topics-pastel',
+].map((n) => `/illustrations/${n}.webp`);
 
 test('every illustration used at runtime is found, including ones built from templates', () => {
  const { refs, failures } = checkRuntimeImages(root, { out: '__no_out__' });

@@ -4,6 +4,7 @@ import glossary from "@/data/glossary.json";
 import { LawRef, Peek } from "./LawRef";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 
 // Terms the reader meets in the text, in plain words, each tied to where the law uses it.
 export function Glossary() {
@@ -16,15 +17,20 @@ export function Glossary() {
     .sort((a, b) => a.term[lang].localeCompare(b.term[lang], lang === "zh" ? "zh" : lang));
   return (
     <>
-      <h1>{tr(lang, "อภิธานศัพท์", "Glossary", "术语表")}</h1>
-      <p>
-        {tr(
-          lang,
-          `${glossary.length} คำที่เจอบ่อยในตัวบท อธิบายด้วยภาษาง่าย คำเหล่านี้ขีดเส้นประไว้ในหน้าอ่านทั้งฉบับ แตะเพื่อดูความหมาย`,
-          `${glossary.length} terms from the text in plain words. They are dotted-underlined in the whole-text reader; tap one to see its meaning.`,
-          `${glossary.length}个条文常用术语的白话解释。在全文阅读页中这些词带虚线下划线，点击即可查看。`,
-        )}
-      </p>
+      <div className="intro-copy">
+        <StudyArt scene="glossary" />
+        <div className="intro-text">
+          <h1>{tr(lang, "อภิธานศัพท์", "Glossary", "术语表")}</h1>
+          <p>
+            {tr(
+              lang,
+              `${glossary.length} คำที่เจอบ่อยในตัวบท อธิบายด้วยภาษาง่าย คำเหล่านี้ขีดเส้นประไว้ในหน้าอ่านทั้งฉบับ แตะเพื่อดูความหมาย`,
+              `${glossary.length} terms from the text in plain words. They are dotted-underlined in the whole-text reader; tap one to see its meaning.`,
+              `${glossary.length}个条文常用术语的白话解释。在全文阅读页中这些词带虚线下划线，点击即可查看。`,
+          )}
+          </p>
+        </div>
+      </div>
       <label className="micro" htmlFor="glossary-filter">
         {tr(lang, "ค้นคำ", "Find a term", "查找术语")}
       </label>

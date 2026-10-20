@@ -164,22 +164,24 @@ function ConstitutionArena() {
           <header className="practice-header">
             <div className="intro-copy">
               <StudyArt scene="review" compact />
-              <h1>
-                {tr(
-                  lang,
-                  "ฝึกตอบ\nแล้วดูว่าพลาดตรงไหน",
-                  "Practise,\nthen see where you slip.",
-                  "练习，\n然后看看哪里出错。"
-                )}
-              </h1>
-              <p>
-                {tr(
-                  lang,
-                  `${questions.length} ข้อ เขียนขึ้นจากตัวบทเพื่อฝึก ไม่ใช่ข้อสอบจริง ข้อที่ตอบผิดจะถูกจับกลุ่มเป็นเรื่อง เพื่อให้เห็นว่าควรกลับไปอ่านตรงไหน`,
-                  `${questions.length} questions written from the text for practice, not past exam papers. Missed questions are grouped by subject so you can see what to reread.`,
-                  `${questions.length}道依据条文编写的练习题，并非历年真题。答错的题按主题归类，让你知道该回去重读哪里。`
-                )}
-              </p>
+              <div className="intro-text">
+                <h1>
+                  {tr(
+                    lang,
+                    "ฝึกตอบ\nแล้วดูว่าพลาดตรงไหน",
+                    "Practise,\nthen see where you slip.",
+                    "练习，\n然后看看哪里出错。"
+                  )}
+                </h1>
+                <p>
+                  {tr(
+                    lang,
+                    `${questions.length} ข้อ เขียนขึ้นจากตัวบทเพื่อฝึก ไม่ใช่ข้อสอบจริง ข้อที่ตอบผิดจะถูกจับกลุ่มเป็นเรื่อง เพื่อให้เห็นว่าควรกลับไปอ่านตรงไหน`,
+                    `${questions.length} questions written from the text for practice, not past exam papers. Missed questions are grouped by subject so you can see what to reread.`,
+                    `${questions.length}道依据条文编写的练习题，并非历年真题。答错的题按主题归类，让你知道该回去重读哪里。`
+                  )}
+                </p>
+              </div>
             </div>
           </header>
 

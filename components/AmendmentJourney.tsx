@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
 import { journey, debates } from "@/lib/journey-content";
+import { StudyArt } from "./StudyArt";
 import {
   assessAmendmentVotes,
   REFLECTION_KEY,
@@ -169,16 +170,16 @@ function VoteLab() {
                   "ส.ส. ตามเงื่อนไข",
                   "qualifying MPs",
                   "符合条件的众议员",
-                )}{" "}
-                ≥ {result.thresholds.eligible}
-              </dd>
-            </dl>
-            <p className="micro">
-              {tr(
-                lang,
-                "ผ่านเสียงยังไม่เท่ากับแก้สำเร็จ ต้องผ่านประตูอื่นด้วย",
-                "Passing vote thresholds does not finish the amendment. Other gates still apply.",
-                "达到票数门槛不等于修宪完成，还须经过其他程序。",
+                  )}{" "}
+                  ≥ {result.thresholds.eligible}
+                  </dd>
+                  </dl>
+                  <p className="micro">
+                    {tr(
+                      lang,
+                      "ผ่านเสียงยังไม่เท่ากับแก้สำเร็จ ต้องผ่านประตูอื่นด้วย",
+                      "Passing vote thresholds does not finish the amendment. Other gates still apply.",
+                      "达到票数门槛不等于修宪完成，还须经过其他程序。",
               )}
             </p>
           </>
@@ -257,22 +258,27 @@ export function AmendmentJourney() {
     <div className="amendment-journey">
       <div className="civic-title">
         <div>
-          <h1>
-            {tr(
-              lang,
-              "ถ้าเราอยากแก้รัฐธรรมนูญ",
-              "If we want to amend it",
-              "如果我们想修宪",
-            )}
-          </h1>
-          <p>
-            {tr(
-              lang,
-              "เรื่องสมมติ ประตูจริง คำตอบของคุณเอง",
-              "A fictional story. Real gates. Your own answer.",
-              "虚构故事，真实门槛，你自己的答案。",
-            )}
-          </p>
+          <div className="intro-copy">
+            <StudyArt scene="amend" />
+            <div className="intro-text">
+              <h1>
+                {tr(
+                  lang,
+                  "ถ้าเราอยากแก้รัฐธรรมนูญ",
+                  "If we want to amend it",
+                  "如果我们想修宪",
+              )}
+              </h1>
+              <p>
+                {tr(
+                  lang,
+                  "เรื่องสมมติ ประตูจริง คำตอบของคุณเอง",
+                  "A fictional story. Real gates. Your own answer.",
+                  "虚构故事，真实门槛，你自己的答案。",
+              )}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
         <p><Link href="/civic/">{tr(lang,"ฝึกต่อ: ตรวจคำสัญญา 16 ข้อ","Keep practising: check 16 promises","继续练习：核查16个承诺")} →</Link></p>
@@ -415,15 +421,15 @@ export function AmendmentJourney() {
                     "ดูฉบับแก้ไขทางการ",
                     "Open the official amendment source",
                     "查看正式修正来源",
-                  )}{" "}
-                  →
-                </Link>
-                <h3>
-                  {tr(
-                    lang,
-                    "ทำไมร่างอาจไปต่อไม่ได้?",
-                    "Why might a draft stall?",
-                    "草案为何可能停滞？",
+                    )}{" "}
+                    →
+                    </Link>
+                    <h3>
+                      {tr(
+                        lang,
+                        "ทำไมร่างอาจไปต่อไม่ได้?",
+                        "Why might a draft stall?",
+                        "草案为何可能停滞？",
                   )}
                 </h3>
                 <p>
@@ -489,15 +495,15 @@ export function AmendmentJourney() {
                 "บริการสุขภาพเหลือ",
                 "Health services receive",
                 "医疗服务获得",
-              )}{" "}
-              <strong>{100 - reform - schools}/100</strong>
-            </p>
-            <p>
-              {tr(
-                lang,
-                "นี่เป็นภาพอธิบายค่าเสียโอกาส ไม่ได้บอกว่าต้องเลือกระหว่างสิทธิกับบริการสาธารณะเสมอไป ในชีวิตจริงต้องดูงบ ค่าจัดประชามติ เวลาสภา ประโยชน์ระยะยาว และทางเลือกที่ทำพร้อมกันได้",
-                "This illustrates opportunity cost; rights and public services are not always mutually exclusive. Real decisions need budgets, referendum costs, parliamentary time, long-term benefits and options that can proceed together.",
-                "这只是机会成本示意，并不意味着权利与公共服务总是二选一。实际决策须考察预算、公投成本、国会时间、长期收益与可并行的方案。",
+                )}{" "}
+                <strong>{100 - reform - schools}/100</strong>
+                </p>
+                <p>
+                  {tr(
+                    lang,
+                    "นี่เป็นภาพอธิบายค่าเสียโอกาส ไม่ได้บอกว่าต้องเลือกระหว่างสิทธิกับบริการสาธารณะเสมอไป ในชีวิตจริงต้องดูงบ ค่าจัดประชามติ เวลาสภา ประโยชน์ระยะยาว และทางเลือกที่ทำพร้อมกันได้",
+                    "This illustrates opportunity cost; rights and public services are not always mutually exclusive. Real decisions need budgets, referendum costs, parliamentary time, long-term benefits and options that can proceed together.",
+                    "这只是机会成本示意，并不意味着权利与公共服务总是二选一。实际决策须考察预算、公投成本、国会时间、长期收益与可并行的方案。",
               )}
             </p>
             {debates.map((d) => (
@@ -634,10 +640,10 @@ export function AmendmentJourney() {
                 "กลับไปบันทึกของคุณ",
                 "Go to your notes",
                 "前往你的笔记",
-              )}{" "}
-              →
-            </Link>
-          </>
+                )}{" "}
+                →
+                </Link>
+                </>
         )}
       </article>
       <div className="journey-controls">

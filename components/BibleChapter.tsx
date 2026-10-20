@@ -7,6 +7,7 @@ import { useStudy } from "./Provider";
 import { tr, sectionLabel, type Lang } from "@/lib/i18n";
 import { useState } from "react";
 import { guidePaths } from "@/lib/guide-path";
+import { StudyArt } from "./StudyArt";
 
 type Pair = { th: string; en: string };
 function GuideEntry({ slug }: { slug: string }) {
@@ -162,7 +163,12 @@ export function BibleChapterView({ chapter }: { chapter: BibleChapter; prev: Lin
   const titled = chapter.blocks.map((b, i) => ({ b, i })).filter(({ b }) => "title" in b && b.title);
   return (
     <article className="bible">
-      <h1>{lang === "zh" ? guidePaths[chapter.slug]?.title.zh ?? text(chapter.title, lang) : text(chapter.title, lang)}</h1>
+      <div className="intro-copy">
+        <StudyArt scene="bible" />
+        <div className="intro-text">
+          <h1>{lang === "zh" ? guidePaths[chapter.slug]?.title.zh ?? text(chapter.title, lang) : text(chapter.title, lang)}</h1>
+        </div>
+      </div>
       <GuideEntry slug={chapter.slug} />
       {lang === "zh" && <p className="micro">上方三题为中文短课，条文与练习也提供中文。下方完整长篇指南目前只有泰文与英文，不是完整中文译本。</p>}
       <details className="guide-depth" open={lang !== "zh"} key={lang}>
@@ -212,15 +218,20 @@ export function BibleIndex({ chapters }: { chapters: { slug: string; order: numb
   const { lang } = useStudy();
   return (
     <>
-      <h1>{tr(lang, "คัมภีร์รัฐธรรมนูญ", "The study guide", "学习指南")}</h1>
-      <p>
-        {tr(
-          lang,
-          "อ่านรัฐธรรมนูญเป็นระบบ ไม่ใช่รายการให้ท่องจำ ทุกกฎมีเหตุผล ทุกตัวเลขมีเรื่องเล่า แตะเลขมาตราที่ไหนก็ได้เพื่อเปิดตัวบท",
-          "Read the constitution as a system, not a list to memorise. Every rule has a reason and every number has a story. Point at any section number to open the law.",
-          "把宪法当作一个系统来读，而不是背诵清单。本指南提供泰文与英文版。",
-        )}
-      </p>
+      <div className="intro-copy">
+        <StudyArt scene="bible" />
+        <div className="intro-text">
+          <h1>{tr(lang, "คัมภีร์รัฐธรรมนูญ", "The study guide", "学习指南")}</h1>
+          <p>
+            {tr(
+              lang,
+              "อ่านรัฐธรรมนูญเป็นระบบ ไม่ใช่รายการให้ท่องจำ ทุกกฎมีเหตุผล ทุกตัวเลขมีเรื่องเล่า แตะเลขมาตราที่ไหนก็ได้เพื่อเปิดตัวบท",
+              "Read the constitution as a system, not a list to memorise. Every rule has a reason and every number has a story. Point at any section number to open the law.",
+              "把宪法当作一个系统来读，而不是背诵清单。本指南提供泰文与英文版。",
+          )}
+          </p>
+        </div>
+      </div>
       <p className="notice">{tr(lang,"เลือกบทเดียว อ่านใจความ ลองสามข้อ แล้วไปฝึก ไม่ต้องอ่าน 13 บทให้จบก่อน คู่มือเต็มมีไทยและอังกฤษ ส่วนบทเรียนสั้นและแบบฝึกมีสามภาษา","Choose one chapter: read the idea, try three checks, then practise. You need not finish all 13 first. The full guide is Thai/English; the short lesson and exercises are trilingual.","先选一章：读概念、试三题、再练习，不必先读完13章。完整长篇指南为泰文与英文；短课和练习提供三种语言。")}</p>
       <div className="chapter-route guide-route">
         {chapters.map((c) => (

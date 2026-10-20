@@ -13,6 +13,7 @@ import {
   englishIsStudyTranslation,
 } from "@/lib/corpus";
 import { tr, sectionLabel, type Lang } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 import {
   updateSectionAnnotation,
   type HighlightColor,
@@ -101,22 +102,25 @@ export function DoublePageReader() {
 
       <header className="notebook-header">
         <div className="intro-copy">
-          <h1>
-            {tr(
-              lang,
-              "สมุดสองหน้า\nทีละสองมาตรา",
-              "Two pages,\ntwo sections at a time.",
-              "双页笔记本，\n每次两条。",
-            )}
-          </h1>
-          <p>
-            {tr(
-              lang,
-              "อ่านทั้ง 279 มาตราเหมือนสมุดเปิดบนโต๊ะ ระบายสีทั้งมาตราตามความหมาย แล้วจดโน้ตที่ขอบ โน้ตจะกลับมาในการ์ดความจำและรอบทบทวน",
-              "Read all 279 sections like a book open on the desk. Colour a whole section by what it means and write in the margin; your notes return in flashcards and review.",
-              "像摊开在桌上的书一样阅读全部279条。按含义给整条上色，在页边写笔记；笔记会出现在闪卡和复习中。",
-            )}
-          </p>
+          <StudyArt scene="notebook" />
+          <div className="intro-text">
+            <h1>
+              {tr(
+                lang,
+                "สมุดสองหน้า\nทีละสองมาตรา",
+                "Two pages,\ntwo sections at a time.",
+                "双页笔记本，\n每次两条。",
+              )}
+            </h1>
+            <p>
+              {tr(
+                lang,
+                "อ่านทั้ง 279 มาตราเหมือนสมุดเปิดบนโต๊ะ ระบายสีทั้งมาตราตามความหมาย แล้วจดโน้ตที่ขอบ โน้ตจะกลับมาในการ์ดความจำและรอบทบทวน",
+                "Read all 279 sections like a book open on the desk. Colour a whole section by what it means and write in the margin; your notes return in flashcards and review.",
+                "像摊开在桌上的书一样阅读全部279条。按含义给整条上色，在页边写笔记；笔记会出现在闪卡和复习中。",
+              )}
+            </p>
+          </div>
         </div>
       </header>
 

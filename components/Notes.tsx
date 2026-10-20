@@ -10,6 +10,7 @@ import { chapters, readingText, sections } from "@/lib/corpus";
 import { anchor } from "@/lib/marks";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 
 const where = (n: number) => `/read/?c=${sections[n - 1].chapter}#s-${n}`;
 
@@ -50,15 +51,20 @@ export function Notes() {
   const empty = !highlights.length && !bookmarks.length && !sectionNotes.length;
   return (
     <>
-      <h1>{tr(lang, "ความก้าวหน้าของคุณ", "Your progress", "你的进度")}</h1>
-      <p>
-        {tr(
-          lang,
-          `รู้จักแล้ว ${sum.met} จาก 279 มาตรา จดไว้ ${sum.marked} มาตรา มั่นใจ ${sum.known} มาตรา จุดสีเหลืองคือที่คุณไฮไลต์หรือฝึก เส้นเข้มคือสิ่งที่เชื่อมจุดของคุณ แตะจุดไหนก็ได้เพื่อขุดต่อ`,
-          `You have met ${sum.met} of 279 sections, marked ${sum.marked} and are confident in ${sum.known}. Amber dots are what you highlighted or practised; dark lines are what connects them. Tap any dot to dig further.`,
-          `你已接触 279 条中的 ${sum.met} 条，标记了 ${sum.marked} 条，掌握了 ${sum.known} 条。琥珀色的点是你标记或练习过的；深色线把它们连起来。点任意一个点继续深挖。`,
-        )}
-      </p>
+      <div className="intro-copy">
+        <StudyArt scene="notes" />
+        <div className="intro-text">
+          <h1>{tr(lang, "ความก้าวหน้าของคุณ", "Your progress", "你的进度")}</h1>
+          <p>
+            {tr(
+              lang,
+              `รู้จักแล้ว ${sum.met} จาก 279 มาตรา จดไว้ ${sum.marked} มาตรา มั่นใจ ${sum.known} มาตรา จุดสีเหลืองคือที่คุณไฮไลต์หรือฝึก เส้นเข้มคือสิ่งที่เชื่อมจุดของคุณ แตะจุดไหนก็ได้เพื่อขุดต่อ`,
+              `You have met ${sum.met} of 279 sections, marked ${sum.marked} and are confident in ${sum.known}. Amber dots are what you highlighted or practised; dark lines are what connects them. Tap any dot to dig further.`,
+              `你已接触 279 条中的 ${sum.met} 条，标记了 ${sum.marked} 条，掌握了 ${sum.known} 条。琥珀色的点是你标记或练习过的；深色线把它们连起来。点任意一个点继续深挖。`,
+          )}
+          </p>
+        </div>
+      </div>
       <DotsMap signals={signals} mine={mine} next={next} selected={selected} onSelect={go} />
       <div className="dots-body">
         <div ref={dig}>{selected > 0 && <DigPanel n={selected} signals={signals} onGo={go} />}</div>

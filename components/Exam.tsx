@@ -15,6 +15,7 @@ import { useStudy } from "./Provider";
 import { tr, labels, sectionLabel } from "@/lib/i18n";
 import { enNoun } from "@/lib/grammar";
 import { useHidePageNext } from "./Shell";
+import { StudyArt } from "./StudyArt";
 
 type Question = (typeof questions)[number];
 const FORMATS = papers;
@@ -107,15 +108,20 @@ export function Exam() {
   if (!paper)
     return (
       <>
-        <h1>{tr(lang, "ข้อสอบจำลอง", "Mock exam", "模拟考试")}</h1>
-        <p>
-          {tr(
-            lang,
-            `30 ชุดฝึกจากโจทย์เขียนเอง ${questions.length} ข้อ คลังครอบคลุมทุกมาตรา แต่แต่ละชุดเป็นการสุ่มตัวอย่าง ชุดเน้นเรื่องมีโจทย์หมวดอื่นเสริม เฉลยหลังส่ง ข้อที่ตอบผิดจะเข้าคิวทบทวน ข้อว่างยังไม่นับว่าลองตอบ`,
-            `30 study papers from ${questions.length} authored questions. The bank covers every section; each paper samples it. Topic papers include mixed supplements. Answers appear after submission. Wrong submitted answers enter review; blanks remain unattempted.`,
-            `30套练习卷来自${questions.length}道原创题。题库覆盖全部条文，每套只是抽样；主题卷补充其他章节。交卷后显示解析。已答错题进入复习，空白题仍算未尝试。`,
-          )}
-        </p>
+        <div className="intro-copy">
+          <StudyArt scene="exam" />
+          <div className="intro-text">
+            <h1>{tr(lang, "ข้อสอบจำลอง", "Mock exam", "模拟考试")}</h1>
+            <p>
+              {tr(
+                lang,
+                `30 ชุดฝึกจากโจทย์เขียนเอง ${questions.length} ข้อ คลังครอบคลุมทุกมาตรา แต่แต่ละชุดเป็นการสุ่มตัวอย่าง ชุดเน้นเรื่องมีโจทย์หมวดอื่นเสริม เฉลยหลังส่ง ข้อที่ตอบผิดจะเข้าคิวทบทวน ข้อว่างยังไม่นับว่าลองตอบ`,
+                `30 study papers from ${questions.length} authored questions. The bank covers every section; each paper samples it. Topic papers include mixed supplements. Answers appear after submission. Wrong submitted answers enter review; blanks remain unattempted.`,
+                `30套练习卷来自${questions.length}道原创题。题库覆盖全部条文，每套只是抽样；主题卷补充其他章节。交卷后显示解析。已答错题进入复习，空白题仍算未尝试。`,
+            )}
+            </p>
+          </div>
+        </div>
         <p className="micro">
           {tr(
             lang,
@@ -164,13 +170,13 @@ export function Exam() {
                   "ข้อสอบจับเวลา",
                   "timed questions",
                   "道计时题",
-                )}{" "}
-                ·{" "}
-                {tr(
-                  lang,
-                  "เฉลยหลังส่ง",
-                  "solutions at end",
-                  "交卷后解析",
+                  )}{" "}
+                  ·{" "}
+                  {tr(
+                    lang,
+                    "เฉลยหลังส่ง",
+                    "solutions at end",
+                    "交卷后解析",
                 )}
               </div>
             </button>

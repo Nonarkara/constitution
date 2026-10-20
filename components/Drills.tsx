@@ -6,6 +6,7 @@ import { makeDrill, drillNames, drillId, DRILL_COUNT } from "@/lib/drills";
 import { prioritizedReview } from "@/lib/review-queue";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 const Quiz = dynamic(() => import("./Quiz").then((m) => m.Quiz));
 export function Drills() {
   const { lang, progress, ready } = useStudy();
@@ -23,22 +24,27 @@ export function Drills() {
   );
   return (
     <section>
-      <h1>
-        {tr(
-          lang,
-          "กฎเดิม เปลี่ยนเงื่อนไข",
-          "Same rule, different conditions",
-          "规则不变，条件改变",
-        )}
-      </h1>
-      <p>
-        {tr(
-          lang,
-          "รวม 4,700 แบบฝึก: โจทย์เขียนเอง 470 ข้อ และโจทย์เปลี่ยนตัวเลข 4,230 ข้อ เลือกแค่ 5 ข้อต่อรอบ โจทย์สร้างจากสูตรมีป้ายแยก ไม่ใช่ข้อสอบจริงหรือเรื่องเล่าใหม่ 4,230 เรื่อง",
-          "4,700 exercises: 470 authored questions plus 4,230 parameter-generated drills. Try five at a time. Generated numerical cases are labelled; they are not official exam questions or 4,230 newly authored stories.",
-          "共4,700道练习：470道原创题与4,230道参数生成题。每轮五题。生成的数字情境单独标明，不是官方真题，也不是4,230个新编故事。",
-        )}
-      </p>
+      <div className="intro-copy">
+        <StudyArt scene="drills" />
+        <div className="intro-text">
+          <h1>
+            {tr(
+              lang,
+              "กฎเดิม เปลี่ยนเงื่อนไข",
+              "Same rule, different conditions",
+              "规则不变，条件改变",
+          )}
+          </h1>
+          <p>
+            {tr(
+              lang,
+              "รวม 4,700 แบบฝึก: โจทย์เขียนเอง 470 ข้อ และโจทย์เปลี่ยนตัวเลข 4,230 ข้อ เลือกแค่ 5 ข้อต่อรอบ โจทย์สร้างจากสูตรมีป้ายแยก ไม่ใช่ข้อสอบจริงหรือเรื่องเล่าใหม่ 4,230 เรื่อง",
+              "4,700 exercises: 470 authored questions plus 4,230 parameter-generated drills. Try five at a time. Generated numerical cases are labelled; they are not official exam questions or 4,230 newly authored stories.",
+              "共4,700道练习：470道原创题与4,230道参数生成题。每轮五题。生成的数字情境单独标明，不是官方真题，也不是4,230个新编故事。",
+          )}
+          </p>
+        </div>
+      </div>
       <p className="notice">
         {tr(
           lang,

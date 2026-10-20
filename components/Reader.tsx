@@ -19,6 +19,7 @@ import { VoiceSearch } from "./VoiceSearch";
 import { Ask } from "./Ask";
 import cases from "@/data/cases.json";
 import { Connections } from "./DotsMap";
+import { StudyArt } from "./StudyArt";
 const senateAudio =
   "https://www.senate.go.th/view/1/รายละเอียดข่าว/13564/TH-TH";
 export function Reader() {
@@ -51,16 +52,21 @@ export function Reader() {
     : [];
   return (
     <>
-      <h1 id="reader-title" tabIndex={-1}>
-        {section && !query.trim()
-          ? sectionLabel(lang, section.number)
-          : tr(
-              lang,
-              "เปิดมาตรา\nหาคำตอบ",
-              "Find the section.\nRead the source.",
-              "查找条文，\n回到原文。",
-            )}
-      </h1>
+      <div className="intro-copy">
+        <StudyArt scene="section" />
+        <div className="intro-text">
+          <h1 id="reader-title" tabIndex={-1}>
+            {section && !query.trim()
+              ? sectionLabel(lang, section.number)
+              : tr(
+                  lang,
+                  "เปิดมาตรา\nหาคำตอบ",
+                  "Find the section.\nRead the source.",
+                  "查找条文，\n回到原文。",
+                )}
+          </h1>
+        </div>
+      </div>
       <form
         className="search-form"
         onSubmit={(e) => {
@@ -229,10 +235,10 @@ export function Reader() {
                         `PDF ภาษาไทย หน้า ${section.source.th.pages.join(", ")}`,
                         `Thai PDF, page ${section.source.th.pages.join(", ")}`,
                         `泰文原文 PDF，第${section.source.th.pages.join(", ")}页`,
-                      )}{" "}
-                      ↗
-                    </a>
-                  </>
+                        )}{" "}
+                        ↗
+                        </a>
+                        </>
                 )}
                 {l === "zh" && (
                   <details>
@@ -280,37 +286,37 @@ export function Reader() {
                 "เสียงอ่านชุดของวุฒิสภา เปิดที่เว็บวุฒิสภา",
                 "The Senate’s own recordings open on the Senate site",
                 "参议院的录音在参议院网站上打开",
-              )}{" "}
-              ↗
-            </a>
-          </p>
-          <div className="reader-navigation">
-            <button
-              disabled={section.number === 1}
-              onClick={() => open(section.number - 1)}
-            >
-              ← {tr(lang, "ก่อนหน้า", "Previous", "上一条")}
-            </button>
-            <Link href="/review/">
-              {tr(lang, "ลองฝึกตอบ", "Try practice", "尝试练习")} →
-            </Link>
-            <button
-              disabled={section.number === 279}
-              onClick={() => open(section.number + 1)}
-            >
-              {tr(lang, `มาตรา ${section.number + 1}`, `Section ${section.number + 1}`, `第${section.number + 1}条`)} →
-            </button>
-          </div>
-          <Ask sections={[section.number]} key={section.number} />
-        </section>
-      ) : (
-        <>
-          <p>
-            {tr(
-              lang,
-              "ค้นจากข้อความไทย อังกฤษ หรือจีน หรือเลือกหมวดด้านล่างเพื่อเริ่มอ่าน",
-              "Search the full Thai, English and Chinese text, or choose a chapter below.",
-              "可搜索完整泰文、英文与中文文本，也可从下方选择章节。",
+                )}{" "}
+                ↗
+                </a>
+                </p>
+                <div className="reader-navigation">
+                <button
+                disabled={section.number === 1}
+                onClick={() => open(section.number - 1)}
+                >
+                ← {tr(lang, "ก่อนหน้า", "Previous", "上一条")}
+                </button>
+                <Link href="/review/">
+                {tr(lang, "ลองฝึกตอบ", "Try practice", "尝试练习")} →
+                </Link>
+                <button
+                disabled={section.number === 279}
+                onClick={() => open(section.number + 1)}
+                >
+                {tr(lang, `มาตรา ${section.number + 1}`, `Section ${section.number + 1}`, `第${section.number + 1}条`)} →
+                </button>
+                </div>
+                <Ask sections={[section.number]} key={section.number} />
+                </section>
+                ) : (
+                <>
+                <p>
+                  {tr(
+                    lang,
+                    "ค้นจากข้อความไทย อังกฤษ หรือจีน หรือเลือกหมวดด้านล่างเพื่อเริ่มอ่าน",
+                    "Search the full Thai, English and Chinese text, or choose a chapter below.",
+                    "可搜索完整泰文、英文与中文文本，也可从下方选择章节。",
             )}
           </p>
           <div className="index-list">

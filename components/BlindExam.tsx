@@ -12,6 +12,7 @@ import {
 } from "@/lib/blind";
 
 import { readCheckpoint, writeCheckpoint } from "@/lib/blind-checkpoint";
+import { StudyArt } from "./StudyArt";
 
 const byId = new Map<string, BlindQuestion>(bank.map((q) => [q.id, q as BlindQuestion]));
 
@@ -103,15 +104,20 @@ export function BlindExam() {
     return (
       <section className="blind">
         {savedNotice}
-        <h1 ref={head} tabIndex={-1}>{tr(lang, "ลองสอบ แล้วค่อยเรียน", "Try first. Study after.", "先试一试，再学解析")}</h1>
-        <p>
-          {tr(
-            lang,
-            `แบบฝึกที่เรียบเรียงขึ้น 90 ข้อ ครอบคลุม 80 หัวข้อ ลองตอบจากสิ่งที่รู้ก่อน ไม่จับเวลา และยังไม่แสดงเฉลยจนกว่าจะส่งครบทุกข้อ`,
-            `90 authored practice questions across 80 topics. Start with what you know. There is no timer, and answers stay hidden until you submit all questions.`,
-            `这套自编练习共90题，覆盖80个主题。先用已有知识作答，不限时，全部提交后才显示答案。`,
-          )}
-        </p>
+        <div className="intro-copy">
+          <StudyArt scene="along" />
+          <div className="intro-text">
+            <h1 ref={head} tabIndex={-1}>{tr(lang, "ลองสอบ แล้วค่อยเรียน", "Try first. Study after.", "先试一试，再学解析")}</h1>
+            <p>
+              {tr(
+                lang,
+                `แบบฝึกที่เรียบเรียงขึ้น 90 ข้อ ครอบคลุม 80 หัวข้อ ลองตอบจากสิ่งที่รู้ก่อน ไม่จับเวลา และยังไม่แสดงเฉลยจนกว่าจะส่งครบทุกข้อ`,
+                `90 authored practice questions across 80 topics. Start with what you know. There is no timer, and answers stay hidden until you submit all questions.`,
+                `这套自编练习共90题，覆盖80个主题。先用已有知识作答，不限时，全部提交后才显示答案。`,
+            )}
+            </p>
+          </div>
+        </div>
         <p>
           {tr(
             lang,

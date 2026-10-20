@@ -7,6 +7,7 @@ import questions from "@/data/questions.json";
 import { sections, chapters, readingText } from "@/lib/corpus";
 import { tr, sectionLabel, type Lang } from "@/lib/i18n";
 import { analyzeUserLearning } from "@/lib/adaptive";
+import { StudyArt } from "./StudyArt";
 
 type FlashcardItem = {
   id: string;
@@ -171,22 +172,25 @@ export function Flashcards() {
 
       <header className="intro">
         <div className="intro-copy">
-          <h1>
-            {tr(
-              lang,
-              "นึกก่อน\nแล้วค่อยพลิก",
-              "Recall first,\nthen flip.",
-              "先回想，\n再翻面。",
-            )}
-          </h1>
-          <p>
-            {tr(
-              lang,
-              "ลองนึกหลักของมาตราให้ได้ก่อนพลิกดูคำตอบ สำรับหนึ่งมาจากหมวดที่คุณยังพลาด อีกสำรับมาจากโน้ตที่คุณจดเอง",
-              "Try to recall the rule before you turn the card. One deck comes from chapters you still miss; another from the notes you wrote.",
-              "翻面前先试着回想条文要点。一组来自你仍常出错的章节，另一组来自你自己写的笔记。",
-            )}
-          </p>
+          <StudyArt scene="flashcards" />
+          <div className="intro-text">
+            <h1>
+              {tr(
+                lang,
+                "นึกก่อน\nแล้วค่อยพลิก",
+                "Recall first,\nthen flip.",
+                "先回想，\n再翻面。",
+              )}
+            </h1>
+            <p>
+              {tr(
+                lang,
+                "ลองนึกหลักของมาตราให้ได้ก่อนพลิกดูคำตอบ สำรับหนึ่งมาจากหมวดที่คุณยังพลาด อีกสำรับมาจากโน้ตที่คุณจดเอง",
+                "Try to recall the rule before you turn the card. One deck comes from chapters you still miss; another from the notes you wrote.",
+                "翻面前先试着回想条文要点。一组来自你仍常出错的章节，另一组来自你自己写的笔记。",
+              )}
+            </p>
+          </div>
         </div>
       </header>
 

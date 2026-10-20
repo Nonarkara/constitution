@@ -1227,7 +1227,7 @@ html[data-large="true"] {
 /* Original crayon scenes stay secondary to the learning task. */
 .study-art {
   margin: 0;
-  width: 180px;
+  width: 340px;
   max-width: 100%;
 }
 .study-art img {
@@ -1244,51 +1244,44 @@ html[data-large="true"] {
    above 720px and 104px below, so crossing 721px by a single pixel widened the
    viewport, shrank the text column from 564px to 209px, and broke the 44px
    headline across four ragged lines. clamp() keeps one rule and no cliff. */
+/* The heading and the paragraph share one cell. The plate used to span both
+   rows of this grid, and a spanning item grows the rows it crosses, so the
+   heading was pushed down and a hole opened between the title and its own
+   paragraph — about 90px of nothing on every route. Four ways of closing it
+   were measured in a browser; only this one worked. */
 .intro-copy {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(104px, 18vw, 200px);
+  grid-template-columns: minmax(0, 1fr) clamp(150px, 26vw, 340px);
   column-gap: clamp(16px, 3vw, 36px);
   align-items: start;
 }
-.intro-copy > h1 {
+.intro-text {
   grid-column: 1;
   grid-row: 1;
+  min-width: 0;
+}
+.intro-text > h1 {
   padding-right: 0;
   min-height: 0;
 }
-.intro-copy > .study-art {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  position: static;
-  width: 200px;
-}
-.intro-copy > p {
-  grid-column: 1;
-  grid-row: 2;
+.intro-text > p {
   margin-top: 14px;
 }
-.review-intro {
-  position: relative;
-}
-.review-intro > .study-art {
-  float: right;
-  margin: 12px 0 18px 22px;
-}
-.review-intro::after {
-  content: "";
-  display: block;
-  clear: both;
+.intro-copy > .study-art {
+  grid-column: 2;
+  grid-row: 1;
+  position: static;
+  width: 340px;
 }
 @media (max-width: 720px) {
+  .intro-copy {
+    grid-template-columns: minmax(0, 1fr) clamp(120px, 30vw, 150px);
+  }
   .intro-copy > .study-art {
-    width: 104px;
+    width: 150px;
   }
-  .intro-copy > h1 {
+  .intro-text > h1 {
     min-height: 0;
-  }
-  .review-intro > .study-art {
-    width: 120px;
-    margin: 12px 0 12px 16px;
   }
   .audio-note > .study-art {
     width: 100px;

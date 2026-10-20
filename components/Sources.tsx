@@ -2,26 +2,32 @@
 import { useStudy } from "./Provider";
 import { meta } from "@/lib/outline";
 import { tr } from "@/lib/i18n";
+import { StudyArt } from "./StudyArt";
 export function Sources() {
   const { lang } = useStudy();
   return (
     <>
-      <h1>
-        {tr(
-          lang,
-          "ทุกคำตอบ\nต้องมีที่มา",
-          "Every answer\nhas a source.",
-          "每一个答案，\n都有依据。",
-        )}
-      </h1>
-      <p>
-        {tr(
-          lang,
-          "ตัวบทภาษาไทยเป็นหลักเสมอ คำอธิบาย ข้อฝึก และคำแปลเพื่อศึกษามีไว้ช่วยเรียน ไม่ใช้แทนตัวบท",
-          "The Thai text governs. Explanations, practice questions and Chinese study translations help you study; they cannot replace the law.",
-          "请以泰文原文为准。解析、练习题与学习译文用于学习，不能代替法律文本。",
-        )}
-      </p>
+      <div className="intro-copy">
+        <StudyArt scene="sources" />
+        <div className="intro-text">
+          <h1>
+            {tr(
+              lang,
+              "ทุกคำตอบ\nต้องมีที่มา",
+              "Every answer\nhas a source.",
+              "每一个答案，\n都有依据。",
+          )}
+          </h1>
+          <p>
+            {tr(
+              lang,
+              "ตัวบทภาษาไทยเป็นหลักเสมอ คำอธิบาย ข้อฝึก และคำแปลเพื่อศึกษามีไว้ช่วยเรียน ไม่ใช้แทนตัวบท",
+              "The Thai text governs. Explanations, practice questions and Chinese study translations help you study; they cannot replace the law.",
+              "请以泰文原文为准。解析、练习题与学习译文用于学习，不能代替法律文本。",
+          )}
+          </p>
+        </div>
+      </div>
       <div className="source-card">
         <span className="mono">01 / THAI</span>
         <h2>
