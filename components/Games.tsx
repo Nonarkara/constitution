@@ -145,7 +145,7 @@ function SectionSprint() {
   const left = Math.max(0, Math.ceil((ends - now) / 1000));
   if (!ends || !card)
     return (
-      <button className="primary" onClick={start}>
+      <button className="button" onClick={start}>
         {tr(lang, "เริ่มแข่ง 60 วินาที", "Start the 60-second sprint", "开始60秒挑战")} →
       </button>
     );
@@ -167,7 +167,7 @@ function SectionSprint() {
             : tr(lang, "ฝึกสปรินต์บ่อย ๆ ช่วยให้เปิดข้อสอบจริงแล้วจำตำแหน่งหมวดได้ทันที", "Regular sprints build rapid section recall for real exams.", "经常速练能帮你迅速在真实考卷中回忆起所属章节。")}
         </p>
         <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
-          <button className="primary" onClick={start}>
+          <button className="button" onClick={start}>
             {tr(lang, "เล่นอีกครั้ง", "Play again", "再玩一次")} →
           </button>
           <Link href="/practice/" className="button">

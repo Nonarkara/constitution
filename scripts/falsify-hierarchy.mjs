@@ -63,6 +63,16 @@ const VIOLATIONS = [
     rule: ".exam-paper-row{background:var(--paper)!important;border:1px solid var(--line)!important;padding:14px 16px!important}",
     expect: "card-like actions",
   },
+  {
+    name: "the page loses the one thing it asks you to do",
+    rule: ".action-panel{border-left-color:var(--line)!important}.action-panel-cta,.primary{background:transparent!important;color:inherit!important}.lookup-input{border-left-color:var(--edge)!important}.notebook-next{background:transparent!important;color:inherit!important}",
+    expect: "no dominant affordance",
+  },
+  {
+    name: "a second main action competes with the first",
+    rule: ".hub-list a{background:var(--accent)!important;border-color:var(--accent)!important}",
+    expect: "dominant affordances compete",
+  },
 ];
 
 function runGate() {

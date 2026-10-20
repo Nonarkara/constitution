@@ -8,6 +8,7 @@ import { tr, sectionLabel, type Lang } from "@/lib/i18n";
 import { useState } from "react";
 import { guidePaths } from "@/lib/guide-path";
 import { StudyArt } from "./StudyArt";
+import { PageAction } from "./PageAction";
 
 type Pair = { th: string; en: string };
 function GuideEntry({ slug }: { slug: string }) {
@@ -216,6 +217,11 @@ export function BibleChapterView({ chapter }: { chapter: BibleChapter; prev: Lin
 
 export function BibleIndex({ chapters }: { chapters: { slug: string; order: number; title: Pair; lede: Pair }[] }) {
   const { lang } = useStudy();
+  // The method chapter sits outside the 00–11 reading order, so the way in is
+  // the lowest reading-order chapter, not simply the first row.
+  const first =
+    [...chapters].sort((a, b) => a.order - b.order).find((c) => c.order < 90) ??
+    chapters[0];
   return (
     <>
       <div className="intro-copy">
@@ -233,6 +239,22 @@ export function BibleIndex({ chapters }: { chapters: { slug: string; order: numb
         </div>
       </div>
       <p className="notice">{tr(lang,"เลือกบทเดียว อ่านใจความ ลองสามข้อ แล้วไปฝึก ไม่ต้องอ่าน 13 บทให้จบก่อน คู่มือเต็มมีไทยและอังกฤษ ส่วนบทเรียนสั้นและแบบฝึกมีสามภาษา","Choose one chapter: read the idea, try three checks, then practise. You need not finish all 13 first. The full guide is Thai/English; the short lesson and exercises are trilingual.","先选一章：读概念、试三题、再练习，不必先读完13章。完整长篇指南为泰文与英文；短课和练习提供三种语言。")}</p>
+      {/* One thing to do. Thirteen equal chapter rows used to be the only way
+          in, so the page described itself instead of starting anything. */}
+      <PageAction
+        href={`/bible/${first.slug}/`}
+        label={text(first.title, lang)}
+        reason={tr(
+          lang,
+          "อ่านใจความบทเดียว แล้วลองสามข้อ ค่อยไปบทถัดไปเมื่อไหร่ที่พร้อม",
+          "Read one chapter's idea, try three checks, and move on when you are ready.",
+          "先读一章的要点，试三题，准备好再读下一章。",
+        )}
+        kicker={tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
+      />
+      <h2 className="hub-others-title">
+        {tr(lang, "หรือเลือกบทอื่น", "Or pick another chapter", "或选择其他章节")}
+      </h2>
       <div className="chapter-route guide-route">
         {chapters.map((c) => (
           <article className="chapter-row" key={c.slug}>

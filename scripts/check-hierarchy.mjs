@@ -90,6 +90,19 @@ const LIMITS = {
   // type, so nothing led. A quiet list of rows separated by a hairline is not
   // a card and does not count.
   prominentActions: 12,
+  // Exactly one dominant affordance in the first screen. This is the owner's
+  // third rule: every page has one main functionality that dominates, rather
+  // than everything competing at the same weight. Sixteen routes measured no
+  // dominant affordance at all — on /library/ the largest thing on the page
+  // was a "back to home" link, and on /glossary/ the search field that the
+  // page exists for was an invisible dark box.
+  //
+  // A DOMINANT affordance is an element that either paints itself amber (the
+  // page's one main action) or carries a thick accent-coloured left edge (the
+  // panel that holds the one thing to do). Counted by what it looks like, not
+  // by its class name. Nested affordances are counted once: an amber button
+  // inside an accent-edged panel is one thing, not two.
+  dominantAffordances: 1,
 };
 
 const WIDTHS = [
@@ -171,7 +184,15 @@ function measureOne(route, w, h, cb) {
       var d;
       try { d = f.contentDocument; } catch (e) { return cb({ route: route, w: w, error: 'cross-origin' }); }
       if (tries++ > 80) return cb(measure(route, w, d));
-      if (d && d.readyState === 'complete' && d.querySelector('body')) return setTimeout(function () { cb(measure(route, w, d)); }, 220);
+      // Wait for the thing this gate actually measures: a rendered <h1> inside
+      // the page's main region. Several pages are client components that paint
+      // their heading only after hydration, and readyState alone was not
+      // enough — the gate measured an empty shell and reported "no h1" at
+      // random, which is a flaky gate, not a failing page.
+      var mainEl = d && (d.querySelector('main#content') || d.querySelector('main'));
+      if (d && d.readyState === 'complete' && d.querySelector('body') && mainEl && mainEl.querySelector('h1')) {
+        return setTimeout(function () { cb(measure(route, w, d)); }, 220);
+      }
       setTimeout(wait, 60);
     })();
   };
@@ -189,6 +210,28 @@ function measure(route, w, d) {
   var h1size = parseFloat(h1cs.fontSize);
   rec.h1Size = h1size;
 
+  // A DOMINANT affordance: an element that paints itself amber, or one that
+  // carries a thick accent-coloured left edge — the panel that holds the one
+  // thing to do on the page. Judged by what it looks like, never by its class
+  // name, because a class name is a claim and a computed style is a fact.
+  //
+  // It must also be something the reader can ACT ON. The first version of this
+  // rule counted any accent-coloured thing, and it caught the house's accent-bar
+  // callouts and the amber highlighter swatches — decoration that looks like an
+  // action. A signifier is not an affordance.
+  function amberish(r, g, b) { return r > 180 && g > 100 && b < 90; }
+  function isDominantShape(cs) {
+    var bg = cs.backgroundColor && cs.backgroundColor.match(/rgba?\\((\\d+), (\\d+), (\\d+)/);
+    if (bg && amberish(+bg[1], +bg[2], +bg[3])) return true;
+    var bl = cs.borderLeftWidth ? parseFloat(cs.borderLeftWidth) : 0;
+    if (bl >= 3) {
+      var bc = cs.borderLeftColor && cs.borderLeftColor.match(/rgba?\\((\\d+), (\\d+), (\\d+)/);
+      if (bc && amberish(+bc[1], +bc[2], +bc[3])) return true;
+    }
+    return false;
+  }
+  var ACTIVE = { A: 1, BUTTON: 1, INPUT: 1, SELECT: 1, TEXTAREA: 1 };
+
   // Everything with visible text inside the content area, excluding the h1
   // and its own descendants (the h1 may wrap a link or a span).
   var all = main.querySelectorAll('*');
@@ -200,6 +243,7 @@ function measure(route, w, d) {
   var primaryInFold = 0;
   var primaryTotal = 0;
   var prominentActions = 0;
+  var dominants = 0;
   var bodySizes = {};
   var fold = win.innerHeight || 900;
 
@@ -269,6 +313,21 @@ function measure(route, w, d) {
                      cs.borderTopStyle !== 'none';
       if ((opaqueBg || allSides) && effSize >= 14) prominentActions++;
     }
+
+    // A dominant affordance in the first screen. Nested ones are counted
+    // once: an amber button inside an accent-edged panel is one thing the
+    // reader can act on, not two.
+    if (ACTIVE[el.tagName] && isDominantShape(cs) && r.top < fold && r.bottom > 0) {
+      var nested = false;
+      for (var anc = el.parentElement; anc && anc !== main; anc = anc.parentElement) {
+        if (ACTIVE[anc.tagName] && isDominantShape(win.getComputedStyle(anc))) { nested = true; break; }
+      }
+      if (!nested) {
+        dominants++;
+        rec.dominantInfo = rec.dominantInfo || [];
+        rec.dominantInfo.push(el.tagName.toLowerCase() + '.' + String(el.className || '').slice(0, 30));
+      }
+    }
   }
 
   rec.boldPeers = peers;
@@ -280,6 +339,7 @@ function measure(route, w, d) {
   rec.primaryInFold = primaryInFold;
   rec.primaryTotal = primaryTotal;
   rec.prominentActions = prominentActions;
+  rec.dominants = dominants;
   rec.totalChars = totalChars;
   rec.h1Count = main.querySelectorAll('h1').length;
   // The modal reading size: the size most of the words on the page are set at.
@@ -454,20 +514,24 @@ if (REPORT) {
     prim: r.primaryTotal,
     fine: r.finePrint,
     cta: r.primaryInFold,
+    dom: r.dominants,
+    doms: (r.dominantInfo || []).join(" | "),
     chars: r.totalChars,
     big: r.largestInfo ? r.largestInfo.tag + '.' + r.largestInfo.cls + ' ' + r.largestInfo.size + 'px "' + r.largestInfo.text + '"' : '',
   }));
   console.log(
     "route".padEnd(20) + "w".padEnd(6) + "h1".padEnd(5) + "peers".padEnd(7) +
     "grp".padEnd(5) + "ratio".padEnd(7) + "vsBody".padEnd(8) + "acts".padEnd(6) +
-    "fine".padEnd(6) + "cta".padEnd(5) + "chars".padEnd(7) + "biggest non-h1",
+    "prim".padEnd(6) + "fine".padEnd(6) + "cta".padEnd(5) + "dom".padEnd(5) +
+    "chars".padEnd(7) + "dominant elements / biggest non-h1",
   );
   for (const r of rows) {
     console.log(
       String(r.route).padEnd(20) + String(r.w).padEnd(6) + String(r.h1).padEnd(5) +
       String(r.peers).padEnd(7) + String(r.groups).padEnd(5) + String(r.ratio).padEnd(7) +
       String(r.vsbody).padEnd(8) + String(r.acts).padEnd(6) + String(r.prim).padEnd(6) +
-      String(r.fine).padEnd(6) + String(r.cta).padEnd(5) + String(r.chars).padEnd(7) + r.big,
+      String(r.fine).padEnd(6) + String(r.cta).padEnd(5) + String(r.dom).padEnd(5) +
+      String(r.chars).padEnd(7) + (r.doms || r.big),
     );
   }
   const desktop = results.filter((r) => r.w === 1440);
@@ -504,6 +568,14 @@ for (const r of results) {
   }
   if (r.prominentActions > LIMITS.prominentActions) {
     failures.push(`${label} — ${r.prominentActions} card-like actions compete at once (limit ${LIMITS.prominentActions})`);
+  }
+  if (r.dominants !== LIMITS.dominantAffordances) {
+    failures.push(
+      r.dominants === 0
+        ? `${label} — no dominant affordance in the first screen; the page describes itself instead of doing anything`
+        : `${label} — ${r.dominants} dominant affordances compete (limit ${LIMITS.dominantAffordances}); ` +
+          `the page needs one main functionality that dominates`,
+    );
   }
 }
 

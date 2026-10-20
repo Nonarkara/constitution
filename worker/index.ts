@@ -91,7 +91,10 @@ export default {
     const url = new URL(request.url);
     if (url.pathname === "/api/news") {
       const secure = { "Strict-Transport-Security": "max-age=31536000; includeSubDomains", "X-Content-Type-Options": "nosniff" };
-      if (url.protocol === "http:") return Response.redirect(`https://${url.host}${url.pathname}`, 308);
+      // Keep the query string. A redirect that silently drops it turns
+      // /api/news?x=1 into /api/news, which is not the URL that was asked for.
+      if (url.protocol === "http:")
+        return Response.redirect(`https://${url.host}${url.pathname}${url.search}`, 308);
       if (request.method !== "GET" && request.method !== "HEAD")
         return new Response("Method not allowed", { status: 405, headers: { Allow: "GET, HEAD", ...secure } });
       // Serve from the edge cache for five minutes so traffic cannot turn into unbounded D1 reads.

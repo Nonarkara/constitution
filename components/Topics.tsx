@@ -5,6 +5,7 @@ import { LawRef, Peek } from "./LawRef";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
 import { StudyArt } from "./StudyArt";
+import { ActionPanel } from "./PageAction";
 
 // A back-of-book index in everyday words: look up "tax" or "protest", land on the sections.
 export function Topics() {
@@ -31,10 +32,33 @@ export function Topics() {
           </p>
         </div>
       </div>
-      <label className="micro" htmlFor="topic-filter">
-        {tr(lang, "ค้นเรื่อง", "Find a topic", "查找话题")}
-      </label>
-      <input id="topic-filter" className="filter-input" type="search" value={query} onChange={(e) => setQuery(e.target.value)} />
+      <ActionPanel kicker={tr(lang, "ค้นหา", "Find", "查找")}>
+        <label className="lookup-label" htmlFor="topic-filter">
+          {tr(lang, "ค้นเรื่อง", "Find a topic", "查找话题")}
+        </label>
+        <input
+          id="topic-filter"
+          className="lookup-input"
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <p className="micro action-panel-reason">
+          {q
+            ? tr(
+                lang,
+                `เหลือ ${list.length} เรื่องจาก ${topics.length} เรื่อง`,
+                `${list.length} of ${topics.length} topics match`,
+                `${list.length}/${topics.length} 个话题匹配`,
+              )
+            : tr(
+                lang,
+                `ทั้ง ${topics.length} เรื่อง — แตะเลขมาตราเพื่ออ่านตัวบท`,
+                `All ${topics.length} topics. Point at a section number to read it.`,
+                `全部 ${topics.length} 个话题。指向条文编号即可阅读。`,
+              )}
+        </p>
+      </ActionPanel>
       <ul className="topic-list">
         {list.map((t) => (
           <li key={t.id}>

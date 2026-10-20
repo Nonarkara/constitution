@@ -11,6 +11,7 @@ import { anchor } from "@/lib/marks";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel } from "@/lib/i18n";
 import { StudyArt } from "./StudyArt";
+import { PageAction } from "./PageAction";
 
 const where = (n: number) => `/read/?c=${sections[n - 1].chapter}#s-${n}`;
 
@@ -27,6 +28,43 @@ export function Notes() {
   const met = useMemo(() => signals.filter((s) => stateOf(s) !== "unseen").map((s) => s.n), [signals]);
   const next = useMemo(() => nextDots(mine, met), [mine, met]);
   const sum = knowSummary(signals);
+  // Where this device left her: the last section she opened or marked. The
+  // panel's one action is the way back to it.
+  const touched = useMemo(() => {
+    const items = [
+      ...Object.entries(read).map(([key, at]) => ({ n: Number(key), at })),
+      ...marks.marks.map((m) => ({ n: m.section, at: m.createdAt })),
+    ]
+      .filter((x) => x.at > 0)
+      .sort((a, b) => b.at - a.at);
+    return items[0] ?? null;
+  }, [read, marks.marks]);
+  const resume = touched?.n ?? next[0]?.n ?? null;
+  const day = touched
+    ? new Intl.DateTimeFormat({ th: "th-TH", en: "en-GB", zh: "zh-CN" }[lang], {
+        dateStyle: "medium",
+      }).format(new Date(touched.at))
+    : "";
+  const reason = touched
+    ? tr(
+        lang,
+        `มาตรา ${touched.n} คือสิ่งสุดท้ายที่คุณเปิดเมื่อ ${day} — ไปต่อจากตรงนั้น`,
+        `Section ${touched.n} was the last thing you opened, on ${day} — carry on from there.`,
+        `你最后打开的是第${touched.n}条（${day}）——从那里继续。`,
+      )
+    : next[0]
+      ? tr(
+          lang,
+          `มาตรา ${next[0].n} เชื่อมกับจุดที่คุณจดไว้ — อ่านต่อจากตรงนั้น`,
+          `Section ${next[0].n} connects to a dot you marked — read it next.`,
+          `第${next[0].n}条与你标记的点相连——接着读它。`,
+        )
+      : tr(
+          lang,
+          "ยังไม่มีอะไรให้กลับมาไป — เริ่มจากการอ่านแล้วไฮไลต์มาตราที่อยากจำ",
+          "There is nothing to come back to yet — start by reading, then highlight a section worth keeping.",
+          "目前还没有可以回到的地方——先读一条，再标记值得保留的条文。",
+        );
   const [selected, setSelected] = useState(0);
   const dig = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -65,6 +103,19 @@ export function Notes() {
           </p>
         </div>
       </div>
+      {/* One thing to do. The map, the dig panel and the thread all sat here
+          at the same weight, so the page showed her progress without offering
+          a way back into it. The one action is the way back. */}
+      <PageAction
+        href={resume ? where(resume) : "/read/"}
+        label={
+          resume
+            ? tr(lang, "อ่านต่อ", "Continue reading", "继续阅读")
+            : tr(lang, "เริ่มอ่าน", "Start reading", "开始阅读")
+        }
+        reason={reason}
+        kicker={tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
+      />
       <DotsMap signals={signals} mine={mine} next={next} selected={selected} onSelect={go} />
       <div className="dots-body">
         <div ref={dig}>{selected > 0 && <DigPanel n={selected} signals={signals} onGo={go} />}</div>
@@ -109,7 +160,7 @@ export function Notes() {
               "打开全文阅读，选中想记住的文字，然后点“标记”。",
             )}
           </p>
-          <Link className="button primary" href="/read/">
+          <Link className="button" href="/read/">
             {tr(lang, "อ่านทั้งฉบับ", "Read the whole text", "阅读全文")} →
           </Link>
         </div>

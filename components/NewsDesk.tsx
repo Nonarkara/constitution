@@ -1,9 +1,10 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import seed from "@/data/news.json";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
 import { StudyArt } from "./StudyArt";
+import { PageAction } from "./PageAction";
 import {
   headlineTrends,
   parseNewsSnapshot,
@@ -63,13 +64,22 @@ export function NewsDesk() {
   }, []);
   const trends = headlineTrends(snapshot.headlines, now),
     max = trends[0]?.count || 1;
-  const shown = snapshot.headlines
-    .filter(
-      (h) =>
-        (topic === "all" || h.topics.includes(topic)) &&
-        h.title.toLocaleLowerCase().includes(query.toLocaleLowerCase().trim()),
-    )
-    .sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
+  const all = useMemo(
+    () =>
+      [...snapshot.headlines].sort((a, b) =>
+        (b.publishedAt || "").localeCompare(a.publishedAt || ""),
+      ),
+    [snapshot.headlines],
+  );
+  const shown = all.filter(
+    (h) =>
+      (topic === "all" || h.topics.includes(topic)) &&
+      h.title.toLocaleLowerCase().includes(query.toLocaleLowerCase().trim()),
+  );
+  // The one story this desk exists for: the newest headline of the edition,
+  // or the newest one that survives the reader's own filter.
+  const newest = shown[0] ?? all[0];
+  const filtering = topic !== "all" || query.trim() !== "";
   return (
     <div className="news-desk">
       <div className="bulletin-heading">
@@ -95,6 +105,32 @@ export function NewsDesk() {
           </div>
         </div>
       </div>
+      {/* One thing to do. Two hundred headlines used to sit here with equal
+          weight, so nothing led. The newest story opens the door; the rest of
+          the headlines stay a quiet list under it. */}
+      {newest ? (
+        <PageAction
+          href={newest.url}
+          external
+          label={tr(lang, "เปิดข่าวใหม่ที่สุด", "Open the newest story", "打开最新报道")}
+          reason={
+            filtering
+              ? tr(
+                  lang,
+                  `ข่าวใหม่ที่สุดที่ตรงกับตัวกรองของคุณ จาก ${newest.source} (${date(newest.publishedAt)}) — เปิดที่สำนักข่าว`,
+                  `The newest story matching your filter, from ${newest.source} (${date(newest.publishedAt)}) — read it at the publisher.`,
+                  `符合筛选条件的最新报道，来自${newest.source}（${date(newest.publishedAt)}）——去原媒体阅读。`,
+                )
+              : tr(
+                  lang,
+                  `ข่าวใหม่ที่สุดจาก ${newest.source} (${date(newest.publishedAt)}) — เปิดที่สำนักข่าว`,
+                  `The newest story from ${newest.source} (${date(newest.publishedAt)}) — read it at the publisher.`,
+                  `${newest.source}的最新报道（${date(newest.publishedAt)}）——去原媒体阅读。`,
+                )
+          }
+          kicker={tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
+        />
+      ) : null}
       <div className="news-status" role="status">
         <span>
           {status === "loading"

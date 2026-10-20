@@ -141,7 +141,7 @@ export function DoublePageReader() {
               `第${leftSecNum}${rightSecNum ? `至${rightSecNum}` : ""}条 / 共279条`,
             )}
           </span>
-          <button onClick={nextSpread} disabled={leftSecNum >= 279}>
+          <button className="primary notebook-next" onClick={nextSpread} disabled={leftSecNum >= 279}>
             {tr(lang, "อีกสองมาตรา", "Two more sections", "再翻两条")} →
           </button>
         </div>

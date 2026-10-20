@@ -53,22 +53,64 @@ export function Drills() {
           "成员人数是假设值，只检查题目所问门槛，不代表整个法律程序完成。这组进度不会提高原有章节掌握要求。",
         )}
       </p>
-      <button
-        disabled={!ready || !due.length}
-        onClick={() =>
-          setActive(
-            prioritizedReview(due, progress, Date.now(), 5).map((q) => q.i),
-          )
-        }
-      >
-        {tr(
-          lang,
-          `ทบทวนโจทย์ถึงเวลา ${due.length} ข้อ`,
-          `Review ${due.length} due drills`,
-          `复习${due.length}道到期题`,
-        )}{" "}
-        →
-      </button>
+      {/* One thing to do. Ten equal family buttons used to sit here, and the
+          only review button was disabled whenever nothing was due — so on a
+          fresh account the page had nothing to press at all. */}
+      <div className="action-panel">
+        <span className="mono action-panel-kicker">
+          {tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
+        </span>
+        {due.length ? (
+          <button
+            className="primary action-panel-cta"
+            disabled={!ready}
+            onClick={() =>
+              setActive(
+                prioritizedReview(due, progress, Date.now(), 5).map((q) => q.i),
+              )
+            }
+          >
+            {tr(
+              lang,
+              `ทบทวนโจทย์ถึงเวลา ${due.length} ข้อ`,
+              `Review ${due.length} due drills`,
+              `复习${due.length}道到期题`,
+            )}{" "}
+            →
+          </button>
+        ) : (
+          <button
+            className="primary action-panel-cta"
+            disabled={!ready}
+            onClick={() => {
+              const own = records.slice(0, 423);
+              setActive(
+                prioritizedReview(own, progress, Date.now(), 5).map((q) => q.i),
+              );
+            }}
+          >
+            {tr(lang, "ลองห้าข้อ", "Try five", "试五题")} →
+          </button>
+        )}
+        <p className="micro action-panel-reason">
+          {due.length
+            ? tr(
+                lang,
+                "ห้าข้อแรกเป็นโจทย์ที่พลาดมากที่สุดก่อน แล้วค่อยไปหมวดอื่น",
+                "The five you missed most come first; the rest wait their turn.",
+                "先做错得最多的五题，其余的按顺序来。",
+              )
+            : tr(
+                lang,
+                "ยังไม่มีโจทย์ถึงเวลาทบทวน เริ่มจากห้าข้อแรกของชุดแรก แล้วค่อยเลือกชุดอื่นด้านล่าง",
+                "Nothing is due for review yet. Start with the first five of the first set, then pick another set below.",
+                "还没有到期的复习题。先做第一组的前五题，再从下面选其他组。",
+              )}
+        </p>
+      </div>
+      <h2 className="hub-others-title">
+        {tr(lang, "หรือเลือกชุดอื่น", "Or pick another set", "或选择其他组")}
+      </h2>
       <nav className="hub-list">
         {drillNames.map((name, f) => (
           <button

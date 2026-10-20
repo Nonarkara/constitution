@@ -3,6 +3,7 @@ import { useStudy } from "./Provider";
 import { meta } from "@/lib/outline";
 import { tr } from "@/lib/i18n";
 import { StudyArt } from "./StudyArt";
+import { PageAction } from "./PageAction";
 export function Sources() {
   const { lang } = useStudy();
   return (
@@ -28,6 +29,21 @@ export function Sources() {
           </p>
         </div>
       </div>
+      <PageAction
+        href={meta.sources.th2017.url}
+        external
+        label={tr(lang, "เปิดต้นฉบับรัฐธรรมนูญ", "Open the official text", "打开官方原文")}
+        reason={tr(
+          lang,
+          "ราชกิจจานุเบกษา ฉบับ 6 เมษายน 2560 — ต้นฉบับที่ทุกคำตอบในเว็บนี้อ้างอิง",
+          "The Government Gazette of 6 April 2017 — the source every answer here points back to.",
+          "2017年4月6日政府公报——本应用每个答案所依据的来源。",
+        )}
+        kicker={tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
+      />
+      <h2 className="hub-others-title">
+        {tr(lang, "แหล่งอื่น", "Other sources", "其他来源")}
+      </h2>
       <div className="source-card">
         <span className="mono">01 / THAI</span>
         <h2>

@@ -21,6 +21,26 @@ export function Research() {
         </div>
         <StudyArt scene="listening" />
       </div>
+      {/* One thing to do. This is a long essay, so the page's action is the
+          part of it a careful reader wants first: the table that says which
+          method is backed by research and which is our own guess. */}
+      <div className="action-panel">
+        <span className="mono action-panel-kicker">
+          {tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
+        </span>
+        <a className="primary action-panel-cta" href="#evidence">
+          <span>{tr(lang, "ดูตารางหลักฐาน", "See the evidence table", "看证据表")}</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+        <p className="micro action-panel-reason">
+          {tr(
+            lang,
+            "ทุกวิธีในหน้านี้มีทั้งงานวิจัยรองรับและสมมติฐานของเรา ตารางข้างล่างบอกว่าอันไหนคืออะไร",
+            "Every method on this page is either backed by research or is our own hypothesis — the table below says which is which.",
+            "本页的每种方法要么有研究支持，要么是我们自己的假设——下面这张表说明了区别。",
+          )}
+        </p>
+      </div>
       <p className="research-lead">
         {tr(
           lang,
@@ -72,7 +92,7 @@ export function Research() {
       <p>{tr(lang,"รอบฝึกเพิ่มการเรียกคืนก่อนเห็นตัวเลือก เช็กความมั่นใจ และอธิบายกลับด้วยคำของตนเอง ทั้งสามเลือกข้ามได้ ความมั่นใจไม่เพิ่มคะแนน และแอปไม่อ้างว่าตรวจเหตุผลที่เขียนได้แล้ว","Practice now offers recall before options, optional confidence checks and explanations in your own words. Confidence never raises a score, and written reasoning is not automatically verified.","练习加入看选项前回忆、可选信心检查与自我解释。信心不会提高分数，书面理由也不会自动核验。")}</p>
       <p><a href="https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html" target="_blank" rel="noopener noreferrer">Dunlosky et al. (2013) ↗</a> · <a href="https://www.nature.com/articles/s44159-022-00089-1" target="_blank" rel="noopener noreferrer">Carpenter et al. (2022) ↗</a></p>
       <p className="micro">{tr(lang,"หลักฐานสนับสนุนการทดสอบตนเองและเว้นระยะชัดกว่าการอ่านซ้ำหรือไฮไลต์อย่างเดียว การอธิบาย การสลับเรื่อง และภาพจำขึ้นกับงานและผู้เรียน ช่วง 1/3/7/14 วันเป็นค่าตั้งต้น ไม่ใช่สูตรที่ดีที่สุดสำหรับทุกคน ผลของแอปนี้ยังต้องทดสอบกับผู้เรียนจริง","Evidence is stronger for practice testing and spacing than rereading or highlighting alone. Explanation, interleaving and imagery depend on task and learner. The 1/3/7/14-day schedule is a starting heuristic, not a universal optimum. This app still needs learner evaluation.","练习测试与间隔学习的证据强于单纯重读或划重点。解释、交错练习和图像效果取决于任务与学习者。1/3/7/14天是初始经验安排，并非普遍最优公式。本应用仍需学习者评估。")}</p>
-      <table className="research-table">
+      <table className="research-table" id="evidence">
         <caption>
           {tr(
             lang,

@@ -10,6 +10,11 @@ export default function Page() {
         en: "Rights, news and the tools around the constitution, outside the guide and the practice session.",
         zh: "权利、新闻，以及指南和练习之外的宪法工具。",
       }}
+      reason={{
+        th: "เริ่มจากกฎหมายที่ใกล้ตัวที่สุด แล้วค่อยไปที่หัวข้ออื่น",
+        en: "Start with the law closest to your own life, then take the others in turn.",
+        zh: "先从离你生活最近的法条开始，再逐一读其他主题。",
+      }}
       items={[
         { href: "/rights/", title: { th: "สิทธิของคุณ", en: "Your rights", zh: "你的权利" }, text: { th: "เดาก่อน แล้วเปิดตัวบท", en: "Guess, then open the law", zh: "先猜，再看条文" } },
         { href: "/polls/", title: { th: "คำถามส่วนตัว", en: "Polls", zh: "问卷" }, text: { th: "เก็บเหตุผลไว้ในเครื่องนี้", en: "Keep your reasons on this device", zh: "把理由留在这台设备上" } },

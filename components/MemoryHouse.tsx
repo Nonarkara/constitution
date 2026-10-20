@@ -53,6 +53,44 @@ export function MemoryHouse() {
           "十六个房间对应十六章。看图、回想规则，再试着作答。故事与笑话是线索，条文才是法律依据。",
         )}
       </p>
+      {/* One thing to do. The recall button used to sit at the bottom of the
+          room, below the picture and the law list — where nobody scrolled. */}
+      <div className="action-panel">
+        <span className="mono action-panel-kicker">
+          {tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
+        </span>
+        <button
+          className="primary action-panel-cta"
+          disabled={!ready}
+          onClick={() =>
+            setExercise(
+              (lessonQueue(questionIndex, progress, selected, Date.now(), 5)
+                .length
+                ? lessonQueue(questionIndex, progress, selected, Date.now(), 5)
+                : questionIndex
+                    .filter((q) => q.chapter === selected)
+                    .slice(0, 5)
+              ).map((q) => q.id),
+            )
+          }
+        >
+          {tr(
+            lang,
+            "ลองเรียกคืน 5 ข้อหรือน้อยกว่า",
+            "Try up to five recall questions",
+            "尝试最多五道回忆题",
+          )}{" "}
+          →
+        </button>
+        <p className="micro action-panel-reason">
+          {tr(
+            lang,
+            `ห้อง ${selected} — ${chapters.find((c) => c.number === selected)?.title[lang]}: มองภาพ นึกกฎ แล้วตอบ`,
+            `Room ${selected} — ${chapters.find((c) => c.number === selected)?.title[lang]}: see the picture, recall the rule, then answer.`,
+            `第${selected}间——${chapters.find((c) => c.number === selected)?.title[lang]}：看图、回想规则、再作答。`,
+          )}
+        </p>
+      </div>
       <nav
         id="memory-rooms"
         className="palace-index"
@@ -129,29 +167,6 @@ export function MemoryHouse() {
             </div>
           ))}
         </div>
-        <button
-          className="primary"
-          disabled={!ready}
-          onClick={() =>
-            setExercise(
-              (lessonQueue(questionIndex, progress, selected, Date.now(), 5)
-                .length
-                ? lessonQueue(questionIndex, progress, selected, Date.now(), 5)
-                : questionIndex
-                    .filter((q) => q.chapter === selected)
-                    .slice(0, 5)
-              ).map((q) => q.id),
-            )
-          }
-        >
-          {tr(
-            lang,
-            "ลองเรียกคืน 5 ข้อหรือน้อยกว่า",
-            "Try up to five recall questions",
-            "尝试最多五道回忆题",
-          )}{" "}
-          →
-        </button>
         <p className="micro">
           {tr(
             lang,

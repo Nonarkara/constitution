@@ -5,6 +5,7 @@ import { polls, parsePolls, POLLS_KEY, type PollAnswers } from "@/lib/polls";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
 import { StudyArt } from "./StudyArt";
+import { ActionPanel } from "./PageAction";
 export function PollNotebook() {
   const { lang } = useStudy();
   const [answers, setAnswers] = useState<PollAnswers>({}),
@@ -26,6 +27,16 @@ export function PollNotebook() {
   }, []);
   const p = polls[at],
     own = answers[p.id];
+  // The next poll you have not answered, wrapping round the ten. This is the
+  // page's one action: on a ten-question poll, the thing a reader wants is
+  // always "which one is left", not "which one is next in sequence".
+  const nextUnanswered = () => {
+    for (let k = 1; k <= polls.length; k++) {
+      const i = (at + k) % polls.length;
+      if (!answers[polls[i].id]) return i;
+    }
+    return at;
+  };
   const save = (choice: number, note: string) => {
     const next = { ...answers, [p.id]: { choice, note } };
     setAnswers(next);
@@ -59,6 +70,88 @@ export function PollNotebook() {
           </p>
         </div>
       </div>
+      {/* One thing to do. The question, the choices, the reason box and the
+          counter all sat at the same weight, so the page had no main
+          function. The answer is the page, so the answer is the panel. */}
+      <ActionPanel kicker={tr(lang, "ตอบโพล", "Answer the poll", "回答问卷")}>
+        <button
+          className="primary action-panel-cta"
+          onClick={() => setAt(nextUnanswered())}
+        >
+          {tr(
+            lang,
+            "ไปคำถามที่ยังไม่ได้ตอบ",
+            "Go to the next unanswered question",
+            "前往下一个未回答的问题",
+          )}{" "}
+          →
+        </button>
+        <h2>{p.question[lang]}</h2>
+        <fieldset disabled={!ready} style={{ width: "100%" }}>
+          {p.choices.map((c, i) => (
+            <label className="answer" key={i}>
+              <input
+                type="radio"
+                name={p.id}
+                checked={own?.choice === i}
+                onChange={() => save(i, own?.note ?? "")}
+              />
+              {c[lang]}
+            </label>
+          ))}
+        </fieldset>
+        <label htmlFor="poll-note">
+          {tr(
+            lang,
+            "เหตุผลของฉัน (ไม่จำเป็น)",
+            "My reason (optional)",
+            "我的理由（可选）",
+          )}
+        </label>
+        <textarea
+          id="poll-note"
+          rows={3}
+          maxLength={1000}
+          disabled={!own || !ready}
+          value={own?.note ?? ""}
+          onChange={(e) => save(own.choice, e.target.value)}
+          style={{ width: "100%" }}
+        />
+        <p role="status">
+          {failed
+            ? tr(
+                lang,
+                "บันทึกไม่ได้หรือข้อมูลเก่าอ่านไม่ได้ อย่าเพิ่งถือว่าเก็บถาวรแล้ว",
+                "Saving failed or old data could not be read. Do not assume permanent storage.",
+                "保存失败或旧数据无法读取，请勿假定已永久保存。",
+              )
+            : own
+              ? tr(
+                  lang,
+                  "เก็บไว้ในเครื่องนี้แล้ว",
+                  "Saved on this device",
+                  "已保存在本设备",
+                )
+              : ""}
+        </p>
+        <p className="micro action-panel-reason">
+          {tr(
+            lang,
+            "คำตอบกับเหตุผลของคุณถูกเก็บไว้ในเครื่องนี้ ไม่มีคะแนนและไม่มีผลรวมของคนอื่น",
+            "Your answer and your reason are kept on this device — no score, and no tally from anyone else.",
+            "你的答案与理由保存在本设备——不计分，也没有他人的统计。",
+          )}
+        </p>
+      </ActionPanel>
+      <p>
+        {at + 1}/10 · {Object.keys(answers).length}{" "}
+        {tr(lang, "ข้อที่จดไว้", "recorded", "题已记录")}
+      </p>
+      <div className="reader-navigation">
+        <button disabled={at === 0} onClick={() => setAt(at - 1)}>
+          ← {tr(lang, "ก่อนหน้า", "Previous", "上一题")}
+        </button>
+      </div>
       <p className="micro">
         {tr(
           lang,
@@ -67,65 +160,6 @@ export function PollNotebook() {
           "请在本页单独导出这些答案；学习进度备份不含问卷。",
         )}
       </p>
-      <p>
-        {at + 1}/10 · {Object.keys(answers).length}{" "}
-        {tr(lang, "ข้อที่จดไว้", "recorded", "题已记录")}
-      </p>
-      <h2>{p.question[lang]}</h2>
-      <fieldset disabled={!ready}>
-        {p.choices.map((c, i) => (
-          <label className="answer" key={i}>
-            <input
-              type="radio"
-              name={p.id}
-              checked={own?.choice === i}
-              onChange={() => save(i, own?.note ?? "")}
-            />
-            {c[lang]}
-          </label>
-        ))}
-      </fieldset>
-      <label htmlFor="poll-note">
-        {tr(
-          lang,
-          "เหตุผลของฉัน (ไม่จำเป็น)",
-          "My reason (optional)",
-          "我的理由（可选）",
-        )}
-      </label>
-      <textarea
-        id="poll-note"
-        rows={3}
-        maxLength={1000}
-        disabled={!own || !ready}
-        value={own?.note ?? ""}
-        onChange={(e) => save(own.choice, e.target.value)}
-      />
-      <p role="status">
-        {failed
-          ? tr(
-              lang,
-              "บันทึกไม่ได้หรือข้อมูลเก่าอ่านไม่ได้ อย่าเพิ่งถือว่าเก็บถาวรแล้ว",
-              "Saving failed or old data could not be read. Do not assume permanent storage.",
-              "保存失败或旧数据无法读取，请勿假定已永久保存。",
-            )
-          : own
-            ? tr(
-                lang,
-                "เก็บไว้ในเครื่องนี้แล้ว",
-                "Saved on this device",
-                "已保存在本设备",
-              )
-            : ""}
-      </p>
-      <div className="reader-navigation">
-        <button disabled={at === 0} onClick={() => setAt(at - 1)}>
-          ← {tr(lang, "ก่อนหน้า", "Previous", "上一题")}
-        </button>
-        <button disabled={at === 9} onClick={() => setAt(at + 1)}>
-          {tr(lang, `คำถาม ${at + 2}`, `Question ${at + 2}`, `第${at + 2}题`)} →
-        </button>
-      </div>
       <button
         disabled={!ready}
         onClick={() => {

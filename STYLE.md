@@ -10,12 +10,16 @@ Everything here was chosen on purpose. Agents and reviewers read this before any
 - Numbers/Code: Jost tabular figures for section numbers, citations, countdowns, and cram drills.
 
 ## Colour
-- Light ground #ffffff, ink #1c1d1a, line #e5e5dc, wash #f4f3ed.
-- Mild ground #fbf8f1 (warm paper), ink #22211b.
-- Dark ground #121310, ink #f3f2ec.
-- Contrast ground #000000, ink #ffffff.
-- Accent #c84b31 (warm terracotta/brick red) for primary action states, key milestones, and active tab indicator.
-- Muted ink #626459 for secondary breadcrumbs, annotations, and legal chapter headers.
+Four reading themes ship: light (default), mild, dark and contrast. Amber is the only
+UI accent in every theme — it marks the one next action, key milestones and the active tab.
+- Light: ground #ffffff, ink #24251f, muted #65685c, line #d9dcd3, wash #f5f6f1.
+- Mild (warm paper, desk lamp at night): ground #f3ecdc, ink #332e22, muted #615843, line #d9cdb3, wash #eae1cb.
+- Dark: ground #15140f, ink #e6e1d3, muted #aba592, line #36332b, wash #1f1d17.
+- Contrast: ground #ffffff, ink #000000, muted #1f1f1f, line #000000, wash #efefef.
+- Accent #f59e0b (amber; the mild theme warms it to #f0a033), accent ink #24251f.
+- Brick red / terracotta is NOT the house accent. It appears nowhere in the codebase and
+  must not be introduced: the Non-Slop `cream-terracotta` rule exists to catch exactly that
+  default, so it is deliberately left un-allowed.
 
 ## Devices
 - Hand-drawn pastel crayon Tikki illustrations serve as the friendly guide throughout the study journey.
@@ -51,5 +55,4 @@ Everything here was chosen on purpose. Agents and reviewers read this before any
 - font "Jost": Bauhaus lookalike display and body font
 - font "IBM Plex Sans Thai": loopless Thai sans-serif body font
 - font "JetBrains Mono": monospace numbers and section citations
-- colour #c84b31: house accent colour
-- colour #fbf8f1: warm paper mild ground colour
+- colour #f59e0b: house accent colour (amber, the next action)

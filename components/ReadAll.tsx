@@ -128,10 +128,15 @@ export function ReadAll() {
           <StudyArt scene="read" />
           <div className="intro-text">
             <h1>{chapter.title[lang]}</h1>
-            <label className="micro" htmlFor="read-chapter">
-              {tr(lang, "เลือกหมวด", "Chapter", "选择章节")}
+            <label className="lookup-label" htmlFor="read-chapter">
+              {tr(lang, "เลือกหมวดที่จะอ่าน", "Choose the chapter to read", "选择要读的章节")}
             </label>
-            <select id="read-chapter" value={chapterNumber} onChange={(e) => go(Number(e.target.value))}>
+            <select
+              id="read-chapter"
+              className="lookup-input"
+              value={chapterNumber}
+              onChange={(e) => go(Number(e.target.value))}
+            >
               {chapters.map((c) => (
                 <option key={c.number} value={c.number}>
                   {chapterLabel(lang, c.number)} · {c.title[lang]}

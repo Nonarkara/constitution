@@ -86,6 +86,31 @@ export function Settings() {
           </h1>
         </div>
       </div>
+      {/* One thing to do. Four settings cards used to sit here with equal
+          weight, and the one that actually protects the learner's work —
+          exporting it — was buried in the last card. */}
+      <div className="action-panel">
+        <span className="mono action-panel-kicker">
+          {tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
+        </span>
+        <button className="primary action-panel-cta" onClick={download}>
+          {tr(
+            lang,
+            "ส่งออกความก้าวหน้าและบันทึก",
+            "Export progress and notes",
+            "导出进度与笔记",
+          )}{" "}
+          →
+        </button>
+        <p className="micro action-panel-reason">
+          {tr(
+            lang,
+            "ไม่มีบัญชีและไม่มีเซิร์ฟเวอร์ ความก้าวหน้าอยู่ในเบราว์เซอร์นี้เท่านั้น เก็บสำเนาไว้หนึ่งไฟล์",
+            "No account and no server: your progress lives in this browser alone. Keep one copy.",
+            "没有账号也没有服务器：你的学习进度只存在这个浏览器里。请留一份副本。",
+          )}
+        </p>
+      </div>
       <div className="source-card">
         <h2>{tr(lang, "ติดตั้งบน iPad", "Install on iPad", "安装到iPad")}</h2>
         <p>
@@ -196,14 +221,6 @@ export function Settings() {
         <p><Link href="/polls/">{tr(lang,"ส่งออกคำตอบโพลจากหน้าโพลแยกต่างหาก","Export private poll answers separately on the polls page","私人问卷答案须在问卷页单独导出")} →</Link></p>
         <div className="settings-actions">
           <button onClick={() => {let raw: string | null; try { raw=localStorage.getItem(RECOVERY_KEY); } catch { setMessage(tr(lang,"เบราว์เซอร์อ่านข้อมูลไม่ได้","The browser could not read recovery data.","浏览器无法读取恢复数据。")); return; }if(!raw){setMessage(tr(lang,"ยังไม่มีสำเนากู้คืน","No recovery copy yet.","暂无恢复副本。"));return;}const url=URL.createObjectURL(new Blob([raw],{type:"application/json"}));const a=document.createElement("a");a.href=url;a.download="constitution-import-recovery.json";a.click();URL.revokeObjectURL(url);setMessage(tr(lang,"ส่งออกข้อมูลก่อนนำเข้าแล้ว เก็บไว้เพื่อกู้คืน","Previous-state recovery data exported. Keep it for recovery.","已导出导入前的恢复数据，请留存。"));}}>{tr(lang,"ส่งออกสำเนาก่อนนำเข้า","Export pre-import recovery copy","导出导入前恢复副本")}</button>
-          <button onClick={download}>
-            {tr(
-              lang,
-              "ส่งออกความก้าวหน้าและบันทึก",
-              "Export progress and notes",
-              "导出进度与笔记",
-            )}
-          </button>
           <label className="button">
             {tr(lang, "นำเข้าความก้าวหน้า", "Import progress", "导入进度")}
             <input

@@ -38,3 +38,6 @@ token*.json
 
 # non-slop render screenshots
 non-slop-shots/
+
+# scratch: the sentence-rewriting chunk pipeline regenerates this
+var/

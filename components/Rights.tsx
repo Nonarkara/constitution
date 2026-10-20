@@ -54,6 +54,25 @@ export function Rights() {
           </p>
         </div>
       </div>
+      <div className="action-panel">
+        <span className="mono action-panel-kicker">
+          {tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
+        </span>
+        <button
+          className="primary action-panel-cta"
+          onClick={() => setOpen(groups[0]?.items[0]?.item ?? null)}
+        >
+          {tr(lang, "ลองเดาเรื่องแรก", "Try the first one", "先试第一题")} →
+        </button>
+        <p className="micro action-panel-reason">
+          {tr(
+            lang,
+            "เดาก่อนเสมอ แล้วค่อยเปิดตัวบทที่ตอบ — ทั้ง 15 เรื่องอยู่ใต้บรรทัดนี้",
+            "Always guess first, then open the section that answers it. All fifteen situations are below.",
+            "先猜，再打开回答它的条文。十五个情境都在下面。",
+          )}
+        </p>
+      </div>
       {groups.map((group) => (
         <section key={group.id}>
           <h2>{group.title[lang]}</h2>
