@@ -244,11 +244,6 @@ export function DoublePageReader() {
         className="open-spread-book"
         aria-label={tr(lang, "สมุดรัฐธรรมนูญเปิดสองหน้า", "Open constitution spread", "打开的宪法对页")}
       >
-        {/* Book Spine Center Marker */}
-        <div className="book-spine" aria-hidden="true">
-          <div className="spine-crease" />
-        </div>
-
         {/* LEFT PAGE */}
         {leftSection && (
           <article className={`book-page page-left ${highlightClass(leftSection.number)}`} data-read={leftSection.number}>
@@ -347,6 +342,15 @@ export function DoublePageReader() {
             </footer>
           </article>
         )}
+
+        {/* Book Spine Center Marker — this must sit BETWEEN the two pages.
+            The grid is `1fr 12px 1fr` (page | spine | page), but the spine used
+            to be the first child, so auto-placement gave it the left page's
+            whole 1fr column while the left page was crushed into the 12px
+            track and overflowed on top of the right page. */}
+        <div className="book-spine" aria-hidden="true">
+          <div className="spine-crease" />
+        </div>
 
         {/* RIGHT PAGE */}
         {rightSection ? (
