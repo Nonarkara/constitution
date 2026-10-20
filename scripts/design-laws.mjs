@@ -1,3 +1,4 @@
+// non-slop-skip-file: release gate validator, not UI
 /**
  * Anti-slop design laws, as a function the release gate and the test suite
  * both call. They used to carry two copies of this logic, which is how a rule

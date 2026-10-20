@@ -17,6 +17,7 @@ export default function Page() {
         { href: "/amend/", title: { th: "การแก้ไข", en: "Amend", zh: "修宪" }, text: { th: "เรื่องสมมติ ผ่านประตูจริง", en: "A fictional draft through the real gates", zh: "虚构草案，真实门槛" } },
         { href: "/news/", title: { th: "ข่าว", en: "News", zh: "新闻" }, text: { th: "หัวข่าว ไม่ใช่เนื้อข่าว", en: "Headlines, not article text", zh: "标题，不是正文" } },
         { href: "/memory/", title: { th: "บ้านความจำ", en: "Memory", zh: "记忆屋" }, text: { th: "16 ห้องสำหรับจำตัวเลข", en: "16 rooms for the numbers", zh: "十六间房间，用来记数字" } },
+        { href: "/tikki/", title: { th: "เรื่องราวของติ๊กกี้", en: "Tikki's Story", zh: "蒂基的故事" }, text: { th: "จุดเริ่มต้นของสมุด และภาพวาดน่ารัก", en: "The origin of this notebook and cute study art", zh: "这本笔记的诞生与可爱插画" } },
         { href: "/sources/", title: { th: "แหล่งอ้างอิง", en: "Sources", zh: "资料来源" }, text: { th: "ต้นฉบับและคำแปล", en: "The original text and the translations", zh: "原文与译文" } },
       ]}
     />

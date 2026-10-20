@@ -63,6 +63,7 @@ export const APP_ROUTES = [
   "/amend/",
   "/news/",
   "/memory/",
+  "/tikki/",
   "/sources/",
   "/research/",
   "/notes/",
@@ -71,7 +72,7 @@ export const APP_ROUTES = [
 
 const LEARN = new Set(["/bible/", "/read/", "/section/", "/notebook/", "/cram/", "/glossary/", "/topics/"]);
 const PRACTISE = new Set(["/practice/", "/practice/pokklong/", "/along/", "/review/", "/exam/", "/drills/", "/flashcards/", "/games/", "/cheatsheet/"]);
-const EXPLORE = new Set(["/library/", "/rights/", "/polls/", "/civic/", "/amend/", "/news/", "/memory/", "/sources/", "/research/"]);
+const EXPLORE = new Set(["/library/", "/rights/", "/polls/", "/civic/", "/amend/", "/news/", "/memory/", "/tikki/", "/sources/", "/research/"]);
 
 const PAGE: Record<string, Text> = {
   "/read/": text("อ่าน", "Read", "阅读"),
@@ -93,6 +94,7 @@ const PAGE: Record<string, Text> = {
   "/amend/": text("การแก้ไข", "Amend", "修宪"),
   "/news/": text("ข่าว", "News", "新闻"),
   "/memory/": text("บ้านความจำ", "Memory", "记忆屋"),
+  "/tikki/": text("เรื่องราวของติ๊กกี้", "Tikki's Story", "蒂基的故事"),
   "/sources/": text("แหล่งอ้างอิง", "Sources", "资料来源"),
   "/research/": text("ที่มาของสมุด", "About", "关于"),
 };
@@ -258,6 +260,7 @@ export function nextFor(path: string, ctx: NavContext = {}): NavLink | null {
     "/amend/": { href: "/bible/local-and-amendment/", label: nextLabel("เรียนการแก้ไข", "learn amendment", "学习修宪") },
     "/news/": { href: "/rights/", label: nextLabel("สิทธิของคุณ", "your rights", "你的权利") },
     "/memory/": { href: "/bible/", label: nextLabel("เรียนคู่มือ", "the study guide", "学习指南") },
+    "/tikki/": { href: "/bible/", label: nextLabel("เริ่มเรียนรู้", "start learning", "开始学习") },
     "/sources/": { href: "/read/", label: nextLabel("อ่านตัวบท", "read the text", "阅读条文") },
     "/research/": { href: "/sources/", label: nextLabel("แหล่งอ้างอิง", "sources", "资料来源") },
     "/notes/": { href: "/practice/?session=mixed", label: nextLabel("ฝึกต่อ", "practise", "继续练习") },

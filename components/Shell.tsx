@@ -186,25 +186,27 @@ export function Shell({ children }: { children: React.ReactNode }) {
             ))}
           </nav>
           <div className="sidebar-note">
-            <span className="micro">
-              {tr(lang, "สมุดของติ๊กกี้", "Tikky's notebook", "Tikky 的笔记本")}
-            </span>
-            <p>
-              {tr(
-                lang,
-                "วันละนิด ก็ไปได้ไกล",
-                "A little every day adds up.",
-                "每天学一点，慢慢走得远。",
-              )}
-            </p>
-            <p className="micro">
-              {tr(
-                lang,
-                "สำหรับติ๊กกี้ และทุกคนที่กำลังเตรียมสอบ",
-                "For Tikky, and everyone preparing for the exam.",
-                "送给 Tikky，也送给每一位备考者。",
-              )}
-            </p>
+            <Link href="/tikki/" style={{ textDecoration: "none", color: "inherit", display: "block" }}>
+              <span className="micro" style={{ textDecoration: "underline" }}>
+                {tr(lang, "สมุดของติ๊กกี้", "Tikky's notebook", "Tikky 的笔记本")}
+              </span>
+              <p>
+                {tr(
+                  lang,
+                  "วันละนิด ก็ไปได้ไกล",
+                  "A little every day adds up.",
+                  "每天学一点，慢慢走得远。",
+                )}
+              </p>
+              <p className="micro">
+                {tr(
+                  lang,
+                  "สำหรับติ๊กกี้ และทุกคนที่กำลังเตรียมสอบ",
+                  "For Tikky, and everyone preparing for the exam.",
+                  "送给 Tikky，也送给每一位备考者。",
+                )}
+              </p>
+            </Link>
           </div>
         </aside>
         <main id="content">

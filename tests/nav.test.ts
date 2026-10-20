@@ -35,7 +35,7 @@ for (const route of APP_ROUTES) {
 for (const route of ["/practice/", "/practice/pokklong/", "/along/", "/review/", "/exam/", "/drills/", "/flashcards/", "/games/", "/cheatsheet/"]) {
   expected[route] = "practise";
 }
-for (const route of ["/library/", "/rights/", "/polls/", "/civic/", "/amend/", "/news/", "/memory/", "/sources/", "/research/"]) {
+for (const route of ["/library/", "/rights/", "/polls/", "/civic/", "/amend/", "/news/", "/memory/", "/tikki/", "/sources/", "/research/"]) {
   expected[route] = "explore";
 }
 
