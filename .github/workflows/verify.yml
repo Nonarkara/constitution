@@ -34,3 +34,12 @@ jobs:
       # Undefined CSS vars, per-class WCAG contrast, and link integrity across
       # every built page, the sitemap and all three podcast feeds.
       - run: npm run check:release
+      # Non-Slop anti-slop laws: default fonts, purple gradients, glass, card
+      # kits, centred heroes, hype copy, emoji icons, missing alt text, missing
+      # viewport, unlabelled <html>, motion with no reduced-motion path. Without
+      # this step the scanner is a directory on disk that nobody runs.
+      - run: npm run check:slop
+      # Rendered-browser gates: horizontal overflow, all-zero progress readouts
+      # and empty labelled regions across every route at five widths. Needs the
+      # post-build out/, so it cannot run before check:release.
+      - run: npm run check:layout
