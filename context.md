@@ -107,3 +107,19 @@ The earlier "sitemap and feeds point at /learn/" report did not hold: `/learn/` 
 **Cloudflare Always Use HTTPS (blocked, needs a credential).** Dr Non authorised this on 16 October. It cannot be set from this machine: the only Cloudflare credential present is wrangler's OAuth token, whose scopes are `account:read`, `user:read`, `workers:write` and similar — it includes `zone:read` but no scope that permits writing zone settings, and the settings API answers it with an authentication error. Changing `always_use_https` needs an API token with **Zone Settings: Edit** for the nonarkara.org zone (zone id `8809ee955a8edb681c34f45ed8f5b765`), or a dashboard toggle. Remember it is zone-wide: it affects every nonarkara.org site on the account, and anything still calling one of them over plain HTTP will start failing.
 
 **Leftover.** Eight unreachable CSS rules remain inside `@media` blocks; the pruner deliberately does not recurse into at-rules, so they are untouched and harmless.
+
+## The spatial law — 21 October 2026
+
+Dr Non named the failure this site kept shipping: **spatial hallucination** — an interface that invents a reason for things to occupy space, instead of arranging them around how people read, choose and act. The test is *"why is this here, why this size, and why this far from that?"*, and "the grid put it there" is not an answer.
+
+It is not a styling problem. It recurs because layouts are composed from components that each know their own box while nobody decides the reader's path, because invisible constraints (the grid, the column count, the `gap`) become the visible structure, and because nobody owns the empty space, so the leftover is whatever the last rule produced.
+
+**The law is a receipt, not a threshold.** A limit on a count cannot tell a defect from correct design — the same project's hierarchy gate had "at most 12 bold things per page" written, never compared, and it turned out unmeetable by correct design, because a dictionary of 89 headwords is supposed to have 89 headwords. A limit on a size cannot tell a section break from a hole. So instead: every hole is measured, written into `design/spatial-baseline.json` with a **written reason**, and a decision with no reason fails the build — because no reason is what "the grid put it there" sounds like when you write it down.
+
+The instrument is shared and portable (`scripts/spatial/`, hash-verified against the canonical copy). It measures geometry; the project owns the judgment. It sweeps **six widths**, because a layout checked at 390 and 1440 is checked at the two widths where nothing breaks.
+
+**What the first sweep found.** Nineteen distinct decisions across 29 routes that nobody had justified. Twelve were rows that broke by accident — a row of three links wrapping two-and-one, a settings list of four, a tab row leaving a tab alone — and are now deliberate arrangements: a grid whose cells are even, or a column that is a list. Seven are compositions that were intentional and had never been said out loud: a plate in the margin, a caption centred against its picture, a statute followed by a margin note, a number column that is a timeline. Each now carries its reason.
+
+**The instrument found three of its own bugs** while being built, all of them false confidence: a vertical menu read as a broken row, a vertical list read as a row that wrapped, and a picture cropped to a frame read as a row that lost its content. The falsifier had two more: a copy command that nested the site one level down, and fixtures pasted into markup that React hydration deleted before anything measured them. All five are fixed, and `npm run falsify:spatial` now proves every mode of the law fails at least once.
+
+The gate, the falsifier and the instrument's own hash check are in the release chain and in CI.
