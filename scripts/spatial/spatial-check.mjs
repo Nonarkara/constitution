@@ -191,22 +191,51 @@ function installProbe(d) {
   s.textContent = PROBE;
   (d.head || d.documentElement).appendChild(s);
 }
+var TOKEN = 0;
 function measureOne(route, w, h, cb) {
+  // Two guards, both learned the hard way.
+  //
+  // TOKEN: the iframe fires load for about:blank as well as for the real
+  // page, so one measurement can start twice. A stale run must never call
+  // back — after the iframe navigates, the captured window forwards to the
+  // new document, the probe it installed is gone, and calling it throws
+  // "is not a function".
+  //
+  // done: exactly one result per measurement. Two loops racing on the same
+  // iframe would report the same page twice, and the gate would then claim
+  // to have measured more than it promised.
+  var token = ++TOKEN;
+  var done = false;
+  function finish(rec) {
+    if (done) return;
+    done = true;
+    cb(rec);
+  }
   f.style.width = w + 'px';
   f.style.height = h + 'px';
-  f.src = route;  f.onload = function () {
+  f.src = route;
+  f.onload = function () {
+    if (token !== TOKEN) return;
     var tries = 0;
     (function wait() {
+      if (token !== TOKEN) return;
       var d;
-      try { d = f.contentDocument; } catch (e) { return cb({ route: route, w: w, error: 'cross-origin' }); }
-      if (!d) return cb({ route: route, w: w, error: 'no document' });
-      if (tries++ > 140) return cb({ route: route, w: w, error: 'timed out waiting for the page' });
+      try { d = f.contentDocument; } catch (e) { return finish({ route: route, w: w, error: 'cross-origin' }); }
+      if (!d) return finish({ route: route, w: w, error: 'no document' });
+      if (tries++ > 140) return finish({ route: route, w: w, error: 'timed out waiting for the page' });
       var mainEl = d && (d.querySelector('main#content') || d.querySelector('main'));
       if (d.readyState === 'complete' && mainEl) {
         if (!d.__spatialInstalled) { d.__spatialInstalled = true; installProbe(d); }
         var wv = d.defaultView;
-        if (wv && wv.__SPATIAL_MEASURE__) {
-          return setTimeout(function () { cb(wv.__SPATIAL_MEASURE__(route, w, d)); }, 220);
+        if (wv && typeof wv.__SPATIAL_MEASURE__ === 'function') {
+          return setTimeout(function () {
+            if (token !== TOKEN) return;
+            // The page may have navigated while we settled. If it did, the
+            // window we captured now belongs to a different document, and the
+            // probe is not there any more.
+            if (d.defaultView !== wv || typeof wv.__SPATIAL_MEASURE__ !== 'function') return wait();
+            finish(wv.__SPATIAL_MEASURE__(route, w, d));
+          }, 220);
         }
       }
       setTimeout(wait, 50);

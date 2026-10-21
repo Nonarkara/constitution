@@ -135,17 +135,37 @@ window.onerror = function (msg, src, line, col, err) {
   return true;
 };
 
+var TOKEN = 0;
 function measureOne(route, w, h, cb) {
+  // The iframe can fire load more than once for one measurement, and a stale
+  // run must never call back: after the iframe navigates, the captured
+  // document is gone. "done" keeps one measurement from being reported
+  // twice — a gate that claims to have measured more than it promised is a
+  // false measurement.
+  var token = ++TOKEN;
+  var done = false;
+  function finish(rec) {
+    if (done) return;
+    done = true;
+    cb(rec);
+  }
   var setSrc = function () {
     f.style.width = w + 'px'; f.style.height = h + 'px';
     f.src = route;
     f.onload = function () {
+      if (token !== TOKEN) return;
       var tries = 0;
       (function wait() {
+        if (token !== TOKEN) return;
         var d;
-        try { d = f.contentDocument; } catch (e) { return cb({ route: route, w: w, error: 'cross-origin' }); }
-        if (tries++ > 80) return cb(measure(route, w, d));
-        if (d && d.readyState === 'complete' && d.querySelector('body')) return setTimeout(function () { cb(measure(route, w, d)); }, 200);
+        try { d = f.contentDocument; } catch (e) { return finish({ route: route, w: w, error: 'cross-origin' }); }
+        if (tries++ > 80) return finish(measure(route, w, d));
+        if (d && d.readyState === 'complete' && d.querySelector('body')) {
+          return setTimeout(function () {
+            if (token !== TOKEN) return;
+            finish(measure(route, w, d));
+          }, 200);
+        }
         setTimeout(wait, 60);
       })();
     };
