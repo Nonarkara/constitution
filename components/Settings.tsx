@@ -152,7 +152,7 @@ export function Settings() {
                 "离线内容尚未保存，请联网重新打开网站。",
               )}
       </p>
-      <div className="source-card">
+      <div className="source-card settings-card">
         <h2>
           {tr(lang, "อ่านสบายขึ้น", "Read more comfortably", "更舒适地阅读")}
         </h2>

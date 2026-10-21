@@ -64,9 +64,9 @@
  */
 import { createServer } from "node:http";
 import { readdir } from "node:fs/promises";
-import { existsSync, readFileSync, writeFileSync, mkdirSync, statSync, rmSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync, mkdirSync, statSync, rmSync, readdirSync } from "node:fs";
 import { execFileSync, spawn } from "node:child_process";
-import { tmpdir } from "node:os";
+import { tmpdir, homedir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -223,7 +223,7 @@ function measureOne(route, w, h, cb) {
       try { d = f.contentDocument; } catch (e) { return finish({ route: route, w: w, error: 'cross-origin' }); }
       if (!d) return finish({ route: route, w: w, error: 'no document' });
       if (tries++ > 140) return finish({ route: route, w: w, error: 'timed out waiting for the page' });
-      var mainEl = d && (d.querySelector('main#content') || d.querySelector('main'));
+      var mainEl = d && (d.querySelector('main#content') || d.querySelector('main') || d.body);
       if (d.readyState === 'complete' && mainEl) {
         if (!d.__spatialInstalled) { d.__spatialInstalled = true; installProbe(d); }
         var wv = d.defaultView;
@@ -233,7 +233,11 @@ function measureOne(route, w, h, cb) {
             // The page may have navigated while we settled. If it did, the
             // window we captured now belongs to a different document, and the
             // probe is not there any more.
-            if (d.defaultView !== wv || typeof wv.__SPATIAL_MEASURE__ !== 'function') return wait();
+            //
+            // The window proxy is REUSED across a same-origin navigation, so
+            // comparing defaultView cannot tell the two documents apart —
+            // the probe's presence is the only honest test.
+            if (typeof wv.__SPATIAL_MEASURE__ !== 'function') return wait();
             finish(wv.__SPATIAL_MEASURE__(route, w, d));
           }, 220);
         }
@@ -424,10 +428,59 @@ function hasReason(f) {
   return hasReasonKey(keyOf(f));
 }
 
+// ---------------------------------------------------------------- the widths
+//
+// A layout is checked at the widths where it CHANGES, not only at the widths
+// a habit suggested. A breakpoint at 560px means the page is a different page
+// at 560 than at 561, so both are measured — and so is every breakpoint the
+// project's own CSS declares.
+//
+// This is not a theory. In the project that first adopted this instrument,
+// the fixes were written at breakpoints of 520, 560, 720, 900 and 1100 while
+// the gate swept 360, 480, 768, 1024, 1440 and 1920 — and not one of those
+// widths was on either side of a single breakpoint. Three of the fixes were
+// broken exactly there, and a fourth was jumbled by the same cause, and the
+// gate was green the whole time. A gate that cannot see where the layout
+// changes is a gate that cannot see the defect it was written to catch.
+function cssBreakpoints(root) {
+  const found = new Set();
+  const dir = path.join(root, "_next", "static", "css");
+  let files = [];
+  try {
+    files = readdirSync(dir).filter((f) => f.endsWith(".css"));
+  } catch {
+    return found;
+  }
+  for (const f of files) {
+    let text = "";
+    try {
+      text = readFileSync(path.join(dir, f), "utf8");
+    } catch {
+      continue;
+    }
+    for (const m of text.matchAll(/@media[^{]*?\((?:min|max)-width:\s*([\d.]+)(px|rem|em)\)/g)) {
+      const n = parseFloat(m[1]);
+      if (!Number.isFinite(n) || n <= 0) continue;
+      const px = m[2] === "px" ? n : n * 16;
+      const bp = Math.round(px);
+      // A breakpoint is a cliff: measure the width just below it, the width
+      // itself, and the width just above it.
+      for (const w of [bp - 1, bp, bp + 1]) if (w > 0) found.add(w);
+    }
+  }
+  return found;
+}
+
 // ---------------------------------------------------------------- measure
+const baseline = loadBaseline();
+const projectWidths =
+  baseline && Array.isArray(baseline.widths) && baseline.widths.length
+    ? baseline.widths.map(Number).filter(Boolean)
+    : DEFAULT_WIDTHS;
+const cssWidths = BASE ? new Set() : cssBreakpoints(path.resolve(String(DIR)));
 const widths = WIDTHS_ARG
   ? String(WIDTHS_ARG).split(",").map((w) => parseInt(w.trim(), 10)).filter(Boolean)
-  : DEFAULT_WIDTHS;
+  : [...new Set([...projectWidths, ...cssWidths])].sort((a, b) => a - b);
 
 const routes = await discoverRoutes();
 if (!routes.length) {
@@ -443,8 +496,11 @@ function cleanup() {
   if (cleaned) return;
   cleaned = true;
   try {
-    // The profile is this process's own scratch directory.
-    const trash = "/Users/nonarkara/.minimax/bin/mavis-trash";
+    // The profile is this process's own scratch directory. The trash helper
+    // belongs to the runtime and is not in the same place on every machine,
+    // so a shared instrument asks the environment first and falls back to the
+    // standard location — it never carries one person's home directory.
+    const trash = process.env.MAVIS_TRASH || path.join(homedir(), ".minimax", "bin", "mavis-trash");
     if (existsSync(trash)) execFileSync(trash, ["--", prof]);
     else rmSync(prof, { recursive: true, force: true });
   } catch {
@@ -473,7 +529,13 @@ for (let attempt = 1; attempt <= 3; attempt++) {
         "--no-default-browser-check",
         "--disable-extensions",
         `--user-data-dir=${attemptProf}`,
-        "--virtual-time-budget=180000",
+        // The virtual time budget has to cover the WHOLE sweep. A fixed
+        // budget was fine when a sweep was a few hundred measurements and
+        // stopped being fine the moment the gate learned to sweep every
+        // breakpoint: Chrome ran out of virtual time, dumped a half-finished
+        // page, and exited successfully with no measurement in it. The budget
+        // is therefore worked out from the number of measurements.
+        `--virtual-time-budget=${Math.max(180000, routes.length * widths.length * 800)}`,
         "--dump-dom",
         `http://127.0.0.1:${port}/__spatial-harness`,
       ],
@@ -565,7 +627,6 @@ if (JSON_OUT) {
 }
 
 // ---------------------------------------------------------------- policy
-const baseline = loadBaseline();
 const limits = limitsOf(baseline);
 const baselineRoutes = (baseline && baseline.routes) || {};
 // A REASON belongs to a design DECISION, not to a page. The same decision —
@@ -580,6 +641,8 @@ const unexplained = [];
 const unrecorded = [];
 const grownFindings = [];
 const goneFindings = [];
+const staleReasons = [];
+const staleExempts = [];
 
 function baselineFor(route, w) {
   const r = baselineRoutes[route];
@@ -654,17 +717,71 @@ for (const r of results) {
         );
       }
     }
+  }
+
+  // The ABSOLUTE limits apply to every measurement, whether or not the
+  // baseline has ever seen this route. A limit that only holds for pages
+  // somebody already reviewed is not a limit — it is a note, and a new page
+  // with a 2000px scroll before its first action would sail past it.
+  //
+  // An EXEMPTION is a written exception to an absolute limit. It is not a
+  // quiet pass: it names the page, the check, and the reason, and it lives
+  // in the baseline where a reviewer can see it and argue with it.
+  const exempts = (baseline && baseline.exempt) || [];
+  function exempted(check) {
+    for (const e of exempts) {
+      if (e.check !== check) continue;
+      if (e.route && e.route !== r.route) continue;
+      if (e.w !== undefined && e.w !== null) {
+        // An exemption may name one width or a list of them. A decision that
+        // holds at several widths is still ONE decision, and the exemption
+        // should be able to say so in one place.
+        const ws = (Array.isArray(e.w) ? e.w : [e.w]).map(Number);
+        if (!ws.includes(Number(r.w))) continue;
+      }
+      return e;
+    }
+    return null;
+  }
+  {
+    const label = `${r.route} @${r.w}px`;
+
+    // An exemption applies to EVERY absolute limit, not only the first one.
+    // If one check could be excused and another could not, the excuse would
+    // live in the wrong place — and the place a reviewer reads is the
+    // baseline, never the body of the check.
+    function absolute(check, message, summary) {
+      const ex = exempted(check);
+      if (ex) {
+        notes.push(`${label} — ${summary || check}, exempted: ${ex.why}`);
+      } else {
+        failures.push(message);
+      }
+    }
+
     if (limits.firstAction !== null && r.firstAction && r.firstAction.y !== null && r.firstAction.y > limits.firstAction) {
-      failures.push(`${label} — the first thing you can do is ${r.firstAction.y}px down the page (limit ${limits.firstAction}px)`);
+      absolute(
+        "firstAction",
+        `${label} — the first thing you can do is ${r.firstAction.y}px down the page (limit ${limits.firstAction}px)`,
+        `first action at ${r.firstAction.y}px exceeds ${limits.firstAction}px`,
+      );
     }
 
     // --- false hierarchy --------------------------------------------------
     const h = r.hierarchy || {};
     if (limits.titleRatio !== null && h.ratio !== null && h.ratio < limits.titleRatio) {
-      failures.push(`${label} — the title is only ${h.ratio}x the next largest text (limit ${limits.titleRatio})`);
+      absolute(
+        "titleRatio",
+        `${label} — the title is only ${h.ratio}x the next largest text (limit ${limits.titleRatio})`,
+        `the title is only ${h.ratio}x the next largest text (limit ${limits.titleRatio})`,
+      );
     }
     if (limits.peerShare !== null && h.share !== undefined && h.share > limits.peerShare) {
-      failures.push(`${label} — ${Math.round(h.share * 100)}% of the page is set in the loud voice (limit ${Math.round(limits.peerShare * 100)}%)`);
+      absolute(
+        "peerShare",
+        `${label} — ${Math.round(h.share * 100)}% of the page is set in the loud voice (limit ${Math.round(limits.peerShare * 100)}%)`,
+        `${Math.round(h.share * 100)}% of the page is set in the loud voice (limit ${Math.round(limits.peerShare * 100)}%)`,
+      );
     }
     if (limits.allowedSizes) {
       const allowed = new Set(limits.allowedSizes.map(Number));
@@ -673,7 +790,11 @@ for (const r of results) {
         .filter((s) => !allowed.has(s))
         .sort((a, b) => a - b);
       if (off.length) {
-        failures.push(`${label} — text is set in ${off.join("px, ")}px, off the house ramp (${limits.allowedSizes.join(" / ")})`);
+        absolute(
+          "allowedSizes",
+          `${label} — text is set in ${off.join("px, ")}px, off the house ramp (${limits.allowedSizes.join(" / ")})`,
+          `text is set in ${off.join("px, ")}px, off the house ramp (${limits.allowedSizes.join(" / ")})`,
+        );
       }
     }
   }
@@ -695,17 +816,86 @@ for (const f of grownFindings) {
   failures.push(`${f.route} @${f.w}px — ${f.kind} GREW: ${f.sel} went from ${f.was} to ${f.metric} (+${f.delta}). The space that made sense at ${f.was} does not make sense at ${f.metric}.`);
 }
 
+// ---- a reason with nothing under it ----------------------------------------
+// A reason is written for a decision. When the decision is gone — the hole
+// was closed, the plate moved — the reason stays in the baseline for ever,
+// and the worst thing about it is that it is still a BLESSING: if a decision
+// of the same shape ever comes back, the stale reason silently excuses it,
+// and nobody re-reads why the first one was allowed.
+//
+// So a reason that no longer matches any measured decision is a failure. The
+// fix is to delete it from the baseline, by hand, so that the deletion is a
+// thing a person did and can be read in the diff.
+const measuredKeys = new Set();
+for (const r of results) {
+  for (const f of r.findings) {
+    if (f.kind === "overflow") continue;
+    measuredKeys.add(keyOf(f));
+  }
+}
+const measuredRoutes = new Set(results.map((r) => r.route));
+
+// A stale reason can only be judged when the sweep was COMPLETE. A run over
+// a few routes has not seen the routes the reason belongs to, and calling
+// that reason stale would be the instrument inventing a defect. So the check
+// only runs when every route the baseline knows about was measured.
+const fullSweep = !ROUTES_ARG && Object.keys(baselineRoutes).every((rt) => measuredRoutes.has(rt));
+if (fullSweep) {
+  for (const k of Object.keys(reasons)) {
+    if (measuredKeys.has(k)) continue;
+    staleReasons.push(k);
+    failures.push(
+      `stale reason — the baseline justifies "${k}" but no measured decision is that shape any more. ` +
+        `A reason that blesses nothing will bless the next thing that looks like it, without anybody re-reading it. ` +
+        `Delete it from the baseline.`,
+    );
+  }
+  for (const e of (baseline && baseline.exempt) || []) {
+    if (!e.route) continue;
+    if (measuredRoutes.has(e.route)) continue;
+    staleExempts.push(e);
+    failures.push(
+      `stale exemption — the baseline excuses ${e.check} on ${e.route}, which is not a route this build measures. ` +
+        `Delete it from the baseline.`,
+    );
+  }
+} else {
+  notes.push("stale reasons were not checked — this run did not sweep every route the baseline knows about");
+}
+// A NOTE is something the gate saw and did not fail on. It used to be
+// collected and never printed, which meant a page the baseline had never
+// seen was reviewed in silence. Silence is not a result.
+function printNotes() {
+  if (!notes.length) return;
+  console.log(`\nNOTES (${notes.length}) — seen, recorded, and not a failure:`);
+  for (const n of notes.slice(0, 40)) console.log(`  · ${n}`);
+  if (notes.length > 40) console.log(`  · ... and ${notes.length - 40} more`);
+}
+
 // ---------------------------------------------------------------- update
-if (UPDATE) {
+if (UPDATE) {  // A reason for a decision that is no longer there is not recorded again.
+  // It is dropped, loudly, so the deletion shows up in the diff of the
+  // baseline instead of hiding inside a tool.
+  const keptReasons = { ...reasons };
+  for (const k of staleReasons) delete keptReasons[k];
+  const keptExempts = ((baseline && baseline.exempt) || []).filter((e) => !staleExempts.includes(e));
   const next = {
     version: 2,
     tool: "spatial-law",
-    widths: widths,
+    // The widths the project chose, kept as chosen. The widths the CSS
+    // declares are worked out from the build on every run, so a breakpoint
+    // that is removed stops being measured without anybody editing this.
+    widths: projectWidths,
+    // The receipt of what was actually swept this time.
+    measuredWidths: widths,
     limits: limits,
     // The reasons of decisions that were already justified. A reason is kept
     // because the DECISION is kept; a decision whose geometry changed is
     // caught by the GROWN check, not by losing its reason.
-    reasons: { ...reasons },
+    reasons: keptReasons,
+    // Written exceptions to the absolute limits, kept for the same reason:
+    // an exception is a decision, and a decision is written down.
+    exempt: keptExempts,
     routes: {},
   };
   const signatureDetail = new Map();
@@ -746,6 +936,14 @@ if (UPDATE) {
   const needReason = [...signatureDetail.entries()].filter(([k]) => !hasReasonKey(k));
   console.log(`  · baseline written: ${target}`);
   console.log(`  · ${signatureDetail.size} distinct decision(s) measured; ${signatureDetail.size - needReason.length} already justified.`);
+  if (staleReasons.length || staleExempts.length) {
+    console.log(
+      `  · ${staleReasons.length} stale reason(s) and ${staleExempts.length} stale exemption(s) dropped — ` +
+        `they described a decision that is no longer there:`,
+    );
+    for (const k of staleReasons) console.log(`      - ${k}`);
+    for (const e of staleExempts) console.log(`      - ${e.check} on ${e.route}`);
+  }
   if (needReason.length) {
     console.error(
       `\nFAIL — ${needReason.length} decision(s) have no reason.\n` +
@@ -820,6 +1018,11 @@ if (REPORT) {
     console.log(`\nGONE findings (${goneFindings.length}) — the baseline is stale here:`);
     for (const f of goneFindings.slice(0, 40)) console.log(`  · ${f.route} @${f.w}px ${f.kind} ${f.sel}`);
   }
+  if (staleReasons.length) {
+    console.log(`\nSTALE reasons (${staleReasons.length}) — a reason with nothing under it:`);
+    for (const k of staleReasons) console.log(`  · ${k}`);
+  }
+  printNotes();
   process.exit(0);
 }
 
@@ -841,9 +1044,11 @@ if (failures.length) {
       "  or establishes emphasis. It is a hallucination when it asks the reader to supply\n" +
       "  an intention nobody had. Give every finding a reason, or remove it.\n",
   );
+  printNotes();
   process.exit(1);
 }
 
+printNotes();
 console.log(
   `  · spatial: ${results.length} measurements across ${routes.length} routes and ${widths.length} widths — ` +
     `every hole, orphan, scattered pair and wrap is either fixed or written down`,

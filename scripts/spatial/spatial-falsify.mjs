@@ -16,8 +16,8 @@
  * Usage: node spatial-falsify.mjs [path-to-built-site]
  */
 import { execFileSync, spawnSync } from "node:child_process";
-import { existsSync, readFileSync, writeFileSync, readdirSync, mkdirSync } from "node:fs";
-import { tmpdir } from "node:os";
+import { existsSync, readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync } from "node:fs";
+import { tmpdir, homedir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -117,8 +117,11 @@ if (!existsSync(path.join(COPY, "index.html"))) {
 
 function cleanup() {
   try {
-    const trash = "/Users/nonarkara/.minimax/bin/mavis-trash";
+    // The trash helper belongs to the runtime and is not in the same place on
+    // every machine, so it is asked for rather than assumed.
+    const trash = process.env.MAVIS_TRASH || path.join(homedir(), ".minimax", "bin", "mavis-trash");
     if (existsSync(trash)) execFileSync(trash, ["--", WORK]);
+    else rmSync(WORK, { recursive: true, force: true });
   } catch {
     /* best effort */
   }
@@ -138,11 +141,24 @@ function runGate(args) {
   };
 }
 
+/** The same gate, but over EVERY route in the copy. */
+function runFullGate(args) {
+  const res = spawnSync(
+    process.execPath,
+    [CHECK, "--dir", COPY, "--baseline", BASELINE, "--widths", WIDTHS, ...args],
+    { encoding: "utf8", timeout: 900000 },
+  );
+  return {
+    pass: res.status === 0,
+    out: `${res.stdout || ""}${res.stderr || ""}`,
+  };
+}
+
 // ---------------------------------------------------------------- the baseline
 // Generated from the clean copy, with a synthetic reason on every finding so
 // the clean copy can pass. This baseline is a measuring device for the
 // falsifier, not a review of the project.
-const gen = runGate(["--update"]);
+const gen = runFullGate(["--update"]);
 if (!existsSync(BASELINE)) {
   console.error(`\nFAIL — the gate could not write a baseline for the falsifier.\n${gen.out}\n`);
   process.exit(1);
@@ -249,6 +265,155 @@ for (const f of FIXTURES) {
     failures++;
   } else {
     console.log(`  · caught: ${f.name}  [${f.mode}]`);
+  }
+}
+
+if (failures) {
+  console.error(`\nFAIL — ${failures} rule(s) did not bite. The gate is not trustworthy.\n`);
+  process.exit(1);
+}
+
+// ---------------------------------------------------------------- the rules about the baseline
+// The gate is also a set of rules about the BASELINE, and a rule about the
+// baseline can be as dead as a rule about a page. Each case below breaks the
+// baseline on purpose and expects the gate to notice. A rule that has never
+// failed is a rule nobody should rely on.
+const BASELINE_SAVED = readFileSync(BASELINE, "utf8");
+
+function withBaseline(mutate) {
+  const b = JSON.parse(BASELINE_SAVED);
+  mutate(b);
+  writeFileSync(BASELINE, JSON.stringify(b, null, 2) + "\n");
+}
+
+const BASELINE_RULES = [
+  {
+    name: "a reason for a decision that no longer exists",
+    expect: "stale reason",
+    full: true,
+    mutate: (b) => {
+      b.reasons["dead|div.__gone__"] = "a reason for a decision that is not there";
+    },
+  },
+  {
+    name: "an absolute limit bites on a page the baseline already knows",
+    expect: "the first thing you can do is",
+    full: true,
+    mutate: (b) => {
+      b.limits = { ...b.limits, firstAction: 200 };
+    },
+  },
+  {
+    name: "a page the baseline has never seen, with a long scroll before the action",
+    expect: "the first thing you can do is",
+    also: ["sl-never-seen"],
+    full: true,
+    mutate: (b) => {
+      // A bound only the new page breaks: every other page's first action is
+      // well inside 1200px, so the failure can only be about the new page.
+      b.limits = { ...b.limits, firstAction: 1200 };
+    },
+    site: () => {
+      // A route that has never been in the baseline: a copy of the home page
+      // with two thousand pixels of nothing in front of its first action.
+      // The name must not begin with an underscore — the gate skips those
+      // directories, the way it skips a framework's own build output.
+      const dir = path.join(COPY, "sl-never-seen");
+      mkdirSync(dir, { recursive: true });
+      const html = readFileSync(path.join(COPY, "index.html"), "utf8").replace(
+        "<main",
+        '<div style="height:2000px"></div><main',
+      );
+      writeFileSync(path.join(dir, "index.html"), html);
+    },
+    cleanupSite: () => rmSync(path.join(COPY, "sl-never-seen"), { recursive: true, force: true }),
+  },
+  {
+    name: "an exemption that is written down excuses the limit it names",
+    expect: null,
+    note: "the written exemption let the limit pass",
+    full: false,
+    mutate: (b) => {
+      b.limits = { ...b.limits, firstAction: 200 };
+      b.exempt = [
+        { route: "/", check: "firstAction", why: "a synthetic exemption, written down for falsification" },
+      ];
+    },
+  },
+  {
+    name: "a page with no <main> element at all",
+    expect: null,
+    note: "the gate measured a page with no <main>",
+    full: true,
+    site: () => {
+      // A project whose pages have no <main> must still be measured, not
+      // waited on until the harness gives up.
+      const dir = path.join(COPY, "sl-no-main");
+      mkdirSync(dir, { recursive: true });
+      writeFileSync(
+        path.join(dir, "index.html"),
+        "<!doctype html><html><head><meta charset=utf-8><title>no main</title></head>" +
+          "<body><p>A page that never learned the main element.</p></body></html>",
+      );
+    },
+    cleanupSite: () => rmSync(path.join(COPY, "sl-no-main"), { recursive: true, force: true }),
+  },
+];
+
+for (const rule of BASELINE_RULES) {
+  writeFileSync(BASELINE, BASELINE_SAVED);
+  if (rule.site) rule.site();
+  withBaseline(rule.mutate || (() => {}));
+  const res = rule.full ? runFullGate([]) : runGate([]);
+  if (rule.cleanupSite) rule.cleanupSite();
+  writeFileSync(BASELINE, BASELINE_SAVED);
+  if (rule.expect === null) {
+    // This one must PASS: the page has no <main>, and the gate must measure
+    // it rather than time out on it.
+    if (!res.pass) {
+      console.error(
+        `  ✗ ${rule.name} — the gate failed instead of measuring it:\n${res.out.trim().split("\n").slice(0, 8).join("\n")}`,
+      );
+      failures++;
+    } else if (res.out.includes("timed out waiting for the page")) {
+      console.error(`  ✗ ${rule.name} — the gate timed out on it. The body fallback is not working.`);
+      failures++;
+    } else {
+      console.log(`  · caught: ${rule.name}  [${rule.note || "the gate measured it"}]`);
+    }
+    continue;
+  }
+  if (res.pass) {
+    console.error(`  ✗ ${rule.name} — the gate did NOT catch it. The rule is dead.`);
+    failures++;
+  } else if (!res.out.includes(rule.expect) || (rule.also || []).some((a) => !res.out.includes(a))) {
+    console.error(
+      `  ✗ ${rule.name} — the gate failed, but not for the expected reason.\n` +
+        `      expected a message containing "${rule.expect}"${(rule.also || []).map((a) => ` and "${a}"`).join("")}, got:\n${res.out.trim().split("\n").slice(0, 8).join("\n")}`,
+    );
+    failures++;
+  } else {
+    console.log(`  · caught: ${rule.name}  [a rule about the baseline]`);
+  }
+}
+
+// The other direction: a PARTIAL sweep has not seen the routes the reason
+// belongs to, so it must not call that reason stale. A rule that fires on
+// everything is as useless as a rule that fires on nothing.
+{
+  const b = JSON.parse(BASELINE_SAVED);
+  b.reasons["dead|div.__gone__"] = "a reason for a decision that is not there";
+  writeFileSync(BASELINE, JSON.stringify(b, null, 2) + "\n");
+  const res = runGate([]);
+  writeFileSync(BASELINE, BASELINE_SAVED);
+  if (!res.pass) {
+    console.error(
+      `  ✗ a partial sweep is not told a reason is stale — the gate failed on a reason it never had the chance to see:\n` +
+        res.out.trim().split("\n").slice(0, 8).join("\n"),
+    );
+    failures++;
+  } else {
+    console.log(`  · caught: a partial sweep is not told a reason is stale  [the rule does not fire on everything]`);
   }
 }
 

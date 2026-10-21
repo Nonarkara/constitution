@@ -135,8 +135,17 @@ const LIMITS = {
   dominantAffordances: 1,
 };
 
+// 721 and 860 are here on purpose, and for the same reason the layout gate
+// measures them: they are the two widths where this stylesheet flips from its
+// phone layout to its rail layout. A hierarchy is not the same at every width
+// — a layout that stacks can show a second dominant affordance, or a type
+// size the wide layout never uses — so a gate that only looks at 390 and 1440
+// is looking at the two widths where nothing changes. Round breakpoints are
+// not where a layout breaks.
 const WIDTHS = [
   { w: 390, h: 844, label: "phone" },
+  { w: 721, h: 900, label: "rail-start" },
+  { w: 860, h: 900, label: "mid-rail" },
   { w: 1440, h: 1000, label: "desktop" },
 ];
 

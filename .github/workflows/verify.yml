@@ -16,7 +16,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -62,9 +62,13 @@ jobs:
       # in one project and another thing in the next is a false guarantee.
       - run: npm run check:spatial-sync
       # Spatial gate: every unjustified gap, orphan, scattered pair, accidental
-      # wrap and clipped row on every route at six widths is either fixed or
-      # carries a written reason in the baseline. A hole with no reason is a
-      # hole nobody chose, so it fails until somebody writes one down.
+      # wrap and clipped row on every route is either fixed or carries a
+      # written reason in the baseline. The sweep is the project's widths plus
+      # every breakpoint the CSS declares and the pixel on either side of it —
+      # a fix written at a breakpoint the gate never sweeps is a fix nobody
+      # checked, and that is how three of them were broken in the first place.
+      # A hole with no reason is a hole nobody chose, so it fails until
+      # somebody writes one down.
       - run: npm run check:spatial
 
   # A gate that has never failed proves nothing. This job injects one real
@@ -74,7 +78,7 @@ jobs:
   falsify:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:

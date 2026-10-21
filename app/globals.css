@@ -4603,16 +4603,27 @@ footer {
     width: 150px;
     order: -1;
   }
+  .wallpaper-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+/* The scene is a drawing beside its story. When the page's own column is too
+   narrow for the story to be a column, the row stacks: the drawing above the
+   story, at its own width. The column decides, not the window — the sidebar
+   comes back at 721px and takes 224px with it, so the same window can hold a
+   comfortable row or a squeezed one, and 200px of text is not a column. */
+.tikki-episodes {
+  container-type: inline-size;
+}
+@container (max-width: 500px) {
   .tikki-episode-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 16px;
   }
   .tikki-episode-art {
     max-width: 200px;
-  }
-  .wallpaper-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
   }
 }
 
@@ -4629,8 +4640,10 @@ footer {
    answer below is a reason a stranger can check.
    ------------------------------------------------------------------ */
 
-/* The engine card's three links are a shelf of references, not a menu, so
-   they are a list: three rows that never orphan a link on its own line. */
+/* The engine card's three links are a list of references, read down the
+   card. They are not a shelf: a shelf of three links breaks wherever it
+   runs out of room, and the card is the same width on every screen, so a
+   list is the arrangement that can be relied on. */
 .engine-links {
   flex-direction: column;
   align-items: flex-start;
@@ -4672,21 +4685,6 @@ footer {
   min-width: 0;
 }
 
-/* The highlighter palette and the dots legend are grids of small cells, so
-   their last row is a row of cells rather than a stranded item. */
-@media (max-width: 1100px) {
-  .highlighter-palette {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(76px, 1fr));
-    justify-items: start;
-  }
-  .dots-legend {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    justify-items: start;
-  }
-}
-
 /* The notebook's jump controls are a filter, a select and a toggle. A column
    of them below 900px reads as a form, not as a broken row. */
 @media (max-width: 900px) {
@@ -4710,11 +4708,15 @@ footer {
   }
 }
 
-/* Previous / middle / next. Three even columns, so a long chapter title
-   wraps inside its own cell instead of breaking the row. */
+/* Previous / middle / next. The row is a grid with as many columns as it has
+   items, so a nav of three gets three even cells and a nav of two gets two —
+   never a third column left empty for a button that is not there. The first
+   item sits at the left, the last at the right, and what is between them in
+   the middle. */
 .reader-navigation {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
   align-items: center;
 }
 .reader-navigation > :first-child {
@@ -4726,12 +4728,90 @@ footer {
 .reader-navigation > :last-child {
   justify-self: end;
 }
+.reader-navigation > :only-child {
+  justify-self: start;
+}
 
-/* The theme choices are a settings list. Below 560px they are one per row,
-   which is a list, not a row that broke. */
-@media (max-width: 560px) {
+/* On a phone the two step buttons share the first row and the link takes a
+   row of its own beneath them, across the full width. In a grid the link gets
+   the whole row instead of the third of a row too narrow to read it in. */
+@media (max-width: 720px) {
+  .reader-navigation {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .reader-navigation > a {
+    grid-column: 1 / -1;
+  }
+  .reader-navigation > :only-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* The screen-colour choices are a list under their legend. They share one
+   line when the card has room for all five — 632px of label and gap — and
+   take one line each when it does not. The card decides, not the window: the
+   same card is wide at one window size and narrow at another, so a viewport
+   breakpoint would leave the row ragged at some widths and broken at
+   others. */
+.settings-card {
+  container-type: inline-size;
+}
+.theme-choices {
+  flex-direction: column;
+  gap: 4px 20px;
+}
+@container (min-width: 640px) {
   .theme-choices {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .theme-choices legend {
+    flex: 0 0 100%;
+  }
+}
+
+/* The highlighter palette is a label and four colour buttons. The label is
+   the group's name, so it sits on a line of its own above the buttons, and
+   the buttons share a row — four across when the toolbar has the room, two
+   by two when it does not, so the last row is never one button alone. */
+.notebook-controls {
+  container-type: inline-size;
+}
+.highlighter-palette {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  justify-content: start;
+  align-items: center;
+  gap: 8px 12px;
+}
+.highlighter-palette > span:first-child {
+  grid-column: 1 / -1;
+}
+@container (min-width: 400px) {
+  .highlighter-palette {
+    grid-template-columns: repeat(4, minmax(0, max-content));
+  }
+}
+
+/* The map's key is nine entries. They are a grid, not a row that ran out of
+   room: three columns of three once the map is wide enough, and all nine on
+   one line when it is wide enough for that. A key is a set of independent
+   labels, not a sequence of steps, so what the key has to be is a set. */
+.dots-map {
+  container-type: inline-size;
+}
+.dots-legend {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, max-content));
+  justify-content: start;
+  gap: 6px 18px;
+}
+.dots-legend span {
+  min-width: 0;
+}
+@container (min-width: 850px) {
+  .dots-legend {
+    grid-template-columns: repeat(9, minmax(0, max-content));
   }
 }
