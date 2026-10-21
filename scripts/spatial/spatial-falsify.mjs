@@ -96,6 +96,18 @@ const FIXTURES = [
     html: `<div class="sl-tall" style="height:2400px"></div>`,
     expect: "the first thing you can do moved",
   },
+  {
+    // The sixth mode. A page where the TITLE loses to another piece of text:
+    // the reader cannot tell what the page is for, because nothing on it
+    // wins. The house sets its title ratio limit; this proves the limit
+    // bites, which no other fixture did.
+    name: "a heading louder than the title",
+    mode: "false hierarchy",
+    at: "top",
+    html: `<h2 style="font-size:64px;margin:0">A heading that shouts over the title</h2>`,
+    limits: { titleRatio: 1.6 },
+    expect: "the title is only",
+  },
 ];
 
 const ROUTES = "/";
@@ -129,10 +141,21 @@ function cleanup() {
 process.on("exit", cleanup);
 for (const sig of ["SIGINT", "SIGTERM"]) process.on(sig, () => { cleanup(); process.exit(130); });
 
-function runGate(args) {
+function runGate(args, routes) {
   const res = spawnSync(
     process.execPath,
-    [CHECK, "--dir", COPY, "--baseline", BASELINE, "--routes", ROUTES, "--widths", WIDTHS, ...args],
+    [
+      CHECK,
+      "--dir",
+      COPY,
+      "--baseline",
+      BASELINE,
+      "--routes",
+      routes || ROUTES,
+      "--widths",
+      WIDTHS,
+      ...args,
+    ],
     { encoding: "utf8", timeout: 600000 },
   );
   return {
@@ -251,8 +274,15 @@ function inject(html, at) {
 
 let failures = 0;
 for (const f of FIXTURES) {
+  const savedBaseline = readFileSync(BASELINE, "utf8");
+  if (f.limits) {
+    const b = JSON.parse(savedBaseline);
+    b.limits = { ...(b.limits || {}), ...f.limits };
+    writeFileSync(BASELINE, JSON.stringify(b, null, 2) + "\n");
+  }
   writeFileSync(PAGE, inject(f.html, f.at));
   const res = runGate([]);
+  writeFileSync(BASELINE, savedBaseline);
   writeFileSync(PAGE, ORIGINAL);
   if (res.pass) {
     console.error(`  ✗ ${f.name} — the gate did NOT catch it. The rule is dead.`);
@@ -360,13 +390,119 @@ const BASELINE_RULES = [
     },
     cleanupSite: () => rmSync(path.join(COPY, "sl-no-main"), { recursive: true, force: true }),
   },
+  {
+    name: "an exemption for a page that is not there",
+    expect: "stale exemption",
+    full: true,
+    mutate: (b) => {
+      b.exempt = [
+        ...(b.exempt || []),
+        {
+          route: "/no-such-route/",
+          check: "firstAction",
+          why: "a synthetic exemption, written down for falsification",
+        },
+      ];
+    },
+  },
+  {
+    name: "a decision the receipt has no numbers for",
+    expect: "the baseline records no numbers for this route and width",
+    full: true,
+    mutate: (b) => {
+      // Keep the reason, lose the numbers. The decision is still justified,
+      // so the gate cannot complain that it is unjustified — it must
+      // complain that nothing would notice if it changed.
+      for (const byw of Object.values(b.routes || {})) {
+        for (const [w, entry] of Object.entries(byw)) {
+          if ((entry.findings || []).length) {
+            delete byw[w];
+            return;
+          }
+        }
+      }
+    },
+  },
+  {
+    name: "a hole that grew since the receipt was written",
+    expect: "GREW",
+    full: true,
+    mutate: (b) => {
+      for (const byw of Object.values(b.routes || {})) {
+        for (const entry of Object.values(byw)) {
+          for (const f of entry.findings || []) {
+            if (f.kind === "dead" || f.kind === "orphan") {
+              f.metric = Math.max(0, f.metric - 300);
+              return;
+            }
+          }
+        }
+      }
+    },
+  },
+  {
+    name: "a hole that shrank since the receipt was written",
+    expect: "SHRANK",
+    full: true,
+    mutate: (b) => {
+      for (const byw of Object.values(b.routes || {})) {
+        for (const entry of Object.values(byw)) {
+          for (const f of entry.findings || []) {
+            if (f.kind === "dead" || f.kind === "orphan") {
+              f.metric = f.metric + 300;
+              return;
+            }
+          }
+        }
+      }
+    },
+  },
+  {
+    // The gate measures most widths by RESIZING a page it has already
+    // loaded, and proves on every run that a resized page and a freshly
+    // loaded page agree. If that proof never fires, it is decoration.
+    //
+    // This page decides its gap ONCE, from the width it was loaded at, and
+    // never again — so a resized page and a freshly loaded page genuinely
+    // disagree, and the gate has to notice.
+    name: "a page whose layout depends on the width it was loaded at",
+    expect: "measuring two different layouts",
+    routes: "/sl-load-width/",
+    site: () => {
+      const dir = path.join(COPY, "sl-load-width");
+      mkdirSync(dir, { recursive: true });
+      writeFileSync(
+        path.join(dir, "index.html"),
+        `<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>load width</title>
+<style>html,body{margin:0;padding:0;background:#fff}main{padding:24px}
+main h1{font-size:32px;margin:0 0 16px}
+.sl-col{display:flex;flex-direction:column}
+.sl-a{height:24px;background:#ddd}.sl-b{height:24px;background:#ccc}</style>
+</head><body>
+<main id="content">
+<h1>Load width</h1>
+<div class="sl-col"><div class="sl-a"></div><div class="sl-b"></div></div>
+</main>
+<script>
+// The gap is decided ONCE, when the page loads, from the width it was
+// loaded at. Resizing the window afterwards does not move it, so a resized
+// page and a freshly loaded page are genuinely different pages.
+document.querySelector(".sl-b").style.marginTop = window.innerWidth >= 700 ? "260px" : "0px";
+</script>
+</body></html>`,
+      );
+    },
+    cleanupSite: () => rmSync(path.join(COPY, "sl-load-width"), { recursive: true, force: true }),
+  },
 ];
 
 for (const rule of BASELINE_RULES) {
   writeFileSync(BASELINE, BASELINE_SAVED);
   if (rule.site) rule.site();
   withBaseline(rule.mutate || (() => {}));
-  const res = rule.full ? runFullGate([]) : runGate([]);
+  const res = rule.full ? runFullGate([]) : runGate([], rule.routes);
   if (rule.cleanupSite) rule.cleanupSite();
   writeFileSync(BASELINE, BASELINE_SAVED);
   if (rule.expect === null) {
@@ -424,7 +560,11 @@ if (failures) {
   process.exit(1);
 }
 
+const modes = [...new Set(FIXTURES.map((f) => f.mode))].sort();
 console.log(
-  `\n  · spatial gate: ${FIXTURES.length} injected page defects and ${BASELINE_RULES.length + 1} broken-baseline cases, ` +
-    `all caught. Every mode has failed at least once, and every rule about the baseline has failed at least once.\n`,
+  `\n  · spatial gate: ${FIXTURES.length} injected page defects, ${BASELINE_RULES.length + 1} broken-baseline cases ` +
+    `and 1 case about the instrument itself, all caught.\n` +
+    `  · modes covered: ${modes.join(", ")} — ${modes.length} of the 6.\n` +
+    `  · Every mode has failed at least once, every rule about the baseline has failed at least once, ` +
+    `and the cross-check between a resized page and a freshly loaded page has failed at least once.\n`,
 );

@@ -452,6 +452,29 @@
     };
     rec.chars = totalChars;
 
+    // ---- the query containers ---------------------------------------------
+    // A CONTAINER query changes the layout when the CONTAINER changes size,
+    // not when the window does. A sweep that only knows viewport widths can
+    // walk straight past a container cliff and never see the layout on
+    // either side of it. So every element that establishes a query
+    // container is reported with its width: the gate can then see whether
+    // the sweep ever landed on the cliff.
+    var containers = [];
+    var cands = main.querySelectorAll("*");
+    for (var qi = 0; qi < cands.length; qi++) {
+      var qc = cands[qi];
+      var qcs = win.getComputedStyle(qc);
+      if (!qcs.containerType || qcs.containerType === "normal") continue;
+      var qcr = qc.getBoundingClientRect();
+      if (!qcr.width) continue;
+      containers.push({
+        sel: sel(qc),
+        w: Math.round(qcr.width * 100) / 100,
+        name: qcs.containerName || "",
+      });
+    }
+    rec.containers = containers;
+
     // ---- 6. spatially expensive information --------------------------------
     // How far down the page the first thing you can DO is. A reader who must
     // scroll before they can act is paying for the layout.

@@ -237,7 +237,13 @@ function measureOne(route, w, h, cb) {
       if (token !== TOKEN) return;
       var d;
       try { d = f.contentDocument; } catch (e) { return finish({ route: route, w: w, error: 'cross-origin' }); }
-      if (tries++ > 80) return finish(measure(route, w, d));
+      // Eighty tries was eighty times sixty milliseconds, and on a loaded
+      // machine that was not long enough for a client-rendered page to
+      // hydrate. The gate then reported "no h1" for a page that has one —
+      // a flaky gate, which is worse than a failing one, because the next
+      // thing anybody does is ignore it. The wait is longer; the assertion
+      // is not: a page that really has no title still fails.
+      if (tries++ > 200) return finish(measure(route, w, d));
       // Wait for the thing this gate actually measures: a rendered <h1> inside
       // the page's main region. Several pages are client components that paint
       // their heading only after hydration, and readyState alone was not

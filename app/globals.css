@@ -1468,11 +1468,22 @@ html[data-large="true"] {
   white-space: pre-wrap;
   word-break: break-word;
 }
+/* The citations are references, not a navigation row: the sections a
+   formula draws on. They read as a line of text — the same arrangement the
+   bible chapters use for their references — so they wrap the way a
+   paragraph wraps, and no reference is left stranded as if a row had
+   broken.
+
+   A row of them was a flex row that broke at 399px and left one reference
+   alone on the last line. The set has between one and six members and no
+   column count divides them all, so no grid could have arranged them
+   without stranding one either. A list is what they are. */
 .citations-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  display: block;
   margin-top: 12px;
+}
+.citations-row .citation {
+  margin-bottom: 8px;
 }
 .steps-progress-grid {
   display: grid;
@@ -4616,8 +4627,9 @@ footer {
    comfortable row or a squeezed one, and 200px of text is not a column. */
 .tikki-episodes {
   container-type: inline-size;
+  container-name: tikki-episodes;
 }
-@container (max-width: 500px) {
+@container tikki-episodes (max-width: 500px) {
   .tikki-episode-row {
     grid-template-columns: minmax(0, 1fr);
     gap: 16px;
@@ -4734,16 +4746,25 @@ footer {
 
 /* On a phone the two step buttons share the first row and the link takes a
    row of its own beneath them, across the full width. In a grid the link gets
-   the whole row instead of the third of a row too narrow to read it in. */
+   the whole row instead of the third of a row too narrow to read it in.
+
+   The `order: 3` is restated here on purpose. An older rule further up the
+   file gave the link that order inside its own phone block, and this block
+   relied on it: delete that older rule in a cleanup and the link jumps back
+   into the first row, the second cell of the first row goes empty, and the
+   nav grows a row nobody asked for. A rule that only works because another
+   rule happens to be there is a rule that breaks when the other rule goes. */
 @media (max-width: 720px) {
   .reader-navigation {
     grid-auto-flow: row;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .reader-navigation > a {
+    order: 3;
     grid-column: 1 / -1;
   }
   .reader-navigation > :only-child {
+    order: 3;
     grid-column: 1 / -1;
   }
 }
@@ -4756,12 +4777,13 @@ footer {
    others. */
 .settings-card {
   container-type: inline-size;
+  container-name: settings-card;
 }
 .theme-choices {
   flex-direction: column;
   gap: 4px 20px;
 }
-@container (min-width: 640px) {
+@container settings-card (min-width: 640px) {
   .theme-choices {
     flex-direction: row;
     flex-wrap: wrap;
@@ -4777,6 +4799,7 @@ footer {
    by two when it does not, so the last row is never one button alone. */
 .notebook-controls {
   container-type: inline-size;
+  container-name: notebook-controls;
 }
 .highlighter-palette {
   display: grid;
@@ -4788,7 +4811,7 @@ footer {
 .highlighter-palette > span:first-child {
   grid-column: 1 / -1;
 }
-@container (min-width: 400px) {
+@container notebook-controls (min-width: 400px) {
   .highlighter-palette {
     grid-template-columns: repeat(4, minmax(0, max-content));
   }
@@ -4800,6 +4823,7 @@ footer {
    labels, not a sequence of steps, so what the key has to be is a set. */
 .dots-map {
   container-type: inline-size;
+  container-name: dots-map;
 }
 .dots-legend {
   display: grid;
@@ -4810,7 +4834,7 @@ footer {
 .dots-legend span {
   min-width: 0;
 }
-@container (min-width: 850px) {
+@container dots-map (min-width: 850px) {
   .dots-legend {
     grid-template-columns: repeat(9, minmax(0, max-content));
   }
