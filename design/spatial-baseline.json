@@ -331,6 +331,12 @@
             "sel": "figure.study-art",
             "metric": 181,
             "detail": "figure.study-art fills 40% of a row 301px tall, leaving 181px empty"
+          },
+          {
+            "kind": "dead",
+            "sel": "div.route-number.mono",
+            "metric": 121.0625,
+            "detail": "div.route-number.mono leaves 121px empty beneath it in a 157px row"
           }
         ],
         "firstAction": {
@@ -346,7 +352,14 @@
         }
       },
       "480": {
-        "findings": [],
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "div.route-number.mono",
+            "metric": 91.375,
+            "detail": "div.route-number.mono leaves 91px empty beneath it in a 127px row"
+          }
+        ],
         "firstAction": {
           "y": 577,
           "sel": "a.primary.action-panel-cta"
@@ -360,7 +373,14 @@
         }
       },
       "768": {
-        "findings": [],
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "div.route-number.mono",
+            "metric": 83.375,
+            "detail": "div.route-number.mono leaves 83px empty beneath it in a 127px row"
+          }
+        ],
         "firstAction": {
           "y": 648,
           "sel": "a.primary.action-panel-cta"
@@ -1770,7 +1790,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 20,
-          "share": 0.12
+          "share": 0.11
         }
       },
       "1920": {
@@ -1784,7 +1804,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 20,
-          "share": 0.12
+          "share": 0.11
         }
       }
     },
@@ -2261,6 +2281,12 @@
             "sel": "figure.study-art",
             "metric": 243,
             "detail": "figure.study-art fills 33% of a row 363px tall, leaving 243px empty"
+          },
+          {
+            "kind": "dead",
+            "sel": "div.route-number.mono",
+            "metric": 142.6875,
+            "detail": "div.route-number.mono leaves 143px empty beneath it in a 179px row"
           }
         ],
         "firstAction": {
@@ -2276,7 +2302,14 @@
         }
       },
       "480": {
-        "findings": [],
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "div.route-number.mono",
+            "metric": 89,
+            "detail": "div.route-number.mono leaves 89px empty beneath it in a 125px row"
+          }
+        ],
         "firstAction": {
           "y": 486,
           "sel": "button.primary.action-panel-cta"
@@ -2290,7 +2323,14 @@
         }
       },
       "768": {
-        "findings": [],
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "div.route-number.mono",
+            "metric": 107.6875,
+            "detail": "div.route-number.mono leaves 108px empty beneath it in a 152px row"
+          }
+        ],
         "firstAction": {
           "y": 574,
           "sel": "button.primary.action-panel-cta"

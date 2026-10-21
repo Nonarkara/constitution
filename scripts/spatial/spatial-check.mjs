@@ -577,6 +577,7 @@ const reasons = (baseline && baseline.reasons) || {};
 const failures = [];
 const notes = [];
 const unexplained = [];
+const unrecorded = [];
 const grownFindings = [];
 const goneFindings = [];
 
@@ -603,6 +604,7 @@ for (const r of results) {
     for (const f of r.findings) {
       if (f.kind === "overflow") continue;
       if (!hasReason(f)) unexplained.push({ ...f, route: r.route, w: r.w });
+      else unrecorded.push({ ...f, route: r.route, w: r.w, why: "the baseline records no numbers for this route and width" });
     }
     if (!r.findings.length) {
       notes.push(`${label} — no baseline entry for this route/width`);
@@ -620,7 +622,14 @@ for (const r of results) {
         if (f.kind !== "overflow") unexplained.push({ ...f, route: r.route, w: r.w });
         continue;
       }
-      if (!p) continue;
+      if (!p) {
+        // The decision is justified, but the baseline does not record the
+        // numbers for it, so nothing would notice if that space grew. A gate
+        // that cannot check what it says it checks must fail rather than
+        // pass on a check it never ran.
+        unrecorded.push({ ...f, route: r.route, w: r.w, why: "the baseline records no numbers for this decision" });
+        continue;
+      }
       const tolKey = KIND_TOLERANCE[f.kind];
       const tol = typeof tolKey === "number" ? tolKey : limits.grownTolerance;
       const delta = f.metric - (p.metric || 0);
@@ -670,6 +679,12 @@ for (const r of results) {
   }
 }
 
+for (const f of unrecorded) {
+  failures.push(
+    `${f.route} @${f.w}px — ${f.kind}: ${f.sel} is measured but ${f.why}, so a change in it would not be ` +
+      `noticed. Re-run the gate with --update and read the diff before you read the reason as still true.`,
+  );
+}
 for (const f of unexplained) {
   failures.push(
     `${f.route} @${f.w}px — ${f.kind}: ${f.sel} has no written reason in the baseline. "${f.detail}" ` +
@@ -788,6 +803,10 @@ if (REPORT) {
       `  ${mark} ${d.kind.padEnd(10)} ${d.sel.padEnd(44)} seen ${String(d.seen).padStart(3)}x  ${d.detail.slice(0, 70)}`,
     );
     if (!hasReasonKey(k)) console.log(`      ↳ NO REASON YET — ${d.where.join(", ")}`);
+  }
+  if (unrecorded.length) {
+    console.log(`\nUNRECORDED findings (${unrecorded.length}) — the baseline has no numbers for them:`);
+    for (const f of unrecorded.slice(0, 40)) console.log(`  · ${f.route} @${f.w}px ${f.kind} ${f.sel} — ${f.why}`);
   }
   if (unexplained.length) {
     console.log(`\nUNEXPLAINED findings (${unexplained.length}):`);
