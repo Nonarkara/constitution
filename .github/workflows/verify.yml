@@ -57,6 +57,15 @@ jobs:
       # surface — a pull request that moves a fact has to move the baseline too,
       # and the diff says which fact moved.
       - run: npm run check:data
+      # The spatial instrument must be the canonical one. A copy that drifted is
+      # a copy that measures something else, and a number that means one thing
+      # in one project and another thing in the next is a false guarantee.
+      - run: npm run check:spatial-sync
+      # Spatial gate: every unjustified gap, orphan, scattered pair, accidental
+      # wrap and clipped row on every route at six widths is either fixed or
+      # carries a written reason in the baseline. A hole with no reason is a
+      # hole nobody chose, so it fails until somebody writes one down.
+      - run: npm run check:spatial
 
   # A gate that has never failed proves nothing. This job injects one real
   # violation per hierarchy rule into the built site and requires the gate to
@@ -77,3 +86,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run falsify:hierarchy
+      # The spatial gate gets the same treatment: one real defect per mode of
+      # spatial hallucination is injected into a copy of the built site, and
+      # the gate has to catch every one of them.
+      - run: npm run falsify:spatial

@@ -375,6 +375,8 @@ try {
         "--headless=new",
         "--disable-gpu",
         "--hide-scrollbars",
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
         "--no-first-run",
         "--no-default-browser-check",
         "--disable-extensions",
@@ -384,7 +386,15 @@ try {
         `http://127.0.0.1:${port}/_layout-probe?r=${encodeURIComponent(JSON.stringify(routes))}`,
       ],
       { maxBuffer: 128 * 1024 * 1024, timeout: 300000, killSignal: "SIGKILL" },
-      (err, stdout) => (err ? reject(new Error(err.message)) : resolve(stdout)),
+      (err, stdout) => {
+        // The exit code is not the verdict. A browser that was taken down by
+        // the teardown watchdog AFTER it dumped the DOM still measured the
+        // page, and throwing that measurement away would be exactly the kind
+        // of false negative this gate exists to avoid. The measurement is the
+        // results in the output, not the browser's exit status.
+        if (stdout && /RESULTS:/.test(stdout)) return resolve(stdout);
+        reject(new Error(err ? err.message : "Chrome produced no measurement"));
+      },
     );
   });
 } catch (e) {

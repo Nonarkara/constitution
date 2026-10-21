@@ -2804,6 +2804,11 @@ mark.hl.has-note {
   padding: 0;
   min-height: 44px;
   font-size: var(--body);
+  /* NOT bold. The row's question is the loud thing in the row; an action
+     set in the same weight competes with it, and fifteen competing rows
+     make a page where nothing leads. This is the owner's complaint —
+     everything the same size, on the same level, competing. */
+  font-weight: 400;
   color: inherit;
 }
 .chapter-actions button:hover {
@@ -4512,7 +4517,10 @@ footer {
 }
 .tikki-episode-copy h2 {
   margin: 0 0 6px;
-  font-size: 1.25rem;
+  /* The house ramp is micro / body / display. A 20px heading was a fourth
+     step, and a fourth step is a fourth level of hierarchy. The episode
+     title leads by weight, not by size. */
+  font-size: var(--body);
   font-weight: 600;
 }
 .tikki-episode-copy p {
@@ -4606,4 +4614,131 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
+}
+
+/* ------------------------------------------------------------------
+   SPATIAL LAW — rows that used to break by accident.
+
+   The spatial gate measures a row that wraps and leaves one item alone on
+   the last line. Every rule below replaces an accidental break with a
+   deliberate arrangement: a grid whose cells are even, or a column that is
+   a list. Nothing here changes what a reader can do. It changes where the
+   line breaks, so the break is a decision instead of an accident.
+
+   "Why is this here, why this size, and why this far from that?" — every
+   answer below is a reason a stranger can check.
+   ------------------------------------------------------------------ */
+
+/* The engine card's three links are a shelf of references, not a menu, so
+   they are a list: three rows that never orphan a link on its own line. */
+.engine-links {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Below 560px a row of these cannot fit, so it becomes a list rather than a
+   broken row. The chips keep the top alignment they were given at 720px. */
+@media (max-width: 560px) {
+  .reference-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .anchor-features {
+    flex-direction: column;
+  }
+}
+
+/* The doorway path is four steps. Two columns below 900px, one below
+   520px, so the last step is never alone on its own line. */
+@media (max-width: 900px) {
+  .doorway-path {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 16px;
+  }
+}
+@media (max-width: 520px) {
+  .doorway-path {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Tabs share one row. A long label wraps inside its own tab; the row itself
+   does not break and leave a tab alone. */
+.flow-tabs button {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* The highlighter palette and the dots legend are grids of small cells, so
+   their last row is a row of cells rather than a stranded item. */
+@media (max-width: 1100px) {
+  .highlighter-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(76px, 1fr));
+    justify-items: start;
+  }
+  .dots-legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    justify-items: start;
+  }
+}
+
+/* The notebook's jump controls are a filter, a select and a toggle. A column
+   of them below 900px reads as a form, not as a broken row. */
+@media (max-width: 900px) {
+  .jump-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .jump-controls select {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+/* The dig actions are a grid of small buttons, so the last row is a row of
+   buttons rather than one button alone. */
+@media (max-width: 1100px) {
+  .dig-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+    justify-items: start;
+  }
+}
+
+/* Previous / middle / next. Three even columns, so a long chapter title
+   wraps inside its own cell instead of breaking the row. */
+.reader-navigation {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+}
+.reader-navigation > :first-child {
+  justify-self: start;
+}
+.reader-navigation > :nth-child(2) {
+  justify-self: center;
+}
+.reader-navigation > :last-child {
+  justify-self: end;
+}
+
+/* The theme choices are a settings list. Below 560px they are one per row,
+   which is a list, not a row that broke. */
+@media (max-width: 560px) {
+  .theme-choices {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* The route number is a 44px marker beside the title. Centred against the
+   title's height it reads as a marker on the title, rather than a square
+   floating at the top of an empty column. */
+.route-number {
+  align-self: center;
 }

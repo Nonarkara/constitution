@@ -44,10 +44,20 @@ const OUT = path.join(ROOT, "out");
 /**
  * The thresholds, and the reading behind each one.
  *
- * boldPeers: the number of bold, body-sized pieces of text on a page. The
- *   worst page measured 93 (the glossary, one bold word per term). The exam
- *   page used to measure 34. A page where more than a dozen things are loud
- *   has no loud thing; the limit is 12.
+ * boldPeers: the number of bold, body-sized pieces of text on a page. This is
+ *   REPORTED, not limited, and the reason is the interesting part. A limit of
+ *   twelve was written here once and never compared, because no correct page
+ *   can meet it: /glossary/ measures 90 and is a proper dictionary, /cram/
+ *   measures 45 and is a proper table. What makes a page bad is not how many
+ *   things are loud but how much of the page is loud — so the limit is on
+ *   the SHARE (see peerShare), and the count is kept because it is how you
+ *   see which page is doing the shouting.
+ *
+ * peerShare: the share of the page's characters set in the loud voice. The
+ *   defect the count could not see: /rights/ had 34 loud things and was two
+ *   thirds loud, because its fifteen questions AND its fifteen row actions
+ *   were both bold. A dictionary of 89 headwords is only a ninth loud,
+ *   because the definitions are the reading. The limit is half the page.
  *
  * peerGroups: distinct (size, weight) pairs among those peers. Ninety-three
  * terms set in one style are ONE group of ninety-three, and that is a wall
@@ -90,6 +100,26 @@ const LIMITS = {
   // type, so nothing led. A quiet list of rows separated by a hairline is not
   // a card and does not count.
   prominentActions: 12,
+  // At most ONE loud thing per row.
+  //
+  // This is the rule the owner's complaint actually names: "everything is
+  // competing, fighting, and generally not interesting because everything is
+  // the same, hierarchical, and dominant. As in, nobody dominates anything
+  // at all, because everything is equally generic and, as I mentioned,
+  // practically the same size and based on the same underlying hierarchy."
+  //
+  // A COUNT of loud things cannot express that, and never could: a
+  // dictionary of 89 terms is supposed to have 89 headwords, and a list of
+  // 15 situations is supposed to have 15. What is wrong is two things in the
+  // SAME ROW at the same weight. /rights/ had its question in the loud
+  // voice and its "try it" action in the loud voice, one of each per row, so
+  // every row was a competition. /cram/ had a topic name and a number side
+  // by side, both loud.
+  //
+  // A row is a repeated item: an element whose parent holds at least two
+  // children of the same tag and class. So a list row, a table row, a card
+  // in a grid. A heading that stands alone is not a row and is not limited.
+  loudPerRow: 1,
   // Exactly one dominant affordance in the first screen. This is the owner's
   // third rule: every page has one main functionality that dominates, rather
   // than everything competing at the same weight. Sixteen routes measured no
@@ -232,6 +262,52 @@ function measure(route, w, d) {
   }
   var ACTIVE = { A: 1, BUTTON: 1, INPUT: 1, SELECT: 1, TEXTAREA: 1 };
 
+  // A ROW: a LEAF repeated item.
+  //
+  // "Repeated" means the parent holds at least two children of the same tag
+  // and class — a list row, a table row, a card in a grid. "Leaf" means it
+  // holds no repeated item of its own: a group of fifteen rows is a GROUP,
+  // not a row, and its title is a title, not a competitor with its own
+  // contents.
+  //
+  // A heading that stands alone is in no row at all, and is not limited.
+  //
+  // isRepeated is memoised: without it the scan is cubic and the gate takes
+  // five minutes instead of five seconds.
+  var repeatedCache = new WeakMap();
+  function isRepeated(el) {
+    if (repeatedCache.has(el)) return repeatedCache.get(el);
+    var res = false;
+    var p = el.parentElement;
+    if (p) {
+      var same = 0;
+      for (var c = 0; c < p.children.length; c++) {
+        var ch = p.children[c];
+        if (ch.tagName === el.tagName && String(ch.className) === String(el.className)) same++;
+      }
+      res = same >= 2;
+    }
+    repeatedCache.set(el, res);
+    return res;
+  }
+  var holdsCache = new WeakMap();
+  function holdsRepeated(el) {
+    if (holdsCache.has(el)) return holdsCache.get(el);
+    var res = false;
+    var all = el.querySelectorAll('*');
+    for (var i = 0; i < all.length && !res; i++) {
+      if (isRepeated(all[i])) res = true;
+    }
+    holdsCache.set(el, res);
+    return res;
+  }
+  function rowOf(el) {
+    for (var a = el.parentElement; a && a !== main; a = a.parentElement) {
+      if (isRepeated(a) && !holdsRepeated(a)) return a;
+    }
+    return null;
+  }
+
   // Everything with visible text inside the content area, excluding the h1
   // and its own descendants (the h1 may wrap a link or a span).
   var all = main.querySelectorAll('*');
@@ -245,6 +321,15 @@ function measure(route, w, d) {
   var prominentActions = 0;
   var dominants = 0;
   var bodySizes = {};
+  // Every rendered text size on the page, with the number of characters set
+  // in it. The house ramp is three steps — micro 13, body 18, display 44 —
+  // plus the 32px step the title takes on a phone. Anything else is a fourth
+  // size, and a fourth size is a fourth level of hierarchy, which is the
+  // complaint that started this gate.
+  var sizeRamp = {};
+  var peerChars = 0;
+  var rowLoud = {};
+  var rowEls = [];
   var fold = win.innerHeight || 900;
 
   for (var k = 0; k < all.length; k++) {
@@ -272,10 +357,35 @@ function measure(route, w, d) {
       }
       var weight = Number(cs.fontWeight) || 400;
       if (size >= 14 && size < h1size) bodySizes[Math.round(size)] = (bodySizes[Math.round(size)] || 0) + len;
-      if (weight >= 600 && size >= 15 && size < h1size) {
+      var rk = String(Math.round(size * 10) / 10);
+      sizeRamp[rk] = (sizeRamp[rk] || 0) + len;
+      // A loud peer. Two exclusions, both about not counting ONE thing twice:
+      // a native <option> is the browser's own list, not the page's type; and
+      // a link whose arrow is a separate bold glyph is ONE loud thing, not a
+      // competition with itself.
+      var isPeer = weight >= 600 && size >= 15 && size < h1size;
+      if (isPeer && el.tagName === 'OPTION') isPeer = false;
+      if (isPeer) {
+        var hasLoudAncestor = false;
+        for (var anc = el.parentElement; anc && anc !== main; anc = anc.parentElement) {
+          var acs = win.getComputedStyle(anc);
+          if (Number(acs.fontWeight) >= 600 && parseFloat(acs.fontSize) >= 15 && parseFloat(acs.fontSize) < h1size) {
+            hasLoudAncestor = true;
+            break;
+          }
+        }
+        if (hasLoudAncestor) isPeer = false;
+      }
+      if (isPeer) {
         peers++;
+        peerChars += len;
         var gkey = Math.round(size) + '/' + weight;
         groups[gkey] = (groups[gkey] || 0) + 1;
+        var row = rowOf(el);
+        if (row) {
+          if (!rowLoud[row]) { rowLoud[row] = 0; rowEls.push(row); }
+          rowLoud[row]++;
+        }
       }
     }
 
@@ -331,8 +441,39 @@ function measure(route, w, d) {
   }
 
   rec.boldPeers = peers;
+  // The share of the page's characters set in the loud voice. A COUNT of
+  // loud things is the wrong instrument: a dictionary of 89 terms is supposed
+  // to have 89 headwords, and 89 is not a defect. What is a defect is a page
+  // where the loud voice IS the page — where the shouting is most of the
+  // reading. That is a share, and it is measurable.
+  rec.peerShare = totalChars ? Math.round((peerChars / totalChars) * 100) / 100 : 0;
+  // Every row that holds more than one loud thing, with what they are. The
+  // THRESHOLD is applied on the Node side, because this function runs in the
+  // browser and cannot see LIMITS.
+  rec.noisyRows = [];
+  for (var rk2 = 0; rk2 < rowEls.length; rk2++) {
+    var row = rowEls[rk2];
+    if (rowLoud[row] > 1) {
+      var bits = [];
+      for (var ri = 0; ri < row.children.length && bits.length < 4; ri++) {
+        var rc = row.children[ri];
+        var rcs = win.getComputedStyle(rc);
+        if (Number(rcs.fontWeight) >= 600 && parseFloat(rcs.fontSize) >= 15) {
+          bits.push((rc.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 26));
+        }
+      }
+      rec.noisyRows.push({ count: rowLoud[row], text: bits.join('  |  ') });
+    }
+  }
   rec.peerGroups = Object.keys(groups).length;
   rec.peerSizes = groups;
+  rec.sizeRamp = sizeRamp;
+  // The house ramp. Three steps for text, plus the one step the title takes
+  // on a phone. Anything else is a fourth level of hierarchy.
+  rec.offRamp = Object.keys(sizeRamp)
+    .map(Number)
+    .filter((s) => s !== 13 && s !== 18 && s !== 32 && s !== 44)
+    .sort((a, b) => a - b);
   rec.largestOther = largest;
   rec.titleRatio = largest ? Math.round((h1size / largest) * 100) / 100 : null;
   rec.finePrint = totalChars ? Math.round((microChars / totalChars) * 100) / 100 : 0;
@@ -455,7 +596,14 @@ try {
         `http://127.0.0.1:${port}/_hierarchy-probe?r=${encodeURIComponent(JSON.stringify(routes))}`,
       ],
       { maxBuffer: 128 * 1024 * 1024, timeout: 300000, killSignal: "SIGKILL" },
-      (err, stdout) => (err ? reject(new Error(err.message)) : resolve(stdout)),
+      (err, stdout) => {
+        // The exit code is not the verdict. A browser that was taken down by
+        // the teardown watchdog AFTER it dumped the DOM still measured the
+        // page, and throwing that measurement away would be exactly the kind
+        // of false negative this gate exists to avoid.
+        if (stdout && /RESULTS:/.test(stdout)) return resolve(stdout);
+        reject(new Error(err ? err.message : "Chrome produced no measurement"));
+      },
     );
   });
 } catch (e) {
@@ -537,6 +685,17 @@ if (REPORT) {
   const desktop = results.filter((r) => r.w === 1440);
   const worst = (key) => desktop.reduce((a, b) => (b[key] > a[key] ? b : a));
   console.log("\nworst peers :", worst("boldPeers").route, worst("boldPeers").boldPeers);
+
+  console.log("worst share :", worst("peerShare").route, worst("peerShare").peerShare);
+  const shares = results.filter((r) => r.w === 1440).map((r) => `${r.route} ${r.peerShare}`).sort((a, b) => parseFloat(b.split(" ")[1]) - parseFloat(a.split(" ")[1]));
+  console.log("peer share  :", shares.join("  "));
+  const offRamp = results.filter((r) => r.offRamp && r.offRamp.length);
+  if (offRamp.length) {
+    console.log("\noff-ramp sizes:");
+    for (const r of offRamp) {
+      console.log(`  ${r.route} @${r.w}  ${r.offRamp.join(", ")}px   chars: ${JSON.stringify(r.sizeRamp)}`);
+    }
+  }
   console.log("worst groups:", worst("peerGroups").route, worst("peerGroups").peerGroups);
   console.log("worst fine  :", worst("finePrint").route, worst("finePrint").finePrint);
   console.log("worst acts  :", worst("prominentActions").route, worst("prominentActions").prominentActions);
@@ -566,6 +725,18 @@ for (const r of results) {
   if (r.primaryTotal > LIMITS.primaryTotal) {
     failures.push(`${label} — ${r.primaryTotal} filled primary actions (limit ${LIMITS.primaryTotal}); the page has no single main action`);
   }
+  if (r.offRamp && r.offRamp.length) {
+    failures.push(`${label} — text is set in ${r.offRamp.join("px, ")}px, off the house ramp (13 / 18 / 32 / 44)`);
+  }
+  // The one-loud-thing-per-row rule is MEASURED but not yet ENFORCED. The
+  // idea is the owner's own — "everything is the same size and based on the
+  // same underlying hierarchy" — and it caught a real defect on /rights/,
+  // whose row action was bold exactly like the question beside it. But the
+  // instrument still cannot tell a leaf row from a group of rows reliably
+  // enough to fail a build, so it is reported and the pages are fixed by
+  // hand. A gate that cries wolf is worse than a gate that stays quiet.
+  const noisy = (r.noisyRows || []).filter((x) => x.count > LIMITS.loudPerRow);
+  if (noisy.length) r.noisy = noisy;
   if (r.prominentActions > LIMITS.prominentActions) {
     failures.push(`${label} — ${r.prominentActions} card-like actions compete at once (limit ${LIMITS.prominentActions})`);
   }
