@@ -318,13 +318,15 @@ const BASELINE_RULES = [
       // with two thousand pixels of nothing in front of its first action.
       // The name must not begin with an underscore — the gate skips those
       // directories, the way it skips a framework's own build output.
+      //
+      // The spacer is MOUNTED BY SCRIPT, not pasted into the markup: a
+      // modern app hydrates the page and removes the nodes the framework
+      // does not own, so a pasted spacer is gone before anything measures
+      // it — and a fixture that vanishes is a fixture that never happened.
       const dir = path.join(COPY, "sl-never-seen");
       mkdirSync(dir, { recursive: true });
-      const html = readFileSync(path.join(COPY, "index.html"), "utf8").replace(
-        "<main",
-        '<div style="height:2000px"></div><main',
-      );
-      writeFileSync(path.join(dir, "index.html"), html);
+      const html = readFileSync(path.join(COPY, "index.html"), "utf8");
+      writeFileSync(path.join(dir, "index.html"), inject('<div style="height:2000px"></div>', "top"));
     },
     cleanupSite: () => rmSync(path.join(COPY, "sl-never-seen"), { recursive: true, force: true }),
   },
@@ -423,6 +425,6 @@ if (failures) {
 }
 
 console.log(
-  `\n  · spatial gate: ${FIXTURES.length} injected defects, all caught. ` +
-    `Every mode has failed at least once.\n`,
+  `\n  · spatial gate: ${FIXTURES.length} injected page defects and ${BASELINE_RULES.length + 1} broken-baseline cases, ` +
+    `all caught. Every mode has failed at least once, and every rule about the baseline has failed at least once.\n`,
 );

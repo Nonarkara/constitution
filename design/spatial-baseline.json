@@ -40,6 +40,9 @@
     899,
     900,
     901,
+    999,
+    1000,
+    1001,
     1023,
     1024,
     1025,
@@ -70,13 +73,13 @@
   },
   "reasons": {
     "orphan|figure.study-art": "The study plate is a marginal illustration: it stands at the top of the page's right margin, beside the title and the opening line, and it is the tallest thing in that column. The space under it is the rest of the margin. It is a plate in the margin, not a picture in the text — the reading column is not shortened to make room for it, because the reading column is what the page is for.",
-    "orphan|figure.hero-art": "At 768px the home page and the learn page are the one width where the hero plate stands BESIDE the title rather than above it or off in the margin: under 768 it stacks on top of the text, over 768 it moves into the margin. So the plate and the title share one row, the title column is the taller of the two, and the space beside the plate is the title's own height.",
-    "orphan|figure.tikki-hero-art": "On /tikki/ the drawing of Tikki is the illustration of that page, and it stands in the right margin beside the title at the same 340px every hero plate is. The space under it is the margin's remaining height. A margin that is not full is a margin; the picture is set in the margin, and the text is not narrowed to make room for it.",
+    "orphan|figure.hero-art": "At 721px and 768px — the widths where the app grid's rail has come back and the reading column is narrow — the home page and the learn page stand the 340px hero plate BESIDE the title. The title column is much the taller of the two, so the plate fills part of the row and the space beside it is the title's own height. The plate is set in the margin of the title; the title is not shortened to make room for it.",
+    "orphan|figure.tikki-hero-art": "On /tikki/ the drawing of Tikki is the illustration of that page, and it stands beside the title in the same 340px every hero plate is. The title column is the taller of the two, so the space under the drawing is the title's own height. The drawing is set in the margin of the title, and the title is not shortened to make room for it.",
     "dead|div.intro-text": "The intro row is as tall as the 340px plate beside it, and on the pages whose opening is a single sentence the reading column under that sentence is empty. That space is the break before the next section, which begins below the plate. The plate is 340px because the house draws them that size, and the paragraph under it is the first thing read.",
     "dead|figcaption": "The caption is the label of a picture, and it stands beside it: the space above and below the caption is the picture's height, because the caption is measured against the picture and not against the column. It is a label attached to a picture, not a paragraph in a column of its own.",
-    "dead|p.law-text": "The statute is followed by a margin note — a second thing, not a continuation of the article. The space above the note is what makes the note read as an annotation of the article rather than as more of the article, and it is the same space at every width.",
+    "dead|p.law-text": "The statute is followed by a margin note — a second thing, not a continuation of the article. The space above the note is what makes the note read as an annotation of the article rather than as more of the article, and the note is an annotation at every width the gate measures.",
     "dead|div.route-number.mono": "The number column is a timeline. The numbers are joined by a hairline that runs down the column, and each number sits at the TOP of its row so the line joins number to number. The space below each number is the runway that line occupies; the marker is a point on the line, not a label centred in a cell.",
-    "dead|div.anchor-features.mono": "The three figures — how many sections, how many scripts, how many recordings — are a marginal note set off by a rule from the pitch beside them, not a third column of the same thing. The pitch runs longer than the note, so the note ends first and the rule ends with it. The space under the note is the rest of the margin."
+    "dead|div.anchor-features.mono": "At 721px and 722px, where the rail comes back and squeezes the reading column, the three figures on the home page and the learn page — how many sections, how many scripts, how many recordings — are a marginal note set off by a rule from the pitch beside them, not a third column of the same thing. The pitch runs longer than the note, so the note ends first and the rule ends with it. The space under the note is the rest of the margin."
   },
   "exempt": [
     {
@@ -532,6 +535,48 @@
         }
       },
       "901": {
+        "findings": [],
+        "firstAction": {
+          "y": 403,
+          "sel": "a.primary.hero-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.01
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 403,
+          "sel": "a.primary.hero-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.01
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 403,
+          "sel": "a.primary.hero-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.01
+        }
+      },
+      "1001": {
         "findings": [],
         "firstAction": {
           "y": 403,
@@ -1142,6 +1187,48 @@
           "share": 0
         }
       },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 737,
+          "sel": "button.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 0,
+          "share": 0
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 737,
+          "sel": "button.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 0,
+          "share": 0
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 737,
+          "sel": "button.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 0,
+          "share": 0
+        }
+      },
       "1023": {
         "findings": [],
         "firstAction": {
@@ -1715,6 +1802,48 @@
         "findings": [],
         "firstAction": {
           "y": 446,
+          "sel": "button"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 1,
+          "share": 0.02
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 472,
+          "sel": "button"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 1,
+          "share": 0.02
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 472,
+          "sel": "button"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 1,
+          "share": 0.02
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 472,
           "sel": "button"
         },
         "hierarchy": {
@@ -2454,6 +2583,48 @@
           "share": 0
         }
       },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 602,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 0,
+          "share": 0
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 602,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 0,
+          "share": 0
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 602,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 0,
+          "share": 0
+        }
+      },
       "1023": {
         "findings": [],
         "firstAction": {
@@ -3058,6 +3229,48 @@
           "share": 0.08
         }
       },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 483,
+          "sel": "button"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.08
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 483,
+          "sel": "button"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.08
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 483,
+          "sel": "button"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.08
+        }
+      },
       "1023": {
         "findings": [],
         "firstAction": {
@@ -3624,6 +3837,48 @@
         "findings": [],
         "firstAction": {
           "y": 617,
+          "sel": "button"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.02
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 650,
+          "sel": "button"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.02
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 651,
+          "sel": "button"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.02
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 651,
           "sel": "button"
         },
         "hierarchy": {
@@ -4207,6 +4462,48 @@
         "findings": [],
         "firstAction": {
           "y": 501,
+          "sel": "button.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 45,
+          "share": 0.24
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 484,
+          "sel": "button.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 45,
+          "share": 0.24
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 485,
+          "sel": "button.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 45,
+          "share": 0.24
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 485,
           "sel": "button.primary"
         },
         "hierarchy": {
@@ -4811,6 +5108,48 @@
         "findings": [],
         "firstAction": {
           "y": 644,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 11,
+          "share": 0.18
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 598,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 11,
+          "share": 0.18
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 598,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 11,
+          "share": 0.18
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 598,
           "sel": "button.primary.action-panel-cta"
         },
         "hierarchy": {
@@ -5586,6 +5925,48 @@
           "share": 0.01
         }
       },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 516,
+          "sel": "button.primary.exam-start"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.01
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 516,
+          "sel": "button.primary.exam-start"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.01
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 516,
+          "sel": "button.primary.exam-start"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.01
+        }
+      },
       "1023": {
         "findings": [],
         "firstAction": {
@@ -6159,6 +6540,48 @@
         "findings": [],
         "firstAction": {
           "y": 587,
+          "sel": "button"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.03
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 579,
+          "sel": "button"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.03
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 579,
+          "sel": "button"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.03
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 580,
           "sel": "button"
         },
         "hierarchy": {
@@ -6745,6 +7168,48 @@
           "share": 0.13
         }
       },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "button.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.13
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "button.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.13
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "button.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.13
+        }
+      },
       "1023": {
         "findings": [],
         "firstAction": {
@@ -7318,6 +7783,48 @@
         "findings": [],
         "firstAction": {
           "y": 508,
+          "sel": "input#glossary-filter"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 90,
+          "share": 0.11
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 533,
+          "sel": "input#glossary-filter"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 90,
+          "share": 0.11
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 533,
+          "sel": "input#glossary-filter"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 90,
+          "share": 0.11
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 534,
           "sel": "input#glossary-filter"
         },
         "hierarchy": {
@@ -7937,6 +8444,48 @@
           "share": 0.01
         }
       },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 403,
+          "sel": "a.primary.hero-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.01
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 403,
+          "sel": "a.primary.hero-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.01
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 403,
+          "sel": "a.primary.hero-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.01
+        }
+      },
       "1023": {
         "findings": [],
         "firstAction": {
@@ -8038,15 +8587,15 @@
       "1200": {
         "findings": [],
         "firstAction": {
-          "y": null,
-          "sel": null
+          "y": 403,
+          "sel": "a.primary.hero-cta"
         },
         "hierarchy": {
-          "h1": 0,
+          "h1": 44,
           "largest": 18,
-          "ratio": null,
-          "peers": 0,
-          "share": 0
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.01
         }
       },
       "1201": {
@@ -8503,6 +9052,48 @@
         "findings": [],
         "firstAction": {
           "y": 474,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.17
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 499,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.17
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.17
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
           "sel": "a.primary.action-panel-cta"
         },
         "hierarchy": {
@@ -9222,6 +9813,69 @@
           "share": 0.09
         }
       },
+      "999": {
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "figcaption",
+            "metric": 122,
+            "detail": "figcaption leaves 122px empty beneath it in a 314px row"
+          }
+        ],
+        "firstAction": {
+          "y": 389,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 5,
+          "share": 0.09
+        }
+      },
+      "1000": {
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "figcaption",
+            "metric": 123,
+            "detail": "figcaption leaves 123px empty beneath it in a 315px row"
+          }
+        ],
+        "firstAction": {
+          "y": 389,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 5,
+          "share": 0.09
+        }
+      },
+      "1001": {
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "figcaption",
+            "metric": 123,
+            "detail": "figcaption leaves 123px empty beneath it in a 315px row"
+          }
+        ],
+        "firstAction": {
+          "y": 389,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 5,
+          "share": 0.09
+        }
+      },
       "1023": {
         "findings": [
           {
@@ -9865,6 +10519,48 @@
         "findings": [],
         "firstAction": {
           "y": 497,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 11,
+          "share": 0.34
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 522,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 11,
+          "share": 0.34
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 523,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 11,
+          "share": 0.34
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 523,
           "sel": "a.primary.action-panel-cta"
         },
         "hierarchy": {
@@ -10708,6 +11404,69 @@
           "share": 0.04
         }
       },
+      "999": {
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "p.law-text",
+            "metric": 118,
+            "detail": "117.515625px of empty space under p.law-text"
+          }
+        ],
+        "firstAction": {
+          "y": 474,
+          "sel": "button.primary.notebook-next"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.04
+        }
+      },
+      "1000": {
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "p.law-text",
+            "metric": 118,
+            "detail": "117.515625px of empty space under p.law-text"
+          }
+        ],
+        "firstAction": {
+          "y": 474,
+          "sel": "button.primary.notebook-next"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.04
+        }
+      },
+      "1001": {
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "p.law-text",
+            "metric": 118,
+            "detail": "117.515625px of empty space under p.law-text"
+          }
+        ],
+        "firstAction": {
+          "y": 474,
+          "sel": "button.primary.notebook-next"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 3,
+          "share": 0.04
+        }
+      },
       "1023": {
         "findings": [
           {
@@ -11239,7 +11998,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 20,
-          "share": 0.11
+          "share": 0.12
         }
       },
       "721": {
@@ -11372,6 +12131,48 @@
         "findings": [],
         "firstAction": {
           "y": 541,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 20,
+          "share": 0.12
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 495,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 20,
+          "share": 0.12
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 496,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 20,
+          "share": 0.12
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 496,
           "sel": "a.primary.action-panel-cta"
         },
         "hierarchy": {
@@ -11955,6 +12756,48 @@
         "findings": [],
         "firstAction": {
           "y": 541,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.09
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 495,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.09
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 496,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.09
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 496,
           "sel": "button.primary.action-panel-cta"
         },
         "hierarchy": {
@@ -12583,6 +13426,48 @@
           "share": 0.09
         }
       },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 600,
+          "sel": "button.primary.practice-start-btn"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 4,
+          "share": 0.09
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 600,
+          "sel": "button.primary.practice-start-btn"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 4,
+          "share": 0.09
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 600,
+          "sel": "button.primary.practice-start-btn"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 4,
+          "share": 0.09
+        }
+      },
       "1023": {
         "findings": [],
         "firstAction": {
@@ -13166,6 +14051,48 @@
           "share": 0.04
         }
       },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 355,
+          "sel": "select#read-chapter"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 6,
+          "share": 0.04
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 355,
+          "sel": "select#read-chapter"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 6,
+          "share": 0.04
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 355,
+          "sel": "select#read-chapter"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 6,
+          "share": 0.04
+        }
+      },
       "1023": {
         "findings": [],
         "firstAction": {
@@ -13729,6 +14656,48 @@
         }
       },
       "901": {
+        "findings": [],
+        "firstAction": {
+          "y": 380,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 10,
+          "share": 0.08
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 380,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 10,
+          "share": 0.08
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 380,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 10,
+          "share": 0.08
+        }
+      },
+      "1001": {
         "findings": [],
         "firstAction": {
           "y": 380,
@@ -14329,6 +15298,48 @@
         "findings": [],
         "firstAction": {
           "y": 562,
+          "sel": "button.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 1,
+          "share": 0.05
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 533,
+          "sel": "button.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 1,
+          "share": 0.05
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 533,
+          "sel": "button.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 1,
+          "share": 0.05
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 533,
           "sel": "button.primary"
         },
         "hierarchy": {
@@ -15129,6 +16140,69 @@
           "share": 0.61
         }
       },
+      "999": {
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "div.route-number.mono",
+            "metric": 81,
+            "detail": "div.route-number.mono leaves 81px empty beneath it in a 125px row"
+          }
+        ],
+        "firstAction": {
+          "y": 495,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 19,
+          "share": 0.61
+        }
+      },
+      "1000": {
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "div.route-number.mono",
+            "metric": 81,
+            "detail": "div.route-number.mono leaves 81px empty beneath it in a 125px row"
+          }
+        ],
+        "firstAction": {
+          "y": 496,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 19,
+          "share": 0.61
+        }
+      },
+      "1001": {
+        "findings": [
+          {
+            "kind": "dead",
+            "sel": "div.route-number.mono",
+            "metric": 81,
+            "detail": "div.route-number.mono leaves 81px empty beneath it in a 125px row"
+          }
+        ],
+        "firstAction": {
+          "y": 496,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 19,
+          "share": 0.61
+        }
+      },
       "1023": {
         "findings": [],
         "firstAction": {
@@ -15695,6 +16769,48 @@
         "findings": [],
         "firstAction": {
           "y": 453,
+          "sel": "input#search"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 1,
+          "share": 0.02
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 479,
+          "sel": "input#search"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 1,
+          "share": 0.02
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 479,
+          "sel": "input#search"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 1,
+          "share": 0.02
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 479,
           "sel": "input#search"
         },
         "hierarchy": {
@@ -16295,6 +17411,48 @@
           "share": 0.09
         }
       },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 495,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 6,
+          "share": 0.09
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 496,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 6,
+          "share": 0.09
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 496,
+          "sel": "button.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 6,
+          "share": 0.09
+        }
+      },
       "1023": {
         "findings": [],
         "firstAction": {
@@ -16882,6 +18040,48 @@
         "findings": [],
         "firstAction": {
           "y": 482,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 6,
+          "share": 0.08
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 495,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 6,
+          "share": 0.08
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 496,
+          "sel": "a.primary.action-panel-cta"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 6,
+          "share": 0.08
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 496,
           "sel": "a.primary.action-panel-cta"
         },
         "hierarchy": {
@@ -17510,6 +18710,48 @@
           "share": 0.06
         }
       },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 535,
+          "sel": "a.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 6,
+          "share": 0.06
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 535,
+          "sel": "a.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 6,
+          "share": 0.06
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 535,
+          "sel": "a.primary"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 6,
+          "share": 0.06
+        }
+      },
       "1023": {
         "findings": [],
         "firstAction": {
@@ -18076,6 +19318,48 @@
         "findings": [],
         "firstAction": {
           "y": 508,
+          "sel": "input#topic-filter"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 1,
+          "share": 0
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 533,
+          "sel": "input#topic-filter"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 1,
+          "share": 0
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 533,
+          "sel": "input#topic-filter"
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 1,
+          "share": 0
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 534,
           "sel": "input#topic-filter"
         },
         "hierarchy": {

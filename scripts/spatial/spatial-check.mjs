@@ -442,6 +442,11 @@ function hasReason(f) {
 // broken exactly there, and a fourth was jumbled by the same cause, and the
 // gate was green the whole time. A gate that cannot see where the layout
 // changes is a gate that cannot see the defect it was written to catch.
+//
+// Where the stylesheet could not be found, the sweep falls back to the
+// project's own widths — and says so, because a silent fallback is the
+// blindness this function exists to remove.
+let cssNotFound = null;
 function cssBreakpoints(root) {
   const found = new Set();
   const dir = path.join(root, "_next", "static", "css");
@@ -449,6 +454,10 @@ function cssBreakpoints(root) {
   try {
     files = readdirSync(dir).filter((f) => f.endsWith(".css"));
   } catch {
+    // The stylesheet was not where this instrument expected it. The sweep
+    // would silently fall back to the project's own widths — the exact
+    // blindness this function exists to remove — so it is reported.
+    cssNotFound = dir;
     return found;
   }
   for (const f of files) {
@@ -458,14 +467,21 @@ function cssBreakpoints(root) {
     } catch {
       continue;
     }
-    for (const m of text.matchAll(/@media[^{]*?\((?:min|max)-width:\s*([\d.]+)(px|rem|em)\)/g)) {
-      const n = parseFloat(m[1]);
-      if (!Number.isFinite(n) || n <= 0) continue;
-      const px = m[2] === "px" ? n : n * 16;
-      const bp = Math.round(px);
-      // A breakpoint is a cliff: measure the width just below it, the width
-      // itself, and the width just above it.
-      for (const w of [bp - 1, bp, bp + 1]) if (w > 0) found.add(w);
+    // Every media query is matched first, and every width feature INSIDE it
+    // is then read. Matching the features directly would find only the first
+    // one in a compound query — `(min-width:721px) and (max-width:1000px)`
+    // would contribute 721 and lose 1000, and the 1000px cliff would go
+    // unswept in exactly the way this function exists to prevent.
+    for (const q of text.matchAll(/@media([^{]*)\{/g)) {
+      for (const m of q[1].matchAll(/\((?:min|max)-width:\s*([\d.]+)(px|rem|em)\)/g)) {
+        const n = parseFloat(m[1]);
+        if (!Number.isFinite(n) || n <= 0) continue;
+        const px = m[2] === "px" ? n : n * 16;
+        const bp = Math.round(px);
+        // A breakpoint is a cliff: measure the width just below it, the width
+        // itself, and the width just above it.
+        for (const w of [bp - 1, bp, bp + 1]) if (w > 0) found.add(w);
+      }
     }
   }
   return found;
@@ -637,6 +653,13 @@ const reasons = (baseline && baseline.reasons) || {};
 
 const failures = [];
 const notes = [];
+if (cssNotFound) {
+  notes.push(
+    `the stylesheet was not found at ${cssNotFound} — the sweep fell back to the project's own widths, ` +
+      `so the CSS breakpoints were NOT measured. A layout checked only at the widths somebody listed is ` +
+      `checked at the widths where nothing changes.`,
+  );
+}
 const unexplained = [];
 const unrecorded = [];
 const grownFindings = [];
