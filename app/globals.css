@@ -4735,10 +4735,3 @@ footer {
     gap: 10px;
   }
 }
-
-/* The route number is a 44px marker beside the title. Centred against the
-   title's height it reads as a marker on the title, rather than a square
-   floating at the top of an empty column. */
-.route-number {
-  align-self: center;
-}

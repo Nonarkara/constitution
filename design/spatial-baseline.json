@@ -26,7 +26,8 @@
     "orphan|figure.tikki-hero-art": "The Tikki plate is the page's right-margin illustration beside the title. The space beneath it is the margin's remaining height, not a hole in the reading column.",
     "dead|div.intro-text": "The intro row is as tall as the 340px plate, so on a route whose opening is one sentence there is empty reading-column under the paragraph. That is the cost of the house rule that the hero plate is 340px; the paragraph is the first thing read, and the space under it is the break before the next section, which begins below the plate.",
     "dead|figcaption": "The caption is the plate's label: it sits beside the picture and is centred against it, so the space above and below it is the picture's height. It is a label attached to a picture, not a paragraph in a column of its own.",
-    "dead|p.law-text": "The statute is followed by a margin note — a second thing, not a continuation. The 70px above the note is what makes the note read as an annotation of the article rather than as more of the article."
+    "dead|p.law-text": "The statute is followed by a margin note — a second thing, not a continuation. The 70px above the note is what makes the note read as an annotation of the article rather than as more of the article.",
+    "dead|div.route-number.mono": "The number column is a timeline. The numbers are joined by a hairline that runs down the column, and the space below each number is the runway that line occupies; the marker sits at the top of its row so the line joins number to number. Centring the marker in the row was tried and it broke the line off the number."
   },
   "routes": {
     "/": {
