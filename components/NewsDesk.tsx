@@ -316,9 +316,9 @@ export function NewsDesk() {
         <p className="micro">
           {tr(
             lang,
-            "หัวข้อที่พบเรียงตามจำนวนข่าว เรื่องที่มีข่าวมากที่สุดเข้มกว่าเรื่องอื่น ตัวเลขข้างชื่อคือจำนวนข่าวที่ไม่ซ้ำใน 7 วันของฉบับนี้ ไม่ใช่ความนิยม ความเห็นประชาชน หรือจำนวนเหตุการณ์",
-            "Topics are listed in order of how many headlines they carry, and the busiest are set in ink. The number beside each name is the count of distinct headlines in this edition's seven days, not popularity, public opinion or event counts.",
-            "主题按所含标题数量排列，数量最多的以深色显示。名称旁的数字是本版七天内的不同标题数量，不代表热度、民意或事件数量。",
+            "หัวข้อที่พบเรียงตามจำนวนข่าว หัวข้อที่มีจำนวนข่าวสูงสุดเข้มกว่าหัวข้ออื่น ตัวเลขข้างชื่อคือจำนวนข่าวที่ไม่ซ้ำใน 7 วันของฉบับนี้ ไม่ใช่ความนิยม ความเห็นประชาชน หรือจำนวนเหตุการณ์",
+            "Topics are listed in order of how many headlines they carry, and those with the most headlines are set in ink. The number beside each name is the count of distinct headlines in this edition's seven days, not popularity, public opinion or event counts.",
+            "主题按所含标题数量排列，数量最多的主题以深色显示。名称旁的数字是本版七天内的不同标题数量，不代表热度、民意或事件数量。",
           )}
         </p>
         <p>
