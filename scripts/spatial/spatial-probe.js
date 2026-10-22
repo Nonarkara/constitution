@@ -630,16 +630,36 @@
         if (oBottom <= oTop) continue;
         // A region only OBSCURES the work if it is painted on top of it.
         // The browser knows which is on top and the browser is asked.
-        var px = Math.round(rr.left + Math.min(rr.width, 40) / 2);
+        //
+        // WHERE it is asked matters. One sample at the content's left edge
+        // plus 20px misses every band that does not reach that point: a bar
+        // pinned to the RIGHT of the column covered the reading and the
+        // gate called it clean. So the question is asked across the width
+        // where the two actually meet, and the band is caught wherever it
+        // is on top.
+        var bandRect = pinBand.el.getBoundingClientRect();
+        var ix0 = Math.max(rr.left, bandRect.left);
+        var ix1 = Math.min(rr.right, bandRect.right);
+        if (ix1 <= ix0) continue;
         var py = Math.round((oTop + oBottom) / 2);
-        var onTop = null;
-        try {
-          onTop = d.elementFromPoint(px, py);
-        } catch (e) {
-          onTop = null;
+        var span = ix1 - ix0;
+        var samples = span > 120 ? 5 : 3;
+        var onTopAnywhere = false;
+        for (var si = 0; si < samples; si++) {
+          var px = Math.round(ix0 + (span * (si + 0.5)) / samples);
+          var onTop = null;
+          try {
+            onTop = d.elementFromPoint(px, py);
+          } catch (e) {
+            onTop = null;
+          }
+          if (!onTop) continue;
+          if (onTop === pinBand.el || pinBand.el.contains(onTop)) {
+            onTopAnywhere = true;
+            break;
+          }
         }
-        if (!onTop) continue;
-        if (onTop !== pinBand.el && !pinBand.el.contains(onTop)) continue;
+        if (!onTopAnywhere) continue;
         var oh = oBottom - oTop;
         if (oh > worst) {
           worst = oh;

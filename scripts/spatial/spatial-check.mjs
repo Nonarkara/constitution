@@ -551,6 +551,11 @@ let resultsResolve = null;
 // The measurements of the routes that are already done, carried from one
 // attempt to the next.
 let collected = [];
+// The status the upstream answered for each route's DOCUMENT, in --base
+// mode. A route that answers 404 or 500 renders an error page; an error
+// page has no spatial problems to find, so recording it as a clean page
+// would be a guarantee about nothing.
+const upstreamStatus = new Map();
 let completedRoutes = 0;
 function newResultsPromise() {
   return new Promise((resolve) => {
@@ -599,6 +604,7 @@ async function startServer(routes, widths) {
         return res.end(harnessHtml(widths, routes, completedRoutes));
       }
       if (raw === "/__spatial-results") return takeResults(req, res);
+      const q = (req.url || "").split("?")[1] || "";
       try {
         const target = new URL(raw, base + "/");
         const upstream = await fetch(target, {
@@ -606,6 +612,12 @@ async function startServer(routes, widths) {
           headers: { "user-agent": "spatial-law-probe", accept: "text/html,*/*" },
           redirect: "follow",
         });
+        // The status of the DOCUMENT the measurement came from is recorded,
+        // not the status of the asset that happened to be fetched last. A
+        // route that answers 404 or 500 renders an error page, and an error
+        // page has no spatial problems to find — so without this the gate
+        // certified a broken route as a clean one.
+        if (q.indexOf("__spatial=") >= 0) upstreamStatus.set(raw, upstream.status);
         const ct = upstream.headers.get("content-type") || "application/octet-stream";
         const body = Buffer.from(await upstream.arrayBuffer());
         // The proxy keeps every path, so the page's own relative URLs —
@@ -621,6 +633,10 @@ async function startServer(routes, widths) {
         res.writeHead(upstream.status, { "content-type": ct });
         res.end(body);
       } catch (e) {
+        // A route the proxy could not fetch at all. Record it as a failed
+        // fetch, so the measurement of it is reported as unreadable rather
+        // than as a clean page.
+        if (q.indexOf("__spatial=") >= 0) upstreamStatus.set(raw, 0);
         res.writeHead(502, { "content-type": "text/plain" });
         res.end("proxy error: " + e.message);
       }
@@ -1098,6 +1114,22 @@ if (results.length !== expected || missingPairs.length || duplicatePairs.length)
   console.error(`  A page measured twice is the same count as a page never measured.\n`);
   process.exit(1);
 }
+// The status of the route's document, in --base mode. A route that answers
+// 404 or 500 renders an error page, and an error page cannot be certified:
+// it has no layout to find problems in. So the measurement is refused here,
+// rather than reported as a clean route.
+if (upstreamStatus.size) {
+  for (const r of results) {
+    if (r.error) continue;
+    const st = upstreamStatus.get(r.route);
+    if (st === undefined) continue;
+    if (st === 0) {
+      r.error = "the route could not be fetched";
+    } else if (st < 200 || st >= 400) {
+      r.error = `the route answered ${st}`;
+    }
+  }
+}
 const errored = results.filter((r) => r.error);
 if (errored.length) {
   console.error(`\nFAIL — the spatial gate could not read ${errored.length} page measurement(s):`);
@@ -1123,6 +1155,20 @@ const baselineRoutes = (baseline && baseline.routes) || {};
 const reasons = (baseline && baseline.reasons) || {};
 
 const failures = [];
+// A receipt that says it is an assembly is held to that claim: every
+// carried-over cell is compared against a fresh measurement like any other,
+// and the reader is told which cells came from the earlier sweep.
+const provenance = (baseline && baseline.provenance) || null;
+if (provenance && Array.isArray(provenance.carriedOver) && provenance.carriedOver.length) {
+  notes.push(
+    `this receipt is an ASSEMBLY: ${provenance.carriedOver.length} of ${routes.length} route(s) carried cells over from an earlier sweep` +
+      (provenance.measuredAt ? ` (${provenance.measuredAt})` : "") +
+      ` — every carried cell was re-measured on this run and compared, so an assembly cannot hide a change`,
+  );
+  for (const r of provenance.carriedOver.slice(0, 60)) {
+    notes.push(`  · carried over from the earlier sweep: ${r}`);
+  }
+}
 if (cssNotFound) {
   notes.push(
     `the stylesheet was not found at ${cssNotFound} — the sweep fell back to the project's own widths, ` +
@@ -1606,6 +1652,26 @@ if (UPDATE) {  // A reason for a decision that is no longer there is not recorde
     // Written exceptions to the absolute limits, kept for the same reason:
     // an exception is a decision, and a decision is written down.
     exempt: keptExempts,
+    // What this receipt is a receipt OF. A receipt that does not say where
+    // it came from is a number with no source: nobody can check it, and
+    // nobody can know whether it has gone stale.
+    //
+    // A receipt written by one sweep says so. A receipt ASSEMBLED from two
+    // sweeps — the routes that did not change carried over from the earlier
+    // one, the changed route measured again — says that instead, and names
+    // the routes it carried over. The assembly is checked on every run: a
+    // carried-over cell is compared against a fresh measurement like any
+    // other, so an assembly cannot hide a change. But a reader has to be
+    // told, because a receipt that claims to be one sweep and is two is a
+    // receipt with a false claim in it.
+    provenance: {
+      measuredAt: new Date().toISOString(),
+      measurements: results.length,
+      routes: new Set(results.map((r) => r.route)).size,
+      widths: widths.length,
+      measuredTogether: true,
+      carriedOver: [],
+    },
     routes: {},
   };
   const signatureDetail = new Map();

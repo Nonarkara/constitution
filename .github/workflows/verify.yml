@@ -20,7 +20,15 @@ jobs:
     # that what it measures is what a reader gets. That is minutes, not
     # seconds, and a timeout that kills the job is a gate that protects
     # nothing — so the budget has to cover the honest cost.
-    timeout-minutes: 75
+    #
+    # The honest cost, measured: the sweep is 43 routes x 58 widths = 2494
+    # fresh page loads, and it takes about 70 minutes on a clean runner. The
+    # other gates in this job take about 25. A 75-minute budget killed the
+    # sweep before it finished, every time, and a job that dies at the last
+    # step is a job that reports nothing. So the budget is 150: enough for
+    # the sweep with room for a slow runner, and still short enough that a
+    # hung gate is killed rather than billing for hours.
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:

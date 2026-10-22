@@ -18,6 +18,7 @@
     "check:sentences": "node scripts/check-sentence-length.mjs",
     "check:data": "node scripts/check-data-integrity.mjs",
     "check:spatial": "node scripts/spatial/spatial-check.mjs --dir out --baseline design/spatial-baseline.json",
+    "check:spatial:live": "node scripts/spatial/spatial-check.mjs --base https://constitution.nonarkara.org --report",
     "falsify:spatial": "node scripts/spatial/spatial-falsify.mjs out",
     "check:spatial-sync": "node scripts/spatial-sync.mjs --check"
   },
