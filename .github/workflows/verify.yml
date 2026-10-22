@@ -16,7 +16,11 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    # The spatial gate loads every (route, width) fresh, on a real clock, so
+    # that what it measures is what a reader gets. That is minutes, not
+    # seconds, and a timeout that kills the job is a gate that protects
+    # nothing — so the budget has to cover the honest cost.
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -78,7 +82,7 @@ jobs:
   falsify:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:

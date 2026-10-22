@@ -108,6 +108,35 @@ const FIXTURES = [
     limits: { titleRatio: 1.6 },
     expect: "the title is only",
   },
+  {
+    // The chrome of a page: the furniture that stands at the edge of the
+    // screen. A band that grows takes height away from the work, and the
+    // receipt records how tall the chrome is — so a chrome that grows must
+    // fail until somebody says why it is there. The baseline rule below
+    // proves the same check from the other side, by doctoring the receipt;
+    // this one proves it on the page itself.
+    name: "the chrome of the page grows",
+    mode: "chrome cost",
+    at: "top",
+    html: `<div class="sl-chrome" style="position:fixed;top:0;left:0;right:0;height:300px;background:#d8d8d8;z-index:9999"></div>`,
+    expect: "chrome GREW",
+  },
+  {
+    // The seventh mode, and the one the furniture is measured in: a PINNED
+    // band that sits ON the work. The chrome is measured for its cost; this
+    // proves the measurement also catches the chrome that covers the work
+    // instead of merely costing height. Without this fixture the overlap
+    // rule would be a rule nobody had ever seen fail.
+    name: "a fixed bar sits on top of the work",
+    mode: "overlapping chrome",
+    at: "top",
+    html: `<div class="sl-overlap" style="position:fixed;top:0;left:0;right:0;height:140px;background:#334455;z-index:9999"></div>`,
+    // The finding names the element that is on top of the work. The gate
+    // prints it in two places — in the failure line ("overlap: div.sl-overlap
+    // has no written reason") and in the list of decisions — and the check
+    // is for the ELEMENT, not for the punctuation around it.
+    expect: "div.sl-overlap",
+  },
 ];
 
 const ROUTES = "/";
@@ -323,6 +352,27 @@ const BASELINE_RULES = [
     full: true,
     mutate: (b) => {
       b.reasons["dead|div.__gone__"] = "a reason for a decision that is not there";
+    },
+  },
+  {
+    name: "the chrome grows and the receipt does not",
+    expect: "chrome GREW",
+    full: true,
+    mutate: (b) => {
+      // The receipt records how tall the chrome is, at every route and every
+      // width. Take forty pixels off the number it recorded, and the chrome
+      // the gate measures now looks forty pixels BIGGER than the page it was
+      // measured on — which is what happens the day somebody makes the header
+      // taller and forgets the receipt. Without this rule, the chrome drift
+      // check is a check nobody has ever seen fail.
+      for (const byw of Object.values(b.routes || {})) {
+        for (const entry of Object.values(byw)) {
+          if (entry.chrome && entry.chrome.top) {
+            entry.chrome.top = Math.max(0, entry.chrome.top - 40);
+            return;
+          }
+        }
+      }
     },
   },
   {
