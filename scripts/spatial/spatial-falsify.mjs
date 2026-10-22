@@ -127,10 +127,18 @@ const FIXTURES = [
     // proves the measurement also catches the chrome that covers the work
     // instead of merely costing height. Without this fixture the overlap
     // rule would be a rule nobody had ever seen fail.
+    //
+    // The bar has to REACH the work. It is 420px tall because this site's
+    // own furniture — the header and the door row under it — already occupies
+    // the top ~140px, so a shorter bar stands in empty space above the
+    // reading and covers nothing: the gate reported that the chrome had
+    // grown, which is the previous fixture's job, and the overlap it was
+    // injected to prove went unmentioned. A fixture that lands on empty
+    // space proves nothing about the rule it names.
     name: "a fixed bar sits on top of the work",
     mode: "overlapping chrome",
     at: "top",
-    html: `<div class="sl-overlap" style="position:fixed;top:0;left:0;right:0;height:140px;background:#334455;z-index:9999"></div>`,
+    html: `<div class="sl-overlap" style="position:fixed;top:0;left:0;right:0;height:420px;background:#334455;z-index:9999"></div>`,
     // The finding names the element that is on top of the work. The gate
     // prints it in two places — in the failure line ("overlap: div.sl-overlap
     // has no written reason") and in the list of decisions — and the check
@@ -307,8 +315,14 @@ const MOUNTER = `<script id="__sl_mounter__">
 
 function inject(html, at) {
   const mounter = MOUNTER.replace("__HTML__", JSON.stringify(html)).replace("__WHERE__", JSON.stringify(at));
-  const m2 = /<\/main\s*>/i.exec(ORIGINAL);
-  if (m2) return ORIGINAL.slice(0, m2.index) + "\n" + mounter + "\n" + ORIGINAL.slice(m2.index);
+  // The script has to RUN, so it cannot go inside a <noscript>: a browser
+  // does not execute what is in there, so the fixture is never mounted, the
+  // gate never sees the defect it was given, and every rule reports itself
+  // dead while proving nothing. An app shell usually carries a <main>
+  // inside its <noscript> fallback — the "JavaScript is required" page —
+  // and that is the one a regex finds first. So the script goes at the end
+  // of the body, and the mounter finds the page's own mount target at
+  // runtime, which is what it was written to do.
   const m3 = /<\/body\s*>/i.exec(ORIGINAL);
   if (m3) return ORIGINAL.slice(0, m3.index) + "\n" + mounter + "\n" + ORIGINAL.slice(m3.index);
   return ORIGINAL + mounter;
