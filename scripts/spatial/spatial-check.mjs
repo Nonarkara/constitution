@@ -6,8 +6,9 @@
  * ----------------
  * An interface invents a reason for things to occupy space when it arranges
  * itself around a grid instead of around how people read, choose and act.
- * The six modes are: unjustified gaps, orphan elements, scattered actions,
- * false hierarchy, accidental wrapping, spatially expensive information.
+ * The eight modes are: unjustified gaps, orphan elements, scattered actions,
+ * false hierarchy, accidental wrapping, spatially expensive information,
+ * chrome cost, overlapping chrome.
  *
  * The recurring question is "Why is this here, why this size, and why this
  * far from that?" — and the answer must never be "because the grid put it
@@ -404,13 +405,29 @@ function loadPage(route, w, h, cb) {
   // THIS navigation — the one whose URL carries this navigation's token —
   // and starts measuring as soon as it has parsed. The settle then waits for
   // the fonts, the images and the last change.
+  //
+  // The budget is WALL CLOCK, not a count of tries. A try count is a
+  // proxy for time, and it stops being one the moment the browser starts
+  // holding the timers back — which is exactly what a hidden page in a
+  // headless browser does, and what a machine with four other browsers on
+  // it does. Two sweeps on a shared machine sat on ONE measurement for
+  // fourteen and thirty minutes with the renderer idle at 0.1% CPU: the
+  // page was never going to be ready, the try budget was being spent at a
+  // crawl, and nothing in the loop was watching the clock.
+  //
+  // A gate that hangs is a gate that protects nothing. Thirty seconds of
+  // wall clock, then the measurement is reported as an error, and the
+  // sweep says so out loud instead of waiting for a browser that will
+  // never report.
   var tries = 0;
+  var waitStart = Date.now();
   (function wait() {
     if (token !== TOKEN) return;
     var d;
     try { d = f.contentDocument; } catch (e) { return finish({ route: route, w: w, error: 'cross-origin' }); }
     if (!d) return finish({ route: route, w: w, error: 'no document' });
-    if (tries++ > 1200) return finish({ route: route, w: w, error: 'timed out waiting for the page' });
+    if (Date.now() - waitStart > 30000 || tries++ > 1200)
+      return finish({ route: route, w: w, error: 'timed out waiting for the page' });
     var here = false;
     try {
       here = !!(d.location && String(d.location.search).indexOf('__spatial=' + token) >= 0);
@@ -993,11 +1010,22 @@ for (let attempt = 1; attempt <= 5; attempt++) {
   const timeout = Symbol("timeout");
   const died = Symbol("died");
   const gone = new Promise((r) => child.on("close", () => r(died)));
+  // The watchdog is a TIMER, and a live timer holds the event loop open. The
+  // browser usually wins the race, and the losing timer then kept the process
+  // alive for 45 minutes after the verdict had been printed: a PASSING run
+  // never exited, while a failing one exited at once. The gate that runs
+  // this timed out waiting for a verdict it had already been given, and the
+  // falsifier's clean-build check read that timeout as "the gate did not
+  // pass". The timer is cleared the moment the race is decided.
+  let watchdog = null;
   const got = await Promise.race([
     waiting,
     gone,
-    new Promise((r) => setTimeout(() => r(timeout), RUN_TIMEOUT_MS)),
+    new Promise((r) => {
+      watchdog = setTimeout(() => r(timeout), RUN_TIMEOUT_MS);
+    }),
   ]);
+  if (watchdog) clearTimeout(watchdog);
   try {
     child.kill("SIGKILL");
   } catch {
@@ -1763,3 +1791,8 @@ console.log(
   `  · spatial: every measurement was a fresh load at the width measured, on a real clock — ` +
     `the chrome of each page is recorded, and a chrome that changed is a change the receipt cannot hide`,
 );
+// The run is over, and it PASSED, so the process ends here. Falling off the
+// end of the file left the server's keep-alive sockets and whatever else the
+// runtime holds open to keep the process alive, and the gate waited on a
+// verdict it had already been given.
+process.exit(0);

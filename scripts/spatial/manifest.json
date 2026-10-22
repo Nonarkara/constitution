@@ -2,8 +2,8 @@
   "source": "spatial-law",
   "version": 1,
   "files": {
-    "spatial-check.mjs": "ba16f64ba23298b376bf047b300df7bfcacd9429d7eb42c509e285ef4a2e42ff",
-    "spatial-falsify.mjs": "6d0c7997d672ac8210448b11335b5ca88ba903372a65e0c939ed367194aa3e31",
+    "spatial-check.mjs": "757b39b29d561359a26e0fa6022a43edd9eccd16d706094ac81acca87cb30e99",
+    "spatial-falsify.mjs": "c2746aff42c386c7ad6608ca863e3f20666ec734b6970504a3ad263a1c5defda",
     "spatial-probe.js": "48121158de8682cbf677b293d263e21d630ff5155fa32c9d0941c1b0f003f84b"
   }
 }

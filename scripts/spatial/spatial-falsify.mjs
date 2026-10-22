@@ -275,8 +275,21 @@ const MOUNTER = `<script id="__sl_mounter__">
     t.innerHTML = HTML;
     // The fixture is wrapped, so the wrapper's id never becomes the finding's
     // selector: the finding must name the element that actually misbehaves.
+    //
+    // The wrapper generates NO BOX. The page's own layout is a grid, and a
+    // wrapper inserted as the first child becomes a grid item: it takes the
+    // first row, and everything below it moves down. The fixture then
+    // measures a page that is not the page - the tools row sat 48px lower
+    // than the receipt said, the gate reported THAT, and the defect the
+    // fixture was injected to prove went unmentioned. The rule is that the
+    // wrapper generates no box at all (display:contents), so the wrapper keeps
+    // its identity without becoming a grid item, and the fixture lands on the
+    // page the reader gets.
+    //
+    // NOTE: this whole script is a template literal. No backticks in here.
     var wrap = document.createElement("div");
     wrap.id = "__sl_fixture__";
+    wrap.style.display = "contents";
     while (t.content.firstChild) wrap.appendChild(t.content.firstChild);
     if (WHERE === "top" && m.firstChild) m.insertBefore(wrap, m.firstChild);
     else m.appendChild(wrap);
@@ -614,7 +627,11 @@ const modes = [...new Set(FIXTURES.map((f) => f.mode))].sort();
 console.log(
   `\n  · spatial gate: ${FIXTURES.length} injected page defects, ${BASELINE_RULES.length + 1} broken-baseline cases ` +
     `and 1 case about the instrument itself, all caught.\n` +
-    `  · modes covered: ${modes.join(", ")} — ${modes.length} of the 6.\n` +
+    `  · modes covered: ${modes.join(", ")} — ${modes.length} of the 8.\n` +
     `  · Every mode has failed at least once, every rule about the baseline has failed at least once, ` +
-    `and the cross-check between a resized page and a freshly loaded page has failed at least once.\n`,
+    `and a page that decides its layout once, from the width it was loaded at, has been caught at the width ` +
+    `where a reader would see it.\n`,
 );
+// Everything was caught, so the proof is over and the process ends here
+// rather than waiting for a handle it has no further use for.
+process.exit(0);
