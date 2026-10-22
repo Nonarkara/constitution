@@ -3634,13 +3634,33 @@ mark.hl.has-note {
 .bulletin-heading { border-bottom:3px solid var(--ink); padding-bottom:24px; }
 .bulletin-heading h1 { max-width:24ch; }
 .news-status { display:flex; align-items:center; flex-wrap:wrap; justify-content:space-between; gap:12px; padding:20px 0; }
-.news-trends { border-block:1px solid var(--line); padding:20px 0; }
-.keyword-cloud { display:flex; align-items:center; flex-wrap:wrap; gap:8px 16px; }
-.keyword-cloud button { border:0; border-bottom:1px solid var(--line); padding:8px; }
-.keyword-cloud button[aria-pressed="true"] { background:var(--accent); color:var(--accent-ink); }
+/* THE TOPIC INDEX.
+   The topic filter used to be two controls in two places: a <select> in the
+   filter bar and a cloud of chips three screens below it, at the bottom of a
+   long list of headlines. Both set the same state, so a reader could not
+   tell which one was live, and the chips broke wherever the width ran out —
+   at nine widths between 436 and 722 they left one chip alone on the last
+   row with 380px of nothing beside it.
+   There is now ONE topic control: a comparison index, one topic per row,
+   name on the left and this edition's headline count on the right, sitting
+   with the search box above the list it filters.
+   One topic per row cannot break: a row has nothing to run out of. The
+   count is the evidence and the order is the ranking, so the size ramp the
+   cloud used to carry is gone — it is the one thing that put a 26px chip
+   beside a 32px title. The busiest topics are set in ink instead. */
 .news-filters { display:flex; flex-wrap:wrap; gap:20px; margin:24px 0; }
-.news-filters label { flex:1 1 190px; display:flex; flex-direction:column; gap:8px; font-size:var(--micro); }
-.news-filters input, .news-filters select { min-height:44px; border:1px solid var(--muted); padding:8px; width:100%; }
+.news-filters label { flex:0 1 320px; display:flex; flex-direction:column; gap:8px; font-size:var(--micro); }
+.news-filters input { min-height:44px; border:1px solid var(--muted); padding:8px; width:100%; }
+.news-topics { border-block:1px solid var(--line); padding:20px 0; }
+.news-topics-head { display:flex; align-items:baseline; gap:16px; }
+.news-topics-head h2 { margin:0; font-size:var(--body); }
+.topic-index { list-style:none; padding:0; margin:12px 0 0; width:fit-content; max-width:100%; }
+.topic-index li { border-top:1px solid var(--line); }
+.topic-index button { display:flex; align-items:baseline; justify-content:space-between; gap:16px; width:100%; min-height:36px; padding:6px 0; border:0; background:none; text-align:left; font-size:var(--micro); font-weight:400; }
+.topic-index button.lead { font-weight:600; }
+.topic-index .topic-count { color:var(--muted); font-variant-numeric:tabular-nums; }
+.topic-index button[aria-pressed="true"] { background:var(--accent); color:var(--accent-ink); }
+.topic-index button[aria-pressed="true"] .topic-count { color:inherit; }
 .headline-list { list-style:none; padding:0; margin:0; }
 .headline-list li { padding:24px 0; border-top:1px solid var(--line); }
 .headline-list a { display:block; font-size:var(--body); font-weight:600; text-decoration:none; min-height:44px; }
@@ -3670,10 +3690,8 @@ footer { flex-wrap:wrap; gap:16px; }
 @media(max-width:720px) {
  .journey-progress { flex-wrap:nowrap; overflow-x:auto; max-width:100%; }
  .journey-progress button { flex:0 0 165px; }
- .news-trends h2 { margin:0 0 12px; }
  .news-filters { gap:10px; }
- .news-filters label:first-child { flex:1 1 160px; }
- .news-filters label:last-child { flex:1 1 100px; }
+ .news-filters label { flex:1 1 160px; }
 }
 @media(min-width:721px) {
  .journey-progress { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }

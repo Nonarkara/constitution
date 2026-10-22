@@ -8,7 +8,6 @@ import { PageAction } from "./PageAction";
 import {
   headlineTrends,
   parseNewsSnapshot,
-  topics,
   type NewsSnapshot,
 } from "@/lib/news";
 export function NewsDesk() {
@@ -18,8 +17,7 @@ export function NewsDesk() {
       "snapshot",
     );
   const [query, setQuery] = useState(""),
-    [topic, setTopic] = useState("all"),
-    [now, setNow] = useState(new Date(seed.generatedAt));
+    [topic, setTopic] = useState("all");
   const date = (value: string | null) =>
     value
       ? new Intl.DateTimeFormat(
@@ -47,7 +45,6 @@ export function NewsDesk() {
       const value = parseNewsSnapshot(await r.json());
       if (!value) throw Error("Invalid snapshot");
       setSnapshot(value);
-      setNow(new Date());
       setStatus("live");
     } catch {
       if (!signal?.aborted) setStatus("error");
@@ -57,12 +54,19 @@ export function NewsDesk() {
     }
   }
   useEffect(() => {
-    setNow(new Date());
     const controller = new AbortController();
     void refresh(controller.signal);
     return () => controller.abort();
   }, []);
-  const trends = headlineTrends(snapshot.headlines, now),
+  // The trends are the trends OF THE EDITION being read, not of the wall
+  // clock.
+  //
+  // A snapshot that ages out of a seven-day window would otherwise empty
+  // this section by itself: the page's shape would change with the date,
+  // the section would vanish a week after the build, and a receipt taken of
+  // the page would be true only on the day it was taken. The edition
+  // carries its own date, and the week is the week of that edition.
+  const trends = headlineTrends(snapshot.headlines, new Date(snapshot.generatedAt)),
     max = trends[0]?.count || 1;
   const all = useMemo(
     () =>
@@ -189,16 +193,16 @@ export function NewsDesk() {
           : tr(lang, "ยังไม่มี", "None yet", "尚无")}
       </p>
 
-      <p className="micro">
-        <a href="#trend-title">
-          {tr(
-            lang,
-            "ดูคำที่พบใน 7 วัน ↓",
-            "See words from the last 7 days ↓",
-            "查看过去7天的关键词 ↓",
-          )}
-        </a>
-      </p>
+      {/* The filter group. The topic filter used to exist twice: a <select>
+          in this bar and a cloud of chips three screens below it, at the
+          bottom of a long list of headlines. Both set the same state, so a
+          reader could not tell which one was live, and the chips broke
+          wherever the width ran out — at nine widths between 436 and 722
+          they left one chip alone on the last row with 380px of nothing
+          beside it. There is now ONE topic control: a comparison index,
+          one topic per row, with this edition's headline count on the
+          right. One topic per row cannot break — a row has nothing to run
+          out of. The count is the evidence, the order is the ranking. */}
       <div className="news-filters">
         <label>
           {tr(lang, "ค้นในหัวข่าว", "Search headlines", "搜索标题")}
@@ -208,20 +212,54 @@ export function NewsDesk() {
             onChange={(e) => setQuery(e.target.value)}
           />
         </label>
-        <label>
-          {tr(lang, "เรื่อง", "Topic", "主题")}
-          <select value={topic} onChange={(e) => setTopic(e.target.value)}>
-            <option value="all">
-              {tr(lang, "ทุกเรื่อง", "All topics", "全部主题")}
-            </option>
-            {topics.map((t) => (
-              <option key={t.id} value={t.id}>
-                {t[lang]}
-              </option>
-            ))}
-          </select>
-        </label>
       </div>
+      <section className="news-topics" aria-labelledby="topic-title">
+        <div className="news-topics-head">
+          <h2 id="topic-title">
+            {tr(
+              lang,
+              "เรื่องที่พบใน 7 วันของฉบับนี้",
+              "Topics in this edition's seven days",
+              "本版七天内的主题",
+            )}
+          </h2>
+          {topic !== "all" ? (
+            <button
+              type="button"
+              className="text-button"
+              onClick={() => setTopic("all")}
+            >
+              {tr(lang, "ดูทุกเรื่อง", "Show all topics", "显示全部主题")}
+            </button>
+          ) : null}
+        </div>
+        {trends.length ? (
+          <ul className="topic-index">
+            {trends.map((t) => (
+              <li key={t.id}>
+                <button
+                  type="button"
+                  aria-pressed={topic === t.id}
+                  className={t.count === max ? "lead" : undefined}
+                  onClick={() => setTopic(topic === t.id ? "all" : t.id)}
+                >
+                  <span className="topic-name">{t[lang]}</span>
+                  <span className="topic-count mono">{t.count}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="micro">
+            {tr(
+              lang,
+              "ยังไม่มีหัวข่าวที่มีวันเผยแพร่ในช่วงนี้",
+              "No dated headlines in this window yet.",
+              "此时间范围尚无注明日期的标题。",
+            )}
+          </p>
+        )}
+      </section>
       <p className="micro" aria-live="polite">
         {shown.length} {tr(lang, "หัวข่าว", "headlines", "条标题")}
       </p>
@@ -258,39 +296,6 @@ export function NewsDesk() {
           )}
         </p>
       )}
-      <section className="news-trends" aria-labelledby="trend-title">
-        <h2 id="trend-title">
-          {tr(
-            lang,
-            "คำที่พบใน 7 วัน",
-            "Words in the last 7 days",
-            "过去7天的关键词",
-          )}
-        </h2>
-        <div className="keyword-cloud">
-          {trends.length ? (
-            trends.map((t) => (
-              <button
-                key={t.id}
-                aria-pressed={topic === t.id}
-                style={{ fontSize: `${14 + (12 * t.count) / max}px` }}
-                onClick={() => setTopic(topic === t.id ? "all" : t.id)}
-              >
-                {t[lang]} <span className="micro">{t.count}</span>
-              </button>
-            ))
-          ) : (
-            <p>
-              {tr(
-                lang,
-                "ยังไม่มีหัวข่าวที่มีวันเผยแพร่ในช่วงนี้",
-                "No dated headlines in this window yet.",
-                "此时间范围尚无注明日期的标题。",
-              )}
-            </p>
-          )}
-        </div>
-      </section>
       <details className="feed-provenance">
         <summary>
           {tr(
@@ -311,9 +316,9 @@ export function NewsDesk() {
         <p className="micro">
           {tr(
             lang,
-            "ขนาดตามจำนวนหัวข่าวไม่ซ้ำที่มีคำนี้ใน 7 วันที่ผ่านมา ไม่ใช่ความนิยม ความเห็นประชาชน หรือจำนวนเหตุการณ์",
-            "Size reflects unique headline counts containing the keyword within the past 7 days, not popularity, public opinion or event counts.",
-            "大小表示过去7天包含该关键词的不同标题数量，不代表热度、民意或事件数量。",
+            "หัวข้อที่พบเรียงตามจำนวนข่าว เรื่องที่มีข่าวมากที่สุดเข้มกว่าเรื่องอื่น ตัวเลขข้างชื่อคือจำนวนข่าวที่ไม่ซ้ำใน 7 วันของฉบับนี้ ไม่ใช่ความนิยม ความเห็นประชาชน หรือจำนวนเหตุการณ์",
+            "Topics are listed in order of how many headlines they carry, and the busiest are set in ink. The number beside each name is the count of distinct headlines in this edition's seven days, not popularity, public opinion or event counts.",
+            "主题按所含标题数量排列，数量最多的以深色显示。名称旁的数字是本版七天内的不同标题数量，不代表热度、民意或事件数量。",
           )}
         </p>
         <p>
