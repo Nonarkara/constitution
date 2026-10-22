@@ -16,15 +16,20 @@ Check with `node .non-slop/bin/non-slop.mjs scan .` (and `render <url>` when Pla
 <!-- non-slop:end -->
 
 <!-- spatial-law:start -->
-## Design quality: the spatial law
-An interface that invents a reason for things to occupy space — instead of arranging them around how people read, choose and act — is the failure this repo now gates.
+## Design quality: the spatial law (MSH)
 
-The test, for every region of every page: **"Why is this here, why this size, and why this far from that?"** If the answer is "the grid put it there", the layout has failed.
+**The law is `docs/MSH-LAW.md`** — Dr Non's own text, copied verbatim, and the canonical statement of the law for every agent and every project. Read it before designing, building or reviewing any interface.
 
-- The instrument lives in `scripts/spatial/` (vendored, hash-verified against the shared copy by `npm run check:spatial-sync`).
-- The receipt lives in `design/spatial-baseline.json`: every hole, orphan, scattered pair and accidental wrap, with a **written reason** per decision. A decision with no reason fails the gate, because no reason is what "the grid put it there" sounds like when you write it down.
-- `npm run check:spatial` measures 29 routes at every width where the layout changes: the project's own widths plus every cliff the CSS declares — media queries **and container queries** — and the pixel on either side of it. A fix written at a breakpoint the gate never sweeps is a fix nobody checked — that is how three of them were broken in the first place. The sweep measures most widths by resizing a loaded page, and proves on every run that a resized page and a freshly loaded page give the same geometry; a disagreement is a failure of the instrument, not a note. `npm run falsify:spatial` injects one real defect per mode, breaks the baseline on purpose, and requires the gate to catch each one — a gate that has never failed protects nothing.
+> **When you find SH, massacre.**
+
+Spatial hallucination (SH) is when an interface invents a reason for things to occupy space, instead of arranging them around how people read, choose and act. The test, for every region of every page: **"Why is this here, why this size, and why this far from that?"** If the answer is "the grid put it there", the layout has failed.
+
+- The instrument lives in `scripts/spatial/` (vendored, hash-verified against the shared copy by `npm run check:spatial-sync`). It measures the eight failures the law can be measured against: unjustified gaps, orphan elements, scattered actions, false hierarchy, accidental wrapping, spatially expensive information, **chrome cost** and **overlapping chrome**.
+- The receipt lives in `design/spatial-baseline.json`: every hole, orphan, scattered pair, accidental wrap and overlap, the **chrome** of every page, and a **written reason** per decision. A decision with no reason fails the gate, because no reason is what "the grid put it there" sounds like when you write it down. A reason that states a fact the measurements contradict is worse than a missing one.
+- `npm run check:spatial` measures every route the build ships — including the ones nested a level down — at every width where the layout changes: the project's own widths plus every cliff the CSS declares, media queries **and container queries**, and the pixel on either side of it. **Every measurement is a fresh page load at the width being measured, on a real clock**, so the geometry recorded is the geometry a reader gets. A fix written at a breakpoint the gate never sweeps is a fix nobody checked. `npm run falsify:spatial` injects one real defect per mode, breaks the baseline on purpose, and requires the gate to catch each one — a gate that has never failed protects nothing.
 
 **When you change a layout, the baseline diff is the review surface.** Read it. If a new hole appears, fix it or write down why it is there. A reason that names a mechanism ("the grid put it there", "it looked fine") is not a reason, and a sentence that would fit the next reason too was written for neither. Never re-baseline without reading the diff, and never leave a reason behind for a decision that is gone.
+
+**Before you call a layout done, the law's evidence is required:** the real interface captured at 390, 1024 and 1440 px — 390 × 844 and 1440 × 900 for the first screen — recording the chrome cost, the task visibility, the geometry failures, the hierarchy and what was preserved. A source scan and a green build cannot prove a visual pass; if rendering was unavailable, say **unverified**. Then report it in the law's four lines: **Found · Changed · Verified · Remaining**, and never claim a clean pass while anything remains.
 <!-- spatial-law:end -->
 

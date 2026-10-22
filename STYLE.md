@@ -31,6 +31,8 @@ UI accent in every theme — it marks the one next action, key milestones and th
 - Single reading column (max 68ch) that fits human eye line-length without fatiguing return sweeps.
 - Content-hugging buttons and boxes: zero oversized empty textboxes, zero lazy padding, zero arbitrary min-height.
 - Clear rhythmic hierarchy: Menu → Cute Tikki Cartoon → One Purpose → Next Action → Negligible Fine Print.
+- Chrome earns its pixels: the header, navigation and sticky bands take the first screen only to the height they need, and a fixed region never covers the work. See `docs/MSH-LAW.md`.
+- One band per message: two stacked rows carrying one message are one band. Merge them and let scale and negative space do the grouping.
 
 ## Voice
 - EN: direct, educational, encouraging civic study companion.
