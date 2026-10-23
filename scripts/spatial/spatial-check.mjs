@@ -677,6 +677,18 @@ async function startServer(routes, widths) {
 }
 
 // ---------------------------------------------------------------- the routes
+/**
+ * Is this path a FILE rather than a page?
+ *
+ * The test is a final segment with a dot and two or more letters, digits or
+ * hyphens after it. It has to be that wide: an earlier version allowed only
+ * two to five characters, which is fine for .png and .woff2 and useless for
+ * .webmanifest.
+ */
+function isAssetPath(p) {
+  return /\.[a-z0-9][a-z0-9-]{1,}$/i.test(p);
+}
+
 async function discoverRoutes() {
   if (ROUTES_ARG && typeof ROUTES_ARG === "string") {
     return ROUTES_ARG.split(",").map((r) => r.trim()).filter(Boolean);
@@ -693,7 +705,7 @@ async function discoverRoutes() {
       const sm = await (await fetch(base + "/sitemap.xml")).text();
       for (const m of sm.matchAll(/<loc>([^<]+)<\/loc>/g)) {
         const u = new URL(m[1]);
-        if (u.origin === new URL(base).origin) routes.add(u.pathname);
+        if (u.origin === new URL(base).origin && !isAssetPath(u.pathname)) routes.add(u.pathname);
       }
     } catch {
       /* no sitemap — the home page links are still worth having */
@@ -706,7 +718,23 @@ async function discoverRoutes() {
         // A link with a file extension is an ASSET, not a page. /icon.svg and
         // /fonts/fonts.css are files; measuring them produced "no document"
         // failures and, with them, a run that measured nothing at all.
-        if (/\.[a-z0-9]{2,5}$/i.test(p)) continue;
+        //
+        // The extension test used to be two to five characters long, which
+        // missed /manifest.webmanifest — eleven characters — and so treated a
+        // resource reference as a page. A page then got the site's trailing
+        // slash appended, and the route it invented (/manifest.webmanifest/)
+        // answered 404 on the deployed site. The gate did the right thing
+        // with it (a route that answers 404 is a measurement that could not
+        // be read, and the gate fails), but the route was the instrument's
+        // own invention, and it failed a clean deployment for a URL that
+        // nobody ever asked for.
+        //
+        // So the test is: a final segment with a dot and two or more letters
+        // or digits after it is a file. A page that merely CONTAINS a dot
+        // (/v1.0/guide/) ends in a slash and is unaffected; a path ending in
+        // a single character after the dot (/v1.0) is not a common file
+        // extension and stays a page.
+        if (isAssetPath(p)) continue;
         routes.add(p.endsWith("/") ? p : p + "/");
       }
     } catch {

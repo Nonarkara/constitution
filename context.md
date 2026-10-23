@@ -201,3 +201,11 @@ There is now **one** topic control: a comparison index of this edition's topics,
 - **The copy promised one leader and the rule marked every tie.** "The topic with the most headlines is set in ink" — but a tie sets several in ink, and the seed data ties four of five. The copy is now plural in all three languages, because the count column is the evidence and a tie is a real thing.
 
 **And the deployed site was still the old build.** The fix was in the repository and not on the site, and nothing in the release chain measured what was actually deployed. There is now `npm run check:spatial:live`, which measures the deployed site against the instrument instead of the build directory, and the live `/news/` is measured after every deploy from here on.
+
+**And then the instrument failed the deployment it had just made — on a route it had invented.** The first live sweep after the deploy returned:
+
+> FAIL — the spatial gate could not read 3 page measurement(s): ✗ /manifest.webmanifest/ @390px — the route answered 404
+
+The site was fine. `/manifest.webmanifest` answers 200, and the HTML asks for it correctly. The route was the instrument's own invention: when it discovers a deployed site's pages, it reads the links on the home page, and a link whose path has a file extension is an asset and not a page — a test it wrote as "a dot and two to five letters", which is fine for `.png` and useless for `.webmanifest`. So a resource reference was taken for a page, given the site's trailing slash, and the resulting URL was one the server had never heard of.
+
+The gate did the right thing with it — a route that answers 404 is a measurement that could not be read, and the gate fails — but it failed a clean deployment over a URL nobody ever asked for. The test is now "a final segment with a dot and two or more letters, digits or hyphens after it", measured against every href the home page actually carries: exactly one changes class (`/manifest.webmanifest`), and no page is affected.
