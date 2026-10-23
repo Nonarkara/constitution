@@ -1824,8 +1824,24 @@ if (UPDATE) {  // A reason for a decision that is no longer there is not recorde
 
 // ---------------------------------------------------------------- report
 if (REPORT) {
+  // The route column is sized to the longest route in THIS report, with a
+  // minimum of 22 characters.
+  //
+  // It used to be a fixed 22, and a route longer than 21 characters ran
+  // straight into the width column with no space between them. On this site
+  // that was /bible/duties-state-policy/, and the row it produced read:
+  //
+  //   /bible/duties-state-policy/390   1     0     1 ...
+  //
+  // which is a route called "/bible/duties-state-policy/390" at width 1.
+  // A report is evidence, and evidence whose columns collide cannot be
+  // read by anyone checking it — so the column now fits what it holds.
+  const routeCol = Math.max(
+    22,
+    ...results.map((r) => String(r.route).length + 2),
+  );
   console.log(
-    "route".padEnd(22) + "w".padEnd(6) + "find".padEnd(6) + "dead".padEnd(6) + "orph".padEnd(6) +
+    "route".padEnd(routeCol) + "w".padEnd(6) + "find".padEnd(6) + "dead".padEnd(6) + "orph".padEnd(6) +
     "wrap".padEnd(6) + "clip".padEnd(6) + "scat".padEnd(6) + "ovlp".padEnd(6) + "act-y".padEnd(8) +
     "h1".padEnd(6) + "ratio".padEnd(7) + "share".padEnd(7) + "chrome-t".padEnd(9) + "chrome-b".padEnd(9) + "stack",
   );
@@ -1834,7 +1850,7 @@ if (REPORT) {
     const h = r.hierarchy || {};
     const c = r.chrome || {};
     console.log(
-      String(r.route).padEnd(22) + String(r.w).padEnd(6) + String(r.findings.length).padEnd(6) +
+      String(r.route).padEnd(routeCol) + String(r.w).padEnd(6) + String(r.findings.length).padEnd(6) +
       String(count("dead")).padEnd(6) + String(count("orphan")).padEnd(6) + String(count("wrap")).padEnd(6) +
       String(count("clip")).padEnd(6) + String(count("scattered")).padEnd(6) + String(count("overlap")).padEnd(6) +
       String(r.firstAction ? r.firstAction.y : "-").padEnd(8) + String(h.h1 || "-").padEnd(6) +
