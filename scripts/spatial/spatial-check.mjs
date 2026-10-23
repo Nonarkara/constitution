@@ -1825,7 +1825,11 @@ if (REPORT) {
     for (const k of staleReasons) console.log(`  · ${k}`);
   }
   printNotes();
-  process.exit(0);
+  // The report is MORE output, not a way past the verdict. It used to end
+  // here with exit 0, which meant a run with --report could not fail: the
+  // findings were printed and the gate walked away green. A report that
+  // cannot fail is not evidence of anything. So the report falls through to
+  // the verdict below, which decides the exit code.
 }
 
 // ---------------------------------------------------------------- verdict
