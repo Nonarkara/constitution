@@ -51,7 +51,7 @@
  * -----
  *   node spatial-check.mjs --dir out --baseline design/spatial-baseline.json
  *   node spatial-check.mjs --dir out --update     # refresh the baseline
- *   node spatial-check.mjs --dir out --report     # print, do not fail
+ *   node spatial-check.mjs --dir out --report     # print the measurements — and still fail
  *   node spatial-check.mjs --base https://host/   # measure a deployed site
  *
  *   --dir <path>       the built site to measure (default: out)
@@ -60,7 +60,9 @@
  *   --widths a,b,c     the widths to sweep (default: 360,480,768,1024,1440,1920)
  *   --base <url>       measure a running site instead of a directory
  *   --update           write the measurements into the baseline
- *   --report           print the measurements without failing
+ *   --report           print the measurements, the decisions and the notes —
+ *                      and then fall through to the verdict, so a report run
+ *                      fails exactly when the gate fails
  *   --json <path>      also write the raw measurements to a file
  */
 import { createServer } from "node:http";
@@ -1645,13 +1647,31 @@ if (!ROUTES_ARG) {
 // missing. For a LIVE sweep the pages come from the sitemap and the home
 // page, so a page can be advertised by the site and recorded by nobody: a
 // page a reader can reach that has never been measured, and never reviewed.
+//
+// A project that keeps a page out of its receipt ON PURPOSE — a forwarder
+// that has no content of its own, say — writes that down in the receipt's
+// `exempt` block, naming the check and the route:
+//
+//   { "check": "pageWithoutReceipt", "route": "/learn/",
+//     "why": "a forwarder to / with no content of its own" }
+//
+// An exemption is a written exception a reviewer can see and argue with. It
+// is not a quiet pass.
 if (advertisedRoutes && !ROUTES_ARG) {
+  const exemptList = (baseline && baseline.exempt) || [];
   for (const rt of advertisedRoutes) {
     if (baselineRouteList.includes(rt)) continue;
+    const ex = exemptList.find((e) => e.check === "pageWithoutReceipt" && e.route === rt);
+    if (ex) {
+      notes.push(
+        `the site advertises "${rt}" and the receipt does not record it — exempted: ${ex.why}`,
+      );
+      continue;
+    }
     failures.push(
       `page without a receipt — the site advertises "${rt}" and the baseline records no such page. ` +
         `A page a reader can reach that nobody has ever measured is a page nobody reviewed. ` +
-        `Measure it and record it, or take it out of the site.`,
+        `Measure it and record it, take it out of the site, or write down an exemption for it.`,
     );
   }
 }
@@ -1679,6 +1699,13 @@ if (fullSweep) {
   for (const e of (baseline && baseline.exempt) || []) {
     if (!e.route) continue;
     if (measuredRoutes.has(e.route)) continue;
+    // An exemption for a page the receipt deliberately does NOT record names
+    // a route the sweep never measured — that is what it is for, so "the
+    // sweep did not measure it" is not staleness. It goes stale when the
+    // SITE stops advertising the route, which is a different fact.
+    if (e.check === "pageWithoutReceipt" && advertisedRoutes && advertisedRoutes.includes(e.route)) {
+      continue;
+    }
     staleExempts.push(e);
     failures.push(
       `stale exemption — the baseline excuses ${e.check} on ${e.route}, which is not a route this build measures. ` +

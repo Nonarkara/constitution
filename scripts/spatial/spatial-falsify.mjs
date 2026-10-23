@@ -235,14 +235,30 @@ const ONE_ROUTE_BUDGET_MS = 10 * 60 * 1000;
 function runGateProcess(args, budget) {
   const res = spawnSync(process.execPath, args, { encoding: "utf8", timeout: budget });
   const out = `${res.stdout || ""}${res.stderr || ""}`;
-  if (res.status === null) {
-    const timedOut = res.error && res.error.code === "ETIMEDOUT";
+  // A child that did not finish is not a child that answered.
+  //
+  // The test is NOT `status === null`. When spawnSync's deadline kills the
+  // child it sends SIGTERM, and the gate handles SIGTERM by cleaning up and
+  // exiting 130 — so the status comes back as 130 and `signal` is null.
+  // (Measured, not assumed: a child that installs a SIGTERM handler and
+  // exits 130 comes back as status=130, signal=null, error.code=ETIMEDOUT.)
+  // A branch on `status === null` therefore never fires for this child, and
+  // the falsifier goes on printing the false accusation it was supposed to
+  // have removed.
+  //
+  // So the three signals are read together:
+  //   error.code === "ETIMEDOUT"  the deadline was reached;
+  //   signal set                  the child was killed by a signal;
+  //   status === 130              the child's own SIGTERM handler fired.
+  const timedOut = !!(res.error && res.error.code === "ETIMEDOUT");
+  const killed = !!res.signal || res.status === 130;
+  if (timedOut || killed) {
     return {
       pass: false,
       finished: false,
       why: timedOut
         ? `the gate did not finish within ${Math.round(budget / 1000)}s`
-        : `the gate died before it answered (${res.error ? res.error.code : "unknown error"})`,
+        : `the gate was killed before it answered (${res.signal || "SIGTERM"})`,
       out,
     };
   }

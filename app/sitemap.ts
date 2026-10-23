@@ -13,9 +13,11 @@ export const dynamic = "force-static";
  * every deploy. Two lists describing the same site is one list too many, and
  * the one that was wrong was the one a crawler reads.
  *
- * APP_ROUTES is the list the navigation, the link check and the spatial
- * receipt all use. It holds exactly the 43 pages the receipt records, so
- * there is now one description of what this site ships.
+ * APP_ROUTES holds exactly the pages this site builds — `tests/nav.test.ts`
+ * checks the built route list against it, which is what keeps the two from
+ * drifting apart again — and it holds exactly the 43 pages the spatial
+ * receipt records. The receipt does not read this list: it walks the build.
+ * They agree because the build is made from these routes.
  *
  * `/learn/` is filtered out because it is a forwarder to `/`, not a page: it
  * has no content of its own, and listing it asks a crawler to index a stub.
