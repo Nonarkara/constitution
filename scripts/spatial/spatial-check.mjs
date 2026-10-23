@@ -678,6 +678,14 @@ async function startServer(routes, widths) {
 
 // ---------------------------------------------------------------- the routes
 /**
+ * The pages a DEPLOYED site advertises, as opposed to the pages the receipt
+ * records. Empty for a build-directory sweep; filled in when the sweep is
+ * over a live site. A page the site advertises and the receipt does not
+ * record has never been reviewed, and that is reported rather than ignored.
+ */
+let advertisedRoutes = null;
+
+/**
  * Is this path a FILE rather than a page?
  *
  * The test is a final segment with a dot and two or more letters, digits or
@@ -694,11 +702,23 @@ async function discoverRoutes() {
     return ROUTES_ARG.split(",").map((r) => r.trim()).filter(Boolean);
   }
   if (BASE) {
-    // A deployed site has no directory to walk. Measure the same set the
-    // project ships by reading its sitemap AND the links on the home page —
-    // both, because either one alone misses pages: the sitemap of this site
-    // did not list /learn/ or /tikki/, and a home page link list does not
-    // reach the pages two links down.
+    // A deployed site has no directory to walk, so its pages are found by
+    // reading the sitemap AND the links on the home page — both, because
+    // either one alone misses pages: a sitemap does not list every page, and
+    // a home page link list does not reach the pages two links down.
+    //
+    // But that discovery is a PROXY, and it is not allowed to replace the
+    // receipt's route list. It used to: the live sweep measured whatever the
+    // proxy found, and then compared that against the receipt — so a page
+    // the receipt records but the proxy cannot see was reported as "missing
+    // page", and a page the site serves was called absent while it was
+    // standing right there answering 200. On this site that was /learn/, a
+    // forwarder the sitemap deliberately does not advertise.
+    //
+    // The receipt is the contract of what the project ships. A live run
+    // measures every route the receipt records, and ADDS the routes the site
+    // advertises, so that a page nobody has a receipt for is reported rather
+    // than silently ignored.
     const base = String(BASE).replace(/\/+$/, "");
     const routes = new Set(["/"]);
     try {
@@ -740,6 +760,16 @@ async function discoverRoutes() {
     } catch {
       /* nothing else to try */
     }
+
+    // The pages the site ADVERTISES, kept apart from the pages the RECEIPT
+    // records. A page that is advertised and has no receipt has never been
+    // reviewed, and that is reported below rather than swallowed.
+    advertisedRoutes = [...routes].sort();
+
+    // Every route the receipt records is measured, whether the site
+    // advertises it or not. The receipt is the contract.
+    for (const rt of Object.keys((baseline && baseline.routes) || {})) routes.add(rt);
+
     return [...routes].sort();
   }
   const root = path.resolve(String(DIR));
@@ -1606,6 +1636,22 @@ if (!ROUTES_ARG) {
       `missing page — the baseline records "${rt}" but this build has no such page. ` +
         `A page that was reviewed and is no longer built must be removed from the baseline, ` +
         `and until somebody does that, the receipt is claiming a page that does not exist.`,
+    );
+  }
+}
+
+// The other direction. For a build-directory sweep it cannot happen — the
+// sweep walks the build, so every page in the build is either recorded or
+// missing. For a LIVE sweep the pages come from the sitemap and the home
+// page, so a page can be advertised by the site and recorded by nobody: a
+// page a reader can reach that has never been measured, and never reviewed.
+if (advertisedRoutes && !ROUTES_ARG) {
+  for (const rt of advertisedRoutes) {
+    if (baselineRouteList.includes(rt)) continue;
+    failures.push(
+      `page without a receipt — the site advertises "${rt}" and the baseline records no such page. ` +
+        `A page a reader can reach that nobody has ever measured is a page nobody reviewed. ` +
+        `Measure it and record it, or take it out of the site.`,
     );
   }
 }
