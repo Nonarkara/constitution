@@ -200,9 +200,57 @@ function excerpt(out) {
   return out.trim().split("\n").slice(-14).join("\n");
 }
 
+// The wall-clock budget for the gate the falsifier runs.
+//
+// The falsifier measures the whole estate: every route, at three widths, each
+// one loaded fresh. On an idle machine that is a few minutes. On a busy one —
+// and a laptop running three agents' browsers at once is a busy one — the
+// same sweep can take an order of magnitude longer, and a sweep killed at
+// the deadline reports nothing at all.
+//
+// The old budget was fifteen minutes. That was enough on an idle machine and
+// not enough on a busy one, so the falsifier failed for a reason that had
+// nothing to do with the gate it was testing: it failed by being killed, and
+// it said "the gate could not write a baseline", which is a sentence about
+// the gate that was really a sentence about the clock.
+//
+// So the budget is generous, and a deadline that is hit is named as a
+// deadline. 43 routes x 3 widths = 129 fresh loads; the measured cost is
+// about two seconds a load on a quiet runner (the same sweep at 58 widths
+// across 43 routes takes about seventy minutes), which is four minutes here
+// and can be forty on a loaded box. Forty-five minutes covers the honest
+// worst case, and the budget is the falsifier's own — so hitting it is the
+// falsifier's own failure, and it says so in those words.
+const FULL_GATE_BUDGET_MS = 45 * 60 * 1000;
+const ONE_ROUTE_BUDGET_MS = 10 * 60 * 1000;
+
+/**
+ * Run the gate, and say what happened in terms the reader can act on.
+ *
+ * `spawnSync` hands back a NULL status when the child was killed, and a null
+ * status is not a verdict. The old code read every null status as "the gate
+ * answered no", so a killed sweep was reported as a gate that could not do
+ * its job. Both are now named for what they are.
+ */
+function runGateProcess(args, budget) {
+  const res = spawnSync(process.execPath, args, { encoding: "utf8", timeout: budget });
+  const out = `${res.stdout || ""}${res.stderr || ""}`;
+  if (res.status === null) {
+    const timedOut = res.error && res.error.code === "ETIMEDOUT";
+    return {
+      pass: false,
+      finished: false,
+      why: timedOut
+        ? `the gate did not finish within ${Math.round(budget / 1000)}s`
+        : `the gate died before it answered (${res.error ? res.error.code : "unknown error"})`,
+      out,
+    };
+  }
+  return { pass: res.status === 0, finished: true, why: null, out };
+}
+
 function runGate(args, routes) {
-  const res = spawnSync(
-    process.execPath,
+  return runGateProcess(
     [
       CHECK,
       "--dir",
@@ -215,25 +263,32 @@ function runGate(args, routes) {
       WIDTHS,
       ...args,
     ],
-    { encoding: "utf8", timeout: 600000 },
+    ONE_ROUTE_BUDGET_MS,
   );
-  return {
-    pass: res.status === 0,
-    out: `${res.stdout || ""}${res.stderr || ""}`,
-  };
 }
 
 /** The same gate, but over EVERY route in the copy. */
 function runFullGate(args) {
-  const res = spawnSync(
-    process.execPath,
+  return runGateProcess(
     [CHECK, "--dir", COPY, "--baseline", BASELINE, "--widths", WIDTHS, ...args],
-    { encoding: "utf8", timeout: 900000 },
+    FULL_GATE_BUDGET_MS,
   );
-  return {
-    pass: res.status === 0,
-    out: `${res.stdout || ""}${res.stderr || ""}`,
-  };
+}
+
+/**
+ * A gate that never finished has neither passed nor failed. Report it as an
+ * unfinished run and stop: every later result would be measured against a
+ * baseline that may not exist, so the honest answer is "I did not learn".
+ */
+function requireFinished(res) {
+  if (res.finished) return;
+  console.error(
+    `\nFAIL — ${res.why}.\n` +
+      `  That is the falsifier's own budget, not the gate's verdict: the gate\n` +
+      `  was still working when the clock ran out, so nothing here says whether\n` +
+      `  it catches anything. Free the machine and run it again.\n`,
+  );
+  process.exit(1);
 }
 
 // ---------------------------------------------------------------- the baseline
@@ -241,6 +296,7 @@ function runFullGate(args) {
 // the clean copy can pass. This baseline is a measuring device for the
 // falsifier, not a review of the project.
 const gen = runFullGate(["--update"]);
+requireFinished(gen);
 if (!existsSync(BASELINE)) {
   console.error(`\nFAIL — the gate could not write a baseline for the falsifier.\n${gen.out}\n`);
   process.exit(1);
@@ -266,6 +322,7 @@ writeFileSync(BASELINE, JSON.stringify(baseline, null, 2) + "\n");
 
 // ---------------------------------------------------------------- the clean run
 const clean = runGate([]);
+requireFinished(clean);
 if (!clean.pass) {
   console.error("\nFAIL — the gate does not pass on the clean build. Fix that first.\n");
   console.error(clean.out);
@@ -362,6 +419,7 @@ for (const f of FIXTURES) {
   const res = runGate([]);
   writeFileSync(BASELINE, savedBaseline);
   writeFileSync(PAGE, ORIGINAL);
+  requireFinished(res);
   if (res.pass) {
     console.error(`  ✗ ${f.name} — the gate did NOT catch it. The rule is dead.`);
     failures++;
@@ -614,6 +672,7 @@ for (const rule of BASELINE_RULES) {
   if (rule.site) rule.site();
   withBaseline(rule.mutate || (() => {}));
   const res = rule.full ? runFullGate([]) : runGate([], rule.routes);
+  requireFinished(res);
   if (rule.cleanupSite) rule.cleanupSite();
   writeFileSync(BASELINE, BASELINE_SAVED);
   if (rule.expect === null) {
@@ -660,6 +719,7 @@ for (const rule of BASELINE_RULES) {
   writeFileSync(BASELINE, JSON.stringify(b, null, 2) + "\n");
   const res = runGate([]);
   writeFileSync(BASELINE, BASELINE_SAVED);
+  requireFinished(res);
   if (!res.pass) {
     console.error(
       `  ✗ a partial sweep is not told a reason is stale — the gate failed on a reason it never had the chance to see:\n` +

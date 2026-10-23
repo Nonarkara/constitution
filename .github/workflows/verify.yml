@@ -90,7 +90,14 @@ jobs:
   falsify:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    # This job's budget has to cover the falsifier's OWN budget, or the outer
+    # ceiling kills the run before the inner one can report. The falsifier
+    # gives its full-estate sweep 45 minutes (43 routes x 3 widths, every one
+    # loaded fresh), so the job needs that, plus the install and the build,
+    # plus room for a slow runner. At 60 minutes the job could be killed
+    # mid-sweep, and a job that dies at the last step reports nothing — the
+    # same defect the verify job had at 75.
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
