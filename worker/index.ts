@@ -101,13 +101,16 @@ export default {
       // The edge cache exists on Cloudflare; tests and local runs go straight to D1.
       const cache = (globalThis as unknown as { caches?: { default?: Cache } }).caches?.default;
       const key = new Request(`https://${url.host}/api/news`);
-      const hit = await cache?.match(key);
+      // The cache is an optimization. A regional cache failure must not hide
+      // a healthy authoritative database response.
+      let hit: Response | undefined;
+      try { hit = await cache?.match(key); } catch { /* Read from D1 below. */ }
       if (hit) return request.method === "HEAD" ? new Response(null, hit) : hit;
       try {
         const fresh = Response.json(await readSnapshot(env.NEWS), {
           headers: { "Cache-Control": "public, max-age=300", ...secure },
         });
-        await cache?.put(key, fresh.clone());
+        try { await cache?.put(key, fresh.clone()); } catch { /* Serve fresh data even if it cannot be cached. */ }
         return request.method === "HEAD" ? new Response(null, fresh) : fresh;
       } catch {
         return Response.json({ error: "Headlines unavailable" }, { status: 503, headers: secure });
