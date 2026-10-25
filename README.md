@@ -4,9 +4,9 @@
 
 # The Constitution, the way I actually wanted to learn it
 
-**A free, offline-capable study site for Thailand's civil-service exams — built by someone who sat these exams, got tired of how everyone else learns them, and taught himself what actually works.**
+**A free, offline-capable study site for Thailand's civil-service exams, created by Dr. Non Arkaraprasertkul for Tikky and other learners.**
 
-**[Read it · 12,000 exam takers and counting](https://constitution.nonarkara.org)** ·
+**[Read it](https://constitution.nonarkara.org)** ·
 [เริ่มอ่าน](https://constitution.nonarkara.org)
 
 [English (README.md)](./README.md) · [ภาษาไทย (README.th.md)](./README.th.md) · [中文 (README.zh.md)](./README.zh.md)
@@ -36,14 +36,14 @@ memory actually forms, and it is the single decision that separates this site
 from a flashcard pile.
 
 Read [The loop](#the-loop-one-idea-five-times) below before you decide how to
-use this. It is four minutes and it will save you weeks.
+use this. It explains what to expect before you start.
 
 ---
 
 ## Why this exists
 
 I am a consultant, not a lawyer and not a developer. I have watched a lot of
-people prepare for these exams, and watched myself prepare badly. What I found
+people prepare for these exams. What I found
 is that almost everyone studies the constitution the way you study history:
 read the chapter, highlight the important sentence, feel good, score badly.
 
@@ -255,7 +255,7 @@ the code — including the places where I deliberately did **not** follow it.
 |---|---|---|
 | **Testing effect** (retrieval practice) | Pulling something out of memory strengthens it more than putting it in | Every question is a test first. Explanation comes after the attempt, never before |
 | **Spacing effect** (Cepeda et al. 2006) | Reviews spread over days beat massed cramming | A missed card returns at 10 minutes, then 1, 3, 7 and 14 days |
-| **High utility ranking** (Dunlosky et al. 2013) | Practice testing and spacing are high-utility; rereading and highlighting are low | Highlighting and re-reading were removed from the product entirely |
+| **High utility ranking** (Dunlosky et al. 2013) | Practice testing and spacing are high-utility; rereading and highlighting are low | Reading and highlighting remain available for annotation, alongside questions that check recall |
 | **Task-dependent effects** (Carpenter et al. 2022) | Explanation, interleaving and imagery help differently per learner and per task | These are offered, never asserted. The site never claims your outcome |
 | **Retrieval before options** | Recalling before choosing beats choosing without recalling | You recall first, then see the options. Skippable — but the default |
 | **Desirable difficulty** | A little struggle at the right moment buys a lot of later ease | The full mock gives you no reading first. That friction is the feature |
@@ -282,11 +282,11 @@ Not in a classroom. I am a consultant — I work with clients on strategy and
 organisations, not on law — and everything here came from being curious in the
 wrong order.
 
-I learned most of it the way I learned most things: badly first, then
-correctly. I read the constitution once, highlighted heavily, and scored worse
-than the person who had simply done past papers for three weeks. That gap was
-embarrassing enough to be interesting. If effort felt like progress but produced
-nothing, then effort was not the mechanism, and I needed to find what was.
+The question behind this project is practical: how can technology help Tikky
+understand the subject, rather than only memorize it? Time spent reading and
+highlighting is preparation, but the app also needs a way to check what she
+can recall and explain. That is why reading, annotation and questions belong
+together here.
 
 So I went and read the actual literature. Not because I enjoy it — because the
 cost of being wrong for four months is much higher than the cost of a
@@ -375,12 +375,17 @@ npm run release   # validate → test → build → generated-file drift → lin
 ```bash
 git clone https://github.com/Nonarkara/constitution.git
 cd constitution
+nvm use            # Node 24, matching CI
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r scripts/illustrations/requirements.txt
 npm ci
 npm run dev        # http://localhost:3000
 npm run release    # the full gate
 ```
 
-Requires Node 24+. No API keys, no database, no accounts.
+Development checks use Node 24 and Python 3.12 with the pinned image dependencies.
+Core learning needs no accounts or API keys. The online headline feed uses a
+Cloudflare Worker and D1 database; local study can use the saved news edition.
 
 ---
 

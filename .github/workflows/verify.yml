@@ -21,8 +21,9 @@ jobs:
     # seconds, and a timeout that kills the job is a gate that protects
     # nothing — so the budget has to cover the honest cost.
     #
-    # The honest cost, measured: the sweep is 43 routes x 58 widths = 2494
-    # fresh page loads, and it takes about 70 minutes on a clean runner. The
+    # An earlier sweep measured 43 routes x 58 widths = 2494 fresh loads
+    # and took about 70 minutes on a clean runner. The current receipt has
+    # 43 routes x 61 widths = 2623 loads, including the 1218px transition. The
     # other gates in this job take about 25. A 75-minute budget killed the
     # sweep before it finished, every time, and a job that dies at the last
     # step is a job that reports nothing. So the budget is 150: enough for

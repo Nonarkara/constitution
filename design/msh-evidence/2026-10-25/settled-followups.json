@@ -1,0 +1,22 @@
+{
+  "capturedAt": "2026-10-25T07:27:09.423244+00:00",
+  "method": "Fresh CUA navigation after final build; read-only DOM and screenshot, independent of canonical receipt",
+  "pages": [
+    {
+      "route": "/flashcards/",
+      "width": 859,
+      "height": 900,
+      "h1": "นึกก่อน แล้วค่อยพลิก",
+      "horizontalOverflow": false,
+      "task": "Flip/review card controls visible"
+    },
+    {
+      "route": "/section/",
+      "width": 640,
+      "height": 900,
+      "h1": "เปิดมาตรา หาคำตอบ",
+      "horizontalOverflow": false,
+      "task": "Search field and chapter choices visible"
+    }
+  ]
+}

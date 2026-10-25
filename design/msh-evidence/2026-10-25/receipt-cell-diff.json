@@ -1,0 +1,1996 @@
+[
+  {
+    "route": "/amend/",
+    "w": 849,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 420,
+        "sel": "button"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 1,
+        "share": 0.02
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 379,
+        "sel": "button"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 1,
+        "share": 0.02
+      }
+    }
+  },
+  {
+    "route": "/cram/",
+    "w": 720,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 493,
+        "sel": "button.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 45,
+        "share": 0.24
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 452,
+        "sel": "button.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 45,
+        "share": 0.24
+      }
+    }
+  },
+  {
+    "route": "/cram/",
+    "w": 721,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 501,
+        "sel": "button.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 45,
+        "share": 0.24
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 459,
+        "sel": "button.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 45,
+        "share": 0.24
+      }
+    }
+  },
+  {
+    "route": "/drills/",
+    "w": 860,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 539,
+        "sel": "button.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 11,
+        "share": 0.19
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 581,
+        "sel": "button.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 11,
+        "share": 0.18
+      }
+    }
+  },
+  {
+    "route": "/exam/",
+    "w": 559,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 537,
+        "sel": "button.primary.exam-start"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.01
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 495,
+        "sel": "button.primary.exam-start"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.01
+      }
+    }
+  },
+  {
+    "route": "/exam/",
+    "w": 599,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 537,
+        "sel": "button.primary.exam-start"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.01
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 495,
+        "sel": "button.primary.exam-start"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.01
+      }
+    }
+  },
+  {
+    "route": "/exam/",
+    "w": 640,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 537,
+        "sel": "button.primary.exam-start"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.01
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 495,
+        "sel": "button.primary.exam-start"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.01
+      }
+    }
+  },
+  {
+    "route": "/flashcards/",
+    "w": 390,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 844,
+        "top": 63,
+        "topPct": 7.5,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 548,
+        "sel": "button"
+      },
+      "chrome": {
+        "vh": 844,
+        "top": 63,
+        "topPct": 7.5,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.03
+      }
+    }
+  },
+  {
+    "route": "/flashcards/",
+    "w": 499,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 578,
+        "sel": "button"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.03
+      }
+    }
+  },
+  {
+    "route": "/flashcards/",
+    "w": 501,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 578,
+        "sel": "button"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.03
+      }
+    }
+  },
+  {
+    "route": "/flashcards/",
+    "w": 561,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 548,
+        "sel": "button"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.03
+      }
+    }
+  },
+  {
+    "route": "/flashcards/",
+    "w": 601,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 548,
+        "sel": "button"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.03
+      }
+    }
+  },
+  {
+    "route": "/flashcards/",
+    "w": 640,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 554,
+        "sel": "button"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.03
+      }
+    }
+  },
+  {
+    "route": "/flashcards/",
+    "w": 676,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 566,
+        "sel": "button"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.03
+      }
+    }
+  },
+  {
+    "route": "/flashcards/",
+    "w": 720,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 581,
+        "sel": "button"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 2,
+        "share": 0.03
+      }
+    }
+  },
+  {
+    "route": "/flashcards/",
+    "w": 721,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 587,
+        "sel": "button"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 2,
+        "share": 0.03
+      }
+    }
+  },
+  {
+    "route": "/flashcards/",
+    "w": 859,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 587,
+        "sel": "button"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 2,
+        "share": 0.03
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    }
+  },
+  {
+    "route": "/glossary/",
+    "w": 861,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 473,
+        "sel": "input#glossary-filter"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 90,
+        "share": 0.11
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 432,
+        "sel": "input#glossary-filter"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 90,
+        "share": 0.11
+      }
+    }
+  },
+  {
+    "route": "/notebook/",
+    "w": 360,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 524,
+        "sel": "button.primary.notebook-next"
+      },
+      "chrome": {
+        "vh": 844,
+        "top": 63,
+        "topPct": 7.5,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 3,
+        "share": 0.04
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 482,
+        "sel": "button.primary.notebook-next"
+      },
+      "chrome": {
+        "vh": 844,
+        "top": 63,
+        "topPct": 7.5,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 3,
+        "share": 0.05
+      }
+    }
+  },
+  {
+    "route": "/notes/",
+    "w": 850,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 512,
+        "sel": "a.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 20,
+        "share": 0.12
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 470,
+        "sel": "a.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 10,
+        "share": 0.11
+      }
+    }
+  },
+  {
+    "route": "/read/",
+    "w": 600,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 407,
+        "sel": "select#read-chapter"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.04
+      }
+    }
+  },
+  {
+    "route": "/read/",
+    "w": 640,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 420,
+        "sel": "select#read-chapter"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.04
+      }
+    }
+  },
+  {
+    "route": "/rights/",
+    "w": 360,
+    "before": {
+      "findings": [
+        {
+          "kind": "dead",
+          "sel": "div.route-number.mono",
+          "metric": 221.6875,
+          "detail": "div.route-number.mono leaves 222px empty beneath it in a 179px row"
+        }
+      ],
+      "firstAction": {
+        "y": 577,
+        "sel": "button.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 844,
+        "top": 63,
+        "topPct": 7.5,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 19,
+        "share": 0.61
+      }
+    },
+    "after": {
+      "findings": [
+        {
+          "kind": "dead",
+          "sel": "div.route-number.mono",
+          "metric": 221.6875,
+          "detail": "div.route-number.mono leaves 222px empty beneath it in a 179px row"
+        }
+      ],
+      "firstAction": {
+        "y": 535,
+        "sel": "button.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 844,
+        "top": 63,
+        "topPct": 7.5,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 19,
+        "share": 0.62
+      }
+    }
+  },
+  {
+    "route": "/rights/",
+    "w": 480,
+    "before": {
+      "findings": [
+        {
+          "kind": "dead",
+          "sel": "div.route-number.mono",
+          "metric": 167.6875,
+          "detail": "div.route-number.mono leaves 168px empty beneath it in a 125px row"
+        }
+      ],
+      "firstAction": {
+        "y": 486,
+        "sel": "button.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 844,
+        "top": 63,
+        "topPct": 7.5,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 19,
+        "share": 0.61
+      }
+    },
+    "after": {
+      "findings": [
+        {
+          "kind": "dead",
+          "sel": "div.route-number.mono",
+          "metric": 167.6875,
+          "detail": "div.route-number.mono leaves 168px empty beneath it in a 125px row"
+        }
+      ],
+      "firstAction": {
+        "y": 444,
+        "sel": "button.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 844,
+        "top": 63,
+        "topPct": 7.5,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 19,
+        "share": 0.62
+      }
+    }
+  },
+  {
+    "route": "/rights/",
+    "w": 520,
+    "before": {
+      "findings": [
+        {
+          "kind": "dead",
+          "sel": "div.route-number.mono",
+          "metric": 167.6875,
+          "detail": "div.route-number.mono leaves 168px empty beneath it in a 125px row"
+        }
+      ],
+      "firstAction": {
+        "y": 486,
+        "sel": "button.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 19,
+        "share": 0.61
+      }
+    },
+    "after": {
+      "findings": [
+        {
+          "kind": "dead",
+          "sel": "div.route-number.mono",
+          "metric": 167.6875,
+          "detail": "div.route-number.mono leaves 168px empty beneath it in a 125px row"
+        }
+      ],
+      "firstAction": {
+        "y": 444,
+        "sel": "button.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 19,
+        "share": 0.62
+      }
+    }
+  },
+  {
+    "route": "/rights/",
+    "w": 561,
+    "before": {
+      "findings": [
+        {
+          "kind": "dead",
+          "sel": "div.route-number.mono",
+          "metric": 167.6875,
+          "detail": "div.route-number.mono leaves 168px empty beneath it in a 125px row"
+        }
+      ],
+      "firstAction": {
+        "y": 486,
+        "sel": "button.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 19,
+        "share": 0.61
+      }
+    },
+    "after": {
+      "findings": [
+        {
+          "kind": "dead",
+          "sel": "div.route-number.mono",
+          "metric": 167.6875,
+          "detail": "div.route-number.mono leaves 168px empty beneath it in a 125px row"
+        }
+      ],
+      "firstAction": {
+        "y": 444,
+        "sel": "button.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 19,
+        "share": 0.62
+      }
+    }
+  },
+  {
+    "route": "/rights/",
+    "w": 854,
+    "before": {
+      "findings": [
+        {
+          "kind": "dead",
+          "sel": "div.route-number.mono",
+          "metric": 104.6875,
+          "detail": "div.route-number.mono leaves 105px empty beneath it in a 125px row"
+        }
+      ],
+      "firstAction": {
+        "y": 482,
+        "sel": "button.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 19,
+        "share": 0.61
+      }
+    },
+    "after": {
+      "findings": [
+        {
+          "kind": "dead",
+          "sel": "div.route-number.mono",
+          "metric": 104.6875,
+          "detail": "div.route-number.mono leaves 105px empty beneath it in a 125px row"
+        }
+      ],
+      "firstAction": {
+        "y": 440,
+        "sel": "button.primary.action-panel-cta"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 19,
+        "share": 0.62
+      }
+    }
+  },
+  {
+    "route": "/section/",
+    "w": 640,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 483,
+        "sel": "input#search"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 1,
+        "share": 0.02
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": null,
+        "sel": null
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 0,
+        "largest": 18,
+        "ratio": null,
+        "peers": 0,
+        "share": 0
+      }
+    }
+  },
+  {
+    "route": "/tikki/",
+    "w": 639,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 546,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 463,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    }
+  },
+  {
+    "route": "/tikki/",
+    "w": 640,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 546,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 463,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    }
+  },
+  {
+    "route": "/tikki/",
+    "w": 641,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 576,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 492,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    }
+  },
+  {
+    "route": "/tikki/",
+    "w": 676,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 576,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 492,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    }
+  },
+  {
+    "route": "/tikki/",
+    "w": 714,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 576,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 492,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    }
+  },
+  {
+    "route": "/tikki/",
+    "w": 719,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 576,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 492,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    }
+  },
+  {
+    "route": "/tikki/",
+    "w": 720,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 576,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 492,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 63,
+        "topPct": 6.3,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 32,
+        "largest": 18,
+        "ratio": 1.78,
+        "peers": 6,
+        "share": 0.06
+      }
+    }
+  },
+  {
+    "route": "/tikki/",
+    "w": 721,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 743,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 6,
+        "share": 0.06
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 660,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 6,
+        "share": 0.06
+      }
+    }
+  },
+  {
+    "route": "/tikki/",
+    "w": 722,
+    "before": {
+      "findings": [],
+      "firstAction": {
+        "y": 743,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 6,
+        "share": 0.06
+      }
+    },
+    "after": {
+      "findings": [],
+      "firstAction": {
+        "y": 660,
+        "sel": "a.primary"
+      },
+      "chrome": {
+        "vh": 1000,
+        "top": 77,
+        "topPct": 7.7,
+        "bottom": 0,
+        "bottomPct": 0,
+        "stacked": 1,
+        "topSel": "header.header",
+        "bottomSel": null
+      },
+      "hierarchy": {
+        "h1": 44,
+        "largest": 18,
+        "ratio": 2.44,
+        "peers": 6,
+        "share": 0.06
+      }
+    }
+  }
+]
