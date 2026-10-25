@@ -200,6 +200,64 @@ export function parseFeed(
   }
   return [...byURL.values()];
 }
+/**
+ * The one definition of "this headline answers the reader's word".
+ *
+ * The map's counts and the list below it must narrow the same way, so the
+ * rule lives here once and both sides call it.
+ */
+export function headlineMatches(title: string, query: string): boolean {
+  return title.toLocaleLowerCase().includes(query.toLocaleLowerCase().trim());
+}
+
+/** The rows the reader actually sees: the edition's headlines, narrowed. */
+export function filterHeadlines(
+  headlines: Headline[],
+  topic: string,
+  query: string,
+): Headline[] {
+  return headlines.filter(
+    (h) =>
+      (topic === "all" || h.topics.includes(topic)) &&
+      headlineMatches(h.title, query),
+  );
+}
+
+/**
+ * The topic map's counts.
+ *
+ * These are the counts OF THE LIST, not of a window of days: the number
+ * beside a topic is the number of headlines that topic's filter will
+ * actually yield, so the map's number and the list head's number are the
+ * same number at every moment. The map used to count the edition's last
+ * seven days of distinct headlines while the filter ran over the whole
+ * snapshot, and one screen carried two numbers about one list — the map
+ * said 34, the list said 58 — neither of which could be checked against
+ * the other.
+ *
+ * The count narrows with the search word exactly as the list does, and it
+ * is a count of the edition being read, not of the wall clock: an edition
+ * that ages does not empty itself.
+ */
+export function topicCounts(headlines: Headline[], query = "") {
+  const rows = headlines.filter((h) => headlineMatches(h.title, query));
+  return topics
+    .map((t) => ({
+      ...t,
+      count: rows.filter((h) => h.topics.includes(t.id)).length,
+    }))
+    .filter((t) => t.count > 0)
+    .sort((a, b) => b.count - a.count || a.id.localeCompare(b.id));
+}
+
+/**
+ * The seven-day distinct-title count of a harvest window.
+ *
+ * NOT the map's count. The map counts the list (topicCounts), because a
+ * number the reader cannot check against the rows below it is decoration.
+ * This one counts the edition's own week by title, which is a different
+ * question: how many distinct stories, not how many rows.
+ */
 export function headlineTrends(
   headlines: Headline[],
   now = new Date(),

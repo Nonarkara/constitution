@@ -38,6 +38,12 @@ export const labels = {
 export const sectionLabel = (lang: Lang, n: number | string) =>
   lang === "zh" ? `第${n}条` : `${labels.section[lang]} ${n}`;
 
+/** The Transitory Provisions use internal study unit17, not a numbered chapter. */
+export const chapterLabel = (lang: Lang, n: number) =>
+  n === 17
+    ? tr(lang, "บทเฉพาะกาล", "Transitory provisions", "过渡条款")
+    : lang === "zh" ? `第${n}章` : `${labels.chapter[lang]} ${n}`;
+
 /** Chapter picker: Thai หมวด / English Chapter / Chinese 第N章, and a section range in that language. */
 export function chapterPickerLabel(
   lang: Lang,

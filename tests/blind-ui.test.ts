@@ -86,6 +86,9 @@ registry["@/lib/blind-checkpoint"] = load("lib/blind-checkpoint.ts", registry);
 registry["@/lib/question-visual"] = { questionVisualFor };
 registry["./MemoryCue"] = { PalacePicture: () => null };
 registry["next/image"] = { __esModule: true, default: ({src,alt}: {src:string;alt:string}) => React.createElement("img", {src,alt}) };
+// the proportions of each plate, measured from the file that ships
+registry["@/lib/illustration-ratios"] = load("lib/illustration-ratios.ts", registry);
+registry["@/lib/plate"] = load("lib/plate.ts", registry);
 registry["./QuestionVisual"] = load("components/QuestionVisual.tsx", registry);
 // The brief carries the page's crayon drawing. It is loaded for real, not
 // stubbed away, so the test sees the same DOM the learner does — and the

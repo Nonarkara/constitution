@@ -109,9 +109,9 @@ export function analyzeUserLearning(
   if (weakestChapters.length > 0) {
     const topWeak = analysis.find((row) => row.chapter === weakestChapters[0])!;
     const topChapterTitle = topWeak.title.th;
-    recTh = `ระบบตรวจพบว่าคุณควรเน้น "${topChapterTitle}" (หมวด ${topWeak.chapter}) มีข้อที่ควรเสริมความแม่นยำ`;
-    recEn = `We noticed Chapter ${topWeak.chapter} (${topWeak.title.en}) has areas to reinforce.`;
-    recZh = `系统发现您在第${topWeak.chapter}章（${topWeak.title.zh}）有待加强，建议重点攻克。`;
+    recTh = `ระบบตรวจพบว่าคุณควรเน้น "${topChapterTitle}"${topWeak.chapter === 17 ? "" : ` (หมวด ${topWeak.chapter})`} มีข้อที่ควรเสริมความแม่นยำ`;
+    recEn = `We noticed ${topWeak.chapter === 17 ? topWeak.title.en : `Chapter ${topWeak.chapter} (${topWeak.title.en})`} has areas to reinforce.`;
+    recZh = `系统发现您在${topWeak.chapter === 17 ? topWeak.title.zh : `第${topWeak.chapter}章（${topWeak.title.zh}）`}有待加强，建议重点攻克。`;
   }
 
   if (annotatedSectionsCount > 0) {

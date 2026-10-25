@@ -9,7 +9,7 @@ import { readingTokens, type Term, type Token } from "@/lib/reading";
 import { useStudy } from "./Provider";
 import { useReadOnScreen } from "./useReadOnScreen";
 import { LawRef } from "./LawRef";
-import { tr, labels, sectionLabel, type Lang } from "@/lib/i18n";
+import { tr, chapterLabel, sectionLabel, type Lang } from "@/lib/i18n";
 import { StudyArt } from "./StudyArt";
 
 const glossary = glossaryData as Term[];
@@ -29,13 +29,6 @@ function offsetIn(root: Node, node: Node, offset: number) {
   range.setEnd(node, offset);
   return range.toString().length;
 }
-
-const chapterLabel = (lang: Lang, n: number) =>
-  n === 17
-    ? tr(lang, "บทเฉพาะกาล", "Transitory provisions", "过渡条款")
-    : lang === "zh"
-      ? `第${n}章`
-      : `${labels.chapter[lang]} ${n}`;
 
 // The whole constitution, one chapter per page, in the reader's language.
 // Select words to highlight them; tap a highlight to write a note.

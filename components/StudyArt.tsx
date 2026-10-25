@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { plateSize, plateStyle } from "@/lib/plate";
 
 /**
  * The crayon drawings, and the page each one belongs to.
@@ -46,6 +47,13 @@ export const STUDY_ART = {
 
 export type StudyArtScene = keyof typeof STUDY_ART;
 
+/**
+ * The plate is drawn at the height of the title it stands beside, so its width
+ * follows from its own proportions. Those proportions are measured from the
+ * file that ships and live in `lib/illustration-ratios.ts`, beside the file;
+ * the release gate checks the two against each other.
+ */
+
 /** These drawings echo the surrounding text; screen readers can skip them. */
 export function StudyArt({
   scene,
@@ -54,16 +62,17 @@ export function StudyArt({
   scene: StudyArtScene;
   compact?: boolean;
 }) {
+  const src = STUDY_ART[scene];
   return (
     <figure
       className={"study-art" + (compact ? " study-art-compact" : "")}
+      style={plateStyle(src)}
       aria-hidden="true"
     >
       <Image
-        src={STUDY_ART[scene]}
+        src={src}
         alt=""
-        width={900}
-        height={900}
+        {...plateSize(src)}
         sizes={
           compact
             ? "(max-width:720px) 100px, 150px"

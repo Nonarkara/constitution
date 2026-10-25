@@ -10,6 +10,13 @@ import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
 import { knowSummary, sectionSignals } from "@/lib/knowledge";
 import { RIGHT_GROUPS } from "@/lib/rights";
+import { plateSize, plateStyle } from "@/lib/plate";
+
+// The plate for this hero. The path is named once, in one place, because a
+// drawing is a cue for one page: the test that guards the catalogue counts
+// the places a drawing is named, and a drawing named four times in one
+// component reads as four placements.
+const HOME_PLATE = "/illustrations/reading-pastel.webp";
 
 // Counted from the data, never typed in. These were both wrong as literals
 // once: the homepage said 10 guide chapters (there are 13) and 22 civic
@@ -81,6 +88,20 @@ export function Home() {
   return (
     <div className="home-dashboard">
       <section className="hero">
+        {/* The drawing is written before the copy on purpose. On a narrow band
+            the drawing floats at the title's top right, and a float can only
+            be placed where it is written — after the text it drops to the
+            bottom of the page. The drawing is decorative (aria-hidden), so
+            the reading order is unchanged. */}
+        <figure className="hero-art" style={plateStyle(HOME_PLATE)} aria-hidden="true">
+          <Image
+            src={HOME_PLATE}
+            alt=""
+            {...plateSize(HOME_PLATE)}
+            priority
+            sizes="(max-width: 720px) 110px, 260px"
+          />
+        </figure>
         <div className="hero-copy">
           <span className="page-kicker mono">
             {tr(lang, "สมุดเรียนรัฐธรรมนูญ", "Constitutional Notebook", "宪法学习笔记")}
@@ -102,16 +123,6 @@ export function Home() {
             <p className="micro hero-reason">{reason}</p>
           </div>
         </div>
-        <figure className="hero-art" aria-hidden="true">
-          <Image
-            src="/illustrations/reading-pastel.webp"
-            alt=""
-            width={720}
-            height={720}
-            priority
-            sizes="(max-width: 720px) 110px, 260px"
-          />
-        </figure>
       </section>
 
       {/* Pulse Summary Bar. Rendered as three zeros, two divider rules and a

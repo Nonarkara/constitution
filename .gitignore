@@ -41,3 +41,7 @@ non-slop-shots/
 
 # scratch: the sentence-rewriting chunk pipeline regenerates this
 var/
+
+# Local illustration-tool bytecode; source and pinned dependencies are tracked.
+__pycache__/
+*.py[cod]

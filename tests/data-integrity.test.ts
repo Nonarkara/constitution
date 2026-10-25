@@ -1,9 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync, writeFileSync, mkdtempSync, cpSync, rmSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdtempSync, cpSync, rmSync, mkdirSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { execFileSync } from "node:child_process";
 import { checkDataIntegrity, factSignature } from "../scripts/check-data-integrity.mjs";
 
 /**
@@ -12,7 +11,7 @@ import { checkDataIntegrity, factSignature } from "../scripts/check-data-integri
  * A gate that has never failed proves nothing. This test copies the repo's
  * data into a scratch directory, changes a section number and a modal verb in
  * it, and requires the gate to catch both — and to name the field it caught
- * them in. Then it restores the data and requires the gate to be quiet again.
+ * them in. The real bank stays untouched, and must still pass afterwards.
  */
 
 const repo = process.cwd();
@@ -40,15 +39,17 @@ test("the gate catches a moved section number and a weakened modal", () => {
   const scratch = mkdtempSync(path.join(tmpdir(), "dataint-"));
   const original = readFileSync(BANK, "utf8");
   try {
-    cpSync(path.join(repo, "data", "fact-baseline.json"), path.join(scratch, "fact-baseline.json"));
+    mkdirSync(path.join(scratch, "data"));
+    for (const name of ["fact-baseline.json", "questions.json", "exam-topics.json"])
+      cpSync(path.join(repo, "data", name), path.join(scratch, "data", name));
     const data = JSON.parse(original);
     const q = data.find((x: { id: string }) => x.id === "c08-05");
     assert.ok(q, "the sample question must exist");
     q.explanation.th = q.explanation.th.replace("มาตรา 172", "มาตรา 173");
     q.explanation.en = q.explanation.en.replace("must be convened", "may be convened");
-    writeFileSync(BANK, JSON.stringify(data, null, 2) + "\n");
+    writeFileSync(path.join(scratch, "data", "questions.json"), JSON.stringify(data, null, 2) + "\n");
 
-    const { failures } = checkDataIntegrity(repo);
+    const { failures } = checkDataIntegrity(scratch);
     assert.ok(failures.length >= 2, `the gate must catch both edits, it caught ${failures.length}`);
     const joined = failures.join("\n");
     assert.match(joined, /c08-05#explanation\.th/, "the Thai field must be named");
@@ -56,12 +57,12 @@ test("the gate catches a moved section number and a weakened modal", () => {
     assert.match(joined, /sections? (lost|added)/i, "a section reference moved");
     assert.match(joined, /modals? (lost|added)/i, "a modal verb moved");
   } finally {
-    writeFileSync(BANK, original);
     rmSync(scratch, { recursive: true, force: true });
   }
-  // and quiet again
+  // The working bank stayed untouched throughout.
   const { failures } = checkDataIntegrity(repo);
-  assert.deepEqual(failures, [], "the gate must be quiet once the data is restored");
+  assert.equal(readFileSync(BANK, "utf8"), original, "the falsifier never rewrites the working question bank");
+  assert.deepEqual(failures, [], "the working data must still satisfy the gate");
 });
 
 test("the gate is wired into the release chain and into CI", () => {

@@ -232,9 +232,9 @@ export function CivicNotebook() {
         <Link href="/memory/">
           {tr(
             lang,
-            "ไปบ้านความจำครบ 16 หมวด",
-            "Visit the memory house for all sixteen chapters",
-            "走进涵盖十六章的记忆屋",
+            "ไปบ้านความจำ 16 ห้อง",
+            "Visit the memory house's sixteen rooms",
+            "走进记忆屋的十六间房",
           )}{" "}
           →
         </Link>

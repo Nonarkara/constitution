@@ -4,6 +4,11 @@
 :root,
 [data-theme="light"] {
   color-scheme: light;
+  /* The proportion of the drawing that stands in this column. Each plate sets
+     its own on the element (lib/plate.ts), from the shape of the file that
+     ships; this is the square a plate would be if it had no shape of its own.
+     It is declared here so the variable is never undefined in a theme. */
+  --plate-ratio: 1;
   --paper: #fff;
   --ink: #24251f;
   --muted: #65685c;
@@ -1230,40 +1235,35 @@ html[data-large="true"] {
 .inside-session {
   margin-top: 24px;
 }
-/* Original crayon scenes stay secondary to the learning task. */
+/* The crayon plate keeps its measured file proportions and transparent
+   ground, so it belongs to each reading theme without a rectangular frame. */
 .study-art {
   margin: 0;
-  width: 340px;
-  max-width: 100%;
-}
-.study-art img {
-  display: block;
+  position: relative;
+  /* The figure's box IS the drawing's shape — the same ratio as the file — so
+     the drawing fills it exactly: no rectangle around it, and no letterbox
+     inside it. The width comes from the column the drawing stands in; the
+     height follows from the file's own proportions. */
+  aspect-ratio: var(--plate-ratio, 1);
   width: 100%;
   height: auto;
 }
-/* The plate used to be absolutely positioned in the top-right corner while the
-   h1 reserved 185px for it and carried min-height:160px to clear it. That is
-   the orphan block the composition rules ban, and the min-height is the "fixed
-   height leaving empty space under short text" rule. Give the plate a column
-   of its own so nothing floats and nothing reserves space. */
-/* The plate column scales instead of stepping. It used to be a flat 200px
-   above 720px and 104px below, so crossing 721px by a single pixel widened the
-   viewport, shrank the text column from 564px to 209px, and broke the 44px
-   headline across four ragged lines. clamp() keeps one rule and no cliff. */
-/* The heading and the paragraph share one cell. The plate used to span both
-   rows of this grid, and a spanning item grows the rows it crosses, so the
-   heading was pushed down and a hole opened between the title and its own
-   paragraph — about 90px of nothing on every route. Four ways of closing it
-   were measured in a browser; only this one worked. */
+.study-art img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Intro artwork sits in the reading margin. A fixed percentage avoids the
+   circular sizing of an automatic float; the16px gutter keeps Thai headings
+   readable on a phone. Text can continue underneath once the drawing ends. */
 .intro-copy {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(150px, 26vw, 340px);
-  column-gap: clamp(16px, 3vw, 36px);
-  align-items: start;
+  display: flow-root;
 }
 .intro-text {
-  grid-column: 1;
-  grid-row: 1;
   min-width: 0;
 }
 .intro-text > h1 {
@@ -1273,24 +1273,28 @@ html[data-large="true"] {
 .intro-text > p {
   margin-top: 14px;
 }
+/* The float must be written before the text it stands beside, or the browser
+   can only place it where it is written — at the bottom of the page. Every
+   band writes its drawing first for that reason. The gutter is 16px: it is
+   inside the band's own width, and 28px of it came out of the title. */
 .intro-copy > .study-art {
-  grid-column: 2;
-  grid-row: 1;
-  position: static;
-  width: 340px;
+  float: right;
+  width: 36%;
+  margin: 0 0 20px 16px;
+}
+/* A marginal drawing must not determine the height of a short introduction.
+   Keep its file ratio and cap its height at180px above phone width. Text and
+   the next action flow beside it instead of inheriting a tall grid row. */
+@media (min-width: 721px) {
+  .intro-copy > .study-art {
+    width: min(36%, calc(180px * var(--plate-ratio, 1)));
+  }
 }
 @media (max-width: 720px) {
-  .intro-copy {
-    grid-template-columns: minmax(0, 1fr) clamp(120px, 30vw, 150px);
-  }
-  .intro-copy > .study-art {
-    width: 150px;
-  }
-  .intro-text > h1 {
-    min-height: 0;
-  }
   .audio-note > .study-art {
+    align-self: start;
     width: 100px;
+    max-width: none;
     margin: 0 0 12px 16px;
   }
 }
@@ -2415,30 +2419,47 @@ mark.hl.has-note {
   border: 2px solid var(--ink);
 }
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 40px;
-  align-items: start;
+  display: flow-root;
   padding: 24px 0 32px;
   margin-bottom: 0;
   border-bottom: 1px solid var(--line);
 }
 .hero-copy {
-  grid-column: 1;
-  grid-row: 1;
   max-width: 600px;
 }
 .hero-art {
-  margin: 0;
-  grid-column: 2;
-  grid-row: 1;
+  margin: 0 0 20px 16px;
+  float: right;
+  width: 36%;
+  position: relative;
+  aspect-ratio: var(--plate-ratio, 1);
 }
 .hero-art img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 1;
+  height: 100%;
   object-fit: contain;
+}
+@media (min-width: 1218px) {
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 48%;
+    gap: 40px;
+    align-items: start;
+  }
+  .hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .hero-art {
+    float: none;
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    margin: 0;
+  }
 }
 .hero-copy h1 {
   margin: 0 0 14px;
@@ -2702,21 +2723,13 @@ mark.hl.has-note {
   .app-grid {
     display: block;
   }
+  /* The hero's own layout on a phone is set further down, where the plate
+     stands at the title's top right at its own small size. Only the band's
+     spacing belongs here. */
   .hero {
-    grid-template-columns: minmax(0, 1fr) 100px;
     gap: 12px;
     padding-bottom: 24px;
     margin-bottom: 0;
-  }
-  .hero-art {
-    align-self: start;
-    margin: 0;
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .hero-art img {
-    aspect-ratio: 1;
-    object-fit: contain;
   }
   .hero-cta {
     width: fit-content;
@@ -3600,7 +3613,7 @@ mark.hl.has-note {
 /* Civic expansion: story path, compact bulletin, author note. */
 .civic-title { display:flex; align-items:center; justify-content:space-between; gap:20px; }
 .civic-title h1 { margin-bottom:12px; max-width:24ch; }
-.civic-title .study-art { flex:0 0 140px; }
+.civic-title .study-art { flex:0 0 140px; align-self:start; max-width:none; }
 .civic-shortcuts { display:flex; flex-wrap:wrap; gap:12px 24px; border-bottom:1px solid var(--line); padding:12px 0; }
 .civic-shortcuts a { min-height:44px; display:inline-flex; align-items:center; }
 .journey-progress { display:flex; flex-wrap:wrap; border-block:1px solid var(--line); margin:24px 0; }
@@ -3632,8 +3645,23 @@ mark.hl.has-note {
 .actions { display:flex; flex-wrap:wrap; gap:12px; }
 .reflection-summary { border-block:1px solid var(--line); padding:20px 0; margin:24px 0; }
 .bulletin-heading { border-bottom:3px solid var(--ink); padding-bottom:24px; }
+/* The one thing to do stands in the band with the title, so it does not
+   carry a box of its own: the amber rule and the button are enough. A panel
+   inside a band is a box inside a box. */
+.bulletin-heading .action-panel {
+  margin: 22px 0 0;
+  padding: 0 0 0 16px;
+  border: 0;
+  border-left: 4px solid var(--accent);
+  background: none;
+}
 .bulletin-heading h1 { max-width:24ch; }
-.news-status { display:flex; align-items:center; flex-wrap:wrap; justify-content:space-between; gap:12px; padding:20px 0; }
+/* THE HARVEST BAND. One line: the state of the harvest, when it last
+   succeeded, and the button that fetches it again. These were two rows and a
+   stray line of fine print, saying one thing in three places. */
+.news-status { display:flex; align-items:baseline; flex-wrap:wrap; justify-content:space-between; gap:12px; padding:20px 0; }
+.news-status-state { min-width: 0; }
+.news-status-time { white-space: nowrap; }
 /* THE TOPIC INDEX.
    The topic filter used to be two controls in two places: a <select> in the
    filter bar and a cloud of chips three screens below it, at the bottom of a
@@ -3648,19 +3676,94 @@ mark.hl.has-note {
    count is the evidence and the order is the ranking, so the size ramp the
    cloud used to carry is gone — it is the one thing that put a 26px chip
    beside a 32px title. The busiest topics are set in ink instead. */
-.news-filters { display:flex; flex-wrap:wrap; gap:20px; margin:24px 0; }
-.news-filters label { flex:0 1 320px; display:flex; flex-direction:column; gap:8px; font-size:var(--micro); }
-.news-filters input { min-height:44px; border:1px solid var(--muted); padding:8px; width:100%; }
-.news-topics { border-block:1px solid var(--line); padding:20px 0; }
-.news-topics-head { display:flex; align-items:baseline; gap:16px; }
-.news-topics-head h2 { margin:0; font-size:var(--body); }
-.topic-index { list-style:none; padding:0; margin:12px 0 0; width:fit-content; max-width:100%; }
-.topic-index li { border-top:1px solid var(--line); }
-.topic-index button { display:flex; align-items:baseline; justify-content:space-between; gap:16px; width:100%; min-height:36px; padding:6px 0; border:0; background:none; text-align:left; font-size:var(--micro); font-weight:400; }
-.topic-index button.lead { font-weight:600; }
-.topic-index .topic-count { color:var(--muted); font-variant-numeric:tabular-nums; }
-.topic-index button[aria-pressed="true"] { background:var(--accent); color:var(--accent-ink); }
-.topic-index button[aria-pressed="true"] .topic-count { color:inherit; }
+/* THE MAP. A memory palace for a news desk.
+   The topic rows used to sit in a 992px section with 87px of content in it:
+   nine hundred pixels of nothing beside seven lines of evidence. Giving them
+   a bar to fill the width was worse — a wall of near-identical black, one
+   880px long per topic, which compares nothing.
+
+   So each row was given something worth the width instead: the subject of
+   the constitution suggested by broad keyword matches, its sections,
+   and a memory-house room for further study — the room that carries the picture, the mnemonic and the
+   question. The count stays beside the name because the count is the
+   evidence, and the order is the ranking.
+
+   The rows share three left edges — the names, the subjects and the room
+   links all begin at the same x — so the eye reads down a column instead of
+   across a page of white. */
+.news-map { margin: 26px 0 0; }
+.news-map-head { display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; }
+.news-map-head h2 { margin:0; font-size:var(--body); }
+.news-map-head p { margin:0; }
+.news-map-list { display:grid; grid-template-columns:max-content minmax(0, max-content) max-content; width:fit-content; max-width:100%; list-style:none; padding:0; margin:14px 0 0; }
+.news-map-row {
+  display:grid;
+  grid-column:1 / -1;
+  grid-template-columns:subgrid;
+  column-gap:18px;
+  align-items:baseline;
+  border-top:1px solid var(--line);
+  padding:7px 0;
+}
+.news-map-row > button {
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  min-height:24px;
+  padding:0;
+  border:0;
+  background:none;
+  font:inherit;
+  text-align:left;
+  cursor:pointer;
+}
+.news-map-topic { font-weight:600; }
+.news-map-count { color:var(--muted); font-variant-numeric:tabular-nums; }
+/* The cue is the subject of the constitution and the sections it is matched
+   to. It is never shortened: an ellipsis hides the law it points at, and a
+   hidden law is a hole with better manners. It wraps if it must, which it
+   only can where the band gives it room to do so. */
+.news-map-cue { display:flex; align-items:baseline; gap:10px; min-width:0; color:var(--muted); }
+.news-map-subject { min-width:0; overflow-wrap:anywhere; }
+.news-map-sections { flex:0 0 auto; font-size:var(--micro); white-space:nowrap; }
+.news-map-room { flex:0 0 auto; color:var(--muted); text-decoration:none; white-space:nowrap; }
+.news-map-room:hover,
+.news-map-room:focus-visible { color:var(--ink); text-decoration:underline; }
+/* The pressed topic wears the house's wash, not a second solid amber: this
+   page already has one filled action, and a filled block here would be a
+   second one. */
+.news-map-row > button[aria-pressed="true"] {
+  background:var(--accent-wash);
+  outline:2px solid var(--accent-deep);
+  outline-offset:2px;
+}
+.news-map-clear { margin-top:12px; }
+/* THE LIST HEAD. How many headlines, and the one field that narrows them,
+   on one row. The search box used to stand alone in a 992px bar with a
+   320px field in it, and the count stood alone on a line of its own: two
+   pieces of information about the same list, in two places. */
+.news-list-head {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+  border-top:3px solid var(--ink);
+  padding:16px 0 0;
+}
+.news-list-count { margin:0; }
+.news-search { display:flex; align-items:center; gap:10px; }
+.news-search-label { color:var(--muted); font-size:var(--micro); }
+.news-search input { min-height:44px; width:260px; border:1px solid var(--muted); padding:8px 12px; background:var(--paper); color:var(--ink); }
+.news-list-head + .headline-list > li:first-child { border-top:0; }
+/* Keep the topic-to-study guide under the featured story. On phones it
+   clears the title illustration so long subjects have the full reading width. */
+.intro-copy--map > .news-map {
+  /* On a narrow band the drawing floats at the title's top right. The map
+     starts below it: nine rows squeezed beside a drawing would be nine rows
+     of broken text. */
+  clear: both;
+}
 .headline-list { list-style:none; padding:0; margin:0; }
 .headline-list li { padding:24px 0; border-top:1px solid var(--line); }
 .headline-list a { display:block; font-size:var(--body); font-weight:600; text-decoration:none; min-height:44px; }
@@ -3677,7 +3780,7 @@ mark.hl.has-note {
 footer { flex-wrap:wrap; gap:16px; }
 @media(max-width:720px) {
  .civic-title { align-items:flex-start; gap:10px; }
- .civic-title .study-art { flex:0 0 90px; }
+ .civic-title .study-art { flex:0 0 90px; align-self:start; max-width:none; }
  .civic-title h1 { font-size:var(--display); }
  .journey-chapter { padding-left:16px; }
  .vote-inputs { grid-template-columns:1fr; }
@@ -3690,8 +3793,15 @@ footer { flex-wrap:wrap; gap:16px; }
 @media(max-width:720px) {
  .journey-progress { flex-wrap:nowrap; overflow-x:auto; max-width:100%; }
  .journey-progress button { flex:0 0 165px; }
- .news-filters { gap:10px; }
- .news-filters label { flex:1 1 160px; }
+ .news-map { margin-top:20px; }
+ /* Three columns cannot hold a topic, its subject and a room link in 358px.
+    The name and the room link share the first line; the subject and the
+    sections sit under them, where they can be read. */
+ .news-map-list { width:100%; grid-template-columns:minmax(0, 1fr) max-content; }
+ .news-map-row { row-gap:4px; }
+ .news-map-cue { grid-column:1 / -1; }
+ .news-search input { width:100%; }
+ .news-search { flex:1 1 200px; }
 }
 @media(min-width:721px) {
  .journey-progress { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
@@ -4465,10 +4575,7 @@ footer {
   margin: 0 auto;
 }
 .tikki-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(200px, 30vw, 300px);
-  gap: 28px;
-  align-items: center;
+  display: flow-root;
   padding-bottom: 32px;
   border-bottom: 2px solid var(--ink);
   margin-bottom: 40px;
@@ -4490,15 +4597,38 @@ footer {
   max-width: 100%;
 }
 .tikki-hero-art {
-  margin: 0;
-  width: 100%;
-  max-width: 300px;
+  margin: 0 0 20px 16px;
+  float: right;
+  width: 36%;
+  position: relative;
+  aspect-ratio: var(--plate-ratio, 1);
 }
 .tikki-hero-art img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: 4px;
+  height: 100%;
+  object-fit: contain;
+}
+@media (min-width: 1218px) {
+  .tikki-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 48%;
+    gap: 28px;
+    align-items: start;
+  }
+  .tikki-hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .tikki-hero-art {
+    float: none;
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    margin: 0;
+  }
 }
 .tikki-episodes {
   display: flex;
@@ -4521,8 +4651,11 @@ footer {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid var(--line);
-  background: var(--paper);
+  /* No frame, and no paper painted behind it. The file carries its own
+     alpha — the ground was taken out of the drawing itself — so a border
+     here would draw a rectangle around a drawing that has no edge, and a
+     background here would put the paper back in behind the ink. Either one
+     makes the drawing look pasted on. The drawing is ink on this page. */
 }
 .art-download-bar {
   display: flex;
@@ -4630,7 +4763,9 @@ footer {
   }
   .tikki-hero-art {
     width: 150px;
-    order: -1;
+    max-width: none;
+    align-self: start;
+    justify-self: start;
   }
   .wallpaper-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -4856,4 +4991,14 @@ footer {
   .dots-legend {
     grid-template-columns: repeat(9, minmax(0, max-content));
   }
+}
+
+/* A featured headline is evidence for opening its publisher, not hidden fine print. */
+.action-panel-subject { max-width:65ch; font-weight:700; margin:0 0 12px; }
+.news-map-row > button { min-height:44px; }
+.news-map-room { display:inline-flex; align-items:center; min-height:44px; }
+@media(max-width:720px) {
+  .intro-copy--map > .action-panel { clear:both; }
+  .news-map-room { grid-column:2; grid-row:1; }
+  .news-map-cue { grid-row:2; }
 }

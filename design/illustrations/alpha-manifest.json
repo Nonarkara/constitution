@@ -1,0 +1,1375 @@
+{
+  "note": "Every plate is the master with its paper ground removed by a border flood fill, cropped to the drawing, and written with a real alpha channel. The flood leaks through gaps in the crayon outline, so the paper it eats inside the drawing \u2014 the white page of an open notebook, the sheet under the spectacles \u2014 is put back afterwards: the transparency that the border cannot reach is enclosed by ink, and those pixels are given the master's own pixels. The transparent_fraction is measured on the file that ships; interior_holes is the transparency left over after the repair and is zero on every plate.",
+  "parameters": {
+    "threshold": 236,
+    "grow": 1,
+    "feather": 3
+  },
+  "plates": [
+    {
+      "source_size": [
+        720,
+        720
+      ],
+      "output_size": [
+        680,
+        624
+      ],
+      "crop_box": [
+        4,
+        44,
+        720,
+        701
+      ],
+      "transparent_fraction": 0.3274,
+      "opaque_fraction": 0.6424,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 2980,
+      "leaked_regions": 456,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/core-lock-pastel.webp",
+      "master": "design/illustrations/masters/core-lock-pastel.webp",
+      "master_sha256": "4d23e45edf7e738e95419649e3e292e7cd55e824a518717315f79fd8a57920b3",
+      "master_bytes": 130584,
+      "sha256": "fba090d29ce784d9a564e230b68e83bbced95a7daaa66412cf337970e05a07cb",
+      "bytes": 143702,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        720,
+        720
+      ],
+      "output_size": [
+        680,
+        543
+      ],
+      "crop_box": [
+        9,
+        85,
+        711,
+        646
+      ],
+      "transparent_fraction": 0.3569,
+      "opaque_fraction": 0.6098,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1868,
+      "leaked_regions": 446,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/listening-pastel.webp",
+      "master": "design/illustrations/masters/listening-pastel.webp",
+      "master_sha256": "2abccce8ad7038ac469f04f9fa2fcd48883ce19f051fc6c763e78315491fdc5e",
+      "master_bytes": 99904,
+      "sha256": "e9346ed02e4b04d3921e735daea7f87c10af6162742fedfe73797451b1581838",
+      "bytes": 120190,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        720,
+        720
+      ],
+      "output_size": [
+        680,
+        621
+      ],
+      "crop_box": [
+        19,
+        73,
+        702,
+        697
+      ],
+      "transparent_fraction": 0.3776,
+      "opaque_fraction": 0.5887,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 2114,
+      "leaked_regions": 611,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/reading-pastel.webp",
+      "master": "design/illustrations/masters/reading-pastel.webp",
+      "master_sha256": "52749139c2b118c1e9d0a2ef7e5e246436febbc328af6adbceea296a9e412b85",
+      "master_bytes": 109910,
+      "sha256": "3ef34e9bbb1d79f448b958e170fab56321eec2347034187be8ad0945d326c562",
+      "bytes": 137636,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        720,
+        720
+      ],
+      "output_size": [
+        673,
+        606
+      ],
+      "crop_box": [
+        20,
+        66,
+        693,
+        672
+      ],
+      "transparent_fraction": 0.4267,
+      "opaque_fraction": 0.5685,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 5,
+      "leaked_regions": 5,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/term-clock-pastel.webp",
+      "master": "design/illustrations/masters/term-clock-pastel.webp",
+      "master_sha256": "5c2a7f831ba16a1e64cd69da0b914cf2031b64c803d1f158668867e4dc461c4a",
+      "master_bytes": 101738,
+      "sha256": "07781ad03bccdd33fe97f4d141a9d8a5bba4a7c620438a8ec46d163514ad34d3",
+      "bytes": 110060,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        720,
+        720
+      ],
+      "output_size": [
+        680,
+        642
+      ],
+      "crop_box": [
+        7,
+        34,
+        704,
+        692
+      ],
+      "transparent_fraction": 0.5809,
+      "opaque_fraction": 0.3599,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 5023,
+      "leaked_regions": 799,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/thinking-pastel.webp",
+      "master": "design/illustrations/masters/thinking-pastel.webp",
+      "master_sha256": "77d7aa6df744615a030e6dd79cb040512764688d51609636cba796b0b62eaae1",
+      "master_bytes": 88386,
+      "sha256": "696f28a32b85971aa8ddae274165d7dea81476d5dde8578ccf42b45c342f498b",
+      "bytes": 127984,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        597
+      ],
+      "crop_box": [
+        3,
+        90,
+        832,
+        818
+      ],
+      "transparent_fraction": 0.5069,
+      "opaque_fraction": 0.4134,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 6129,
+      "leaked_regions": 1242,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-along-pastel.webp",
+      "master": "design/illustrations/masters/tikki-along-pastel.webp",
+      "master_sha256": "ef7c79d9a216b1cac5da87e56bd246fc8bf6642d493bd9455b8e5fcf89ea929c",
+      "master_bytes": 99116,
+      "sha256": "b568a5c01244015e830c338ee0ae84f5d2f6b684a641c6e4b8d8db71dc48adbf",
+      "bytes": 139198,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        585,
+        761
+      ],
+      "crop_box": [
+        141,
+        64,
+        726,
+        825
+      ],
+      "transparent_fraction": 0.1926,
+      "opaque_fraction": 0.8041,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 0,
+      "leaked_regions": 0,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-amend-pastel.webp",
+      "master": "design/illustrations/masters/tikki-amend-pastel.webp",
+      "master_sha256": "e114397c780b7abbc617f5edc739bb820be5e89c6e2b940c04c6cd44ffe1260c",
+      "master_bytes": 95272,
+      "sha256": "7867be580d20c94a1952b8968d37d5c2ae2a3a0de1c1078ceaf045034a24a3e2",
+      "bytes": 108176,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        720,
+        720
+      ],
+      "output_size": [
+        598,
+        614
+      ],
+      "crop_box": [
+        59,
+        60,
+        657,
+        674
+      ],
+      "transparent_fraction": 0.3893,
+      "opaque_fraction": 0.6099,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 11,
+      "leaked_regions": 9,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-bible-guide-pastel.webp",
+      "master": "design/illustrations/masters/tikki-bible-guide-pastel.webp",
+      "master_sha256": "526a86f16e400edc54cf49aaed7ad5e358488ee8359d9519115d38d0bae1960f",
+      "master_bytes": 49924,
+      "sha256": "16eccf9d09b70f37ec65ae2145bee4a6a4134842f9bde6467d9637a4e25ee298",
+      "bytes": 62086,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        630
+      ],
+      "crop_box": [
+        52,
+        101,
+        824,
+        816
+      ],
+      "transparent_fraction": 0.3962,
+      "opaque_fraction": 0.5822,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1681,
+      "leaked_regions": 375,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-bible-pastel.webp",
+      "master": "design/illustrations/masters/tikki-bible-pastel.webp",
+      "master_sha256": "abc85f6c63afa79e0f42f3f4e0a0a17e508a303912d95ecda2e6c907c71bdee1",
+      "master_bytes": 65904,
+      "sha256": "56b51d13f9c7010467581c3bd3415c2a6e633b9f35eba61acdf9b121e0facf74",
+      "bytes": 87910,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        627
+      ],
+      "crop_box": [
+        24,
+        92,
+        900,
+        900
+      ],
+      "transparent_fraction": 0.5065,
+      "opaque_fraction": 0.4707,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        137
+      ],
+      "leaked_pixels": 1537,
+      "leaked_regions": 397,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-cheatsheet-pastel.webp",
+      "master": "design/illustrations/masters/tikki-cheatsheet-pastel.webp",
+      "master_sha256": "b0b753096cbf0a81cd35389cb197d08b406d858c2efc6079d8a99fc827a23623",
+      "master_bytes": 75322,
+      "sha256": "72819363d887fa36d93e43fe4a1d08b7edcc9c8363a69fd4e81c806df8fe8c41",
+      "bytes": 78490,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        626,
+        631
+      ],
+      "crop_box": [
+        132,
+        158,
+        758,
+        789
+      ],
+      "transparent_fraction": 0.4375,
+      "opaque_fraction": 0.5607,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 3,
+      "leaked_regions": 3,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-cram-pastel.webp",
+      "master": "design/illustrations/masters/tikki-cram-pastel.webp",
+      "master_sha256": "831e210052fe8449f225039925f1752abd5f295bd6364e258c0ad8b51140f2be",
+      "master_bytes": 69386,
+      "sha256": "d7091611d23b79ecc855cb668d5a57f5199de909f035a0ff96981f344a81f577",
+      "bytes": 84610,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        815
+      ],
+      "crop_box": [
+        108,
+        79,
+        793,
+        900
+      ],
+      "transparent_fraction": 0.4096,
+      "opaque_fraction": 0.571,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 2041,
+      "leaked_regions": 446,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-drills-pastel.webp",
+      "master": "design/illustrations/masters/tikki-drills-pastel.webp",
+      "master_sha256": "dd6fb6d6b76040da63aeca1c38b07e02e24aec435c1127ec559292df0b5bc4ab",
+      "master_bytes": 84732,
+      "sha256": "1a4d4fba87abec54ba3909cb1c2f26719bd64f3fb19e7f526e9d0d1852a8ca68",
+      "bytes": 122020,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        633
+      ],
+      "crop_box": [
+        37,
+        98,
+        869,
+        873
+      ],
+      "transparent_fraction": 0.4274,
+      "opaque_fraction": 0.548,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1693,
+      "leaked_regions": 486,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-exam-pastel.webp",
+      "master": "design/illustrations/masters/tikki-exam-pastel.webp",
+      "master_sha256": "a0f2eefcf3c4928e31c5b97c8dec0b84e22621769da5a449310e1b576e07ee8a",
+      "master_bytes": 79512,
+      "sha256": "b3b401bad89bf2ba7f301c440b740a706e8a06b96b009c26f747c1936992d297",
+      "bytes": 94408,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        645
+      ],
+      "crop_box": [
+        33,
+        77,
+        900,
+        900
+      ],
+      "transparent_fraction": 0.4361,
+      "opaque_fraction": 0.549,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 958,
+      "leaked_regions": 293,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-flashcards-pastel.webp",
+      "master": "design/illustrations/masters/tikki-flashcards-pastel.webp",
+      "master_sha256": "04d80eb609815fd838acc1f0c122a17f41e320aebc403b98b775f7a95b6e1a09",
+      "master_bytes": 79650,
+      "sha256": "b60b009084eddd5f60f043543e891f3dc59a9e946cb3ec515d2ba16e7f39db28",
+      "bytes": 83826,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        615
+      ],
+      "crop_box": [
+        24,
+        99,
+        874,
+        868
+      ],
+      "transparent_fraction": 0.3863,
+      "opaque_fraction": 0.5861,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1796,
+      "leaked_regions": 502,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-games-pastel.webp",
+      "master": "design/illustrations/masters/tikki-games-pastel.webp",
+      "master_sha256": "26b118859908756148e745d1cae8939136f019f701c0a8b58c2046ba76004f65",
+      "master_bytes": 70186,
+      "sha256": "f2ac250f2fe57a973efb00c4b4b8990af02d637ffc1de68b7480eb85b5abd71e",
+      "bytes": 93766,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        800
+      ],
+      "crop_box": [
+        110,
+        99,
+        791,
+        900
+      ],
+      "transparent_fraction": 0.2079,
+      "opaque_fraction": 0.7767,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 732,
+      "leaked_regions": 188,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-glossary-pastel.webp",
+      "master": "design/illustrations/masters/tikki-glossary-pastel.webp",
+      "master_sha256": "836337f6d1019aa357bf3c9334e748766c76da97921a4a414569f7837eebe37a",
+      "master_bytes": 94750,
+      "sha256": "8eda227f330e66f4047562f0512e9e7ddf6f420561da1af5c8c99db7d7d1732a",
+      "bytes": 122736,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        612,
+        723
+      ],
+      "crop_box": [
+        131,
+        110,
+        743,
+        833
+      ],
+      "transparent_fraction": 0.2412,
+      "opaque_fraction": 0.7587,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 0,
+      "leaked_regions": 0,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-library-pastel.webp",
+      "master": "design/illustrations/masters/tikki-library-pastel.webp",
+      "master_sha256": "d93246efc3730474c7c2999a4c9cd7fd146b926df9fa79d334f1e2b8276eb2e7",
+      "master_bytes": 78658,
+      "sha256": "5d6025c03fb3e2b60b999cad432dd5226a0e5f8139b6d15aa184cccdd6b7fc39",
+      "bytes": 103588,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        527,
+        731
+      ],
+      "crop_box": [
+        194,
+        104,
+        721,
+        835
+      ],
+      "transparent_fraction": 0.4908,
+      "opaque_fraction": 0.5085,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 3,
+      "leaked_regions": 1,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-news-pastel.webp",
+      "master": "design/illustrations/masters/tikki-news-pastel.webp",
+      "master_sha256": "d4923b923225c8ba0c9aad039c0049174d676e8384666e14ed5ab2dcd2620104",
+      "master_bytes": 53330,
+      "sha256": "6f347763f45381294b7accd739306937588d90b8e0efba61558a37f001938ca4",
+      "bytes": 68976,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        618
+      ],
+      "crop_box": [
+        24,
+        99,
+        874,
+        871
+      ],
+      "transparent_fraction": 0.4335,
+      "opaque_fraction": 0.5365,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 9833,
+      "leaked_regions": 461,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-notebook-pastel.webp",
+      "master": "design/illustrations/masters/tikki-notebook-pastel.webp",
+      "master_sha256": "3b6d19d5d0b8bf9b9ef95ff5b8d2c8cdc1b0a263764462b53fc6122af7d90e6b",
+      "master_bytes": 64236,
+      "sha256": "dc8a8e56010471169ec621c4b5228759967c59ece3dd697ceaf0118b15247403",
+      "bytes": 89062,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        648
+      ],
+      "crop_box": [
+        45,
+        98,
+        859,
+        874
+      ],
+      "transparent_fraction": 0.4392,
+      "opaque_fraction": 0.537,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1523,
+      "leaked_regions": 428,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-notes-pastel.webp",
+      "master": "design/illustrations/masters/tikki-notes-pastel.webp",
+      "master_sha256": "1e7b02f0c19da3b9cc1b192344076d9d7c1809ace4633d87bbdeca3c183efaca",
+      "master_bytes": 87432,
+      "sha256": "ceb103b8236ff3f85946640fc801c986234b3f8af90852097f3a05f2635f5948",
+      "bytes": 90762,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        720,
+        720
+      ],
+      "output_size": [
+        526,
+        625
+      ],
+      "crop_box": [
+        166,
+        72,
+        692,
+        697
+      ],
+      "transparent_fraction": 0.4283,
+      "opaque_fraction": 0.5673,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1,
+      "leaked_regions": 1,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-officer-pastel.webp",
+      "master": "design/illustrations/masters/tikki-officer-pastel.webp",
+      "master_sha256": "2d26a4156c89d3a1fbe725431382b93a4e61c1e583c4352e1e6753c92c917299",
+      "master_bytes": 41996,
+      "sha256": "a83691197aa173066a729e8ce0b624ef98b51c7c4a001ce13370cf3a98544f52",
+      "bytes": 57312,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        720,
+        720
+      ],
+      "output_size": [
+        680,
+        612
+      ],
+      "crop_box": [
+        17,
+        76,
+        709,
+        699
+      ],
+      "transparent_fraction": 0.2519,
+      "opaque_fraction": 0.7243,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1445,
+      "leaked_regions": 339,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-overwhelmed-pastel.webp",
+      "master": "design/illustrations/masters/tikki-overwhelmed-pastel.webp",
+      "master_sha256": "0b1bf2c461837569b90029d2113540c5264290b434a7e1d1ad47fa39bbeb754e",
+      "master_bytes": 89012,
+      "sha256": "e9d35cee405d1ffc95371d73f289e2129db5d0f8e0ca16c73ed7d44e4bba8e0d",
+      "bytes": 123168,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        720,
+        720
+      ],
+      "output_size": [
+        609,
+        654
+      ],
+      "crop_box": [
+        55,
+        44,
+        664,
+        698
+      ],
+      "transparent_fraction": 0.5348,
+      "opaque_fraction": 0.463,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1,
+      "leaked_regions": 1,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-pass-pastel.webp",
+      "master": "design/illustrations/masters/tikki-pass-pastel.webp",
+      "master_sha256": "63af34e1eb88c95b438d3d6619624106cee6e4b077c5072d9817e3083a6d3cf9",
+      "master_bytes": 45222,
+      "sha256": "a4cbc25f1d48dcfda291f3ade13ab1e0d8f26a741183fbe771112c8ac5218759",
+      "bytes": 60188,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        656
+      ],
+      "crop_box": [
+        94,
+        98,
+        853,
+        830
+      ],
+      "transparent_fraction": 0.4553,
+      "opaque_fraction": 0.5216,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1788,
+      "leaked_regions": 369,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-polls-pastel.webp",
+      "master": "design/illustrations/masters/tikki-polls-pastel.webp",
+      "master_sha256": "380884a24b3e2cd898abee76b43e6f1e481c9d048a325843de7b10d488c907e4",
+      "master_bytes": 59882,
+      "sha256": "4f21761df5566d6f6f1691f102b8cf180f08b8880d2a594ff343d91242475137",
+      "bytes": 83292,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        681
+      ],
+      "crop_box": [
+        83,
+        89,
+        863,
+        870
+      ],
+      "transparent_fraction": 0.4166,
+      "opaque_fraction": 0.5607,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1786,
+      "leaked_regions": 454,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-practice-pastel.webp",
+      "master": "design/illustrations/masters/tikki-practice-pastel.webp",
+      "master_sha256": "805c7a4ad0afe61ad710326266f8052868ebe71af81cafe773be34f26fea52ea",
+      "master_bytes": 64362,
+      "sha256": "d96d2ad429cdbd35b9d1a42ad5ae48e946434d649836b793454f6618b5695de1",
+      "bytes": 92110,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        583
+      ],
+      "crop_box": [
+        0,
+        81,
+        900,
+        852
+      ],
+      "transparent_fraction": 0.4102,
+      "opaque_fraction": 0.535,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 5991,
+      "leaked_regions": 745,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-read-pastel.webp",
+      "master": "design/illustrations/masters/tikki-read-pastel.webp",
+      "master_sha256": "8966403745b1f0928d21f1953ea6fe54de20728b853c3dde60b27d2dc0c6bf95",
+      "master_bytes": 103316,
+      "sha256": "d41ac040399bd4db2e02972bd83b12f83628c27e3eedb5f10417282ebcd1f359",
+      "bytes": 128650,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        664
+      ],
+      "crop_box": [
+        24,
+        17,
+        900,
+        873
+      ],
+      "transparent_fraction": 0.4736,
+      "opaque_fraction": 0.5016,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1726,
+      "leaked_regions": 500,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-review-pastel.webp",
+      "master": "design/illustrations/masters/tikki-review-pastel.webp",
+      "master_sha256": "f5b469ca6be0a68f2e12e2719380afc01670d58d09615d45a15e424356fbc640",
+      "master_bytes": 73500,
+      "sha256": "a16091a4b7adff413283cdd93b7630d14755ca0959770b544b9cf3482c224992",
+      "bytes": 79980,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        657,
+        663
+      ],
+      "crop_box": [
+        122,
+        120,
+        779,
+        783
+      ],
+      "transparent_fraction": 0.3452,
+      "opaque_fraction": 0.6525,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 0,
+      "leaked_regions": 0,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-rights-pastel.webp",
+      "master": "design/illustrations/masters/tikki-rights-pastel.webp",
+      "master_sha256": "19aa9e9e2aa2ab3509918f534910fb1b4451cd65f85fd51951313909c3a0d137",
+      "master_bytes": 87704,
+      "sha256": "60781f63e566db547c116c4e0a3e94ef42ea2915c97d6a7ed21aa1c423bcb0e0",
+      "bytes": 110866,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        737
+      ],
+      "crop_box": [
+        108,
+        98,
+        815,
+        864
+      ],
+      "transparent_fraction": 0.4674,
+      "opaque_fraction": 0.5145,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1613,
+      "leaked_regions": 348,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-section-pastel.webp",
+      "master": "design/illustrations/masters/tikki-section-pastel.webp",
+      "master_sha256": "3d3f04fef07d9cd106e8ff8cfeedc6c31a1bcb7461ff39cd70ae02b0a0e465cc",
+      "master_bytes": 62126,
+      "sha256": "aa1894d047f6d79407f652fa83533e16453376a90e79a7f6f13f07095b0259fc",
+      "bytes": 92068,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        552,
+        747
+      ],
+      "crop_box": [
+        151,
+        87,
+        703,
+        834
+      ],
+      "transparent_fraction": 0.3711,
+      "opaque_fraction": 0.6276,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 0,
+      "leaked_regions": 0,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-settings-pastel.webp",
+      "master": "design/illustrations/masters/tikki-settings-pastel.webp",
+      "master_sha256": "0bc1898112427a573f6bf9fff2c351e12dcdfa20eebb38da76105309fcde8e53",
+      "master_bytes": 63010,
+      "sha256": "0a30199c9be8b8dd9c7760d1f30be5909886d124c4238c8bb6873f80ff524e85",
+      "bytes": 81716,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        720,
+        720
+      ],
+      "output_size": [
+        673,
+        586
+      ],
+      "crop_box": [
+        22,
+        76,
+        695,
+        662
+      ],
+      "transparent_fraction": 0.4116,
+      "opaque_fraction": 0.5862,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 1,
+      "leaked_regions": 1,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-smart-pastel.webp",
+      "master": "design/illustrations/masters/tikki-smart-pastel.webp",
+      "master_sha256": "38a48379528388034b00f18a83128e2f98dd0d36dbc71810a546554b7db25432",
+      "master_bytes": 49000,
+      "sha256": "0c92f0a028bb426612f2fb6a2f11a0821356b1afa0c062cc2ffede7656c02b02",
+      "bytes": 65238,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        639,
+        721
+      ],
+      "crop_box": [
+        149,
+        99,
+        788,
+        820
+      ],
+      "transparent_fraction": 0.398,
+      "opaque_fraction": 0.5937,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 2,
+      "leaked_regions": 1,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-sources-pastel.webp",
+      "master": "design/illustrations/masters/tikki-sources-pastel.webp",
+      "master_sha256": "f6a67d0774d631c025f4f08388910c8d7198b5d18bb5ba0052d078522b1b0424",
+      "master_bytes": 53576,
+      "sha256": "6c27012efdc3bbd26eeef2b01e232b7d474a9626951cdea3a1dc062e86352d67",
+      "bytes": 71322,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        720,
+        720
+      ],
+      "output_size": [
+        524,
+        629
+      ],
+      "crop_box": [
+        99,
+        62,
+        623,
+        691
+      ],
+      "transparent_fraction": 0.5315,
+      "opaque_fraction": 0.4638,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 9,
+      "leaked_regions": 9,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-story-cover-pastel.webp",
+      "master": "design/illustrations/masters/tikki-story-cover-pastel.webp",
+      "master_sha256": "d39f17bd7ca50413a71b6ce0fed36024a15b70c949a6c2939c02ae14cac061a2",
+      "master_bytes": 35218,
+      "sha256": "219fb9257b7864bec4dba6fbb5515e7e47b7b7a70325ab4f1b00137b40aa0cce",
+      "bytes": 47976,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        720,
+        720
+      ],
+      "output_size": [
+        680,
+        620
+      ],
+      "crop_box": [
+        19,
+        79,
+        699,
+        699
+      ],
+      "transparent_fraction": 0.4149,
+      "opaque_fraction": 0.5831,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 7,
+      "leaked_regions": 4,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-student-pastel.webp",
+      "master": "design/illustrations/masters/tikki-student-pastel.webp",
+      "master_sha256": "c082e7ce369fe4b7ad76e91663f4309b2eb768c4bc9d6f2c5a4cb9e34ef70d2a",
+      "master_bytes": 67418,
+      "sha256": "744076481012cea66ffb450e4c30257c4fa4d9199cd165e0f345b24378bd971b",
+      "bytes": 86714,
+      "used_width": 680
+    },
+    {
+      "source_size": [
+        900,
+        900
+      ],
+      "output_size": [
+        680,
+        661
+      ],
+      "crop_box": [
+        38,
+        63,
+        872,
+        874
+      ],
+      "transparent_fraction": 0.3147,
+      "opaque_fraction": 0.6405,
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaked_pixels": 24865,
+      "leaked_regions": 542,
+      "interior_holes": 0,
+      "threshold": 236,
+      "grow": 1,
+      "feather": 3,
+      "served": "public/illustrations/tikki-topics-pastel.webp",
+      "master": "design/illustrations/masters/tikki-topics-pastel.webp",
+      "master_sha256": "44c2c9ec95486b58fa4c4da58ade15c3e0e1a87415800fe226f7cdc1955f03b1",
+      "master_bytes": 127668,
+      "sha256": "e93f80cc34b8127dae6709baf731e01529913768e6a975c5b2b6ee4cd5d3b793",
+      "bytes": 150880,
+      "used_width": 680
+    }
+  ],
+  "kept": [
+    {
+      "name": "civic-palace-pastel.webp",
+      "served": "public/illustrations/civic-palace-pastel.webp",
+      "sha256": "17339a5edac606b13126aeaef45a18e0522f1551e12c8a4d4383e36b4c64ce3f",
+      "bytes": 268578,
+      "output_size": [
+        2172,
+        726
+      ],
+      "ground": "own \u2014 a picture of a place; the scene is its own background"
+    },
+    {
+      "name": "palace-1.webp",
+      "served": "public/illustrations/palace-1.webp",
+      "sha256": "62bdbddb150e798899b95118a40ca8962d8486d94b0501b6134536c982758bf2",
+      "bytes": 301004,
+      "output_size": [
+        2172,
+        724
+      ],
+      "ground": "own \u2014 a picture of a place; the scene is its own background"
+    },
+    {
+      "name": "palace-2.webp",
+      "served": "public/illustrations/palace-2.webp",
+      "sha256": "0a1fd408f1e2f3ffee20a24c92ecdbad758259b1633a5ce8398b14e57d613d91",
+      "bytes": 268478,
+      "output_size": [
+        2172,
+        724
+      ],
+      "ground": "own \u2014 a picture of a place; the scene is its own background"
+    },
+    {
+      "name": "palace-3.webp",
+      "served": "public/illustrations/palace-3.webp",
+      "sha256": "5f86f94b4bac74060ed2dc4bdf9fdb754f27a71f155854c541ad77e3b2333c12",
+      "bytes": 265576,
+      "output_size": [
+        2172,
+        724
+      ],
+      "ground": "own \u2014 a picture of a place; the scene is its own background"
+    },
+    {
+      "name": "palace-4.webp",
+      "served": "public/illustrations/palace-4.webp",
+      "sha256": "1bc92475c11ee9124726059845da1aa296b446ee1bfeaeed81fa9e82e9a48c87",
+      "bytes": 380086,
+      "output_size": [
+        2172,
+        724
+      ],
+      "ground": "own \u2014 a picture of a place; the scene is its own background"
+    }
+  ],
+  "rederived_sample": [
+    "core-lock-pastel.webp",
+    "thinking-pastel.webp",
+    "tikki-bible-pastel.webp",
+    "tikki-exam-pastel.webp",
+    "tikki-library-pastel.webp",
+    "tikki-notebook-pastel.webp",
+    "tikki-officer-pastel.webp",
+    "tikki-practice-pastel.webp",
+    "tikki-section-pastel.webp",
+    "tikki-topics-pastel.webp"
+  ],
+  "rederived_sample_note": "The plates the release gate re-derives from their masters, byte for byte. Re-encoding every plate on every run costs minutes and finds nothing more; every other plate is still measured for real transparency and still has its master's hash checked."
+}

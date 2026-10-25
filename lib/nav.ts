@@ -182,7 +182,7 @@ export function crumbsFor(path: string, ctx: NavContext = {}): NavLink[] {
     const chapter = ctx.check;
     return [
       doorLink("learn"),
-      { href: `/read/?c=${chapter}`, label: text(`หมวด ${chapter}`, `Ch ${chapter}`, `第${chapter}章`) },
+      { href: `/read/?c=${chapter}`, label: chapter === 17 ? text("บทเฉพาะกาล", "Transitory provisions", "过渡条款") : text(`หมวด ${chapter}`, `Ch ${chapter}`, `第${chapter}章`) },
       { href: `/practice/?check=${chapter}`, label: text("ตรวจสั้น ๆ", "Short check", "小测") },
     ];
   }
@@ -199,7 +199,7 @@ export function crumbsFor(path: string, ctx: NavContext = {}): NavLink[] {
     const chapter = chapterOfSection(n);
     return [
       ...head,
-      { href: `/read/?c=${chapter}`, label: text(`หมวด ${chapter}`, `Ch ${chapter}`, `第${chapter}章`) },
+      { href: `/read/?c=${chapter}`, label: chapter === 17 ? text("บทเฉพาะกาล", "Transitory provisions", "过渡条款") : text(`หมวด ${chapter}`, `Ch ${chapter}`, `第${chapter}章`) },
       { href: `/section/?n=${n}`, label: text(`ม.${n}`, `s.${n}`, `第${n}条`) },
     ];
   }

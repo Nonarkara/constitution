@@ -2,6 +2,11 @@ import Image from "next/image";
 import { tr, type Lang } from "@/lib/i18n";
 import { questionVisualFor, type VisualQuestion } from "@/lib/question-visual";
 import { PalacePicture } from "./MemoryCue";
+import { plateSize } from "@/lib/plate";
+
+// The answer map. Named once, for the same reason as every other drawing:
+// one page, one cue.
+const THINKING_PLATE = "/illustrations/thinking-pastel.webp";
 
 /** Mount only after feedback. Never mount in a blind sitting or a concealed retry. */
 export function QuestionVisual({ question: q, position, selected, lang }: {
@@ -9,6 +14,10 @@ export function QuestionVisual({ question: q, position, selected, lang }: {
 }) {
   const model = questionVisualFor(q, position);
   if (!model) return null;
+  const cuePlate =
+    model.cue?.topic === "pm-term"
+      ? "/illustrations/term-clock-pastel.webp"
+      : "/illustrations/core-lock-pastel.webp";
   const { answer, cue } = model;
   const wrong = selected !== undefined && selected !== q.answer ? q.choices[selected] : null;
   return (
@@ -16,7 +25,7 @@ export function QuestionVisual({ question: q, position, selected, lang }: {
       <summary>{tr(lang, "หยุดวาดความเข้าใจสักภาพ", "Pause and picture the rule", "停一下，把规则画在脑海里")}</summary>
       {cue ? <>
         <div className="visual-mnemonic">
-          {cue.image && cue.chapter ? <PalacePicture chapter={cue.chapter} /> : <Image src={cue.topic === "pm-term" ? "/illustrations/term-clock-pastel.webp" : "/illustrations/core-lock-pastel.webp"} alt="" width={720} height={720} sizes="100px" />}
+          {cue.image && cue.chapter ? <PalacePicture chapter={cue.chapter} /> : <Image src={cuePlate} alt="" {...plateSize(cuePlate)} sizes="100px" />}
           <div><strong className="visual-number">{cue.number}</strong><p>{cue.meaning[lang]}</p></div>
         </div>
         {cue.topic === "cabinet-size" && <div className="visual-seats" aria-hidden="true"><b>1</b><span>+</span><div>{Array.from({length: 35}, (_, i) => <i key={i} />)}</div><span>≤35</span></div>}
@@ -29,7 +38,7 @@ export function QuestionVisual({ question: q, position, selected, lang }: {
         <p className="micro">{cue.joke[lang]}</p>
       </> : <>
         <div className="visual-answer-map">
-          <Image src="/illustrations/thinking-pastel.webp" alt="" width={720} height={720} sizes="90px" />
+          <Image src={THINKING_PLATE} alt="" {...plateSize(THINKING_PLATE)} sizes="90px" />
           <div className="visual-decision"><span className="micro">{q.logic ? tr(lang,"กฎที่ใช้ตัดสิน","The deciding rule","判断依据") : tr(lang,"เริ่มจากตัวบท","Start with the text","从条文出发")}</span>{q.logic ? <p>{q.logic[lang]}</p> : <strong className="visual-number">{q.sections.map(n => "§" + n).join(" · ")}</strong>}</div>
           <span className="visual-arrow" aria-hidden="true">↓</span>
           <div className="visual-conclusion"><span className="micro">{tr(lang,"จึงเลือก","So choose","因此选择")}</span><p>{answer[lang]}</p></div>

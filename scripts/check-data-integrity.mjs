@@ -84,10 +84,10 @@ export function factSignature(text, lang = "en") {
 const key = (file, index, id, field, lang) => `${file}#${index}#${id}#${field}.${lang}`;
 
 /** Every field of every bank, with its fact signature. */
-export function currentFacts() {
+export function currentFacts(root = ROOT) {
   const out = {};
   for (const file of BANKS) {
-    const data = JSON.parse(readFileSync(path.join(ROOT, file), "utf8"));
+    const data = JSON.parse(readFileSync(path.join(root, file), "utf8"));
     data.forEach((q, index) => {
       for (const [name, obj] of bankChunks(q)) {
         for (const lang of ["th", "en", "zh"]) {
@@ -126,7 +126,7 @@ export function checkDataIntegrity(root = ROOT) {
   } catch (e) {
     return { failures: [`data-integrity: cannot read data/fact-baseline.json — ${e.message}`] };
   }
-  const current = currentFacts();
+  const current = currentFacts(root);
   const failures = [];
   for (const [k, was] of Object.entries(baseline)) {
     const now = current[k];

@@ -1,0 +1,3 @@
+# Keep pixel processing and the WebP encoder aligned with the recorded plates.
+Pillow==13.0.0
+numpy==1.26.4

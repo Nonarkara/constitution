@@ -46,8 +46,12 @@ function load(file: string, extras: Record<string, unknown> = {}) {
   new Function("require", "module", "exports", compiled)((id: string) => id in registry ? registry[id] : require(id), module, module.exports);
   return module.exports;
 }
+// the proportions of each plate, measured from the file that ships
+const plateRatios = load("../lib/illustration-ratios.ts");
+const plate = load("../lib/plate.ts", { "@/lib/illustration-ratios": plateRatios });
 const visual = load("../components/QuestionVisual.tsx", {
  "@/lib/question-visual": { questionVisualFor }, "./MemoryCue": { PalacePicture: () => null },
+ "@/lib/illustration-ratios": plateRatios, "@/lib/plate": plate,
  "next/image": { __esModule: true, default: ({src,alt}: {src:string;alt:string}) => React.createElement("img", {src,alt}) },
 });
 const card = load("../components/GuessFirstCard.tsx");

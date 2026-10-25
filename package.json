@@ -9,7 +9,7 @@
     "typecheck": "tsc --noEmit",
     "check:release": "node scripts/check-release.mjs",
     "verify": "node scripts/build-indexes.mjs && node --experimental-strip-types scripts/validate-drills.mjs && node scripts/validate-corpus.mjs && node scripts/validate-translations.mjs && node scripts/validate-cases.mjs && node scripts/validate-questions.mjs && npm test && npm run typecheck",
-    "release": "npm run verify && npm run build && node scripts/check-generated.mjs && npm run check:release && npm run check:slop && npm run check:layout && npm run check:hierarchy && npm run check:sentences && npm run check:data && npm run check:spatial-sync && npm run check:spatial",
+    "release": "npm run verify && npm run build && node scripts/check-generated.mjs && npm run check:release && npm run check:slop && npm run check:layout && npm run check:hierarchy && npm run check:sentences && npm run check:data && npm run check:illustrations && npm run check:spatial-sync && npm run check:spatial",
     "news:harvest": "node --experimental-strip-types scripts/harvest-news.mjs",
     "check:layout": "node scripts/check-layout.mjs",
     "check:slop": "node .non-slop/bin/non-slop.mjs scan .",
@@ -20,7 +20,8 @@
     "check:spatial": "node scripts/spatial/spatial-check.mjs --dir out --baseline design/spatial-baseline.json",
     "check:spatial:live": "node scripts/spatial/spatial-check.mjs --base https://constitution.nonarkara.org --report",
     "falsify:spatial": "node scripts/spatial/spatial-falsify.mjs out",
-    "check:spatial-sync": "node scripts/spatial-sync.mjs --check"
+    "check:spatial-sync": "node scripts/spatial-sync.mjs --check",
+    "check:illustrations": "node scripts/check-illustrations.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^5.11.2",

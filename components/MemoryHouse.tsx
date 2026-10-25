@@ -34,6 +34,7 @@ export function MemoryHouse() {
     }
   }, [selected, exercise]);
   const p = palace.find((p) => p.chapter === selected)!;
+  const chapter = chapters.find((c) => c.number === selected);
   if (exercise) return <Quiz ids={exercise} onExit={() => setExercise(null)} />;
   return (
     <section className="memory-house">
@@ -48,9 +49,9 @@ export function MemoryHouse() {
       <p>
         {tr(
           lang,
-          "16 ห้องแทน 16 หมวด มองภาพ นึกกฎ แล้วลองเรียกคำตอบกลับมา เรื่องและมุกเป็นเครื่องช่วยจำ ตัวบทเป็นแหล่งตัดสิน",
-          "Sixteen rooms for sixteen chapters. See the picture, recall the rule, then try a question. Stories and jokes are cues; the text decides the law.",
-          "十六个房间对应十六章。看图、回想规则，再试着作答。故事与笑话是线索，条文才是法律依据。",
+          "16 ห้องสำหรับ 16 หมวด มองภาพ นึกกฎ แล้วลองเรียกคำตอบกลับมา เรื่องและมุกเป็นเครื่องช่วยจำ ตัวบทเป็นแหล่งตัดสิน",
+          "Sixteen rooms for the sixteen numbered chapters. See the picture, recall the rule, then try a question. Stories and jokes are cues; the text decides the law.",
+          "十六个房间，对应宪法的十六个编号章节。看图、回想规则，再试着作答。故事与笑话是线索，条文才是法律依据。",
         )}
       </p>
       {/* One thing to do. The recall button used to sit at the bottom of the
@@ -99,6 +100,13 @@ export function MemoryHouse() {
         {palace.map((room) => (
           <button
             key={room.chapter}
+            /* Every room has its anchor in the served page, not only the one
+               that happens to be open when the page is first painted. A link
+               from the news desk into room 12 must land on something: in a
+               static export the fragment is resolved against the document
+               that was served, so the room that is not open yet still needs
+               an id to aim at. */
+            id={`room-${room.chapter}`}
             aria-pressed={selected === room.chapter}
             onClick={() => {
               setSelected(room.chapter);
@@ -121,7 +129,7 @@ export function MemoryHouse() {
           </button>
         ))}
       </nav>
-      <article ref={detail} className="palace-room" id={`room-${selected}`}>
+      <article ref={detail} className="palace-room" id={`room-detail-${selected}`}>
         <p>
           <a href="#memory-rooms">
             {tr(lang, "เลือกห้องอื่น", "Choose another room", "选择其他房间")} ↑
@@ -130,6 +138,26 @@ export function MemoryHouse() {
         <h2 tabIndex={-1}>
           {chapters.find((c) => c.number === selected)?.title[lang]}
         </h2>
+        {/* The room's extent, in sections. The news desk points at this room
+            with the section numbers of a subject that lie inside this
+            chapter, and a reader who follows the link can only check that
+            claim if the room says how far it reaches. */}
+        <p className="micro palace-extent">
+          {chapter
+            ? tr(
+                lang,
+                chapter.start === chapter.end
+                  ? `บทนี้คือมาตรา ${chapter.start}`
+                  : `บทนี้คือมาตรา ${chapter.start}–${chapter.end}`,
+                chapter.start === chapter.end
+                  ? `This chapter is section ${chapter.start}`
+                  : `This chapter is sections ${chapter.start}–${chapter.end}`,
+                chapter.start === chapter.end
+                  ? `本章为第${chapter.start}条`
+                  : `本章为第${chapter.start}–${chapter.end}条`,
+              )
+            : null}
+        </p>
         <figure>
           <PalacePicture chapter={selected} />
           <figcaption>

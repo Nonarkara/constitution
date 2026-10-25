@@ -43,18 +43,21 @@ export function PageAction({
   href,
   label,
   reason,
+  subject,
   kicker,
   external,
 }: {
   href: string;
   label: string;
   reason: string;
+  subject?: ReactNode;
   kicker?: string;
   /** An outward link to a source outside the app — it opens in a new tab. */
   external?: boolean;
 }) {
   return (
     <ActionPanel kicker={kicker}>
+      {subject ? <p className="action-panel-subject">{subject}</p> : null}
       {external ? (
         <a
           className="primary action-panel-cta"

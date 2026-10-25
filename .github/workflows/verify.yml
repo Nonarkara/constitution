@@ -38,6 +38,14 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      # The illustration tests re-derive real pixels; Node dependencies alone
+      # cannot supply their Python image libraries or a consistent WebP encoder.
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: scripts/illustrations/requirements.txt
+      - run: python -m pip install -r scripts/illustrations/requirements.txt
       - run: npm run verify
       - run: npm run build
       # The build regenerates data/*.json. If those changed, the commit that
@@ -69,6 +77,7 @@ jobs:
       # surface — a pull request that moves a fact has to move the baseline too,
       # and the diff says which fact moved.
       - run: npm run check:data
+      - run: npm run check:illustrations
       # The spatial instrument must be the canonical one. A copy that drifted is
       # a copy that measures something else, and a number that means one thing
       # in one project and another thing in the next is a false guarantee.

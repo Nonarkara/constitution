@@ -1,0 +1,416 @@
+{
+  "date": "2026-10-25",
+  "purpose": "Upgrade build-time Pillow without changing the illustrations",
+  "before": {
+    "Pillow": "11.3.0",
+    "numpy": "1.26.4"
+  },
+  "after": {
+    "Python": "3.12",
+    "Pillow": "13.0.0",
+    "numpy": "1.26.4"
+  },
+  "method": "Decode both WebP files to RGBA with Pillow13; compare full arrays byte-for-byte, including transparent pixels. All40 are identical. Before/after hashes identify each encoded file.",
+  "files": [
+    {
+      "file": "civic-palace-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "17339a5edac606b13126aeaef45a18e0522f1551e12c8a4d4383e36b4c64ce3f",
+      "afterSha256": "17339a5edac606b13126aeaef45a18e0522f1551e12c8a4d4383e36b4c64ce3f",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "core-lock-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "fba090d29ce784d9a564e230b68e83bbced95a7daaa66412cf337970e05a07cb",
+      "afterSha256": "fba090d29ce784d9a564e230b68e83bbced95a7daaa66412cf337970e05a07cb",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "listening-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "e9346ed02e4b04d3921e735daea7f87c10af6162742fedfe73797451b1581838",
+      "afterSha256": "e9346ed02e4b04d3921e735daea7f87c10af6162742fedfe73797451b1581838",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "palace-1.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "62bdbddb150e798899b95118a40ca8962d8486d94b0501b6134536c982758bf2",
+      "afterSha256": "62bdbddb150e798899b95118a40ca8962d8486d94b0501b6134536c982758bf2",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "palace-2.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "0a1fd408f1e2f3ffee20a24c92ecdbad758259b1633a5ce8398b14e57d613d91",
+      "afterSha256": "0a1fd408f1e2f3ffee20a24c92ecdbad758259b1633a5ce8398b14e57d613d91",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "palace-3.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "5f86f94b4bac74060ed2dc4bdf9fdb754f27a71f155854c541ad77e3b2333c12",
+      "afterSha256": "5f86f94b4bac74060ed2dc4bdf9fdb754f27a71f155854c541ad77e3b2333c12",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "palace-4.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "1bc92475c11ee9124726059845da1aa296b446ee1bfeaeed81fa9e82e9a48c87",
+      "afterSha256": "1bc92475c11ee9124726059845da1aa296b446ee1bfeaeed81fa9e82e9a48c87",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "reading-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "12cf3ac69e6a74cd4c2ac947f7e6b98fae3750c954b479bb85d4fac5a635ce5d",
+      "afterSha256": "3ef34e9bbb1d79f448b958e170fab56321eec2347034187be8ad0945d326c562",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "term-clock-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "a90bd3e90b258a92c2c881d6adba4617c07c22ad060caee2a1e800a62e97abb5",
+      "afterSha256": "07781ad03bccdd33fe97f4d141a9d8a5bba4a7c620438a8ec46d163514ad34d3",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "thinking-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "3c9d5882f188f9489761dc620d325a5b033500a287190c063dfbd93f48b1b016",
+      "afterSha256": "696f28a32b85971aa8ddae274165d7dea81476d5dde8578ccf42b45c342f498b",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-along-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "42784ad97b970c8d68a1b36dfb8412ff49f30e754e84037e87058975c18ef144",
+      "afterSha256": "b568a5c01244015e830c338ee0ae84f5d2f6b684a641c6e4b8d8db71dc48adbf",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-amend-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "7b8b39e5e986552bfa6249c93b1063879a754dbcf7b55f7c3d385c867b40bf45",
+      "afterSha256": "7867be580d20c94a1952b8968d37d5c2ae2a3a0de1c1078ceaf045034a24a3e2",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-bible-guide-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "16eccf9d09b70f37ec65ae2145bee4a6a4134842f9bde6467d9637a4e25ee298",
+      "afterSha256": "16eccf9d09b70f37ec65ae2145bee4a6a4134842f9bde6467d9637a4e25ee298",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-bible-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "56b51d13f9c7010467581c3bd3415c2a6e633b9f35eba61acdf9b121e0facf74",
+      "afterSha256": "56b51d13f9c7010467581c3bd3415c2a6e633b9f35eba61acdf9b121e0facf74",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-cheatsheet-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "72819363d887fa36d93e43fe4a1d08b7edcc9c8363a69fd4e81c806df8fe8c41",
+      "afterSha256": "72819363d887fa36d93e43fe4a1d08b7edcc9c8363a69fd4e81c806df8fe8c41",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-cram-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "7a0dc69fa6538a3602f2b9f845c4813164ff4db74e0cdaf948045ffe9ac13664",
+      "afterSha256": "d7091611d23b79ecc855cb668d5a57f5199de909f035a0ff96981f344a81f577",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-drills-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "aaac2022918188c6a7f1b489c37e68fabfc6ccd0a32225fc95743edc16e0b253",
+      "afterSha256": "1a4d4fba87abec54ba3909cb1c2f26719bd64f3fb19e7f526e9d0d1852a8ca68",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-exam-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "b3b401bad89bf2ba7f301c440b740a706e8a06b96b009c26f747c1936992d297",
+      "afterSha256": "b3b401bad89bf2ba7f301c440b740a706e8a06b96b009c26f747c1936992d297",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-flashcards-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "b60b009084eddd5f60f043543e891f3dc59a9e946cb3ec515d2ba16e7f39db28",
+      "afterSha256": "b60b009084eddd5f60f043543e891f3dc59a9e946cb3ec515d2ba16e7f39db28",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-games-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "d74b225b89f3c902aaa35b8dee5caddd1da03473f03bdc56f6cac1c3495cd19c",
+      "afterSha256": "f2ac250f2fe57a973efb00c4b4b8990af02d637ffc1de68b7480eb85b5abd71e",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-glossary-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "dcd2cae07ddf413be605d660d7c3e2e8885d1672f18a70444aa105a944552b92",
+      "afterSha256": "8eda227f330e66f4047562f0512e9e7ddf6f420561da1af5c8c99db7d7d1732a",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-library-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "5d6025c03fb3e2b60b999cad432dd5226a0e5f8139b6d15aa184cccdd6b7fc39",
+      "afterSha256": "5d6025c03fb3e2b60b999cad432dd5226a0e5f8139b6d15aa184cccdd6b7fc39",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-news-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "d90a6bb975d5fc92b5686af5b2bdef1d7760e85b0f7b78fbd15b448e43916b87",
+      "afterSha256": "6f347763f45381294b7accd739306937588d90b8e0efba61558a37f001938ca4",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-notebook-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "5fa5eec252dbdc5f914c7e25a1a071157bdefeff9dcc68a1994ab3667d7cc645",
+      "afterSha256": "dc8a8e56010471169ec621c4b5228759967c59ece3dd697ceaf0118b15247403",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-notes-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "ceb103b8236ff3f85946640fc801c986234b3f8af90852097f3a05f2635f5948",
+      "afterSha256": "ceb103b8236ff3f85946640fc801c986234b3f8af90852097f3a05f2635f5948",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-officer-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "f27cb1efde01762cbc7ee250126bec93e174dee8c5134efc18835465bc39fd15",
+      "afterSha256": "a83691197aa173066a729e8ce0b624ef98b51c7c4a001ce13370cf3a98544f52",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-overwhelmed-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "313f024160a146c350bc61c4b8395381e28c1f991ad8e9dfb8b5dc513401f1fa",
+      "afterSha256": "e9d35cee405d1ffc95371d73f289e2129db5d0f8e0ca16c73ed7d44e4bba8e0d",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-pass-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "41ff81b6de8bb84d99158fe5a8c355c499f6b7701f8a303595424be97a1bf662",
+      "afterSha256": "a4cbc25f1d48dcfda291f3ade13ab1e0d8f26a741183fbe771112c8ac5218759",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-polls-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "20fbdf4b445cb3fe32d67798b0fbaaeb80a2b1abd70d9f564a5699f023eb631a",
+      "afterSha256": "4f21761df5566d6f6f1691f102b8cf180f08b8880d2a594ff343d91242475137",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-practice-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "77cdcdf821b191e625b4c12cd6da16f0767e280f981630d58525a9aa9d0a910f",
+      "afterSha256": "d96d2ad429cdbd35b9d1a42ad5ae48e946434d649836b793454f6618b5695de1",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-read-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "ff170b1954177c227fbd9637ef29847af8ce802342df655ea13a54a2572e77c9",
+      "afterSha256": "d41ac040399bd4db2e02972bd83b12f83628c27e3eedb5f10417282ebcd1f359",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-review-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "a16091a4b7adff413283cdd93b7630d14755ca0959770b544b9cf3482c224992",
+      "afterSha256": "a16091a4b7adff413283cdd93b7630d14755ca0959770b544b9cf3482c224992",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-rights-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "85da76c871d9ef3ec4fcdc78e3838459353ae503ddd9b5860c3241db3194f1f0",
+      "afterSha256": "60781f63e566db547c116c4e0a3e94ef42ea2915c97d6a7ed21aa1c423bcb0e0",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-section-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "aa1894d047f6d79407f652fa83533e16453376a90e79a7f6f13f07095b0259fc",
+      "afterSha256": "aa1894d047f6d79407f652fa83533e16453376a90e79a7f6f13f07095b0259fc",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-settings-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "13b23c442d335493097529dc42f34ed2c7d5d83124b23fa9387b74efb1663818",
+      "afterSha256": "0a30199c9be8b8dd9c7760d1f30be5909886d124c4238c8bb6873f80ff524e85",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-smart-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "0c92f0a028bb426612f2fb6a2f11a0821356b1afa0c062cc2ffede7656c02b02",
+      "afterSha256": "0c92f0a028bb426612f2fb6a2f11a0821356b1afa0c062cc2ffede7656c02b02",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-sources-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "3f9e330da1100cb0d3cd9cd22e510391d8a803d021799340109bd5cee7f615aa",
+      "afterSha256": "6c27012efdc3bbd26eeef2b01e232b7d474a9626951cdea3a1dc062e86352d67",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-story-cover-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "b9356dce3c36649ec5dc8e520e9a114841debce896535eb1fb0a368a3e523c6b",
+      "afterSha256": "219fb9257b7864bec4dba6fbb5515e7e47b7b7a70325ab4f1b00137b40aa0cce",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-student-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "744076481012cea66ffb450e4c30257c4fa4d9199cd165e0f345b24378bd971b",
+      "afterSha256": "744076481012cea66ffb450e4c30257c4fa4d9199cd165e0f345b24378bd971b",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "tikki-topics-pastel.webp",
+      "sameDimensions": true,
+      "sameAlpha": true,
+      "maxColorDelta": 0,
+      "meanColorDelta": 0.0,
+      "beforeSha256": "129edd152fe10dea3c129e67fc38321b6578ef8fb523afb141ad2122be43ee3b",
+      "afterSha256": "e93f80cc34b8127dae6709baf731e01529913768e6a975c5b2b6ee4cd5d3b793",
+      "rgbaIdentical": true
+    }
+  ]
+}

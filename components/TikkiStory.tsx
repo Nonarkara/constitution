@@ -3,6 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
+import { plateSize, plateStyle } from "@/lib/plate";
+
+// The cover of the story. Named once, for the same reason as every other
+// drawing: one page, one cue.
+const STORY_COVER = "/illustrations/tikki-story-cover-pastel.webp";
 
 type StoryScene = {
   id: string;
@@ -143,6 +148,28 @@ export function TikkiStory() {
     <article className="tikki-story-page">
       {/* 1. Header with Mascot */}
       <header className="tikki-hero">
+        {/* The cover is its own drawing, not scene 1. The story's arc — from a
+            mountain of law to joyful learning — is the page's subject, so the
+            hero has to show the arc; repeating scene 1 here would put the same
+            picture on the page twice and shrink both copies.
+
+            It is written before the copy on purpose: on a narrow band the
+            drawing floats at the title's top right, and a float can only be
+            placed where it is written. The drawing is decorative
+            (aria-hidden), so the reading order is unchanged. */}
+        <figure
+          className="tikki-hero-art"
+          style={plateStyle(STORY_COVER)}
+          aria-hidden="true"
+        >
+          <Image
+            src={STORY_COVER}
+            alt=""
+            {...plateSize(STORY_COVER)}
+            priority
+            sizes="(max-width: 720px) 150px, 340px"
+          />
+        </figure>
         <div className="tikki-hero-copy">
           <span className="mono micro text-accent font-bold">
             {tr(lang, "เรื่องราวของติ๊กกี้", "Tikki's Story", "蒂基的故事")}
@@ -170,20 +197,6 @@ export function TikkiStory() {
             </Link>
           </div>
         </div>
-        {/* The cover is its own drawing, not scene 1. The story's arc — from a
-            mountain of law to joyful learning — is the page's subject, so the
-            hero has to show the arc; repeating scene 1 here would put the same
-            picture on the page twice and shrink both copies. */}
-        <figure className="tikki-hero-art" aria-hidden="true">
-          <Image
-            src="/illustrations/tikki-story-cover-pastel.webp"
-            alt=""
-            width={720}
-            height={720}
-            priority
-            sizes="(max-width: 720px) 150px, 340px"
-          />
-        </figure>
       </header>
 
       {/* 2. Story Narrative Timeline */}
@@ -194,8 +207,7 @@ export function TikkiStory() {
               <Image
                 src={scene.image}
                 alt={scene.title[lang]}
-                width={720}
-                height={720}
+                {...plateSize(scene.image)}
                 sizes="(max-width: 720px) 180px, 260px"
               />
               <div className="art-download-bar">
@@ -243,8 +255,7 @@ export function TikkiStory() {
                 <Image
                   src={scene.image}
                   alt={scene.title[lang]}
-                  width={720}
-                  height={720}
+                  {...plateSize(scene.image)}
                   sizes="(max-width: 720px) 140px, 220px"
                 />
               </figure>
