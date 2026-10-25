@@ -1,0 +1,37 @@
+{
+  "verifiedAt": "2026-10-25T07:33:40.933465+00:00",
+  "requests": [
+    {
+      "method": "GET",
+      "status": 200,
+      "bytes": 57253,
+      "type": "application/json",
+      "allow": null,
+      "nosniff": "nosniff",
+      "hsts": "max-age=31536000; includeSubDomains",
+      "topLevelKeys": [
+        "generatedAt",
+        "headlines",
+        "sources"
+      ]
+    },
+    {
+      "method": "HEAD",
+      "status": 200,
+      "bytes": 0,
+      "type": "application/json",
+      "allow": null,
+      "nosniff": "nosniff",
+      "hsts": "max-age=31536000; includeSubDomains"
+    },
+    {
+      "method": "POST",
+      "status": 405,
+      "bytes": 18,
+      "type": "text/plain;charset=UTF-8",
+      "allow": "GET, HEAD",
+      "nosniff": "nosniff",
+      "hsts": "max-age=31536000; includeSubDomains"
+    }
+  ]
+}

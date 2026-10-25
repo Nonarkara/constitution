@@ -1,0 +1,19 @@
+{
+  "buildRevision": "4a3ea3d13af45d75",
+  "workerVersion": "aa949f38-5203-49c3-bc15-1afec9c8afa3",
+  "sourceCommit": "e96978d",
+  "browser": "CUA in-app browser",
+  "checks": [
+    "No-match search removed featured publisher link",
+    "Clearing query restored current headline",
+    "Constitution filter displayed3 matching headlines",
+    "Room15 link opened amendment room; heading received focus",
+    "Browser Back returned to news",
+    "Fresh390x844 first screen: no horizontal overflow; title, Tikki art, featured headline and CTA visible"
+  ],
+  "progress": "Existing4/279 count preserved; no exam answers or marks changed",
+  "limits": [
+    "No forced chunk fault in live browser; recovery actual-component tests passed",
+    "Full90-question browser sitting not repeated"
+  ]
+}
