@@ -40,3 +40,32 @@ test("number cues preserve legal units and guard against misleading totals", () 
   );
   assert.ok(palace[15].meaning.en.includes("at least"));
 });
+
+test("the memory house shows the room before it shows the plan of the house", () => {
+  const src = readFileSync(
+    new URL("../components/MemoryHouse.tsx", import.meta.url),
+    "utf8",
+  );
+  const room = src.indexOf('<article ref={detail} className="palace-room"');
+  const index = src.indexOf('<nav\n        id="memory-rooms"');
+  assert.ok(room > 0, "the memory house has no room");
+  assert.ok(index > 0, "the memory house has no index of rooms");
+  assert.ok(
+    room < index,
+    "the room must come before the sixteen thumbnails: the page tells the learner to see the picture, so the picture cannot be under the index",
+  );
+  // The one action belongs to the room, so it must sit inside it — and above
+  // the picture, because the picture is taller than the first screen of a
+  // phone and the action has to be in that screen.
+  const picture = src.indexOf("<PalacePicture chapter={selected} />");
+  const action = src.indexOf('className="action-panel"');
+  const end = src.indexOf("</article>");
+  assert.ok(
+    picture > 0 && action > 0,
+    "the room has neither a picture nor an action",
+  );
+  assert.ok(
+    action < picture && picture < end,
+    "the room's action must sit above its picture, inside the room",
+  );
+});

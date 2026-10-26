@@ -90,7 +90,7 @@ export function Research() {
         )}
       </h2>
       <p>{tr(lang,"รอบฝึกเพิ่มการเรียกคืนก่อนเห็นตัวเลือก เช็กความมั่นใจ และอธิบายกลับด้วยคำของตนเอง ทั้งสามเลือกข้ามได้ ความมั่นใจไม่เพิ่มคะแนน และแอปไม่อ้างว่าตรวจเหตุผลที่เขียนได้แล้ว","Practice now offers recall before options, optional confidence checks and explanations in your own words. Confidence never raises a score, and written reasoning is not automatically verified.","练习加入看选项前回忆、可选信心检查与自我解释。信心不会提高分数，书面理由也不会自动核验。")}</p>
-      <p><a href="https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html" target="_blank" rel="noopener noreferrer">Dunlosky et al. (2013) ↗</a> · <a href="https://www.nature.com/articles/s44159-022-00089-1" target="_blank" rel="noopener noreferrer">Carpenter et al. (2022) ↗</a></p>
+      <p><a href="https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html" target="_blank" rel="noopener noreferrer">Dunlosky et al. (2013)&nbsp;↗</a> · <a href="https://www.nature.com/articles/s44159-022-00089-1" target="_blank" rel="noopener noreferrer">Carpenter et al. (2022)&nbsp;↗</a></p>
       <p className="micro">{tr(lang,"หลักฐานสนับสนุนการทดสอบตนเองและเว้นระยะชัดกว่าการอ่านซ้ำหรือไฮไลต์อย่างเดียว การอธิบาย การสลับเรื่อง และภาพจำขึ้นกับงานและผู้เรียน ช่วง 1/3/7/14 วันเป็นค่าตั้งต้น ไม่ใช่สูตรที่ดีที่สุดสำหรับทุกคน ผลของแอปนี้ยังต้องทดสอบกับผู้เรียนจริง","Evidence is stronger for practice testing and spacing than rereading or highlighting alone. Explanation, interleaving and imagery depend on task and learner. The 1/3/7/14-day schedule is a starting heuristic, not a universal optimum. This app still needs learner evaluation.","练习测试与间隔学习的证据强于单纯重读或划重点。解释、交错练习和图像效果取决于任务与学习者。1/3/7/14天是初始经验安排，并非普遍最优公式。本应用仍需学习者评估。")}</p>
       <table className="research-table" id="evidence">
         <caption>
@@ -151,7 +151,7 @@ export function Research() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Dunlosky et al. (2013) ↗
+                Dunlosky et al. (2013)&nbsp;↗
               </a>
             </td>
           </tr>

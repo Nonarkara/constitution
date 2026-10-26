@@ -252,7 +252,7 @@ export function Ask({ sections = [], initial = "" }: { sections?: number[]; init
             rel="noopener noreferrer"
             aria-label={tr(lang, "ข้อตกลงของ Non-Laws", "Non-Laws fine print", "Non-Laws 说明")}
           >
-            {tr(lang, "ข้อตกลง", "Fine print", "说明")} ↗
+            {tr(lang, "ข้อตกลง", "Fine print", "说明")}&nbsp;↗
           </a>
         </span>
       </label>

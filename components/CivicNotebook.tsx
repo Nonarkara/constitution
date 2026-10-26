@@ -173,8 +173,7 @@ export function CivicNotebook() {
             `ลองตรวจ ${ids.length} คำสัญญา`,
             `Check ${ids.length} promises`,
             `核查${ids.length}个承诺`,
-          )}{" "}
-          →
+          )}&nbsp;→
         </button>
         <p className="micro">
           {tr(

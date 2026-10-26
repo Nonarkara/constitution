@@ -174,10 +174,10 @@ export function Home() {
               <div className="anchor-actions">
                 {/* Amber marks the one next action (the lesson above); this is a second door, not a second call. */}
                 <Link href="/notebook/">
-                  {tr(lang, "เปิดสมุดสองหน้า", "Open the notebook", "打开双页笔记")} →
+                  {tr(lang, "เปิดสมุดสองหน้า", "Open the notebook", "打开双页笔记")}&nbsp;→
                 </Link>
                 <Link href="/read/">
-                  {tr(lang, "อ่านทั้งฉบับทีละหมวด", "Read the whole text", "阅读全文")} →
+                  {tr(lang, "อ่านทั้งฉบับทีละหมวด", "Read the whole text", "阅读全文")}&nbsp;→
                 </Link>
               </div>
             </div>

@@ -54,81 +54,6 @@ export function MemoryHouse() {
           "十六个房间，对应宪法的十六个编号章节。看图、回想规则，再试着作答。故事与笑话是线索，条文才是法律依据。",
         )}
       </p>
-      {/* One thing to do. The recall button used to sit at the bottom of the
-          room, below the picture and the law list — where nobody scrolled. */}
-      <div className="action-panel">
-        <span className="mono action-panel-kicker">
-          {tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
-        </span>
-        <button
-          className="primary action-panel-cta"
-          disabled={!ready}
-          onClick={() =>
-            setExercise(
-              (lessonQueue(questionIndex, progress, selected, Date.now(), 5)
-                .length
-                ? lessonQueue(questionIndex, progress, selected, Date.now(), 5)
-                : questionIndex
-                    .filter((q) => q.chapter === selected)
-                    .slice(0, 5)
-              ).map((q) => q.id),
-            )
-          }
-        >
-          {tr(
-            lang,
-            "ลองเรียกคืน 5 ข้อหรือน้อยกว่า",
-            "Try up to five recall questions",
-            "尝试最多五道回忆题",
-          )}{" "}
-          →
-        </button>
-        <p className="micro action-panel-reason">
-          {tr(
-            lang,
-            `ห้อง ${selected} — ${chapters.find((c) => c.number === selected)?.title[lang]}: มองภาพ นึกกฎ แล้วตอบ`,
-            `Room ${selected} — ${chapters.find((c) => c.number === selected)?.title[lang]}: see the picture, recall the rule, then answer.`,
-            `第${selected}间——${chapters.find((c) => c.number === selected)?.title[lang]}：看图、回想规则、再作答。`,
-          )}
-        </p>
-      </div>
-      <nav
-        id="memory-rooms"
-        className="palace-index"
-        aria-label={tr(lang, "เลือกห้อง", "Choose a room", "选择房间")}
-      >
-        {palace.map((room) => (
-          <button
-            key={room.chapter}
-            /* Every room has its anchor in the served page, not only the one
-               that happens to be open when the page is first painted. A link
-               from the news desk into room 12 must land on something: in a
-               static export the fragment is resolved against the document
-               that was served, so the room that is not open yet still needs
-               an id to aim at. */
-            id={`room-${room.chapter}`}
-            aria-pressed={selected === room.chapter}
-            onClick={() => {
-              setSelected(room.chapter);
-              setShow(true);
-              history.replaceState(null, "", `#room-${room.chapter}`);
-              detail.current?.scrollIntoView({
-                block: "start",
-                behavior: "auto",
-              });
-              detail.current
-                ?.querySelector<HTMLHeadingElement>("h2")
-                ?.focus({ preventScroll: true });
-            }}
-          >
-            <PalacePicture chapter={room.chapter} small />
-            <span>
-              {room.chapter}.{" "}
-              {chapters.find((c) => c.number === room.chapter)?.title[lang]}
-            </span>
-          </button>
-        ))}
-      </nav>
       <article ref={detail} className="palace-room" id={`room-detail-${selected}`}>
         <p>
           <a href="#memory-rooms">
@@ -158,6 +83,42 @@ export function MemoryHouse() {
               )
             : null}
         </p>
+        <div className="action-panel">
+          <span className="mono action-panel-kicker">
+            {tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
+          </span>
+          <button
+            className="primary action-panel-cta"
+            disabled={!ready}
+            onClick={() =>
+              setExercise(
+                (lessonQueue(questionIndex, progress, selected, Date.now(), 5)
+                  .length
+                  ? lessonQueue(questionIndex, progress, selected, Date.now(), 5)
+                  : questionIndex
+                      .filter((q) => q.chapter === selected)
+                      .slice(0, 5)
+                ).map((q) => q.id),
+              )
+            }
+          >
+            {tr(
+              lang,
+              "ลองเรียกคืน 5 ข้อหรือน้อยกว่า",
+              "Try up to five recall questions",
+              "尝试最多五道回忆题",
+            )}{" "}
+            →
+          </button>
+          <p className="micro action-panel-reason">
+            {tr(
+              lang,
+              `ห้อง ${selected} — ${chapters.find((c) => c.number === selected)?.title[lang]}: มองภาพ นึกกฎ แล้วตอบ`,
+              `Room ${selected} — ${chapters.find((c) => c.number === selected)?.title[lang]}: see the picture, recall the rule, then answer.`,
+              `第${selected}间——${chapters.find((c) => c.number === selected)?.title[lang]}：看图、回想规则、再作答。`,
+            )}
+          </p>
+        </div>
         <figure>
           <PalacePicture chapter={selected} />
           <figcaption>
@@ -204,6 +165,44 @@ export function MemoryHouse() {
           )}
         </p>
       </article>
+
+      <nav
+        id="memory-rooms"
+        className="palace-index"
+        aria-label={tr(lang, "เลือกห้อง", "Choose a room", "选择房间")}
+      >
+        {palace.map((room) => (
+          <button
+            key={room.chapter}
+            /* Every room has its anchor in the served page, not only the one
+               that happens to be open when the page is first painted. A link
+               from the news desk into room 12 must land on something: in a
+               static export the fragment is resolved against the document
+               that was served, so the room that is not open yet still needs
+               an id to aim at. */
+            id={`room-${room.chapter}`}
+            aria-pressed={selected === room.chapter}
+            onClick={() => {
+              setSelected(room.chapter);
+              setShow(true);
+              history.replaceState(null, "", `#room-${room.chapter}`);
+              detail.current?.scrollIntoView({
+                block: "start",
+                behavior: "auto",
+              });
+              detail.current
+                ?.querySelector<HTMLHeadingElement>("h2")
+                ?.focus({ preventScroll: true });
+            }}
+          >
+            <PalacePicture chapter={room.chapter} small />
+            <span>
+              {room.chapter}.{" "}
+              {chapters.find((c) => c.number === room.chapter)?.title[lang]}
+            </span>
+          </button>
+        ))}
+      </nav>
       <p>
         <Link href="/civic/">
           {tr(lang, "ลองตรวจคำสัญญา", "Try checking a promise", "试着核查承诺")}{" "}
