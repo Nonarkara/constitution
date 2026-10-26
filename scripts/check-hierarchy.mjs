@@ -32,6 +32,7 @@
  * number outside the worst page's actual reading.
  */
 import { createServer } from "node:http";
+import { waitForHierarchy } from "./hierarchy-ready.mjs";
 import { readdir } from "node:fs/promises";
 import { existsSync, readFileSync, rmSync } from "node:fs";
 import { execFile } from "node:child_process";
@@ -232,32 +233,12 @@ function measureOne(route, w, h, cb) {
   f.src = route;
   f.onload = function () {
     if (token !== TOKEN) return;
-    var tries = 0;
-    (function wait() {
-      if (token !== TOKEN) return;
-      var d;
-      try { d = f.contentDocument; } catch (e) { return finish({ route: route, w: w, error: 'cross-origin' }); }
-      // Eighty tries was eighty times sixty milliseconds, and on a loaded
-      // machine that was not long enough for a client-rendered page to
-      // hydrate. The gate then reported "no h1" for a page that has one —
-      // a flaky gate, which is worse than a failing one, because the next
-      // thing anybody does is ignore it. The wait is longer; the assertion
-      // is not: a page that really has no title still fails.
-      if (tries++ > 200) return finish(measure(route, w, d));
-      // Wait for the thing this gate actually measures: a rendered <h1> inside
-      // the page's main region. Several pages are client components that paint
-      // their heading only after hydration, and readyState alone was not
-      // enough — the gate measured an empty shell and reported "no h1" at
-      // random, which was a flaky gate, not a failing page.
-      var mainEl = d && (d.querySelector('main#content') || d.querySelector('main'));
-      if (d && d.readyState === 'complete' && d.querySelector('body') && mainEl && mainEl.querySelector('h1')) {
-        return setTimeout(function () {
-          if (token !== TOKEN) return;
-          finish(measure(route, w, d));
-        }, 220);
-      }
-      setTimeout(wait, 60);
-    })();
+    (${waitForHierarchy.toString()})(
+      function () { return f.contentDocument; },
+      function (d) { finish(measure(route, w, d)); },
+      function (error) { finish({ route: route, w: w, error: error }); },
+      function () { return token === TOKEN; }
+    );
   };
 }
 

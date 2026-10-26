@@ -68,10 +68,14 @@ export function ReadAll() {
 
   useEffect(() => {
     if (!sheet) return;
+    const opener = document.activeElement;
     sheetRef.current?.focus();
     const close = (e: KeyboardEvent) => e.key === "Escape" && setSheet(null);
     document.addEventListener("keydown", close);
-    return () => document.removeEventListener("keydown", close);
+    return () => {
+      document.removeEventListener("keydown", close);
+      if (opener instanceof HTMLElement && opener.isConnected) opener.focus();
+    };
   }, [sheet]);
 
   // Arriving from a link like /read/?c=3#s-36 lands on that section once text exists.
@@ -214,7 +218,9 @@ export function ReadAll() {
       )}
 
       {sheet && (
-        <div className="sheet" role="dialog" aria-modal="false" tabIndex={-1} ref={sheetRef}>
+        <div className="sheet" role="dialog" aria-modal="false"
+          aria-label={sheet.kind === "xref" ? sectionLabel(lang, sheet.section) : tr(lang, "บันทึกและคำอธิบาย", "Notes and definitions", "笔记与释义")}
+          tabIndex={-1} ref={sheetRef}>
           {sheet.kind === "mark" && activeMark && (
             <>
               <span className="mono">
@@ -250,7 +256,7 @@ export function ReadAll() {
           {sheet.kind === "xref" && (
             <>
               <span className="mono">{tr(lang, "ดูมาตรา", "PEEK", "查看条文")}</span>
-              <h2>{sectionLabel(lang, sheet.section)}</h2>
+              <h2 className="sheet-title">{sectionLabel(lang, sheet.section)}</h2>
               <p className="sheet-text" lang={lang}>
                 {readingText(sheet.section, lang)}
               </p>
@@ -277,7 +283,7 @@ export function ReadAll() {
               return (
                 <>
                   <span className="mono">{tr(lang, "อภิธานศัพท์", "GLOSSARY", "术语")}</span>
-                  <h2>{t.term[lang]}</h2>
+                  <h2 className="sheet-title">{t.term[lang]}</h2>
                   {lang !== "th" && <p className="micro" lang="th">{t.term.th}</p>}
                   <p>{t.def[lang]}</p>
                   <p className="micro">

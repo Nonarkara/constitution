@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { readingText, sections } from "@/lib/corpus";
 import { readingTokens } from "@/lib/reading";
@@ -57,8 +57,18 @@ export function LawText({ text, lang }: { text: string; lang: Lang }) {
 }
 
 export function Peek({ n, lang, onClose }: { n: number; lang: Lang; onClose: () => void }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  useEffect(() => {
+    const opener = document.activeElement;
+    ref.current?.focus();
+    return () => {
+      if (opener instanceof HTMLElement && opener.isConnected) opener.focus();
+    };
+  }, [n]);
   return (
-    <span className="sheet" role="dialog" aria-label={sectionLabel(lang, n)} style={{ display: "block" }}>
+    <span className="sheet" role="dialog" aria-modal="false" aria-label={sectionLabel(lang, n)} tabIndex={-1} ref={ref}
+      onKeyDown={(event) => { if (event.key === "Escape") { event.stopPropagation(); onClose(); } }}
+      style={{ display: "block" }}>
       <span className="mono">{tr(lang, "ดูมาตรา", "PEEK", "查看条文")}</span>
       <strong className="sheet-title">{sectionLabel(lang, n)}</strong>
       <span className="sheet-text" lang={lang} style={{ display: "block" }}>

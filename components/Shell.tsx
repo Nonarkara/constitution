@@ -120,7 +120,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </span>
         </Link>
         <div className="header-controls">
-        <details className="reading-menu">
+        <details className="reading-menu" onKeyDown={(event) => {
+          if (event.key !== "Escape") return;
+          event.preventDefault();
+          event.stopPropagation();
+          event.currentTarget.open = false;
+          event.currentTarget.querySelector("summary")?.focus();
+        }}>
           <summary>{tr(lang, "หน้าจอ", "Display", "显示")}</summary>
         <div className="themes" role="group" aria-label={tr(lang, "ขนาดตัวอักษรและสีหน้าจอ", "Text size and screen colours", "字号与屏幕配色")}>
           {/* Each swatch is the theme itself: its paper, its ink. */}
@@ -209,7 +215,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </Link>
           </div>
         </aside>
-        <main id="content">
+        <main id="content" data-study-ready={ready ? "true" : "false"}>
           {!online && (
             <p className="notice" role="status">
               {tr(

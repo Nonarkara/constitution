@@ -2287,6 +2287,7 @@ mark.hl.has-note {
 }
 .read-toolbar,
 .sheet {
+  --sheet-bottom: calc(12px + env(safe-area-inset-bottom));
   position: fixed;
   left: 0;
   right: 0;
@@ -2294,7 +2295,7 @@ mark.hl.has-note {
   z-index: 20;
   background: var(--paper);
   border-top: 3px solid var(--ink);
-  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  padding: 12px 16px var(--sheet-bottom);
 }
 .read-toolbar {
   display: flex;
@@ -2334,6 +2335,13 @@ mark.hl.has-note {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  /* A full statute can scroll for pages; its exit must stay in the sheet. */
+  position: sticky;
+  bottom: calc(-1 * var(--sheet-bottom));
+  padding-block: 8px var(--sheet-bottom);
+  margin-bottom: calc(-1 * var(--sheet-bottom));
+  background: var(--paper);
+  border-top: 1px solid var(--line);
 }
 @media (min-width: 900px) {
   .read-toolbar,

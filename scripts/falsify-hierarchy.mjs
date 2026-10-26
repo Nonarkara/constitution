@@ -104,7 +104,7 @@ for (const v of VIOLATIONS) {
   if (res.pass) {
     console.error(`  ✗ ${v.name} — the gate did NOT catch it. The rule is dead.`);
     failures++;
-  } else if (!res.out.includes(v.expect)) {
+  } else if ((!res.out.includes(v.expect) || /could not read|readiness-timeout|cross-origin/i.test(res.out))) {
     console.error(
       `  ✗ ${v.name} — the gate failed, but not for the expected reason.\n` +
         `      expected a message containing "${v.expect}", got:\n${res.out.trim().split("\n").slice(0, 6).join("\n")}`,
@@ -138,7 +138,7 @@ try {
   if (res.pass) {
     console.error("  ✗ a second h1 on the page — the gate did NOT catch it. The rule is dead.");
     failures++;
-  } else if (!res.out.includes("h1 elements")) {
+  } else if ((!res.out.includes("h1 elements") || /could not read|readiness-timeout|cross-origin/i.test(res.out))) {
     console.error(`  ✗ a second h1 on the page — failed for the wrong reason:\n${res.out.trim().split("\n").slice(0, 6).join("\n")}`);
     failures++;
   } else {
