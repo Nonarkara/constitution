@@ -216,7 +216,15 @@ test('a plate drawn at proportions the file does not have fails the gate', async
   try {
     const file = path.join(tmp, 'lib', 'illustration-ratios.ts');
     const text = readFileSync(file, 'utf8');
-    writeFileSync(file, text.replace('ratio: "527 / 731"', 'ratio: "1 / 1"'));
+    // The proportions live beside the files; read the real one rather than a
+    // number that rots the next time a plate is redrawn.
+    const manifest = JSON.parse(
+      readFileSync(path.join(tmp, 'design', 'illustrations', 'alpha-manifest.json'), 'utf8'),
+    );
+    const plate = manifest.plates.find((p: { served: string }) => p.served.endsWith('tikki-news-pastel.webp'));
+    const real = `ratio: "${plate.output_size[0]} / ${plate.output_size[1]}"`;
+    assert.ok(text.includes(real), `the proportion map does not carry ${real}`);
+    writeFileSync(file, text.replace(real, 'ratio: "1 / 1"'));
     const { failures } = await checkIllustrations(tmp);
     assert.ok(
       failures.some((f: string) => f.includes('proportions')),
@@ -228,11 +236,17 @@ test('a plate drawn at proportions the file does not have fails the gate', async
 });
 
 test('the webp reader finds the alpha channel and the canvas size', () => {
+  // The size is the manifest's, not a number typed here: a plate can be
+  // redrawn, and a reader that reads the wrong size is worse than no reader.
+  const manifest = JSON.parse(
+    readFileSync(path.join(root, 'design', 'illustrations', 'alpha-manifest.json'), 'utf8'),
+  );
+  const plate = manifest.plates.find((p: { served: string }) => p.served.endsWith('tikki-news-pastel.webp'));
   const buffer = readFileSync(path.join(root, 'public', 'illustrations', 'tikki-news-pastel.webp'));
   const head = readWebp(buffer);
   assert.equal(head.alpha, true);
-  assert.equal(head.width, 527);
-  assert.equal(head.height, 731);
+  assert.equal(head.width, plate.output_size[0]);
+  assert.equal(head.height, plate.output_size[1]);
 });
 
 test('the webp reader reports a lossy frame at the size it really is', () => {
