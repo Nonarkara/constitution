@@ -70,7 +70,7 @@ export function ReadAll() {
     if (!sheet) return;
     const opener = document.activeElement;
     sheetRef.current?.focus();
-    const close = (e: KeyboardEvent) => e.key === "Escape" && setSheet(null);
+    const close = (e: KeyboardEvent) => e.key === "Escape" && !e.defaultPrevented && setSheet(null);
     document.addEventListener("keydown", close);
     return () => {
       document.removeEventListener("keydown", close);

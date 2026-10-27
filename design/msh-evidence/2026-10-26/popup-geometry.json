@@ -1,0 +1,268 @@
+{
+  "build": "2c00a415203aeb27",
+  "measurements": [
+    {
+      "actions": {
+        "bottom": 844,
+        "height": 65,
+        "top": 779
+      },
+      "height": 844,
+      "overflow": false,
+      "ready": "true",
+      "scrollHeight": 2728,
+      "scrollTop": 0,
+      "sheet": {
+        "bottom": 844,
+        "height": 590.796875,
+        "top": 253.203125
+      },
+      "targets": [
+        {
+          "height": 44,
+          "text": "อ่านในหมวด →",
+          "width": 114.9453125
+        },
+        {
+          "height": 44,
+          "text": "ปิด",
+          "width": 50.3046875
+        }
+      ],
+      "textBottom": 2901.546875,
+      "textLength": 3194,
+      "width": 390
+    },
+    {
+      "scenario": "phone-end",
+      "actions": {
+        "bottom": 844,
+        "height": 65,
+        "top": 779
+      },
+      "height": 844,
+      "overflow": false,
+      "ready": "true",
+      "scrollHeight": 2728,
+      "scrollTop": 2140.5,
+      "sheet": {
+        "bottom": 844,
+        "height": 590.796875,
+        "top": 253.203125
+      },
+      "targets": [
+        {
+          "height": 44,
+          "text": "อ่านในหมวด →",
+          "width": 114.9453125
+        },
+        {
+          "height": 44,
+          "text": "ปิด",
+          "width": 50.3046875
+        }
+      ],
+      "textBottom": 761.046875,
+      "textLength": 3194,
+      "width": 390
+    },
+    {
+      "actions": {
+        "bottom": 875,
+        "height": 65,
+        "top": 810
+      },
+      "height": 900,
+      "overflow": false,
+      "ready": "true",
+      "scrollHeight": 2421,
+      "scrollTop": 1794.5,
+      "sheet": {
+        "bottom": 876,
+        "height": 630,
+        "top": 246
+      },
+      "targets": [
+        {
+          "height": 44,
+          "text": "อ่านในหมวด →",
+          "width": 114.9453125
+        },
+        {
+          "height": 44,
+          "text": "ปิด",
+          "width": 50.3046875
+        }
+      ],
+      "textBottom": 792.0859375,
+      "textLength": 3194,
+      "width": 1024
+    },
+    {
+      "actions": {
+        "bottom": 875,
+        "height": 65,
+        "top": 810
+      },
+      "height": 900,
+      "overflow": false,
+      "ready": "true",
+      "scrollHeight": 2421,
+      "scrollTop": 1794.5,
+      "sheet": {
+        "bottom": 876,
+        "height": 630,
+        "top": 246
+      },
+      "targets": [
+        {
+          "height": 44,
+          "text": "อ่านในหมวด →",
+          "width": 114.9453125
+        },
+        {
+          "height": 44,
+          "text": "ปิด",
+          "width": 50.3046875
+        }
+      ],
+      "textBottom": 792.0859375,
+      "textLength": 3194,
+      "width": 1440
+    },
+    {
+      "lang": "en",
+      "actions": {
+        "bottom": 844,
+        "height": 65,
+        "top": 779
+      },
+      "height": 844,
+      "overflow": false,
+      "ready": "true",
+      "scrollHeight": 4404,
+      "scrollTop": 0,
+      "sheet": {
+        "bottom": 844,
+        "height": 590.796875,
+        "top": 253.203125
+      },
+      "targets": [
+        {
+          "height": 44,
+          "text": "Read in its chapter →",
+          "width": 158.9921875
+        },
+        {
+          "height": 44,
+          "text": "Close",
+          "width": 66.8203125
+        }
+      ],
+      "textBottom": 4577.1171875,
+      "textLength": 4278,
+      "width": 320
+    },
+    {
+      "lang": "en",
+      "scenario": "end",
+      "actions": {
+        "bottom": 844,
+        "height": 65,
+        "top": 779
+      },
+      "height": 844,
+      "overflow": false,
+      "ready": "true",
+      "scrollHeight": 4404,
+      "scrollTop": 3816,
+      "sheet": {
+        "bottom": 844,
+        "height": 590.796875,
+        "top": 253.203125
+      },
+      "targets": [
+        {
+          "height": 44,
+          "text": "Read in its chapter →",
+          "width": 158.9921875
+        },
+        {
+          "height": 44,
+          "text": "Close",
+          "width": 66.8203125
+        }
+      ],
+      "textBottom": 761.1171875,
+      "textLength": 4278,
+      "width": 320
+    },
+    {
+      "lang": "zh",
+      "actions": {
+        "bottom": 844,
+        "height": 65,
+        "top": 779
+      },
+      "height": 844,
+      "overflow": false,
+      "ready": "true",
+      "scrollHeight": 1908,
+      "scrollTop": 0,
+      "sheet": {
+        "bottom": 844,
+        "height": 590.796875,
+        "top": 253.203125
+      },
+      "targets": [
+        {
+          "height": 44,
+          "text": "在章节中阅读 →",
+          "width": 127.2890625
+        },
+        {
+          "height": 44,
+          "text": "关闭",
+          "width": 60
+        }
+      ],
+      "textBottom": 2080.859375,
+      "textLength": 767,
+      "width": 320
+    },
+    {
+      "lang": "zh",
+      "scenario": "end",
+      "actions": {
+        "bottom": 844,
+        "height": 65,
+        "top": 779
+      },
+      "height": 844,
+      "overflow": false,
+      "ready": "true",
+      "scrollHeight": 1908,
+      "scrollTop": 1319.5,
+      "sheet": {
+        "bottom": 844,
+        "height": 590.796875,
+        "top": 253.203125
+      },
+      "targets": [
+        {
+          "height": 44,
+          "text": "在章节中阅读 →",
+          "width": 127.2890625
+        },
+        {
+          "height": 44,
+          "text": "关闭",
+          "width": 60
+        }
+      ],
+      "textBottom": 761.359375,
+      "textLength": 767,
+      "width": 320
+    }
+  ]
+}

@@ -120,8 +120,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </span>
         </Link>
         <div className="header-controls">
-        <details className="reading-menu" onKeyDown={(event) => {
-          if (event.key !== "Escape") return;
+        <details className="reading-menu" onKeyDownCapture={(event) => {
+          if (event.key !== "Escape" || !event.currentTarget.open) return;
           event.preventDefault();
           event.stopPropagation();
           event.currentTarget.open = false;
