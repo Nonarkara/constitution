@@ -197,6 +197,12 @@ the content below them sits lower by an amount that depends on the width. **Not 
 changed** — the same holes, the same overflow, the same five justified decisions. A taller drawing
 moved a page; it did not open a hole in one.
 
+The gate's own output was read, not just its exit code. It reported **no failure** and four notes
+it marks as "seen, recorded, and not a failure": the widths where a fixed-width container sits just
+below the viewport — `tikki-episodes` 500 px at 536, `settings-card` 640 px at 676,
+`notebook-controls` 400 px at 436, `dots-map` 850 px at 1138. Those are the container cliffs, and a
+receipt that does not measure a cliff has not measured the page.
+
 Getting here took three browser lifetimes. The recording sweep lost its browser **twice** — both
 times to another agent on this machine running `pkill -f "Google Chrome"`, not to a page fault:
 the instrument's own server answered the two routes it stalled on — and every asset they pull —
