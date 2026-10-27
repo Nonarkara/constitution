@@ -153,7 +153,7 @@ five scenes that keep their own ground are listed separately with their own hash
 
 | check | result |
 |---|---|
-| `npm test` | **pass** — 251 tests, 0 failures |
+| `npm test` | **pass** — 259 tests, 0 failures |
 | `npm run typecheck` | **clean** |
 | `npm run check:illustrations` | **pass** — 35 plates measured for real transparency, 10 re-derived from their masters byte for byte, no interior holes, no frame painted behind them; 5 scenes keep their own ground |
 | `npm run check:layout` | **pass** — 145 measurements across 29 routes at 390/721/860/1024/1440 px; no horizontal overflow, no all-zero readouts, no empty labelled regions |
