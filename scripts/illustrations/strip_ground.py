@@ -97,6 +97,38 @@ def _flood_from_border(mask: np.ndarray) -> np.ndarray:
         region = grown
 
 
+def _components(mask: np.ndarray) -> list[np.ndarray]:
+    """Split a boolean mask into its 8-connected regions.
+
+    Returns a list of boolean masks, one per region, biggest first. The
+    regions are returned as masks rather than index lists so the caller can
+    ask questions of a region (how big is it, how paper-like is it) without
+    walking the coordinates again.
+    """
+    h, w = mask.shape
+    seen = np.zeros(mask.shape, dtype=bool)
+    regions: list[np.ndarray] = []
+    ys, xs = np.nonzero(mask)
+    for y0, x0 in zip(ys.tolist(), xs.tolist()):
+        if seen[y0, x0]:
+            continue
+        region = np.zeros(mask.shape, dtype=bool)
+        stack = [(y0, x0)]
+        seen[y0, x0] = True
+        while stack:
+            y, x = stack.pop()
+            region[y, x] = True
+            for dy in (-1, 0, 1):
+                for dx in (-1, 0, 1):
+                    ny, nx = y + dy, x + dx
+                    if 0 <= ny < h and 0 <= nx < w and mask[ny, nx] and not seen[ny, nx]:
+                        seen[ny, nx] = True
+                        stack.append((ny, nx))
+        regions.append(region)
+    regions.sort(key=lambda r: int(r.sum()), reverse=True)
+    return regions
+
+
 def _grow(mask: np.ndarray, n: int) -> np.ndarray:
     """Dilate a boolean mask by n pixels (8-connected)."""
     if n <= 0:
@@ -153,6 +185,67 @@ def _count_regions(mask: np.ndarray) -> int:
     return count
 
 
+def _lift_islands(
+    alpha: np.ndarray,
+    luma: np.ndarray,
+    chroma: np.ndarray,
+    threshold: int,
+    max_chroma: float = 0.055,
+) -> tuple[np.ndarray, int, int]:
+    """Lift the paper the border flood could not reach.
+
+    The flood removes the paper that is CONNECTED to the edge of the sheet.
+    A drawing whose wash reaches across the sheet cuts the paper into
+    pieces, and the piece in the middle — or in a corner, where a soft grey
+    wash of the sheet survives — is never reached, so it stays on the plate
+    as a pale slab with a straight edge.
+
+    Such a slab is still paper. It is bright and neutral, the way paper is,
+    and it is not part of the drawing: a real part of the drawing carries
+    crayon or pencil, which is either chromatic or dark.
+
+    So a region of the finished plate is lifted when it is
+      - not the drawing's main body (the largest region),
+      - big enough to be a slab rather than a speck (2% of the plate), and
+      - almost entirely paper-like (90% of its solid pixels are bright and
+        neutral), with the paper test relaxed by 12 luma for the soft
+        shading a sheet picks up near a wash.
+
+    The white page of an open notebook is white and neutral too, but it is
+    enclosed by the drawing's outline, so it is part of the drawing's body
+    and is never touched. The duckling, the rabbit and the teacup are white
+    and neutral as well, but each carries a beak, an eye or an outline, so
+    they are chromatic or dark and are not paper-like.
+
+    Returns (alpha, regions_lifted, pixels_lifted).
+    """
+    visible = alpha > 0.35
+    if not visible.any():
+        return alpha, 0, 0
+    total = int(visible.sum())
+    regions = _components(visible)
+    if len(regions) < 2:
+        return alpha, 0, 0
+
+    relaxed = (luma >= (threshold - 12)) & (chroma <= max_chroma)
+    out = alpha.copy()
+    lifted = 0
+    lifted_px = 0
+    for region in regions[1:]:
+        area = int(region.sum())
+        if area < total * 0.02:
+            continue
+        solid = region & (alpha > 0.9)
+        if not solid.any():
+            continue
+        if float(relaxed[solid].mean()) < 0.90:
+            continue
+        out[region] = 0.0
+        lifted += 1
+        lifted_px += area
+    return out, lifted, lifted_px
+
+
 def _ink_bounds(alpha: np.ndarray, cut: float = 0.35) -> tuple[int, int, int, int]:
     """The bounding box of everything that is still visible."""
     ys, xs = np.nonzero(alpha > cut)
@@ -199,6 +292,14 @@ def strip_ground(
         lo, hi = float(threshold), 255.0
         ramp = np.clip((hi - luma) / max(hi - lo, 1.0), 0.0, 1.0)
         alpha = np.where(edge, ramp, alpha)
+
+    out = np.dstack([arr, alpha * 255.0]).astype(np.uint8)
+    img = Image.fromarray(out)
+
+    # The wash of a drawing can cut the sheet's paper into pieces. The border
+    # flood only reaches the piece that touches the edge, so a pale slab can
+    # be left on the plate. It is still paper, and it is lifted here.
+    alpha, lifted_regions, lifted_px = _lift_islands(alpha, luma, chroma, threshold)
 
     out = np.dstack([arr, alpha * 255.0]).astype(np.uint8)
     img = Image.fromarray(out)
@@ -254,6 +355,8 @@ def strip_ground(
         "leaked_pixels": hole_pixels,
         "leaked_regions": hole_regions,
         "interior_holes": holes_left,
+        "lifted_islands": lifted_regions,
+        "lifted_island_pixels": lifted_px,
         "threshold": threshold,
         "grow": grow,
         "feather": feather,
