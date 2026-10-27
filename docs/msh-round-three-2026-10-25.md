@@ -203,6 +203,10 @@ below the viewport — `tikki-episodes` 500 px at 536, `settings-card` 640 px at
 `notebook-controls` 400 px at 436, `dots-map` 850 px at 1138. Those are the container cliffs, and a
 receipt that does not measure a cliff has not measured the page.
 
+That gate run lost its browser **four times** to the same neighbour — attempts 1 to 4 of the
+instrument's 5 — and finished on the fifth, resuming each time from the route it had reached. The
+repository's own five-attempt budget was enough, barely; the recording above needed more, and said so.
+
 Getting here took three browser lifetimes. The recording sweep lost its browser **twice** — both
 times to another agent on this machine running `pkill -f "Google Chrome"`, not to a page fault:
 the instrument's own server answered the two routes it stalled on — and every asset they pull —
