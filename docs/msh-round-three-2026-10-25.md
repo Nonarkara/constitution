@@ -63,18 +63,24 @@ five scenes that keep their own ground are listed separately with their own hash
    `memoryCueFor`): the recall test shows a palace picture for **49 (10.4%)** of them. For the
    questions that turn on a counted number — the exam's traps — it is **8 of 84 (9.5%)**.
 
-   The gap between 49 and the 86 that a section-overlap count suggests is deliberate, and it is the
-   rule doing its job: **13 questions sit in a room's sections but are refused a picture** — nine on
-   §256, four on §158. Those rooms teach the *amendment* rule and the *cabinet* rule, and a
-   question about the signature count is not that rule, so showing the room would put a picture of
-   one rule beside a question about another. The cue is refused instead.
+   The gap is the rule doing its job, and it has to be counted against the right set. The shipped
+   rule matches **62** questions — a question whose sections contain *all* of some room's sections —
+   and refuses **13** of them: **eleven on §256 and two on §158**. Those rooms teach the
+   *amendment* rule and the *cabinet* rule, and a question about the signature count is not that
+   rule, so showing the room would put a picture of one rule beside a question about another. The
+   cue is refused instead. 62 − 13 = 49.
+
+   *(Two counts of "the questions a picture could reach" exist, and they are not the same
+   measurement. A question that contains **all** of some room's sections matches **62** — that is
+   the set the 13 refusals come from. A question that merely **shares one section** with some room
+   matches **86**, and the gap from 49 there is **37**: the same rule refusing over a bigger set.
+   The earlier draft of this report quoted 49 and 86 in one breath and credited 13 with the gap,
+   and said 62 and 15 where the shipped code's own numbers are 49 and 8. Both were wrong, and both
+   were caught by a reviewer who ran the shipped code instead of trusting a count of mine.)*
 
    The count-trap figure is low for the same reason: 25 of the 84 sit in a room's sections, but only
    8 are questions the room's own rule answers. The other 17 are in a room that teaches a
    neighbouring rule — the section is shared, the rule is not.
-
-   *(An earlier draft of this report said 62 and 15. Those came from a count that dropped the
-   §158/§255/§256 guard the shipped code enforces. The numbers above are the shipped code's own.)*
 4. **Forty-eight of the eighty-four count-traps have no picture anywhere in the app.** Counting the
    palace's sixteen rooms and the cram sheet's numbers together, **48 of the 84 (57%)**
    count-answer questions are covered by neither. The uncovered ones are specific and nameable:
@@ -91,6 +97,14 @@ five scenes that keep their own ground are listed separately with their own hash
 6. **The home page's "41 numbers" claim is true**, and is pinned by a test
    (`tests/facts.test.ts`): 20 facts + 13 time limits + 8 votes = 41, plus 7 traps. Checked, not
    assumed — it looked false at first, because the cram page renders the same 41 in three tables.
+7. **Five of the thirty-five plates were sliced by the frame.** Measured on the alpha channel —
+   the share of a plate's border that is a straight, fully opaque run — five plates carried a cut:
+   `tikki-story-cover` had **93%** of its bottom edge cut straight across the stack of books,
+   `tikki-bible-guide` **45%** down the right edge, `tikki-flashcards` **39%**, `tikki-games` **24%**
+   and `tikki-exam` **23%** along the bottom. A drawing sliced by a straight line is not a drawing
+   that can be cut out, and Dr Non's reason for these plates was exactly that: *"can turn into
+   stickers easily for people to share since they're so cute."* The other thirty carry a torn
+   watercolour edge, and those five did not.
 
 ---
 
@@ -113,6 +127,25 @@ five scenes that keep their own ground are listed separately with their own hash
    which are now the house's plan. The action sits directly under the room's name, so the learner
    meets the room and the way into it before the thumbnails.
 4. **The arrows are bound to their labels** with a non-breaking space, so no arrow can start a line.
+5. **Those five plates were drawn again, and the pipeline learned to lift what the flood could not.**
+   The five scenes were re-drawn with the whole subject inside the sheet — the stack of books with
+   the girl still standing on it, the table with its legs ending inside the picture — and with no
+   floor or ground plane running to the edge. The remaining straight cuts are gone: the worst
+   border on the five is now **0.6% / 1.0% / 1.6% / 0.1% / 0.7%**, against 93% / 45% / 39% / 24% /
+   23% before.
+
+   Two of the five still came back with a pale slab in a corner — paper the flood could not reach,
+   because the drawing's own wash had cut it off from the edge of the sheet. Measured, that slab
+   was bright and neutral (chroma 0.008–0.032) at a luma of 232–233: paper, three units under the
+   pipeline's 236 threshold. So the pipeline now lifts a detached region that is **90% paper-like
+   under a relaxed mask and at least 2% of the plate** — a slab, not a speck, and not part of the
+   drawing. The white page of a notebook, the duckling, the rabbit and the teacup are all bright
+   and neutral too, and none of them is touched: each is enclosed by the drawing's outline or
+   carries a beak, an eye or a rim, so it is either the drawing's body or not paper-like.
+
+   The rule was proved rather than hoped for: re-deriving all thirty-five plates with it changed
+   **exactly two** of them — the two that had the slab — and left the other thirty-three
+   **byte-identical**.
 
 ---
 
@@ -172,6 +205,15 @@ because it was one sweep, not three glued together.
 The "before" row in *Found* #2 was measured the same way, on a separate build of the previous
 commit (`d0843c4`) served on its own port — not on the page that was shipped.
 
+*One measurement note, because two different numbers were reported for the 390 px row.* A render
+taken against a **partially served page** — the local server had stopped answering mid-response,
+so the sidebar and breadcrumbs were missing — reads 30 px higher throughout (action 577–633,
+picture 698–992, tiles 1469). Against a page that was served whole, the numbers above are what
+the browser reports, and they are the same at 700 ms and at 3000 ms after load, and they are what
+the spatial receipt recorded independently (`firstAction` y=607 on `/memory/`). The 1440 px row
+never moved, because at that width the sidebar sits in a side column and a partial page does not
+move the title. The settled numbers are the ones above.
+
 The first attempt at this change (the room first, the action *under* the picture) failed the hierarchy
 gate at 390 px with a measured button at y=1033 — below the fold. It was not argued with; the action
 was moved and the gate re-run.
@@ -190,11 +232,13 @@ was moved and the gate re-run.
 2. **The cues have not been evaluated with learners.** The memory house says so on its own page, and
    it is still true. Nothing in this round measures whether a picture makes a number stick.
 3. **The first screen of a phone spends 176 px on the site's chrome before the page title.** On
-   `/memory/` at 390×844 the h1 starts at y=176. The picture and the action both live below that
-   line. The chrome was not reworked in this round; it is measured here so the next one sees it.
-4. **The Thai heading widows.** A scan of all 43 routes at 390/721/1440 px found headings whose last
-   line carries a single short word. These are Thai line-breaking artefacts — the last word is one
-   dictionary word that will not fit — not invented space, so they were left alone rather than
-   "fixed" by shrinking type the law forbids.
+   `/memory/` at 390×844 the h1 starts at y=176 — **20.9% of the 844 px first screen** spent
+   before the page says what the page is. The picture and the action both live below that line.
+   The chrome was not reworked in this round; it is measured here so the next one sees it.
+4. **The Thai heading widows.** A scan of all 43 routes at **390 / 721 / 1440 px** found headings
+   whose last line carries a single short word. These are Thai line-breaking artefacts — the last
+   word is one dictionary word that will not fit — not invented space, so they were left alone
+   rather than "fixed" by shrinking type the law forbids. (1024 px was not in that scan; the
+   spatial receipt does measure 1024 and 1025, but for holes and overflow, not for widows.)
 5. **The shared spatial instrument tolerates a hole up to 50% of a cell.** Its thresholds were not
    changed, because four other projects' receipts depend on them; the product was fixed instead.
