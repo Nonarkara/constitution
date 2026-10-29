@@ -30,10 +30,16 @@ export function PalacePicture({
 export function MemoryCue({ chapter, item }: { chapter?: number; item?: MemoryItem }) {
   const { lang } = useStudy();
   const cue = item ? memoryCueFor(item) : null;
-  const p = cue ?? (chapter ? palaceFor(chapter) : undefined);
-  if (!p) return null;
   const room = cue?.chapter ?? chapter;
-  const showImage = cue ? cue.image && room : Boolean(room);
+  const palaceEntry = room ? palaceFor(room) : undefined;
+  if (!cue && !palaceEntry) return null;
+  const showImage = cue ? cue.image && Boolean(room) : Boolean(room);
+  // A rule's number is written in the reader's language; a room's number is
+  // the same in every language, because it is a section label.
+  const number = cue?.numberText ? cue.numberText[lang] : (cue?.number ?? palaceEntry?.number ?? "");
+  const meaning = cue?.meaning ?? palaceEntry?.meaning;
+  const joke = cue?.joke ?? palaceEntry?.joke;
+  if (!meaning || !joke) return null;
   return (
     <details className="memory-cue">
       <summary>
@@ -43,14 +49,14 @@ export function MemoryCue({ chapter, item }: { chapter?: number; item?: MemoryIt
           "A little joke to remember it",
           "用小笑话帮助记忆",
         )}{" "}
-        · {p.number}
+        · {number}
       </summary>
       <figure>
         {showImage && room ? <PalacePicture chapter={room} /> : null}
         <figcaption>
-          <strong className="palace-number">{p.number}</strong>
-          <p>{p.meaning[lang]}</p>
-          <p className="micro">{p.joke[lang]}</p>
+          <strong className="palace-number">{number}</strong>
+          <p>{meaning[lang]}</p>
+          <p className="micro">{joke[lang]}</p>
         </figcaption>
       </figure>
       {room ? (

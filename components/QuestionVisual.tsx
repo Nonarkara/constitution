@@ -14,22 +14,33 @@ export function QuestionVisual({ question: q, position, selected, lang }: {
 }) {
   const model = questionVisualFor(q, position);
   if (!model) return null;
-  const cuePlate =
-    model.cue?.topic === "pm-term"
-      ? "/illustrations/term-clock-pastel.webp"
-      : "/illustrations/core-lock-pastel.webp";
   const { answer, cue } = model;
+  // The room's picture when the rule has one, the rule's own plate when it
+  // does not, and nothing at all when it has neither. A placeholder picture
+  // of another rule's room is worse than no picture.
+  const cuePlate =
+    cue?.topic === "pm-term"
+      ? "/illustrations/term-clock-pastel.webp"
+      : cue?.topic === "unamendable"
+        ? "/illustrations/core-lock-pastel.webp"
+        : (cue?.plate ?? null);
+  const picture = cue?.image && cue.chapter
+    ? <PalacePicture chapter={cue.chapter} />
+    : cuePlate
+      ? <Image src={cuePlate} alt="" {...plateSize(cuePlate)} sizes="100px" />
+      : null;
+  const diagram = cue?.diagram ?? null;
   const wrong = selected !== undefined && selected !== q.answer ? q.choices[selected] : null;
   return (
     <details open key={q.id} className="question-visual" data-visual-topic={cue?.topic ?? "answer-map"}>
       <summary>{tr(lang, "หยุดวาดความเข้าใจสักภาพ", "Pause and picture the rule", "停一下，把规则画在脑海里")}</summary>
       {cue ? <>
         <div className="visual-mnemonic">
-          {cue.image && cue.chapter ? <PalacePicture chapter={cue.chapter} /> : <Image src={cuePlate} alt="" {...plateSize(cuePlate)} sizes="100px" />}
-          <div><strong className="visual-number">{cue.number}</strong><p>{cue.meaning[lang]}</p></div>
+          {picture}
+          <div><strong className="visual-number">{cue.numberText ? cue.numberText[lang] : cue.number}</strong><p>{cue.meaning[lang]}</p></div>
         </div>
-        {cue.topic === "cabinet-size" && <div className="visual-seats" aria-hidden="true"><b>1</b><span>+</span><div>{Array.from({length: 35}, (_, i) => <i key={i} />)}</div><span>≤35</span></div>}
-        {cue.topic === "amendment-petition" && <ol className="visual-route">
+        {diagram === "cabinet-size" && <div className="visual-seats" aria-hidden="true"><b>1</b><span>+</span><div>{Array.from({length: 35}, (_, i) => <i key={i} />)}</div><span>≤35</span></div>}
+        {diagram === "amendment-petition" && <ol className="visual-route">
           <li><b>50,000</b>{tr(lang,"เสนอร่าง","Propose","提案")}</li>
           <li>{tr(lang,"ผ่านขั้นตอนรัฐสภา","Parliamentary stages","议会程序")}</li>
           <li>{tr(lang,"ประชามติเมื่อเข้าเงื่อนไข","Referendum when required","依法需公投时公投")}</li>

@@ -1,5 +1,6 @@
 import type { Text } from "./i18n.ts";
 import { palace, palaceFor } from "./palace.ts";
+import { ruleFor, type Rule } from "./rules.ts";
 
 const t = (th: string, en: string, zh: string): Text => ({ th, en, zh });
 
@@ -8,6 +9,10 @@ export type MemoryItem = {
   chapter?: number;
   sections: number[];
   prompt?: Partial<Text>;
+  /** The choices and the right one, when the question is known. A cue may
+   *  only be shown once the answer is known, so the caller passes them. */
+  choices?: Text[];
+  answer?: number;
 };
 
 export type MemoryCueModel = {
@@ -15,8 +20,14 @@ export type MemoryCueModel = {
   chapter: number | null;
   image: boolean;
   number: string;
+  /** The number in every language, when the rule's number is translated. */
+  numberText?: Text | null;
   meaning: Text;
   joke: Text;
+  /** A hand-drawn diagram that belongs to this rule, if there is one. */
+  diagram?: "cabinet-size" | "amendment-petition" | null;
+  /** A plate to stand in for a room the rule has no picture for. */
+  plate?: string | null;
 };
 
 const PM_TERM: MemoryCueModel = {
@@ -24,6 +35,7 @@ const PM_TERM: MemoryCueModel = {
   chapter: null,
   image: false,
   number: "8",
+  plate: "/illustrations/term-clock-pastel.webp",
   meaning: t(
     "นาฬิกา 8 ปีของนายกรัฐมนตรีคนเดียว รวมกันแล้วเกินไม่ได้ ไม่ว่าจะติดต่อกันหรือไม่ ช่วงรักษาการหลังพ้นตำแหน่งไม่นับ เพดาน 35 คนเป็นคนละกฎในมาตราเดียวกัน",
     "One Prime Minister, eight years in total, consecutive or not. Time spent carrying on after leaving office does not count. The cap of 35 other ministers is a different rule in the same section.",
@@ -41,6 +53,7 @@ const UNAMENDABLE: MemoryCueModel = {
   chapter: null,
   image: false,
   number: "255",
+  plate: "/illustrations/core-lock-pastel.webp",
   meaning: t(
     "มาตรา 255 ห้ามแก้การปกครองระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข หรือเปลี่ยนรูปแบบของรัฐ ชื่อ 50,000 คนกับระยะรอ 15+15 วันเป็นมาตรา 256 คนละกฎ",
     "Section 255 prohibits an amendment that changes the democratic regime with the King as Head of State, or the form of the State. The 50,000 signatures and the 15+15 day waits are section 256, a different rule.",
@@ -91,14 +104,77 @@ function fromPalace(chapter: number, topic: string): MemoryCueModel | null {
     number: entry.number,
     meaning: entry.meaning,
     joke: entry.joke,
+    diagram: topic === "cabinet-size" || topic === "amendment-petition" ? topic : null,
   };
+}
+
+/**
+ * The rules that carry a hand-drawn diagram rather than a room.
+ *
+ * The cabinet's thirty-five seats and the petition's five stages are drawn,
+ * not photographed, and they belong to those two rules alone.
+ */
+const DIAGRAMS: Record<string, "cabinet-size" | "amendment-petition"> = {
+  ministers: "cabinet-size",
+  "amend-petition": "amendment-petition",
+};
+
+/**
+ * The cue for a rule: the room that hosts it, the number it decides, and the
+ * handle that makes the number stick.
+ *
+ * The room is the locus. The number is the rule. The handle is the image.
+ * Chapter 17 holds the transitional rules and has no room of its own, so
+ * those cues carry the number and the handle and no picture — which is what
+ * the evidence says, rather than a picture of another chapter's room.
+ */
+function fromRule(rule: Rule): MemoryCueModel {
+  return {
+    topic: `rule-${rule.id}`,
+    chapter: rule.hasRoom ? rule.chapter : null,
+    image: rule.hasRoom,
+    number: rule.number?.en ?? "",
+    numberText: rule.number,
+    meaning: rule.meaning,
+    joke: rule.joke,
+    diagram: DIAGRAMS[rule.id] ?? null,
+    plate: null,
+  };
+}
+
+/**
+ * The answer, in the language the rules are written in.
+ *
+ * The check is made against one language, not against all three, because
+ * the translations carry numbers of their own that are not counts: the
+ * Thai for "one third of the Senators" writes it "1 ใน 3", and reading that
+ * as the number three would put the three-readings rule beside a question
+ * about the Senate's threshold.
+ */
+function answerTextOf(item: MemoryItem): string {
+  const answer = item.choices?.[item.answer ?? -1];
+  return answer?.en ?? "";
+}
+
+function promptTextOf(item: MemoryItem): string {
+  const prompt = item.prompt;
+  if (!prompt) return "";
+  return `${prompt.th ?? ""} ${prompt.en ?? ""} ${prompt.zh ?? ""}`;
 }
 
 /** A cue matches the question's rule. A chapter picture is not used when it teaches a different rule in the same chapter. */
 export function memoryCueFor(item: MemoryItem): MemoryCueModel | null {
   const topic = topicFor(item);
+  // Two rules have a plate of their own rather than a room, so they are
+  // asked for by name.
   if (topic === "pm-term") return PM_TERM;
   if (topic === "unamendable") return UNAMENDABLE;
+  // The rule the question actually turns on. Its room is the locus, its
+  // number is the rule, and it is only shown when the answer states that
+  // number — so a picture of one rule never stands beside a question about
+  // another.
+  const rule = ruleFor(item.sections ?? [], promptTextOf(item), answerTextOf(item));
+  if (rule) return fromRule(rule);
   if (topic === "cabinet-size") return fromPalace(8, topic);
   if (topic === "amendment-petition") return fromPalace(15, topic);
   const sections = item.sections ?? [];

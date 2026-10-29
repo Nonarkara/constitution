@@ -7,7 +7,7 @@
       "label": {
         "th": "สภาครบวาระ → เลือกตั้งใหม่",
         "en": "House term ends → general election",
-        "zh": "下议院任期届满 → 大选"
+        "zh": "众议院任期届满 → 大选"
       },
       "value": {
         "th": "ภายใน 45 วัน",
@@ -22,7 +22,7 @@
       "label": {
         "th": "ยุบสภา → วันเลือกตั้ง",
         "en": "Dissolution → election day",
-        "zh": "解散下议院 → 选举日"
+        "zh": "解散众议院 → 选举日"
       },
       "value": {
         "th": "45–60 วัน",
@@ -97,7 +97,7 @@
       "label": {
         "th": "งบประมาณ: สภาผู้แทนฯ / วุฒิสภา",
         "en": "Budget: House / Senate",
-        "zh": "预算：下议院／参议院"
+        "zh": "预算：众议院／参议院"
       },
       "value": {
         "th": "105 วัน / 20 วัน",
@@ -160,9 +160,9 @@
         "zh": "宪法法院审查紧急法令"
       },
       "value": {
-        "th": "ภายใน 60 วัน",
-        "en": "Within 60 days",
-        "zh": "60天内"
+        "th": "ภายใน 60 วันนับแต่ศาลได้รับเรื่อง",
+        "en": "Within 60 days of the Court receiving the matter",
+        "zh": "自法院收到案件起60天内"
       }
     },
     {
@@ -272,7 +272,7 @@
       "label": {
         "th": "สภาผู้แทนฯ เห็นชอบนายกฯ",
         "en": "House approves the PM",
-        "zh": "下议院同意总理人选"
+        "zh": "众议院同意总理人选"
       },
       "value": {
         "th": "มากกว่ากึ่งหนึ่ง โดยเปิดเผย",
@@ -287,7 +287,7 @@
       "label": {
         "th": "เสนอแก้รัฐธรรมนูญ (ส.ส.)",
         "en": "Propose an amendment (MPs)",
-        "zh": "提出修宪（下议院议员）"
+        "zh": "提出修宪（众议院议员）"
       },
       "value": {
         "th": "อย่างน้อย 1/5 ของ ส.ส.",
@@ -354,7 +354,7 @@
       "text": {
         "th": "ส.ว. ร่วมโหวตนายกฯ ได้เฉพาะ 5 ปีแรกตามมาตรา 272 ซึ่งสิ้นสุดแล้ว ปัจจุบันสภาผู้แทนฯ เห็นชอบเองตามมาตรา 159",
         "en": "Senators voted on the PM only in the first five years under section 272, now over. The House alone approves under section 159.",
-        "zh": "参议员仅在第272条规定的头五年参与总理表决，现已结束；现由下议院依第159条决定。"
+        "zh": "参议员仅在第272条规定的头五年参与总理表决，现已结束；现由众议院依第159条决定。"
       }
     },
     {
@@ -362,9 +362,9 @@
       "section": 51,
       "proof": "การใดที่รัฐธรรมนูญบัญญัติให้เป็นหน้าที่ของรัฐตามหมวดนี้",
       "text": {
-        "th": "หมวด 5 หน้าที่ของรัฐ ใช้คำว่า \"ต้อง\" ประชาชนติดตามและฟ้องร้องได้ตามมาตรา 51 ส่วนหมวด 6 แนวนโยบาย ใช้คำว่า \"พึง\" เป็นแนวทาง",
-        "en": "Chapter 5 duties use \"must\" and people can follow them up under section 51; Chapter 6 policies use \"should\" and only guide.",
-        "zh": "第5章国家义务用“必须”，人民可依第51条追究；第6章政策方针用“应当”，仅为指引。"
+        "th": "หมวด 5 หน้าที่ของรัฐใช้คำว่า \"ต้อง\" และถ้าหน้าที่นั้นทำเพื่อประโยชน์แก่ประชาชนโดยตรง ประชาชนและชุมชนติดตาม เร่งรัด และฟ้องร้องได้ตามมาตรา 51 ตามหลักเกณฑ์ที่กฎหมายบัญญัติ ส่วนหมวด 6 แนวนโยบาย ใช้คำว่า \"พึง\" เป็นแนวทาง",
+        "en": "Chapter 5 duties use \"must\"; where a duty directly benefits the people, people and communities can follow it up, press for it and sue under section 51, as the law provides. Chapter 6 policies use \"should\" and only guide.",
+        "zh": "第5章国家义务用“必须”；该义务直接惠及人民的，人民和社区可依第51条并按法律规定追踪、督促乃至起诉。第6章政策方针用“应当”，仅为指引。"
       }
     },
     {

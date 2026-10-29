@@ -4152,6 +4152,17 @@ footer { flex-wrap:wrap; gap:16px; }
    the page's h1 — the title no longer won on its own page. */
 .palace-number { font-family:"JetBrains Mono","IBM Plex Sans Thai",monospace; font-size:var(--body); font-weight:700; line-height:1.2; display:block; overflow-wrap:anywhere; }
 .memory-cue { margin-block:1rem; border-block:1px solid var(--line); padding-block:.75rem; }
+/* The numbers a room holds. The shelf sits under the room's own picture and
+   above its sections, so the order is: the place, the numbers in it, the
+   text that decides them. */
+/* The handle under a cram-sheet number: the image that carries it. */
+.cram-handle { display:block; margin-top:.25rem; }
+.palace-shelf { margin-block:1.5rem; }
+.palace-shelf h3 { font-size:var(--body); margin-block:0 .5rem; }
+.palace-shelf ul { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
+.palace-shelf li { display:flex; gap:1rem; align-items:baseline; border-bottom:1px solid var(--line); padding-block:.5rem; }
+.palace-shelf-number { font-family:"JetBrains Mono","IBM Plex Sans Thai",monospace; font-weight:700; flex:0 0 9rem; overflow-wrap:anywhere; }
+@media(max-width:480px){ .palace-shelf li { flex-direction:column; gap:.25rem; } .palace-shelf-number { flex-basis:auto; } }
 @media(max-width:1024px){ .palace-index { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:480px){ .palace-index button { padding:.75rem; } .palace-picture-small { width:72px; } .palace-room figure,.memory-cue figure { grid-template-columns:1fr; } .palace-room .palace-picture,.memory-cue .palace-picture { max-width:220px; } }
 

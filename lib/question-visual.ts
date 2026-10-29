@@ -15,7 +15,10 @@ export function questionVisualFor(q: VisualQuestion, position: number) {
   let cue = memoryCueFor(q);
   // Section 256 also tests readings, vote thresholds and court review. A petition
   // picture belongs only to a question whose answer actually concerns that count.
-  if (cue?.topic === "amendment-petition" && !Object.values(answer).some(s => /50[ ,]?000|ห้าหมื่น|五万/.test(s))) cue = null;
+  // The petition picture belongs only to a question whose answer actually
+  // concerns that count — whether the cue was reached by the rule catalogue
+  // or by the older hand-written topic.
+  if ((cue?.topic === "amendment-petition" || cue?.topic === "rule-amend-petition") && !Object.values(answer).some((s) => /50[ ,]?000|ห้าหมื่น|五万/.test(s))) cue = null;
   if (!cue && (position + 1) % 3 !== 0) return null;
   return { answer, cue };
 }

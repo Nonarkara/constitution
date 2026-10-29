@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { palace } from "@/lib/palace";
+import { rulesInChapter } from "@/lib/rules";
 import { chapters, questionIndex } from "@/lib/outline";
 import { lessonQueue } from "@/lib/learning";
 import { toggleBookmark } from "@/lib/marks";
@@ -10,6 +11,52 @@ import { sectionLabel, tr } from "@/lib/i18n";
 import { useStudy } from "./Provider";
 import { PalacePicture } from "./MemoryCue";
 const Quiz = dynamic(() => import("./Quiz").then((m) => m.Quiz));
+
+/**
+ * The numbers a room holds.
+ *
+ * The room is a place; the numbers in it are the objects a learner has to
+ * pick up. Before this, a room carried a § label and a joke, and the
+ * numbers the exam asks about lived on a separate sheet with no picture and
+ * no handle — so the house taught no number at all. Each entry here names
+ * the number, the rule it decides, and the image that carries it.
+ */
+function RuleShelf({ chapter }: { chapter: number }) {
+  const { lang } = useStudy();
+  const held = rulesInChapter(chapter).filter((r) => r.number);
+  if (!held.length) return null;
+  const title = tr(
+    lang,
+    `ตัวเลขในห้องนี้ (${held.length})`,
+    `The numbers in this room (${held.length})`,
+    `本房间的数字（${held.length}）`,
+  );
+  // A room with a dozen numbers would push the sections off the screen, so a
+  // long shelf stays closed until asked. Each row is the number and what it
+  // decides; the handle for it is on the cram sheet.
+  const rows = (
+    <ul>
+      {held.map((rule) => (
+        <li key={rule.id}>
+          <span className="palace-shelf-number">{rule.number?.[lang]}</span>
+          <span>{rule.label[lang]}</span>
+        </li>
+      ))}
+    </ul>
+  );
+  return held.length > 8 ? (
+    <details className="palace-shelf">
+      <summary>{title}</summary>
+      {rows}
+    </details>
+  ) : (
+    <section className="palace-shelf" aria-label={title}>
+      <h3>{title}</h3>
+      {rows}
+    </section>
+  );
+}
+
 export function MemoryHouse() {
   const { lang, marks, saveMarks, progress, ready } = useStudy();
   const [selected, setSelected] = useState(1),
@@ -49,9 +96,9 @@ export function MemoryHouse() {
       <p>
         {tr(
           lang,
-          "16 ห้องสำหรับ 16 หมวด มองภาพ นึกกฎ แล้วลองเรียกคำตอบกลับมา เรื่องและมุกเป็นเครื่องช่วยจำ ตัวบทเป็นแหล่งตัดสิน",
-          "Sixteen rooms for the sixteen numbered chapters. See the picture, recall the rule, then try a question. Stories and jokes are cues; the text decides the law.",
-          "十六个房间，对应宪法的十六个编号章节。看图、回想规则，再试着作答。故事与笑话是线索，条文才是法律依据。",
+          "16 ห้องสำหรับ 16 หมวด มองภาพ นึกกฎ แล้วลองเรียกคำตอบกลับมา แต่ละห้องยังมีตัวเลขที่ต้องจำอยู่ในนั้น เรื่องและมุกเป็นเครื่องช่วยจำ ตัวบทเป็นแหล่งตัดสิน",
+          "Sixteen rooms for the sixteen numbered chapters. See the picture, recall the rule, then try a question — and each room holds the numbers you must remember in it. Stories and jokes are cues; the text decides the law.",
+          "十六个房间，对应宪法的十六个编号章节。看图、回想规则，再试着作答——每个房间还放着你必须记住的数字。故事与笑话是线索，条文才是法律依据。",
         )}
       </p>
       <article ref={detail} className="palace-room" id={`room-detail-${selected}`}>
@@ -140,6 +187,7 @@ export function MemoryHouse() {
             : tr(lang, "เปิดความหมาย", "Reveal the meaning", "显示含义")}
         </button>
         {show && <p className="notice">{p.meaning[lang]}</p>}
+        <RuleShelf chapter={selected} />
         <div className="civic-law-list">
           {p.sections.map((n) => (
             <div key={n}>
@@ -159,9 +207,9 @@ export function MemoryHouse() {
         <p className="micro">
           {tr(
             lang,
-            "จำนวนบนภาพที่มี § คือเลขมาตรา ไม่ใช่จำนวนคนหรือปี ภาพอาจไม่วาดวัตถุครบตามตัวเลข ใช้คำอธิบายกำกับเสมอ วิธีช่วยจำนี้ยังไม่ได้พิสูจน์ผลกับผู้ใช้แอป",
-            "A § label is a section number, not a count of people or years. Artwork need not contain every counted object; use the caption. This app’s memory cues have not yet been evaluated with learners.",
-            "带§的是条号，不是人数或年数。图画未必画出所有计数对象，请以说明为准。这些记忆线索尚未对本应用学习者进行效果评估。",
+            "เลข § บนภาพคือเลขมาตรา ส่วนตัวเลขในชั้นข้างล่างคือจำนวนจริง ภาพอาจไม่วาดวัตถุครบตามตัวเลข ใช้คำอธิบายกำกับเสมอ วิธีช่วยจำนี้ยังไม่ได้พิสูจน์ผลกับผู้ใช้แอป",
+            "The § on the picture is a section number; the numbers on the shelf below are real counts. Artwork need not contain every counted object; use the caption. This app’s memory cues have not yet been evaluated with learners.",
+            "图上的§是条号，下方架子上的数字才是真实计数。图画未必画出所有计数对象，请以说明为准。这些记忆线索尚未对本应用学习者进行效果评估。",
           )}
         </p>
       </article>
@@ -236,6 +284,7 @@ export function MemoryHouse() {
             "将过渡条款放在单独的阁楼。有些规则针对过去阶段，不要用已届满的数字或权力代替现行规则。",
           )}
         </p>
+        <RuleShelf chapter={17} />
         <Link href="/section/?n=269">
           {tr(
             lang,

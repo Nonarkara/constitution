@@ -3,12 +3,19 @@ import { useState } from "react";
 import Link from "next/link";
 import facts from "@/data/facts.json";
 import cram from "@/data/cram.json";
+import { ruleById } from "@/lib/rules";
 import { LawRef, LawText, Peek } from "./LawRef";
 import { useStudy } from "./Provider";
 import { tr, sectionLabel, type Lang } from "@/lib/i18n";
 import { StudyArt } from "./StudyArt";
 
 type Row = { id: string; section: number; label: Record<Lang, string>; value: Record<Lang, string>; source?: string; note?: Record<Lang, string> };
+
+/** The handle that carries a number, in the reader's language. */
+const handleFor = (id: string, lang: Lang = "en") => {
+  const rule = ruleById(id);
+  return rule ? rule.joke[lang] : null;
+};
 
 const SourceTag = ({ source, note }: { source?: string; note?: Record<Lang, string> }) => {
   if (!source || source === "constitution") return null;
@@ -45,7 +52,14 @@ export function Cram() {
                   {tr(lang, "นึกก่อน แล้วแตะ", "Recall, then tap", "先回忆，再点开")}
                 </button>
               ) : (
-                <strong>{r.value[lang]}</strong>
+                <>
+                  <strong>{r.value[lang]}</strong>
+                  {/* The handle: one image to carry the number on. A number
+                      without one is a number you can only look up. */}
+                  {handleFor(r.id, lang) ? (
+                    <span className="cram-handle micro">{handleFor(r.id, lang)}</span>
+                  ) : null}
+                </>
               )}
             </dd>
           </div>
@@ -100,6 +114,9 @@ export function Cram() {
           {cram.traps.map((t) => (
             <li key={t.id}>
               <LawText text={t.text[lang]} lang={lang} />
+              {handleFor(t.id, lang) ? (
+                <span className="cram-handle micro">{handleFor(t.id, lang)}</span>
+              ) : null}
               <SourceTag source={t.source} note={t.note} />
             </li>
           ))}

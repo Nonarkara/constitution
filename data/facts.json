@@ -1,22 +1,872 @@
 [
-  { "id": "mps", "section": 83, "proof": "ห้าร้อยคน", "label": { "th": "สมาชิกสภาผู้แทนราษฎรทั้งหมด", "en": "Members of the House", "zh": "下议院议员总数" }, "value": { "th": "500 คน (เขต 400 + บัญชีรายชื่อ 100)", "en": "500 (400 constituency + 100 list)", "zh": "500人（选区400 + 名单100）" } },
-  { "id": "senators", "section": 107, "proof": "สองร้อยคน", "label": { "th": "สมาชิกวุฒิสภา", "en": "Senators", "zh": "参议员" }, "value": { "th": "200 คน", "en": "200", "zh": "200人" } },
-  { "id": "ministers", "section": 158, "proof": "สามสิบห้าคน", "label": { "th": "รัฐมนตรีอื่นนอกจากนายกรัฐมนตรี", "en": "Ministers besides the PM", "zh": "总理以外的部长" }, "value": { "th": "ไม่เกิน 35 คน", "en": "Up to 35", "zh": "不超过35人" } },
-  { "id": "pm-cap", "section": 158, "proof": "แปดปี", "label": { "th": "นายกรัฐมนตรีดำรงตำแหน่งรวมกัน", "en": "PM's total time in office", "zh": "总理累计任期" }, "value": { "th": "ไม่เกิน 8 ปี", "en": "No more than 8 years", "zh": "不超过8年" } },
-  { "id": "court-judges", "section": 200, "proof": "เก้าคน", "label": { "th": "ตุลาการศาลรัฐธรรมนูญ", "en": "Constitutional Court judges", "zh": "宪法法院法官" }, "value": { "th": "9 คน", "en": "9", "zh": "9人" } },
-  { "id": "court-term", "section": 207, "proof": "เจ็ดปี", "label": { "th": "วาระตุลาการศาลรัฐธรรมนูญ", "en": "Constitutional Court term", "zh": "宪法法院法官任期" }, "value": { "th": "7 ปี วาระเดียว", "en": "7 years, one term", "zh": "7年，仅一任" } },
-  { "id": "ec", "section": 222, "proof": "เจ็ดคน", "label": { "th": "กรรมการการเลือกตั้ง", "en": "Election Commissioners", "zh": "选举委员" }, "value": { "th": "7 คน", "en": "7", "zh": "7人" } },
-  { "id": "ombudsmen", "section": 228, "proof": "สามคน", "label": { "th": "ผู้ตรวจการแผ่นดิน", "en": "Ombudsmen", "zh": "监察专员" }, "value": { "th": "3 คน", "en": "3", "zh": "3人" } },
-  { "id": "nacc", "section": 232, "proof": "เก้าคน", "label": { "th": "กรรมการ ป.ป.ช.", "en": "NACC commissioners", "zh": "国家反贪委员" }, "value": { "th": "9 คน", "en": "9", "zh": "9人" } },
-  { "id": "nhrc", "section": 246, "proof": "เจ็ดคน", "label": { "th": "กรรมการสิทธิมนุษยชนแห่งชาติ", "en": "Human Rights commissioners", "zh": "国家人权委员" }, "value": { "th": "7 คน", "en": "7", "zh": "7人" } },
-  { "id": "citizen-bill", "section": 133, "proof": "หนึ่งหมื่นคน", "label": { "th": "ประชาชนเข้าชื่อเสนอกฎหมาย", "en": "Voters to propose a bill", "zh": "联署提出法案的选民" }, "value": { "th": "อย่างน้อย 10,000 คน", "en": "At least 10,000", "zh": "至少10,000人" } },
-  { "id": "mp-bill", "section": 133, "proof": "ยี่สิบคน", "label": { "th": "ส.ส. เสนอร่างพระราชบัญญัติ", "en": "MPs to introduce a bill", "zh": "提出法案的下议院议员" }, "value": { "th": "อย่างน้อย 20 คน", "en": "At least 20", "zh": "至少20人" } },
-  { "id": "amend-petition", "section": 256, "proof": "ห้าหมื่นคน", "label": { "th": "ประชาชนเข้าชื่อเสนอแก้รัฐธรรมนูญ", "en": "Voters to propose an amendment", "zh": "联署提出修宪的选民" }, "value": { "th": "อย่างน้อย 50,000 คน", "en": "At least 50,000", "zh": "至少50,000人" } },
-  { "id": "school", "section": 54, "proof": "สิบสองปี", "label": { "th": "การศึกษาโดยไม่เก็บค่าใช้จ่าย", "en": "Free education", "zh": "免费教育" }, "value": { "th": "12 ปี", "en": "12 years", "zh": "12年" } },
-  { "id": "house-term", "section": 99, "proof": "สี่ปี", "label": { "th": "อายุสภาผู้แทนราษฎร", "en": "Term of the House", "zh": "下议院任期" }, "value": { "th": "4 ปี", "en": "4 years", "zh": "4年" } },
-  { "id": "senate-term", "section": 109, "proof": "ห้าปี", "label": { "th": "อายุวุฒิสภา", "en": "Term of the Senate", "zh": "参议院任期" }, "value": { "th": "5 ปี", "en": "5 years", "zh": "5年" } },
-  { "id": "voting-age", "section": 95, "proof": "สิบแปดปี", "label": { "th": "อายุผู้มีสิทธิเลือกตั้ง", "en": "Voting age", "zh": "选民年龄" }, "value": { "th": "ไม่ต่ำกว่า 18 ปี", "en": "18 or older", "zh": "年满18岁" } },
-  { "id": "mp-age", "section": 97, "proof": "ยี่สิบห้าปี", "label": { "th": "อายุผู้สมัคร ส.ส.", "en": "Minimum age of an MP", "zh": "下议院议员最低年龄" }, "value": { "th": "25 ปี", "en": "25", "zh": "25岁" } },
-  { "id": "senator-age", "section": 108, "proof": "สี่สิบปี", "label": { "th": "อายุผู้สมัคร ส.ว.", "en": "Minimum age of a senator", "zh": "参议员最低年龄" }, "value": { "th": "40 ปี", "en": "40", "zh": "40岁" } },
-  { "id": "minister-age", "section": 160, "proof": "สามสิบห้าปี", "label": { "th": "อายุรัฐมนตรี", "en": "Minimum age of a minister", "zh": "部长最低年龄" }, "value": { "th": "35 ปี", "en": "35", "zh": "35岁" } }
+  {
+    "id": "mps",
+    "section": 83,
+    "proof": "ห้าร้อยคน",
+    "label": {
+      "th": "สมาชิกสภาผู้แทนราษฎรทั้งหมด",
+      "en": "Members of the House",
+      "zh": "众议院议员总数"
+    },
+    "value": {
+      "th": "500 คน (เขต 400 + บัญชีรายชื่อ 100)",
+      "en": "500 (400 constituency + 100 list)",
+      "zh": "500人（选区400 + 名单100）"
+    }
+  },
+  {
+    "id": "senators",
+    "section": 107,
+    "proof": "สองร้อยคน",
+    "label": {
+      "th": "สมาชิกวุฒิสภา",
+      "en": "Senators",
+      "zh": "参议员"
+    },
+    "value": {
+      "th": "200 คน",
+      "en": "200",
+      "zh": "200人"
+    }
+  },
+  {
+    "id": "ministers",
+    "section": 158,
+    "proof": "สามสิบห้าคน",
+    "label": {
+      "th": "รัฐมนตรีอื่นนอกจากนายกรัฐมนตรี",
+      "en": "Ministers besides the PM",
+      "zh": "总理以外的部长"
+    },
+    "value": {
+      "th": "ไม่เกิน 35 คน",
+      "en": "Up to 35",
+      "zh": "不超过35人"
+    }
+  },
+  {
+    "id": "pm-cap",
+    "section": 158,
+    "proof": "แปดปี",
+    "label": {
+      "th": "นายกรัฐมนตรีดำรงตำแหน่งรวมกัน",
+      "en": "PM's total time in office",
+      "zh": "总理累计任期"
+    },
+    "value": {
+      "th": "ไม่เกิน 8 ปี",
+      "en": "No more than 8 years",
+      "zh": "不超过8年"
+    }
+  },
+  {
+    "id": "court-judges",
+    "section": 200,
+    "proof": "เก้าคน",
+    "label": {
+      "th": "ตุลาการศาลรัฐธรรมนูญ",
+      "en": "Constitutional Court judges",
+      "zh": "宪法法院法官"
+    },
+    "value": {
+      "th": "9 คน",
+      "en": "9",
+      "zh": "9人"
+    }
+  },
+  {
+    "id": "court-term",
+    "section": 207,
+    "proof": "เจ็ดปี",
+    "label": {
+      "th": "วาระตุลาการศาลรัฐธรรมนูญ",
+      "en": "Constitutional Court term",
+      "zh": "宪法法院法官任期"
+    },
+    "value": {
+      "th": "7 ปี วาระเดียว",
+      "en": "7 years, one term",
+      "zh": "7年，仅一任"
+    }
+  },
+  {
+    "id": "ec",
+    "section": 222,
+    "proof": "เจ็ดคน",
+    "label": {
+      "th": "กรรมการการเลือกตั้ง",
+      "en": "Election Commissioners",
+      "zh": "选举委员"
+    },
+    "value": {
+      "th": "7 คน",
+      "en": "7",
+      "zh": "7人"
+    }
+  },
+  {
+    "id": "ombudsmen",
+    "section": 228,
+    "proof": "สามคน",
+    "label": {
+      "th": "ผู้ตรวจการแผ่นดิน",
+      "en": "Ombudsmen",
+      "zh": "监察专员"
+    },
+    "value": {
+      "th": "3 คน",
+      "en": "3",
+      "zh": "3人"
+    }
+  },
+  {
+    "id": "nacc",
+    "section": 232,
+    "proof": "เก้าคน",
+    "label": {
+      "th": "กรรมการ ป.ป.ช.",
+      "en": "NACC commissioners",
+      "zh": "国家反贪委员"
+    },
+    "value": {
+      "th": "9 คน",
+      "en": "9",
+      "zh": "9人"
+    }
+  },
+  {
+    "id": "nhrc",
+    "section": 246,
+    "proof": "เจ็ดคน",
+    "label": {
+      "th": "กรรมการสิทธิมนุษยชนแห่งชาติ",
+      "en": "Human Rights commissioners",
+      "zh": "国家人权委员"
+    },
+    "value": {
+      "th": "7 คน",
+      "en": "7",
+      "zh": "7人"
+    }
+  },
+  {
+    "id": "citizen-bill",
+    "section": 133,
+    "proof": "หนึ่งหมื่นคน",
+    "label": {
+      "th": "ประชาชนเข้าชื่อเสนอกฎหมาย",
+      "en": "Voters to propose a bill",
+      "zh": "联署提出法案的选民"
+    },
+    "value": {
+      "th": "อย่างน้อย 10,000 คน",
+      "en": "At least 10,000",
+      "zh": "至少10,000人"
+    }
+  },
+  {
+    "id": "mp-bill",
+    "section": 133,
+    "proof": "ยี่สิบคน",
+    "label": {
+      "th": "ส.ส. เสนอร่างพระราชบัญญัติ",
+      "en": "MPs to introduce a bill",
+      "zh": "提出法案的众议院议员"
+    },
+    "value": {
+      "th": "อย่างน้อย 20 คน",
+      "en": "At least 20",
+      "zh": "至少20人"
+    }
+  },
+  {
+    "id": "amend-petition",
+    "section": 256,
+    "proof": "ห้าหมื่นคน",
+    "label": {
+      "th": "ประชาชนเข้าชื่อเสนอแก้รัฐธรรมนูญ",
+      "en": "Voters to propose an amendment",
+      "zh": "联署提出修宪的选民"
+    },
+    "value": {
+      "th": "อย่างน้อย 50,000 คน",
+      "en": "At least 50,000",
+      "zh": "至少50,000人"
+    }
+  },
+  {
+    "id": "school",
+    "section": 54,
+    "proof": "สิบสองปี",
+    "label": {
+      "th": "การศึกษาโดยไม่เก็บค่าใช้จ่าย",
+      "en": "Free education",
+      "zh": "免费教育"
+    },
+    "value": {
+      "th": "12 ปี",
+      "en": "12 years",
+      "zh": "12年"
+    }
+  },
+  {
+    "id": "house-term",
+    "section": 99,
+    "proof": "สี่ปี",
+    "label": {
+      "th": "อายุสภาผู้แทนราษฎร",
+      "en": "Term of the House",
+      "zh": "众议院任期"
+    },
+    "value": {
+      "th": "4 ปี",
+      "en": "4 years",
+      "zh": "4年"
+    }
+  },
+  {
+    "id": "senate-term",
+    "section": 109,
+    "proof": "ห้าปี",
+    "label": {
+      "th": "อายุวุฒิสภา",
+      "en": "Term of the Senate",
+      "zh": "参议院任期"
+    },
+    "value": {
+      "th": "5 ปี",
+      "en": "5 years",
+      "zh": "5年"
+    }
+  },
+  {
+    "id": "voting-age",
+    "section": 95,
+    "proof": "สิบแปดปี",
+    "label": {
+      "th": "อายุผู้มีสิทธิเลือกตั้ง",
+      "en": "Voting age",
+      "zh": "选民年龄"
+    },
+    "value": {
+      "th": "ไม่ต่ำกว่า 18 ปี",
+      "en": "18 or older",
+      "zh": "年满18岁"
+    }
+  },
+  {
+    "id": "mp-age",
+    "section": 97,
+    "proof": "ยี่สิบห้าปี",
+    "label": {
+      "th": "อายุผู้สมัคร ส.ส.",
+      "en": "Minimum age of an MP",
+      "zh": "众议院议员最低年龄"
+    },
+    "value": {
+      "th": "25 ปี",
+      "en": "25",
+      "zh": "25岁"
+    }
+  },
+  {
+    "id": "senator-age",
+    "section": 108,
+    "proof": "สี่สิบปี",
+    "label": {
+      "th": "อายุผู้สมัคร ส.ว.",
+      "en": "Minimum age of a senator",
+      "zh": "参议员最低年龄"
+    },
+    "value": {
+      "th": "40 ปี",
+      "en": "40",
+      "zh": "40岁"
+    }
+  },
+  {
+    "id": "minister-age",
+    "section": 160,
+    "proof": "สามสิบห้าปี",
+    "label": {
+      "th": "อายุรัฐมนตรี",
+      "en": "Minimum age of a minister",
+      "zh": "部长最低年龄"
+    },
+    "value": {
+      "th": "35 ปี",
+      "en": "35",
+      "zh": "35岁"
+    }
+  },
+  {
+    "id": "amend-readings",
+    "section": 256,
+    "proof": "เป็นสามวาระ",
+    "label": {
+      "th": "ขั้นตอนการแก้ไขเพิ่มเติมรัฐธรรมนูญ",
+      "en": "The stages of a constitutional amendment",
+      "zh": "宪法修正案的审议阶段"
+    },
+    "value": {
+      "th": "3 วาระ",
+      "en": "3 readings",
+      "zh": "3次审议"
+    }
+  },
+  {
+    "id": "court-composition",
+    "section": 200,
+    "proof": "จำนวนสามคน",
+    "label": {
+      "th": "ที่มาของตุลาการศาลรัฐธรรมนูญ 9 คน",
+      "en": "Where the Court's nine judges come from",
+      "zh": "宪法法院九名法官的来源"
+    },
+    "value": {
+      "th": "3 ศาลฎีกา + 2 ศาลปกครองสูงสุด + 4 ผู้ทรงคุณวุฒิ",
+      "en": "3 judges of the Supreme Court, 2 judges of the Supreme Administrative Court, 4 others",
+      "zh": "最高法院3人＋最高行政法院2人＋其他4人"
+    }
+  },
+  {
+    "id": "party-vote-3of4",
+    "section": 101,
+    "proof": "สามในสี่ของที่ประชุมร่วม",
+    "label": {
+      "th": "สมาชิกพรรคเปลี่ยนพรรคด้วยเสียงของพรรค",
+      "en": "A member changing party by a party vote",
+      "zh": "议员改换政党须经本党表决"
+    },
+    "value": {
+      "th": "อย่างน้อย 3 ใน 4 ของที่ประชุมร่วม",
+      "en": "At least three-quarters of the joint meeting",
+      "zh": "至少联合会议的四分之三"
+    }
+  },
+  {
+    "id": "amend-senate-petition",
+    "section": 256,
+    "proof": "ไม่น้อยกว่าหนึ่งในสิบ",
+    "label": {
+      "th": "สมาชิกสภาเข้าชื่อท้วงร่างรัฐธรรมนูญแก้ไขเพิ่มเติม",
+      "en": "Members petitioning against a constitutional amendment draft",
+      "zh": "议员联署质疑宪法修正案草案"
+    },
+    "value": {
+      "th": "ไม่น้อยกว่า 1 ใน 10 ของสมาชิกสภาที่ตนสังกัด (หรือของทั้งสองสภารวมกัน)",
+      "en": "At least one tenth of the members of their House (or of both Houses combined)",
+      "zh": "不少于所属议院（或两院合计）议员的十分之一"
+    }
+  },
+  {
+    "id": "privy-council",
+    "section": 10,
+    "proof": "ไม่เกินสิบแปดคน",
+    "label": {
+      "th": "คณะองคมนตรีทั้งคณะ",
+      "en": "The Privy Council in all",
+      "zh": "枢密院全体"
+    },
+    "value": {
+      "th": "ไม่เกิน 19 คน (ประธาน 1 + อีกไม่เกิน 18)",
+      "en": "At most 19 (1 president + up to 18)",
+      "zh": "至多19人（主席1人＋其他至多18人）"
+    }
+  },
+  {
+    "id": "welfare-age",
+    "section": 48,
+    "proof": "อายุเกินหกสิบปี",
+    "label": {
+      "th": "สิทธิของผู้สูงอายุที่ยากไร้",
+      "en": "Poor elders' right to State assistance",
+      "zh": "贫困老人的国家补助权"
+    },
+    "value": {
+      "th": "เกิน 60 ปี",
+      "en": "Over 60",
+      "zh": "超过60岁"
+    }
+  },
+  {
+    "id": "ag-petition",
+    "section": 49,
+    "proof": "ภายในสิบห้าวัน",
+    "label": {
+      "th": "อัยการสูงสุดต้องดำเนินการต่อร้องขอ",
+      "en": "The Attorney General must act on the petition",
+      "zh": "总检察长须处理申诉"
+    },
+    "value": {
+      "th": "ภายใน 15 วัน",
+      "en": "Within 15 days",
+      "zh": "15天内"
+    }
+  },
+  {
+    "id": "utility-51",
+    "section": 56,
+    "proof": "ร้อยละห้าสิบเอ็ด",
+    "label": {
+      "th": "สัดส่วนที่รัฐต้องถือครองในโครงสร้างพื้นฐานของสาธารณูปโภค",
+      "en": "The State's share in essential utility infrastructure",
+      "zh": "国家在基本公用事业基础设施中的持股比例"
+    },
+    "value": {
+      "th": "อย่างน้อย 51%",
+      "en": "At least 51%",
+      "zh": "至少51%"
+    }
+  },
+  {
+    "id": "joint-sitting-95",
+    "section": 84,
+    "proof": "เก้าสิบห้าของจำนวนสมาชิกสภาผู้แทนราษฎรทั้งหมด",
+    "label": {
+      "th": "เรียกประชุมรัฐสภาระหว่างการเลือกตั้ง",
+      "en": "Convening Parliament during an election",
+      "zh": "选举期间召集议会"
+    },
+    "value": {
+      "th": "ร้อยละ 95",
+      "en": "95 percent",
+      "zh": "百分之95"
+    }
+  },
+  {
+    "id": "mp-constituency",
+    "section": 86,
+    "proof": "สี่ร้อยคน",
+    "label": {
+      "th": "สมาชิกสภาผู้แทนราษฎรเขตเลือกตั้ง",
+      "en": "Constituency MPs",
+      "zh": "选区议员"
+    },
+    "value": {
+      "th": "400 คน",
+      "en": "400",
+      "zh": "400人"
+    }
+  },
+  {
+    "id": "nomination-days",
+    "section": 97,
+    "proof": "ระยะเวลาเก้าสิบวันดังกล่าวให้ลดลงเหลือสามสิบวัน",
+    "label": {
+      "th": "ระยะเวลาเป็นสมาชิกพรรคก่อนลงสมัคร",
+      "en": "Party membership before standing",
+      "zh": "参选前的党籍年限"
+    },
+    "value": {
+      "th": "90 วัน (เหลือ 30 วันเมื่อเลือกตั้งเพราะยุบสภา)",
+      "en": "90 days (30 if the election follows a dissolution)",
+      "zh": "90天（因解散而选举时为30天）"
+    }
+  },
+  {
+    "id": "party-dissolve-60",
+    "section": 101,
+    "proof": "ภายในหกสิบวัน",
+    "label": {
+      "th": "สมาชิกเมื่อพรรคถูกยุบต้องเข้าสังกัดพรรคอื่น",
+      "en": "An MP whose party is dissolved must join another",
+      "zh": "政党被解散后议员须加入他党"
+    },
+    "value": {
+      "th": "60 วัน",
+      "en": "60 days",
+      "zh": "60天"
+    }
+  },
+  {
+    "id": "by-election-180",
+    "section": 105,
+    "proof": "เหลืออยู่ไม่ถึงหนึ่งร้อยแปดสิบวัน",
+    "label": {
+      "th": "เลือกตั้งแทนที่นั่งเขตเลือกตั้งที่ว่าง",
+      "en": "By-election for a vacant constituency seat",
+      "zh": "选区议席出缺的补选"
+    },
+    "value": {
+      "th": "ไม่จัดถ้าเหลืออายุสภาไม่ถึง 180 วัน",
+      "en": "Not held if under 180 days of the House's term remain",
+      "zh": "剩余任期不足180天则不举行"
+    }
+  },
+  {
+    "id": "gazette-7",
+    "section": 105,
+    "proof": "ประกาศในราชกิจจานุเบกษาภายในเจ็ดวัน",
+    "label": {
+      "th": "ประธานสภาแจ้งรายชื่อที่เลื่อนขึ้นมาแทน",
+      "en": "The Speaker announces who moves up",
+      "zh": "议长公告递补人选"
+    },
+    "value": {
+      "th": "ภายใน 7 วัน",
+      "en": "Within 7 days",
+      "zh": "7天内"
+    }
+  },
+  {
+    "id": "senator-replace-60",
+    "section": 107,
+    "proof": "ภายในหกสิบวัน",
+    "label": {
+      "th": "เลือกสมาชิกวุฒิสภาขึ้นแทนที่ว่าง",
+      "en": "Selecting replacement senators",
+      "zh": "补选参议员"
+    },
+    "value": {
+      "th": "ภายใน 60 วัน",
+      "en": "Within 60 days",
+      "zh": "60天内"
+    }
+  },
+  {
+    "id": "organic-bill-50",
+    "section": 131,
+    "proof": "จำนวนไม่น้อยกว่าหนึ่งในสิบของจำนวนสมาชิกทั้งหมด",
+    "label": {
+      "th": "สมาชิกสภาผู้แทนราษฎรเสนอร่างพระราชบัญญัติประกอบรัฐธรรมนูญ",
+      "en": "MPs introducing an organic law bill",
+      "zh": "议员提出组织法草案"
+    },
+    "value": {
+      "th": "1/10 ของสมาชิก (500 คน = 50 คน)",
+      "en": "One tenth of the members (50 of 500)",
+      "zh": "议员的十分之一（500人中50人）"
+    }
+  },
+  {
+    "id": "organic-send-15",
+    "section": 132,
+    "proof": "ภายในสิบห้าวัน",
+    "label": {
+      "th": "รัฐสภาส่งร่างพระราชบัญญัติประกอบรัฐธรรมนูญให้ศาลหรือองค์กรอิสระให้ความเห็น",
+      "en": "Parliament refers an organic law bill for opinions",
+      "zh": "议会将组织法草案送交征求意见"
+    },
+    "value": {
+      "th": "ส่งภายใน 15 วัน, ทักท้วงภายใน 10 วัน",
+      "en": "Send within 15 days; objection window of 10 days",
+      "zh": "15日内送交，10日内可提出异议"
+    }
+  },
+  {
+    "id": "reconsider-180",
+    "section": 138,
+    "proof": "พ้นหนึ่งร้อยแปดสิบวัน",
+    "label": {
+      "th": "สภาผู้แทนราษฎรพิจารณาร่างที่วุฒิสภาไม่เห็นชอบซ้ำ",
+      "en": "The House takes up a bill the Senate withheld",
+      "zh": "参议院不通过的议案由众议院再议"
+    },
+    "value": {
+      "th": "หลังพ้น 180 วัน, ด้วยคะแนนเสียงมากกว่ากึ่งหนึ่ง",
+      "en": "After 180 days, by more than half of all existing MPs",
+      "zh": "180天后，以现有议员过半数通过"
+    }
+  },
+  {
+    "id": "no-confidence-251",
+    "section": 151,
+    "proof": "มติไม่ไว้วางใจต้องมีคะแนนเสียงมากกว่ากึ่งหนึ่งของจำนวนสมาชิกทั้งหมด",
+    "label": {
+      "th": "มติไม่ไว้วางใจรัฐมนตรี",
+      "en": "A no-confidence vote",
+      "zh": "不信任案表决"
+    },
+    "value": {
+      "th": "มากกว่ากึ่งหนึ่ง (500 คน = 251 เสียง)",
+      "en": "More than half (251 of 500)",
+      "zh": "过半数（500人中251票）"
+    }
+  },
+  {
+    "id": "pm-nominate-5",
+    "section": 159,
+    "proof": "ร้อยละห้า",
+    "label": {
+      "th": "พรรคเสนอชื่อนายกรัฐมนตรี",
+      "en": "A party nominates a Prime Minister",
+      "zh": "政党提名总理"
+    },
+    "value": {
+      "th": "ไม่น้อยกว่าร้อยละ 5 ของสภา (500 คน = 25 คน)",
+      "en": "At least 5% of the House (25 of 500)",
+      "zh": "不少于众议院现有议员的5%（500人中25人）"
+    }
+  },
+  {
+    "id": "war-two-thirds",
+    "section": 177,
+    "proof": "สองในสามของจำนวนสมาชิกทั้งหมด",
+    "label": {
+      "th": "มติให้ความเห็นชอบประกาศสงคราม",
+      "en": "The vote approving a declaration of war",
+      "zh": "宣战同意票"
+    },
+    "value": {
+      "th": "สองในสามของทั้งสองสภา (700 คน = 467 เสียง)",
+      "en": "Two thirds of both Houses (467 of 700)",
+      "zh": "两院合计三分之二（700人中467票）"
+    }
+  },
+  {
+    "id": "judge-under-68",
+    "section": 201,
+    "proof": "ไม่ถึงหกสิบแปดปี",
+    "label": {
+      "th": "อายุของตุลาการศาลรัฐธรรมนูญ",
+      "en": "The age of a Constitutional Court judge",
+      "zh": "宪法法院法官的年龄"
+    },
+    "value": {
+      "th": "ไม่น้อยกว่า 45 ปี และไม่ถึง 68 ปี",
+      "en": "At least 45 and under 68",
+      "zh": "不小于45岁且未满68岁"
+    }
+  },
+  {
+    "id": "judge-retire-75",
+    "section": 208,
+    "proof": "มีอายุครบเจ็ดสิบห้าปี",
+    "label": {
+      "th": "ตุลาการศาลรัฐธรรมนูญพ้นจากตำแหน่งตามวาระ",
+      "en": "A Constitutional Court judge leaves office at the age limit",
+      "zh": "宪法法院法官到龄退休"
+    },
+    "value": {
+      "th": "75 ปี",
+      "en": "75",
+      "zh": "75岁"
+    }
+  },
+  {
+    "id": "admin-court-7",
+    "section": 211,
+    "proof": "ไม่น้อยกว่าเจ็ดคน",
+    "label": {
+      "th": "ศาลรัฐธรรมนูญนั่งพิจารณาและวินิจฉัย",
+      "en": "The Constitutional Court sitting and deciding",
+      "zh": "宪法法院审理与裁决"
+    },
+    "value": {
+      "th": "อย่างน้อย 7 คน",
+      "en": "At least 7",
+      "zh": "至少7人"
+    }
+  },
+  {
+    "id": "organ-age-45-70",
+    "section": 216,
+    "proof": "มีอายุไม่ต่ำกว่าสี่สิบห้าปี แต่ไม่เกินเจ็ดสิบปี",
+    "label": {
+      "th": "คุณสมบัติของสมาชิกองค์กรอิสระ",
+      "en": "The age qualification for members of independent organs",
+      "zh": "独立机关成员的年龄资格"
+    },
+    "value": {
+      "th": "ไม่น้อยกว่า 45 ปี และไม่เกิน 70 ปี",
+      "en": "At least 45 and not over 70",
+      "zh": "不小于45岁且不超过70岁"
+    }
+  },
+  {
+    "id": "ombudsman-20",
+    "section": 228,
+    "proof": "ประสบการณ์ในการดำเนินกิจการ อันเป็นสาธารณะมาแล้วไม่น้อยกว่ายี่สิบปี",
+    "label": {
+      "th": "ผู้ตรวจการแผ่นดินที่มีประสบการณ์ด้านสาธารณะ",
+      "en": "The Ombudsman with public-service experience",
+      "zh": "具公共服务经验的监察专员"
+    },
+    "value": {
+      "th": "1 คน มีประสบการณ์ไม่น้อยกว่า 20 ปี",
+      "en": "One, with at least 20 years' experience",
+      "zh": "一人，经验不少于20年"
+    }
+  },
+  {
+    "id": "nacc-20",
+    "section": 232,
+    "proof": "อย่างสม่ำเสมอและต่อเนื่องมาเป็นเวลาไม่น้อยกว่ายี่สิบปี",
+    "label": {
+      "th": "ผู้สมัครเข้ารับการสรรหาตามวิชาชีพที่มีใบอนุญาต",
+      "en": "NACC candidates admitted by licensed profession",
+      "zh": "凭执业资格应征国家防止贪腐委员会委员者"
+    },
+    "value": {
+      "th": "ประกอบวิชาชีพไม่น้อยกว่า 20 ปี",
+      "en": "At least 20 years in the profession",
+      "zh": "执业不少于20年"
+    }
+  },
+  {
+    "id": "nacc-petition-20000",
+    "section": 236,
+    "proof": "จำนวนไม่น้อยกว่าสองหมื่นคน",
+    "label": {
+      "th": "ผู้มีสิทธิร้องกล่าวหากรรมการป้องกันและปราบปรามการทุจริต",
+      "en": "Petitions accusing an NACC commissioner",
+      "zh": "指控国家防止贪腐委员会委员的联署"
+    },
+    "value": {
+      "th": "อย่างน้อย 20,000 คน",
+      "en": "At least 20,000 people",
+      "zh": "至少2万人"
+    }
+  },
+  {
+    "id": "sac-appeal-90",
+    "section": 240,
+    "proof": "ภายในเก้าสิบวัน",
+    "label": {
+      "th": "อุทธรณ์คำสั่งลงโทษต่อศาลปกครองสูงสุด",
+      "en": "Appealing an administrative penalty to the Supreme Administrative Court",
+      "zh": "向最高行政法院上诉"
+    },
+    "value": {
+      "th": "ภายใน 90 วัน",
+      "en": "Within 90 days",
+      "zh": "90天内"
+    }
+  },
+  {
+    "id": "reform-law-120",
+    "section": 259,
+    "proof": "ภายในหนึ่งร้อยยี่สิบวัน",
+    "label": {
+      "th": "กฎหมายว่าด้วยแผนและขั้นตอนการปฏิรูปประเทศ",
+      "en": "The law on national reform plans and procedures",
+      "zh": "国家改革计划与程序法"
+    },
+    "value": {
+      "th": "ภายใน 120 วัน",
+      "en": "Within 120 days",
+      "zh": "120天内"
+    }
+  },
+  {
+    "id": "education-60",
+    "section": 261,
+    "proof": "ภายในหกสิบวัน",
+    "label": {
+      "th": "คณะกรรมการด้านการศึกษาอิสระ",
+      "en": "The independent education committee",
+      "zh": "独立教育委员会"
+    },
+    "value": {
+      "th": "แต่งตั้งภายใน 60 วัน",
+      "en": "Appointed within 60 days",
+      "zh": "60天内任命"
+    }
+  },
+  {
+    "id": "assembly-leave-90",
+    "section": 263,
+    "proof": "ภายในเก้าสิบวัน",
+    "label": {
+      "th": "ออกจากสภานิติบัญญัติแห่งชาติเพื่อลงสมัครรับเลือกตั้ง",
+      "en": "Leaving the National Legislative Assembly to stand for election",
+      "zh": "离开国民立法议会参选"
+    },
+    "value": {
+      "th": "ภายใน 90 วัน",
+      "en": "Within 90 days",
+      "zh": "90天内"
+    }
+  },
+  {
+    "id": "assembly-deemed-60",
+    "section": 267,
+    "proof": "ภายในเวลาหกสิบวัน",
+    "label": {
+      "th": "สภานิติบัญญัติแห่งชาติพิจารณาร่างพระราชบัญญัติประกอบรัฐธรรมนูญ",
+      "en": "The National Legislative Assembly considers a draft organic act",
+      "zh": "国民立法议会审议组织法草案"
+    },
+    "value": {
+      "th": "ภายใน 60 วัน",
+      "en": "Within 60 days",
+      "zh": "60天内"
+    }
+  },
+  {
+    "id": "first-election-150",
+    "section": 268,
+    "proof": "ภายในหนึ่งร้อยห้าสิบวัน",
+    "label": {
+      "th": "การเลือกตั้งสมาชิกสภาผู้แทนราษฎรครั้งแรก",
+      "en": "The first election of MPs under this Constitution",
+      "zh": "本宪法下首次下议员选举"
+    },
+    "value": {
+      "th": "ภายใน 150 วัน",
+      "en": "Within 150 days",
+      "zh": "150天内"
+    }
+  },
+  {
+    "id": "first-senate-250",
+    "section": 269,
+    "proof": "สมาชิกจำนวนสองร้อยห้าสิบคน",
+    "label": {
+      "th": "วุฒิสภาชุดแรกตามมาตรา 269",
+      "en": "The first Senate under section 269",
+      "zh": "第二百六十九条项下的首届参议院"
+    },
+    "value": {
+      "th": "250 คน",
+      "en": "250 members",
+      "zh": "250人"
+    }
+  },
+  {
+    "id": "ncpo-50",
+    "section": 269,
+    "proof": "ให้ได้จำนวนห้าสิบคน",
+    "label": {
+      "th": "คณะรักษาความสงบแห่งชาติคัดเลือกจากบัญชีรายชื่อของคณะกรรมการการเลือกตั้ง",
+      "en": "The NCPO's pick from the Election Commission's list",
+      "zh": "全国维持和平委员会从选委会名单中挑选"
+    },
+    "value": {
+      "th": "50 คน (จากรายชื่อ 200 คน)",
+      "en": "50 of the Commission's 200 names",
+      "zh": "选委会200人名单中的50人"
+    }
+  },
+  {
+    "id": "spectrum-180",
+    "section": 274,
+    "proof": "ภายในหนึ่งร้อยแปดสิบวัน",
+    "label": {
+      "th": "แก้ไขกฎหมายคณะกรรมการกิจการกระจายเสียง",
+      "en": "Amending the broadcasting regulator act",
+      "zh": "修订广播监管机构法"
+    },
+    "value": {
+      "th": "ภายใน 180 วัน",
+      "en": "Within 180 days",
+      "zh": "180天内"
+    }
+  },
+  {
+    "id": "strategy-120",
+    "section": 275,
+    "proof": "ภายในหนึ่งร้อยยี่สิบวัน",
+    "label": {
+      "th": "ยุทธศาสตร์ชาติ",
+      "en": "The national strategy",
+      "zh": "国家战略"
+    },
+    "value": {
+      "th": "ภายใน 120 วัน",
+      "en": "Within 120 days",
+      "zh": "120天内"
+    }
+  }
 ]

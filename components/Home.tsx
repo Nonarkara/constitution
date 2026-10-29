@@ -231,20 +231,20 @@ export function Home() {
             </div>
             <h3>
               <Link href="/memory/">
-                {tr(lang, "วังความจำ & การ์ดช่วยจำ", "Memory Palace & Flashcards", "记忆宫殿与闪卡")}
+                {tr(lang, "บ้านความจำและการ์ดช่วยจำ", "The memory house and flashcards", "记忆之屋与闪卡")}
               </Link>
             </h3>
             <p className="micro">
               {tr(
                 lang,
-                "จำโครงสร้างด้วยภาพอาคาร 16 ห้อง พลิกการ์ดทวนความจำ และแผ่นสรุปตัวเลข 41 ค่าที่ออกสอบบ่อย พร้อม 7 กับดักสำคัญ",
-                "16-room spatial memory palace, flip-to-recall flashcards, and a 41-number exam cram sheet with 7 high-yield traps.",
-                "16间空间记忆宫殿、翻转闪卡以及41个核心数字与7大高频陷阱速记表。",
+                "บ้าน 16 ห้อง ห้องละหนึ่งหมวด การ์ดพลิกทวนความจำ และแผ่นสรุปตัวเลข 79 ค่าที่ข้อสอบถามบ่อย พร้อมกับดัก 7 ข้อ",
+                "Sixteen rooms, one per chapter; flip cards to test recall; and a sheet of the 79 numbers the exam asks about, with seven traps.",
+                "十六个房间，每章一间；翻转闪卡检验记忆；另有考试常问的79个数字和7个陷阱。",
               )}
             </p>
             <div className="engine-links micro">
               <Link href="/memory/">{tr(lang, "เดินชมวังความจำ", "Memory Palace", "记忆宫殿")} →</Link>
-              <Link href="/cram/" className="pulse-link">{tr(lang, "สูตรตัวเลข 41 ค่า", "41 Cram Numbers", "41个考点数字")}</Link>
+              <Link href="/cram/" className="pulse-link">{tr(lang, "สูตรตัวเลข 79 ค่า", "79 Cram Numbers", "79个考点数字")}</Link>
               <Link href="/flashcards/" className="pulse-link">{tr(lang, "การ์ดความจำ", "Flashcards", "记忆闪卡")}</Link>
             </div>
           </div>

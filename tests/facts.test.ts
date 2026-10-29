@@ -52,7 +52,7 @@ test("all canonical system counts and claims stay synchronized with underlying d
   assert.equal(rightsCount, 15, "civic rights catalog");
   assert.equal(palace.length, 16, "memory palace rooms");
   const cramNumbersCount = facts.length + cram.time.length + cram.votes.length;
-  assert.equal(cramNumbersCount, 41, "cram numbers count");
+  assert.equal(cramNumbersCount, 79, "cram numbers count");
   assert.equal(cram.traps.length, 7, "cram traps count");
   assert.equal(papers.length, 30, "timed mock papers");
   assert.equal(examTopics.length, 90, "district exam topics");

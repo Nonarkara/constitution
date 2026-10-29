@@ -79,7 +79,7 @@
     "story": {
       "th": "องคมนตรีมีหน้าที่ถวายความเห็นต่อพระมหากษัตริย์ ตำแหน่งนี้จึงอยู่ใกล้ยอดของโครงสร้างรัฐ มาตรา 12 แยกตำแหน่งนี้ออกจากการเมืองประจำวัน องคมนตรีจะเป็น ส.ส. ส.ว. ตุลาการศาลรัฐธรรมนูญ ผู้ดำรงตำแหน่งในองค์กรอิสระ เจ้าหน้าที่ของรัฐ หรือสมาชิกหรือเจ้าหน้าที่ของพรรคการเมืองไม่ได้ และต้องไม่แสดงการฝักใฝ่ในพรรคการเมืองใด ๆ รายการยาวโดยตั้งใจ เพราะต้องปิดทั้งประตูหน้าและประตูข้าง",
       "en": "Privy Councillors give their opinions to the King, which places them near the top of the state. Section 12 keeps that seat apart from everyday politics. A Privy Councillor cannot be an MP, a senator, a Constitutional Court judge, a member of an Independent Organ, a state official, or a member or officer of a political party, and must not show loyalty to any political party. The list is long on purpose. It closes the side doors as well as the front one.",
-      "zh": "枢密院大臣负责向国王提出意见，这个位置接近国家结构的顶端。第12条把它与日常政治隔开：枢密院大臣不得担任下议院议员、参议员、宪法法院法官、独立机构职务、国家官员，也不得是政党党员或党务人员，并且不得表露对任何政党的倾向。清单之所以列得这么长，是为了把正门和侧门一起关上。"
+      "zh": "枢密院大臣负责向国王提出意见，这个位置接近国家结构的顶端。第12条把它与日常政治隔开：枢密院大臣不得担任众议院议员、参议员、宪法法院法官、独立机构职务、国家官员，也不得是政党党员或党务人员，并且不得表露对任何政党的倾向。清单之所以列得这么长，是为了把正门和侧门一起关上。"
     },
     "why": {
       "th": "ทำไมห้ามแม้แต่การแสดงความฝักใฝ่ คำปรึกษาจะน่าเชื่อถือก็ต่อเมื่อผู้ให้คำปรึกษาไม่มีฝ่ายที่ต้องเอาชนะ ถ้ากฎหยุดอยู่แค่การเป็นสมาชิกตามทะเบียน ความภักดีก็ยังรั่วออกไปทางอื่นได้ทุกทาง",
@@ -480,7 +480,7 @@
     "story": {
       "th": "มาตรา 133 บอกว่าใครเสนอร่างพระราชบัญญัติต่อสภาผู้แทนราษฎรได้บ้าง คือคณะรัฐมนตรี ส.ส. ไม่น้อยกว่ายี่สิบคน หรือผู้มีสิทธิเลือกตั้งไม่น้อยกว่าหนึ่งหมื่นคนเข้าชื่อกัน ทางของประชาชนมีขอบเขต คือเสนอได้ตามหมวด 3 สิทธิและเสรีภาพ หรือหมวด 5 หน้าที่ของรัฐ และต้องทำตามกฎหมายว่าด้วยการเข้าชื่อเสนอกฎหมาย ถ้าเป็นร่างเกี่ยวด้วยการเงิน ต้องมีคำรับรองของนายกรัฐมนตรี หนึ่งหมื่นฟังดูเยอะ จนกว่าจะนับคนในกลุ่มไลน์ของอำเภอ",
       "en": "Section 133 names who may introduce a bill to the House: the Council of Ministers, at least twenty MPs, or at least ten thousand voters signing together. The citizen route has a scope: bills under Chapter 3 on rights and liberties or Chapter 5 on the duties of the state, following the law on public submission of bills. If the bill is a money bill, it needs the Prime Minister's endorsement. Ten thousand sounds like a lot until you count your district's chat groups.",
-      "zh": "第133条列明谁可以向下议院提出法案：内阁、不少于二十名下议院议员，或不少于一万名选民联署。公民这条路有范围：只能提出第3章权利与自由或第5章国家义务方面的法案，并须依照联署提案法办理。若是财政法案，须经总理认可。一万人听起来很多，直到你数一数本区的聊天群。"
+      "zh": "第133条列明谁可以向众议院提出法案：内阁、不少于二十名众议院议员，或不少于一万名选民联署。公民这条路有范围：只能提出第3章权利与自由或第5章国家义务方面的法案，并须依照联署提案法办理。若是财政法案，须经总理认可。一万人听起来很多，直到你数一数本区的聊天群。"
     },
     "why": {
       "th": "ทางของประชาชนถูกจำกัดไว้ที่หมวดสิทธิและหมวดหน้าที่ของรัฐ เพราะสองหมวดนั้นคือเรื่องที่คนธรรมดาเป็นผู้ได้รับผลโดยตรง ขอบเขตนี้ทำให้เสียงหนึ่งหมื่นคนชี้ไปที่สิทธิของตัวเองได้ชัด ไม่กระจายไปทุกเรื่องที่สภาต้องตรากฎหมาย",
@@ -516,7 +516,7 @@
       {
         "th": "ได้ ตราบใดที่สภายังให้ความเห็นชอบ",
         "en": "Yes, as long as the House keeps approving them",
-        "zh": "可以，只要下议院一直批准"
+        "zh": "可以，只要众议院一直批准"
       },
       {
         "th": "ไม่ได้ รวมกันแล้วเกินแปดปีไม่ได้ ไม่ว่าจะติดต่อกันหรือไม่",
@@ -533,7 +533,7 @@
     "story": {
       "th": "มาตรา 158 ตั้งคณะรัฐมนตรี มีนายกรัฐมนตรีและรัฐมนตรีอื่นอีกไม่เกินสามสิบห้าคน บริหารราชการแผ่นดินตามหลักความรับผิดชอบร่วมกัน นายกรัฐมนตรีต้องเป็นคนที่สภาผู้แทนราษฎรให้ความเห็นชอบ แล้วตามด้วยเพดาน นายกรัฐมนตรีดำรงตำแหน่งรวมกันเกินแปดปีไม่ได้ ไม่ว่าจะติดต่อกันหรือไม่ ช่วงที่อยู่ปฏิบัติหน้าที่ต่อไปหลังพ้นตำแหน่งไม่นับ เพดานนี้ผูกกับตัวบุคคล ไม่ใช่พรรค จึงจำง่ายและเลี่ยงยาก",
       "en": "Section 158 sets up the Council of Ministers: a Prime Minister and up to thirty-five other ministers, sharing collective responsibility. The Prime Minister must be someone the House of Representatives has approved. Then comes a ceiling: no Prime Minister may hold office for more than eight years in total, consecutive or not. Time spent carrying on duties after leaving office does not count. The cap attaches to the person, not the party, which makes it easy to remember and hard to dodge.",
-      "zh": "第158条设立内阁：总理和不超过三十五名其他部长，依集体负责原则管理国家事务。总理必须是经下议院同意的人选。接着是上限：总理任职累计不得超过八年，不论是否连续；卸任后继续履职的期间不计算在内。这个上限绑在个人身上，而不是政党，所以好记，也难绕开。"
+      "zh": "第158条设立内阁：总理和不超过三十五名其他部长，依集体负责原则管理国家事务。总理必须是经众议院同意的人选。接着是上限：总理任职累计不得超过八年，不论是否连续；卸任后继续履职的期间不计算在内。这个上限绑在个人身上，而不是政党，所以好记，也难绕开。"
     },
     "why": {
       "th": "ทำไมจำกัดผู้นำที่ประชาชนยังเลือกอยู่ อำนาจที่อยู่ที่เดียวนานพอ จะค่อย ๆ ปรับรูปสถาบันที่มีไว้ตรวจสอบมัน นาฬิกาไม่ได้ตัดสินใคร มันแค่ทำให้การเปลี่ยนมือเกิดขึ้นแน่นอน",
@@ -586,7 +586,7 @@
     "story": {
       "th": "มาตรา 184 ว่าด้วยคนที่นั่งอยู่สองฝั่งโต๊ะ ส.ส. และ ส.ว. ต้องไม่รับ แทรกแซง หรือก้าวก่ายการเข้ารับสัมปทานจากรัฐ และต้องไม่เป็นหุ้นส่วนหรือผู้ถือหุ้นในบริษัทที่รับสัมปทานหรือเป็นคู่สัญญากับรัฐแบบผูกขาดตัดตอน ไม่ว่าทางตรงหรือทางอ้อม ต้องไม่รับเงินหรือประโยชน์พิเศษจากหน่วยงานของรัฐ และต้องไม่แทรกแซงสื่อมวลชนโดยมิชอบ ข้อห้ามเรื่องสัมปทานและประโยชน์พิเศษใช้กับคู่สมรส บุตร และคนที่ทำแทนด้วย ผู้ร่างเห็นได้ชัดว่ารู้จักมุกฝากชื่อหลานไว้แล้ว",
       "en": "Section 184 is about people who sit on both sides of the table. MPs and senators must not receive, interfere or intervene in state concessions, nor be partners or shareholders in a firm that holds one or a monopoly-type state contract, directly or indirectly. They must not take special money or benefits from state agencies, or wrongfully interfere with the press. The concession and benefit rules extend to spouses, children and anyone acting on the member's behalf. The drafters clearly knew the nephew trick.",
-      "zh": "第184条讲的是同时坐在桌子两边的人。下议院议员和参议员不得接受、干预或插手国家特许经营，也不得成为获得特许或与国家订立垄断性合同的合伙或公司的合伙人或股东，无论直接或间接；不得从国家机关获取特殊款项或利益，也不得不当干预新闻媒体。关于特许和特殊利益的禁令同样适用于配偶、子女以及代其行事的人。起草者显然早就知道“挂在侄子名下”的把戏。"
+      "zh": "第184条讲的是同时坐在桌子两边的人。众议院议员和参议员不得接受、干预或插手国家特许经营，也不得成为获得特许或与国家订立垄断性合同的合伙或公司的合伙人或股东，无论直接或间接；不得从国家机关获取特殊款项或利益，也不得不当干预新闻媒体。关于特许和特殊利益的禁令同样适用于配偶、子女以及代其行事的人。起草者显然早就知道“挂在侄子名下”的把戏。"
     },
     "why": {
       "th": "ทำไมต้องครอบคลุมถึงคู่สมรสและบุตร ข้อห้ามที่หยุดแค่ชื่อของ ส.ส. เอง คือข้อห้ามเรื่องเอกสาร ไม่ใช่ข้อห้ามเรื่องผลประโยชน์ทับซ้อน",
@@ -953,7 +953,7 @@
     "prompt": {
       "th": "สมาชิกวุฒิสภาร่วมลงมติเห็นชอบนายกรัฐมนตรีกับ ส.ส. ได้นานแค่ไหน",
       "en": "For how long did senators vote together with MPs to approve a Prime Minister?",
-      "zh": "参议员与下议院议员共同投票批准总理，持续多久？"
+      "zh": "参议员与众议院议员共同投票批准总理，持续多久？"
     },
     "choices": [
       {
