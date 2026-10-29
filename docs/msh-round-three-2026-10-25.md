@@ -188,14 +188,26 @@ The five decisions the receipt keeps, and why they are decisions and not defects
 | `dead` · `div.route-number.mono` | on `/bible/` each compact number marks reading order beside a chapter heading and its variable-length title |
 | `dead` · `div.anchor-features.mono` | at 721 px and 722 px, where the rail comes back and squeezes the reading column, the three figures on the rail are a stacked group, not three stranded cells |
 
-**The receipt moved with the new art, and no finding moved with it.** Compared with the receipt
-recorded before the five cut plates were redrawn, **86 of the 2,623 cells** differ — every one of
-them a `firstAction` position, plus five hierarchy readings, on the seven pages that carry a
-redrawn plate. The cause is the plates' new proportions: `tikki-bible-guide` went from 680×557 to
-680×677, `tikki-flashcards` from 680×637 to 680×792, `tikki-games` from 680×638 to 680×794, so
-the content below them sits lower by an amount that depends on the width. **Not one finding
-changed** — the same holes, the same overflow, the same five justified decisions. A taller drawing
-moved a page; it did not open a hole in one.
+**The receipt moved with the new art, and with the clock — and no finding moved with it.** Compared
+with the receipt recorded before the five cut plates were redrawn, **86 of the 2,623 cells** differ:
+every one of them a `firstAction` position, plus five hierarchy readings, on seven routes. There
+are two causes, and both were measured.
+
+- **The plates' new proportions.** `tikki-flashcards` went from 680×637 to 680×792, `tikki-games`
+  from 680×638 to 680×794 and `tikki-bible-guide` from 680×557 to 680×677 — three plates got
+  **taller**, so the content below them sits **lower**: `/flashcards/`, `/games/` and `/bible/`
+  moved down by 3 to 44 px, by an amount that depends on the width. `tikki-exam` went the other
+  way, from 650×793 to 680×691, and `tikki-story-cover` from 680×865 to 680×786 — two plates got
+  **shorter**, so the content above them sat **higher**: `/exam/` moved **up** by 30 px at eleven
+  widths and `/tikki/` by 30 to 62 px at four.
+- **The clock.** `/rights/` and `/sources/` carry no redrawn plate, and their plates are
+  byte-identical, yet three cells moved by **42 px**, each at a single width. 42 px is the
+  client-rendered back link — 26 px of text and 16 px of margin. The old receipt measured those
+  cells before React arrived and the new one after: the same chrome row this report measures on
+  `/memory/`.
+
+**Not one finding changed** — the same holes, the same overflow, the same five justified decisions.
+A taller drawing moved a page; it did not open a hole in one.
 
 The gate's own output was read, not just its exit code. It reported **no failure** and four notes
 it marks as "seen, recorded, and not a failure": the widths where a fixed-width container sits just
@@ -287,3 +299,24 @@ was moved and the gate re-run.
    copy, and it passes. The shared instrument itself is untouched — and that is the thing to
    change next: the budget belongs in the canonical copy, where four other projects' receipts
    would benefit from it too.
+7. **One cell of the receipt measured nothing, and the reason is now known.** At `/flashcards/`
+   850 px the receipt records no title and no first action: the measurement was taken of a page
+   that had not rendered yet. The page itself is fine — measured three times in a real browser at
+   that width, its title renders 125 px tall and the plate is complete — but that cell is not
+   evidence, and the gate cannot see it, because the gate compares holes and drift, and a cell with
+   nothing in it has neither.
+
+   The cause is the instrument, and it is now diagnosed. The app rewrites its own URL when it
+   hydrates and **drops the query string**; the harness puts `?__spatial=<token>` on the frame to
+   tell one navigation from the next, and the app deletes that token two seconds after the frame
+   loads. The instrument then cannot tell which document it is looking at, and the measurement
+   becomes a race with the hydration — and winning that race early is how a cell comes to measure a
+   page that has not arrived. The fix is one rule: identify the frame by its **path**, which
+   survives the rewrite, and wait for the title to be rendered before measuring — exactly what
+   `scripts/hierarchy-ready.mjs` already does for the hierarchy gate.
+
+   It belongs in the **canonical** instrument, where four other projects' receipts depend on it,
+   so this round did not change it: the repository's copy is byte-identical to the canonical one
+   (`npm run check:spatial-sync` passes) and the receipt in `design/spatial-baseline.json` was
+   recorded with a copy of the instrument that differs in the retry budget alone. Re-recording the
+   receipt with a frame identified by path is the next round's first job.
