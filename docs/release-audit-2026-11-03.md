@@ -47,3 +47,18 @@ Hierarchy timeout now scales with requested cells (430 seconds at 43 routes) aft
 The full fresh 43 × 61 estate sweep and falsifiers will run in CI after push. The local receipt is deliberately assembled. Native iPad dictation/PWA installation, a fluent human review of every translation and learner evidence for the mnemonic effect remain unverified. The long guide remains Thai/English, explicitly labeled for Chinese readers; short lessons, constitutional text and exercises are trilingual. Shared spatial-tool shutdown after parent interruption still needs upstream attention; it can leave an owned headless browser behind, as observed and cleaned above.
 
 Deployment verification is recorded below.
+
+
+## Shipped and verified
+
+Integrated and pushed MiniMax's nine local commits plus `8542c5d`. No open PRs or other branches required merging. Pruned only the registry entry for the already missing detached worktree; its commit is an ancestor of main.
+
+`wrangler deploy` completed to https://constitution.nonarkara.org, Worker version `a5e369dc-930f-4b03-a6f5-dc70af88c071`. NEWS/ASSETS bindings and the six-hour harvest schedule are unchanged; no database migration.
+
+Three rounds matched 63 HTML/JS/CSS/service-worker/manifest/art bodies byte-for-byte with the production export. All 43 user-route bodies also matched. This includes the retained illustrations and the new offline revision `de434d0e45bc37c8`. Full SHA evidence is in `design/msh-evidence/2026-11-03/live-bytes.json`.
+
+The live phone guide's amber recall question is fully visible at y745.77–821.16; Enter opens its real explanation and closes it again with visible focus. No console errors were observed. The live cram sheet has 79 full-width mnemonics and no overflow; cover hides all 79 answers and cues, and one reveal restores exactly one. Live screenshots are archived beside the local and independent captures.
+
+The live news API returned 200 headlines, GET 200, HEAD 200 with an empty body, and POST 405 with `Allow: GET, HEAD`. HSTS and nosniff are present.
+
+The expanded full CI run is still in progress; its full-estate sweep and falsifiers are not claimed as completed local checks. The final evidence commit changes no served application bytes.

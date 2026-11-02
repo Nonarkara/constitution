@@ -1,0 +1,546 @@
+{
+  "base": "https://constitution.nonarkara.org",
+  "verifiedAt": "2026-11-02T23:36:23Z",
+  "sourceCommit": "8542c5dfc6470e5a4e413e0f30ea5c6738267cfd",
+  "workerVersion": "a5e369dc-930f-4b03-a6f5-dc70af88c071",
+  "offlineRevision": "de434d0e45bc37c8",
+  "matchingBodiesPerRound": [
+    63,
+    63,
+    63
+  ],
+  "assetBodies": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "c8e5a5a22f10c54cd5d8a36875e33a78bbc2805c4712a1c24a6d2401a3ef41e2"
+    },
+    {
+      "path": "/news/",
+      "status": 200,
+      "sha256": "59e6c245553b1d1c3f0014e097c108d610b19ddb1446353f07bf0abcb05c75a8"
+    },
+    {
+      "path": "/memory/",
+      "status": 200,
+      "sha256": "5da160b209d4aec4a4cbb5a56bc1be633146cf4bf64e978c7ae0a861a958537e"
+    },
+    {
+      "path": "/settings/",
+      "status": 200,
+      "sha256": "d67afcdaca3139bffbc80b7e815e7106fd3688fc1515cd97eb7d516a69dd05fe"
+    },
+    {
+      "path": "/bible/transitory/",
+      "status": 200,
+      "sha256": "c70f0b92965bec1f2c2c3ebb94c1dc707c049940add9ddb6b2796e1e2acd021d"
+    },
+    {
+      "path": "/sw.js",
+      "status": 200,
+      "sha256": "f82744ea9c690ac2298e151f8a053c70e1f70eab8152489bf91d363a9cba6676"
+    },
+    {
+      "path": "/offline-manifest.json",
+      "status": 200,
+      "sha256": "f9aebcd2d04d6116d77fe38316461d82d4a501decbdc11f17a301697bbfa50a5"
+    },
+    {
+      "path": "/_next/static/css/012910236484ab0e.css",
+      "status": 200,
+      "sha256": "b4c7e79cd8c8a1967952a592bad919fd8a9ddba1e1284cd30900adb6a3814a35"
+    },
+    {
+      "path": "/_next/static/chunks/webpack-8ad31744f0395b80.js",
+      "status": 200,
+      "sha256": "98c62c4bfc5b17787116d813309cdff6531dabd6ac827cb5f6335049f53c3d4b"
+    },
+    {
+      "path": "/_next/static/chunks/4bd1b696-e199e788e58acf79.js",
+      "status": 200,
+      "sha256": "92b4fe06c9e49f7c6e41deafb7fb0785ba9504956dd5252bcd6db881ff98cf61"
+    },
+    {
+      "path": "/_next/static/chunks/3794-7dd0c5ddc997efdc.js",
+      "status": 200,
+      "sha256": "39a76fcc9ffee2c8a888ac5986d062af3b69bc231b921d09a8065a9d96c28b22"
+    },
+    {
+      "path": "/_next/static/chunks/main-app-cc76b58e79209625.js",
+      "status": 200,
+      "sha256": "86dfef7a0df4607e5b3415c13816aba385e1107170024a11aa7d6dc5b4553995"
+    },
+    {
+      "path": "/_next/static/chunks/8500-107859ed31978aa3.js",
+      "status": 200,
+      "sha256": "80d17f936e8c0d871b8e4414a349ac9ca6e2ae0125e34ebba3a730add4044ac6"
+    },
+    {
+      "path": "/_next/static/chunks/9145-268f84b2cd87bccd.js",
+      "status": 200,
+      "sha256": "b22b5262a51723a369b4938978fac92d499401ef1647a12fbb9fbf07b7e2ab8d"
+    },
+    {
+      "path": "/_next/static/chunks/4053-4aac3d3afaa4e9f4.js",
+      "status": 200,
+      "sha256": "37b008c1b1d941b9f00e461d3f3f4ba3e1daf09c0ec0c5b240e2c8f133557b64"
+    },
+    {
+      "path": "/_next/static/chunks/8761-ae01fe87a961d6e5.js",
+      "status": 200,
+      "sha256": "b10ee44f8d59dc9199297931db6c4b9cf0c514a3a2eecb8119b7008f16d4e246"
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-cda1de38a8751bcd.js",
+      "status": 200,
+      "sha256": "d6b9ef58f24e9e1706b9e915541edcb829581536f761c814687fa7a321397fba"
+    },
+    {
+      "path": "/_next/static/chunks/app/error-4d26a69af13b6f07.js",
+      "status": 200,
+      "sha256": "173490fd550ca48993db831bee6a9bca5ffddd4374c3d4daa063220375660d29"
+    },
+    {
+      "path": "/_next/static/chunks/app/not-found-ac7c25970d050957.js",
+      "status": 200,
+      "sha256": "bea206f77c6bc45c88dcbd16e6743915aebf449d3afea3d15a4f7974521f02ed"
+    },
+    {
+      "path": "/_next/static/chunks/5772-309d5f870c3825f5.js",
+      "status": 200,
+      "sha256": "68b4757f663f713c9118758e57bcb7be619d59914bac641726eb8889fda3f87e"
+    },
+    {
+      "path": "/_next/static/chunks/app/news/page-9458b32c1967f014.js",
+      "status": 200,
+      "sha256": "b75031dc40caa2019754c77d2725c2d6cc59658b5da8c0763bfb9346847c5e21"
+    },
+    {
+      "path": "/_next/static/chunks/app/global-error-2895e2aa104b3e20.js",
+      "status": 200,
+      "sha256": "475e6143aa78c50960205a45f51a0532e695858179b1f9c458734151653a6f84"
+    },
+    {
+      "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "status": 200,
+      "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683"
+    },
+    {
+      "path": "/illustrations/civic-palace-pastel.webp",
+      "status": 200,
+      "sha256": "17339a5edac606b13126aeaef45a18e0522f1551e12c8a4d4383e36b4c64ce3f"
+    },
+    {
+      "path": "/illustrations/core-lock-pastel.webp",
+      "status": 200,
+      "sha256": "5086efc3cb3a7608ce7ef47943a8677a9850a5b470629c3843833ce595cbd90f"
+    },
+    {
+      "path": "/illustrations/listening-pastel.webp",
+      "status": 200,
+      "sha256": "95d1c823cb86c1e5ce549867f8dfbc3a69ffa7059484489ce7517d2ceaecc13a"
+    },
+    {
+      "path": "/illustrations/palace-1.webp",
+      "status": 200,
+      "sha256": "62bdbddb150e798899b95118a40ca8962d8486d94b0501b6134536c982758bf2"
+    },
+    {
+      "path": "/illustrations/palace-2.webp",
+      "status": 200,
+      "sha256": "0a1fd408f1e2f3ffee20a24c92ecdbad758259b1633a5ce8398b14e57d613d91"
+    },
+    {
+      "path": "/illustrations/palace-3.webp",
+      "status": 200,
+      "sha256": "5f86f94b4bac74060ed2dc4bdf9fdb754f27a71f155854c541ad77e3b2333c12"
+    },
+    {
+      "path": "/illustrations/palace-4.webp",
+      "status": 200,
+      "sha256": "1bc92475c11ee9124726059845da1aa296b446ee1bfeaeed81fa9e82e9a48c87"
+    },
+    {
+      "path": "/illustrations/reading-pastel.webp",
+      "status": 200,
+      "sha256": "04c466c6923c3d86ab27169dc87a279f7512e2e482d9c8a626e8b7bd6ab82afe"
+    },
+    {
+      "path": "/illustrations/term-clock-pastel.webp",
+      "status": 200,
+      "sha256": "c0a2a4fc1ab691bcc02bdc917434af211d5d9e93184c93d71c3113fedf2d67e6"
+    },
+    {
+      "path": "/illustrations/thinking-pastel.webp",
+      "status": 200,
+      "sha256": "15b9f703d9b4ce0b3665b56ae53a354a337955b443e041d018e7448fffa2dd53"
+    },
+    {
+      "path": "/illustrations/tikki-along-pastel.webp",
+      "status": 200,
+      "sha256": "9fc7133a11c6c064c9165dfd87efab6cb85263b066bf8791fdd76f09b4d1a447"
+    },
+    {
+      "path": "/illustrations/tikki-amend-pastel.webp",
+      "status": 200,
+      "sha256": "cd34d4de23e8b6d0a3cf108d86faeb8f6e3d114b038641040557c2c0f9d1b079"
+    },
+    {
+      "path": "/illustrations/tikki-bible-guide-pastel.webp",
+      "status": 200,
+      "sha256": "c3902154dad46bdf7bcb006e68f9814c0d49fdfcc2c8a0ea065157d768f6b27a"
+    },
+    {
+      "path": "/illustrations/tikki-bible-pastel.webp",
+      "status": 200,
+      "sha256": "50b99661e56662cb699c897356de92a79c66ae101e9579ac34d9a47c7cc2f796"
+    },
+    {
+      "path": "/illustrations/tikki-cheatsheet-pastel.webp",
+      "status": 200,
+      "sha256": "778a0e978237b00de665019774559217905cd5545d1e98ac1ab50b969ec15215"
+    },
+    {
+      "path": "/illustrations/tikki-cram-pastel.webp",
+      "status": 200,
+      "sha256": "f05ec80d99b03bfccf5137e35af96f3e65ec2cf87ff5074eb29ce2bfedee3ff4"
+    },
+    {
+      "path": "/illustrations/tikki-drills-pastel.webp",
+      "status": 200,
+      "sha256": "1f5a7facd3105d05d580aace7739fc350fe9a65be8eb8a1a5804524f5e02a11d"
+    },
+    {
+      "path": "/illustrations/tikki-exam-pastel.webp",
+      "status": 200,
+      "sha256": "c4fb9b0eb159710af747febfbf954769809133cfe50f41cd6d70fac7bbfd6861"
+    },
+    {
+      "path": "/illustrations/tikki-flashcards-pastel.webp",
+      "status": 200,
+      "sha256": "1d072e5a4a0b2c6701ec1bf9fd65fe3aa9de75e7016f70eeb5b29123195779e4"
+    },
+    {
+      "path": "/illustrations/tikki-games-pastel.webp",
+      "status": 200,
+      "sha256": "226d462ec16ac9ad3a1b94ac2bdab31f587adc8ba9a8ce66ab36d3eca82b4ee4"
+    },
+    {
+      "path": "/illustrations/tikki-glossary-pastel.webp",
+      "status": 200,
+      "sha256": "21b18b79cdeb8dfc7658f1dfdbb01c279f4530a6f515fe2ddf5afd14b884c405"
+    },
+    {
+      "path": "/illustrations/tikki-library-pastel.webp",
+      "status": 200,
+      "sha256": "70822831a36c1d318cda41c6e34fffb71d1c9fbeff2e1233c44cb5791d72ef95"
+    },
+    {
+      "path": "/illustrations/tikki-news-pastel.webp",
+      "status": 200,
+      "sha256": "165b4bec4c2d37e30601aa11926a46d96e60fda84fde72865ff402fb0af0d6fe"
+    },
+    {
+      "path": "/illustrations/tikki-notebook-pastel.webp",
+      "status": 200,
+      "sha256": "602671cd4f473ef4fe4dd6ba881b4350be702f401d33b256afc02fddc1888f3f"
+    },
+    {
+      "path": "/illustrations/tikki-notes-pastel.webp",
+      "status": 200,
+      "sha256": "04987718bf70d1288d06ddf22276978eb08fa3147aef61f4f3cee0f0f157884f"
+    },
+    {
+      "path": "/illustrations/tikki-officer-pastel.webp",
+      "status": 200,
+      "sha256": "1fc25f509e0dd7467ca10c894c5c212e6f42a423b2ef5719cdf626e4e219271c"
+    },
+    {
+      "path": "/illustrations/tikki-overwhelmed-pastel.webp",
+      "status": 200,
+      "sha256": "3b53d6229e9c8de76b8c4850896d6c43ac7e49a9b8cfc2d1aeec14eda137adcf"
+    },
+    {
+      "path": "/illustrations/tikki-pass-pastel.webp",
+      "status": 200,
+      "sha256": "826a1eec07b4bf0121b35b010008d5c082470d994cc19ccb71b02c386c4b602c"
+    },
+    {
+      "path": "/illustrations/tikki-polls-pastel.webp",
+      "status": 200,
+      "sha256": "53bdb77ec1a9135671089718b906eca8e68f4b4afb4ec788f2e217104f343c7f"
+    },
+    {
+      "path": "/illustrations/tikki-practice-pastel.webp",
+      "status": 200,
+      "sha256": "a3226563afd829c98560807c8da0a7543f8072a5235ae507dcb7de83010c4ee1"
+    },
+    {
+      "path": "/illustrations/tikki-read-pastel.webp",
+      "status": 200,
+      "sha256": "7e3320fc2616c9d703e64178a7cef8eab72811023351379bfd62982e73feb3f9"
+    },
+    {
+      "path": "/illustrations/tikki-review-pastel.webp",
+      "status": 200,
+      "sha256": "a7124f4ec7194ce5a697a7cad073819e44e17f80f126f92d5918baa830a001ea"
+    },
+    {
+      "path": "/illustrations/tikki-rights-pastel.webp",
+      "status": 200,
+      "sha256": "6e95f2fdd88c1139d703b12405f927bb11aaf8776c1b2ec12a3060dfc7064ec1"
+    },
+    {
+      "path": "/illustrations/tikki-section-pastel.webp",
+      "status": 200,
+      "sha256": "8ac85e4c269dd82be6a56a3471ed536243a8cab97af212e263483991e637f0f5"
+    },
+    {
+      "path": "/illustrations/tikki-settings-pastel.webp",
+      "status": 200,
+      "sha256": "9aa4b0429114670401d5c39d42a55e6f40e0420506e77634462e018f295608d0"
+    },
+    {
+      "path": "/illustrations/tikki-smart-pastel.webp",
+      "status": 200,
+      "sha256": "e8eb31c1c417b4ad7524d2588f931ab9f1a7acd8a6e525ff807ddba4ca77df6f"
+    },
+    {
+      "path": "/illustrations/tikki-sources-pastel.webp",
+      "status": 200,
+      "sha256": "a3750cde4b9a6a8535634575fe4b3333c0ac34491905c8949eb5a1a6aa0a5230"
+    },
+    {
+      "path": "/illustrations/tikki-story-cover-pastel.webp",
+      "status": 200,
+      "sha256": "2dd66c43981182db76496194f09d78590959e8501e16ac50797e4227a68d0de0"
+    },
+    {
+      "path": "/illustrations/tikki-student-pastel.webp",
+      "status": 200,
+      "sha256": "9e22b4993f8eaf06950610d7e594fd6f7c2e2a2ebbfc5db47b0fa373c82a12a3"
+    },
+    {
+      "path": "/illustrations/tikki-topics-pastel.webp",
+      "status": 200,
+      "sha256": "218e8e7d74f1ace887a80b6b8dc22497fd0f6b08a9ff4d7b83fc365444127282"
+    }
+  ],
+  "routeBodies": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "c8e5a5a22f10c54cd5d8a36875e33a78bbc2805c4712a1c24a6d2401a3ef41e2"
+    },
+    {
+      "path": "/along/",
+      "status": 200,
+      "sha256": "8f77154dd27cddb53102ca3e32b73f8376b8d1127f14cb85515ba728d1816157"
+    },
+    {
+      "path": "/amend/",
+      "status": 200,
+      "sha256": "2e46030b3e645ec7693e7ec017d8d440f245b285065768ff02be83cfff3e68d3"
+    },
+    {
+      "path": "/bible/",
+      "status": 200,
+      "sha256": "537ac5e0f92d58266850fc12828166900cd828bf3cc105c75939f819b86e9cd4"
+    },
+    {
+      "path": "/bible/cabinet/",
+      "status": 200,
+      "sha256": "d38d8deb1003bb3a9f6368f77e86c6961cf944ab0d0d63f3d0589fab706a83e0"
+    },
+    {
+      "path": "/bible/courts/",
+      "status": 200,
+      "sha256": "755c959f98d7c0c856d74985beb5e5c52296e9948519d4d94379469f1bd5a84b"
+    },
+    {
+      "path": "/bible/duties-state-policy/",
+      "status": 200,
+      "sha256": "031d9fbf1d9551c38c57311405e022646a637c09d591ca12b96e99d3ffaa79cb"
+    },
+    {
+      "path": "/bible/exam-method/",
+      "status": 200,
+      "sha256": "f671260b8b7eb0295b1333e2a2c1fa7d13fadf984a1a2c7b7e4745f74a5c73a5"
+    },
+    {
+      "path": "/bible/general-and-king/",
+      "status": 200,
+      "sha256": "52ae7644d51c1ca74a58fa05afef758f093caccafeafbcf9a6601921bbcf4b01"
+    },
+    {
+      "path": "/bible/history/",
+      "status": 200,
+      "sha256": "01a6f8dd21c25ed25e79c10a4f16ea9f36161e053b54934be84aefab7efe8c1f"
+    },
+    {
+      "path": "/bible/how-to-read/",
+      "status": 200,
+      "sha256": "623f68908cf418d83f685188ad1f1125980ad554c136575e69bc3ae068c5a424"
+    },
+    {
+      "path": "/bible/independent-organs/",
+      "status": 200,
+      "sha256": "30379d947cc987e185a2dd51eb788f9dbe4a98b014731e5729ffc214feedff52"
+    },
+    {
+      "path": "/bible/local-and-amendment/",
+      "status": 200,
+      "sha256": "ab120c5818d7776fd14abc9344697266fa466306474e69a21530c5131578047b"
+    },
+    {
+      "path": "/bible/organic-laws/",
+      "status": 200,
+      "sha256": "3831ece877dc2d2b49ccb388be623a58da49fcabc3b381b80522f9921aac0b92"
+    },
+    {
+      "path": "/bible/parliament/",
+      "status": 200,
+      "sha256": "71ed7a063b5442b21729d15f3c02974aefb146548846c646ca0e8d16c95a290d"
+    },
+    {
+      "path": "/bible/rights/",
+      "status": 200,
+      "sha256": "de0b42ca11b9e96ce6616cb87891659a94343e5b28d7caf0d4b9c85c95180c4e"
+    },
+    {
+      "path": "/bible/transitory/",
+      "status": 200,
+      "sha256": "c70f0b92965bec1f2c2c3ebb94c1dc707c049940add9ddb6b2796e1e2acd021d"
+    },
+    {
+      "path": "/cheatsheet/",
+      "status": 200,
+      "sha256": "72e7016cc0baebe2cf760217dc4be97922b7a02b13f1c1daf0fb450cf088493e"
+    },
+    {
+      "path": "/civic/",
+      "status": 200,
+      "sha256": "6bfd86fb521f47bf334f87514e41f2247ff7486b60145c7a3624332214c44777"
+    },
+    {
+      "path": "/cram/",
+      "status": 200,
+      "sha256": "3d858f475ac48d8ef6c7c291b43d955426812662e096f2b23cd38e99e70e1597"
+    },
+    {
+      "path": "/drills/",
+      "status": 200,
+      "sha256": "5caa177bab2c2fee05ba092b12aeee6217c429fce078f3cb4f539e610daa8a85"
+    },
+    {
+      "path": "/exam/",
+      "status": 200,
+      "sha256": "f3aa708cbebff490bb6c82ada7b92b6d6288308b7999493eb09dbb352fef54f4"
+    },
+    {
+      "path": "/flashcards/",
+      "status": 200,
+      "sha256": "4fa974b6a98a9124d20a3f1b92501aa0fb8047419056a2b225fc835de29281aa"
+    },
+    {
+      "path": "/games/",
+      "status": 200,
+      "sha256": "828eb6294e889ade320f0bb94d2fd8ce7055c1ecd113da6f84bd4a491a5a92f0"
+    },
+    {
+      "path": "/glossary/",
+      "status": 200,
+      "sha256": "663121c9012c3cce1a0886a636f22f919ab9963aca73c4e773c0aeb6687588e5"
+    },
+    {
+      "path": "/learn/",
+      "status": 200,
+      "sha256": "6b8d39f65c706163584a174eaafb4308a6866b76d0f4211189fe02efde0330e5"
+    },
+    {
+      "path": "/library/",
+      "status": 200,
+      "sha256": "f6b6ed3146f2d0cf70d8ddb4de7a164c2d6924e79d5a45ea2339c44aa7c5672b"
+    },
+    {
+      "path": "/memory/",
+      "status": 200,
+      "sha256": "5da160b209d4aec4a4cbb5a56bc1be633146cf4bf64e978c7ae0a861a958537e"
+    },
+    {
+      "path": "/news/",
+      "status": 200,
+      "sha256": "59e6c245553b1d1c3f0014e097c108d610b19ddb1446353f07bf0abcb05c75a8"
+    },
+    {
+      "path": "/notebook/",
+      "status": 200,
+      "sha256": "5ddda9de5f30201595e70288e8d8f1babe0b809b2c71394f665bf8d8de39834b"
+    },
+    {
+      "path": "/notes/",
+      "status": 200,
+      "sha256": "177ca79ae74cc9b41b0f6261c744241ea65962b1646ded3d0e9e98d2eaf648fe"
+    },
+    {
+      "path": "/polls/",
+      "status": 200,
+      "sha256": "2fcb6806eb42d129de85436c1e0250400828e1f7da873142e0fc57218ff989f3"
+    },
+    {
+      "path": "/practice/",
+      "status": 200,
+      "sha256": "b026737f5ac558389919b5c5273b05bbd8169101674e6f982e49e47abe59cc50"
+    },
+    {
+      "path": "/practice/pokklong/",
+      "status": 200,
+      "sha256": "d0efca70d49d0718f671d07bc0609c97401ab9fdfe9459f745a2ef68cdcd6dff"
+    },
+    {
+      "path": "/read/",
+      "status": 200,
+      "sha256": "b050f067ab0386fc61dbb79a6b573bbb210672b9af3bffaa78809e52de3b84ad"
+    },
+    {
+      "path": "/research/",
+      "status": 200,
+      "sha256": "8f6e0a304832ca769f0e4a866a092c8bd12505d190f0aeffce7c37cfe01adbb1"
+    },
+    {
+      "path": "/review/",
+      "status": 200,
+      "sha256": "d1aef257a3c4f03217c42ed6f8778e8f72a143c3411af389a2e42f0cfed45ea8"
+    },
+    {
+      "path": "/rights/",
+      "status": 200,
+      "sha256": "89fed7706dd159aed523bd3f3d7e57c20f84e5cfb2a0658b4e27a1c32e237b7e"
+    },
+    {
+      "path": "/section/",
+      "status": 200,
+      "sha256": "06e92d354364fa02ccf55f580af157bf76bbf98d8900c11117c1afffad8f5fd1"
+    },
+    {
+      "path": "/settings/",
+      "status": 200,
+      "sha256": "d67afcdaca3139bffbc80b7e815e7106fd3688fc1515cd97eb7d516a69dd05fe"
+    },
+    {
+      "path": "/sources/",
+      "status": 200,
+      "sha256": "e23af30b2b8818dbfce4ad429c1a90ed85ec322439284e5b68fde952373e5e0f"
+    },
+    {
+      "path": "/tikki/",
+      "status": 200,
+      "sha256": "54b3ee5d531a6ab94377dd693a449e938186d7e13f70f355d38f46de8d160712"
+    },
+    {
+      "path": "/topics/",
+      "status": 200,
+      "sha256": "2fd1c12b6291c7964ded870c55b7817ddfc66c636bad2124d0ccd3bd9dd4ec1f"
+    }
+  ]
+}
