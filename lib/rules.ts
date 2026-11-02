@@ -194,13 +194,6 @@ function numberFacts(text: string): NumberFact[] {
   return out;
 }
 
-/** Every number a text states, in digits or in words. */
-export function statedNumbers(text: string): number[] {
-  const out = new Set<number>();
-  for (const fact of numberFacts(text)) out.add(fact.value);
-  return [...out];
-}
-
 /** The numbers a rule states, with the units they carry. */
 function deriveFacts(value: Text | undefined): NumberFact[] {
   if (!value) return [];
@@ -341,6 +334,11 @@ export function ruleFor(
     (r) =>
       (r.facts.length > 0 || r.patterns.length > 0) &&
       r.sections.some((s) => sections.includes(s)) &&
+      // Section 256 has TWO separate 15-day waits. This handle is only
+      // about moving from the second reading to the third, not the wait
+      // after final approval. A number and section cannot distinguish them.
+      (r.id !== "t-amend-wait" ||
+        /\bsecond\s+reading\b|\b2nd\s+reading\b|\bbefore\s+(?:the\s+)?third\s+reading\b/i.test(promptText)) &&
       statesNumber(r, answerText),
   );
   if (!candidates.length) return null;

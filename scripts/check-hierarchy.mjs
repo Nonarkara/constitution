@@ -33,7 +33,7 @@
  */
 import { createServer } from "node:http";
 import { waitForHierarchy } from "./hierarchy-ready.mjs";
-import { readdir } from "node:fs/promises";
+import { builtRoutes } from "./built-routes.mjs";
 import { existsSync, readFileSync, rmSync } from "node:fs";
 import { execFile } from "node:child_process";
 import { tmpdir } from "node:os";
@@ -274,7 +274,7 @@ function measure(route, w, d) {
     }
     return false;
   }
-  var ACTIVE = { A: 1, BUTTON: 1, INPUT: 1, SELECT: 1, TEXTAREA: 1 };
+  var ACTIVE = { A: 1, BUTTON: 1, INPUT: 1, SELECT: 1, TEXTAREA: 1, SUMMARY: 1 };
 
   // A ROW: a LEAF repeated item.
   //
@@ -560,14 +560,7 @@ const server = createServer((req, res) => {
   res.end("not found");
 });
 
-const routes = [];
-if (existsSync(path.join(OUT, "index.html"))) routes.push("/");
-for (const e of await readdir(OUT, { withFileTypes: true })) {
-  if (!e.isDirectory()) continue;
-  if (e.name.startsWith("_") || e.name.startsWith(".") || e.name === "404") continue;
-  if (existsSync(path.join(OUT, e.name, "index.html"))) routes.push(`/${e.name}/`);
-}
-routes.sort();
+const routes = await builtRoutes(OUT);
 if (routes.length === 0) {
   console.error("\nFAIL — hierarchy gate found no built routes in out/. Nothing was measured.\n");
   process.exit(1);
@@ -609,7 +602,10 @@ try {
         "--dump-dom",
         `http://127.0.0.1:${port}/_hierarchy-probe?r=${encodeURIComponent(JSON.stringify(routes))}`,
       ],
-      { maxBuffer: 128 * 1024 * 1024, timeout: 300000, killSignal: "SIGKILL" },
+      // Recursive discovery adds the long guide chapters. The 43-route run
+      // approached the former five-minute ceiling locally; budget per cell
+      // so adding coverage cannot silently turn a healthy sweep into a timeout.
+      { maxBuffer: 128 * 1024 * 1024, timeout: Math.max(300000, expected * 2500), killSignal: "SIGKILL" },
       (err, stdout) => {
         // The exit code is not the verdict. A browser that was taken down by
         // the teardown watchdog AFTER it dumped the DOM still measured the

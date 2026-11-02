@@ -107,12 +107,80 @@
   },
   "exempt": [],
   "provenance": {
-    "measuredAt": "2026-10-27T12:14:29.397Z",
+    "measuredAt": "2026-11-02T23:33:48.259Z",
     "measurements": 2623,
     "routes": 43,
     "widths": 61,
-    "measuredTogether": true,
-    "carriedOver": []
+    "measuredTogether": false,
+    "carriedOver": [
+      "/",
+      "/along/",
+      "/amend/",
+      "/bible/",
+      "/cheatsheet/",
+      "/civic/",
+      "/drills/",
+      "/exam/",
+      "/games/",
+      "/glossary/",
+      "/learn/",
+      "/library/",
+      "/news/",
+      "/notebook/",
+      "/notes/",
+      "/polls/",
+      "/practice/",
+      "/practice/pokklong/",
+      "/read/",
+      "/research/",
+      "/review/",
+      "/rights/",
+      "/section/",
+      "/settings/",
+      "/sources/",
+      "/tikki/",
+      "/topics/"
+    ],
+    "freshRoutes": [
+      "/bible/cabinet/",
+      "/bible/courts/",
+      "/bible/duties-state-policy/",
+      "/bible/exam-method/",
+      "/bible/general-and-king/",
+      "/bible/history/",
+      "/bible/how-to-read/",
+      "/bible/independent-organs/",
+      "/bible/local-and-amendment/",
+      "/bible/organic-laws/",
+      "/bible/parliament/",
+      "/bible/rights/",
+      "/bible/transitory/",
+      "/cram/",
+      "/flashcards/",
+      "/memory/"
+    ],
+    "freshMeasurements": 976,
+    "carriedFrom": "2026-10-27T12:14:29.397Z",
+    "carriedFromCommit": "52846bd131279379e86ad47747ebb79e1b710885",
+    "buildRevision": "de434d0e45bc37c8",
+    "freshSweeps": [
+      {
+        "measuredAt": "2026-11-02T23:22:11.995Z",
+        "measurements": 854,
+        "routes": 14,
+        "widths": 61,
+        "measuredTogether": true,
+        "carriedOver": []
+      },
+      {
+        "measuredAt": "2026-11-02T23:33:48.259Z",
+        "measurements": 122,
+        "routes": 2,
+        "widths": 61,
+        "measuredTogether": true,
+        "carriedOver": []
+      }
+    ]
   },
   "routes": {
     "/": {
@@ -28319,8 +28387,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "390": {
@@ -28343,8 +28411,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "399": {
@@ -28367,8 +28435,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "400": {
@@ -28391,8 +28459,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "401": {
@@ -28415,8 +28483,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "436": {
@@ -28439,8 +28507,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "479": {
@@ -28463,8 +28531,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "480": {
@@ -28487,8 +28555,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "481": {
@@ -28511,8 +28579,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "499": {
@@ -28535,8 +28603,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "500": {
@@ -28559,8 +28627,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "501": {
@@ -28583,8 +28651,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "519": {
@@ -28607,8 +28675,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "520": {
@@ -28631,8 +28699,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "521": {
@@ -28655,8 +28723,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "536": {
@@ -28679,8 +28747,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "559": {
@@ -28703,8 +28771,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "560": {
@@ -28727,8 +28795,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "561": {
@@ -28751,8 +28819,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "599": {
@@ -28775,8 +28843,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "600": {
@@ -28799,8 +28867,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "601": {
@@ -28823,8 +28891,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "639": {
@@ -28847,8 +28915,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "640": {
@@ -28871,8 +28939,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "641": {
@@ -28895,8 +28963,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "676": {
@@ -28919,8 +28987,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "714": {
@@ -28943,8 +29011,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "719": {
@@ -28967,8 +29035,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "720": {
@@ -28991,8 +29059,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "721": {
@@ -29015,8 +29083,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "722": {
@@ -29039,8 +29107,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "768": {
@@ -29063,8 +29131,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "849": {
@@ -29087,8 +29155,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "850": {
@@ -29111,8 +29179,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "851": {
@@ -29135,8 +29203,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "854": {
@@ -29159,8 +29227,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "859": {
@@ -29183,8 +29251,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "860": {
@@ -29207,8 +29275,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "861": {
@@ -29231,8 +29299,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "899": {
@@ -29255,8 +29323,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "900": {
@@ -29279,8 +29347,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "901": {
@@ -29303,8 +29371,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "999": {
@@ -29327,8 +29395,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1000": {
@@ -29351,8 +29419,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1001": {
@@ -29375,8 +29443,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1023": {
@@ -29399,8 +29467,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1024": {
@@ -29423,8 +29491,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1025": {
@@ -29447,8 +29515,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1099": {
@@ -29471,8 +29539,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1100": {
@@ -29495,8 +29563,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1101": {
@@ -29519,8 +29587,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1130": {
@@ -29543,8 +29611,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1138": {
@@ -29567,8 +29635,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1199": {
@@ -29591,8 +29659,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1200": {
@@ -29615,8 +29683,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1201": {
@@ -29639,8 +29707,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1217": {
@@ -29663,8 +29731,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1218": {
@@ -29687,8 +29755,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1219": {
@@ -29711,8 +29779,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1440": {
@@ -29735,8 +29803,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       },
       "1920": {
@@ -29759,8 +29827,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 45,
-          "share": 0.24
+          "peers": 83,
+          "share": 0.13
         }
       }
     },
@@ -33492,8 +33560,8 @@
       "850": {
         "findings": [],
         "firstAction": {
-          "y": null,
-          "sel": null
+          "y": 587,
+          "sel": "button"
         },
         "chrome": {
           "vh": 1000,
@@ -33506,11 +33574,11 @@
           "bottomSel": null
         },
         "hierarchy": {
-          "h1": 0,
+          "h1": 44,
           "largest": 18,
-          "ratio": null,
-          "peers": 0,
-          "share": 0
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.03
         }
       },
       "851": {
@@ -40044,7 +40112,7 @@
       "360": {
         "findings": [],
         "firstAction": {
-          "y": 607,
+          "y": 636,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40061,14 +40129,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "390": {
         "findings": [],
         "firstAction": {
-          "y": 607,
+          "y": 636,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40085,14 +40153,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "399": {
         "findings": [],
         "firstAction": {
-          "y": 607,
+          "y": 636,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40109,14 +40177,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "400": {
         "findings": [],
         "firstAction": {
-          "y": 607,
+          "y": 636,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40133,14 +40201,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "401": {
         "findings": [],
         "firstAction": {
-          "y": 607,
+          "y": 636,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40157,14 +40225,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "436": {
         "findings": [],
         "firstAction": {
-          "y": 561,
+          "y": 591,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40181,8 +40249,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "479": {
@@ -40205,8 +40273,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "480": {
@@ -40229,8 +40297,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "481": {
@@ -40253,14 +40321,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "499": {
         "findings": [],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40277,14 +40345,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "500": {
         "findings": [],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40301,14 +40369,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "501": {
         "findings": [],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40325,14 +40393,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "519": {
         "findings": [],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40349,14 +40417,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "520": {
         "findings": [],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40373,14 +40441,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "521": {
         "findings": [],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40397,14 +40465,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "536": {
         "findings": [],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40421,14 +40489,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "559": {
         "findings": [],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40445,14 +40513,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "560": {
         "findings": [],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40469,14 +40537,14 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "561": {
         "findings": [],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40493,8 +40561,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "599": {
@@ -40507,7 +40575,7 @@
           }
         ],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40524,8 +40592,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "600": {
@@ -40538,7 +40606,7 @@
           }
         ],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40555,8 +40623,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "601": {
@@ -40569,7 +40637,7 @@
           }
         ],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40586,8 +40654,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "639": {
@@ -40600,7 +40668,7 @@
           }
         ],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40617,8 +40685,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "640": {
@@ -40631,7 +40699,7 @@
           }
         ],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40648,8 +40716,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "641": {
@@ -40662,7 +40730,7 @@
           }
         ],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40679,8 +40747,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "676": {
@@ -40693,7 +40761,7 @@
           }
         ],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40710,8 +40778,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "714": {
@@ -40724,7 +40792,7 @@
           }
         ],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40741,8 +40809,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "719": {
@@ -40755,7 +40823,7 @@
           }
         ],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40772,8 +40840,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "720": {
@@ -40786,7 +40854,7 @@
           }
         ],
         "firstAction": {
-          "y": 531,
+          "y": 561,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40803,8 +40871,8 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "721": {
@@ -40827,8 +40895,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "722": {
@@ -40851,14 +40919,14 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "768": {
         "findings": [],
         "firstAction": {
-          "y": 602,
+          "y": 632,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40875,8 +40943,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "849": {
@@ -40889,7 +40957,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40906,8 +40974,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "850": {
@@ -40920,7 +40988,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40937,8 +41005,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "851": {
@@ -40951,7 +41019,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40968,8 +41036,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "854": {
@@ -40982,7 +41050,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -40999,8 +41067,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "859": {
@@ -41013,7 +41081,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41030,8 +41098,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "860": {
@@ -41044,7 +41112,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41061,8 +41129,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "861": {
@@ -41075,7 +41143,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41092,8 +41160,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "899": {
@@ -41106,7 +41174,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41123,8 +41191,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "900": {
@@ -41137,7 +41205,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41154,8 +41222,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "901": {
@@ -41168,7 +41236,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41185,8 +41253,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "999": {
@@ -41199,7 +41267,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41216,8 +41284,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1000": {
@@ -41230,7 +41298,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41247,8 +41315,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1001": {
@@ -41261,7 +41329,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41278,8 +41346,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1023": {
@@ -41292,7 +41360,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41309,8 +41377,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1024": {
@@ -41323,7 +41391,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41340,8 +41408,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1025": {
@@ -41354,7 +41422,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41371,8 +41439,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1099": {
@@ -41385,7 +41453,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41402,8 +41470,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1100": {
@@ -41416,7 +41484,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41433,8 +41501,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1101": {
@@ -41447,7 +41515,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41464,8 +41532,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1130": {
@@ -41478,7 +41546,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41495,8 +41563,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1138": {
@@ -41509,7 +41577,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41526,8 +41594,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1199": {
@@ -41540,7 +41608,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41557,8 +41625,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1200": {
@@ -41571,7 +41639,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41588,8 +41656,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1201": {
@@ -41602,7 +41670,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41619,8 +41687,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1217": {
@@ -41633,7 +41701,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41650,8 +41718,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1218": {
@@ -41664,7 +41732,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41681,8 +41749,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1219": {
@@ -41695,7 +41763,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41712,8 +41780,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1440": {
@@ -41726,7 +41794,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41743,8 +41811,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       },
       "1920": {
@@ -41757,7 +41825,7 @@
           }
         ],
         "firstAction": {
-          "y": 540,
+          "y": 570,
           "sel": "button.primary.action-panel-cta"
         },
         "chrome": {
@@ -41774,8 +41842,8 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 5,
-          "share": 0.09
+          "peers": 13,
+          "share": 0.13
         }
       }
     },

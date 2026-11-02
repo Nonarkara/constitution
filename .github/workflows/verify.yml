@@ -108,7 +108,9 @@ jobs:
     # falsifier's budget but not much more, and not enough for the install
     # and the build on a slow runner — so the room was thin, and a job
     # killed mid-sweep reports nothing. Same defect the verify job had at 75.
-    timeout-minutes: 90
+    # The hierarchy falsifier now visits 43 routes rather than 29 per mutation.
+    # Leave room for that extra coverage in addition to the spatial sweep.
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:

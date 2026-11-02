@@ -1,0 +1,6 @@
+  · Chrome attempt 1/12 exited early — retrying
+  · resuming after 0 route(s)
+  · 1/2 routes
+  · baseline written: /tmp/constitution-nov3-memory-baseline.json
+  · 1 distinct decision(s) measured; 1 already justified.
+  · every decision in the baseline carries a reason.

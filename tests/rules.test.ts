@@ -27,6 +27,14 @@ function countQuestions(bank: Question[]) {
 
 const LANGS = ["th", "en", "zh"] as const;
 
+test("the wait after final approval is not the wait before the third reading", () => {
+  const q = questions.find((q: Question) => q.id === "civic-06");
+  assert.ok(q);
+  assert.notEqual(ruleFor(q.sections, allText(q), answerText(q))?.id, "t-amend-wait");
+  assert.equal(memoryCueFor(q), null);
+  assert.equal(ruleFor([256], "How long after the second reading before the third reading?", "15 days")?.id, "t-amend-wait");
+});
+
 test("every rule in the catalogue carries a handle in all three languages", () => {
   assert.ok(rules.length >= 80, `only ${rules.length} rules in the catalogue`);
   for (const rule of rules) {
@@ -44,7 +52,7 @@ test("every rule's number is proved by the statute, and its room is a real room"
   for (const rule of rules) {
     if (rule.kind === "trap") continue;
     assert.ok(rule.proof, `${rule.id} has no proof`);
-    if (rule.chapter >= 1 && rule.chapter <= 16) {
+    if (rule.chapter >= 1 && rule.chapter <= 17) {
       const text = corpus.sections[rule.sections[0] - 1]?.th ?? "";
       const fromAct = rule.sections[0] === 213 ? oaccp.sections["48(1)"]?.th ?? "" : "";
       assert.ok(

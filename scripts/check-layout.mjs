@@ -37,7 +37,7 @@
  * something a release gate can decide; both need eyes on the render.
  */
 import { createServer } from "node:http";
-import { readdir } from "node:fs/promises";
+import { builtRoutes } from "./built-routes.mjs";
 import { existsSync, readFileSync, rmSync } from "node:fs";
 import { execFile } from "node:child_process";
 import { tmpdir } from "node:os";
@@ -347,14 +347,7 @@ const server = createServer((req, res) => {
   res.end("not found");
 });
 
-const routes = [];
-if (existsSync(path.join(OUT, "index.html"))) routes.push("/");
-for (const e of await readdir(OUT, { withFileTypes: true })) {
-  if (!e.isDirectory()) continue;
-  if (e.name.startsWith("_") || e.name.startsWith(".") || e.name === "404") continue;
-  if (existsSync(path.join(OUT, e.name, "index.html"))) routes.push(`/${e.name}/`);
-}
-routes.sort();
+const routes = await builtRoutes(OUT);
 if (routes.length === 0) {
   console.error("\nFAIL — layout gate found no built routes in out/. Nothing was measured.\n");
   process.exit(1);

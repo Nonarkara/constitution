@@ -843,6 +843,10 @@ summary {
 .guide-entry details + details {
   border-top: 1px solid var(--line);
 }
+.guide-first-check {
+  width: fit-content;
+  padding: 8px 12px;
+}
 .ask-sources {
   margin: 12px 0 0;
   padding-left: 1.4em;
@@ -4222,6 +4226,9 @@ footer { flex-wrap:wrap; gap:16px; }
 }
 .cram-list dd {
   margin: 0;
+}
+.cram-list .cram-mnemonic {
+  grid-column: 1 / -1;
 }
 .cram-cover {
   min-height: 44px;

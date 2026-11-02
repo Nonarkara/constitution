@@ -19,7 +19,7 @@ function GuideEntry({ slug }: { slug: string }) {
     <h2>{tr(lang,"หนึ่งเรื่องก่อน","One idea first","先懂一个概念")}</h2>
     <p>{path.idea[lang]}</p>
     <p className="micro">{tr(lang,"ลองตอบก่อนเปิดเหตุผล แล้วตรวจตัวบท","Try answering before opening the reasoning, then check the rule.","先回答，再展开理由，最后核对条文。")}</p>
-    <details><summary>{path.question[lang]}</summary><p>{path.answer[lang]}</p></details>
+    <details><summary className="primary guide-first-check">{path.question[lang]}</summary><p>{path.answer[lang]}</p></details>
     {path.steps.map((step, i) => <details key={i}>
       <summary>{step.question[lang]}</summary>
       <p>{step.answer[lang]}</p>

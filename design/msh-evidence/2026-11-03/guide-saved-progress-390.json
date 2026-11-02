@@ -1,0 +1,46 @@
+{
+  "header": {
+    "bottom": 63,
+    "height": 63,
+    "left": 0,
+    "right": 390,
+    "top": 0,
+    "width": 390,
+    "x": 0,
+    "y": 0
+  },
+  "height": 844,
+  "navigation": {
+    "bottom": 116,
+    "height": 53,
+    "left": 18,
+    "right": 372,
+    "top": 63,
+    "width": 354,
+    "x": 18,
+    "y": 63
+  },
+  "overflow": 0,
+  "progress": {
+    "bottom": 167,
+    "height": 43,
+    "left": 18,
+    "right": 372,
+    "top": 124,
+    "width": 354,
+    "x": 18,
+    "y": 124
+  },
+  "question": {
+    "bottom": 821.15625,
+    "height": 75.390625,
+    "left": 18,
+    "right": 372,
+    "top": 745.765625,
+    "width": 354,
+    "x": 18,
+    "y": 745.765625
+  },
+  "url": "http://127.0.0.1:3057/bible/local-and-amendment/?release=nov3-final",
+  "width": 390
+}

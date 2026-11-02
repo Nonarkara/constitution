@@ -397,9 +397,9 @@
       "zh": "不信任案须获众议院全体在任议员过半数赞成，按全体在任议员计算，而非仅按出席或投票人数。"
     },
     "joke": {
-      "th": "แมวต้องได้เสียงมากกว่ากึ่งหนึ่งของทุกโต๊ะในสภา แม้โต๊ะที่ว่างก็นับ ไม่ใช่แค่มือที่ยกขึ้น",
-      "en": "The cat needs more than half of every desk in the House, empty ones included, not just the paws raised.",
-      "zh": "猫要拿到众议院每一张桌子的过半数，空桌子也算，不是只数举起的爪子。"
+      "th": "แมวนับโต๊ะของสมาชิกที่ยังดำรงตำแหน่งทุกคน แม้เจ้าของโต๊ะไม่มาประชุมก็ยังนับ แต่ตำแหน่งที่ว่างไม่นับ ต้องได้เสียงมากกว่าครึ่ง",
+      "en": "The cat counts every serving member's desk, even when its owner is absent. Unfilled seats do not count. It needs more than half.",
+      "zh": "猫数的是每位在任议员的桌子，即使议员缺席也计入。空缺席位不计入，须获过半数赞成。"
     }
   },
   "nomination-days": {

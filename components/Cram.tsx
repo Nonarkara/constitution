@@ -51,17 +51,13 @@ export function Cram() {
                 <button className="cram-cover" onClick={() => reveal(r.id)}>
                   {tr(lang, "นึกก่อน แล้วแตะ", "Recall, then tap", "先回忆，再点开")}
                 </button>
-              ) : (
-                <>
-                  <strong>{r.value[lang]}</strong>
-                  {/* The handle: one image to carry the number on. A number
-                      without one is a number you can only look up. */}
-                  {handleFor(r.id, lang) ? (
-                    <span className="cram-handle micro">{handleFor(r.id, lang)}</span>
-                  ) : null}
-                </>
-              )}
+              ) : <strong>{r.value[lang]}</strong>}
             </dd>
+            {/* The mnemonic describes the whole rule, so it uses the whole
+                row instead of stretching a half-width answer column. */}
+            {(!covered || shown.has(r.id)) && handleFor(r.id, lang) ? (
+              <dd className="cram-mnemonic micro">{handleFor(r.id, lang)}</dd>
+            ) : null}
           </div>
         ))}
       </dl>
