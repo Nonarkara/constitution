@@ -1,0 +1,36 @@
+{
+  "action": {
+    "bottom": 572.2578125,
+    "height": 55.6953125,
+    "left": 18,
+    "right": 318.7890625,
+    "top": 516.5625,
+    "width": 300.7890625,
+    "x": 18,
+    "y": 516.5625
+  },
+  "header": {
+    "bottom": 53,
+    "height": 53,
+    "left": 0,
+    "right": 390,
+    "top": 0,
+    "width": 390,
+    "x": 0,
+    "y": 0
+  },
+  "height": 844,
+  "overflow": 0,
+  "picture": {
+    "bottom": 496.5625,
+    "height": 133.328125,
+    "left": 18,
+    "right": 118,
+    "top": 363.234375,
+    "width": 100,
+    "x": 18,
+    "y": 363.234375
+  },
+  "ready": "true",
+  "width": 390
+}
