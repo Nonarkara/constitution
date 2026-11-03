@@ -88,12 +88,12 @@ export function MemoryHouse() {
       <h1>
         {tr(
           lang,
-          "เดินบ้านเดียว จำได้หลายเรื่อง",
-          "One house. Many things to remember.",
-          "一座屋，记住许多事。",
+          "บ้านความจำ",
+          "Memory house",
+          "记忆屋",
         )}
       </h1>
-      <p>
+      <details className="memory-method"><summary>{tr(lang,"วิธีใช้บ้าน 16 ห้อง","How to use the sixteen rooms","十六个房间怎么用")}</summary>      <p>
         {tr(
           lang,
           "16 ห้องสำหรับ 16 หมวด มองภาพ นึกกฎ แล้วลองเรียกคำตอบกลับมา แต่ละห้องยังมีตัวเลขที่ต้องจำอยู่ในนั้น เรื่องและมุกเป็นเครื่องช่วยจำ ตัวบทเป็นแหล่งตัดสิน",
@@ -101,15 +101,12 @@ export function MemoryHouse() {
           "十六个房间，对应宪法的十六个编号章节。看图、回想规则，再试着作答——每个房间还放着你必须记住的数字。故事与笑话是线索，条文才是法律依据。",
         )}
       </p>
+</details>
       <article ref={detail} className="palace-room" id={`room-detail-${selected}`}>
-        <p>
-          <a href="#memory-rooms">
-            {tr(lang, "เลือกห้องอื่น", "Choose another room", "选择其他房间")} ↑
-          </a>
-        </p>
-        <h2 tabIndex={-1}>
-          {chapters.find((c) => c.number === selected)?.title[lang]}
-        </h2>
+        <div className="room-heading">
+          <h2 tabIndex={-1}>{chapters.find((c) => c.number === selected)?.title[lang]}</h2>
+          <a href="#memory-rooms">{tr(lang,"เลือกห้องอื่น","Choose another room","选择其他房间")} ↑</a>
+        </div>
         {/* The room's extent, in sections. The news desk points at this room
             with the section numbers of a subject that lie inside this
             chapter, and a reader who follows the link can only check that
@@ -130,10 +127,13 @@ export function MemoryHouse() {
               )
             : null}
         </p>
-        <div className="action-panel">
-          <span className="mono action-panel-kicker">
-            {tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
-          </span>
+        <figure>
+          <PalacePicture chapter={selected} />
+          <figcaption>
+            <strong className="palace-number">{p.number}</strong>
+            <p>{p.joke[lang]}</p>
+          </figcaption>
+        </figure>
           <button
             className="primary action-panel-cta"
             disabled={!ready}
@@ -157,22 +157,6 @@ export function MemoryHouse() {
             )}{" "}
             →
           </button>
-          <p className="micro action-panel-reason">
-            {tr(
-              lang,
-              `ห้อง ${selected} — ${chapters.find((c) => c.number === selected)?.title[lang]}: มองภาพ นึกกฎ แล้วตอบ`,
-              `Room ${selected} — ${chapters.find((c) => c.number === selected)?.title[lang]}: see the picture, recall the rule, then answer.`,
-              `第${selected}间——${chapters.find((c) => c.number === selected)?.title[lang]}：看图、回想规则、再作答。`,
-            )}
-          </p>
-        </div>
-        <figure>
-          <PalacePicture chapter={selected} />
-          <figcaption>
-            <strong className="palace-number">{p.number}</strong>
-            <p>{p.joke[lang]}</p>
-          </figcaption>
-        </figure>
         <p>
           <strong>{p.check[lang]}</strong>
         </p>

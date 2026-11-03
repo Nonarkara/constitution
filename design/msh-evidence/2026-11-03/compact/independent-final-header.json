@@ -1,0 +1,154 @@
+[
+  {
+    "brandName": "The Constitution",
+    "brandText": "๒๕๖๐\nConstitution",
+    "headerHeight": 52.79999923706055,
+    "lang": "en",
+    "overflow": false,
+    "targets": [
+      {
+        "height": 44,
+        "text": "Display",
+        "width": 64.07500457763672
+      },
+      {
+        "height": 44,
+        "text": "Settings",
+        "width": 46.95000076293945
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 44
+      }
+    ],
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "brandName": "泰国宪法",
+    "brandText": "๒๕๖๐\n宪法",
+    "headerHeight": 52.79999923706055,
+    "lang": "zh",
+    "overflow": false,
+    "targets": [
+      {
+        "height": 44,
+        "text": "显示",
+        "width": 50.306251525878906
+      },
+      {
+        "height": 44,
+        "text": "设置",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 44
+      }
+    ],
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "brandName": "The Constitution",
+    "brandText": "๒๕๖๐",
+    "headerHeight": 52.79999923706055,
+    "lang": "en",
+    "overflow": false,
+    "targets": [
+      {
+        "height": 44,
+        "text": "Display",
+        "width": 64.07500457763672
+      },
+      {
+        "height": 44,
+        "text": "Settings",
+        "width": 46.95000076293945
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 44
+      }
+    ],
+    "viewport": [
+      320,
+      844
+    ]
+  },
+  {
+    "brandName": "泰国宪法",
+    "brandText": "๒๕๖๐",
+    "headerHeight": 52.79999923706055,
+    "lang": "zh",
+    "overflow": false,
+    "targets": [
+      {
+        "height": 44,
+        "text": "显示",
+        "width": 50.306251525878906
+      },
+      {
+        "height": 44,
+        "text": "设置",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 44
+      }
+    ],
+    "viewport": [
+      320,
+      844
+    ]
+  }
+]

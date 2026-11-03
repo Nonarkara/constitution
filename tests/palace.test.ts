@@ -54,18 +54,18 @@ test("the memory house shows the room before it shows the plan of the house", ()
     room < index,
     "the room must come before the sixteen thumbnails: the page tells the learner to see the picture, so the picture cannot be under the index",
   );
-  // The one action belongs to the room, so it must sit inside it — and above
-  // the picture, because the picture is taller than the first screen of a
-  // phone and the action has to be in that screen.
+  // The image is evidence for the recall task, so it precedes the action.
+  // The rendered task receipt checks that both fit the first screen; a
+  // source-order assertion must not protect an oversized illustration.
   const picture = src.indexOf("<PalacePicture chapter={selected} />");
-  const action = src.indexOf('className="action-panel"');
+  const action = src.indexOf('className="primary action-panel-cta"');
   const end = src.indexOf("</article>");
   assert.ok(
     picture > 0 && action > 0,
     "the room has neither a picture nor an action",
   );
   assert.ok(
-    action < picture && picture < end,
-    "the room's action must sit above its picture, inside the room",
+    room < picture && picture < action && action < end,
+    "the room's picture and action must stay together before the room index",
   );
 });

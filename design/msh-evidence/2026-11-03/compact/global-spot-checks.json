@@ -1,0 +1,42 @@
+[
+  {
+    "dialogs": 0,
+    "header": 53,
+    "overflow": 0,
+    "path": "/section/",
+    "title": "เปิดมาตรา\nหาคำตอบ",
+    "width": 390
+  },
+  {
+    "dialogs": 0,
+    "header": 53,
+    "overflow": 0,
+    "path": "/notebook/",
+    "title": "สมุดสองหน้า\nทีละสองมาตรา",
+    "width": 390
+  },
+  {
+    "dialogs": 0,
+    "header": 53,
+    "overflow": 0,
+    "path": "/amend/",
+    "title": "ถ้าเราอยากแก้รัฐธรรมนูญ",
+    "width": 390
+  },
+  {
+    "dialogs": 0,
+    "header": 53,
+    "overflow": 0,
+    "path": "/read/",
+    "title": "บททั่วไป",
+    "width": 390
+  },
+  {
+    "dialogs": 0,
+    "header": 53,
+    "overflow": 0,
+    "path": "/news/",
+    "title": "ข่าวสั้นหนึ่งแก้ว",
+    "width": 390
+  }
+]

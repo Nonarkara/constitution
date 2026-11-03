@@ -1,0 +1,1877 @@
+[
+  {
+    "action": {
+      "bottom": 363.015625,
+      "height": 49.6953125,
+      "width": 238.109375,
+      "x": 18,
+      "y": 313.3203125
+    },
+    "anchor": {
+      "bottom": 726,
+      "height": 270.984375,
+      "width": 354,
+      "x": 18,
+      "y": 455.015625
+    },
+    "art": {
+      "bottom": 273.1953125,
+      "height": 90.1953125,
+      "width": 88,
+      "x": 284,
+      "y": 183
+    },
+    "brandBorder": "0px",
+    "header": {
+      "bottom": 53,
+      "height": 53,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "height": 844,
+    "intro": {
+      "bottom": 439.015625,
+      "height": 272.015625,
+      "width": 354,
+      "x": 18,
+      "y": 167
+    },
+    "overflow": 0,
+    "pageHeight": 1852,
+    "path": "/",
+    "pulse": {
+      "bottom": 167,
+      "height": 61,
+      "width": 354,
+      "x": 18,
+      "y": 106
+    },
+    "title": {
+      "bottom": 305.3203125,
+      "height": 90.875,
+      "width": 354,
+      "x": 18,
+      "y": 214.4453125
+    },
+    "width": 390,
+    "footerTargets": [
+      {
+        "height": 44,
+        "width": 354
+      },
+      {
+        "height": 44,
+        "width": 354
+      }
+    ],
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+        "width": 112.796875
+      },
+      {
+        "height": 44,
+        "text": "หน้าจอ",
+        "width": 61.203125
+      },
+      {
+        "height": 44,
+        "text": "ตั้งค่า",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "เรียน",
+        "width": 118
+      },
+      {
+        "height": 44,
+        "text": "ฝึก",
+        "width": 118
+      },
+      {
+        "height": 44,
+        "text": "สำรวจ",
+        "width": 118
+      },
+      {
+        "height": 44,
+        "text": "เปิดสมุดสองหน้า →",
+        "width": 143.46875
+      },
+      {
+        "height": 44,
+        "text": "อ่านทั้งฉบับทีละหมวด →",
+        "width": 174.96875
+      },
+      {
+        "height": 44,
+        "text": "เริ่มรอบฝึก →",
+        "width": 74.7421875
+      },
+      {
+        "height": 44,
+        "text": "ข้อสอบจำลอง 30 ชุด",
+        "width": 115.34375
+      },
+      {
+        "height": 44,
+        "text": "90 ประเด็นสอบนายอำเภอ",
+        "width": 142.5
+      },
+      {
+        "height": 44,
+        "text": "เดินชมวังความจำ →",
+        "width": 109
+      },
+      {
+        "height": 44,
+        "text": "สูตรตัวเลข 79 ค่า",
+        "width": 97.6875
+      },
+      {
+        "height": 44,
+        "text": "การ์ดความจำ",
+        "width": 73.84375
+      },
+      {
+        "height": 44,
+        "text": "อ่านคู่มือ 13 บท →",
+        "width": 99.9375
+      },
+      {
+        "height": 44,
+        "text": "สิทธิพลเมือง 15 ด้าน",
+        "width": 112.3828125
+      },
+      {
+        "height": 44,
+        "text": "แผ่นสรุปสูตร",
+        "width": 72.1796875
+      },
+      {
+        "height": 44,
+        "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+        "width": 354
+      },
+      {
+        "height": 44,
+        "text": "ตรวจสอบกับต้นฉบับเสมอ",
+        "width": 354
+      }
+    ]
+  },
+  {
+    "action": {
+      "bottom": 593.5859375,
+      "height": 75.390625,
+      "width": 354,
+      "x": 18,
+      "y": 518.1953125
+    },
+    "anchor": null,
+    "art": {
+      "bottom": 241.7265625,
+      "height": 79.7265625,
+      "width": 72,
+      "x": 300,
+      "y": 162
+    },
+    "brandBorder": "0px",
+    "header": {
+      "bottom": 53,
+      "height": 53,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "height": 844,
+    "intro": {
+      "bottom": 306.3125,
+      "height": 144.3125,
+      "width": 354,
+      "x": 18,
+      "y": 162
+    },
+    "overflow": 0,
+    "pageHeight": 24654,
+    "path": "/bible/local-and-amendment/",
+    "pulse": null,
+    "title": {
+      "bottom": 298.3125,
+      "height": 136.3125,
+      "width": 354,
+      "x": 18,
+      "y": 162
+    },
+    "width": 390,
+    "footerTargets": [
+      {
+        "height": 44,
+        "width": 354
+      },
+      {
+        "height": 44,
+        "width": 354
+      }
+    ],
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+        "width": 112.796875
+      },
+      {
+        "height": 44,
+        "text": "หน้าจอ",
+        "width": 61.203125
+      },
+      {
+        "height": 44,
+        "text": "ตั้งค่า",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "เรียน",
+        "width": 88.5
+      },
+      {
+        "height": 44,
+        "text": "ฝึก",
+        "width": 88.5
+      },
+      {
+        "height": 44,
+        "text": "สำรวจ",
+        "width": 88.5
+      },
+      {
+        "height": 44,
+        "text": "5/279",
+        "width": 88.5
+      },
+      {
+        "height": 44,
+        "text": "เรียน",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "มาตรา 249 →",
+        "width": 76.65625
+      },
+      {
+        "height": 44,
+        "text": "มาตรา 255 →",
+        "width": 76.25
+      },
+      {
+        "height": 44,
+        "text": "มาตรา 256 →",
+        "width": 76.40625
+      },
+      {
+        "height": 44,
+        "text": "ฝึก 5 ข้อ · หมวด 14 →",
+        "width": 121.3125
+      },
+      {
+        "height": 44,
+        "text": "ฝึก 5 ข้อ · หมวด 15 →",
+        "width": 121.0625
+      },
+      {
+        "height": 44,
+        "text": "ฝึก 5 ข้อ · หมวด 16 →",
+        "width": 121.21875
+      },
+      {
+        "height": 44,
+        "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+        "width": 354
+      },
+      {
+        "height": 44,
+        "text": "ตรวจสอบกับต้นฉบับเสมอ",
+        "width": 354
+      }
+    ]
+  },
+  {
+    "action": {
+      "bottom": 504.5234375,
+      "height": 44,
+      "width": 148.0625,
+      "x": 18,
+      "y": 460.5234375
+    },
+    "anchor": null,
+    "art": {
+      "bottom": 246.59375,
+      "height": 75.59375,
+      "width": 72,
+      "x": 300,
+      "y": 171
+    },
+    "brandBorder": "0px",
+    "header": {
+      "bottom": 53,
+      "height": 53,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "height": 844,
+    "intro": {
+      "bottom": 337.5234375,
+      "height": 166.5234375,
+      "width": 354,
+      "x": 18,
+      "y": 171
+    },
+    "overflow": 0,
+    "pageHeight": 2273,
+    "path": "/practice/",
+    "pulse": null,
+    "title": {
+      "bottom": 216.4375,
+      "height": 45.4375,
+      "width": 354,
+      "x": 18,
+      "y": 171
+    },
+    "width": 390,
+    "practiceInfo": {
+      "height": 74,
+      "width": 354,
+      "x": 18,
+      "y": 374.5234375
+    },
+    "footerTargets": [
+      {
+        "height": 44,
+        "width": 354
+      },
+      {
+        "height": 44,
+        "width": 354
+      }
+    ],
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+        "width": 112.796875
+      },
+      {
+        "height": 44,
+        "text": "หน้าจอ",
+        "width": 61.203125
+      },
+      {
+        "height": 44,
+        "text": "ตั้งค่า",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "เรียน",
+        "width": 88.5
+      },
+      {
+        "height": 44,
+        "text": "ฝึก",
+        "width": 88.5
+      },
+      {
+        "height": 44,
+        "text": "สำรวจ",
+        "width": 88.5
+      },
+      {
+        "height": 44,
+        "text": "5/279",
+        "width": 88.5
+      },
+      {
+        "height": 44,
+        "text": "รอบฝึก",
+        "width": 70.1640625
+      },
+      {
+        "height": 44,
+        "text": "ปกครองเบต้า",
+        "width": 120.8359375
+      },
+      {
+        "height": 44,
+        "text": "ชุดฝึกจับเวลา 30 ชุด",
+        "width": 156.484375
+      },
+      {
+        "height": 44,
+        "text": "เริ่มชุดจับเวลา →",
+        "width": 354
+      },
+      {
+        "height": 44,
+        "text": "แนวข้อสอบนายอำเภอและท้องถิ่น 90 ข้อ",
+        "width": 302.0859375
+      },
+      {
+        "height": 44,
+        "text": "ฝึก 90 ข้อ →",
+        "width": 354
+      },
+      {
+        "height": 44,
+        "text": "ฝึกจำตัวเลข 41 ค่าสำคัญ",
+        "width": 192.8203125
+      },
+      {
+        "height": 44,
+        "text": "เปิดแบบฝึกตัวเลข →",
+        "width": 354
+      },
+      {
+        "height": 44,
+        "text": "นึกก่อนแล้วพลิกดูตัวบท",
+        "width": 176.9765625
+      },
+      {
+        "height": 44,
+        "text": "เปิดการ์ดความจำ →",
+        "width": 354
+      },
+      {
+        "height": 44,
+        "text": "แผ่นสรุปสูตร & เกมจับคู่",
+        "width": 185.390625
+      },
+      {
+        "height": 44,
+        "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+        "width": 354
+      },
+      {
+        "height": 44,
+        "text": "ตรวจสอบกับต้นฉบับเสมอ",
+        "width": 354
+      }
+    ]
+  },
+  {
+    "action": {
+      "bottom": 572.2578125,
+      "height": 55.6953125,
+      "width": 304.609375,
+      "x": 18,
+      "y": 516.5625
+    },
+    "anchor": null,
+    "art": {
+      "bottom": 496.5625,
+      "height": 133.328125,
+      "width": 100,
+      "x": 18,
+      "y": 363.234375
+    },
+    "brandBorder": "0px",
+    "header": {
+      "bottom": 53,
+      "height": 53,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "height": 844,
+    "intro": null,
+    "overflow": 0,
+    "pageHeight": 3500,
+    "path": "/memory/",
+    "pulse": null,
+    "title": {
+      "bottom": 207.4375,
+      "height": 45.4375,
+      "width": 354,
+      "x": 18,
+      "y": 162
+    },
+    "width": 390,
+    "footerTargets": [
+      {
+        "height": 44,
+        "width": 354
+      },
+      {
+        "height": 44,
+        "width": 354
+      }
+    ],
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+        "width": 112.796875
+      },
+      {
+        "height": 44,
+        "text": "หน้าจอ",
+        "width": 61.203125
+      },
+      {
+        "height": 44,
+        "text": "ตั้งค่า",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "เรียน",
+        "width": 88.5
+      },
+      {
+        "height": 44,
+        "text": "ฝึก",
+        "width": 88.5
+      },
+      {
+        "height": 44,
+        "text": "สำรวจ",
+        "width": 88.5
+      },
+      {
+        "height": 44,
+        "text": "5/279",
+        "width": 88.5
+      },
+      {
+        "height": 44,
+        "text": "สำรวจ",
+        "width": 49.109375
+      },
+      {
+        "height": 44,
+        "text": "เลือกห้องอื่น ↑",
+        "width": 80.3203125
+      },
+      {
+        "height": 44,
+        "text": "มาตรา 1 →",
+        "width": 83.1328125
+      },
+      {
+        "height": 44,
+        "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+        "width": 354
+      },
+      {
+        "height": 44,
+        "text": "ตรวจสอบกับต้นฉบับเสมอ",
+        "width": 354
+      }
+    ]
+  },
+  {
+    "action": {
+      "bottom": 364.09375,
+      "height": 49.6953125,
+      "width": 238.109375,
+      "x": 244,
+      "y": 314.3984375
+    },
+    "anchor": {
+      "bottom": 664.484375,
+      "height": 216.390625,
+      "width": 748,
+      "x": 244,
+      "y": 448.09375
+    },
+    "art": {
+      "bottom": 248.5,
+      "height": 102.5,
+      "width": 100,
+      "x": 892,
+      "y": 146
+    },
+    "brandBorder": "0px",
+    "header": {
+      "bottom": 53,
+      "height": 53,
+      "width": 1024,
+      "x": 0,
+      "y": 0
+    },
+    "height": 900,
+    "intro": {
+      "bottom": 432.09375,
+      "height": 302.09375,
+      "width": 748,
+      "x": 244,
+      "y": 130
+    },
+    "overflow": 0,
+    "pageHeight": 1319,
+    "path": "/",
+    "pulse": {
+      "bottom": 130,
+      "height": 61,
+      "width": 748,
+      "x": 244,
+      "y": 69
+    },
+    "title": {
+      "bottom": 300.3984375,
+      "height": 124.953125,
+      "width": 748,
+      "x": 244,
+      "y": 175.4453125
+    },
+    "width": 1024,
+    "footerTargets": [
+      {
+        "height": 44,
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "width": 137.2734375
+      }
+    ],
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+        "width": 288.171875
+      },
+      {
+        "height": 44,
+        "text": "หน้าจอ",
+        "width": 69.203125
+      },
+      {
+        "height": 44,
+        "text": "ตั้งค่า",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 48.046875
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 45.8671875
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 54
+      },
+      {
+        "height": 49.6953125,
+        "text": "เรียน",
+        "width": 180
+      },
+      {
+        "height": 49.6953125,
+        "text": "ฝึก",
+        "width": 180
+      },
+      {
+        "height": 49.6953125,
+        "text": "สำรวจ",
+        "width": 180
+      },
+      {
+        "height": 44,
+        "text": "เปิดสมุดสองหน้า →",
+        "width": 143.46875
+      },
+      {
+        "height": 44,
+        "text": "อ่านทั้งฉบับทีละหมวด →",
+        "width": 174.96875
+      },
+      {
+        "height": 44,
+        "text": "เริ่มรอบฝึก →",
+        "width": 74.7421875
+      },
+      {
+        "height": 44,
+        "text": "ข้อสอบจำลอง 30 ชุด",
+        "width": 115.34375
+      },
+      {
+        "height": 44,
+        "text": "90 ประเด็นสอบนายอำเภอ",
+        "width": 142.5
+      },
+      {
+        "height": 44,
+        "text": "เดินชมวังความจำ →",
+        "width": 109
+      },
+      {
+        "height": 44,
+        "text": "สูตรตัวเลข 79 ค่า",
+        "width": 97.6875
+      },
+      {
+        "height": 44,
+        "text": "การ์ดความจำ",
+        "width": 73.84375
+      },
+      {
+        "height": 44,
+        "text": "อ่านคู่มือ 13 บท →",
+        "width": 99.9375
+      },
+      {
+        "height": 44,
+        "text": "สิทธิพลเมือง 15 ด้าน",
+        "width": 112.3828125
+      },
+      {
+        "height": 44,
+        "text": "แผ่นสรุปสูตร",
+        "width": 72.1796875
+      },
+      {
+        "height": 44,
+        "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "text": "ตรวจสอบกับต้นฉบับเสมอ",
+        "width": 137.2734375
+      }
+    ]
+  },
+  {
+    "action": {
+      "bottom": 538.8359375,
+      "height": 45.6953125,
+      "width": 380.9296875,
+      "x": 244,
+      "y": 493.140625
+    },
+    "anchor": null,
+    "art": {
+      "bottom": 288.734375,
+      "height": 110.734375,
+      "width": 100,
+      "x": 892,
+      "y": 178
+    },
+    "brandBorder": "0px",
+    "header": {
+      "bottom": 53,
+      "height": 53,
+      "width": 1024,
+      "x": 0,
+      "y": 0
+    },
+    "height": 900,
+    "intro": {
+      "bottom": 310.953125,
+      "height": 132.953125,
+      "width": 748,
+      "x": 244,
+      "y": 178
+    },
+    "overflow": 0,
+    "pageHeight": 17202,
+    "path": "/bible/local-and-amendment/",
+    "pulse": null,
+    "title": {
+      "bottom": 302.953125,
+      "height": 124.953125,
+      "width": 748,
+      "x": 244,
+      "y": 178
+    },
+    "width": 1024,
+    "footerTargets": [
+      {
+        "height": 44,
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "width": 137.2734375
+      }
+    ],
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+        "width": 288.171875
+      },
+      {
+        "height": 44,
+        "text": "หน้าจอ",
+        "width": 69.203125
+      },
+      {
+        "height": 44,
+        "text": "ตั้งค่า",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 48.046875
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 45.8671875
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 54
+      },
+      {
+        "height": 49.6953125,
+        "text": "เรียน",
+        "width": 180
+      },
+      {
+        "height": 49.6953125,
+        "text": "ฝึก",
+        "width": 180
+      },
+      {
+        "height": 49.6953125,
+        "text": "สำรวจ",
+        "width": 180
+      },
+      {
+        "height": 44,
+        "text": "เรียน",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "มาตรา 249 →",
+        "width": 76.65625
+      },
+      {
+        "height": 44,
+        "text": "มาตรา 255 →",
+        "width": 76.25
+      },
+      {
+        "height": 44,
+        "text": "มาตรา 256 →",
+        "width": 76.40625
+      },
+      {
+        "height": 44,
+        "text": "ฝึก 5 ข้อ · หมวด 14 →",
+        "width": 121.3125
+      },
+      {
+        "height": 44,
+        "text": "ฝึก 5 ข้อ · หมวด 15 →",
+        "width": 121.0625
+      },
+      {
+        "height": 44,
+        "text": "ฝึก 5 ข้อ · หมวด 16 →",
+        "width": 121.21875
+      },
+      {
+        "height": 44,
+        "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "text": "ตรวจสอบกับต้นฉบับเสมอ",
+        "width": 137.2734375
+      }
+    ]
+  },
+  {
+    "action": {
+      "bottom": 507.8671875,
+      "height": 44,
+      "width": 148.0625,
+      "x": 244,
+      "y": 463.8671875
+    },
+    "anchor": null,
+    "art": {
+      "bottom": 292,
+      "height": 105,
+      "width": 100,
+      "x": 892,
+      "y": 187
+    },
+    "brandBorder": "0px",
+    "header": {
+      "bottom": 53,
+      "height": 53,
+      "width": 1024,
+      "x": 0,
+      "y": 0
+    },
+    "height": 900,
+    "intro": {
+      "bottom": 340.8671875,
+      "height": 153.8671875,
+      "width": 748,
+      "x": 244,
+      "y": 187
+    },
+    "overflow": 0,
+    "pageHeight": 1945,
+    "path": "/practice/",
+    "pulse": null,
+    "title": {
+      "bottom": 249.4765625,
+      "height": 62.4765625,
+      "width": 748,
+      "x": 244,
+      "y": 187
+    },
+    "width": 1024,
+    "practiceInfo": {
+      "height": 74,
+      "width": 390,
+      "x": 244,
+      "y": 377.8671875
+    },
+    "footerTargets": [
+      {
+        "height": 44,
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "width": 137.2734375
+      }
+    ],
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+        "width": 288.171875
+      },
+      {
+        "height": 44,
+        "text": "หน้าจอ",
+        "width": 69.203125
+      },
+      {
+        "height": 44,
+        "text": "ตั้งค่า",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 48.046875
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 45.8671875
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 54
+      },
+      {
+        "height": 49.6953125,
+        "text": "เรียน",
+        "width": 180
+      },
+      {
+        "height": 49.6953125,
+        "text": "ฝึก",
+        "width": 180
+      },
+      {
+        "height": 49.6953125,
+        "text": "สำรวจ",
+        "width": 180
+      },
+      {
+        "height": 44,
+        "text": "รอบฝึก",
+        "width": 70.1640625
+      },
+      {
+        "height": 44,
+        "text": "ปกครองเบต้า",
+        "width": 120.8359375
+      },
+      {
+        "height": 44,
+        "text": "ชุดฝึกจับเวลา 30 ชุด",
+        "width": 156.484375
+      },
+      {
+        "height": 44,
+        "text": "เริ่มชุดจับเวลา →",
+        "width": 434.3984375
+      },
+      {
+        "height": 54,
+        "text": "แนวข้อสอบนายอำเภอและท้องถิ่น 90 ข้อ",
+        "width": 289.6015625
+      },
+      {
+        "height": 44,
+        "text": "ฝึก 90 ข้อ →",
+        "width": 289.6015625
+      },
+      {
+        "height": 44,
+        "text": "ฝึกจำตัวเลข 41 ค่าสำคัญ",
+        "width": 192.8203125
+      },
+      {
+        "height": 44,
+        "text": "เปิดแบบฝึกตัวเลข →",
+        "width": 748
+      },
+      {
+        "height": 44,
+        "text": "นึกก่อนแล้วพลิกดูตัวบท",
+        "width": 176.9765625
+      },
+      {
+        "height": 44,
+        "text": "เปิดการ์ดความจำ →",
+        "width": 748
+      },
+      {
+        "height": 44,
+        "text": "แผ่นสรุปสูตร & เกมจับคู่",
+        "width": 185.390625
+      },
+      {
+        "height": 44,
+        "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "text": "ตรวจสอบกับต้นฉบับเสมอ",
+        "width": 137.2734375
+      }
+    ]
+  },
+  {
+    "action": {
+      "bottom": 631.96875,
+      "height": 55.6953125,
+      "width": 304.609375,
+      "x": 244,
+      "y": 576.2734375
+    },
+    "anchor": null,
+    "art": {
+      "bottom": 556.2734375,
+      "height": 160,
+      "width": 120,
+      "x": 244,
+      "y": 396.2734375
+    },
+    "brandBorder": "0px",
+    "header": {
+      "bottom": 53,
+      "height": 53,
+      "width": 1024,
+      "x": 0,
+      "y": 0
+    },
+    "height": 900,
+    "intro": null,
+    "overflow": 0,
+    "pageHeight": 3326,
+    "path": "/memory/",
+    "pulse": null,
+    "title": {
+      "bottom": 240.4765625,
+      "height": 62.4765625,
+      "width": 748,
+      "x": 244,
+      "y": 178
+    },
+    "width": 1024,
+    "footerTargets": [
+      {
+        "height": 44,
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "width": 137.2734375
+      }
+    ],
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+        "width": 288.171875
+      },
+      {
+        "height": 44,
+        "text": "หน้าจอ",
+        "width": 69.203125
+      },
+      {
+        "height": 44,
+        "text": "ตั้งค่า",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 48.046875
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 45.8671875
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 54
+      },
+      {
+        "height": 49.6953125,
+        "text": "เรียน",
+        "width": 180
+      },
+      {
+        "height": 49.6953125,
+        "text": "ฝึก",
+        "width": 180
+      },
+      {
+        "height": 49.6953125,
+        "text": "สำรวจ",
+        "width": 180
+      },
+      {
+        "height": 44,
+        "text": "สำรวจ",
+        "width": 49.109375
+      },
+      {
+        "height": 44,
+        "text": "เลือกห้องอื่น ↑",
+        "width": 80.3203125
+      },
+      {
+        "height": 44,
+        "text": "มาตรา 1 →",
+        "width": 83.1328125
+      },
+      {
+        "height": 44,
+        "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "text": "ตรวจสอบกับต้นฉบับเสมอ",
+        "width": 137.2734375
+      }
+    ]
+  },
+  {
+    "action": {
+      "bottom": 364.09375,
+      "height": 49.6953125,
+      "width": 238.109375,
+      "x": 336,
+      "y": 314.3984375
+    },
+    "anchor": {
+      "bottom": 664.484375,
+      "height": 216.390625,
+      "width": 992,
+      "x": 336,
+      "y": 448.09375
+    },
+    "art": {
+      "bottom": 248.5,
+      "height": 102.5,
+      "width": 100,
+      "x": 1228,
+      "y": 146
+    },
+    "brandBorder": "0px",
+    "header": {
+      "bottom": 53,
+      "height": 53,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "height": 900,
+    "intro": {
+      "bottom": 432.09375,
+      "height": 302.09375,
+      "width": 992,
+      "x": 336,
+      "y": 130
+    },
+    "overflow": 0,
+    "pageHeight": 1319,
+    "path": "/",
+    "pulse": {
+      "bottom": 130,
+      "height": 61,
+      "width": 992,
+      "x": 336,
+      "y": 69
+    },
+    "title": {
+      "bottom": 300.3984375,
+      "height": 124.953125,
+      "width": 760,
+      "x": 336,
+      "y": 175.4453125
+    },
+    "width": 1440,
+    "footerTargets": [
+      {
+        "height": 44,
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "width": 137.2734375
+      }
+    ],
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+        "width": 288.171875
+      },
+      {
+        "height": 44,
+        "text": "หน้าจอ",
+        "width": 69.203125
+      },
+      {
+        "height": 44,
+        "text": "ตั้งค่า",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 48.046875
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 45.8671875
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 54
+      },
+      {
+        "height": 49.6953125,
+        "text": "เรียน",
+        "width": 176
+      },
+      {
+        "height": 49.6953125,
+        "text": "ฝึก",
+        "width": 176
+      },
+      {
+        "height": 49.6953125,
+        "text": "สำรวจ",
+        "width": 176
+      },
+      {
+        "height": 44,
+        "text": "เปิดสมุดสองหน้า →",
+        "width": 143.46875
+      },
+      {
+        "height": 44,
+        "text": "อ่านทั้งฉบับทีละหมวด →",
+        "width": 174.96875
+      },
+      {
+        "height": 44,
+        "text": "เริ่มรอบฝึก →",
+        "width": 74.7421875
+      },
+      {
+        "height": 44,
+        "text": "ข้อสอบจำลอง 30 ชุด",
+        "width": 115.34375
+      },
+      {
+        "height": 44,
+        "text": "90 ประเด็นสอบนายอำเภอ",
+        "width": 142.5
+      },
+      {
+        "height": 44,
+        "text": "เดินชมวังความจำ →",
+        "width": 109
+      },
+      {
+        "height": 44,
+        "text": "สูตรตัวเลข 79 ค่า",
+        "width": 97.6875
+      },
+      {
+        "height": 44,
+        "text": "การ์ดความจำ",
+        "width": 73.84375
+      },
+      {
+        "height": 44,
+        "text": "อ่านคู่มือ 13 บท →",
+        "width": 99.9375
+      },
+      {
+        "height": 44,
+        "text": "สิทธิพลเมือง 15 ด้าน",
+        "width": 112.3828125
+      },
+      {
+        "height": 44,
+        "text": "แผ่นสรุปสูตร",
+        "width": 72.1796875
+      },
+      {
+        "height": 44,
+        "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "text": "ตรวจสอบกับต้นฉบับเสมอ",
+        "width": 137.2734375
+      }
+    ]
+  },
+  {
+    "action": {
+      "bottom": 538.8359375,
+      "height": 45.6953125,
+      "width": 380.9296875,
+      "x": 336,
+      "y": 493.140625
+    },
+    "anchor": null,
+    "art": {
+      "bottom": 288.734375,
+      "height": 110.734375,
+      "width": 100,
+      "x": 996,
+      "y": 178
+    },
+    "brandBorder": "0px",
+    "header": {
+      "bottom": 53,
+      "height": 53,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "height": 900,
+    "intro": {
+      "bottom": 310.953125,
+      "height": 132.953125,
+      "width": 760,
+      "x": 336,
+      "y": 178
+    },
+    "overflow": 0,
+    "pageHeight": 17202,
+    "path": "/bible/local-and-amendment/",
+    "pulse": null,
+    "title": {
+      "bottom": 302.953125,
+      "height": 124.953125,
+      "width": 760,
+      "x": 336,
+      "y": 178
+    },
+    "width": 1440,
+    "footerTargets": [
+      {
+        "height": 44,
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "width": 137.2734375
+      }
+    ],
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+        "width": 288.171875
+      },
+      {
+        "height": 44,
+        "text": "หน้าจอ",
+        "width": 69.203125
+      },
+      {
+        "height": 44,
+        "text": "ตั้งค่า",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 48.046875
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 45.8671875
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 54
+      },
+      {
+        "height": 49.6953125,
+        "text": "เรียน",
+        "width": 176
+      },
+      {
+        "height": 49.6953125,
+        "text": "ฝึก",
+        "width": 176
+      },
+      {
+        "height": 49.6953125,
+        "text": "สำรวจ",
+        "width": 176
+      },
+      {
+        "height": 44,
+        "text": "เรียน",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "มาตรา 249 →",
+        "width": 76.65625
+      },
+      {
+        "height": 44,
+        "text": "มาตรา 255 →",
+        "width": 76.25
+      },
+      {
+        "height": 44,
+        "text": "มาตรา 256 →",
+        "width": 76.40625
+      },
+      {
+        "height": 44,
+        "text": "ฝึก 5 ข้อ · หมวด 14 →",
+        "width": 121.3125
+      },
+      {
+        "height": 44,
+        "text": "ฝึก 5 ข้อ · หมวด 15 →",
+        "width": 121.0625
+      },
+      {
+        "height": 44,
+        "text": "ฝึก 5 ข้อ · หมวด 16 →",
+        "width": 121.21875
+      },
+      {
+        "height": 44,
+        "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "text": "ตรวจสอบกับต้นฉบับเสมอ",
+        "width": 137.2734375
+      }
+    ]
+  },
+  {
+    "action": {
+      "bottom": 507.8671875,
+      "height": 44,
+      "width": 148.0625,
+      "x": 336,
+      "y": 463.8671875
+    },
+    "anchor": null,
+    "art": {
+      "bottom": 292,
+      "height": 105,
+      "width": 100,
+      "x": 1228,
+      "y": 187
+    },
+    "brandBorder": "0px",
+    "header": {
+      "bottom": 53,
+      "height": 53,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "height": 900,
+    "intro": {
+      "bottom": 340.8671875,
+      "height": 153.8671875,
+      "width": 992,
+      "x": 336,
+      "y": 187
+    },
+    "overflow": 0,
+    "pageHeight": 1935,
+    "path": "/practice/",
+    "pulse": null,
+    "title": {
+      "bottom": 249.4765625,
+      "height": 62.4765625,
+      "width": 992,
+      "x": 336,
+      "y": 187
+    },
+    "width": 1440,
+    "practiceInfo": {
+      "height": 74,
+      "width": 390,
+      "x": 336,
+      "y": 377.8671875
+    },
+    "footerTargets": [
+      {
+        "height": 44,
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "width": 137.2734375
+      }
+    ],
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+        "width": 288.171875
+      },
+      {
+        "height": 44,
+        "text": "หน้าจอ",
+        "width": 69.203125
+      },
+      {
+        "height": 44,
+        "text": "ตั้งค่า",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 48.046875
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 45.8671875
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 54
+      },
+      {
+        "height": 49.6953125,
+        "text": "เรียน",
+        "width": 176
+      },
+      {
+        "height": 49.6953125,
+        "text": "ฝึก",
+        "width": 176
+      },
+      {
+        "height": 49.6953125,
+        "text": "สำรวจ",
+        "width": 176
+      },
+      {
+        "height": 44,
+        "text": "รอบฝึก",
+        "width": 70.1640625
+      },
+      {
+        "height": 44,
+        "text": "ปกครองเบต้า",
+        "width": 120.8359375
+      },
+      {
+        "height": 44,
+        "text": "ชุดฝึกจับเวลา 30 ชุด",
+        "width": 156.484375
+      },
+      {
+        "height": 44,
+        "text": "เริ่มชุดจับเวลา →",
+        "width": 580.796875
+      },
+      {
+        "height": 44,
+        "text": "แนวข้อสอบนายอำเภอและท้องถิ่น 90 ข้อ",
+        "width": 302.0859375
+      },
+      {
+        "height": 44,
+        "text": "ฝึก 90 ข้อ →",
+        "width": 387.203125
+      },
+      {
+        "height": 44,
+        "text": "ฝึกจำตัวเลข 41 ค่าสำคัญ",
+        "width": 192.8203125
+      },
+      {
+        "height": 44,
+        "text": "เปิดแบบฝึกตัวเลข →",
+        "width": 992
+      },
+      {
+        "height": 44,
+        "text": "นึกก่อนแล้วพลิกดูตัวบท",
+        "width": 176.9765625
+      },
+      {
+        "height": 44,
+        "text": "เปิดการ์ดความจำ →",
+        "width": 992
+      },
+      {
+        "height": 44,
+        "text": "แผ่นสรุปสูตร & เกมจับคู่",
+        "width": 185.390625
+      },
+      {
+        "height": 44,
+        "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "text": "ตรวจสอบกับต้นฉบับเสมอ",
+        "width": 137.2734375
+      }
+    ]
+  },
+  {
+    "action": {
+      "bottom": 631.96875,
+      "height": 55.6953125,
+      "width": 304.609375,
+      "x": 336,
+      "y": 576.2734375
+    },
+    "anchor": null,
+    "art": {
+      "bottom": 556.2734375,
+      "height": 160,
+      "width": 120,
+      "x": 336,
+      "y": 396.2734375
+    },
+    "brandBorder": "0px",
+    "header": {
+      "bottom": 53,
+      "height": 53,
+      "width": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "height": 900,
+    "intro": null,
+    "overflow": 0,
+    "pageHeight": 2607,
+    "path": "/memory/",
+    "pulse": null,
+    "title": {
+      "bottom": 240.4765625,
+      "height": 62.4765625,
+      "width": 992,
+      "x": 336,
+      "y": 178
+    },
+    "width": 1440,
+    "footerTargets": [
+      {
+        "height": 44,
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "width": 137.2734375
+      }
+    ],
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+        "width": 288.171875
+      },
+      {
+        "height": 44,
+        "text": "หน้าจอ",
+        "width": 69.203125
+      },
+      {
+        "height": 44,
+        "text": "ตั้งค่า",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 48.046875
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 45.8671875
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 54
+      },
+      {
+        "height": 49.6953125,
+        "text": "เรียน",
+        "width": 176
+      },
+      {
+        "height": 49.6953125,
+        "text": "ฝึก",
+        "width": 176
+      },
+      {
+        "height": 49.6953125,
+        "text": "สำรวจ",
+        "width": 176
+      },
+      {
+        "height": 44,
+        "text": "สำรวจ",
+        "width": 49.109375
+      },
+      {
+        "height": 44,
+        "text": "เลือกห้องอื่น ↑",
+        "width": 80.3203125
+      },
+      {
+        "height": 44,
+        "text": "มาตรา 1 →",
+        "width": 83.1328125
+      },
+      {
+        "height": 44,
+        "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+        "width": 216.578125
+      },
+      {
+        "height": 44,
+        "text": "ตรวจสอบกับต้นฉบับเสมอ",
+        "width": 137.2734375
+      }
+    ]
+  }
+]

@@ -18,7 +18,7 @@ Check with `node .non-slop/bin/non-slop.mjs scan .` (and `render <url>` when Pla
 <!-- spatial-law:start -->
 ## Design quality: the spatial law (MSH)
 
-**The law is `docs/MSH-LAW.md`** — Dr Non's own text, copied verbatim, and the canonical statement of the law for every agent and every project. Read it before designing, building or reviewing any interface.
+**The law is `docs/MSH-LAW.md`** — Dr Non's own text, copied verbatim, and the canonical statement of the law for every agent and every project. Read it before designing, building or reviewing any interface. Also read `docs/MSH-AUDITOR-CHECKLIST.md`, the owner-supplied compact-first checklist; apply its B1–B14 independent audit.
 
 > **When you find SH, massacre.**
 

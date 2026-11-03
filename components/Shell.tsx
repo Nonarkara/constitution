@@ -56,7 +56,7 @@ function PageChrome({ focused }: { focused: boolean }) {
           </ol>
         </nav>
       )}
-      {back && !focused && crumbs.length < 2 && (
+      {back && !focused && crumbs.length < 2 && !DOORS.some((item) => item.href === path) && (
         <p className="page-back">
           <Link href={back.href}>{back.label[lang]}</Link>
         </p>
@@ -103,12 +103,13 @@ export function Shell({ children }: { children: React.ReactNode }) {
         {tr(lang, "ข้ามไปเนื้อหา", "Skip to content", "跳转到正文")}
       </a>
       <header className="header">
-        <Link href="/" className="brand">
+        <Link href="/" className="brand" aria-label={labels.title[lang]}>
           <span className="brand-mark" aria-hidden="true">
             ๒๕๖๐
           </span>
           <span>
-            {labels.title[lang]}
+            <span className="brand-title">{labels.title[lang]}</span>
+            <span className="brand-short" aria-hidden="true">{tr(lang,"รัฐธรรมนูญ","Constitution","宪法")}</span>
             <small>
               {tr(
                 lang,
@@ -179,7 +180,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       </header>
       <div className="app-grid">
         <aside className="sidebar">
-          <nav aria-label={tr(lang, "เมนูหลัก", "Main navigation", "主导航")}>
+          <nav className={ready && showStrip && path !== "/" ? "has-progress" : undefined} aria-label={tr(lang, "เมนูหลัก", "Main navigation", "主导航")}>
             {DOORS.map((item) => (
               <Link
                 aria-current={door === item.id ? "page" : undefined}
@@ -190,6 +191,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
                 {item.label[lang]}
               </Link>
             ))}
+            {ready && showStrip && path !== "/" && <Link className="nav-progress" href="/notes/" aria-label={`${labels.notes[lang]} · ${known.met}/279 ${tr(lang, "มาตรา", "sections", "条")}`}><b>{known.met}/279</b></Link>}
           </nav>
           <div className="sidebar-note">
             <Link href="/tikki/" style={{ textDecoration: "none", color: "inherit", display: "block" }}>
@@ -226,7 +228,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
               )}
             </p>
           )}
-          {ready && showStrip && (
+          {ready && showStrip && path !== "/" && (
             <nav className="study-strip micro" aria-label={labels.notes[lang]}>
               <Link href="/notes/">
                 {labels.notes[lang]}

@@ -1,0 +1,84 @@
+[
+  {
+    "brandName": "The Constitution",
+    "lang": "en",
+    "overflow": false,
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐The ConstitutionConstituti",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "Display",
+        "width": 64.07500457763672
+      },
+      {
+        "height": 44,
+        "text": "Settings",
+        "width": 46.95000076293945
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 44
+      }
+    ],
+    "viewport": [
+      320,
+      844
+    ]
+  },
+  {
+    "brandName": "泰国宪法",
+    "lang": "zh",
+    "overflow": false,
+    "targets": [
+      {
+        "height": 44,
+        "text": "๒๕๖๐泰国宪法宪法读懂，记牢，会用。",
+        "width": 53.69375228881836
+      },
+      {
+        "height": 44,
+        "text": "显示",
+        "width": 50.306251525878906
+      },
+      {
+        "height": 44,
+        "text": "设置",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "ไทย",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "EN",
+        "width": 44
+      },
+      {
+        "height": 44,
+        "text": "中文",
+        "width": 44
+      }
+    ],
+    "viewport": [
+      320,
+      844
+    ]
+  }
+]

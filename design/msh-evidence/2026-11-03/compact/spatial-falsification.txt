@@ -1,0 +1,32 @@
+
+> constitution-study@0.1.0 falsify:spatial
+> node scripts/spatial/spatial-falsify.mjs out
+
+  · clean build passes (3 pre-existing finding(s) given synthetic reasons)
+  · caught: an unjustified gap opens between two blocks  [unjustified gaps]
+  · caught: a picture is stranded beside an empty column  [orphan elements]
+  · caught: two related actions are pushed to opposite edges  [scattered actions]
+  · caught: a row breaks and leaves one item alone on the last line  [accidental wrapping]
+  · caught: the page scrolls sideways  [accidental wrapping]
+  · caught: the page makes you scroll before you can do anything  [spatially expensive information]
+  · caught: a heading louder than the title  [false hierarchy]
+  · caught: the chrome of the page grows  [chrome cost]
+  · caught: a fixed bar sits on top of the work  [overlapping chrome]
+  · caught: a fixed bar pinned to the right sits on top of the work  [overlapping chrome]
+  · caught: a reason for a decision that no longer exists  [a rule about the baseline]
+  · caught: the chrome grows and the receipt does not  [a rule about the baseline]
+  · caught: an absolute limit bites on a page the baseline already knows  [a rule about the baseline]
+  · caught: a page the baseline has never seen, with a long scroll before the action  [a rule about the baseline]
+  · caught: an exemption that is written down excuses the limit it names  [the written exemption let the limit pass]
+  · caught: a page with no <main> element at all  [the gate measured a page with no <main>]
+  · caught: an exemption for a page that is not there  [a rule about the baseline]
+  · caught: a decision the receipt has no numbers for  [a rule about the baseline]
+  · caught: a hole that grew since the receipt was written  [a rule about the baseline]
+  · caught: a hole that shrank since the receipt was written  [a rule about the baseline]
+  · caught: a page whose layout is decided by the width it was loaded at  [a rule about the baseline]
+  · caught: a partial sweep is not told a reason is stale  [the rule does not fire on everything]
+
+  · spatial gate: 10 injected page defects, 12 broken-baseline cases and 1 case about the instrument itself, all caught.
+  · modes covered: accidental wrapping, chrome cost, false hierarchy, orphan elements, overlapping chrome, scattered actions, spatially expensive information, unjustified gaps — 8 of the 8.
+  · Every mode has failed at least once, every rule about the baseline has failed at least once, and a page that decides its layout once, from the width it was loaded at, has been caught at the width where a reader would see it.
+

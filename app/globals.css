@@ -291,12 +291,12 @@ small,
   border: 0;
 }
 .header {
-  border-bottom: 3px solid var(--ink);
+  border-bottom: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 14px;
-  padding: calc(12px + env(safe-area-inset-top, 0px)) calc(32px + env(safe-area-inset-right, 0px)) 12px calc(32px + env(safe-area-inset-left, 0px));
+  padding: calc(4px + env(safe-area-inset-top, 0px)) calc(24px + env(safe-area-inset-right, 0px)) 4px calc(24px + env(safe-area-inset-left, 0px));
   max-width: 1280px;
   margin: auto;
 }
@@ -367,7 +367,7 @@ small,
   gap: 36px;
 }
 .sidebar {
-  padding-top: 38px;
+  padding-top: 16px;
   display: flex;
   flex-direction: column;
   /* The rail is as tall as its content. Stretched to the viewport it was
@@ -418,13 +418,13 @@ small,
 }
 main {
   min-width: 0;
-  padding: 38px 0 64px;
+  padding: 16px 0 40px;
   min-height: 80vh;
 }
 .page-kicker {
   display: block;
   color: var(--muted);
-  margin-bottom: 26px;
+  margin-bottom: 8px;
 }
 .intro {
   display: grid;
@@ -1261,9 +1261,8 @@ html[data-large="true"] {
   object-fit: contain;
 }
 
-/* Intro artwork sits in the reading margin. A fixed percentage avoids the
-   circular sizing of an automatic float; the16px gutter keeps Thai headings
-   readable on a phone. Text can continue underneath once the drawing ends. */
+/* Small marginal cues let long Thai headings use the reading column.
+   Paragraphs continue beneath the drawing instead of inheriting its height. */
 .intro-copy {
   display: flow-root;
 }
@@ -1273,6 +1272,7 @@ html[data-large="true"] {
 .intro-text > h1 {
   padding-right: 0;
   min-height: 0;
+  margin: 0 0 8px;
 }
 .intro-text > p {
   margin-top: 14px;
@@ -1283,15 +1283,13 @@ html[data-large="true"] {
    inside the band's own width, and 28px of it came out of the title. */
 .intro-copy > .study-art {
   float: right;
-  width: 36%;
-  margin: 0 0 20px 16px;
+  width: 72px;
+  margin: 0 0 8px 12px;
 }
-/* A marginal drawing must not determine the height of a short introduction.
-   Keep its file ratio and cap its height at180px above phone width. Text and
-   the next action flow beside it instead of inheriting a tall grid row. */
+/* The desktop margin cue stays 100px wide at its original file ratio. */
 @media (min-width: 721px) {
   .intro-copy > .study-art {
-    width: min(36%, calc(180px * var(--plate-ratio, 1)));
+    width: 100px;
   }
 }
 @media (max-width: 720px) {
@@ -1824,7 +1822,7 @@ html[data-large="true"] {
   padding: 28px;
   display: flex;
   flex-direction: column;
-  min-height: 600px;
+  min-height: 0;
   background: var(--paper);
   transition: background 160ms ease;
 }
@@ -2428,21 +2426,21 @@ mark.hl.has-note {
 .brand-mark {
   background: transparent;
   color: var(--ink);
-  border: 2px solid var(--ink);
+  border: 0;
 }
 .hero {
   display: flow-root;
-  padding: 24px 0 32px;
+  padding: 16px 0;
   margin-bottom: 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 0;
 }
 .hero-copy {
-  max-width: 600px;
+  max-width: 760px;
 }
 .hero-art {
   margin: 0 0 20px 16px;
   float: right;
-  width: 36%;
+  width: 100px;
   position: relative;
   aspect-ratio: var(--plate-ratio, 1);
 }
@@ -2453,25 +2451,6 @@ mark.hl.has-note {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-@media (min-width: 1218px) {
-  .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 48%;
-    gap: 40px;
-    align-items: start;
-  }
-  .hero-copy {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .hero-art {
-    float: none;
-    grid-column: 2;
-    grid-row: 1;
-    width: 100%;
-    margin: 0;
-  }
 }
 .hero-copy h1 {
   margin: 0 0 14px;
@@ -2496,6 +2475,7 @@ mark.hl.has-note {
   font-weight: 600;
 }
 .hero-cta > span:first-child {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -2518,12 +2498,14 @@ mark.hl.has-note {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px 24px;
-  padding: 16px 0;
+  gap: 8px 16px;
+  padding: 8px 0;
   border-bottom: 1px solid var(--line);
 }
 .pulse-item {
   display: flex;
+  text-decoration: none;
+  min-height: 44px;
   align-items: baseline;
   gap: 8px;
 }
@@ -2557,15 +2539,16 @@ mark.hl.has-note {
 .home-architecture {
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  padding: 28px 0 16px;
+  gap: 16px;
+  padding: 16px 0;
 }
 
 /* Tier 1: Dominant Anchor - Double-Page Notebook */
 .home-anchor {
-  border: 1px solid var(--line);
-  background: var(--wash);
-  padding: 22px 26px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: transparent;
+  padding: 12px 0;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -2585,10 +2568,7 @@ mark.hl.has-note {
   color: var(--edge);
 }
 .anchor-content {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 24px;
-  align-items: center;
+  display: block;
 }
 .anchor-copy h2 {
   font-size: var(--body);
@@ -2617,13 +2597,14 @@ mark.hl.has-note {
 }
 .anchor-features {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-left: 24px;
-  border-left: 1px solid var(--line);
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 8px 0 0;
+  border: 0;
 }
 .feature-chip {
-  white-space: nowrap;
+  white-space: normal;
   color: var(--muted);
 }
 .feature-chip b {
@@ -3140,8 +3121,8 @@ mark.hl.has-note {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 18px 0 24px;
-  padding-bottom: 16px;
+  margin: 0 0 12px;
+  padding-bottom: 8px;
   border-bottom: 1px solid var(--line);
 }
 .subnav-pill {
@@ -3172,14 +3153,13 @@ mark.hl.has-note {
 }
 .practice-hero-card {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  background: var(--accent-wash);
-  border: 1px solid var(--accent);
-  border-left: 4px solid var(--accent);
-  padding: 24px 28px;
-  margin-bottom: 28px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background: transparent;
+  border-block: 1px solid var(--line);
+  padding: 12px 0;
+  margin-bottom: 16px;
 }
 .practice-hero-info {
   max-width: 540px;
@@ -3354,9 +3334,9 @@ mark.hl.has-note {
 @media (max-width: 720px) {
   .practice-hero-card {
     flex-direction: column;
-    align-items: stretch;
-    padding: 18px 20px;
-    gap: 16px;
+    align-items: flex-start;
+    padding: 12px 0;
+    gap: 12px;
   }
   .practice-start-btn {
     width: fit-content;
@@ -4329,11 +4309,11 @@ footer { flex-wrap:wrap; gap:16px; }
   .reading-menu .themes { right: -110px; }
   main { padding-top: var(--space-1); }
   .study-strip { gap: 0 var(--space-2); padding-block: 2px var(--space-1); margin-bottom: var(--space-1); border-bottom: 1px solid var(--line); }
-  .hero { position: relative; display: block; padding-top: var(--space-3); }
-  .hero-art { position: absolute; right: 0; top: var(--space-3); width: 100px; }
-  .hero-copy h1 { padding-right: 104px; margin-bottom: var(--space-3); }
+  .hero { position: relative; display: block; padding-top: var(--space-2); }
+  .hero-art { position: absolute; right: 0; top: var(--space-2); width: 88px; }
+  .hero-copy h1 { padding-right: 104px; margin-bottom: var(--space-1); }
   .hero-copy p { max-width: none; }
-  .hero-cta { max-width: none; }
+  .hero-cta { max-width:100%; }
   .hero-cta + .micro { margin-bottom: 0; }
   .study-resources { gap: 0 var(--space-1); }
   .where-item { padding-block: var(--space-2); }
@@ -4625,7 +4605,7 @@ footer {
 .tikki-hero-art {
   margin: 0 0 20px 16px;
   float: right;
-  width: 36%;
+  width: 100px;
   position: relative;
   aspect-ratio: var(--plate-ratio, 1);
 }
@@ -4849,9 +4829,7 @@ footer {
     align-items: flex-start;
     gap: 8px;
   }
-  .anchor-features {
-    flex-direction: column;
-  }
+  .anchor-features { flex-direction: row; }
 }
 
 /* The doorway path is four steps. Two columns below 900px, one below
@@ -5028,3 +5006,87 @@ footer {
   .news-map-room { grid-column:2; grid-row:1; }
   .news-map-cue { grid-row:2; }
 }
+
+/* Compact task composition: identity, state and evidence earn their own size. */
+.header .brand-mark { width:auto; height:auto; display:inline; background:transparent; border:0; color:var(--ink); flex:none; }
+.header .brand > span:last-child { display:flex; align-items:baseline; gap:12px; }
+.header .brand small { display:inline; }
+.header { padding-top:calc(4px + env(safe-area-inset-top, 0px)); padding-bottom:4px; }
+.nav-progress { font-variant-numeric:tabular-nums; }
+.sidebar nav .nav-progress { display:none; }
+.study-strip { padding:0; margin-bottom:8px; }
+.study-strip a { min-height:44px; }
+.hero-reason { font-size:var(--micro); color:var(--muted); }
+.hero-reason summary { display:flex; align-items:center; gap:8px; min-height:44px; }
+.hero-reason summary::after { content:"+"; }
+.hero-reason[open] summary::after { content:"−"; }
+.hero-reason p { font-size:var(--body); max-width:65ch; }
+.engine-column { align-self:start; }
+.guide-entry.source-card { padding:12px 0; margin:16px 0; }
+.guide-entry.source-card h2 { margin:0 0 8px; }
+.memory-house > h1 { margin:8px 0; }
+.memory-method { margin:8px 0; }
+.memory-method > summary { font-size:var(--micro); }
+.palace-room { padding-top:12px; border-top:1px solid var(--line); }
+.palace-room h2 { font-size:var(--body); margin:0; }
+.palace-room > p:first-child { margin:0; }
+.palace-room figure { grid-template-columns:120px minmax(0,1fr); align-items:start; gap:12px; margin:12px 0; }
+.palace-room .palace-picture { width:120px; }
+.palace-room .action-panel-cta { margin:8px 0; }
+@media (max-width:720px) {
+  .header .brand small { display:none; }
+  .header-settings,.languages button { min-height:44px; }
+  .sidebar { padding-top:0; }
+  .sidebar nav.has-progress { grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .sidebar nav .nav-progress { display:flex; }
+  .study-strip { display:none; }
+  .palace-room figure { grid-template-columns:100px minmax(0,1fr); }
+  .palace-room .palace-picture { width:100px; }
+}
+
+.home-anchor .anchor-features { display:block; }
+.home-anchor .feature-chip { display:inline; }
+.home-anchor .feature-chip + .feature-chip::before { content:" · "; }
+
+.brand-short { display:none; }
+.header-settings,.languages button,.reading-menu > summary { min-width:44px; justify-content:center; }
+@media (max-width:480px) {
+  .header .brand { gap:6px; min-width:44px; }
+  .header .brand > span:last-child { overflow:visible; text-overflow:clip; }
+  .brand-title { display:none; }
+  .brand-short { display:inline; }
+}
+@media (max-width:360px) {
+  .header .brand > span:last-child { display:none; }
+}
+
+/* These are navigation choices, rather than inline citations in prose. */
+.anchor-actions a,.engine-links a,.reference-nav a,.mode-card-link,
+main h2 > a,main h3 > a,.crumbs a,.page-back a,.page-next a,.civic-law-list a,footer a {
+  display:inline-flex; align-items:center; min-width:44px; min-height:44px;
+}
+.practice-subnav .subnav-pill { min-height:44px; }
+.room-heading { display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; }
+.room-heading a { display:inline-flex; align-items:center; min-height:44px; font-size:var(--micro); }
+
+/* Reading is the notebook's first task; tools open when requested. */
+.notebook-header { margin-bottom:12px; }
+.notebook-method { font-size:var(--micro); }
+.notebook-method > summary,.notebook-tools > summary { min-height:44px; display:flex; align-items:center; gap:8px; cursor:pointer; }
+.notebook-method > summary::after,.notebook-tools > summary::after { content:"+"; }
+.notebook-method[open] > summary::after,.notebook-tools[open] > summary::after { content:"−"; }
+.notebook-method p { font-size:var(--body); max-width:65ch; }
+.notebook-controls { padding:8px 0; margin:12px 0; gap:0; background:transparent; border:0; border-block:1px solid var(--line); }
+.notebook-controls .spread-navigation { display:grid; grid-template-columns:44px minmax(0,1fr) 44px; gap:12px; }
+.notebook-controls .spread-navigation button { padding:8px; width:44px; height:44px; }
+.notebook-controls .spread-indicator { text-align:center; }
+.notebook-tools { width:100%; }
+.notebook-tools > summary { font-size:var(--micro); }
+.notebook-tools .jump-controls { margin-block:12px; }
+.notebook-tools .compare-toggle { min-height:44px; }
+.notebook-container .book-page { padding:16px; }
+.notebook-container .open-spread-book { margin-top:12px; }
+
+.notebook-tools select,.notebook-tools .jump-input { min-height:44px; }
+.page-actions-row a,.annotation-banner a { display:inline-flex; align-items:center; min-width:44px; min-height:44px; }
+.margin-note-box textarea:focus-visible { outline:3px solid var(--focus); outline-offset:2px; }

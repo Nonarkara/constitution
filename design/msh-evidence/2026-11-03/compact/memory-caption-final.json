@@ -1,0 +1,29 @@
+{
+  "action": {
+    "bottom": 631.96875,
+    "height": 55.6953125,
+    "width": 304.609375,
+    "y": 576.2734375
+  },
+  "alignment": "start",
+  "caption": {
+    "bottom": 465.5625,
+    "height": 69.2890625,
+    "width": 628,
+    "y": 396.2734375
+  },
+  "figure": {
+    "bottom": 556.2734375,
+    "height": 160,
+    "width": 760,
+    "y": 396.2734375
+  },
+  "height": 900,
+  "picture": {
+    "bottom": 556.2734375,
+    "height": 160,
+    "width": 120,
+    "y": 396.2734375
+  },
+  "width": 1440
+}

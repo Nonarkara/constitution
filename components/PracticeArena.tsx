@@ -168,9 +168,9 @@ function ConstitutionArena() {
                 <h1>
                   {tr(
                     lang,
-                    "ฝึกตอบ\nแล้วดูว่าพลาดตรงไหน",
-                    "Practise,\nthen see where you slip.",
-                    "练习，\n然后看看哪里出错。"
+                    "ฝึกตอบ",
+                    "Practise",
+                    "练习"
                   )}
                 </h1>
                 <p>
@@ -189,12 +189,7 @@ function ConstitutionArena() {
             {/* Primary Action: Adaptive Mixed Session */}
             <div className="practice-hero-card">
               <div className="practice-hero-info">
-                <span className="mono practice-tag text-accent">
-                  {tr(lang, "รอบฝึกผสม · ปรับตามผู้เรียน", "Adaptive Mixed Session", "自适应混合练习")}
-                </span>
-                <h2>
-                  {tr(lang, "รอบฝึกตามระดับความจำ", "Memory-paced practice session", "按记忆节奏练习")}
-                </h2>
+                <h2>{tr(lang,"รอบฝึกผสม · ปรับตามผู้เรียน","Adaptive mixed session","自适应混合练习")}</h2>
                 <p className="micro">
                   {tr(
                     lang,
@@ -204,7 +199,7 @@ function ConstitutionArena() {
                   )}
                 </p>
               </div>
-              <button className="primary practice-start-btn" onClick={startMixed}>
+              <button className="primary practice-start-btn" disabled={!ready} onClick={startMixed}>
                 <span>{tr(lang, "เริ่มรอบฝึกผสม", "Start mixed session", "开始混合练习")}</span>
                 <span aria-hidden="true">→</span>
               </button>

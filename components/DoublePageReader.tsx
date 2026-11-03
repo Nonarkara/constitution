@@ -107,12 +107,12 @@ export function DoublePageReader() {
             <h1>
               {tr(
                 lang,
-                "สมุดสองหน้า\nทีละสองมาตรา",
-                "Two pages,\ntwo sections at a time.",
-                "双页笔记本，\n每次两条。",
+                "สมุดสองหน้า",
+                "Two-page notebook",
+                "双页笔记本",
               )}
             </h1>
-            <p>
+            <details className="notebook-method"><summary>{tr(lang,"อ่านและจดโน้ตอย่างไร","How to read and annotate","如何阅读和批注")}</summary>            <p>
               {tr(
                 lang,
                 "อ่านทั้ง 279 มาตราเหมือนสมุดเปิดบนโต๊ะ ระบายสีทั้งมาตราตามความหมาย แล้วจดโน้ตที่ขอบ โน้ตจะกลับมาในการ์ดความจำและรอบทบทวน",
@@ -120,6 +120,7 @@ export function DoublePageReader() {
                 "像摊开在桌上的书一样阅读全部279条。按含义给整条上色，在页边写笔记；笔记会出现在闪卡和复习中。",
               )}
             </p>
+</details>
           </div>
         </div>
       </header>
@@ -130,9 +131,7 @@ export function DoublePageReader() {
         aria-label={tr(lang, "ควบคุมสมุด", "Notebook controls", "笔记本控制")}
       >
         <div className="spread-navigation">
-          <button onClick={prevSpread} disabled={leftSecNum <= 1}>
-            ← {tr(lang, "คู่หน้าก่อนหน้า", "Previous Spread", "上一对页")}
-          </button>
+          <button onClick={prevSpread} disabled={leftSecNum <= 1} aria-label={tr(lang,"คู่หน้าก่อนหน้า","Previous spread","上一对页")}>←</button>
           <span className="mono spread-indicator">
             {tr(
               lang,
@@ -141,11 +140,11 @@ export function DoublePageReader() {
               `第${leftSecNum}${rightSecNum ? `至${rightSecNum}` : ""}条 / 共279条`,
             )}
           </span>
-          <button className="primary notebook-next" onClick={nextSpread} disabled={leftSecNum >= 279}>
-            {tr(lang, "อีกสองมาตรา", "Two more sections", "再翻两条")} →
-          </button>
+          <button className="primary notebook-next" onClick={nextSpread} disabled={leftSecNum >= 279} aria-label={tr(lang,"อีกสองมาตรา","Two more sections","再翻两条")}>→</button>
         </div>
 
+        <details className="notebook-tools">
+          <summary>{tr(lang,"ไฮไลต์ · ไปมาตรา · เทียบภาษา","Highlight · Jump · Compare","高亮 · 跳转 · 对照")}{totalAnnotated > 0 && <span className="micro"> · {tr(lang,`${totalAnnotated} มาตรามีบันทึก`,`${totalAnnotated} annotated`,`${totalAnnotated}条有批注`)}</span>}</summary>
         {/* Highlighter Tool Palette */}
         <div className="highlighter-palette" aria-label={tr(lang, "สีไฮไลต์", "Highlight colour", "高亮颜色")}>
           <span className="micro font-bold">
@@ -224,8 +223,6 @@ export function DoublePageReader() {
             {tr(lang, "เปิดเทียบ 3 ภาษา", "Compare 3 Languages", "三语对照")}
           </label>
         </div>
-      </section>
-
       {/* User Stats Banner */}
       {totalAnnotated > 0 && (
         <div className="annotation-banner micro">
@@ -243,8 +240,11 @@ export function DoublePageReader() {
         </div>
       )}
 
+        </details>
+      </section>
+
       {/* THE TWO-PAGE OPEN SPREAD */}
-      <main
+      <section
         className="open-spread-book"
         aria-label={tr(lang, "สมุดรัฐธรรมนูญเปิดสองหน้า", "Open constitution spread", "打开的宪法对页")}
       >
@@ -472,7 +472,7 @@ export function DoublePageReader() {
             </div>
           </article>
         )}
-      </main>
+      </section>
 
       {/* Floating Bottom Navigator for Tablet / Mobile */}
       <footer className="spread-bottom-nav">

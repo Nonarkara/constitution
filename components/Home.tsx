@@ -87,6 +87,24 @@ export function Home() {
 
   return (
     <div className="home-dashboard">
+      {/* One status group beside the next task. Empty accounts get no zero bar. */}
+      {showPulse && (
+        <section className="home-pulse" aria-label={tr(lang, "สรุปการเรียนของคุณ", "Your study pulse", "学习概览")}>
+          <Link className="pulse-item" href="/notes/">
+            <span className="mono pulse-num">{known.met}<b>/279</b></span>
+            <span className="pulse-label micro">{tr(lang, "เริ่มแล้ว", "explored", "已接触")}</span>
+          </Link>
+          {plan.due > 0 && <Link className="pulse-item" href="/practice/?session=mixed">
+            <span className="mono pulse-num">{plan.due}</span>
+            <span className="pulse-label micro">{tr(lang, "รอทวน", "due", "待复习")}</span>
+          </Link>}
+          {notesCount > 0 && <Link className="pulse-item" href="/notes/">
+            <span className="mono pulse-num">{notesCount}</span>
+            <span className="pulse-label micro">{tr(lang, "โน้ต", "notes", "笔记")}</span>
+          </Link>}
+        </section>
+      )}
+
       <section className="hero">
         {/* The drawing is written before the copy on purpose. On a narrow band
             the drawing floats at the title's top right, and a float can only
@@ -107,61 +125,33 @@ export function Home() {
             {tr(lang, "สมุดเรียนรัฐธรรมนูญ", "Constitutional Notebook", "宪法学习笔记")}
           </span>
           <h1>{tr(lang, "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ", "One section.\nOne small step.", "一条一条读，\n一点一点懂。")}</h1>
-          <p>
+          <div className="hero-action-group">
+            <Link className="primary hero-cta" href={target.href}>
+              <span>{label}</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+            <details className="hero-reason"><summary>{reason}</summary><p>
             {tr(
               lang,
               "เริ่มจากขั้นถัดไปที่สมุดเลือกให้ จากข้อที่ถึงเวลาทบทวน ข้อที่ยังพลาด หรือบทถัดไปในคู่มือ",
               "Start from the step this notebook chooses: a review that is due, a section you miss, or the next chapter of the guide.",
               "从这本笔记选定的下一步开始：到期的复习、你还错过的条文，或指南的下一章。",
             )}
-          </p>
-          <div className="hero-action-group">
-            <Link className="primary hero-cta" href={target.href}>
-              <span>{label}</span>
-              <span aria-hidden="true">→</span>
-            </Link>
-            <p className="micro hero-reason">{reason}</p>
+          </p></details>
           </div>
         </div>
       </section>
-
-      {/* Pulse Summary Bar. Rendered as three zeros, two divider rules and a
-          link to a first-time visitor — three counters that can only say zero
-          before anyone has studied. The link is actionable, so it stays; the
-          zeros and the rules they were separated by do not. */}
-      {showPulse && (
-        <section className="home-pulse" aria-label={tr(lang, "สรุปการเรียนของคุณ", "Your study pulse", "学习概览")}>
-          <div className="pulse-item">
-            <span className="mono pulse-num">{known.met}<b>/279</b></span>
-            <span className="pulse-label micro">{tr(lang, "มาตราที่เริ่มเรียนแล้ว", "Sections explored", "已接触的法条")}</span>
-          </div>
-          <div className="pulse-divider" aria-hidden="true" />
-          <div className="pulse-item">
-            <span className="mono pulse-num">{plan.due}</span>
-            <span className="pulse-label micro">{tr(lang, "ข้อที่ถึงเวลาทบทวน", "Due for review", "到期复习")}</span>
-          </div>
-          <div className="pulse-divider" aria-hidden="true" />
-          <div className="pulse-item">
-            <span className="mono pulse-num">{notesCount}</span>
-            <span className="pulse-label micro">{tr(lang, "มาตราที่มีบันทึก", "Annotated sections", "笔记条数")}</span>
-          </div>
-          <div className="pulse-divider" aria-hidden="true" />
-        </section>
-      )}
 
       {/* Editorial Learning Architecture: One Dominant Anchor + Two Engines + Reference Shelf */}
       <section className="home-architecture" aria-label={tr(lang, "เส้นทางการเรียน", "Learning pathways", "学习路径")}>
         {/* Tier 1: Dominant Anchor - Double-Page Notebook */}
         <div className="home-anchor">
-          <div className="anchor-badge mono">
-            <span className="text-muted">279 {tr(lang, "มาตรา", "sections", "条")}</span>
-          </div>
           <div className="anchor-content">
             <div className="anchor-copy">
               <h2>
-                <Link href="/notebook/">
+
                   {tr(lang, "สมุดสองหน้า", "The two-page notebook", "双页笔记本")}
-                </Link>
+
               </h2>
               <p>
                 {tr(
@@ -204,9 +194,9 @@ export function Home() {
               <span className="mono micro text-muted">4,700 {tr(lang, "ข้อ", "exercises", "题")}</span>
             </div>
             <h3>
-              <Link href="/practice/">
+
                 {tr(lang, "สนามฝึกตอบ & ข้อสอบจำลอง", "Practice Arena & Mock Exams", "练习场与模拟考")}
-              </Link>
+
             </h3>
             <p className="micro">
               {tr(
@@ -230,9 +220,9 @@ export function Home() {
               <span className="mono micro text-muted">16 {tr(lang, "ห้อง", "rooms", "房间")}</span>
             </div>
             <h3>
-              <Link href="/memory/">
+
                 {tr(lang, "บ้านความจำและการ์ดช่วยจำ", "The memory house and flashcards", "记忆之屋与闪卡")}
-              </Link>
+
             </h3>
             <p className="micro">
               {tr(
@@ -255,9 +245,9 @@ export function Home() {
           <div className="reference-lead">
             <span className="reference-tag mono micro">{tr(lang, "คู่มือและหลักการ", "GUIDE & PRINCIPLES", "导读与宪政原则")}</span>
             <h3>
-              <Link href="/bible/">
+
                 {tr(lang, `คู่มือเจาะลึก ${GUIDE_CHAPTERS} บท & สิทธิพลเมือง ${RIGHTS_COUNT} ด้าน`, `Study Bible (${GUIDE_CHAPTERS} Chapters) & Civic Rights (${RIGHTS_COUNT})`, `深入指南（${GUIDE_CHAPTERS}章）与公民权利（${RIGHTS_COUNT}项）`)}
-              </Link>
+
             </h3>
             <p className="micro">
               {tr(

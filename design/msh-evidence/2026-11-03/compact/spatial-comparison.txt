@@ -1,0 +1,12 @@
+  · 1/5 routes
+  · 2/5 routes
+  · 3/5 routes
+  · 4/5 routes
+
+NOTES (5) — seen, recorded, and not a failure:
+  · the container cliff at 500px belongs to "tikki-episodes", which no measured page contains — there was nothing to sweep.
+  · the container cliff at 640px belongs to "settings-card", which no measured page contains — there was nothing to sweep.
+  · the container cliff at 400px was crossed but not measured (the container is 354px wide at viewport 390px and 748px wide at viewport 1024px) — this sweep did not cover every cliff the CSS declares, so it is recorded, not failed.
+  · the container cliff at 850px belongs to "dots-map", which no measured page contains — there was nothing to sweep.
+  · stale reasons were not checked — the run was told which routes to measure; the run did not sweep every width the baseline recorded
+  · spatial: 15 measurements across 5 routes and 3 widths — every hole, orphan, scattered pair and wrap is either fixed or written down   · spatial: every measurement was a fresh load at the width measured, on a real clock — the chrome of each page is recorded, and a chrome that changed is a change the receipt cannot hide

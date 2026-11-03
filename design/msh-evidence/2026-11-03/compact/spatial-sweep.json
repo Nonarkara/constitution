@@ -1,0 +1,145 @@
+{
+  "provenance": {
+    "measuredAt": "2026-11-03T01:00:33.933585+00:00",
+    "measurements": 2709,
+    "routes": 43,
+    "widths": 63,
+    "measuredTogether": false,
+    "carriedOver": [],
+    "build": {
+      "exportSha256": "10d2b7012b3ba9cfdfb1224df2631092211e48d1bf077947cc021810061d1153",
+      "files": 2042,
+      "revision": "c8a9c11e836dad2d",
+      "recordedAt": "2026-11-03T00:41:42.026381+00:00"
+    },
+    "sweeps": [
+      {
+        "chunk": "0",
+        "measuredAt": "2026-11-03T00:43:41.875Z",
+        "routes": [
+          "/",
+          "/along/",
+          "/amend/",
+          "/bible/",
+          "/bible/cabinet/",
+          "/bible/courts/"
+        ],
+        "measurements": 378,
+        "rawSha256": "537a4e331ecf0d9963c5502789bec8580c037eee6ae550ac10c464f2c08328f7"
+      },
+      {
+        "chunk": "1",
+        "measuredAt": "2026-11-03T00:45:33.223Z",
+        "routes": [
+          "/bible/duties-state-policy/",
+          "/bible/exam-method/",
+          "/bible/general-and-king/",
+          "/bible/history/",
+          "/bible/how-to-read/",
+          "/bible/independent-organs/"
+        ],
+        "measurements": 378,
+        "rawSha256": "d628b6b2dd4b683a0d4b3e25a721cafc7d537bf40ffb42e77f61adf118746cbd"
+      },
+      {
+        "chunk": "2",
+        "measuredAt": "2026-11-03T00:47:22.666Z",
+        "routes": [
+          "/bible/local-and-amendment/",
+          "/bible/organic-laws/",
+          "/bible/parliament/",
+          "/bible/rights/",
+          "/bible/transitory/",
+          "/cheatsheet/"
+        ],
+        "measurements": 378,
+        "rawSha256": "93195a2cf56c1e1a5c429d94a31ab2801d04d43f761b1776968e66311aa14983"
+      },
+      {
+        "chunk": "3",
+        "measuredAt": "2026-11-03T00:48:57.952Z",
+        "routes": [
+          "/civic/",
+          "/cram/",
+          "/drills/",
+          "/exam/",
+          "/flashcards/",
+          "/games/"
+        ],
+        "measurements": 378,
+        "rawSha256": "f912e0c771c20ad07d27903be6112c6b9a8b5b1dc46764829df47d06015dc4fa"
+      },
+      {
+        "chunk": "5",
+        "measuredAt": "2026-11-03T00:52:06.971Z",
+        "routes": [
+          "/notes/",
+          "/polls/",
+          "/practice/",
+          "/practice/pokklong/",
+          "/read/",
+          "/research/"
+        ],
+        "measurements": 378,
+        "rawSha256": "806f8a05cac17996c9d2629588f9059bccd66db9e13c1a2ab21890e93ad42ac5"
+      },
+      {
+        "chunk": "6",
+        "measuredAt": "2026-11-03T00:58:43.871Z",
+        "routes": [
+          "/review/",
+          "/rights/",
+          "/section/",
+          "/settings/",
+          "/sources/",
+          "/tikki/"
+        ],
+        "measurements": 378,
+        "rawSha256": "32e7405c7547806636fca8ad2216695d84e35e3bd6c29abffd08d90d607220a5"
+      },
+      {
+        "chunk": "7",
+        "measuredAt": "2026-11-03T00:59:02.834Z",
+        "routes": [
+          "/topics/"
+        ],
+        "measurements": 63,
+        "rawSha256": "e4129af357d955b4ff4f855e708cef4f6bb6d40dd5a72ef60fcae636d6ce876d"
+      },
+      {
+        "chunk": "memory",
+        "measuredAt": "2026-11-03T00:54:26.403Z",
+        "routes": [
+          "/memory/"
+        ],
+        "measurements": 63,
+        "rawSha256": "6243cbfbae8e494913eb0a949544317d786da8c0cba51d6230d24679664bcd8c"
+      },
+      {
+        "chunk": "rest4",
+        "measuredAt": "2026-11-03T01:00:19.739Z",
+        "routes": [
+          "/glossary/",
+          "/learn/",
+          "/library/",
+          "/news/",
+          "/notebook/"
+        ],
+        "measurements": 315,
+        "rawSha256": "8077dadab9742d595705d029c574b8cd534f799be3ee0e0423b0d58e7f524275"
+      }
+    ],
+    "note": "Nine fresh route-partitioned sweeps of the same frozen final export. No historical measurement cells carried forward."
+  },
+  "decisionSignatures": [
+    "dead|div.route-number.mono",
+    "dead|figcaption",
+    "orphan|figure.study-art"
+  ],
+  "removedReasons": [
+    "dead|div.anchor-features.mono",
+    "dead|p.law-text"
+  ],
+  "limitsChanged": false,
+  "exemptionsAdded": false
+}
