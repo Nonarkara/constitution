@@ -1,0 +1,30 @@
+{
+  "checkBeforeOptions": false,
+  "exit": {
+    "bottom": 214,
+    "height": 44,
+    "left": 255.515625,
+    "right": 372,
+    "top": 170,
+    "width": 116.484375,
+    "x": 255.515625,
+    "y": 170
+  },
+  "height": 844,
+  "overflow": 0,
+  "primary": [
+    {
+      "bottom": 707.171875,
+      "height": 44,
+      "left": 18,
+      "right": 215.8515625,
+      "text": "ดูตัวเลือกและตรวจความคิด →",
+      "top": 663.171875,
+      "width": 197.8515625,
+      "x": 18,
+      "y": 663.171875
+    }
+  ],
+  "scrollY": 0,
+  "width": 390
+}

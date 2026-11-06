@@ -45,3 +45,18 @@ Read-only backend evidence: the live news endpoint returns200 headlines with hea
 ## Remaining
 
 Native iPad/Safari, dictation/PWA installation, a fluent human review and learner efficacy trials remain unverified. This is an operability repair of the reproduced failures, not a claim that every possible device/state/content combination was exercised. Full-estate CI results and live release proof are recorded below when available.
+
+## Live release
+
+Source commit `d5fe2a8` is pushed to main. Worker `0fc37738-b27f-4054-98dc-8e5bdb79b725` serves offline revision `d60be1027e1a11bf` at https://constitution.nonarkara.org. Database bindings and the six-hour news schedule are unchanged; no migration was needed.
+
+Three HTTP rounds each match63 selected HTML/JS/CSS/service-worker/manifest/art bodies. All43 route bodies match the export too. Full hashes and security headers are retained in `live-byte-verification.json`. Live API checks return GET200 with200 headlines/all3 source checks healthy, HEAD200 with an empty body, and POST405.
+
+Live390×844 practice is captured at scrollY0: exit is44px high and ends214px; the sole current Reveal action ends707px. Check is absent until choices exist. Leaving returns to the memory house without recording an answer; observed runtime error log is empty. Live320px enlarged English has no horizontal overflow and a53px zero-inset header. Language and text size are restored to their original Thai/default preferences; no user note or answer was edited during this live trial.
+
+The earlier release's CI is confirmed green. This release's full workflow is running separately; its eventual result is not claimed as completed here. All changes in the follow-up evidence commit are repository-only and do not alter served assets.
+
+Found · Narrow enlarged headers clipped or overlapped text; practice lacked an early exit and emphasized a future disabled action; cross-tab erasure retained stale data; malformed imports could erase highlights or crash Notes.
+Changed · Content-fitting header labels, one current practice action and a visible exit, deletion-aware state synchronization, and preserving strict-import/local-recovery boundaries.
+Verified ·272 functional tests; independent24-state/3-viewport UI review; all-route overflow/hierarchy gates;40-cell default baseline comparison; matching live bytes, practice return and read-only news API.
+Remaining · Full CI completion, native iPad/Safari/dictation/PWA and human learner/language trials; no universal every-state clearance is claimed.

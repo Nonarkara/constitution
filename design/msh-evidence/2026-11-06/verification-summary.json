@@ -1,0 +1,49 @@
+{
+  "recordedAt": "2026-11-06T10:20:07.419901+00:00",
+  "functionalTests": {
+    "passed": 272,
+    "failed": 0,
+    "unchangedRasterSuite": "not rerun"
+  },
+  "typecheck": "pass",
+  "build": "d60be1027e1a11bf",
+  "generatedFiles": "4 match",
+  "productionAudit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "layout": {
+    "routes": 43,
+    "cells": 215,
+    "result": "pass"
+  },
+  "hierarchy": {
+    "routes": 43,
+    "cells": 172,
+    "result": "pass"
+  },
+  "spatialComparison": {
+    "routes": 5,
+    "cells": 40,
+    "widths": [
+      359,
+      360,
+      361,
+      390,
+      480,
+      721,
+      1024,
+      1440
+    ],
+    "result": "pass",
+    "fullEstateFreshSweep": false
+  },
+  "capturedHeaderStates": 24,
+  "independentPracticeViewports": 3,
+  "independentVerdict": "PASS, repaired scope",
+  "headersFalsifiedByOriginalReceipts": true
+}

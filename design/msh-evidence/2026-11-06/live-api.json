@@ -1,0 +1,56 @@
+{
+  "verifiedAt": "2026-11-06T10:16:17.717576+00:00",
+  "checks": [
+    {
+      "method": "GET",
+      "status": 200,
+      "bytes": 92719,
+      "cacheControl": "public, max-age=300",
+      "keys": [
+        "generatedAt",
+        "headlines",
+        "sources"
+      ],
+      "headlineCount": 200,
+      "sources": [
+        {
+          "id": "matichon",
+          "name": "Matichon",
+          "url": "https://www.matichon.co.th/politics/feed",
+          "checkedAt": "2026-11-06T06:00:11.660Z",
+          "lastSuccess": "2026-11-06T06:00:11.660Z",
+          "status": "ok",
+          "count": 16
+        },
+        {
+          "id": "matichon-constitution",
+          "name": "Matichon · Constitution",
+          "url": "https://www.matichon.co.th/tag/%E0%B8%A3%E0%B8%B1%E0%B8%90%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%99%E0%B8%B9%E0%B8%8D/feed",
+          "checkedAt": "2026-11-06T06:00:11.660Z",
+          "lastSuccess": "2026-11-06T06:00:11.660Z",
+          "status": "ok",
+          "count": 4
+        },
+        {
+          "id": "theactive",
+          "name": "The Active · Thai PBS",
+          "url": "https://theactive.thaipbs.or.th/feed",
+          "checkedAt": "2026-11-06T06:00:11.660Z",
+          "lastSuccess": "2026-11-06T06:00:11.660Z",
+          "status": "ok",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "method": "HEAD",
+      "status": 200,
+      "bytes": 0,
+      "cacheControl": "public, max-age=300"
+    },
+    {
+      "method": "POST",
+      "status": 405
+    }
+  ]
+}
