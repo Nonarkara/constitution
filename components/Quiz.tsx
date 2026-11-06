@@ -72,13 +72,21 @@ export function Quiz({
   useEffect(() => {
     document.querySelector<HTMLElement>("#quiz-heading")?.focus();
   }, [index, read, puzzleAt]);
+  const exitControl = (
+    <button className="text-button quiz-exit" onClick={onExit}>
+      ← {tr(lang, "ออกจากรอบฝึก", "Leave practice", "退出练习")}
+    </button>
+  );
   if (puzzle)
     return (
+      <div className="quiz-session">
+      {exitControl}
       <Puzzle
         key={puzzle.id}
         item={puzzle}
         onDone={() => setPuzzleAt((n) => n + 1)}
       />
+      </div>
     );
   if (!q)
     return (
@@ -110,7 +118,8 @@ export function Quiz({
   );
   if (!read)
     return (
-      <section>
+      <section className="quiz-session">
+        {exitControl}
         <span className="mono">
           {tr(lang, "อ่านได้ ถ้าต้องการ", "Read, if you want", "想读就可以读")}
           {" · "}
@@ -165,7 +174,7 @@ export function Quiz({
       </section>
     );
   if (side && !sideDone && !checked && index === Math.min(2, Math.max(firstTotal - 1, 0)))
-    return <SideQuestionCard key={side.id} q={side} onDone={() => setSideDone(true)} />;
+    return <div className="quiz-session">{exitControl}<SideQuestionCard key={side.id} q={side} onDone={() => setSideDone(true)} /></div>;
   const openLaw = sections.filter((s) => q.sections.includes(s.number));
   const check = () => {
     if (choice === null || checked) return;
@@ -214,10 +223,9 @@ export function Quiz({
             `Recall ${String(counter.n).padStart(2, "0")} / ${String(counter.total).padStart(2, "0")}`,
             `回忆 ${String(counter.n).padStart(2, "0")} / ${String(counter.total).padStart(2, "0")}`,
           )}
+          <span className="micro"> · {tr(lang, "ไม่จับเวลา", "No timer", "不限时")}</span>
         </span>
-        <span className="micro">
-          {tr(lang, "ไม่จับเวลา", "No timer", "不限时")}
-        </span>
+        {exitControl}
       </div>
       <progress
         value={Math.max(counter.n - 1, 0)}
@@ -271,7 +279,7 @@ export function Quiz({
       {!checked && <ConfidenceCheck value={confidence} onChange={setConfidence}/>}
       </>}
       {!checked ? (
-        <button className="primary" disabled={choice === null || (recallMode && !optionsVisible)} onClick={check}>
+        (!recallMode || optionsVisible) && <button className="primary" disabled={choice === null} onClick={check}>
           {tr(lang, "ตรวจคำตอบ", "Check answer", "检查答案")} →
         </button>
       ) : (

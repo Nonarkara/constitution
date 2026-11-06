@@ -21,7 +21,7 @@ export function useTheme() {
     read();
     const watch = new MutationObserver(read);
     watch.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
-    const sync = (e: StorageEvent) => e.key === THEME_KEY && window.__applyTheme?.();
+    const sync = (e: StorageEvent) => (e.key === null || e.key === THEME_KEY) && window.__applyTheme?.();
     window.addEventListener("storage", sync);
     return () => {
       watch.disconnect();

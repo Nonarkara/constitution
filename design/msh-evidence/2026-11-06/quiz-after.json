@@ -1,0 +1,137 @@
+[
+  {
+    "answerAction": {
+      "bottom": 584.671875,
+      "height": 44,
+      "left": 18,
+      "right": 216.6875,
+      "top": 540.671875,
+      "width": 198.6875,
+      "x": 18,
+      "y": 540.671875
+    },
+    "exit": {
+      "bottom": 91.5,
+      "height": 44,
+      "left": 254.6875,
+      "right": 372,
+      "top": 47.5,
+      "width": 117.3125,
+      "x": 254.6875,
+      "y": 47.5
+    },
+    "header": {
+      "bottom": -69.5,
+      "height": 53,
+      "left": 0,
+      "right": 390,
+      "top": -122.5,
+      "width": 390,
+      "x": 0,
+      "y": -122.5
+    },
+    "height": 844,
+    "overflow": 0,
+    "question": {
+      "bottom": 254.9921875,
+      "height": 64.796875,
+      "left": 18,
+      "right": 372,
+      "top": 190.1953125,
+      "width": 354,
+      "x": 18,
+      "y": 190.1953125
+    },
+    "width": 390
+  },
+  {
+    "answerAction": {
+      "bottom": 673.7734375,
+      "height": 44,
+      "left": 244,
+      "right": 442.6875,
+      "top": 629.7734375,
+      "width": 198.6875,
+      "x": 244,
+      "y": 629.7734375
+    },
+    "exit": {
+      "bottom": 213,
+      "height": 44,
+      "left": 874.6875,
+      "right": 992,
+      "top": 169,
+      "width": 117.3125,
+      "x": 874.6875,
+      "y": 169
+    },
+    "header": {
+      "bottom": 36,
+      "height": 53,
+      "left": 0,
+      "right": 1024,
+      "top": -17,
+      "width": 1024,
+      "x": 0,
+      "y": -17
+    },
+    "height": 900,
+    "overflow": 0,
+    "question": {
+      "bottom": 344.09375,
+      "height": 32.3984375,
+      "left": 244,
+      "right": 992,
+      "top": 311.6953125,
+      "width": 748,
+      "x": 244,
+      "y": 311.6953125
+    },
+    "width": 1024
+  },
+  {
+    "answerAction": {
+      "bottom": 673.7734375,
+      "height": 44,
+      "left": 336,
+      "right": 534.6875,
+      "top": 629.7734375,
+      "width": 198.6875,
+      "x": 336,
+      "y": 629.7734375
+    },
+    "exit": {
+      "bottom": 213,
+      "height": 44,
+      "left": 1210.6875,
+      "right": 1328,
+      "top": 169,
+      "width": 117.3125,
+      "x": 1210.6875,
+      "y": 169
+    },
+    "header": {
+      "bottom": 36,
+      "height": 53,
+      "left": 0,
+      "right": 1440,
+      "top": -17,
+      "width": 1440,
+      "x": 0,
+      "y": -17
+    },
+    "height": 900,
+    "overflow": 0,
+    "question": {
+      "bottom": 344.09375,
+      "height": 32.3984375,
+      "left": 336,
+      "right": 1328,
+      "top": 311.6953125,
+      "width": 992,
+      "x": 336,
+      "y": 311.6953125
+    },
+    "width": 1440
+  }
+]

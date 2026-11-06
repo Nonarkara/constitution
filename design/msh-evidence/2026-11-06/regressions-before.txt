@@ -1,0 +1,178 @@
+✔ version4 backup round-trips political reflection with study notes and progress (2.659792ms)
+✔ reading history travels in version4 and older files keep the device's own (0.198042ms)
+✔ old backup imports distinguish missing reflection from an explicit empty one (0.158875ms)
+✔ invalid reflection or missing version3 fields rejects the whole import before replacement (0.207334ms)
+✔ version4 imports reject invalid reading timestamps rather than erase history (0.129334ms)
+✖ highlight import rejects malformed entries rather than replacing them with an empty list (0.845083ms)
+✖ highlight import rejects dates that would crash the notebook date formatter (0.302292ms)
+✖ another tab erasing progress does not leave erased XP available for the next save (13.535416ms)
+✖ another tab erasing bookmarks removes them from the mounted provider (3.057083ms)
+✖ a storage clear event clears all four learner stores in the mounted provider (1.657791ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 5
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 777.198625
+
+✖ failing tests:
+
+test at tests/backup.test.ts:113:1
+✖ highlight import rejects malformed entries rather than replacing them with an empty list (0.845083ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + {
+  +   annotations: {},
+  +   blind: null,
+  +   marks: {
+  +     bookmarks: [],
+  +     marks: []
+  +   },
+  +   pokklong: {
+  +     answers: {}
+  +   },
+  +   progress: {
+  +     energy: 12,
+  +     energyDay: null,
+  +     lastStudyDay: null,
+  +     questions: {},
+  +     streak: 0,
+  +     xp: 0
+  +   },
+  +   read: {},
+  +   reflection: null
+  + }
+  - null
+  
+      at TestContext.<anonymous> (file:///Users/nonarkara/Projects/constitution/tests/backup.test.ts:119:13)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { progress: { questions: {}, xp: 0, streak: 0, lastStudyDay: null, energy: 12, energyDay: null }, marks: { marks: [], bookmarks: [] }, annotations: {}, reflection: null, read: {}, pokklong: { answers: {} }, blind: null },
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/backup.test.ts:122:1
+✖ highlight import rejects dates that would crash the notebook date formatter (0.302292ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + {
+  +   annotations: {},
+  +   blind: null,
+  +   marks: {
+  +     bookmarks: [],
+  +     marks: [
+  +       {
+  +         createdAt: 1e+100,
+  +         end: 1,
+  +         id: 'm',
+  +         lang: 'th',
+  +         note: undefined,
+  +         quote: 'x',
+  +         section: 1,
+  +         start: 0
+  +       }
+  +     ]
+  +   },
+  +   pokklong: {
+  +     answers: {}
+  +   },
+  +   progress: {
+  +     energy: 12,
+  +     energyDay: null,
+  +     lastStudyDay: null,
+  +     questions: {},
+  +     streak: 0,
+  +     xp: 0
+  +   },
+  +   read: {},
+  +   reflection: null
+  + }
+  - null
+  
+      at TestContext.<anonymous> (file:///Users/nonarkara/Projects/constitution/tests/backup.test.ts:126:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { progress: { questions: {}, xp: 0, streak: 0, lastStudyDay: null, energy: 12, energyDay: null }, marks: { marks: [Array], bookmarks: [] }, annotations: {}, reflection: null, read: {}, pokklong: { answers: {} }, blind: null },
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/provider-sync.test.ts:46:1
+✖ another tab erasing progress does not leave erased XP available for the next save (13.535416ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  30 !== 0
+  
+      at file:///Users/nonarkara/Projects/constitution/tests/provider-sync.test.ts:49:10
+      at async run (file:///Users/nonarkara/Projects/constitution/tests/provider-sync.test.ts:39:126)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 30,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/provider-sync.test.ts:54:1
+✖ another tab erasing bookmarks removes them from the mounted provider (3.057083ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+  +   bookmarks: [
+  +     1
+  +   ],
+  -   bookmarks: [],
+      marks: []
+    }
+  
+      at file:///Users/nonarkara/Projects/constitution/tests/provider-sync.test.ts:57:10
+      at async run (file:///Users/nonarkara/Projects/constitution/tests/provider-sync.test.ts:39:126)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { marks: [], bookmarks: [ 1 ] },
+    expected: { marks: [], bookmarks: [] },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/provider-sync.test.ts:59:1
+✖ a storage clear event clears all four learner stores in the mounted provider (1.657791ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  30 !== 0
+  
+      at file:///Users/nonarkara/Projects/constitution/tests/provider-sync.test.ts:61:10
+      at async run (file:///Users/nonarkara/Projects/constitution/tests/provider-sync.test.ts:39:126)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 30,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -33,3 +33,13 @@ test("notes, removal, bookmarks and stored data are validated", () => {
   assert.deepEqual(parsed?.bookmarks, [33]);
   assert.equal(parseMarks({}), null);
 });
+
+test('local highlight recovery keeps the note while replacing an unusable date safely', () => {
+  const raw = { id: 'old-note', section: 1, lang: 'th', start: 0, end: 1, quote: 'x', note: 'Keep my words', createdAt: 1e100 };
+  const recovered = parseMarks({ marks: [raw, { nonsense: true }], bookmarks: [1, 280] });
+  assert.equal(recovered?.marks.length, 1);
+  assert.equal(recovered?.marks[0].note, 'Keep my words');
+  assert.equal(recovered?.marks[0].createdAt, 0);
+  assert.doesNotThrow(() => new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium' }).format(new Date(recovered!.marks[0].createdAt)));
+  assert.deepEqual(recovered?.bookmarks, [1]);
+});

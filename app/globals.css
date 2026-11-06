@@ -5049,12 +5049,19 @@ footer {
 .home-anchor .feature-chip + .feature-chip::before { content:" · "; }
 
 .brand-short { display:none; }
+.display-short { display:none; }
 .header-settings,.languages button,.reading-menu > summary { min-width:44px; justify-content:center; }
 @media (max-width:480px) {
   .header .brand { gap:6px; min-width:44px; }
   .header .brand > span:last-child { overflow:visible; text-overflow:clip; }
   .brand-title { display:none; }
   .brand-short { display:inline; }
+  html[data-large="true"] .header { gap:0; }
+  html[data-large="true"] .header-controls { gap:0; }
+  html[data-large="true"] .header .brand > span:last-child { display:none; }
+  html[data-large="true"] .reading-menu > summary { padding-inline:4px; }
+  html[data-large="true"] .display-label { display:none; }
+  html[data-large="true"] .display-short { display:inline; }
 }
 @media (max-width:360px) {
   .header .brand > span:last-child { display:none; }
@@ -5090,3 +5097,6 @@ main h2 > a,main h3 > a,.crumbs a,.page-back a,.page-next a,.civic-law-list a,fo
 .notebook-tools select,.notebook-tools .jump-input { min-height:44px; }
 .page-actions-row a,.annotation-banner a { display:inline-flex; align-items:center; min-width:44px; min-height:44px; }
 .margin-note-box textarea:focus-visible { outline:3px solid var(--focus); outline-offset:2px; }
+
+.quiz-exit { display:inline-flex; align-items:center; min-width:44px; min-height:44px; font-size:var(--micro); }
+.quiz-session > .quiz-exit { margin-bottom:8px; }

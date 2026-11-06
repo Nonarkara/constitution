@@ -1,0 +1,29 @@
+✖ practice can be left before an answer without recording a result (55.168292ms)
+✔ leaving after checking keeps exactly the answer already recorded (17.020583ms)
+✔ the exit stays available through the story and reading prelude (2.881416ms)
+✔ the exit stays available on the in-session side question (7.851458ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 614.882625
+
+✖ failing tests:
+
+test at tests/quiz-exit.test.ts:46:1
+✖ practice can be left before an answer without recording a result (55.168292ms)
+  AssertionError [ERR_ASSERTION]: checking is not offered before options exist
+      at file:///Users/nonarkara/Projects/constitution/tests/quiz-exit.test.ts:47:9
+      at run (file:///Users/nonarkara/Projects/constitution/tests/quiz-exit.test.ts:42:135)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

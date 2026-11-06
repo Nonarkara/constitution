@@ -128,7 +128,10 @@ export function Shell({ children }: { children: React.ReactNode }) {
           event.currentTarget.open = false;
           event.currentTarget.querySelector("summary")?.focus();
         }}>
-          <summary>{tr(lang, "หน้าจอ", "Display", "显示")}</summary>
+          <summary>
+            <span className="display-label">{tr(lang, "หน้าจอ", "Display", "显示")}</span>
+            <span className="display-short">{tr(lang, "จอ", "View", "显示")}</span>
+          </summary>
         <div className="themes" role="group" aria-label={tr(lang, "ขนาดตัวอักษรและสีหน้าจอ", "Text size and screen colours", "字号与屏幕配色")}>
           {/* Each swatch is the theme itself: its paper, its ink. */}
           <button

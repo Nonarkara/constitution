@@ -1,0 +1,132 @@
+{
+  "build": "f053df5294502427",
+  "note": "Exact CSS widths; explicit scroll-to-top after native focus scroll. Chrome hostzoom80%; screenshot transport pixels differ from CSS.",
+  "records": [
+    {
+      "checkBeforeOptions": false,
+      "exit": {
+        "bottom": 213.212890625,
+        "height": 43.994140625,
+        "right": 372.001953125,
+        "width": 117.314453125,
+        "x": 254.6875,
+        "y": 169.21875
+      },
+      "header": {
+        "bottom": 52.607421875,
+        "height": 52.607421875,
+        "right": 390,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "height": 844,
+      "overflow": 0,
+      "primaries": [
+        "ดูตัวเลือกและตรวจความคิด →"
+      ],
+      "question": {
+        "bottom": 376.181640625,
+        "height": 64.78515625,
+        "right": 372.001953125,
+        "width": 354.00390625,
+        "x": 17.998046875,
+        "y": 311.396484375
+      },
+      "reveal": {
+        "bottom": 704.6484375,
+        "height": 43.994140625,
+        "right": 215.927734375,
+        "width": 197.9296875,
+        "x": 17.998046875,
+        "y": 660.654296875
+      },
+      "scrollY": 0,
+      "width": 390
+    },
+    {
+      "checkBeforeOptions": false,
+      "exit": {
+        "bottom": 229.208984375,
+        "height": 43.994140625,
+        "right": 991.7578125,
+        "width": 117.314453125,
+        "x": 874.443359375,
+        "y": 185.21484375
+      },
+      "header": {
+        "bottom": 52.607421875,
+        "height": 52.607421875,
+        "right": 1023.75,
+        "width": 1023.75,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "overflow": 0,
+      "primaries": [
+        "ดูตัวเลือกและตรวจความคิด →"
+      ],
+      "question": {
+        "bottom": 359.78515625,
+        "height": 32.392578125,
+        "right": 991.7578125,
+        "width": 747.7734375,
+        "x": 243.984375,
+        "y": 327.392578125
+      },
+      "reveal": {
+        "bottom": 688.251953125,
+        "height": 43.994140625,
+        "right": 441.9140625,
+        "width": 197.9296875,
+        "x": 243.984375,
+        "y": 644.2578125
+      },
+      "scrollY": 0,
+      "width": 1024
+    },
+    {
+      "checkBeforeOptions": false,
+      "exit": {
+        "bottom": 229.208984375,
+        "height": 43.994140625,
+        "right": 1328.0078125,
+        "width": 117.314453125,
+        "x": 1210.693359375,
+        "y": 185.21484375
+      },
+      "header": {
+        "bottom": 52.607421875,
+        "height": 52.607421875,
+        "right": 1440,
+        "width": 1440,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "overflow": 0,
+      "primaries": [
+        "ดูตัวเลือกและตรวจความคิด →"
+      ],
+      "question": {
+        "bottom": 359.78515625,
+        "height": 32.392578125,
+        "right": 1328.0078125,
+        "width": 992.021484375,
+        "x": 335.986328125,
+        "y": 327.392578125
+      },
+      "reveal": {
+        "bottom": 688.251953125,
+        "height": 43.994140625,
+        "right": 533.916015625,
+        "width": 197.9296875,
+        "x": 335.986328125,
+        "y": 644.2578125
+      },
+      "scrollY": 0,
+      "width": 1440
+    }
+  ]
+}

@@ -17,37 +17,50 @@ export const emptyMarks = (): Marks => ({ marks: [], bookmarks: [] });
 const LANGS = new Set(["th", "en", "zh"]);
 const MAX_NOTE = 5000;
 
-/** Validate stored or imported marks; bad entries are dropped, not fatal. */
-export function parseMarks(input: unknown): Marks | null {
+/** Local recovery keeps valid entries; imports reject malformed data before replacement. */
+export function parseMarks(input: unknown, { strict = false }: { strict?: boolean } = {}): Marks | null {
   if (!input || typeof input !== "object" || Array.isArray(input)) return null;
   const raw = input as Record<string, unknown>;
   if (!Array.isArray(raw.marks) || !Array.isArray(raw.bookmarks)) return null;
   const section = (n: unknown): n is number =>
     Number.isInteger(n) && (n as number) >= 1 && (n as number) <= 279;
   const marks: Mark[] = [];
+  const validTime = (value: unknown): value is number =>
+    typeof value === "number" && Number.isSafeInteger(value) && value >= 0 && value <= 8.64e15;
+  if (strict && (raw.bookmarks as unknown[]).some((n) => !section(n))) return null;
   for (const m of raw.marks as Record<string, unknown>[]) {
     if (
       !m ||
       typeof m.id !== "string" ||
       !section(m.section) ||
       !LANGS.has(m.lang as string) ||
-      !Number.isInteger(m.start) ||
-      !Number.isInteger(m.end) ||
+      !Number.isSafeInteger(m.start) ||
+      !Number.isSafeInteger(m.end) ||
       (m.start as number) < 0 ||
       (m.end as number) <= (m.start as number) ||
       typeof m.quote !== "string" ||
       !m.quote
-    )
+    ) {
+      if (strict) return null;
       continue;
+    }
+    if (strict && (
+      !m.id ||
+      (m.note !== undefined && typeof m.note !== "string") ||
+      (m.createdAt !== undefined && !validTime(m.createdAt)) ||
+      marks.some((saved) => saved.id === m.id)
+    )) return null;
     marks.push({
       id: m.id,
       section: m.section,
       lang: m.lang as Lang,
       start: m.start as number,
       end: m.end as number,
-      quote: m.quote.slice(0, 4000),
-      note: typeof m.note === "string" && m.note.trim() ? m.note.slice(0, MAX_NOTE) : undefined,
-      createdAt: Number.isFinite(m.createdAt) ? (m.createdAt as number) : 0,
+      // Selections can span a complete long section, and merged notes can
+      // exceed the per-edit limit. Loading/importing must not cut either.
+      quote: m.quote,
+      note: typeof m.note === "string" && m.note.trim() ? m.note : undefined,
+      createdAt: validTime(m.createdAt) ? m.createdAt : 0,
     });
   }
   return { marks, bookmarks: [...new Set((raw.bookmarks as unknown[]).filter(section))].sort((a, b) => a - b) };

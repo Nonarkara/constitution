@@ -1,8 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { createBackup, parseBackup } from "../lib/backup.ts";
 import { defaultProgress } from "../lib/learning.ts";
-import { emptyMarks } from "../lib/marks.ts";
+import { addMark, emptyMarks, parseMarks } from "../lib/marks.ts";
 const ids = new Set<string>();
 const reflection = {
   version: 1,
@@ -108,4 +109,37 @@ test("version4 imports reject invalid reading timestamps rather than erase histo
   ])
     assert.equal(parseBackup({ ...backup, read }, ids), null);
   assert.deepEqual(parseBackup(backup, ids)?.read, { 1: 1720000000000 });
+});
+
+test('highlight import rejects malformed entries rather than replacing them with an empty list', () => {
+  const backup = createBackup(defaultProgress(), emptyMarks(), {}, null, {});
+  for (const marks of [
+    { marks: [{ nonsense: true }], bookmarks: [] },
+    { marks: [], bookmarks: [1, 280] },
+    { marks: [{ id: 'm', section: 1, lang: 'th', start: 0, end: 1, quote: 'x', note: 4, createdAt: 1 }], bookmarks: [] },
+  ]) assert.equal(parseBackup({ ...backup, marks }, ids), null);
+});
+
+test('highlight import rejects dates that would crash the notebook date formatter', () => {
+  const backup = createBackup(defaultProgress(), emptyMarks(), {}, null, {});
+  for (const createdAt of [1e100, -1, 1.5, Infinity, 'yesterday']) {
+    const marks = { marks: [{ id: 'm', section: 1, lang: 'th', start: 0, end: 1, quote: 'x', createdAt }], bookmarks: [] };
+    assert.equal(parseBackup({ ...backup, marks }, ids), null);
+  }
+});
+
+
+test('complete legal-section highlights and merged notes round-trip without truncation', () => {
+  const corpus = JSON.parse(readFileSync(new URL('../data/constitution.json', import.meta.url), 'utf8')) as {sections:{number:number;th:string}[]};
+  const text = corpus.sections.find(s=>s.number===258)!.th;
+  assert.ok(text.length > 4000, 'exercise a real long section');
+  let marks = addMark(emptyMarks(), text, {id:'full-section',section:258,lang:'th',start:0,end:text.length,note:'a'.repeat(5000),createdAt:100});
+  marks = addMark(marks, text, {id:'merged-note',section:258,lang:'th',start:1,end:3,note:'b'.repeat(5000),createdAt:101});
+  assert.ok(marks.marks[0].note!.length > 5000);
+  const loaded = parseMarks(JSON.parse(JSON.stringify(marks)));
+  const restored = parseBackup(JSON.parse(JSON.stringify(createBackup(defaultProgress(), marks, {}, null, {}))), ids);
+  assert.equal(loaded?.marks[0].quote, text);
+  assert.equal(restored?.marks?.marks[0].quote, text);
+  assert.equal(loaded?.marks[0].note, marks.marks[0].note);
+  assert.equal(restored?.marks?.marks[0].note, marks.marks[0].note);
 });

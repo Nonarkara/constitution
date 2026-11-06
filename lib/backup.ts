@@ -24,7 +24,8 @@ export function parseBackup(
   if (![1, 2, 3, 4, 5].includes(value.version as number)) return null;
   const progress = parseProgress(value.progress, allowedIds);
   if (!progress) return null;
-  const marks = value.version !== 1 ? parseMarks(value.marks) : null;
+  const marks = value.version !== 1 ? parseMarks(value.marks, { strict: true }) : null;
+  if (value.version !== 1 && !marks) return null;
   const annotations =
     value.version !== 1 ? parseAnnotations(value.annotations) : null;
   let reflection: Reflection | null | undefined = undefined;

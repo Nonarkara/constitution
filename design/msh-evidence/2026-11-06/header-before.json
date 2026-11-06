@@ -1,0 +1,465 @@
+[
+  {
+    "headerHeight": 53,
+    "lang": "th",
+    "large": "true",
+    "overflow": 3,
+    "targets": [
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "รัฐธรรมนูญ",
+        "left": 12,
+        "right": 56,
+        "top": 4,
+        "width": 44,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "หน้าจอ",
+        "left": 64,
+        "right": 135.6328125,
+        "top": 4,
+        "width": 71.6328125,
+        "x": 64,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "ตั้งค่า",
+        "left": 139.6328125,
+        "right": 183.6328125,
+        "top": 4,
+        "width": 44,
+        "x": 139.6328125,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "ไทย",
+        "left": 187.6328125,
+        "right": 231.6328125,
+        "top": 4,
+        "width": 44,
+        "x": 187.6328125,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "EN",
+        "left": 231.6328125,
+        "right": 275.6328125,
+        "top": 4,
+        "width": 44,
+        "x": 231.6328125,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "中文",
+        "left": 275.6328125,
+        "right": 323.6328125,
+        "top": 4,
+        "width": 48,
+        "x": 275.6328125,
+        "y": 4
+      }
+    ],
+    "width": 320
+  },
+  {
+    "headerHeight": 53,
+    "lang": "th",
+    "large": "true",
+    "overflow": 0,
+    "targets": [
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "รัฐธรรมนูญ",
+        "left": 12,
+        "right": 110.3671875,
+        "top": 4,
+        "width": 98.3671875,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "หน้าจอ",
+        "left": 118.3671875,
+        "right": 190,
+        "top": 4,
+        "width": 71.6328125,
+        "x": 118.3671875,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "ตั้งค่า",
+        "left": 194,
+        "right": 238,
+        "top": 4,
+        "width": 44,
+        "x": 194,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "ไทย",
+        "left": 242,
+        "right": 286,
+        "top": 4,
+        "width": 44,
+        "x": 242,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "EN",
+        "left": 286,
+        "right": 330,
+        "top": 4,
+        "width": 44,
+        "x": 286,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "中文",
+        "left": 330,
+        "right": 378,
+        "top": 4,
+        "width": 48,
+        "x": 330,
+        "y": 4
+      }
+    ],
+    "width": 390
+  },
+  {
+    "headerHeight": 53,
+    "lang": "en",
+    "large": "true",
+    "overflow": 28,
+    "targets": [
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "The Constitution",
+        "left": 12,
+        "right": 56,
+        "top": 4,
+        "width": 44,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "Display",
+        "left": 64,
+        "right": 142.828125,
+        "top": 4,
+        "width": 78.828125,
+        "x": 64,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "Settings",
+        "left": 146.828125,
+        "right": 207.9375,
+        "top": 4,
+        "width": 61.109375,
+        "x": 146.828125,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "ไทย",
+        "left": 211.9375,
+        "right": 255.9375,
+        "top": 4,
+        "width": 44,
+        "x": 211.9375,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "EN",
+        "left": 255.9375,
+        "right": 299.9375,
+        "top": 4,
+        "width": 44,
+        "x": 255.9375,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "中文",
+        "left": 299.9375,
+        "right": 347.9375,
+        "top": 4,
+        "width": 48,
+        "x": 299.9375,
+        "y": 4
+      }
+    ],
+    "width": 320
+  },
+  {
+    "headerHeight": 53,
+    "lang": "en",
+    "large": "true",
+    "overflow": 0,
+    "targets": [
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "The Constitution",
+        "left": 12,
+        "right": 86.0625,
+        "top": 4,
+        "width": 74.0625,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "Display",
+        "left": 94.0625,
+        "right": 172.890625,
+        "top": 4,
+        "width": 78.828125,
+        "x": 94.0625,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "Settings",
+        "left": 176.890625,
+        "right": 238,
+        "top": 4,
+        "width": 61.109375,
+        "x": 176.890625,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "ไทย",
+        "left": 242,
+        "right": 286,
+        "top": 4,
+        "width": 44,
+        "x": 242,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "EN",
+        "left": 286,
+        "right": 330,
+        "top": 4,
+        "width": 44,
+        "x": 286,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "中文",
+        "left": 330,
+        "right": 378,
+        "top": 4,
+        "width": 48,
+        "x": 330,
+        "y": 4
+      }
+    ],
+    "width": 390,
+    "paint": [
+      {
+        "label": "Constitution",
+        "bottom": 39.1953125,
+        "height": 26.3984375,
+        "left": 58.7265625,
+        "right": 149.8828125,
+        "top": 12.796875,
+        "width": 91.15625,
+        "x": 58.7265625,
+        "y": 12.796875
+      }
+    ]
+  },
+  {
+    "headerHeight": 53,
+    "lang": "zh",
+    "large": "true",
+    "overflow": 0,
+    "targets": [
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "泰国宪法",
+        "left": 12,
+        "right": 56,
+        "top": 4,
+        "width": 44,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "显示",
+        "left": 64,
+        "right": 122.21875,
+        "top": 4,
+        "width": 58.21875,
+        "x": 64,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "设置",
+        "left": 126.21875,
+        "right": 170.21875,
+        "top": 4,
+        "width": 44,
+        "x": 126.21875,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "ไทย",
+        "left": 174.21875,
+        "right": 218.21875,
+        "top": 4,
+        "width": 44,
+        "x": 174.21875,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "EN",
+        "left": 218.21875,
+        "right": 262.21875,
+        "top": 4,
+        "width": 44,
+        "x": 218.21875,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "中文",
+        "left": 262.21875,
+        "right": 310.21875,
+        "top": 4,
+        "width": 48,
+        "x": 262.21875,
+        "y": 4
+      }
+    ],
+    "width": 320
+  },
+  {
+    "headerHeight": 53,
+    "lang": "zh",
+    "large": "true",
+    "overflow": 0,
+    "targets": [
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "泰国宪法",
+        "left": 12,
+        "right": 123.78125,
+        "top": 4,
+        "width": 111.78125,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "显示",
+        "left": 131.78125,
+        "right": 190,
+        "top": 4,
+        "width": 58.21875,
+        "x": 131.78125,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "设置",
+        "left": 194,
+        "right": 238,
+        "top": 4,
+        "width": 44,
+        "x": 194,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "ไทย",
+        "left": 242,
+        "right": 286,
+        "top": 4,
+        "width": 44,
+        "x": 242,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "EN",
+        "left": 286,
+        "right": 330,
+        "top": 4,
+        "width": 44,
+        "x": 286,
+        "y": 4
+      },
+      {
+        "bottom": 48,
+        "height": 44,
+        "label": "中文",
+        "left": 330,
+        "right": 378,
+        "top": 4,
+        "width": 48,
+        "x": 330,
+        "y": 4
+      }
+    ],
+    "width": 390
+  }
+]

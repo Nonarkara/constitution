@@ -140,14 +140,26 @@ export function Provider({ children }: { children: ReactNode }) {
   // Another tab saved: adopt its state instead of overwriting it on our next save.
   useEffect(() => {
     const sync = (e: StorageEvent) => {
-      if (e.key === "constitution-progress" && e.newValue) {
+      if (e.storageArea && e.storageArea !== localStorage) return;
+      if (e.key === null) {
+        setP(defaultProgress());
+        setM(emptyMarks());
+        setA(defaultAnnotations());
+        setR({});
+        setL("th");
+        setBig(false);
+        return;
+      }
+      if (e.key === "constitution-progress") {
+        if (e.newValue === null) { setP(defaultProgress()); return; }
         try {
           const parsed = parseProgress(JSON.parse(e.newValue));
           if (parsed) setP(parsed);
         } catch {}
       }
       if (e.key === "constitution-annotations") setA(loadStoredAnnotations());
-      if (e.key === MARKS_KEY && e.newValue) {
+      if (e.key === MARKS_KEY) {
+        if (e.newValue === null) { setM(emptyMarks()); return; }
         try {
           const parsedMarks = parseMarks(JSON.parse(e.newValue));
           if (parsedMarks) setM(parsedMarks);
@@ -160,6 +172,7 @@ export function Provider({ children }: { children: ReactNode }) {
       }
       if (e.key === "constitution-lang" && (e.newValue === "th" || e.newValue === "en" || e.newValue === "zh"))
         setL(e.newValue);
+      if (e.key === "constitution-large") setBig(e.newValue === "true");
     };
     window.addEventListener("storage", sync);
     return () => window.removeEventListener("storage", sync);

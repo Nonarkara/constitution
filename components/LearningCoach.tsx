@@ -33,7 +33,7 @@ export function RecallFirst({ onReveal, draft, onDraftChange }: { onReveal: () =
         value={draft}
         onChange={(e) => onDraftChange(e.target.value)}
       />
-      <button onClick={onReveal}>
+      <button className="primary" onClick={onReveal}>
         {tr(
           lang,
           "ดูตัวเลือกและตรวจความคิด",

@@ -1,0 +1,5 @@
+th/true @320: page scrolls sideways
+th/true @320: control outside the viewport: 中文
+en/true @320: page scrolls sideways
+en/true @320: control outside the viewport: 中文
+en/true @390: identity text overlaps the display control

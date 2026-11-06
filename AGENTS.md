@@ -12,6 +12,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## Design quality: Non-Slop
 Before any UI, page, dashboard, deck or visual work, read `.non-slop/AGENTS.md` and follow it.
 `STYLE.md` lists this repo's deliberate choices: it wins over every generic rule, and nothing listed there is stripped.
+Owner canon (4 November 2026): before visual edits, read `/Users/nonarkara/Projects/_reference/MSH.md`, `GLANCE-PATH-FOR-AI.md` and `KINETIC-GRIDS-FOR-AI.md` in that directory. Name the grid and attention order; verify enlarged text as well as phone/tablet/desktop pixels. The owner-supplied canon, not a remembered summary, is the source.
 Check with `node .non-slop/bin/non-slop.mjs scan .` (and `render <url>` when Playwright is installed). A different agent or person reviews; never self-review.
 <!-- non-slop:end -->
 
