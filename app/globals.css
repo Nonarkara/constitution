@@ -4146,7 +4146,7 @@ footer { flex-wrap:wrap; gap:16px; }
 .palace-shelf ul { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
 .palace-shelf li { display:flex; gap:1rem; align-items:baseline; border-bottom:1px solid var(--line); padding-block:.5rem; }
 .palace-shelf-number { font-family:"JetBrains Mono","IBM Plex Sans Thai",monospace; font-weight:700; flex:0 0 9rem; overflow-wrap:anywhere; }
-@media(max-width:480px){ .palace-shelf li { flex-direction:column; gap:.25rem; } .palace-shelf-number { flex-basis:auto; } }
+@media(max-width:480px){ .palace-shelf li { gap:.75rem; } .palace-shelf-number { flex-basis:6rem; } }
 @media(max-width:1024px){ .palace-index { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:480px){ .palace-index button { padding:.75rem; } .palace-picture-small { width:72px; } .palace-room figure,.memory-cue figure { grid-template-columns:1fr; } .palace-room .palace-picture,.memory-cue .palace-picture { max-width:220px; } }
 
@@ -4192,8 +4192,9 @@ footer { flex-wrap:wrap; gap:16px; }
   gap: 8px;
   margin: 20px 0;
 }
+/* MSH: a group is its table plus a small gap, not a screen of margin. */
 .cram-group {
-  margin: 32px 0;
+  margin: 20px 0;
 }
 .cram-list > div {
   display: grid;
@@ -4201,7 +4202,7 @@ footer { flex-wrap:wrap; gap:16px; }
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 4px 16px;
   align-items: center;
-  padding: 10px 0;
+  padding: 6px 0;
   border-top: 1px solid var(--line);
 }
 .cram-list dd {
@@ -4232,6 +4233,7 @@ footer { flex-wrap:wrap; gap:16px; }
 @media (max-width: 480px) {
   .cram-list > div {
     grid-template-columns: 1fr;
+    gap: 2px;
   }
   .cram-list dd {
     text-align: left;

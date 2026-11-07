@@ -332,13 +332,13 @@ components/   the interactive surfaces
 lib/          corpus access, learning model, navigation
 data/         the constitution, the questions, the guide — all plain JSON
 scripts/      validators, build steps, and the release gate
-tests/        164 tests: corpus, questions, translations, cases, UI
+tests/        284 tests: corpus, questions, translations, cases, UI
 ```
 
 Two design rules that are enforced, not just intended:
 
-**Every number must be proved by the text.** A test walks all 41 cram-sheet
-entries and asserts each one quotes a phrase that actually appears in the Thai
+**Every number must be proved by the text.** A test walks every fact on the
+cram sheet and asserts each one quotes a phrase that actually appears in the Thai
 of the section it cites. If a deadline is wrong, the build stops.
 
 **Every claim keeps its source.** Figures and news carry a source and a
