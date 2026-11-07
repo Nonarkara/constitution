@@ -1,0 +1,29 @@
+{
+  "name": {
+    "th": "ภาพถนนกรุงเทพฯ",
+    "en": "The Bangkok streets",
+    "zh": "曼谷街景"
+  },
+  "citation": {
+    "th": "Location Scout (oyasumi-gamedev.com) — เรนเดอร์จากข้อมูล OpenStreetMap และข้อมูลความสูงของพื้นที่",
+    "en": "Location Scout (oyasumi-gamedev.com) — rendered from OpenStreetMap data and elevation tiles",
+    "zh": "Location Scout（oyasumi-gamedev.com）——依据 OpenStreetMap 数据与高程瓦片渲染"
+  },
+  "credit": {
+    "th": "ข้อมูลแผนที่ © ผู้มีส่วนร่วมใน OpenStreetMap (ODbL) · ระดับความสูง: Terrain Tiles · ภูมิทัศน์รอบ: OpenFreeMap © OpenMapTiles — เครดิตนี้ถูกปั๊มไว้ที่มุมขวาล่างของภาพทุกใบ",
+    "en": "Map data © OpenStreetMap contributors (ODbL) · Elevation: Terrain Tiles · Surroundings: OpenFreeMap © OpenMapTiles — this credit is printed into the bottom of every picture.",
+    "zh": "地图数据 © OpenStreetMap 贡献者（ODbL）· 高程：Terrain Tiles · 远景：OpenFreeMap © OpenMapTiles —— 此署名已印入每张图片的右下角。"
+  },
+  "terms": {
+    "th": "ภาพที่ได้จากเครื่องมือนี้ใช้ประกอบอยู่ในงานนี้ได้ ตามเงื่อนไขการใช้งานของเครื่องมือ ห้ามนำไปแจกจ่ายหรือขายไฟล์ที่ส่งออกโดยตรงหรือแก้ไขเพียงเล็กน้อย",
+    "en": "The tool's terms allow its pictures to be used inside a work; the exported file may not be distributed or sold on its own, or with only slight modification.",
+    "zh": "该工具的条款允许其图片用于作品之中；导出的文件不得单独分发或出售，也不得仅作轻微改动后分发。"
+  },
+  "scenes": [
+    { "id": "ratchadamnoen", "place": { "th": "ถนนราชดำเนิน", "en": "Ratchadamnoen Avenue", "zh": "拉差丹能路" } },
+    { "id": "wat-phra-kaew", "place": { "th": "วัดพระแก้ว", "en": "Wat Phra Kaew", "zh": "卧佛寺一带" } },
+    { "id": "yaowarat", "place": { "th": "เยาวราช", "en": "Yaowarat", "zh": "耀华力路" } },
+    { "id": "sukhumvit", "place": { "th": "สุขุมวิท 11", "en": "Sukhumvit Soi 11", "zh": "素坤逸11巷" } },
+    { "id": "democracy-aerial", "place": { "th": "อนุสาวรีย์ภูมิพลอดุลยาเดช มองจากอากาศ", "en": "The Democracy Monument from the air", "zh": "民主纪念碑（俯瞰）" } }
+  ]
+}

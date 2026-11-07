@@ -165,6 +165,41 @@ export function Sources() {
           </a>
         </p>
       </div>
+      <div className="source-card">
+        <span className="mono">06 / STREETS</span>
+        <h2>
+          {tr(
+            lang,
+            "ภาพถนนที่แท็กกี้ยืนอยู่",
+            "The streets Tikki stands in",
+            "提基站立的街景",
+          )}
+        </h2>
+        <p>
+          {tr(
+            lang,
+            "ภาพถนนในบ้านความจำวาดจากบล็อกเมืองจริงด้วยข้อมูล OpenStreetMap แล้ววาดเป็นเส้นและเนื้อระบายแบบมังงะ โดยแท็กกี้กับเป็ดยืนอยู่ในฉากนั้น",
+            "The streets in the memory house are drawn from real city blocks using OpenStreetMap data, as manga line art and screentone, with Tikki and her duck standing in the scene.",
+            "记忆屋中的街景由真实街区数据（OpenStreetMap）绘制为漫画线稿与网点，提基与她的鸭子站在画面中。",
+          )}
+        </p>
+        <p className="micro">
+          {tr(
+            lang,
+            "ข้อมูลแผนที่ © ผู้มีส่วนร่วมใน OpenStreetMap (ODbL) · ระดับความสูง: Terrain Tiles · ภูมิทัศน์รอบ: OpenFreeMap © OpenMapTiles",
+            "Map data © OpenStreetMap contributors (ODbL) · Elevation: Terrain Tiles · Surroundings: OpenFreeMap © OpenMapTiles",
+            "地图数据 © OpenStreetMap 贡献者（ODbL）· 高程：Terrain Tiles · 远景：OpenFreeMap © OpenMapTiles",
+          )}
+          <br />
+          <a
+            href="https://tools.oyasumi-gamedev.com/rokehan/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Location Scout · どこでもロケハン ↗
+          </a>
+        </p>
+      </div>
       <div className="note">
         <h2>
           {tr(lang, "ขอบเขตของชุดเรียน", "Scope of this edition", "本版范围")}

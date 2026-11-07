@@ -17,7 +17,7 @@ export const STUDY_ART = {
   listening: "/illustrations/listening-pastel.webp",
   review: "/illustrations/tikki-review-pastel.webp",
   along: "/illustrations/tikki-along-pastel.webp",
-  amend: "/illustrations/tikki-amend-pastel.webp",
+  amend: "/illustrations/scene-wat-phra-kaew.webp",
   bible: "/illustrations/tikki-bible-pastel.webp",
   // The guide index and a guide chapter are two different pages, so they get
   // two different drawings. One picture has to cue one place, or it cues
@@ -27,22 +27,22 @@ export const STUDY_ART = {
   cheatsheet: "/illustrations/tikki-cheatsheet-pastel.webp",
   cram: "/illustrations/tikki-cram-pastel.webp",
   drills: "/illustrations/tikki-drills-pastel.webp",
-  exam: "/illustrations/tikki-exam-pastel.webp",
+  exam: "/illustrations/scene-ratchadamnoen.webp",
   flashcards: "/illustrations/tikki-flashcards-pastel.webp",
   games: "/illustrations/tikki-games-pastel.webp",
   glossary: "/illustrations/tikki-glossary-pastel.webp",
   library: "/illustrations/tikki-library-pastel.webp",
-  news: "/illustrations/tikki-news-pastel.webp",
+  news: "/illustrations/scene-sukhumvit.webp",
   notes: "/illustrations/tikki-notes-pastel.webp",
   notebook: "/illustrations/tikki-notebook-pastel.webp",
   polls: "/illustrations/tikki-polls-pastel.webp",
   practice: "/illustrations/tikki-practice-pastel.webp",
-  read: "/illustrations/tikki-read-pastel.webp",
+  read: "/illustrations/scene-yaowarat.webp",
   rights: "/illustrations/tikki-rights-pastel.webp",
   section: "/illustrations/tikki-section-pastel.webp",
   settings: "/illustrations/tikki-settings-pastel.webp",
   sources: "/illustrations/tikki-sources-pastel.webp",
-  topics: "/illustrations/tikki-topics-pastel.webp",
+  topics: "/illustrations/scene-democracy-aerial.webp",
 } as const;
 
 export type StudyArtScene = keyof typeof STUDY_ART;

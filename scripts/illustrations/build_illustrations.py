@@ -242,8 +242,12 @@ def main(argv: list[str]) -> int:
 
     if args.map_only:
         manifest = json.loads(manifest_path.read_text())
-        write_ratio_map(manifest["plates"], out_map)
-        print(f"proportion map rewritten from {len(manifest['plates'])} plates")
+        manifest.setdefault("kept", [])
+        write_ratio_map(manifest["plates"] + manifest.get("kept", []), out_map)
+        print(
+            f"proportion map rewritten from {len(manifest['plates'])} plates "
+            f"and {len(manifest.get('kept', []))} scenes"
+        )
         return 0
 
     if not src.is_dir():
@@ -280,11 +284,13 @@ def main(argv: list[str]) -> int:
         return 1 if bad else 0
 
     plates, kept = [], []
+    street_names = street_scene_names(root)
     for f in files:
         im = Image.open(f)
         # A plate is a square-ish scene on paper. A panorama is a picture of a
-        # place and keeps its own ground.
-        if im.width > im.height * 1.8:
+        # place and keeps its own ground — and so is a street, which is a
+        # picture of a place with the house's own figure standing in it.
+        if im.width > im.height * 1.8 or f.name in street_names:
             kept.append(
                 {
                     "name": f.name,
@@ -348,6 +354,21 @@ def main(argv: list[str]) -> int:
     print(f"\n{len(plates)} plates rebuilt, {len(kept)} scenes kept with their own ground")
     return 0
 
+
+
+def street_scene_names(root: Path) -> set[str]:
+    """The names of the street scenes.
+
+    A street is a picture of a place with the house's own figure standing in
+    it. It keeps its own ground like a panorama does, so it is recorded as a
+    scene and not as a plate — but it is not WIDE, so the shape alone cannot
+    tell it apart. The street manifest names it.
+    """
+    manifest = root / "design" / "illustrations" / "street-manifest.json"
+    if not manifest.exists():
+        return set()
+    data = json.loads(manifest.read_text(encoding="utf-8"))
+    return {entry["name"] for entry in data.get("scenes", [])}
 
 def write_ratio_map(plates: list[dict], out_map: Path) -> None:
     """Write the proportions of every plate into the code that draws them.

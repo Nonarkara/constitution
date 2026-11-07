@@ -9,9 +9,19 @@
 export type PlateShape = { width: number; height: number; ratio: string };
 
 export const PLATE: Record<string, PlateShape> = {
+  "/illustrations/civic-palace-pastel.webp": { width: 2172, height: 726, ratio: "2172 / 726" },
   "/illustrations/core-lock-pastel.webp": { width: 680, height: 652, ratio: "680 / 652" },
   "/illustrations/listening-pastel.webp": { width: 680, height: 636, ratio: "680 / 636" },
+  "/illustrations/palace-1.webp": { width: 2172, height: 724, ratio: "2172 / 724" },
+  "/illustrations/palace-2.webp": { width: 2172, height: 724, ratio: "2172 / 724" },
+  "/illustrations/palace-3.webp": { width: 2172, height: 724, ratio: "2172 / 724" },
+  "/illustrations/palace-4.webp": { width: 2172, height: 724, ratio: "2172 / 724" },
   "/illustrations/reading-pastel.webp": { width: 680, height: 697, ratio: "680 / 697" },
+  "/illustrations/scene-democracy-aerial.webp": { width: 760, height: 841, ratio: "760 / 841" },
+  "/illustrations/scene-ratchadamnoen.webp": { width: 760, height: 841, ratio: "760 / 841" },
+  "/illustrations/scene-sukhumvit.webp": { width: 760, height: 841, ratio: "760 / 841" },
+  "/illustrations/scene-wat-phra-kaew.webp": { width: 760, height: 841, ratio: "760 / 841" },
+  "/illustrations/scene-yaowarat.webp": { width: 760, height: 841, ratio: "760 / 841" },
   "/illustrations/term-clock-pastel.webp": { width: 680, height: 651, ratio: "680 / 651" },
   "/illustrations/thinking-pastel.webp": { width: 665, height: 752, ratio: "665 / 752" },
   "/illustrations/tikki-along-pastel.webp": { width: 680, height: 717, ratio: "680 / 717" },

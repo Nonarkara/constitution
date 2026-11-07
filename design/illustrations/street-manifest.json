@@ -1,0 +1,91 @@
+{
+  "note": "The street scenes. Drawn from real city blocks by Location Scout (https://tools.oyasumi-gamedev.com/rokehan/), which builds a block of a city from OpenStreetMap and elevation data and draws it as a manga background in line art and screentone. The house's own figures are pasted into the streets, so the same girl appears in a different place on a different page.",
+  "credit": "Map data © OpenStreetMap contributors (ODbL) · Elevation: Terrain Tiles · Surroundings: OpenFreeMap © OpenMapTiles. The credit is also burned into the bottom of every served picture.",
+  "scenes": [
+    {
+      "name": "scene-ratchadamnoen.webp",
+      "served": "public/illustrations/scene-ratchadamnoen.webp",
+      "master": "design/illustrations/streets/raw-ratchadamnoen-street.png",
+      "figure": "public/illustrations/tikki-exam-pastel.webp",
+      "sha256": "04fe7f8b3d368681d39714ba75c13e9b2727165f547a68885aa550c203cbacca",
+      "bytes": 112804,
+      "output_size": [
+        760,
+        841
+      ],
+      "place": "Ratchadamnoen Avenue",
+      "note": "the civic avenue, seen at eye level",
+      "ground": "own — a picture of a place; the scene is its own background",
+      "credit": "© OpenStreetMap contributors · OpenFreeMap © OpenMapTiles · Elevation: Terrain Tiles",
+      "source": "Location Scout (oyasumi-gamedev.com) — line art and screentone from OpenStreetMap and elevation data"
+    },
+    {
+      "name": "scene-wat-phra-kaew.webp",
+      "served": "public/illustrations/scene-wat-phra-kaew.webp",
+      "master": "design/illustrations/streets/raw-wat-phra-kaew.png",
+      "figure": "public/illustrations/tikki-amend-pastel.webp",
+      "sha256": "ef8391100f5e59f6e513092a8d4758a6c80103603d4bc3a5bbfdfc48880337a9",
+      "bytes": 177760,
+      "output_size": [
+        760,
+        841
+      ],
+      "place": "Wat Phra Kaew",
+      "note": "the temple wall and the gate",
+      "ground": "own — a picture of a place; the scene is its own background",
+      "credit": "© OpenStreetMap contributors · OpenFreeMap © OpenMapTiles · Elevation: Terrain Tiles",
+      "source": "Location Scout (oyasumi-gamedev.com) — line art and screentone from OpenStreetMap and elevation data"
+    },
+    {
+      "name": "scene-yaowarat.webp",
+      "served": "public/illustrations/scene-yaowarat.webp",
+      "master": "design/illustrations/streets/raw-yaowarat.png",
+      "figure": "public/illustrations/tikki-read-pastel.webp",
+      "sha256": "7dbd283ecde87b62782af788dda0418a9fb5c45c2870f302738e14c71e850b75",
+      "bytes": 237478,
+      "output_size": [
+        760,
+        841
+      ],
+      "place": "Yaowarat",
+      "note": "the shophouse lane",
+      "ground": "own — a picture of a place; the scene is its own background",
+      "credit": "© OpenStreetMap contributors · OpenFreeMap © OpenMapTiles · Elevation: Terrain Tiles",
+      "source": "Location Scout (oyasumi-gamedev.com) — line art and screentone from OpenStreetMap and elevation data"
+    },
+    {
+      "name": "scene-sukhumvit.webp",
+      "served": "public/illustrations/scene-sukhumvit.webp",
+      "master": "design/illustrations/streets/raw-sukhumvit.png",
+      "figure": "public/illustrations/tikki-news-pastel.webp",
+      "sha256": "a9eaaae807f57d8ceaf9dd4ea4260fd64f3f2a276fc8dd0e20de590d334a2e41",
+      "bytes": 269542,
+      "output_size": [
+        760,
+        841
+      ],
+      "place": "Sukhumvit Soi 11",
+      "note": "the modern lane under the towers",
+      "ground": "own — a picture of a place; the scene is its own background",
+      "credit": "© OpenStreetMap contributors · OpenFreeMap © OpenMapTiles · Elevation: Terrain Tiles",
+      "source": "Location Scout (oyasumi-gamedev.com) — line art and screentone from OpenStreetMap and elevation data"
+    },
+    {
+      "name": "scene-democracy-aerial.webp",
+      "served": "public/illustrations/scene-democracy-aerial.webp",
+      "master": "design/illustrations/streets/raw-democracy-aerial.png",
+      "figure": "public/illustrations/tikki-topics-pastel.webp",
+      "sha256": "d6369e8b6a1125d5ef7f672152e769f4c2c57906e646291f18ccc2175cc7f2c5",
+      "bytes": 269926,
+      "output_size": [
+        760,
+        841
+      ],
+      "place": "The Democracy Monument from the air",
+      "note": "the city read from above",
+      "ground": "own — a picture of a place; the scene is its own background",
+      "credit": "© OpenStreetMap contributors · OpenFreeMap © OpenMapTiles · Elevation: Terrain Tiles",
+      "source": "Location Scout (oyasumi-gamedev.com) — line art and screentone from OpenStreetMap and elevation data"
+    }
+  ]
+}
