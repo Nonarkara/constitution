@@ -49,6 +49,17 @@ test("five pages stand in a Bangkok street, and each drawing appears once", () =
   }
 });
 
+test("the street gate resolves Python the way CI installs it", () => {
+  // setup-python puts Pillow on `python3` and does not create `.venv`.
+  // A script that names `.venv/bin/python` dies with exit 127, and the
+  // byte check never runs. The runner must share the illustration gate's
+  // resolver: PYTHON, then .venv, then python3 on PATH.
+  const pkg = JSON.parse(read("/package.json"));
+  assert.equal(pkg.scripts["check:streets"], "node scripts/run-streets.mjs --check");
+  assert.equal(pkg.scripts["build:streets"], "node scripts/run-streets.mjs");
+  assert.match(read("/scripts/run-streets.mjs"), /illustrationPython\(\)/);
+});
+
 test("every street the app names is a file that ships", () => {
   for (const [, src] of Object.entries(artMap())) {
     if (!src.includes("/illustrations/scene-")) continue;
