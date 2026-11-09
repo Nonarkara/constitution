@@ -23,8 +23,8 @@
     "falsify:spatial": "node scripts/spatial/spatial-falsify.mjs out",
     "check:spatial-sync": "node scripts/spatial-sync.mjs --check",
     "check:illustrations": "node scripts/check-illustrations.mjs",
-    "check:streets": ".venv/bin/python scripts/illustrations/build_streets.py --check",
-    "build:streets": ".venv/bin/python scripts/illustrations/build_streets.py",
+    "check:streets": "node scripts/run-streets.mjs --check",
+    "build:streets": "node scripts/run-streets.mjs",
     "check:rules": "node scripts/authoring/build-rules.mjs --check"
   },
   "dependencies": {
