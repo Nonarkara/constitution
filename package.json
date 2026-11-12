@@ -9,8 +9,8 @@
     "test": "node --experimental-strip-types --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
     "check:release": "node scripts/check-release.mjs",
-    "verify": "node scripts/build-indexes.mjs && node --experimental-strip-types scripts/validate-drills.mjs && node scripts/validate-corpus.mjs && node scripts/validate-translations.mjs && node scripts/validate-cases.mjs && node scripts/validate-questions.mjs && npm run check:rules && npm run check:streets && npm test && npm run typecheck",
-    "release": "npm run verify && npm run build && node scripts/check-generated.mjs && npm run check:release && npm run check:slop && npm run check:layout && npm run check:hierarchy && npm run check:sentences && npm run check:data && npm run check:rules && npm run check:illustrations && npm run check:streets && npm run check:spatial-sync && npm run check:spatial",
+    "verify": "node scripts/build-indexes.mjs && node --experimental-strip-types scripts/validate-drills.mjs && node scripts/validate-corpus.mjs && node scripts/validate-translations.mjs && node scripts/validate-cases.mjs && node scripts/validate-questions.mjs && npm run check:rules && npm run check:thai-phrases && npm run check:streets && npm test && npm run typecheck",
+    "release": "npm run verify && npm run build && node scripts/check-generated.mjs && npm run check:release && npm run check:slop && npm run check:layout && npm run check:hierarchy && npm run check:sentences && npm run check:data && npm run check:rules && npm run check:thai-phrases && npm run check:illustrations && npm run check:streets && npm run check:spatial-sync && npm run check:spatial",
     "news:harvest": "node --experimental-strip-types scripts/harvest-news.mjs",
     "check:layout": "node scripts/check-layout.mjs",
     "check:slop": "node .non-slop/bin/non-slop.mjs scan .",
@@ -25,7 +25,9 @@
     "check:illustrations": "node scripts/check-illustrations.mjs",
     "check:streets": "node scripts/run-streets.mjs --check",
     "build:streets": "node scripts/run-streets.mjs",
-    "check:rules": "node scripts/authoring/build-rules.mjs --check"
+    "check:rules": "node scripts/authoring/build-rules.mjs --check",
+    "space:thai": "node scripts/authoring/space-thai.mjs",
+    "check:thai-phrases": "node scripts/check-thai-phrases.mjs"
   },
   "dependencies": {
     "fast-xml-parser": "^5.11.2",

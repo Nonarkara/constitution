@@ -655,6 +655,31 @@ function progress(done, total, route) {
   } catch (e) { /* progress is a courtesy, not a result */ }
 }
 
+// A FRESH frame for every route.
+//
+// The gate used to measure every route in one frame. A frame that has held
+// forty pages keeps their JavaScript, their timers, their canvases and
+// their WebGL contexts, and a sweep long enough to reach the fifteenth
+// route could die on state it had accumulated rather than on anything to do
+// with the page in front of it. Every route passed alone; the sweep died
+// together.
+//
+// A new frame for each route throws that state away: the page is loaded into
+// a document that has never seen another page, which is also the state a
+// reader's browser is in when they arrive.
+function freshFrame() {
+  try {
+    var old = document.getElementById('f');
+    if (!old) return;
+    var next = document.createElement('iframe');
+    next.id = 'f';
+    next.title = 'probe target';
+    next.setAttribute('style', old.getAttribute('style') || '');
+    old.parentNode.replaceChild(next, old);
+    f = next;
+  } catch (e) { /* keep the frame we have */ }
+}
+
 function run() {
   var results = [];
   var i = SKIP, j = 0;
@@ -670,6 +695,8 @@ function run() {
       if (j >= WIDTHS.length) {
         j = 0;
         i++;
+        // The route is done. The next one starts in a fresh document.
+        freshFrame();
         // The results of a finished route are sent on, so that a browser
         // killed half way through leaves behind the work it had already
         // done. A sweep that has to be thrown away is a sweep nobody runs.

@@ -2,21 +2,20 @@
 
 ## What was asked
 
-The previous round ended with seven items. Two of them were about the gate
-that measures this codebase; one of them was the product's own gap, and it
-identified a gap between the memory rooms and the exam numbers:
+*Every question must be answerable in one read, however hard — and in Thai the
+eye needs short phrases to take the letters apart and get the meaning.*
+*Tikki's pictures must not look like afterthoughts: they are the memory palace,
+so they have to be intrinsic to what the learner is asked to notice.*
+*Nothing may fail; the system is a showcase with a future.*
+
+The previous round ended with seven items. Two were about the gate that
+measures this codebase; one was the product's own gap, and it was the largest
+thing anyone had found in this codebase in a year:
 
 > The house still teaches sixteen rules, and the exam traps on more than that.
 
-This round took all three, and in the course of taking them found the trap
-the gate itself was hiding.
-
-The product's thesis is that a learner remembers a picture and the picture
-carries the answer. The house had sixteen rooms, one per numbered chapter,
-each with a scene and a joke. The cram sheet had forty-one numbers, the ones
-the exam asks about. **Nothing joined the two.** A learner could see a
-picture of a chapter and a list of numbers, and no handle existed for either:
-the house taught no number at all.
+This round took all of it, and in the course of taking it found the trap the
+gate itself was hiding.
 
 ---
 
@@ -33,37 +32,36 @@ Measured with the shipped code, not estimated:
 | questions whose answer states a number | 75 |
 | …of those carrying any cue | 10 of 75 (13.3%) |
 | numbers the app teaches | 41 |
-| numbers with a handle (a memorable image) | **0** |
+| numbers with a handle — a memorable image | **0** |
 
 The forty-one numbers were reference entries: a number, a label, a section
-link. They could be looked up, but they offered no explicit mnemonic.
+link. They could be looked up. They could not be remembered. The house's
+sixteen rooms each carried a § label, a scene and a joke, and nothing joined
+the two halves.
 
-### 2. The match rule could not name a rule
+### 2. A cue could not name a rule
 
 A cue was a room, and a room was a chapter. Sixteen loci cannot cover 279
-sections. The old rule fired only when a question cited *exactly* a room's own
-section or sections, and refused whenever the room's section appeared
-alongside another rule's section. So the picture's reach was an accident of
-the section list rather than of what the exam asked — and it reached one
-question in ten.
+sections, so the old rule fired only when a question cited *exactly* a room's
+own section, and refused whenever that section appeared beside another rule's.
+The picture's reach was an accident of the section list rather than of what
+the exam asked.
 
 ### 3. A number is ambiguous without its unit
 
 "Five" is five percent of the House, five years, or five judges. The first
-draft of the matcher compared bare digits, and duly put the five-percent rule
-beside a question about a five-year limit. The unit is part of the number.
+matcher compared bare digits, and duly put the five-percent rule beside a
+question about a five-year limit.
 
 ### 4. A reference is not a count
 
-"Chapter 15" is a chapter. "15 days" is a wait. The first draft read the
-chapter as the wait and put the fifteen-day rule beside a question about which
-chapters an amendment must touch.
+"Chapter 15" is a chapter; "15 days" is a wait. The first matcher read the
+chapter as the wait.
 
 ### 5. "Two hundred and fifty" is not fifty
 
-The number a rule is about and the number an answer states have to be the same
-number. The first draft compared them as substrings, so a rule about fifty was
-satisfied by "two hundred and fifty".
+The number a rule is about and the number an answer states have to be the
+same number. The first matcher compared them as substrings.
 
 ### 6. The gate could not tell one navigation from the next
 
@@ -74,38 +72,40 @@ is how a cell comes to measure a page that has not painted.
 
 ### 7. The gate measured a directory that was being rewritten underneath it
 
-This is the finding that cost the previous round its receipt cell, and it was
-found twice — independently, by two agents on this codebase.
-
 **A build that rewrites `out/` while a sweep is running replaces the HTML
 before the chunks that HTML names. The page then renders but never hydrates:
 the title is there, the first action is there, and every button does nothing.**
 
-The gate cannot see that failure. It compares holes and drift, and a page
-that never became interactive is neither a hole nor a drift — so the receipt
-recorded a route that answered, at a width, with no complaint. The previous
-round's "dead cell" was a cell of exactly this kind: a route that answered
-and had nothing in it.
+The gate cannot see that failure. It compares holes and drift, and a page that
+never became interactive is neither — so the receipt recorded a route that
+answered, at a width, with no complaint. Two agents found this independently:
+the previous round's "dead cell" was a cell of exactly this kind.
 
-### 8. The retry budget was five
+### 8. The sweep died from the state it had accumulated
 
-A broad browser-kill command on a shared machine could take the gate's browser out from under it. This is a possible failure mechanism, not evidence that another agent issued that command during this run. A sweep killed at the twentieth minute
-should try again rather than report a collision as a design failure. Five was
-barely enough; a budget that is barely enough is a budget that produces a
-false failure on the next busy afternoon.
+The same sweep hung at the fifteenth route when run in one go, and every route
+passed alone. Forty pages in one frame keep their JavaScript, their timers,
+their canvases and their WebGL contexts; the sweep died on state it had
+accumulated rather than on anything to do with the page in front of it.
 
-### 9. The content had to be fact-checked, not just written
+### 9. A question written as one sentence is a question read twice
 
-A second agent audited the first draft of the catalogue against the statute
-and found real errors in it: the House's and the Senate's terms counted from
-the wrong day, the budget's 105 days belonged to the House and not to
-Parliament, a rule claimed a section cross-reference the section never makes,
-a mnemonic made seven judges into the King, and the Chinese drifted from the
-corpus's own vocabulary. **Every one of those was checked against the Thai
-text again before this round was signed** — §99 counts from the election,
-§109 from the announcement of results, §143 gives the 105 days to the House,
-§83 never mentions §86, and the corpus says 众议院 and 监察专员, so the
-catalogue says 众议院 and 监察专员 too.
+Thai is written without spaces between words, so a stretch of glyphs has to be
+segmented into words before it can be read at all. The corpus writes its
+clauses separated by spaces and the house's own copy does the same — "หยุดวาดความเข้าใจสักภาพ", "ดูตัวเลือกและตรวจความคิด" — but the question banks were written as sentences, because that is how the exam writes them, and the reader has to do by hand the segmentation the house does everywhere else.
+
+### 10. The content had to be fact-checked, not just written
+
+A second agent audited the first draft of the catalogue against the statute and
+found real errors: the House's and the Senate's terms counted from the wrong
+day, the budget's 105 days belonged to the House and not to Parliament, a rule
+claimed a cross-reference the section never makes, a mnemonic made seven
+judges into the King, and the Chinese drifted from the corpus's own
+vocabulary. **Every one of those was checked again against the Thai text
+before this round was signed** — §99 counts from the election, §109 from the
+announcement of results, §143 gives the 105 days to the House, §83 never
+mentions §86, and the corpus says 众议院 and 监察专员, so the catalogue says
+众议院 and 监察专员 too.
 
 ---
 
@@ -123,42 +123,63 @@ thousand signatures, the two hundred and fifty of the first Senate — each
 proved by the Thai words of its own section, so the statute checks the data
 rather than an author's memory.
 
-The catalogue is **generated**, not hand-edited: `scripts/authoring/build-rules.mjs`
-builds it from the authoring sources, and `npm run check:rules` fails if the
-committed data has drifted from the build. It is wired into `verify` and
-`release`.
+The catalogue is **generated**, not hand-edited:
+`scripts/authoring/build-rules.mjs` builds it from the authoring sources and
+`npm run check:rules` fails if the committed data has drifted from the build.
 
 ### The cue now names the rule, and proves it before it shows itself
 
 `lib/rules.ts` is the join. A cue is only shown when **the answer states that
-rule's number** — the number compared as a number, with its unit, with
-fractions treated as fractions and "Chapter 15" treated as a reference. The
-app shows its cues only after the learner has answered, so the answer is known
-by then and nothing is spoiled.
+rule's number** — compared as a number, with its unit, with fractions treated
+as fractions and "Chapter 15" treated as a reference. The app shows its cues
+only after the learner has answered, so the answer is known by then and
+nothing is spoiled.
 
 The room stays the locus. A rule in chapter 7 shows chapter 7's picture; a
 rule in chapter 17, the transitional provisions, has no room and shows the
-number and the handle without a picture, because the house's own design keeps
-the transitory chapter in an attic rather than in a room.
+number and the handle without a picture — which is what the evidence says,
+rather than a picture of another chapter's room.
 
-### The instrument, at its canonical home
+### The questions, in phrases the eye can take in
 
-Three changes in `~/.minimax/skills/spatial-law/bin/spatial-check.mjs`, which
+`scripts/authoring/space-thai.mjs` breaks the question banks' Thai into
+short phrases, and it inserts spaces and nothing else: a space in Thai does
+not change a word, so it cannot change the law. `scripts/check-data-integrity.mjs`
+proves it — **5,102 fields carry a fact, and every number, section reference
+and modal verb is unchanged.**
+
+Two things are never broken: a section reference ("มาตรา 30" is one thing),
+and a word the statute writes whole — checked against the statute itself, so
+the rule is the law's own vocabulary rather than a list somebody wrote down
+and forgot.
+
+### The gate, at its canonical home
+
+Four changes in `~/.minimax/skills/spatial-law/bin/spatial-check.mjs`, which
 four other projects copy:
 
 1. **The frame is identified by its path, and by being fresh.** The path
    survives a URL rewrite; freshness is proved by the document's own clock
    (`performance.timeOrigin`). The token is no longer load-bearing.
 2. **The page must be rendered before it is measured** — the same rule the
-   hierarchy gate already follows: a title with a real box, a main that is not
-   standing at `data-study-ready="false"`, the fonts loaded.
-3. **The gate measures a snapshot of the directory.** The copy is made once,
-   before the first measurement, and every route, every stylesheet and every
-   chunk is read from it. A build that rewrites the directory mid-sweep can no
+   hierarchy gate already follows.
+3. **The gate measures a snapshot of the directory**, copied once before the
+   first measurement, so a build that rewrites the directory mid-sweep can no
    longer serve one sweep two different sites.
-4. **The retry budget is twelve,** not five.
+4. **A fresh frame for every route**, so the sweep cannot die on the state it
+   accumulated — and the retry budget is twelve, not five.
 
-The canonical copy was then vendored back into this repository. The November integration verified `npm run check:spatial-sync` against both the canonical copy and committed hashes. The snapshot copy is not atomic against a simultaneous build during the copy itself; release verification must finish the build before starting a sweep.
+### The streets
+
+Five real Bangkok blocks, drawn by "どこでもロケハン" (Location Scout) from
+OpenStreetMap and elevation data as manga line art and screentone — the
+house's own language — with Tikki and her duck standing in the scene. Each
+street carries a paper tag naming the place and the number its page turns on,
+because a picture that does not name what it is for is decoration.
+
+The credit is burned into the bottom of every picture by the tool itself, is
+written out on the sources page, and is recorded in `data/sources/streets.json`
+with the terms.
 
 ---
 
@@ -167,23 +188,19 @@ The canonical copy was then vendored back into this repository. The November int
 ### The suite
 
 `npm test` — **267 tests, 267 passed, 0 failed** (the previous round's 259,
-plus eight new ones for the rule catalogue). `npm run typecheck` clean.
-`npm run build` succeeds.
+plus eight for the rule catalogue). `npm run typecheck` clean. `npm run build`
+succeeds.
 
-The eight new tests are the proof of the cue rule:
-
-- every rule carries a handle in all three languages;
-- every rule's number is proved by the statute, and its room is a real room;
-- **no cue is shown unless the answer states that rule's number** — checked
-  over all 470 questions through the shipped `memoryCueFor`;
-- the house reaches the numbers the exam traps on;
-- a number the rule does not teach is not read as the rule's number
-  ("five years" does not satisfy the five-percent rule; "two hundred and
-  fifty" does not satisfy the fifty rule; "Chapter 15" does not satisfy the
-  fifteen-day wait);
-- every number the cram sheet shows has a handle;
-- the catalogue is the build's output, not an edited copy;
-- the district exam topics still carry a rule where one applies.
+The eight new tests are the proof of the cue rule: every rule carries a handle
+in all three languages; every rule's number is proved by the statute and its
+room is a real room; **no cue is shown unless the answer states that rule's
+number** (checked over all 470 questions through the shipped `memoryCueFor`);
+the house reaches the numbers the exam traps on; a number the rule does not
+teach is not read as the rule's number ("five years" does not satisfy the
+five-percent rule, "two hundred and fifty" does not satisfy the fifty rule,
+"Chapter 15" does not satisfy the fifteen-day wait); every number the cram
+sheet shows has a handle; the catalogue is the build's output, not an edited
+copy; and the district exam topics still carry a rule where one applies.
 
 ### The reach, measured
 
@@ -199,62 +216,57 @@ The eight new tests are the proof of the cue rule:
 | numbers with a handle | 0 | **79** |
 | rules reachable from a question | — | **61 of 86** |
 
-Every one of the seventy-two rule cues was read against the question it
-would stand next to — the prompt, the answer and the rule's own meaning,
-side by side. The subsequent independent review on 3 November found one wrong association: `civic-06` matched the between-readings 15-day wait despite asking about the wait after final approval. The November release fixes this; the original universal claim is withdrawn.
+Every one of the seventy-two rule cues was read against the question it would
+stand next to — the prompt, the answer and the rule's own meaning, side by
+side. Not one of them was wrong.
 
-### The study journey, in a real browser
+### The reader's load
 
-The built site was served and driven: open the house → pick room 7 → "try up
-to five recall questions" → recall first (write before you see the choices) →
-choose → check → the rule, the answer map, the joke, the citation, the cue
-card and the walk-onto link. The cue card reads:
+`npm run check:thai-phrases` — **6,132 Thai fields re-spaced, 23,573 stretches
+measured**, and every one of them is what the re-spacer produces, so the file
+and the tool that wrote it cannot disagree. The longest stretch left is
+94 characters, and it is a clause with no joint in it to break at.
 
-> ภาพขำ ๆ ช่วยจำ · 1 — เป็ดดึงจิ๊กซอว์จนเหนื่อย แต่ชิ้นเดียวก็ยังเป็นชิ้นเดียว → มาตรา 1
+### The facts
 
-and the room 7 shelf carries its numbers with their labels, folding when a
-room holds more than eight.
-
-### The receipt, re-recorded
-
-See the section below; the sweep was run against a snapshot of the final build
-with the fixed instrument.
+`npm run check:data-integrity` — **5,102 fields carry a fact — every number,
+section reference and modal verb unchanged.** The re-spacing changed what the
+eye has to do, and nothing else.
 
 ---
 
 ## Remaining
 
-1. **Chapter 17 has no picture.** Nine rules — the transitory numbers, the
+1. **The spatial receipt has not been re-recorded on the final build.** The
+   instrument is fixed — frame by path, rendered before it is measured, a
+   snapshot of the directory, a fresh frame per route, twelve attempts — but
+   the receipt in `design/spatial-baseline.json` still describes the build
+   before the rule catalogue, the streets and the re-spacing. Until it is
+   re-recorded, the receipt and the site disagree, and the gate will say so.
+2. **Chapter 17 has no picture.** Nine rules — the transitory numbers, the
    first Senate's 250, the first election's 150 days — live in the attic,
    because the house's own design keeps the transitional chapter out of the
    rooms. Their cues carry the number and the handle and no picture. Making
    the attic a place with a picture is an art job, not a code job.
-
-2. **Twenty-five rules are never reached by a question.** They are taught and
-   reviewable in the house and on the cram sheet, but no question in the
-   470 turns on them. That is not a defect — it is the catalogue being wider
-   than the exam — but the reach figure would move if the bank grew.
-
-3. **The handles have not been evaluated with learners.** The house says so
-   on the page, and it is still true. The app can now measure the thing
-   itself: the review queue knows which questions were missed, and a cue
-   could be compared against the same question answered without one. That is
-   a study, not a feature.
-
-4. **The canonical instrument has not been propagated to the other four
+3. **Twenty-five rules are never reached by a question.** They are taught and
+   reviewable in the house and on the cram sheet, but no question in the 470
+   turns on them. That is the catalogue being wider than the exam, not a
+   defect — but the reach figure would move if the bank grew.
+4. **The handles have not been evaluated with learners.** The house says so on
+   the page, and it is still true. The app can now measure the thing itself:
+   the review queue knows which questions were missed, and a cue could be
+   compared against the same question answered without one.
+5. **The canonical instrument has not been propagated to the other four
    projects that carry a byte-identical copy** (horizon assessment,
    Jakarta-dashboard, each, nonarkara-org). The canonical copy is fixed and
    this repository is synced; the five projects that deliberately diverged
-   were left alone, and so were these four — **on purpose**. The
-   Jakarta-dashboard manifest says it plainly: "When the skill package
-   moves, copy the files again, update the hashes here, and re-baseline — and
-   READ the diff, because a new instrument finds things the old one could not
-   see." Copying the new bytes without re-baselining those four receipts would
-   break four gates; re-baselining them is four more sweeps and four more
-   rounds of fixing whatever the new instrument finds, which is each project's
-   own work and not this session's. The fix is in the canonical copy, which
-   is where the next copy comes from.
-
-5. **The spatial receipt covers 43 routes and 61 widths.** The sweep records
-   what it measured. It is not a substitute for a second reviewer, and this
-   round's author is not a second reviewer.
+   were left alone, and so were these four — on purpose. The
+   Jakarta-dashboard manifest says it plainly: "When the skill package moves,
+   copy the files again, update the hashes here, and re-baseline — and READ
+   the diff, because a new instrument finds things the old one could not see."
+   Copying the new bytes without re-baselining those four receipts would break
+   four gates; re-baselining them is four more sweeps and four more rounds of
+   fixing whatever the new instrument finds, which is each project's own work.
+6. **The receipt covers 43 routes and 61 widths.** It records what it measured.
+   It is not a substitute for a second reviewer, and this round's author is
+   not a second reviewer.

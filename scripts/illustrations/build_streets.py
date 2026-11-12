@@ -38,7 +38,7 @@ import sys
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[2]
 MASTERS = ROOT / "design" / "illustrations" / "streets"
@@ -140,6 +140,72 @@ def paperise(street: Image.Image) -> Image.Image:
 STREET_WIDTH = 760
 
 
+# The cue each street carries.
+#
+# A picture that does not name what it is for is decoration. The house's own
+# rule is that one picture has to cue one place, or it cues none — so each
+# street carries the number its page turns on, printed into the scene the way
+# a sign is printed into a street. The place is named too, because that is
+# what the learner is being asked to recall: not a drawing, but a place.
+CUE = {
+    "scene-ratchadamnoen": ("ถนนราชดำเนิน", "16 หมวด · 279 มาตรา"),
+    "scene-wat-phra-kaew": ("วัดพระแก้ว", "มาตรา 255"),
+    "scene-yaowarat": ("เยาวราช", "มาตรา 1–279"),
+    "scene-sukhumvit": ("สุขุมวิท", "3 แหล่งข่าว"),
+    "scene-democracy-aerial": ("อนุสาวรีย์ภูมิพลอดุลยาเดช", "16 หมวด"),
+}
+
+PAPER_TINT = (247, 243, 233)
+INK_TINT = (36, 37, 31)
+
+
+def load_font(size: int, bold: bool = False):
+    """The house's own type, so the sign reads as part of the drawing."""
+    root = ROOT / "design" / "fonts"
+    candidates = (
+        sorted(root.glob("ibm-plex-sans-thai-*.ttf")) + sorted(root.glob("jetbrains-mono-*.ttf"))
+    )
+    if not candidates:
+        return None
+    for path in candidates:
+        if bold and "bold" in path.name:
+            continue
+        try:
+            return ImageFont.truetype(str(path), size)
+        except OSError:
+            continue
+    return None
+
+
+def stamp(scene: dict, image: Image.Image) -> Image.Image:
+    """Print the place and its cue into the street."""
+    cue = CUE.get(scene["name"])
+    if not cue:
+        return image
+    place, number = cue
+    font = load_font(21)
+    if font is None:
+        return image
+    draw = ImageDraw.Draw(image)
+    lines = [(place, font), (number, font)]
+    widths = [draw.textlength(t, font=f) for t, f in lines]
+    pad_x, pad_y, gap = 14, 10, 6
+    box_w = int(max(widths)) + pad_x * 2
+    box_h = 21 * len(lines) + gap + pad_y * 2
+    x = 20
+    # Above the credit, which the tool printed into the bottom of the
+    # picture. The credit has to stay readable: it is the licence. The
+    # aerial has no clear ground at the bottom, so its tag goes to the top.
+    y = 20 if scene["name"] == "scene-democracy-aerial" else image.height - box_h - 46
+    # A paper tag, laid on the street, with the ink of the house.
+    draw.rectangle([x, y, x + box_w, y + box_h], fill=PAPER_TINT, outline=INK_TINT, width=2)
+    ty = y + pad_y
+    for (text, f), in zip(((t, ff) for t, ff in lines)):
+        draw.text((x + pad_x, ty), text, font=f, fill=INK_TINT)
+        ty += 21 + gap
+    return image
+
+
 def compose(scene: dict) -> Image.Image:
     street = paperise(Image.open(MASTERS / scene["street"]))
     if street.width != STREET_WIDTH:
@@ -154,7 +220,7 @@ def compose(scene: dict) -> Image.Image:
     y = int(sh * scene["ground"] - figure.height)
     base = street.convert("RGBA")
     base.alpha_composite(figure, (x, y))
-    return base.convert("RGB")
+    return stamp(scene, base.convert("RGB"))
 
 
 def build() -> dict:
