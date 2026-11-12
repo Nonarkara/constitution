@@ -167,13 +167,18 @@ function splitsACompound(before, atom) {
 }
 
 /** The words of a stretch, with the protected terms and the references kept whole. */
-function atoms(text) {
+export function atoms(text) {
   // A section reference is found in the TEXT, not in the segmenter's words:
   // the segmenter cuts "มาตรา" into "มา" and "ตรา", and a break between
   // them would turn "มาตรา 30" into "มา ตรา 30" — which is not a
   // reference any more, and the data-integrity gate is right to refuse it.
   const out = [];
   let covered = 0;
+  // A term is taken whole only if it ends where the segmenter ends a word.
+  // "หน้าที่ของรัฐ" is a term, but in "หน้าที่ของรัฐมนตรี" it ends in the
+  // middle of "รัฐมนตรี", and swallowing it dropped "มนตรี" from the text.
+  const ends = new Set();
+  for (const { segment, index } of segmenter.segment(text)) ends.add(index + segment.length);
   for (const { segment, index } of segmenter.segment(text)) {
     const trimmed = segment.trim();
     if (!trimmed) continue;
@@ -185,7 +190,7 @@ function atoms(text) {
     // below already refuses any break that would cut a word the statute
     // writes whole, so the list is kept only for the words that are names:
     // "สภาผู้แทนราษฎร" is one name and the reader meets it as one name.
-    const term = TERMS.find((t) => text.startsWith(t, start) && t.length > trimmed.length);
+    const term = TERMS.find((t) => text.startsWith(t, start) && t.length > trimmed.length && ends.has(start + t.length));
     if (term) {
       out.push({ text: term, start, end: start + term.length });
       covered = start + term.length;
@@ -242,7 +247,7 @@ export function phrase(text) {
     // the stretch has neither then the last word boundary that fits is used
     // — a wall of glyphs is worse for the reader than an imperfect joint,
     // and the guard below makes sure no word is cut in half.
-    let take = clause > start ? clause : joiner > start ? joiner : best > start ? best : -1;
+    let take = clause > start ? clause : joiner > start ? joiner : -1;
     // Never cut a word the statute writes whole.
     if (take > start) {
       const cut = text.slice(parts[start].start, parts[take].start);
@@ -256,10 +261,16 @@ export function phrase(text) {
     phrases.push(text.slice(parts[start].start, parts[take - 1].end).trim());
     start = take;
   }
-  return phrases
+  const spaced = phrases
     .join(" ")
     .replace(/\s+([?!,.:;ฯๆ])/g, "$1")
     .replace(/\(\s+/g, "(");
+  // A space in Thai changes no word. If anything else changed, the splitter
+  // is wrong, and the stretch stays as the author wrote it.
+  if (spaced.replace(/\s+/g, "") !== text.replace(/\s+/g, "")) {
+    throw new Error(`space-thai changed characters, not just spaces: ${text.slice(0, 60)}`);
+  }
+  return spaced;
 }
 
 /** Thai stretches only: Chinese and English are measured in their own units. */
