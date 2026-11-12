@@ -1,0 +1,24 @@
+/flashcards/ 1 {'firstAction': 1, 'hierarchy': 1} action delta range -
+/memory/ 63 {'hierarchy': 63} action delta range -
+/news/ 2 {'firstAction': 2} action delta range (-30, -30)
+/notes/ 15 {'firstAction': 10, 'hierarchy': 5} action delta range (-62, -45)
+/sources/ 63 {'hierarchy': 63} action delta range -
+Cells changed: 144 changed fields: {'firstAction': 13, 'hierarchy': 132}
+/notes/ 390 action {'y': 437, 'sel': 'a.primary.action-panel-cta'} findings []
+/notes/ 1024 action {'y': 387, 'sel': 'a.primary.action-panel-cta'} findings []
+/notes/ 1440 action {'y': 387, 'sel': 'a.primary.action-panel-cta'} findings []
+/cram/ 390 action {'y': 433, 'sel': 'button.primary'} findings []
+/cram/ 1024 action {'y': 328, 'sel': 'button.primary'} findings []
+/cram/ 1440 action {'y': 328, 'sel': 'button.primary'} findings []
+/memory/ 390 action {'y': 517, 'sel': 'button.primary.action-panel-cta'} findings []
+/memory/ 1024 action {'y': 523, 'sel': 'button.primary.action-panel-cta'} findings [('dead', 'figcaption', 91)]
+/memory/ 1440 action {'y': 523, 'sel': 'button.primary.action-panel-cta'} findings [('dead', 'figcaption', 91)]
+/read/ 390 action {'y': 299, 'sel': 'select#read-chapter'} findings []
+/read/ 1024 action {'y': 269, 'sel': 'select#read-chapter'} findings []
+/read/ 1440 action {'y': 269, 'sel': 'select#read-chapter'} findings []
+/amend/ 390 action {'y': 369, 'sel': 'button'} findings []
+/amend/ 1024 action {'y': 366, 'sel': 'button'} findings []
+/amend/ 1440 action {'y': 366, 'sel': 'button'} findings []
+/news/ 390 action {'y': 414, 'sel': 'a.primary.action-panel-cta'} findings []
+/news/ 1024 action {'y': 364, 'sel': 'a.primary.action-panel-cta'} findings []
+/news/ 1440 action {'y': 364, 'sel': 'a.primary.action-panel-cta'} findings []

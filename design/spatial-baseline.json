@@ -107,22 +107,48 @@
   },
   "exempt": [],
   "provenance": {
-    "measuredAt": "2026-11-03T01:00:33.933585+00:00",
+    "measuredAt": "2026-11-12T17:51:56.403Z",
     "measurements": 2709,
     "routes": 43,
     "widths": 63,
     "measuredTogether": false,
     "carriedOver": [],
     "build": {
-      "exportSha256": "10d2b7012b3ba9cfdfb1224df2631092211e48d1bf077947cc021810061d1153",
-      "files": 2042,
-      "revision": "c8a9c11e836dad2d",
-      "recordedAt": "2026-11-03T00:41:42.026381+00:00"
+      "exportSha256": "04c63eb9e9221328c586846b978d661b175c46248e71cbf7ce3cd373759049d9",
+      "files": 2046,
+      "revision": "91c18b3e10612240",
+      "recordedAt": "2026-11-12T17:36:35.533052+00:00"
     },
     "sweeps": [
       {
-        "chunk": "0",
-        "measuredAt": "2026-11-03T00:43:41.875Z",
+        "raw": "raw-0.json",
+        "routes": [
+          "/memory/"
+        ],
+        "measurements": 63,
+        "measuredAt": "2026-11-12T17:41:11.708Z",
+        "rawSha256": "3ea701f57ee96fb6c651b6982cbc669f8e5adbe3103167c96e2fc8456f8241ff"
+      },
+      {
+        "raw": "raw-1.json",
+        "routes": [
+          "/tikki/"
+        ],
+        "measurements": 63,
+        "measuredAt": "2026-11-12T17:42:21.120Z",
+        "rawSha256": "330f82a2b94b1b9ffc8bf7836ccb195386627ea4883a4d0489e3218be0f2e6cc"
+      },
+      {
+        "raw": "raw-2.json",
+        "routes": [
+          "/news/"
+        ],
+        "measurements": 63,
+        "measuredAt": "2026-11-12T17:37:25.180Z",
+        "rawSha256": "615c3de7414d4bcef4ef89bae8f8776e72ccdc72ec3e8a7bbdb51125b9ddd239"
+      },
+      {
+        "raw": "raw-3.json",
         "routes": [
           "/",
           "/along/",
@@ -132,11 +158,11 @@
           "/bible/courts/"
         ],
         "measurements": 378,
+        "measuredAt": "2026-11-12T17:40:31.136Z",
         "rawSha256": "537a4e331ecf0d9963c5502789bec8580c037eee6ae550ac10c464f2c08328f7"
       },
       {
-        "chunk": "1",
-        "measuredAt": "2026-11-03T00:45:33.223Z",
+        "raw": "raw-4.json",
         "routes": [
           "/bible/duties-state-policy/",
           "/bible/exam-method/",
@@ -146,11 +172,11 @@
           "/bible/independent-organs/"
         ],
         "measurements": 378,
+        "measuredAt": "2026-11-12T17:41:29.026Z",
         "rawSha256": "d628b6b2dd4b683a0d4b3e25a721cafc7d537bf40ffb42e77f61adf118746cbd"
       },
       {
-        "chunk": "2",
-        "measuredAt": "2026-11-03T00:47:22.666Z",
+        "raw": "raw-5.json",
         "routes": [
           "/bible/local-and-amendment/",
           "/bible/organic-laws/",
@@ -160,83 +186,108 @@
           "/cheatsheet/"
         ],
         "measurements": 378,
+        "measuredAt": "2026-11-12T17:46:01.228Z",
         "rawSha256": "93195a2cf56c1e1a5c429d94a31ab2801d04d43f761b1776968e66311aa14983"
       },
       {
-        "chunk": "3",
-        "measuredAt": "2026-11-03T00:48:57.952Z",
+        "raw": "raw-6.json",
         "routes": [
           "/civic/",
           "/cram/",
           "/drills/",
           "/exam/",
-          "/flashcards/",
           "/games/"
         ],
-        "measurements": 378,
-        "rawSha256": "f912e0c771c20ad07d27903be6112c6b9a8b5b1dc46764829df47d06015dc4fa"
+        "measurements": 315,
+        "measuredAt": "2026-11-12T17:46:18.734Z",
+        "rawSha256": "607a91af989a7c3d005ba1ef75126e64db10cc3e52af9178394ed3a227938bf6",
+        "supersededRoutes": [
+          "/flashcards/"
+        ]
       },
       {
-        "chunk": "5",
-        "measuredAt": "2026-11-03T00:52:06.971Z",
-        "routes": [
-          "/notes/",
-          "/polls/",
-          "/practice/",
-          "/practice/pokklong/",
-          "/read/",
-          "/research/"
-        ],
-        "measurements": 378,
-        "rawSha256": "806f8a05cac17996c9d2629588f9059bccd66db9e13c1a2ab21890e93ad42ac5"
-      },
-      {
-        "chunk": "6",
-        "measuredAt": "2026-11-03T00:58:43.871Z",
-        "routes": [
-          "/review/",
-          "/rights/",
-          "/section/",
-          "/settings/",
-          "/sources/",
-          "/tikki/"
-        ],
-        "measurements": 378,
-        "rawSha256": "32e7405c7547806636fca8ad2216695d84e35e3bd6c29abffd08d90d607220a5"
-      },
-      {
-        "chunk": "7",
-        "measuredAt": "2026-11-03T00:59:02.834Z",
-        "routes": [
-          "/topics/"
-        ],
-        "measurements": 63,
-        "rawSha256": "e4129af357d955b4ff4f855e708cef4f6bb6d40dd5a72ef60fcae636d6ce876d"
-      },
-      {
-        "chunk": "memory",
-        "measuredAt": "2026-11-03T00:54:26.403Z",
-        "routes": [
-          "/memory/"
-        ],
-        "measurements": 63,
-        "rawSha256": "6243cbfbae8e494913eb0a949544317d786da8c0cba51d6230d24679664bcd8c"
-      },
-      {
-        "chunk": "rest4",
-        "measuredAt": "2026-11-03T01:00:19.739Z",
+        "raw": "raw-7.json",
         "routes": [
           "/glossary/",
-          "/learn/",
           "/library/",
-          "/news/",
-          "/notebook/"
+          "/notebook/",
+          "/notes/",
+          "/polls/"
         ],
         "measurements": 315,
-        "rawSha256": "8077dadab9742d595705d029c574b8cd534f799be3ee0e0423b0d58e7f524275"
+        "measuredAt": "2026-11-12T17:46:45.237Z",
+        "rawSha256": "fa83f1a7321b1856b76a69622c2f3a65a4ae821752402de0bd47a3834d0f410e",
+        "supersededRoutes": [
+          "/learn/"
+        ]
+      },
+      {
+        "raw": "raw-8.json",
+        "routes": [
+          "/practice/",
+          "/practice/pokklong/",
+          "/research/",
+          "/review/",
+          "/rights/"
+        ],
+        "measurements": 315,
+        "measuredAt": "2026-11-12T17:47:19.648Z",
+        "rawSha256": "ab721d57af5511ff0c5abfde30e65703b3911dba73c9cd4ce603932005bdfbb2",
+        "supersededRoutes": [
+          "/read/"
+        ]
+      },
+      {
+        "raw": "raw-9.json",
+        "routes": [
+          "/settings/",
+          "/sources/",
+          "/topics/"
+        ],
+        "measurements": 189,
+        "measuredAt": "2026-11-12T17:48:29.256Z",
+        "rawSha256": "b74991e8587e904eca9ce5840b37af1be12749591bb56864edfa33c17a8e274a",
+        "supersededRoutes": [
+          "/section/"
+        ]
+      },
+      {
+        "raw": "retry-raw-flashcards.json",
+        "routes": [
+          "/flashcards/"
+        ],
+        "measurements": 63,
+        "measuredAt": "2026-11-12T17:49:29.389Z",
+        "rawSha256": "383ee6b8f05e38b86b88deb399eb24bf79afc9c4fc21c801a17fb7cbf1698e13"
+      },
+      {
+        "raw": "retry-raw-learn.json",
+        "routes": [
+          "/learn/"
+        ],
+        "measurements": 63,
+        "measuredAt": "2026-11-12T17:49:30.842Z",
+        "rawSha256": "03baa8d323f83e5947740d05340a402aace6889ca23bb68f5e6595744596e627"
+      },
+      {
+        "raw": "retry-raw-read.json",
+        "routes": [
+          "/read/"
+        ],
+        "measurements": 63,
+        "measuredAt": "2026-11-12T17:49:29.505Z",
+        "rawSha256": "5ebedf39d499d0a0178cb8f8722d60618035767460819e1bfa8f77e1a81bded6"
+      },
+      {
+        "raw": "retry-raw-section.json",
+        "routes": [
+          "/section/"
+        ],
+        "measurements": 63,
+        "measuredAt": "2026-11-12T17:51:56.403Z",
+        "rawSha256": "d77afd688c17e6c6225e772c8bf9fb7511cf81c0b79681c5ed6a88d1732ff67a"
       }
-    ],
-    "note": "Nine fresh route-partitioned sweeps of the same frozen final export. No historical measurement cells carried forward."
+    ]
   },
   "routes": {
     "/": {
@@ -34312,8 +34363,8 @@
       "559": {
         "findings": [],
         "firstAction": {
-          "y": null,
-          "sel": null
+          "y": 506,
+          "sel": "button"
         },
         "chrome": {
           "vh": 1000,
@@ -34326,11 +34377,11 @@
           "bottomSel": null
         },
         "hierarchy": {
-          "h1": 0,
+          "h1": 32,
           "largest": 18,
-          "ratio": null,
-          "peers": 0,
-          "share": 0
+          "ratio": 1.78,
+          "peers": 2,
+          "share": 0.03
         }
       },
       "560": {
@@ -36908,7 +36959,7 @@
       "359": {
         "findings": [],
         "firstAction": {
-          "y": 482,
+          "y": 437,
           "sel": "a.primary.action-panel-cta"
         },
         "chrome": {
@@ -36932,7 +36983,7 @@
       "360": {
         "findings": [],
         "firstAction": {
-          "y": 482,
+          "y": 437,
           "sel": "a.primary.action-panel-cta"
         },
         "chrome": {
@@ -36956,7 +37007,7 @@
       "361": {
         "findings": [],
         "firstAction": {
-          "y": 482,
+          "y": 437,
           "sel": "a.primary.action-panel-cta"
         },
         "chrome": {
@@ -36980,7 +37031,7 @@
       "390": {
         "findings": [],
         "firstAction": {
-          "y": 482,
+          "y": 437,
           "sel": "a.primary.action-panel-cta"
         },
         "chrome": {
@@ -37004,7 +37055,7 @@
       "399": {
         "findings": [],
         "firstAction": {
-          "y": 482,
+          "y": 437,
           "sel": "a.primary.action-panel-cta"
         },
         "chrome": {
@@ -37028,7 +37079,7 @@
       "400": {
         "findings": [],
         "firstAction": {
-          "y": 482,
+          "y": 437,
           "sel": "a.primary.action-panel-cta"
         },
         "chrome": {
@@ -37052,7 +37103,7 @@
       "401": {
         "findings": [],
         "firstAction": {
-          "y": 482,
+          "y": 437,
           "sel": "a.primary.action-panel-cta"
         },
         "chrome": {
@@ -37652,7 +37703,7 @@
       "721": {
         "findings": [],
         "firstAction": {
-          "y": 449,
+          "y": 387,
           "sel": "a.primary.action-panel-cta"
         },
         "chrome": {
@@ -37676,7 +37727,7 @@
       "722": {
         "findings": [],
         "firstAction": {
-          "y": 449,
+          "y": 387,
           "sel": "a.primary.action-panel-cta"
         },
         "chrome": {
@@ -37700,7 +37751,7 @@
       "768": {
         "findings": [],
         "firstAction": {
-          "y": 449,
+          "y": 387,
           "sel": "a.primary.action-panel-cta"
         },
         "chrome": {
@@ -37934,7 +37985,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 20,
-          "share": 0.11
+          "share": 0.12
         }
       },
       "901": {
@@ -37958,7 +38009,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 20,
-          "share": 0.11
+          "share": 0.12
         }
       },
       "999": {
@@ -37982,7 +38033,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 20,
-          "share": 0.11
+          "share": 0.12
         }
       },
       "1000": {
@@ -38102,7 +38153,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 20,
-          "share": 0.11
+          "share": 0.12
         }
       },
       "1099": {
@@ -38126,7 +38177,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 20,
-          "share": 0.11
+          "share": 0.12
         }
       },
       "1100": {
@@ -52562,7 +52613,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52586,7 +52637,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52610,7 +52661,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52634,7 +52685,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52658,7 +52709,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52682,7 +52733,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52706,7 +52757,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52730,7 +52781,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52754,7 +52805,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52778,7 +52829,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52802,7 +52853,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52826,7 +52877,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52850,7 +52901,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52874,7 +52925,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52898,7 +52949,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52922,7 +52973,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52946,7 +52997,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52970,7 +53021,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -52994,7 +53045,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53018,7 +53069,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53042,7 +53093,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53066,7 +53117,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53090,7 +53141,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53114,7 +53165,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53138,7 +53189,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53162,7 +53213,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53186,7 +53237,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53210,7 +53261,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53234,7 +53285,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53258,7 +53309,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53282,7 +53333,7 @@
           "h1": 32,
           "largest": 18,
           "ratio": 1.78,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53306,7 +53357,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53330,7 +53381,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53354,7 +53405,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53378,7 +53429,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53402,7 +53453,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53426,7 +53477,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53450,7 +53501,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53474,7 +53525,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53498,7 +53549,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53522,7 +53573,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53546,7 +53597,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53570,7 +53621,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53594,7 +53645,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53618,7 +53669,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53642,7 +53693,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53666,7 +53717,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53690,7 +53741,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53714,7 +53765,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53738,7 +53789,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53762,7 +53813,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53786,7 +53837,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53810,7 +53861,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53834,7 +53885,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53858,7 +53909,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53882,7 +53933,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53906,7 +53957,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53930,7 +53981,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53954,7 +54005,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -53978,7 +54029,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -54002,7 +54053,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -54026,7 +54077,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       },
@@ -54050,7 +54101,7 @@
           "h1": 44,
           "largest": 18,
           "ratio": 2.44,
-          "peers": 6,
+          "peers": 7,
           "share": 0.08
         }
       }
@@ -57105,7 +57156,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "360": {
@@ -57129,7 +57180,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "361": {
@@ -57153,7 +57204,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "390": {
@@ -57177,7 +57228,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "399": {
@@ -57201,7 +57252,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "400": {
@@ -57225,7 +57276,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "401": {
@@ -57249,7 +57300,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "436": {
@@ -57273,7 +57324,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "479": {
@@ -57297,7 +57348,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "480": {
@@ -57321,7 +57372,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "481": {
@@ -57345,7 +57396,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "499": {
@@ -57369,7 +57420,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "500": {
@@ -57393,7 +57444,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "501": {
@@ -57417,7 +57468,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "519": {
@@ -57441,7 +57492,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "520": {
@@ -57465,7 +57516,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "521": {
@@ -57489,7 +57540,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "536": {
@@ -57513,7 +57564,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "559": {
@@ -57537,7 +57588,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "560": {
@@ -57561,7 +57612,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "561": {
@@ -57585,7 +57636,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "599": {
@@ -57609,7 +57660,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "600": {
@@ -57633,7 +57684,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "601": {
@@ -57657,7 +57708,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "639": {
@@ -57681,7 +57732,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "640": {
@@ -57705,7 +57756,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "641": {
@@ -57729,7 +57780,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "676": {
@@ -57753,7 +57804,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "714": {
@@ -57777,7 +57828,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "719": {
@@ -57801,7 +57852,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "720": {
@@ -57825,7 +57876,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "721": {
@@ -57849,7 +57900,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "722": {
@@ -57873,7 +57924,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "768": {
@@ -57897,7 +57948,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "849": {
@@ -57928,7 +57979,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "850": {
@@ -57959,7 +58010,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "851": {
@@ -57990,7 +58041,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "854": {
@@ -58021,7 +58072,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "859": {
@@ -58052,7 +58103,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "860": {
@@ -58083,7 +58134,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "861": {
@@ -58114,7 +58165,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "899": {
@@ -58145,7 +58196,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "900": {
@@ -58176,7 +58227,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "901": {
@@ -58207,7 +58258,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "999": {
@@ -58238,7 +58289,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1000": {
@@ -58269,7 +58320,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1001": {
@@ -58300,7 +58351,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1023": {
@@ -58331,7 +58382,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1024": {
@@ -58362,7 +58413,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1025": {
@@ -58393,7 +58444,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1099": {
@@ -58424,7 +58475,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1100": {
@@ -58455,7 +58506,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1101": {
@@ -58486,7 +58537,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1130": {
@@ -58517,7 +58568,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1138": {
@@ -58548,7 +58599,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1199": {
@@ -58579,7 +58630,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1200": {
@@ -58610,7 +58661,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1201": {
@@ -58641,7 +58692,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1217": {
@@ -58672,7 +58723,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1218": {
@@ -58703,7 +58754,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1219": {
@@ -58734,7 +58785,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1440": {
@@ -58765,7 +58816,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       },
       "1920": {
@@ -58796,7 +58847,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 13,
-          "share": 0.14
+          "share": 0.13
         }
       }
     },
@@ -64090,7 +64141,7 @@
       "721": {
         "findings": [],
         "firstAction": {
-          "y": 394,
+          "y": 364,
           "sel": "a.primary.action-panel-cta"
         },
         "chrome": {
@@ -64114,7 +64165,7 @@
       "722": {
         "findings": [],
         "firstAction": {
-          "y": 394,
+          "y": 364,
           "sel": "a.primary.action-panel-cta"
         },
         "chrome": {

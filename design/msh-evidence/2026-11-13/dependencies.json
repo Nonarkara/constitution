@@ -1,0 +1,20 @@
+{
+  "auditedAt": "2026-11-12T17:39:52.878Z",
+  "parser": "5.12.0",
+  "all": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "production": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  }
+}

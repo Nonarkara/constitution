@@ -1,0 +1,46 @@
+{
+  "before": {
+    "title": "มาตรา 98",
+    "x": 350,
+    "y": 422.234375,
+    "w": 44,
+    "h": 44,
+    "disabled": false,
+    "focus": false,
+    "visibleFocus": false,
+    "outline": "none"
+  },
+  "click": {
+    "title": "มาตรา 99",
+    "x": 350,
+    "y": 34.234375,
+    "w": 44,
+    "h": 44,
+    "disabled": false,
+    "focus": true,
+    "visibleFocus": false,
+    "outline": "none"
+  },
+  "focus": {
+    "title": "มาตรา 99",
+    "x": 350,
+    "y": 34.234375,
+    "w": 44,
+    "h": 44,
+    "disabled": false,
+    "focus": true,
+    "visibleFocus": true,
+    "outline": "solid"
+  },
+  "keyboard": {
+    "title": "มาตรา 100",
+    "x": 350,
+    "y": 34.234375,
+    "w": 44,
+    "h": 44,
+    "disabled": false,
+    "focus": true,
+    "visibleFocus": true,
+    "outline": "solid"
+  }
+}

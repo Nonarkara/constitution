@@ -1,0 +1,7 @@
+
+NOTES (4) — seen, recorded, and not a failure:
+  · the container cliff at 500px was measured — the container "tikki-episodes" was 500px wide at viewport 536px
+  · the container cliff at 640px was measured — the container "settings-card" was 640px wide at viewport 676px
+  · the container cliff at 400px was measured — the container "notebook-controls" was 400px wide at viewport 436px
+  · the container cliff at 850px was measured — the container "dots-map" was 850px wide at viewport 1138px
+  · spatial: 2709 measurements across 43 routes and 63 widths — every hole, orphan, scattered pair and wrap is either fixed or written down   · spatial: every measurement was a fresh load at the width measured, on a real clock — the chrome of each page is recorded, and a chrome that changed is a change the receipt cannot hide

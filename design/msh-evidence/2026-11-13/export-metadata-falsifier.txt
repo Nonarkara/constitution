@@ -1,0 +1,19 @@
+  · sitemap: 42 urls, all resolve
+  · podcast th: 279 episodes, links resolve
+  · podcast en: 279 episodes, links resolve
+  · podcast zh: 279 episodes, links resolve
+  · pages: 46 html files checked; 375 same-page and 6 cross-page fragments verified against real ids
+  · runtime images: 47 referenced from source, checked in public/ and out/
+  · text: 46 files checked for mangled unicode
+  · design: ".pokklong-steps button" is full-width with space-between — fine in a list row (label left, count right), dead air in a single action
+  · design: 1106 css rules parsed and held to the anti-slop laws
+
+  tightest contrast pairs:
+    3.26:1 (needs 3) mild — --edge on --wash — input boundary on a wash panel
+    3.46:1 (needs 3) dark — --edge on --wash — input boundary on a wash panel
+    5.21:1 (needs 4.5) light — --ok on --ok-wash — success text on its wash
+    5.24:1 (needs 4.5) light — --muted on --wash — muted text on a wash panel
+    5.39:1 (needs 4.5) mild — --ok on --ok-wash — success text on its wash
+
+FAIL — 1 problem(s):
+  ✗ export: remove macOS metadata out/illustrations/.DS_Store from the public asset source and rebuild
