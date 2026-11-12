@@ -30,7 +30,7 @@
     "check:thai-phrases": "node scripts/check-thai-phrases.mjs"
   },
   "dependencies": {
-    "fast-xml-parser": "^5.11.2",
+    "fast-xml-parser": "^5.12.0",
     "next": "^16.4.2",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
