@@ -2,8 +2,7 @@
 /**
  * Release gate for the built site. Runs after `next build` and fails loudly.
  *
- * Four checks, all deterministic and all aimed at what a learner actually
- * trips over rather than at tidiness:
+ * Deterministic checks on the files that will reach learners:
  *
  *   1. Balanced CSS comments  A single unterminated /* turns every following
  *      rule into a comment. The build stays green; the page just loses its
@@ -195,6 +194,13 @@ if (!existsSync(OUT)) {
   failures.push("out/ does not exist — run `npm run build` first");
 } else {
   const files = await walk(OUT);
+  // Next copies public/ verbatim; these files should never reach the CDN or precache.
+  for (const file of files) {
+    const name = path.basename(file);
+    if (name === ".DS_Store" || name.startsWith("._")) {
+      failures.push(`export: remove macOS metadata ${file} from the public asset source and rebuild`);
+    }
+  }
   const exists = (rel) => {
     const clean = rel.split("#")[0].split("?")[0];
     if (clean === "" || clean === "/") return existsSync(path.join(OUT, "index.html"));
