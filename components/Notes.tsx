@@ -92,7 +92,7 @@ export function Notes() {
       <div className="intro-copy">
         <StudyArt scene="notes" />
         <div className="intro-text">
-          <h1>{tr(lang, "ความก้าวหน้าของคุณ", "Your progress", "你的进度")}</h1>
+          <h1>{tr(lang, "ความคืบหน้า", "Your progress", "你的进度")}</h1>
           <p>
             {tr(
               lang,

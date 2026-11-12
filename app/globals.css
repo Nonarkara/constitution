@@ -3907,6 +3907,7 @@ footer { flex-wrap:wrap; gap:16px; }
   margin: 0;
 }
 .dig-head button {
+  inline-size: 100%;
   padding: 0;
 }
 .dig-lead {
@@ -4214,6 +4215,10 @@ footer { flex-wrap:wrap; gap:16px; }
 }
 .cram-list dd {
   margin: 0;
+}
+.cram-list dd > strong {
+  display: block;
+  text-wrap: balance;
 }
 .cram-list .cram-mnemonic {
   grid-column: 1 / -1;

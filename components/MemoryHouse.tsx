@@ -151,11 +151,11 @@ export function MemoryHouse() {
           >
             {tr(
               lang,
-              "ลองเรียกคืน 5 ข้อหรือน้อยกว่า",
+              "ลองตอบไม่เกิน 5 ข้อ",
               "Try up to five recall questions",
               "尝试最多五道回忆题",
-            )}{" "}
-            →
+            )}
+            <span aria-hidden="true">→</span>
           </button>
         <p>
           <strong>{p.check[lang]}</strong>
