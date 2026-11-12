@@ -218,6 +218,13 @@ h3,
 p {
   margin: 0 0 18px;
 }
+/* A heading never leaves one word alone on its second line
+   ("ความก้าวหน้าของ / คุณ" at 390px). Balanced wrap, house rule 14.1.6. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
 /* Prose stops at A4 measure. Measured on /practice/ at 1440, --body 18px:
    65ch rendered 702px = 39.0em and ran to 94 Thai characters on the longest
    line; 58ch renders 626px = 34.8em and 82 characters. So this narrows the

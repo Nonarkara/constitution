@@ -152,7 +152,7 @@ CUE = {
     "scene-wat-phra-kaew": ("วัดพระแก้ว", "มาตรา 255"),
     "scene-yaowarat": ("เยาวราช", "มาตรา 1–279"),
     "scene-sukhumvit": ("สุขุมวิท", "3 แหล่งข่าว"),
-    "scene-democracy-aerial": ("อนุสาวรีย์ภูมิพลอดุลยาเดช", "16 หมวด"),
+    "scene-democracy-aerial": ("อนุสาวรีย์ประชาธิปไตย", "16 หมวด"),
 }
 
 PAPER_TINT = (247, 243, 233)
