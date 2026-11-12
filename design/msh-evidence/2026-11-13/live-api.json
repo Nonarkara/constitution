@@ -1,0 +1,59 @@
+{
+  "verifiedAt": "2026-11-12T17:53:54.945877+00:00",
+  "url": "https://constitution.nonarkara.org/api/news",
+  "GET": {
+    "status": 200,
+    "bytes": 92528,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cache-Control": "public, max-age=300",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Allow": null
+    },
+    "headlines": 200,
+    "sources": [
+      {
+        "id": "matichon",
+        "status": "ok",
+        "lastSuccess": "2026-11-12T12:00:10.458Z",
+        "count": 18
+      },
+      {
+        "id": "matichon-constitution",
+        "status": "ok",
+        "lastSuccess": "2026-11-12T12:00:10.458Z",
+        "count": 4
+      },
+      {
+        "id": "theactive",
+        "status": "ok",
+        "lastSuccess": "2026-11-12T12:00:10.458Z",
+        "count": 0
+      }
+    ],
+    "generatedAt": "2026-11-12T17:53:55.131Z"
+  },
+  "HEAD": {
+    "status": 200,
+    "bytes": 0,
+    "headers": {
+      "Content-Type": "application/json",
+      "Cache-Control": "public, max-age=14400",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Allow": null
+    }
+  },
+  "OPTIONS": {
+    "status": 405,
+    "bytes": 18,
+    "headers": {
+      "Content-Type": "text/plain;charset=UTF-8",
+      "Cache-Control": null,
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Allow": "GET, HEAD"
+    }
+  }
+}

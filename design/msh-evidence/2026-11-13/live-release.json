@@ -1,0 +1,17 @@
+{
+  "sourceCommit": "2d3827bd50b89098ca29d2504d64ac03a73d48ea",
+  "workerVersion": "30313356-e390-409b-b91f-052367b8e9f9",
+  "previousWorkerVersion": "e2c0c420-8d91-47d1-8b35-cfefb085cdc2",
+  "exportSha256": "04c63eb9e9221328c586846b978d661b175c46248e71cbf7ce3cd373759049d9",
+  "files": 2046,
+  "revision": "91c18b3e10612240",
+  "recordedAt": "2026-11-12T17:36:35.533052+00:00",
+  "verifiedAt": "2026-11-12T17:54:07Z",
+  "byteMatches": [
+    114,
+    114,
+    114
+  ],
+  "allPageBodies": 43,
+  "finderMetadataStatus": 404
+}

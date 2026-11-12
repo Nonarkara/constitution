@@ -1,0 +1,27 @@
+{
+  "base": "https://constitution.nonarkara.org",
+  "at": "2026-11-12T17:53:31.747Z",
+  "width": 390,
+  "height": 844,
+  "large": true,
+  "report": [
+    {
+      "route": "/notes/",
+      "previous": "มาตรา 98",
+      "next": "มาตรา 99",
+      "width": 44,
+      "height": 44,
+      "action": "Enter on focused next section"
+    },
+    {
+      "route": "/cram/",
+      "action": "Cover then recall and reveal one fact",
+      "fact": "500 คน (เขต 400 + บัญชีรายชื่อ 100)"
+    },
+    {
+      "route": "/memory/",
+      "action": "Start recall, see a question, exit to the selected room",
+      "question": "มีผู้เสนอแบ่งประเทศไทยเป็นหลายรัฐเอกราช ข้อใดตรงกับมาตรา 1?"
+    }
+  ]
+}
