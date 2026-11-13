@@ -742,6 +742,10 @@ let collected = [];
 // would be a guarantee about nothing.
 const upstreamStatus = new Map();
 let completedRoutes = 0;
+// When the harness last posted anything. A browser that is alive but has
+// stopped reporting is hung, not slow: it is restarted and resumes after the
+// last route it finished, instead of holding the sweep for the whole watchdog.
+let lastPost = Date.now();
 function newResultsPromise() {
   return new Promise((resolve) => {
     resultsResolve = resolve;
@@ -751,6 +755,7 @@ function takeResults(req, res) {
   const chunks = [];
   req.on("data", (c) => chunks.push(c));
   req.on("end", () => {
+    lastPost = Date.now();
     res.writeHead(204);
     res.end();
     let payload = null;
@@ -1304,6 +1309,15 @@ for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
   const timeout = Symbol("timeout");
   const died = Symbol("died");
   const gone = new Promise((r) => child.on("close", () => r(died)));
+  const stalled = Symbol("stalled");
+  const STALL_MS = Number(process.env.SPATIAL_STALL_MS) || 6 * 60 * 1000;
+  lastPost = Date.now();
+  let stallTimer = null;
+  const stall = new Promise((r) => {
+    stallTimer = setInterval(() => {
+      if (Date.now() - lastPost > STALL_MS) r(stalled);
+    }, 5000);
+  });
   // The watchdog is a TIMER, and a live timer holds the event loop open. The
   // browser usually wins the race, and the losing timer then kept the process
   // alive for 45 minutes after the verdict had been printed: a PASSING run
@@ -1315,11 +1329,13 @@ for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
   const got = await Promise.race([
     waiting,
     gone,
+    stall,
     new Promise((r) => {
       watchdog = setTimeout(() => r(timeout), RUN_TIMEOUT_MS);
     }),
   ]);
   if (watchdog) clearTimeout(watchdog);
+  if (stallTimer) clearInterval(stallTimer);
   // LOCAL PATCH (kuching-ioc): kill the whole process group, not just the
   // browser process. Chrome's helpers outlive a SIGKILL to the parent, and a
   // gate that leaks a browser per failed attempt fails itself.
@@ -1332,7 +1348,7 @@ for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
       /* already gone */
     }
   }
-  if (got !== timeout && got !== died) {
+  if (got !== timeout && got !== died && got !== stalled) {
     payload = got;
     chromeError = null;
     break;
@@ -1340,8 +1356,10 @@ for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
   chromeError =
     got === died
       ? new Error("the browser exited before it reported its measurements")
+      : got === stalled
+      ? new Error(`the browser stopped reporting for ${Math.round(STALL_MS / 1000)}s`)
       : new Error(`the browser did not finish within ${Math.round(RUN_TIMEOUT_MS / 60000)} minutes`);
-  console.error(`  · Chrome attempt ${attempt}/${MAX_ATTEMPTS} ${got === died ? "exited early" : "did not finish"} — retrying`);
+  console.error(`  · Chrome attempt ${attempt}/${MAX_ATTEMPTS} ${got === died ? "exited early" : got === stalled ? "stalled" : "did not finish"} — retrying`);
   try {
     rmSync(attemptProf, { recursive: true, force: true });
   } catch {
