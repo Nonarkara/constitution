@@ -107,6 +107,15 @@ announcement of results, §143 gives the 105 days to the House, §83 never
 mentions §86, and the corpus says 众议院 and 监察专员, so the catalogue says
 众议院 and 监察专员 too.
 
+### 11. A browser that stops reporting is hung, not slow
+
+The sweep drove one browser through every route. A browser that is alive but
+has stopped reporting is not slow — it is hung — and the gate held the whole
+sweep for the watchdog budget and then reported a failure that was really a
+stall. The harness posts a chunk after every route, so the gate knows when
+the browser last spoke: six minutes of silence is a stall, the browser is
+killed, and the sweep resumes after the last route it finished.
+
 ---
 
 ## Changed
@@ -167,7 +176,12 @@ four other projects copy:
    first measurement, so a build that rewrites the directory mid-sweep can no
    longer serve one sweep two different sites.
 4. **A fresh frame for every route**, so the sweep cannot die on the state it
-   accumulated — and the retry budget is twelve, not five.
+   accumulated.
+5. **A watchdog on the browser.** The harness posts a chunk after every
+   route, so the gate knows when the browser last spoke; six minutes of
+   silence is a stall, the browser is killed, and the sweep resumes after the
+   last route it finished instead of starting again. The retry budget is
+   twelve, not five.
 
 ### The streets
 
@@ -184,6 +198,23 @@ with the terms.
 ---
 
 ## Verified
+
+### The parallel work, taken and checked
+
+Three other agents worked this codebase while this round was open, and
+their work was audited rather than assumed:
+
+- **The catalogue was fact-checked against the statute** and the errors were
+  corrected before anything was signed (§99, §109, §143, §83, the royal
+  mnemonic, the Chinese vocabulary).
+- **The Thai spacer had a real defect** — it deleted characters and cut
+  words — and the banks were re-spaced from the originals with the corrected
+  tool. The gate now measures 21,676 stretches and every one of them is what
+  the tool produces.
+- **The live release was verified** — the question-text repair, the
+  `fast-xml-parser` 5.12.0 upgrade for the news feed parser, the heading
+  balance and the monument caption — and deployed as revision
+  `91c18b3e10612240`, which is the build the receipt records.
 
 ### The suite
 
@@ -237,12 +268,12 @@ eye has to do, and nothing else.
 
 ## Remaining
 
-1. **The spatial receipt has not been re-recorded on the final build.** The
-   instrument is fixed — frame by path, rendered before it is measured, a
-   snapshot of the directory, a fresh frame per route, twelve attempts — but
-   the receipt in `design/spatial-baseline.json` still describes the build
-   before the rule catalogue, the streets and the re-spacing. Until it is
-   re-recorded, the receipt and the site disagree, and the gate will say so.
+1. **The receipt was re-recorded in chunks.** The sweep that hangs at the
+   fifteenth route when it is run in one go was taken in eight chunks, each
+   measured fresh, and the receipt records the chunks rather than pretending
+   they were one run. The receipt's build — revision `91c18b3e10612240` — is
+   the build the live site is serving, so the receipt describes the shipped
+   bytes.
 2. **Chapter 17 has no picture.** Nine rules — the transitory numbers, the
    first Senate's 250, the first election's 150 days — live in the attic,
    because the house's own design keeps the transitional chapter out of the
@@ -267,6 +298,18 @@ eye has to do, and nothing else.
    Copying the new bytes without re-baselining those four receipts would break
    four gates; re-baselining them is four more sweeps and four more rounds of
    fixing whatever the new instrument finds, which is each project's own work.
-6. **The receipt covers 43 routes and 61 widths.** It records what it measured.
-   It is not a substitute for a second reviewer, and this round's author is
-   not a second reviewer.
+6. **The language buttons are smaller than the house's other controls.**
+   The theme picker gives its buttons a 44px target; the three language
+   buttons get their size from their padding alone, and 32px is a legal size
+   in this house. Giving them the theme buttons' 44px minimum would grow the
+   header by 12px on every page — inside the 16px chrome tolerance, but a
+   change to every page's first screen, so it was held for the owner rather
+   than taken. It is two lines of CSS and one re-record.
+7. **The site answers on plain HTTP.** HSTS is set with `includeSubDomains`,
+   so a browser that has loaded the site once will upgrade it by itself, but
+   the first request is still served over HTTP. Turning on "Always Use
+   HTTPS" needs a Cloudflare token with Zone Settings: Edit, which the
+   current login does not carry.
+8. **The receipt covers 43 routes and 63 widths.** It records what it
+   measured. It is not a substitute for a second reviewer, and the work in
+   this round has had no independent review.
