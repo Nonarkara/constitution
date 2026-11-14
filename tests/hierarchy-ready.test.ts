@@ -2,10 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 // @ts-ignore JavaScript helper is embedded verbatim in the browser gate.
 import { waitForHierarchy } from '../scripts/hierarchy-ready.mjs';
-function trial(absent:(time:number)=>boolean, duplicate=false, studyReady=(time:number)=>true) {
+function trial(absent:(time:number)=>boolean, duplicate=false, studyReady=(time:number)=>true, loading=(time:number)=>false) {
  let time=0, successAt:number|null=null, error=''; const queue:Array<()=>void>=[];
  const title={getBoundingClientRect:()=>({x:0,y:20,width:300,height:44})};
- const main={getAttribute:()=>studyReady(time)?"true":"false",querySelector:()=>absent(time)?null:title,getBoundingClientRect:()=>({height:800}),querySelectorAll:()=>duplicate?[title,title]:[title]};
+ const main={getAttribute:()=>studyReady(time)?"true":"false",querySelector:(selector:string)=>selector==='[data-page-loading]'?loading(time):absent(time)?null:title,getBoundingClientRect:()=>({height:800}),querySelectorAll:()=>duplicate?[title,title]:[title]};
  const doc={readyState:'complete',fonts:{status:'loaded'},querySelector:()=>main};
  waitForHierarchy(()=>doc,()=>{successAt=time},(e:string)=>{error=e},()=>true,{now:()=>time,later:(fn:()=>void)=>queue.push(fn)});
  while(queue.length){time+=60;queue.shift()!();assert.ok(time<=12100);}
@@ -24,4 +24,9 @@ test('duplicate titles still reach the hierarchy validator',()=>{
 test('persisted study state must load before the page is measured',()=>{
  const result=trial(()=>false,false,t=>t>=600);
  assert.equal(result.successAt,840);
+});
+
+test('a loading fallback with a visible title cannot satisfy readiness',()=>{
+ assert.equal(trial(()=>false,false,()=>true,t=>t<600).successAt,840);
+ assert.match(trial(()=>false,false,()=>true,()=>true).error,/readiness-timeout/);
 });

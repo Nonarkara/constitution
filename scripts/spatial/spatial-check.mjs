@@ -59,6 +59,7 @@
  *   --routes a,b,c     measure only these routes (default: every built route)
  *   --widths a,b,c     the widths to sweep (default: 360,480,768,1024,1440,1920)
  *   --base <url>       measure a running site instead of a directory
+ *   --require-title    wait for a visible main heading before measuring
  *   --update           write the measurements into the baseline
  *   --report           print the measurements, the decisions and the notes —
  *                      and then fall through to the verdict, so a report run
@@ -116,6 +117,7 @@ const BASELINE = arg("baseline", path.join("design", "spatial-baseline.json"));
 const ROUTES_ARG = arg("routes", null);
 const WIDTHS_ARG = arg("widths", null);
 const BASE = arg("base", null);
+const REQUIRE_TITLE = argv.includes("--require-title");
 const UPDATE = argv.includes("--update");
 const REPORT = argv.includes("--report");
 
@@ -281,6 +283,7 @@ pre{font:11px/1.35 ui-monospace,Menlo,monospace;white-space:pre-wrap;word-break:
 var WIDTHS = __WIDTHS__;
 var ROUTES = __ROUTES__;
 var PROBE = __PROBE__;
+var REQUIRE_TITLE = __REQUIRE_TITLE__;
 // How many routes are already measured. Another agent on the same machine
 // can take this browser out from under the sweep; the gate then picks up
 // where it stopped instead of starting the whole thing again.
@@ -490,37 +493,23 @@ function isFresh(d, navStart, token) {
 // drift, and a cell with nothing in it has neither. So the one cell that
 // proves nothing is the one the gate is blind to.
 //
-// The hierarchy gate already waits for exactly this, in
-// scripts/hierarchy-ready.mjs: a title with a real box, inside a main
-// that is not standing at data-study-ready="false", with the fonts
-// loaded. The rule belongs to both gates, so it is written once and used
-// here.
-//
-// A page with no title at all is not a failure — some pages have no h1 —
-// so for those the main element's own box is the readiness signal. Without
-// a main landmark, use the body, just as the probe and loadPage do. A blank
-// body still has to produce a real content-height box before it can pass.
+// Some sites have untitled pages. Projects with titled routes can require one.
+// A page may mark its loading placeholder even when it includes a visible h1.
+function pageReady(d) {
+  var main = d.querySelector('main#content') || d.querySelector('main') || d.body;
+  if (!main || main.getAttribute('data-study-ready') === 'false' ||
+      main.querySelector('[data-page-loading]')) return false;
+  if (d.fonts && d.fonts.status !== 'loaded') return false;
+  var title = main.querySelector('h1');
+  if (REQUIRE_TITLE && !title) return false;
+  var r = (title || main).getBoundingClientRect();
+  return r.width > 0 && r.height > 0;
+}
+
 function rendered(d, cb) {
   var start = Date.now();
   (function step() {
-    var main = d.querySelector('main#content') || d.querySelector('main') || d.body;
-    var title = main && main.querySelector('h1');
-    var ready = !main || main.getAttribute('data-study-ready') !== 'false';
-    var fonts = true;
-    try { fonts = !d.fonts || d.fonts.status === 'loaded'; } catch (e) { fonts = true; }
-    var shown = false;
-    try {
-      if (title) {
-        var r = title.getBoundingClientRect();
-        shown = r.width > 0 && r.height > 0;
-      } else if (main) {
-        var m = main.getBoundingClientRect();
-        shown = m.height > 0;
-      } else {
-        shown = false;
-      }
-    } catch (e) { shown = false; }
-    if (ready && fonts && shown) return cb(true);
+    if (pageReady(d)) return cb(true);
     if (Date.now() - start > 12000) return cb(false);
     setTimeout(step, 25);
   })();
@@ -620,20 +609,15 @@ function loadPage(route, w, h, cb) {
             return finish({
               route: route,
               w: w,
-              error: 'the page never rendered a title',
+              error: 'the page did not finish rendering',
             });
           }
           return settle(d, function () {
-          if (token !== TOKEN) return;
-          // The page may have navigated while we settled. If it did, the
-          // window we captured now belongs to a different document, and the
-          // probe is not there any more.
-          //
-          // The window proxy is REUSED across a same-origin navigation, so
-          // comparing defaultView cannot tell the two documents apart —
-          // the probe's presence is the only honest test.
-          if (typeof wv.__SPATIAL_MEASURE__ !== 'function') return wait();
-          measureDoc(d, route, w, finish);
+            if (token !== TOKEN) return;
+            // Hydration can remove the title or put a fallback back while
+            // the layout settles. Recheck the same document before sampling.
+            if (f.contentDocument !== d || !pageReady(d)) return wait();
+            measureDoc(d, route, w, finish);
           });
         });
       }
@@ -770,6 +754,7 @@ run();
 function harnessHtml(widths, routes, skip) {
   return HARNESS.replace("__WIDTHS__", JSON.stringify(widths))
     .replace("__ROUTES__", JSON.stringify(routes))
+    .replace("__REQUIRE_TITLE__", String(REQUIRE_TITLE))
     .replace("__SKIP__", String(skip || 0))
     .replace("__PROBE__", JSON.stringify(PROBE_SRC));
 }

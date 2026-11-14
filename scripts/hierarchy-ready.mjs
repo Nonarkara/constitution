@@ -12,6 +12,7 @@ export function waitForHierarchy(readDocument, ready, fail, current = () => true
     const title = main?.querySelector('h1');
     const rect = title?.getBoundingClientRect();
     const visible = d?.readyState === 'complete' && main?.getAttribute?.('data-study-ready') !== 'false' &&
+      !main?.querySelector('[data-page-loading]') &&
       (!d.fonts || d.fonts.status === 'loaded') && rect?.width > 0 && rect?.height > 0;
     const signature = visible ? [title, rect.x, rect.y, rect.width, rect.height, main.getBoundingClientRect().height] : null;
     const same = signature && previous && signature.every((value, i) => value === previous[i]);

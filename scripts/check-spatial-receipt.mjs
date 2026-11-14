@@ -33,7 +33,7 @@ try {
     }
     const file = args[args.indexOf("--json") + 1];
     const instrument = fileURLToPath(new URL("./spatial/spatial-check.mjs", import.meta.url));
-    const result = spawnSync(process.execPath, [instrument, ...args], { stdio: "inherit" });
+    const result = spawnSync(process.execPath, [instrument, "--require-title", ...args], { stdio: "inherit" });
     if (result.error) throw result.error;
     if (result.status === 0) verifyReceipt(file);
     else process.exitCode = result.status ?? 1;
