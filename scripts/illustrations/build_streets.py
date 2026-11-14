@@ -38,12 +38,13 @@ import sys
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 ROOT = Path(__file__).resolve().parents[2]
 MASTERS = ROOT / "design" / "illustrations" / "streets"
 SERVED = ROOT / "public" / "illustrations"
 MANIFEST = ROOT / "design" / "illustrations" / "street-manifest.json"
+ALPHA_MANIFEST = ROOT / "design" / "illustrations" / "alpha-manifest.json"
 
 # The paper of the house and the ink of the house. The street is drawn on the
 # same paper the plate is drawn on, so a plate standing on it belongs to it.
@@ -61,14 +62,27 @@ INK = (36, 37, 31)
 #   scale  — how tall the figure is, as a fraction of the street's height
 #   left   — the figure's centre, as a fraction of the street's width
 #   ground — the line she stands on, as a fraction of the street's height
+#
+# THE SCALE IS THE STREET'S, NOT THE DRAWING'S.
+#
+# A figure the size of the drawing itself looks pasted on. The avenues are
+# drawn with people in them — the pedestrian in the middle of Ratchadamnoen
+# is a fifth of the picture's height — and a person who is larger than the
+# people in the street is not IN the street. She is on it.
+#
+# It was measured, not guessed. The plates render at 100 pixels wide, and at
+# that size the old avenue figure was a brown desk with a girl in it, pasted
+# over the corner of the road: a quarter of the picture was furniture. At the
+# street's own scale she is a person among people, and the avenue is a
+# street.
 SCENES = [
     {
         "name": "scene-ratchadamnoen",
         "street": "raw-ratchadamnoen-street.png",
         "figure": "tikki-exam-pastel.webp",
-        "scale": 0.44,
-        "left": 0.26,
-        "ground": 0.92,
+        "scale": 0.19,
+        "left": 0.62,
+        "ground": 0.63,
         "place": "Ratchadamnoen Avenue",
         "note": "the civic avenue, seen at eye level",
     },
@@ -206,12 +220,30 @@ def stamp(scene: dict, image: Image.Image) -> Image.Image:
     return image
 
 
+def trim_aura(figure: Image.Image) -> Image.Image:
+    """Take the pastel's soft halo off the drawing's edge.
+
+    The house's plates are crayon drawings with a soft white aura around the
+    ink — it is how a crayon edge looks. On paper, against the house's own
+    ink, that aura is the drawing. On a line drawing, in screentone, it is a
+    white rim, and a white rim around a pasted drawing is what the eye calls
+    a STICKER.
+
+    So the alpha is eroded by a couple of pixels before the drawing is laid
+    down: the crayon edge goes, the line arrives, and the figure belongs to
+    the street instead of hovering over it.
+    """
+    alpha = figure.getchannel("A")
+    figure.putalpha(alpha.filter(ImageFilter.MinFilter(5)))
+    return figure
+
+
 def compose(scene: dict) -> Image.Image:
     street = paperise(Image.open(MASTERS / scene["street"]))
     if street.width != STREET_WIDTH:
         height = round(street.height * STREET_WIDTH / street.width)
         street = street.resize((STREET_WIDTH, height), Image.LANCZOS)
-    figure = Image.open(SERVED / scene["figure"]).convert("RGBA")
+    figure = trim_aura(Image.open(SERVED / scene["figure"]).convert("RGBA"))
     sw, sh = street.size
     target_h = int(sh * scene["scale"])
     ratio = target_h / figure.height
@@ -263,7 +295,39 @@ def build() -> dict:
         "scenes": entries,
     }
     MANIFEST.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    record_kept_bytes(entries)
     return manifest
+
+
+def record_kept_bytes(entries) -> None:
+    """Record the new bytes of the civic scenes in the illustration manifest.
+
+    The five scenes keep their own ground, so they are not re-derived from a
+    master by the illustration pipeline — their BYTES are recorded instead, in
+    the manifest that says so. That record has to be written by the thing
+    that makes the scenes, or the two drift: the scenes change, the manifest
+    keeps the old hashes, and the gate reports that the file on disk is not
+    the file that was recorded — which is true, and useless, because the file
+    on disk is the one this script just wrote.
+    """
+    if not ALPHA_MANIFEST.exists():
+        return
+    manifest = json.loads(ALPHA_MANIFEST.read_text(encoding="utf-8"))
+    kept = manifest.get("kept")
+    if not isinstance(kept, list):
+        return
+    by_name = {e["name"]: e for e in entries}
+    changed = False
+    for entry in kept:
+        fresh = by_name.get(entry.get("name"))
+        if not fresh:
+            continue
+        entry["sha256"] = fresh["sha256"]
+        entry["bytes"] = fresh["bytes"]
+        entry["output_size"] = fresh["output_size"]
+        changed = True
+    if changed:
+        ALPHA_MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
 
 def check() -> int:

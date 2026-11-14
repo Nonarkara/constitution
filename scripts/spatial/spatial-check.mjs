@@ -66,7 +66,8 @@
  *   --json <path>      also write the raw measurements to a file
  */
 import { createServer } from "node:http";
-import { readdir } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync, mkdirSync, statSync, rmSync, readdirSync, cpSync, mkdtempSync } from "node:fs";
 import { execFileSync, spawn } from "node:child_process";
 import { tmpdir, homedir } from "node:os";
@@ -133,9 +134,35 @@ const REPORT = argv.includes("--report");
 // one coherent site.
 const SRC_DIR = path.resolve(String(DIR));
 const DIST = BASE ? null : existsSync(SRC_DIR) ? snapshotDir(SRC_DIR) : null;
+// The fingerprint is taken NOW, while the snapshot still exists. It is
+// deleted when the run ends, and the receipt is written at the very end.
+const BUILD_FINGERPRINT = await buildFingerprint();
 const JSON_OUT = arg("json", null);
 
 const DEFAULT_WIDTHS = [360, 480, 768, 1024, 1440, 1920];
+
+// The browser is retired after this many routes and replaced with a fresh one.
+//
+// A sweep of forty-odd routes drives one browser through every one of them,
+// and each route is a fresh document with its own renderer. The browser is
+// given away to accumulate: pages, timers, canvases, WebGL contexts, and the
+// occasional wedged renderer that stops answering without ever dying.
+//
+// The gate used to learn about that only from the watchdog — six minutes of
+// silence, then a restart, and then the SAME browser again for the next
+// stretch of work. A browser that has already wedged was given the work
+// again.
+//
+// So the browser is retired on purpose, while it is still answering: after
+// ROUTES_PER_BROWSER routes it is closed and a new one takes the rest. The
+// cost is one browser start. The saving is that a browser which has begun to
+// wedge never holds the sweep for the length of the watchdog.
+//
+// Set SPATIAL_ROUTES_PER_BROWSER=0 to run every route in one browser, which is
+// what a quiet machine wants and what the measurements themselves do not
+// care about: the numbers are the same either way, because each route is
+// measured in a fresh document either way.
+const ROUTES_PER_BROWSER = Number(process.env.SPATIAL_ROUTES_PER_BROWSER) || 12;
 const DEFAULT_LIMITS = {
   // A hole must be at least this tall to be a hole (px).
   deadGap: 72,
@@ -655,6 +682,29 @@ function progress(done, total, route) {
   } catch (e) { /* progress is a courtesy, not a result */ }
 }
 
+// A LIVENESS signal, not a result.
+//
+// The watchdog on the other side of this connection asks one question: is the
+// browser still working? Before this, the browser only spoke once a whole
+// route was done — sixty-three measurements deep. On a busy machine that is
+// minutes of silence, and silence is indistinguishable from a hang: the
+// watchdog had to wait its full six minutes before it dared to call the
+// browser dead, and a browser that was merely slow paid the same price.
+//
+// So the browser says something after every single measurement. A measurement
+// takes a moment; a heartbeat takes nothing. The watchdog can now tell a
+// slow machine from a dead one in seconds, and a slow machine is never
+// mistaken for a dead one.
+function heartbeat(route, w) {
+  try {
+    fetch('/__spatial-results', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ heartbeat: true, route: route, w: w })
+    });
+  } catch (e) { /* a heartbeat is a courtesy, not a result */ }
+}
+
 // A FRESH frame for every route.
 //
 // The gate used to measure every route in one frame. A frame that has held
@@ -691,6 +741,9 @@ function run() {
     loadPage(route, W, heightFor(W), function (rec) {
       rec.route = route; rec.w = W;
       results.push(rec);
+      // Say that this measurement is done, so the other side can tell a slow
+      // machine from a dead browser.
+      heartbeat(route, W);
       j++;
       if (j >= WIDTHS.length) {
         j = 0;
@@ -742,6 +795,9 @@ let collected = [];
 // would be a guarantee about nothing.
 const upstreamStatus = new Map();
 let completedRoutes = 0;
+// How many routes the CURRENT browser has been asked to do. The browser is
+// retired when it reaches its share, and the next one starts from here.
+let batchStartRoutes = 0;
 // When the harness last posted anything. A browser that is alive but has
 // stopped reporting is hung, not slow: it is restarted and resumes after the
 // last route it finished, instead of holding the sweep for the whole watchdog.
@@ -764,6 +820,13 @@ function takeResults(req, res) {
     } catch (e) {
       payload = { error: "the harness posted something that is not JSON" };
     }
+    if (payload && payload.heartbeat) {
+      // LIVENESS ONLY. It carries no measurement, so it must never resolve
+      // the results promise: a gate that finished on a heartbeat would report
+      // a sweep that measured nothing, and a heartbeat that arrived after the
+      // sweep was already over must not undo a verdict.
+      return;
+    }
     if (payload && payload.progress) {
       process.stderr.write(`  · ${payload.progress}\n`);
       return;
@@ -775,6 +838,15 @@ function takeResults(req, res) {
       if (typeof payload.routes === "number") completedRoutes = payload.routes;
       collected.push(...payload.chunk);
       if (payload.done && resultsResolve) resultsResolve({ measurements: collected });
+      else if (
+        ROUTES_PER_BROWSER > 0 &&
+        completedRoutes - batchStartRoutes >= ROUTES_PER_BROWSER &&
+        resultsResolve
+      ) {
+        // This browser has done its share, and it is still answering. Retire
+        // it now, while it is healthy, rather than later, when it is not.
+        resultsResolve({ recycle: true, routes: completedRoutes });
+      }
       return;
     }
     if (resultsResolve) resultsResolve(payload);
@@ -887,10 +959,77 @@ function isAssetPath(p) {
   return /\.[a-z0-9][a-z0-9-]{1,}$/i.test(p);
 }
 
-async function discoverRoutes() {
-  if (ROUTES_ARG && typeof ROUTES_ARG === "string") {
-    return ROUTES_ARG.split(",").map((r) => r.trim()).filter(Boolean);
+/**
+ * The fingerprint of the thing that was measured.
+ *
+ * Every file's path and its bytes, hashed in order — the same rule the
+ * offline manifest uses for its revision, so the receipt and the shell's own
+ * revision can be compared without a conversion. A live sweep has no
+ * directory to fingerprint, and says so rather than inventing one.
+ */
+async function buildFingerprint() {
+  if (!DIST) return null;
+  const files = [];
+  async function walk(dir) {
+    for (const entry of await readdir(dir, { withFileTypes: true })) {
+      const p = path.join(dir, entry.name);
+      if (entry.isDirectory()) await walk(p);
+      else files.push(p);
+    }
   }
+  await walk(DIST);
+  files.sort();
+  const hash = createHash("sha256");
+  for (const file of files) {
+    hash.update(path.relative(DIST, file));
+    hash.update(await readFile(file));
+  }
+  return {
+    files: files.length,
+    exportSha256: hash.digest("hex"),
+    recordedAt: new Date().toISOString(),
+  };
+}
+
+/**
+ * The routes this run will measure — and the ones it cannot.
+ *
+ * A run told to measure "/read/" and given "/reed/" must say so at once, and
+ * say WHICH route it does not have. The alternative is what this gate used to
+ * do: load a page that is not there, wait for it to arrive, time out, and
+ * report "the page never arrived" — a true sentence about a page nobody asked
+ * for, and useless to whoever has to fix it.
+ *
+ * It is worse than useless on a long sweep. A sweep told to measure forty
+ * routes and handed one route that does not exist spends the whole run on a
+ * page that cannot be measured, and the browser is restarted with the same
+ * impossible instruction every time. The gate then reports a failure that
+ * looks like a broken browser and is really a comma in the wrong place.
+ *
+ * So the routes asked for are checked against the routes that exist, BEFORE
+ * a browser is started, and a route that does not exist is named.
+ */
+function selectRoutes(discovered, requested) {
+  if (!requested) return discovered;
+  const known = new Set(discovered);
+  const unknown = requested.filter((r) => !known.has(r));
+  if (unknown.length) {
+    console.error(
+      `\nFAIL — ${unknown.length} of the ${requested.length} route(s) asked for are not in this build.\n` +
+        unknown.map((r) => `  ✗ ${r}\n`).join("") +
+        `  Nothing was measured. Run the gate without --routes to see the pages this build has.\n` +
+        `  (Routes are separated by COMMAS: --routes "/,/read/".)\n`,
+    );
+    process.exit(1);
+  }
+  return requested;
+}
+
+async function discoverRoutes() {
+  const requested =
+    ROUTES_ARG && typeof ROUTES_ARG === "string"
+      ? ROUTES_ARG.split(",").map((r) => r.trim()).filter(Boolean)
+      : null;
   if (BASE) {
     // A deployed site has no directory to walk, so its pages are found by
     // reading the sitemap AND the links on the home page — both, because
@@ -960,7 +1099,7 @@ async function discoverRoutes() {
     // advertises it or not. The receipt is the contract.
     for (const rt of Object.keys((baseline && baseline.routes) || {})) routes.add(rt);
 
-    return [...routes].sort();
+    return selectRoutes([...routes].sort(), requested);
   }
   const root = SRC_DIR;
   if (!existsSync(root)) {
@@ -994,7 +1133,7 @@ async function discoverRoutes() {
   }
   await walk(DIST, "");
   routes.sort();
-  return routes;
+  return selectRoutes(routes, requested);
 }
 
 // ---------------------------------------------------------------- the baseline
@@ -1244,6 +1383,12 @@ let chromeError = null;
 // sweep that is killed at the twentieth minute should try again rather than
 // report a failure that is really a collision.
 //
+// Twelve is the budget for FAILURES. The planned retirements — a browser
+// that has done its share of the routes and is replaced while it is still
+// healthy — are not failures, and they are added on top, because a budget
+// that cannot cover the work it plans to do is a budget that reports a false
+// failure at the end of a long sweep.
+//
 // Five was not enough. A confirmation sweep on a busy machine lost its
 // browser four times to the same neighbour and finished on the fifth
 // attempt — the budget was enough, barely, and the recording needed more.
@@ -1255,13 +1400,15 @@ let chromeError = null;
 // The attempts are not free, so the budget stays finite: twelve is four
 // more than the worst recorded run, and each attempt is bounded by the
 // watchdog above.
-const MAX_ATTEMPTS = 12;
+const MAX_ATTEMPTS = 12 + Math.ceil(routes.length / Math.max(1, ROUTES_PER_BROWSER));
 for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
   // Pick up where the last attempt stopped.
   if (attempt > 1) console.error(`  · resuming after ${completedRoutes} route(s)`);
   // A FRESH profile per attempt: a browser that was killed leaves a dirty
   // profile behind, and the next attempt would fail for the wrong reason.
   const attemptProf = attempt === 1 ? prof : `${prof}-${attempt}`;
+  // This browser starts here and is retired when it has done its share.
+  batchStartRoutes = completedRoutes;
   const waiting = newResultsPromise();
   const child = spawn(
     CHROME,
@@ -1310,7 +1457,18 @@ for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
   const died = Symbol("died");
   const gone = new Promise((r) => child.on("close", () => r(died)));
   const stalled = Symbol("stalled");
-  const STALL_MS = Number(process.env.SPATIAL_STALL_MS) || 6 * 60 * 1000;
+  // Three minutes, not six.
+  //
+  // The browser sends a heartbeat after every single measurement, so silence
+  // now means the browser has stopped answering — not that it is busy. The
+  // slowest a single measurement can be is bounded by the harness itself
+  // (thirty seconds for the page to arrive, twelve for it to render, five to
+  // settle), so three minutes of silence is a dead browser and nothing else.
+  //
+  // Before the heartbeat, the browser spoke once per ROUTE — sixty-three
+  // measurements deep — so six minutes of silence was the only honest
+  // threshold, and a slow machine paid for a dead one's mistake.
+  const STALL_MS = Number(process.env.SPATIAL_STALL_MS) || 3 * 60 * 1000;
   lastPost = Date.now();
   let stallTimer = null;
   const stall = new Promise((r) => {
@@ -1349,6 +1507,22 @@ for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     }
   }
   if (got !== timeout && got !== died && got !== stalled) {
+    // A RECYCLE is not a failure. The browser reached the end of its share
+    // while it was still answering, and a fresh one is about to take the
+    // rest. It must not be counted as an attempt that went wrong, and it
+    // must not carry an error message.
+    if (got && got.recycle) {
+      console.error(
+        `  · the browser has done ${ROUTES_PER_BROWSER} route(s) — retiring it for a fresh one`,
+      );
+      try {
+        rmSync(attemptProf, { recursive: true, force: true });
+      } catch {
+        /* best effort */
+      }
+      await new Promise((r) => setTimeout(r, 500));
+      continue;
+    }
     payload = got;
     chromeError = null;
     break;
@@ -1979,6 +2153,20 @@ if (UPDATE) {  // A reason for a decision that is no longer there is not recorde
   const keptReasons = { ...reasons };
   for (const k of staleReasons) delete keptReasons[k];
   const keptExempts = ((baseline && baseline.exempt) || []).filter((e) => !staleExempts.includes(e));
+  // The routes this run did NOT measure, and the cells recorded for them.
+  //
+  // A sweep told which routes to measure is a deliberate narrowing, and when
+  // it RECORDS, the narrowing must not erase the rest of the receipt. This
+  // was not hypothetical: a reviewer measuring six routes at a time on a
+  // machine that reboots between chunks wrote a receipt of SIX ROUTES over
+  // a receipt of forty-three, and the other thirty-seven pages were gone
+  // with nobody told.
+  //
+  // So the cells that were not measured are carried over, and the receipt
+  // says it is an ASSEMBLY and names what it carried.
+  const carriedRouteList = Object.keys(baselineRoutes).filter((rt) => !measuredRoutes.has(rt));
+  const carriedCells = {};
+  for (const rt of carriedRouteList) carriedCells[rt] = baselineRoutes[rt];
   const next = {
     version: 2,
     tool: "spatial-law",
@@ -2003,20 +2191,49 @@ if (UPDATE) {  // A reason for a decision that is no longer there is not recorde
     // A receipt written by one sweep says so. A receipt ASSEMBLED from two
     // sweeps — the routes that did not change carried over from the earlier
     // one, the changed route measured again — says that instead, and names
-    // the routes it carried over. The assembly is checked on every run: a
-    // carried-over cell is compared against a fresh measurement like any
-    // other, so an assembly cannot hide a change. But a reader has to be
-    // told, because a receipt that claims to be one sweep and is two is a
-    // receipt with a false claim in it.
+    // the routes it carried over. A carried-over cell is compared against a
+    // fresh measurement THE NEXT TIME that route is measured, so an assembly
+    // cannot hide a change for ever; but the routes it carries are named, so
+    // a reader knows exactly which pages have not been looked at since they
+    // were last written down. A receipt that claims to be one sweep and is
+    // two is a receipt with a false claim in it.
     provenance: {
       measuredAt: new Date().toISOString(),
+      // The cells this run took, and the cells the receipt holds in total.
+      // Both are stated, because a reader has to be able to tell how much of
+      // the receipt was looked at today.
       measurements: results.length,
       routes: new Set(results.map((r) => r.route)).size,
+      carriedMeasurements: carriedRouteList.reduce(
+        (sum, rt) => sum + Object.keys(carriedCells[rt] || {}).length,
+        0,
+      ),
       widths: widths.length,
-      measuredTogether: true,
-      carriedOver: [],
+      measuredTogether: carriedRouteList.length === 0,
+      carriedOver: carriedRouteList,
+      // WHICH BUILD this receipt is a receipt of.
+      //
+      // The measurements are numbers about a directory. Without the
+      // directory's own fingerprint, the receipt cannot say whether it is
+      // still about the site that ships: a rebuild changes one byte of CSS,
+      // the geometry of one page can move, and the receipt has no way to
+      // know that what it measured is no longer what is built.
+      //
+      // So the build is fingerprinted here: every file's path and its bytes,
+      // in order. It covers the WHOLE directory, where a project's offline
+      // revision covers only the files its shell precaches — two rules, two
+      // purposes, and neither derived from the other. A live sweep has no
+      // directory to fingerprint and says so rather than inventing one.
+      //
+      // It is a STATEMENT for a reader, not an automatic comparison. A
+      // rebuild that changes one byte changes the fingerprint without moving
+      // a single measurement, so the drift checks — grown, shrunk, gone,
+      // unexplained — are what catch a layout that moved. The fingerprint
+      // says which tree the numbers were taken from, so that a reader can
+      // go and look at that tree.
+      build: BUILD_FINGERPRINT,
     },
-    routes: {},
+    routes: carriedCells,
   };
   const signatureDetail = new Map();
   for (const r of results) {

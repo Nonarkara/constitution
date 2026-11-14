@@ -1,4 +1,4 @@
-import { readdir, readFile, writeFile } from "node:fs/promises";
+import { readdir, readFile, writeFile, rm } from "node:fs/promises";
 import { join, relative } from "node:path";
 import { createHash } from "node:crypto";
 const root = "out";
@@ -11,6 +11,29 @@ async function walk(directory) {
   }
   return files;
 }
+
+/**
+ * The export carries no Finder metadata.
+ *
+ * macOS writes a .DS_Store into any folder a person opens in Finder, and the
+ * export copies `public/` wholesale — so a folder that was merely LOOKED AT
+ * put a file named `.DS_Store` into the site, where it was precached by the
+ * offline shell and listed in the manifest. The release gate catches it, which
+ * is why it was caught; but a gate that catches it after the build means
+ * every build on a machine with a Finder open is a build that has to be
+ * rebuilt somewhere else.
+ *
+ * So the export is cleaned here, where the export is made. A file that names
+ * the operating system it came from is not part of a constitution.
+ */
+const FINDER_JUNK = /(^|\/)\._/;
+for (const file of await walk(root)) {
+  const name = file.slice(root.length);
+  if (name.endsWith("/.DS_Store") || FINDER_JUNK.test(name)) {
+    await rm(file, { force: true });
+  }
+}
+
 const paths = (await walk(root))
   .map((path) => relative(root, path).replaceAll("\\", "/"))
   .filter(

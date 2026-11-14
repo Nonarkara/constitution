@@ -89,12 +89,23 @@ export async function readSnapshot(db: DB): Promise<NewsSnapshot> {
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+    // EVERYTHING that arrives in plain HTTP goes back out over HTTPS.
+    //
+    // The zone's own "Always Use HTTPS" toggle would do this, but it needs a
+    // token with Zone Settings: Edit, and the one this project authenticates
+    // with cannot read the zone's settings at all — so the site answered
+    // http:// with the full study app, in clear, while HSTS told browsers not
+    // to ask. HSTS only protects a browser that has already seen the header;
+    // a link, a scan, a curl, or a first visit over plain HTTP got the
+    // unencrypted page.
+    //
+    // The redirect happens BEFORE the asset is served, and the query string is
+    // kept: a redirect that silently drops it turns /read/?q=7 into /read/,
+    // which is not the URL that was asked for.
+    if (url.protocol === "http:")
+      return Response.redirect(`https://${url.host}${url.pathname}${url.search}`, 308);
     if (url.pathname === "/api/news") {
       const secure = { "Strict-Transport-Security": "max-age=31536000; includeSubDomains", "X-Content-Type-Options": "nosniff" };
-      // Keep the query string. A redirect that silently drops it turns
-      // /api/news?x=1 into /api/news, which is not the URL that was asked for.
-      if (url.protocol === "http:")
-        return Response.redirect(`https://${url.host}${url.pathname}${url.search}`, 308);
       if (request.method !== "GET" && request.method !== "HEAD")
         return new Response("Method not allowed", { status: 405, headers: { Allow: "GET, HEAD", ...secure } });
       // Serve from the edge cache for five minutes so traffic cannot turn into unbounded D1 reads.

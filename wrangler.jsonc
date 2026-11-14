@@ -6,9 +6,11 @@
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page",
     "binding": "ASSETS",
-    "run_worker_first": [
-      "/api/*"
-    ]
+    // The Worker runs first for EVERY request, not only for the API. That is
+    // what lets it answer plain HTTP with a redirect to HTTPS: with the API
+    // alone in this list, the study pages were served directly by the asset
+    // server and never reached the code that could redirect them.
+    "run_worker_first": true
   },
   "routes": [
     {

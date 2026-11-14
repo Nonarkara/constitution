@@ -1,0 +1,30 @@
+{
+  "base": "https://constitution.nonarkara.org",
+  "verifiedAt": "2026-11-14T16:06:17.230Z",
+  "sourceCommit": "7ac88ba22f1f985d97f3b53347b37b5607717828",
+  "workerVersion": "e2eef6d6-2eb2-47d5-97cc-6b911ccc1aba",
+  "revision": "034e2316b9b7f4c4",
+  "exportSha256": "e02cfafc981dd4980ce9bde13874594d269d52826e749685df78d7f6a262b7f3",
+  "pageBodies": {
+    "matched": 43,
+    "of": 43,
+    "mismatches": []
+  },
+  "assets": {
+    "matched": 361,
+    "of": 361,
+    "mismatches": []
+  },
+  "httpsOnly": {
+    "plainHttpStatus": 308,
+    "plainHttpLocation": "https://constitution.nonarkara.org/read/?section=99",
+    "keptPathAndQuery": true
+  },
+  "thai": {
+    "chunk": "/_next/static/chunks/1897-9b1233473a29a0d9.js",
+    "respacedPresent": true,
+    "preSpacingPresent": false
+  },
+  "verdict": "PASS",
+  "failures": []
+}
