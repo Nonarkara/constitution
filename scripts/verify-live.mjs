@@ -116,7 +116,7 @@ note(
 // The manifest lists PAGES as routes (a directory) and files as themselves.
 // A route is read as the index.html inside it, which is the body the public
 // domain answers with.
-const assets = [...manifest.assets].filter((a) => a !== "/sw.js");
+const assets = [...new Set([...manifest.assets, "/sw.js", "/offline-manifest.json"])];
 let assetsMatched = 0;
 const assetMismatches = [];
 for (const asset of assets) {
@@ -142,33 +142,32 @@ note(
 );
 
 // ---- 3. the site must answer plain HTTP with a redirect to HTTPS ----------
-const plain = await get(`http://${BASE.replace(/^https?:\/\//, "")}/read/?section=99`);
+const probePath = "/read/?section=99";
+const plain = await get(`http://${new URL(BASE).host}${probePath}`);
 const location = plain.headers.get("location") || "";
 note(
-  plain.status >= 300 && plain.status < 400 && location.startsWith("https://"),
+  plain.status === 308,
   `plain HTTP answered ${plain.status} instead of redirecting to HTTPS`,
 );
 note(
-  location.includes("/read/?section=99"),
-  `the redirect dropped the path or the query string: ${location}`,
+  location === BASE + probePath,
+  `the redirect target differs from the expected HTTPS URL: ${location}`,
 );
 
 // ---- 4. the Thai, which is what the re-spacing was for --------------------
-const chunk = assets.find((a) => /chunks\/.*\.js$/.test(a) && a.includes("1897-")) || assets.find((a) => /chunks\/.*\.js$/.test(a));
-let thai = { checked: null };
-if (chunk) {
-  const live = await get(BASE + chunk);
+const respaced = "หน่วยงานปฏิเสธบริการเพียง เพราะผู้ขอ เป็นผู้หญิง";
+const before = "หน่วยงานปฏิเสธบริการเพียงเพราะผู้ขอเป็นผู้หญิง";
+let thai = { chunk: null, respacedPresent: false, preSpacingPresent: false };
+for (const chunk of assets.filter((asset) => asset.startsWith("/_next/static/chunks/") && asset.endsWith(".js"))) {
+  const local = await readFile(path.join(BUILD, chunk.slice(1)), "utf8");
+  if (!local.includes(respaced)) continue;
+  const live = await get(servedUrl(BASE, chunk));
   const text = live.body.toString("utf8");
-  const respaced = "หน่วยงานปฏิเสธบริการเพียง เพราะผู้ขอ เป็นผู้หญิง";
-  const before = "หน่วยงานปฏิเสธบริการเพียงเพราะผู้ขอเป็นผู้หญิง";
-  thai = {
-    chunk,
-    respacedPresent: text.includes(respaced),
-    preSpacingPresent: text.includes(before),
-  };
-  note(thai.respacedPresent, "the re-spaced Thai is not in the served bundle");
-  note(!thai.preSpacingPresent, "the pre-re-spacing Thai is still in the served bundle");
+  thai = { chunk, respacedPresent: text.includes(respaced), preSpacingPresent: text.includes(before) };
+  break;
 }
+note(thai.respacedPresent, "the re-spaced Thai is not in the served bundle");
+note(!thai.preSpacingPresent, "the pre-re-spacing Thai is still in the verified bundle");
 
 // ---- the worker version, if wrangler can tell us ---------------------------
 let workerVersion = null;
@@ -199,7 +198,7 @@ const record = {
   httpsOnly: {
     plainHttpStatus: plain.status,
     plainHttpLocation: location,
-    keptPathAndQuery: location.includes("/read/?section=99"),
+    keptPathAndQuery: location === BASE + probePath,
   },
   thai,
   verdict: failures.length === 0 ? "PASS" : "FAIL",
