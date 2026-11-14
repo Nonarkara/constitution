@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <Suspense fallback={<p>กำลังเปิดมาตรา… / Loading… / 正在加载…</p>}>
+    <Suspense fallback={<h1>กำลังเปิดมาตรา… / Loading… / 正在加载…</h1>}>
       <Reader />
     </Suspense>
   );
