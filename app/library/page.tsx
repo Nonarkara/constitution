@@ -5,23 +5,13 @@ export default function Page() {
   return (
     <Hub
       title={{ th: "สำรวจ", en: "Explore", zh: "探索" }}
-      intro={{
-        th: "สิทธิ ข่าว และเครื่องมือรอบรัฐธรรมนูญ นอกเส้นทางเรียนกับรอบฝึก",
-        en: "Rights, news and the tools around the constitution, outside the guide and the practice session.",
-        zh: "权利、新闻，以及指南和练习之外的宪法工具。",
-      }}
-      reason={{
-        th: "เริ่มจากกฎหมายที่ใกล้ตัวที่สุด แล้วค่อยไปที่หัวข้ออื่น",
-        en: "Start with the law closest to your own life, then take the others in turn.",
-        zh: "先从离你生活最近的法条开始，再逐一读其他主题。",
-      }}
       items={[
         { href: "/rights/", title: { th: "สิทธิของคุณ", en: "Your rights", zh: "你的权利" }, text: { th: "เดาก่อน แล้วเปิดตัวบท", en: "Guess, then open the law", zh: "先猜，再看条文" } },
         { href: "/polls/", title: { th: "คำถามส่วนตัว", en: "Polls", zh: "问卷" }, text: { th: "เก็บเหตุผลไว้ในเครื่องนี้", en: "Keep your reasons on this device", zh: "把理由留在这台设备上" } },
-        { href: "/civic/", title: { th: "คำสัญญา", en: "Civic", zh: "承诺" }, text: { th: "ตรวจคำสัญญากับตัวบท", en: "Check a promise against the text", zh: "用条文核查承诺" } },
-        { href: "/amend/", title: { th: "การแก้ไข", en: "Amend", zh: "修宪" }, text: { th: "เรื่องสมมติ ผ่านประตูจริง", en: "A fictional draft through the real gates", zh: "虚构草案，真实门槛" } },
-        { href: "/news/", title: { th: "ข่าว", en: "News", zh: "新闻" }, text: { th: "หัวข่าว ไม่ใช่เนื้อข่าว", en: "Headlines, not article text", zh: "标题，不是正文" } },
-        { href: "/memory/", title: { th: "บ้านความจำ", en: "Memory", zh: "记忆屋" }, text: { th: "16 ห้องสำหรับจำตัวเลข", en: "16 rooms for the numbers", zh: "十六间房间，用来记数字" } },
+        { href: "/civic/", title: { th: "คำสัญญาหาเสียง", en: "Campaign promises", zh: "竞选承诺" }, text: { th: "ตรวจคำสัญญากับตัวบท", en: "Check a promise against the text", zh: "用条文核查承诺" } },
+        { href: "/amend/", title: { th: "แก้รัฐธรรมนูญ", en: "Amend the constitution", zh: "修宪" }, text: { th: "ตามร่างสมมติผ่านแต่ละขั้น", en: "Follow a fictional draft through the process", zh: "跟随虚构草案走完流程" } },
+        { href: "/news/", title: { th: "ข่าว", en: "News", zh: "新闻" }, text: { th: "อ่านหัวข่าวกฎหมาย", en: "Browse legal headlines", zh: "浏览法律新闻标题" } },
+        { href: "/memory/", title: { th: "บ้านความจำ", en: "Memory house", zh: "记忆屋" }, text: { th: "16 ห้องสำหรับจำตัวเลข", en: "16 rooms for the numbers", zh: "十六间房间，用来记数字" } },
         { href: "/tikki/", title: { th: "เรื่องราวของติ๊กกี้", en: "Tikki's Story", zh: "蒂基的故事" }, text: { th: "จุดเริ่มต้นของสมุด และภาพวาดน่ารัก", en: "The origin of this notebook and cute study art", zh: "这本笔记的诞生与可爱插画" } },
         { href: "/sources/", title: { th: "แหล่งอ้างอิง", en: "Sources", zh: "资料来源" }, text: { th: "ต้นฉบับและคำแปล", en: "The original text and the translations", zh: "原文与译文" } },
       ]}

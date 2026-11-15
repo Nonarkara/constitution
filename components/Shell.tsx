@@ -69,7 +69,8 @@ function PageNext() {
   const { lang } = useStudy();
   const { path, section, check, drill } = useNavContext();
   const next = nextFor(path, { section, check, drill });
-  if (!next) return null;
+  // These two directories already present their next destination as an action.
+  if (!next || path === "/library/" || path === "/practice/") return null;
   return (
     <p className="page-next">
       <Link href={next.href}>{next.label[lang]}</Link>
@@ -93,10 +94,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
       due: dueQuestions(questionIndex, progress, now).length,
     };
   }, [progress, marks, annotations, read]);
-  // Same rule as the homepage pulse (f760258): a strip reading "0/279" to
-  // someone who has studied nothing is a row of zeros, not progress. The strip
-  // appears once there is something in it.
-  const showStrip = known.met > 0 || known.due > 0 || Object.keys(annotations).length > 0;
+  // Show the notebook link once there is progress or a note to revisit.
+  const showProgress = known.met > 0 || known.due > 0 || Object.keys(annotations).length > 0;
   return (
     <PageFocus.Provider value={shiftFocus}>
       <a className="skip" href="#content">
@@ -183,7 +182,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       </header>
       <div className="app-grid">
         <aside className="sidebar">
-          <nav className={ready && showStrip && path !== "/" ? "has-progress" : undefined} aria-label={tr(lang, "เมนูหลัก", "Main navigation", "主导航")}>
+          <nav className={ready && showProgress && path !== "/" ? "has-progress" : undefined} aria-label={tr(lang, "เมนูหลัก", "Main navigation", "主导航")}>
             {DOORS.map((item) => (
               <Link
                 aria-current={door === item.id ? "page" : undefined}
@@ -194,7 +193,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
                 {item.label[lang]}
               </Link>
             ))}
-            {ready && showStrip && path !== "/" && <Link className="nav-progress" href="/notes/" aria-label={`${labels.notes[lang]} · ${known.met}/279 ${tr(lang, "มาตรา", "sections", "条")}`}><b>{known.met}/279</b></Link>}
+            {ready && showProgress && path !== "/" && <Link className="nav-progress" href="/notes/" aria-label={`${labels.notes[lang]} · ${known.met}/279 ${tr(lang, "มาตรา", "sections", "条")}`}><b>{known.met}/279</b><span>{tr(lang, "มาตรา", "sections", "条")}</span></Link>}
           </nav>
           <div className="sidebar-note">
             <Link href="/tikki/" style={{ textDecoration: "none", color: "inherit", display: "block" }}>
@@ -230,15 +229,6 @@ export function Shell({ children }: { children: React.ReactNode }) {
                 "当前离线。已保存在这台设备上的页面仍可打开。",
               )}
             </p>
-          )}
-          {ready && showStrip && path !== "/" && (
-            <nav className="study-strip micro" aria-label={labels.notes[lang]}>
-              <Link href="/notes/">
-                {labels.notes[lang]}
-                {" · "}
-                <b>{known.met}/279</b> {tr(lang, "มาตรา", "sections", "条")}
-              </Link>
-            </nav>
           )}
           {storageError && (
             <p role="alert" className="notice">

@@ -33,7 +33,7 @@ function offsetIn(root: Node, node: Node, offset: number) {
 // The whole constitution, one chapter per page, in the reader's language.
 // Select words to highlight them; tap a highlight to write a note.
 export function ReadAll() {
-  const { lang, marks, saveMarks, ready } = useStudy();
+  const { lang, marks, saveMarks, ready, large } = useStudy();
   const params = useSearchParams();
   const router = useRouter();
   const chapterNumber = Math.min(17, Math.max(1, Number(params.get("c")) || 1));
@@ -136,7 +136,9 @@ export function ReadAll() {
             >
               {chapters.map((c) => (
                 <option key={c.number} value={c.number}>
-                  {chapterLabel(lang, c.number)} · {c.title[lang]}
+                  {large && c.number === chapterNumber
+                    ? chapterLabel(lang, c.number)
+                    : `${chapterLabel(lang, c.number)} · ${c.title[lang]}`}
                 </option>
               ))}
             </select>

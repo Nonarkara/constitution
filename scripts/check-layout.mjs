@@ -180,6 +180,18 @@ function measure(route, w, d) {
   var rec = { route: route, w: w, label: labelOf(w), clientWidth: vw, scrollWidth: sw, over: sw - vw, culprits: [] };
   if (vw === 0) { rec.error = 'clientWidth 0 — page did not lay out'; return rec; }
 
+  // At phone width these two directories should offer a real choice in
+  // the first screen, with their artwork and primary action both visible.
+  if (w === 390 && (route === '/library/' || route === '/practice/')) {
+    var art = d.querySelector('main .study-opening img');
+    var start = d.querySelector('main .study-opening .primary');
+    var href = route === '/library/' ? '/news/' : '/exam/';
+    var options = d.querySelectorAll('main a[href="' + href + '"]');
+    if (!art || art.getBoundingClientRect().width < 100) rec.openingError = 'Tikki does not lead the opening';
+    else if (!start || start.getBoundingClientRect().bottom > 420) rec.openingError = 'primary action below 420px';
+    else if (options.length !== 1 || options[0].getBoundingClientRect().bottom > 720) rec.openingError = href + ' must appear once and end by 720px';
+  }
+
   // Cold-visit check. This gate loads every route with empty localStorage, which
   // is precisely when an all-zero progress readout is a defect: a first-time
   // reader has studied nothing, so "0/279" states nothing they can act on. It
@@ -188,7 +200,7 @@ function measure(route, w, d) {
   // rather than pattern-matched in the source, because a source regex cannot
   // tell a counter that is zero from an interactive slider that merely reads
   // like one — an earlier static attempt flagged 5 of 6 sites falsely.
-  var strip = d.querySelector('.study-strip, .home-pulse');
+  var strip = d.querySelector('.nav-progress, .home-pulse');
   if (strip) {
     var counters = strip.querySelectorAll('b, output, strong, span');
     var sawNumber = false;
@@ -457,6 +469,12 @@ const errored = results.filter((r) => r.error);
 if (errored.length) {
   console.error(`\nFAIL — layout gate could not lay out ${errored.length} page(s):`);
   for (const e of errored.slice(0, 8)) console.error(`  ✗ ${e.route} @${e.w} — ${e.error}`);
+  process.exit(1);
+}
+
+const openingErrors = results.filter((r) => r.openingError);
+if (openingErrors.length) {
+  for (const r of openingErrors) console.error(`FAIL — ${r.route} @${r.w}px — ${r.openingError}`);
   process.exit(1);
 }
 
