@@ -105,134 +105,71 @@
   },
   "exempt": [],
   "provenance": {
-    "measuredAt": "2026-11-15T04:02:23.774Z",
-    "measurements": 2623,
-    "routes": 43,
-    "carriedMeasurements": 0,
+    "measuredAt": "2026-11-15T11:52:47.996Z",
+    "measurements": 122,
+    "routes": 2,
+    "carriedMeasurements": 2501,
     "widths": 61,
     "measuredTogether": false,
-    "carriedOver": [],
+    "carriedOver": [
+      "/along/",
+      "/amend/",
+      "/bible/",
+      "/bible/cabinet/",
+      "/bible/courts/",
+      "/bible/duties-state-policy/",
+      "/bible/exam-method/",
+      "/bible/general-and-king/",
+      "/bible/history/",
+      "/bible/how-to-read/",
+      "/bible/independent-organs/",
+      "/bible/local-and-amendment/",
+      "/bible/organic-laws/",
+      "/bible/parliament/",
+      "/bible/rights/",
+      "/bible/transitory/",
+      "/cheatsheet/",
+      "/civic/",
+      "/cram/",
+      "/drills/",
+      "/exam/",
+      "/flashcards/",
+      "/games/",
+      "/glossary/",
+      "/library/",
+      "/memory/",
+      "/news/",
+      "/notebook/",
+      "/notes/",
+      "/polls/",
+      "/practice/",
+      "/practice/pokklong/",
+      "/read/",
+      "/research/",
+      "/review/",
+      "/rights/",
+      "/section/",
+      "/settings/",
+      "/sources/",
+      "/tikki/",
+      "/topics/"
+    ],
     "build": {
       "files": 2046,
-      "exportSha256": "2b28e5ae67cf3a1dbb88031ed597f05c09005c0162aa04ba7fc1ea76357338fa",
-      "recordedAt": "2026-11-15T03:53:13.823Z"
+      "exportSha256": "3afbdfda7968347cd7286ea80970ac7e07efb6465f360557ce1129bd676b931d",
+      "recordedAt": "2026-11-15T11:52:09.433Z"
     },
-    "sweeps": [
-      {
-        "routes": [
-          "/memory/"
-        ],
-        "measurements": 61,
-        "measuredAt": "2026-11-15T03:52:25.636Z",
-        "rawSha256": "2e4d0bd7c7922833b3c9bd839c728454e8489003237f0d51a459a09427c5ca20",
-        "raw": "raw-0.json"
-      },
-      {
-        "routes": [
-          "/tikki/"
-        ],
-        "measurements": 61,
-        "measuredAt": "2026-11-15T03:53:20.802Z",
-        "rawSha256": "da31503b66da8de6608b3ce4c7c4a800962236c34787bd5a5be68fe731f59f16",
-        "raw": "raw-1.json"
-      },
-      {
-        "routes": [
-          "/",
-          "/bible/duties-state-policy/",
-          "/bible/local-and-amendment/",
-          "/civic/",
-          "/glossary/",
-          "/polls/",
-          "/rights/"
-        ],
-        "measurements": 427,
-        "measuredAt": "2026-11-15T03:52:50.952Z",
-        "rawSha256": "339098377bc8dfe3e6839a23be9347b980c567e3d8c7ee53ba2959bc45cfcad8",
-        "raw": "raw-2.json"
-      },
-      {
-        "routes": [
-          "/along/",
-          "/bible/exam-method/",
-          "/bible/organic-laws/",
-          "/cram/",
-          "/learn/",
-          "/practice/",
-          "/section/"
-        ],
-        "measurements": 427,
-        "measuredAt": "2026-11-15T03:56:28.092Z",
-        "rawSha256": "705679ae52a4e302eb1226106c60ec5ace472c00abb3a12f01cb998a2cc02e3c",
-        "raw": "raw-3.json"
-      },
-      {
-        "routes": [
-          "/amend/",
-          "/bible/general-and-king/",
-          "/bible/parliament/",
-          "/drills/",
-          "/library/",
-          "/practice/pokklong/",
-          "/settings/"
-        ],
-        "measurements": 427,
-        "measuredAt": "2026-11-15T03:53:05.701Z",
-        "rawSha256": "f1f3f8291e0eaaad4d5b3fd7fc5355a10f0f5df6ec18d424ac289e8dbbcd37b9",
-        "raw": "raw-4.json"
-      },
-      {
-        "routes": [
-          "/bible/",
-          "/bible/history/",
-          "/bible/rights/",
-          "/exam/",
-          "/news/",
-          "/read/",
-          "/sources/"
-        ],
-        "measurements": 427,
-        "measuredAt": "2026-11-15T04:01:23.529Z",
-        "rawSha256": "a6f2237369b4f263e96370498c18a3fda957749fd49e05864a5b43742c1b4743",
-        "raw": "raw-5.json"
-      },
-      {
-        "routes": [
-          "/bible/cabinet/",
-          "/bible/how-to-read/",
-          "/bible/transitory/",
-          "/flashcards/",
-          "/notebook/",
-          "/research/",
-          "/topics/"
-        ],
-        "measurements": 427,
-        "measuredAt": "2026-11-15T04:01:54.211Z",
-        "rawSha256": "3408d312fe3f7417d6b12d8ad94702fe8cd2673498becc3ba89ef09b835c9c76",
-        "raw": "raw-6.json"
-      },
-      {
-        "routes": [
-          "/bible/courts/",
-          "/bible/independent-organs/",
-          "/cheatsheet/",
-          "/games/",
-          "/notes/",
-          "/review/"
-        ],
-        "measurements": 366,
-        "measuredAt": "2026-11-15T04:02:23.774Z",
-        "rawSha256": "59db45e030215991d6efb99d13274937bbc5c62d1681abd5734302fb9206639d",
-        "raw": "raw-7.json"
-      }
-    ]
+    "carriedFrom": {
+      "commit": "447957d65de7c60c17adf4f22a9cf1cc84514e41",
+      "exportSha256": "2b28e5ae67cf3a1dbb88031ed597f05c09005c0162aa04ba7fc1ea76357338fa"
+    }
   },
   "routes": {
     "/": {
       "359": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 447,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -250,13 +187,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "360": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 447,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -274,13 +211,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "361": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 448,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -298,13 +235,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "390": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 463,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -322,13 +259,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "399": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 468,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -346,13 +283,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "400": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 468,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -370,13 +307,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "401": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 469,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -394,13 +331,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "436": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -418,13 +355,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "479": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -442,13 +379,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "480": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -466,13 +403,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "481": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -490,13 +427,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "499": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -514,13 +451,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "500": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -538,13 +475,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "501": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -562,13 +499,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "519": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -586,13 +523,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "520": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -610,13 +547,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "521": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -634,13 +571,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "536": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -658,13 +595,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "559": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -682,13 +619,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "560": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -706,13 +643,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "561": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -730,13 +667,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "599": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -754,13 +691,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "600": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -778,13 +715,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "601": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -802,13 +739,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "639": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -826,13 +763,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "640": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -850,13 +787,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "641": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -874,13 +811,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "642": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -898,13 +835,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "676": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -922,13 +859,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "714": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -946,13 +883,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "719": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -970,13 +907,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "720": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -994,13 +931,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "721": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1018,13 +955,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "722": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1042,13 +979,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "768": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1066,13 +1003,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "849": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1090,13 +1027,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "850": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1114,13 +1051,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "851": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1138,13 +1075,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "854": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1162,13 +1099,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "859": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1186,13 +1123,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "860": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1210,13 +1147,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "861": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 285,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1234,13 +1171,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "899": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 296,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1258,13 +1195,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "900": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 296,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1282,13 +1219,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "901": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 296,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1306,13 +1243,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "999": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 325,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1330,13 +1267,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1000": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 325,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1354,13 +1291,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1001": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 326,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1378,13 +1315,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1023": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 332,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1402,13 +1339,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1024": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 332,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1426,13 +1363,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1025": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 333,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1450,13 +1387,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1099": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1474,13 +1411,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1100": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1498,13 +1435,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1101": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1522,13 +1459,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1130": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1546,13 +1483,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1138": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1570,13 +1507,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1199": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1594,13 +1531,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1200": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1618,13 +1555,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1201": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1642,13 +1579,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1440": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1666,13 +1603,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1920": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1690,7 +1627,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       }
     },
@@ -37636,7 +37573,7 @@
       "359": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 447,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37654,13 +37591,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "360": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 447,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37678,13 +37615,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "361": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 448,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37702,13 +37639,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "390": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 463,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37726,13 +37663,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "399": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 468,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37750,13 +37687,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "400": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 468,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37774,13 +37711,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "401": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 469,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37798,13 +37735,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "436": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37822,13 +37759,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "479": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37846,13 +37783,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "480": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37870,13 +37807,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "481": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37894,13 +37831,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "499": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37918,13 +37855,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "500": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37942,13 +37879,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "501": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37966,13 +37903,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "519": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -37990,13 +37927,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "520": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38014,13 +37951,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "521": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38038,13 +37975,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "536": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38062,13 +37999,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "559": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38086,13 +38023,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "560": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38110,13 +38047,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "561": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38134,13 +38071,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "599": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38158,13 +38095,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "600": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38182,13 +38119,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "601": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38206,13 +38143,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "639": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38230,13 +38167,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "640": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38254,13 +38191,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "641": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38278,13 +38215,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "642": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38302,13 +38239,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "676": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38326,13 +38263,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "714": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38350,13 +38287,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "719": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38374,13 +38311,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "720": {
         "findings": [],
         "firstAction": {
-          "y": 240,
+          "y": 500,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38398,13 +38335,13 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "721": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38422,13 +38359,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "722": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38446,13 +38383,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "768": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38470,13 +38407,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "849": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38494,13 +38431,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "850": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38518,13 +38455,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "851": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38542,13 +38479,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "854": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38566,13 +38503,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "859": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38590,13 +38527,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "860": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 487,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38614,13 +38551,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "861": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 285,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38638,13 +38575,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "899": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 296,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38662,13 +38599,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "900": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 296,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38686,13 +38623,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "901": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 296,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38710,13 +38647,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "999": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 325,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38734,13 +38671,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1000": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 325,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38758,13 +38695,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1001": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 326,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38782,13 +38719,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1023": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 332,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38806,13 +38743,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1024": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 332,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38830,13 +38767,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1025": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 333,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38854,13 +38791,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1099": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38878,13 +38815,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1100": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38902,13 +38839,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1101": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38926,13 +38863,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1130": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38950,13 +38887,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1138": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38974,13 +38911,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1199": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -38998,13 +38935,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1200": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -39022,13 +38959,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1201": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -39046,13 +38983,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1440": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -39070,13 +39007,13 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       },
       "1920": {
         "findings": [],
         "firstAction": {
-          "y": 227,
+          "y": 339,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -39094,7 +39031,7 @@
           "largest": 18,
           "ratio": 2.44,
           "peers": 7,
-          "share": 0.11
+          "share": 0.13
         }
       }
     },

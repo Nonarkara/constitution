@@ -181,7 +181,17 @@ function measure(route, w, d) {
   if (vw === 0) { rec.error = 'clientWidth 0 — page did not lay out'; return rec; }
 
   // Keep the scene and first useful action together within a phone screen.
-  if (w === 390 && ['/', '/library/', '/practice/', '/tikki/'].includes(route)) {
+  if (w === 390 && route === '/') {
+    var cover = d.querySelector('main .home-cover');
+    var coverArt = cover && cover.querySelector('img');
+    var coverLink = cover && cover.querySelector('.hero-cta');
+    var coverBounds = cover && cover.getBoundingClientRect();
+    var artBounds = coverArt && coverArt.getBoundingClientRect();
+    var linkBounds = coverLink && coverLink.getBoundingClientRect();
+    if (!artBounds || artBounds.width < coverBounds.width * 0.68) rec.openingError = 'Tikky does not fill the home cover';
+    else if (!linkBounds || linkBounds.height < 44 || linkBounds.height > 52 || linkBounds.bottom > 510) rec.openingError = 'home study link does not fit the foreground';
+  }
+  if (w === 390 && ['/library/', '/practice/', '/tikki/'].includes(route)) {
     var opening = d.querySelector(route === '/tikki/' ? 'main .tikki-hero' : 'main .study-opening');
     var art = opening && opening.querySelector('img');
     var start = opening && opening.querySelector('.primary');

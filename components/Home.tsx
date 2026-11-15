@@ -10,7 +10,7 @@ import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
 import { knowSummary, sectionSignals } from "@/lib/knowledge";
 import { RIGHT_GROUPS } from "@/lib/rights";
-import { plateSize, plateStyle } from "@/lib/plate";
+import { plateSize } from "@/lib/plate";
 
 // The plate for this hero. The path is named once, in one place, because a
 // drawing is a cue for one page: the test that guards the catalogue counts
@@ -36,7 +36,7 @@ export function Home() {
       lastSection: last ? Number(last[0]) : null,
     });
     const misses = target.section ? missCount(questionIndex, progress, target.section) : 0;
-    return { target, due, misses, lastSection: last ? Number(last[0]) : null };
+    return { target, due, misses };
   }, [progress, read]);
 
   const known = useMemo(() => {
@@ -46,57 +46,50 @@ export function Home() {
 
   const notesCount = useMemo(() => Object.keys(annotations).length, [annotations]);
 
-  // A pulse bar of three zeros and two divider rules tells a first-time visitor
-  // nothing they can act on. Show the counters only once there is something in
-  // them; the notebook link always stays.
-  const showPulse = known.met > 0 || plan.due > 0 || notesCount > 0;
+  const showPulse = known.met > 0 || notesCount > 0;
 
   const { target } = plan;
   const guide = GUIDE.find((item) => target.href.endsWith(`/${item.slug}/`));
   const guideIndex = guide ? GUIDE.indexOf(guide) + 1 : 1;
-  const missed =
-    plan.misses === 1
-      ? tr(lang, "พลาด 1 ครั้ง", "missed once", "错过1次")
-      : plan.misses === 2
-        ? tr(lang, "พลาด 2 ครั้ง", "missed twice", "错过2次")
-        : tr(lang, `พลาด ${plan.misses} ครั้ง`, `missed ${plan.misses} times`, `错过${plan.misses}次`);
   const label =
     target.kind === "review"
-      ? tr(lang, "ต่อ: ทบทวนข้อที่ถึงเวลา", "Continue: the reviews that are due", "继续：到期的复习")
+      ? tr(lang, `ทบทวน ${plan.due} ข้อ`, `Review ${plan.due} ${plan.due === 1 ? "question" : "questions"}`, `复习 ${plan.due} 道题`)
       : target.kind === "drill"
-        ? tr(lang, `ต่อ: มาตรา ${target.section}`, `Continue: section ${target.section}`, `继续：第${target.section}条`)
-        : tr(
-            lang,
-            `ต่อ: บทที่ ${guideIndex} · ${guide?.title.th ?? "ประวัติ"}`,
-            `Continue: Chapter ${guideIndex} · ${guide?.title.en ?? "History"}`,
-            `继续：第${guideIndex}章 · ${guide?.title.zh ?? "历史"}`,
-          );
-  const reason =
-    target.kind === "review"
-      ? tr(lang, `มีข้อทบทวนถึงเวลา ${plan.due} ข้อ`, `${plan.due} reviews are due`, `有${plan.due}道复习到期`)
-      : target.kind === "drill"
-        ? tr(lang, `ฝึก ม.${target.section} ${missed}`, `Drill s.${target.section}, ${missed}`, `练习第${target.section}条，${missed}`)
-        : plan.lastSection
-          ? tr(
-              lang,
-              `ยังไม่มีข้อถึงเวลาทบทวน บทถัดไปในคู่มืออยู่หลังมาตรา ${plan.lastSection}`,
-              `Nothing is due. The next chapter of the guide follows section ${plan.lastSection}.`,
-              `没有到期的复习。指南的下一章接在第${plan.lastSection}条之后。`,
-            )
-          : tr(lang, "ยังไม่มีข้อถึงเวลาทบทวน จึงเริ่มที่คู่มือ", "Nothing due yet, so start the guide", "还没有到期的复习，所以从指南开始");
+        ? tr(lang, `ฝึกมาตรา ${target.section}`, `Practise section ${target.section}`, `练习第 ${target.section} 条`)
+        : tr(lang, `อ่านบทที่ ${guideIndex}`, `Read chapter ${guideIndex}`, `阅读第 ${guideIndex} 章`);
+  const topic =
+    target.kind === "drill"
+      ? tr(lang, `เคยตอบผิด ${plan.misses} ข้อ`, `${plan.misses} missed ${plan.misses === 1 ? "question" : "questions"}`, `答错过 ${plan.misses} 道题`)
+      : guide?.title[lang];
 
   return (
     <div className="home-dashboard">
-      {/* One status group beside the next task. Empty accounts get no zero bar. */}
+      <section className="home-cover">
+        <Image
+          className="home-cover-art"
+          src={HOME_PLATE}
+          alt=""
+          {...plateSize(HOME_PLATE)}
+          preload
+          sizes="(max-width: 860px) min(76vw, 322px), 440px"
+        />
+        <div className="home-cover-content">
+          <span className="page-kicker mono">
+            {tr(lang, "สมุดเรียนรัฐธรรมนูญ", "Constitutional Notebook", "宪法学习笔记")}
+          </span>
+          <h1>{tr(lang, "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ", "One section.\nOne small step.", "一条一条读，\n一点一点懂。")}</h1>
+          <Link className="primary hero-cta" href={target.href} aria-describedby={topic ? "cover-topic" : undefined}>
+            {label}
+            <span aria-hidden="true">→</span>
+          </Link>
+          {topic && <p className="micro home-cover-topic" id="cover-topic">{topic}</p>}
+        </div>
+      </section>
       {showPulse && (
-        <section className="home-pulse" aria-label={tr(lang, "สรุปการเรียนของคุณ", "Your study pulse", "学习概览")}>
-          <Link className="pulse-item" href="/notes/">
+        <section className="home-pulse" aria-label={tr(lang, "สรุปการเรียนของคุณ", "Your study progress", "学习进度")}>
+          {known.met > 0 && <Link className="pulse-item" href="/notes/">
             <span className="mono pulse-num">{known.met}<b>/279</b></span>
             <span className="pulse-label micro">{tr(lang, "เริ่มแล้ว", "explored", "已接触")}</span>
-          </Link>
-          {plan.due > 0 && <Link className="pulse-item" href="/practice/?session=mixed">
-            <span className="mono pulse-num">{plan.due}</span>
-            <span className="pulse-label micro">{tr(lang, "รอทวน", "due", "待复习")}</span>
           </Link>}
           {notesCount > 0 && <Link className="pulse-item" href="/notes/">
             <span className="mono pulse-num">{notesCount}</span>
@@ -104,38 +97,6 @@ export function Home() {
           </Link>}
         </section>
       )}
-
-      <section className="study-opening">
-        <figure className="study-art" style={plateStyle(HOME_PLATE)} aria-hidden="true">
-          <Image
-            src={HOME_PLATE}
-            alt=""
-            {...plateSize(HOME_PLATE)}
-            priority
-            sizes="(max-width: 720px) 128px, 224px"
-          />
-        </figure>
-        <div className="study-opening-copy">
-          <span className="page-kicker mono">
-            {tr(lang, "สมุดเรียนรัฐธรรมนูญ", "Constitutional Notebook", "宪法学习笔记")}
-          </span>
-          <h1>{tr(lang, "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ", "One section.\nOne small step.", "一条一条读，\n一点一点懂。")}</h1>
-          <div className="hero-action-group">
-            <Link className="primary hero-cta" href={target.href}>
-              <span>{label}</span>
-              <span aria-hidden="true">→</span>
-            </Link>
-            <details className="hero-reason"><summary>{reason}</summary><p>
-            {tr(
-              lang,
-              "เริ่มจากขั้นถัดไปที่สมุดเลือกให้ จากข้อที่ถึงเวลาทบทวน ข้อที่ยังพลาด หรือบทถัดไปในคู่มือ",
-              "Start from the step this notebook chooses: a review that is due, a section you miss, or the next chapter of the guide.",
-              "从这本笔记选定的下一步开始：到期的复习、你还错过的条文，或指南的下一章。",
-            )}
-          </p></details>
-          </div>
-        </div>
-      </section>
 
       {/* Editorial Learning Architecture: One Dominant Anchor + Two Engines + Reference Shelf */}
       <section className="home-architecture" aria-label={tr(lang, "เส้นทางการเรียน", "Learning pathways", "学习路径")}>
