@@ -224,34 +224,18 @@ export function BibleIndex({ chapters }: { chapters: { slug: string; order: numb
     chapters[0];
   return (
     <>
-      <div className="intro-copy">
+      <header className="study-opening">
         <StudyArt scene="bibleGuide" />
-        <div className="intro-text">
+        <div className="study-opening-copy">
           <h1>{tr(lang, "คัมภีร์รัฐธรรมนูญ", "The study guide", "学习指南")}</h1>
-          <p>
-            {tr(
-              lang,
-              "อ่านรัฐธรรมนูญเป็นระบบ ไม่ใช่รายการให้ท่องจำ ทุกกฎมีเหตุผล ทุกตัวเลขมีเรื่องเล่า แตะเลขมาตราที่ไหนก็ได้เพื่อเปิดตัวบท",
-              "Read the constitution as a system, not a list to memorise. Every rule has a reason and every number has a story. Point at any section number to open the law.",
-              "把宪法当作一个系统来读，而不是背诵清单。本指南提供泰文与英文版。",
-          )}
-          </p>
+          <p>{tr(lang, "อ่านใจความหนึ่งบท แล้วลองตอบสามข้อ", "Read one chapter, then try three questions.", "读一章要点，再试答三道题。")}</p>
+          <PageAction
+            href={`/bible/${first.slug}/`}
+            label={lang === "zh" ? guidePaths[first.slug]?.title.zh ?? text(first.title, lang) : text(first.title, lang)}
+            reason={tr(lang, "คู่มือฉบับเต็มมีไทยและอังกฤษ บทเรียนสั้นและแบบฝึกมีสามภาษา", "The full guide is in Thai and English. Short lessons and exercises are available in all three languages.", "完整指南提供泰文和英文，短课和练习提供三种语言。")}
+          />
         </div>
-      </div>
-      <p className="notice">{tr(lang,"เลือกบทเดียว อ่านใจความ ลองสามข้อ แล้วไปฝึก ไม่ต้องอ่าน 13 บทให้จบก่อน คู่มือเต็มมีไทยและอังกฤษ ส่วนบทเรียนสั้นและแบบฝึกมีสามภาษา","Choose one chapter: read the idea, try three checks, then practise. You need not finish all 13 first. The full guide is Thai/English; the short lesson and exercises are trilingual.","先选一章：读概念、试三题、再练习，不必先读完13章。完整长篇指南为泰文与英文；短课和练习提供三种语言。")}</p>
-      {/* One thing to do. Thirteen equal chapter rows used to be the only way
-          in, so the page described itself instead of starting anything. */}
-      <PageAction
-        href={`/bible/${first.slug}/`}
-        label={text(first.title, lang)}
-        reason={tr(
-          lang,
-          "อ่านใจความบทเดียว แล้วลองสามข้อ ค่อยไปบทถัดไปเมื่อไหร่ที่พร้อม",
-          "Read one chapter's idea, try three checks, and move on when you are ready.",
-          "先读一章的要点，试三题，准备好再读下一章。",
-        )}
-        kicker={tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
-      />
+      </header>
       <h2 className="hub-others-title">
         {tr(lang, "หรือเลือกบทอื่น", "Or pick another chapter", "或选择其他章节")}
       </h2>

@@ -9,7 +9,7 @@ import { recordAnswer } from "@/lib/learning";
 import { useStudy } from "./Provider";
 import { choiceLetter, fisherYates } from "@/lib/shuffle";
 import { preparePracticeQuestion, practiceSessionScore } from "@/lib/practice-session";
-import { tr, sectionLabel, chapterPickerLabel } from "@/lib/i18n";
+import { tr, sectionLabel, chapterPickerLabel, chapterLabel } from "@/lib/i18n";
 import { buildPracticeQueue } from "@/lib/adaptive";
 import { buildMixedSession, buildSectionSession } from "@/lib/mixed";
 import dynamic from "next/dynamic";
@@ -161,80 +161,31 @@ function ConstitutionArena() {
         <>
           <PracticeTabs />
           {sessionNotice && <p role="status">{sessionNotice}</p>}
-          <header className="practice-header">
-            <div className="intro-copy">
-              <StudyArt scene="practice" />
-              <div className="intro-text">
-                <h1>
-                  {tr(
-                    lang,
-                    "ฝึกตอบ",
-                    "Practise",
-                    "练习"
-                  )}
-                </h1>
-                <p>
-                  {tr(
-                    lang,
-                    `${questions.length} ข้อ เขียนขึ้นจากตัวบทเพื่อฝึก ไม่ใช่ข้อสอบจริง ข้อที่ตอบผิดจะถูกจับกลุ่มเป็นเรื่อง เพื่อให้เห็นว่าควรกลับไปอ่านตรงไหน`,
-                    `${questions.length} questions written from the text for practice, not past exam papers. Missed questions are grouped by subject so you can see what to reread.`,
-                    `${questions.length}道依据条文编写的练习题，并非历年真题。答错的题按主题归类，让你知道该回去重读哪里。`
-                  )}
-                </p>
-              </div>
+          <header className="study-opening">
+            <StudyArt scene="practice" />
+            <div className="study-opening-copy">
+              <h1>{tr(lang, "ฝึกตอบ", "Practise", "练习")}</h1>
+              <p>{tr(lang, `ฝึกจากตัวบท ${questions.length} ข้อ ข้อที่พลาดจะกลับมาให้ทบทวน`, `Practise with ${questions.length} questions written from the constitution. Review the ones you miss.`, `用依据宪法条文编写的 ${questions.length} 道题练习，答错的题会进入复习。`)}</p>
+              <button className="primary practice-start-btn" disabled={!ready} onClick={startMixed}>
+                <span>{tr(lang, "เริ่มรอบฝึกผสม", "Start mixed practice", "开始混合练习")}</span>
+                <span aria-hidden="true">→</span>
+              </button>
+              <p className="micro">{tr(lang, "รวมข้อที่ถึงกำหนด ข้อที่เคยพลาด แบบฝึกตัวเลข และบัตรคำ", "Mixes due reviews, missed questions, number drills and flashcards.", "混合到期复习、错题、数字练习与闪卡。")}</p>
             </div>
           </header>
 
           <div className="practice-hub">
-            {/* Primary Action: Adaptive Mixed Session */}
-            <div className="practice-hero-card">
-              <div className="practice-hero-info">
-                <h2>{tr(lang,"รอบฝึกผสม · ปรับตามผู้เรียน","Adaptive mixed session","自适应混合练习")}</h2>
-                <p className="micro">
-                  {tr(
-                    lang,
-                    "รวมข้อที่ถึงเวลาทบทวน ข้อที่คุณยังพลาด แบบฝึกตัวเลข และการ์ดที่เคยตอบถูก ไว้ในรอบเดียว",
-                    "One session mixes what is due, what you still miss, number drills and cards you already know.",
-                    "一轮混合到期复习、你仍会答错的题、数字练习和已经答对的卡片。"
-                  )}
-                </p>
-              </div>
-              <button className="primary practice-start-btn" disabled={!ready} onClick={startMixed}>
-                <span>{tr(lang, "เริ่มรอบฝึกผสม", "Start mixed session", "开始混合练习")}</span>
-                <span aria-hidden="true">→</span>
-              </button>
-            </div>
-
             {/* Track 1: Real Exam Simulation & Timed Papers (Top Priority for Passing) */}
             <div className="practice-section">
               <div className="practice-section-header">
-                <span className="mono micro text-accent font-bold">
-                  {tr(lang, "จับเวลา", "Timed", "计时")}
-                </span>
-                <h2>
-                  {tr(lang, "ชุดจับเวลา และแนวข้อสอบนายอำเภอ", "Timed papers and district-chief exam topics", "计时练习卷与县长考试题型")}
-                </h2>
-                <p className="micro">
-                  {tr(
-                    lang,
-                    "ทำข้อสอบแบบจับเวลา เฉลยหลังส่ง และฝึก 90 ข้อจากหัวข้อที่ออกสอบนายอำเภอ ปี 2568",
-                    "Sit a timed paper with the answers held until you submit, and practise 90 questions from the topics of the 2025 district-chief exam.",
-                    "限时作答，交卷后看答案；另有90道题，来自2025年县长考试的出题范围。",
-                  )}
-                </p>
+                <h2>{tr(lang, "ชุดจับเวลาและแนวข้อสอบ", "Timed papers and exam topics", "计时练习与考试题型")}</h2>
               </div>
 
               <div className="practice-featured-grid">
                 {/* The timed paper leads; the exam topics follow it on a quieter rule. */}
                 <div className="practice-featured-card">
-                  <div className="mode-card-top">
-                    <span className="mono micro font-bold">{tr(lang, "สอบจำลอง", "Mock exam", "模拟考试")}</span>
-                    <span className="micro text-muted">30 {tr(lang, "ชุด", "papers", "套")}</span>
-                  </div>
                   <h3>
-                    <Link href="/exam/">
-                      {tr(lang, "ชุดฝึกจับเวลา 30 ชุด", "30 timed study papers", "30套计时练习卷")}
-                    </Link>
+                    {tr(lang, "ชุดฝึกจับเวลา 30 ชุด", "30 timed study papers", "30套计时练习卷")}
                   </h3>
                   <p className="micro">
                     {tr(lang, "สุ่มจากคลังข้อฝึกที่ครอบคลุมทุกมาตรา เฉลยและคะแนนรายหมวดหลังส่ง", "Sampled from a bank that covers every section. Answers and a chapter-by-chapter score after you submit.", "从覆盖全部条文的题库中抽题。交卷后显示答案与各章得分。")}
@@ -246,17 +197,11 @@ function ConstitutionArena() {
 
                 {/* 90 District Exam Topics */}
                 <div className="practice-featured-card practice-featured-second">
-                  <div className="mode-card-top">
-                    <span className="mono micro font-bold">{tr(lang, "นอกตัวบทด้วย", "Beyond the text too", "也涉及宪法以外")}</span>
-                    <span className="micro text-muted">90 {tr(lang, "ประเด็น", "topics", "点")}</span>
-                  </div>
                   <h3>
-                    <Link href="/along/">
-                      {tr(lang, "แนวข้อสอบนายอำเภอและท้องถิ่น 90 ข้อ", "90 district-chief and local exam questions", "县长与地方考试题型90题")}
-                    </Link>
+                    {tr(lang, "แนวข้อสอบนายอำเภอและท้องถิ่น 90 ข้อ", "90 district-chief and local exam questions", "县长与地方考试题型90题")}
                   </h3>
                   <p className="micro">
-                    {tr(lang, "ทุกข้อมีที่มาและวันที่กำกับ บางข้อโยงกับมาตรา บางข้อเป็นความรู้รอบตัวและการบริหาร", "Each carries its source and date. Some tie to a section; others are general knowledge and management.", "每题注明来源与日期。部分与条文相关，其余为常识与管理知识。")}
+                    {tr(lang, "อิงหัวข้อสอบปี 2568 มีที่มาและวันที่ทุกข้อ ครอบคลุมตัวบท ความรู้รอบตัว และการบริหาร", "Based on 2025 exam topics, with a source and date for each question. Covers constitutional law, general knowledge and administration.", "依据2025年考试题型，每题注明来源与日期，涵盖宪法条文、常识和行政管理。")}
                   </p>
                   <Link href="/along/" className="mode-card-link micro">
                     {tr(lang, "ฝึก 90 ข้อ", "Practise the 90", "练习90题")} →
@@ -284,9 +229,7 @@ function ConstitutionArena() {
                     <span className="micro text-muted">4,230 {tr(lang, "โจทย์", "drills", "题")}</span>
                   </div>
                   <h3>
-                    <Link href="/drills/">
-                      {tr(lang, "ฝึกจำตัวเลข 41 ค่าสำคัญ", "41 Key Constitutional Numbers", "41个核心宪法数字速记")}
-                    </Link>
+                    {tr(lang, "ฝึกจำตัวเลข 41 ค่าสำคัญ", "41 Key Constitutional Numbers", "41个核心宪法数字速记")}
                   </h3>
                   <p className="micro">
                     {tr(lang, "ฝึกจำนวนวัน องค์ประชุม และจำนวนที่นั่งที่ตัวบทกำหนด", "Drill the days, quorums and seat counts the text sets.", "专练条文规定的天数、法定人数与席位数。")}
@@ -331,9 +274,7 @@ function ConstitutionArena() {
                     <span className="micro text-muted">279 {tr(lang, "มาตรา", "sections", "条")}</span>
                   </div>
                   <h3>
-                    <Link href="/flashcards/">
-                      {tr(lang, "นึกก่อนแล้วพลิกดูตัวบท", "Recall First, Then Flip", "先回想再翻面")}
-                    </Link>
+                    {tr(lang, "นึกก่อนแล้วพลิกดูตัวบท", "Recall First, Then Flip", "先回想再翻面")}
                   </h3>
                   <p className="micro">
                     {tr(lang, "ฝึกระลึกหลักการของมาตรา พร้อมทบทวนโน้ตย่อที่คุณจดไว้ข้างตัวบท", "Active recall for section rules, plus your own margin notes.", "主动回想条文要点，并结合你在页边记录的个人笔记。")}
@@ -350,9 +291,7 @@ function ConstitutionArena() {
                     <span className="micro text-muted">{tr(lang, "สรุป", "Cheat Sheet", "速记")}</span>
                   </div>
                   <h3>
-                    <Link href="/cheatsheet/">
-                      {tr(lang, "แผ่นสรุปสูตร & เกมจับคู่", "Cheat Sheet & Matching Game", "速记公式与条文配对")}
-                    </Link>
+                    {tr(lang, "แผ่นสรุปสูตร & เกมจับคู่", "Cheat Sheet & Matching Game", "速记公式与条文配对")}
                   </h3>
                   <p className="micro">
                     {tr(lang, "สูตรช่วยจำสัดส่วนทางกฎหมาย และมินิเกมจับคู่สาระสำคัญ", "Mnemonic formula sheets and rapid concept-matching mini-games.", "法律比例速记公式与条文核心要点快速配对游戏。")}
@@ -413,10 +352,10 @@ function ConstitutionArena() {
             </button>
             <div className="quiz-progress-stats micro mono">
               <span>
-                QUESTION {currentIndex + 1} / {queue.length}
+                {tr(lang, "ข้อ", "Question", "题目")} {currentIndex + 1} / {queue.length}
               </span>
               <span>
-                SCORE: {score} ({percentage}%)
+                {tr(lang, "คะแนน", "Score", "得分")} {score} ({percentage}%)
               </span>
             </div>
           </div>
@@ -430,9 +369,7 @@ function ConstitutionArena() {
           <article className="question-card">
             <header className="question-card-head">
               <span className="mono ch-tag">
-                {currentQ.chapter === 17
-                  ? "TRANSITORY"
-                  : `CHAPTER ${currentQ.chapter}`}
+                {chapterLabel(lang, currentQ.chapter)}
               </span>
               <div className="sec-tags">
                 {currentQ.sections.map((n) => (

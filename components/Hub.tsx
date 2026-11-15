@@ -3,51 +3,45 @@ import Link from "next/link";
 import { useStudy } from "./Provider";
 import { tr, type Text } from "@/lib/i18n";
 import { StudyArt } from "./StudyArt";
-import { PageAction } from "./PageAction";
 export type HubItem = { href: string; title: Text; text: Text };
-// A destination page: one ruled row per place to go; the whole row is the link.
-// The first destination is the way in and gets the one prominent panel; the
-// rest stay a quiet list, because a shelf of eight equal handles is a shelf,
-// not a set of eight things competing for the eye.
-export function Hub({
-  title,
-  intro,
-  items,
-  reason,
-}: {
-  title: Text;
-  intro: Text;
-  items: HubItem[];
-  reason: Text;
-}) {
+
+export function Hub({ title, items }: { title: Text; items: HubItem[] }) {
   const { lang } = useStudy();
   const [first, ...rest] = items;
+  const groups = [
+    { title: tr(lang, "รัฐธรรมนูญในชีวิตจริง", "The constitution in practice", "宪法与现实"), items: rest.slice(0, 4) },
+    { title: tr(lang, "อ่านและจดจำ", "Study and reference", "学习与查阅"), items: rest.slice(4) },
+  ];
   return (
-    <>
-      <div className="intro-copy">
+    <div className="explore-index">
+      <header className="study-opening">
         <StudyArt scene="library" />
-        <div className="intro-text">
+        <div className="study-opening-copy">
           <h1>{title[lang]}</h1>
-          <p>{intro[lang]}</p>
-        </div>
-      </div>
-      <PageAction
-        href={first.href}
-        label={first.title[lang]}
-        reason={reason[lang]}
-        kicker={tr(lang, "เริ่มที่นี่", "Start here", "从这里开始")}
-      />
-      <h2 className="hub-others-title">
-        {tr(lang, "หรือสำรวจเรื่องอื่น", "Or explore something else", "或探索其他")}
-      </h2>
-      <nav className="hub-list">
-        {rest.map((item) => (
-          <Link key={item.href} href={item.href}>
-            <strong>{item.title[lang]}</strong>
-            <span className="micro">{item.text[lang]}</span>
+          <p>{tr(lang, "ลองใช้รัฐธรรมนูญกับเรื่องใกล้ตัว", "Try applying the constitution to everyday life.", "试着用宪法理解身边的事。")}</p>
+          <Link href={first.href} className="button primary study-opening-link">
+            {first.title[lang]} <span aria-hidden="true">→</span>
           </Link>
+          <p className="micro">{first.text[lang]}</p>
+        </div>
+      </header>
+      <nav className="explore-groups" aria-label={title[lang]}>
+        {groups.map((group) => (
+          <section key={group.title}>
+            <h2>{group.title}</h2>
+            <ul>
+              {group.items.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href}>
+                    <strong>{item.title[lang]}</strong>
+                    <span className="micro">{item.text[lang]}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
         ))}
       </nav>
-    </>
+    </div>
   );
 }

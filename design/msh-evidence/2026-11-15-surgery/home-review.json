@@ -1,0 +1,1731 @@
+{
+  "base": "http://127.0.0.1:3068",
+  "at": "2026-11-15T03:45:35.709Z",
+  "report": [
+    {
+      "file": "-390-ready.png",
+      "loading": false,
+      "primary": [
+        [
+          "ต่อ: บทที่ 1 · ประวัติ→",
+          "/bible/history/",
+          [
+            157.44,
+            240.31,
+            209.64,
+            49.69
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 157.4375,
+          "text": "ค่อย ๆ อ่าน"
+        },
+        {
+          "left": 157.4375,
+          "text": "ค่อย ๆ เข้าใจ"
+        }
+      ],
+      "examLinkCount": 1,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/reading-pastel.webp",
+          680,
+          [
+            18,
+            106,
+            127.44,
+            130.61
+          ]
+        ]
+      ],
+      "links": [
+        "/bible/history/",
+        "/notebook/",
+        "/read/",
+        "/practice/",
+        "/exam/",
+        "/along/",
+        "/memory/",
+        "/cram/",
+        "/flashcards/",
+        "/bible/",
+        "/rights/",
+        "/cheatsheet/"
+      ],
+      "ready": true,
+      "h1box": [
+        18,
+        145.44,
+        354,
+        90.88
+      ],
+      "controls": [
+        [
+          "ต่อ: บทที่ 1 · ประวัติ→",
+          null,
+          [
+            157.44,
+            240.31,
+            209.64,
+            49.69
+          ],
+          "primary hero-cta"
+        ],
+        [
+          "ยังไม่มีข้อถึงเวลาทบทวน จึงเริ่มที่คู่มือ",
+          null,
+          [
+            157.44,
+            298,
+            212.34,
+            44
+          ],
+          ""
+        ],
+        [
+          "เปิดสมุดสองหน้า →",
+          null,
+          [
+            18,
+            526.39,
+            143.48,
+            44
+          ],
+          ""
+        ],
+        [
+          "อ่านทั้งฉบับทีละหมวด →",
+          null,
+          [
+            177.48,
+            526.39,
+            174.98,
+            44
+          ],
+          ""
+        ],
+        [
+          "เริ่มรอบฝึก →",
+          null,
+          [
+            18,
+            802.06,
+            74.75,
+            44
+          ],
+          ""
+        ]
+      ],
+      "path": "/",
+      "query": "",
+      "lang": "th",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "enlarged": false,
+      "h1": [
+        "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ"
+      ],
+      "header": [
+        0,
+        0,
+        390,
+        53
+      ],
+      "nav": [
+        18,
+        53,
+        354,
+        45
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            12,
+            4,
+            112.78,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            132.78,
+            4,
+            61.22,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            198,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            246,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            290,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            334,
+            4,
+            44,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "tikki-390-ready.png",
+      "loading": false,
+      "primary": [
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          "/bible/",
+          [
+            18,
+            518.19,
+            152.19,
+            45.69
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 172.046875,
+          "text": "จากภูเขา"
+        },
+        {
+          "left": 172.046875,
+          "text": "กฎหมาย"
+        },
+        {
+          "left": 172.046875,
+          "text": "สู่การเรียนรู้"
+        },
+        {
+          "left": 18,
+          "text": "อย่างฉลาดและมีความสุข"
+        }
+      ],
+      "examLinkCount": 0,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/tikki-story-cover-pastel.webp",
+          680,
+          [
+            18,
+            158,
+            138.05,
+            159.56
+          ]
+        ],
+        [
+          "/illustrations/tikki-student-pastel.webp",
+          680,
+          [
+            18,
+            605.88,
+            200,
+            227.64
+          ]
+        ],
+        [
+          "/illustrations/tikki-overwhelmed-pastel.webp",
+          583,
+          [
+            18,
+            1182.98,
+            200,
+            193.47
+          ]
+        ],
+        [
+          "/illustrations/tikki-smart-pastel.webp",
+          680,
+          [
+            18,
+            1725.92,
+            200,
+            181.47
+          ]
+        ],
+        [
+          "/illustrations/tikki-pass-pastel.webp",
+          0,
+          [
+            18,
+            2286.55,
+            200,
+            244.55
+          ]
+        ]
+      ],
+      "links": [
+        "/library/",
+        "/bible/",
+        "/illustrations/tikki-student-pastel.webp",
+        "/illustrations/tikki-overwhelmed-pastel.webp",
+        "/illustrations/tikki-smart-pastel.webp",
+        "/illustrations/tikki-pass-pastel.webp",
+        "/illustrations/tikki-officer-pastel.webp"
+      ],
+      "ready": true,
+      "h1box": [
+        18,
+        191.69,
+        354,
+        181.75
+      ],
+      "controls": [
+        [
+          "สำรวจ",
+          null,
+          [
+            18,
+            106,
+            49.11,
+            44
+          ],
+          ""
+        ],
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          null,
+          [
+            18,
+            518.19,
+            152.19,
+            45.69
+          ],
+          "primary"
+        ],
+        [
+          "↓ ดาวน์โหลด",
+          null,
+          [
+            18,
+            841.52,
+            99.05,
+            32
+          ],
+          "download-pill micro"
+        ]
+      ],
+      "path": "/tikki/",
+      "query": "",
+      "lang": "th",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "enlarged": false,
+      "h1": [
+        "จากภูเขากฎหมาย\nสู่การเรียนรู้อย่างฉลาดและมีความสุข"
+      ],
+      "header": [
+        0,
+        0,
+        390,
+        53
+      ],
+      "nav": [
+        18,
+        53,
+        354,
+        45
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            12,
+            4,
+            112.78,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            132.78,
+            4,
+            61.22,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            198,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            246,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            290,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            334,
+            4,
+            44,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "-390-large.png",
+      "loading": false,
+      "primary": [
+        [
+          "ต่อ: บทที่ 1 · ประวัติ→",
+          "/bible/history/",
+          [
+            18,
+            384.92,
+            245.98,
+            56.3
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 18,
+          "text": "ค่อย ๆ อ่าน"
+        },
+        {
+          "left": 18,
+          "text": "ค่อย ๆ เข้าใจ"
+        }
+      ],
+      "examLinkCount": 1,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/reading-pastel.webp",
+          680,
+          [
+            18,
+            106,
+            127.44,
+            130.61
+          ]
+        ]
+      ],
+      "links": [
+        "/bible/history/",
+        "/notebook/",
+        "/read/",
+        "/practice/",
+        "/exam/",
+        "/along/",
+        "/memory/",
+        "/cram/",
+        "/flashcards/",
+        "/bible/",
+        "/rights/",
+        "/cheatsheet/"
+      ],
+      "ready": true,
+      "h1box": [
+        18,
+        244.61,
+        354,
+        136.31
+      ],
+      "controls": [
+        [
+          "ต่อ: บทที่ 1 · ประวัติ→",
+          null,
+          [
+            18,
+            384.92,
+            245.98,
+            56.3
+          ],
+          "primary hero-cta"
+        ],
+        [
+          "ยังไม่มีข้อถึงเวลาทบทวน จึงเริ่มที่คู่มือ",
+          null,
+          [
+            18,
+            449.22,
+            259.5,
+            44
+          ],
+          ""
+        ],
+        [
+          "เปิดสมุดสองหน้า →",
+          null,
+          [
+            18,
+            737.97,
+            152.28,
+            72.59
+          ],
+          ""
+        ],
+        [
+          "อ่านทั้งฉบับทีละหมวด →",
+          null,
+          [
+            186.28,
+            737.97,
+            185.72,
+            72.59
+          ],
+          ""
+        ]
+      ],
+      "path": "/",
+      "query": "",
+      "lang": "th",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "enlarged": true,
+      "h1": [
+        "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ"
+      ],
+      "header": [
+        0,
+        0,
+        390,
+        53
+      ],
+      "nav": [
+        18,
+        53,
+        354,
+        45
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            12,
+            4,
+            142,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            154,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            198,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            242,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            286,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            330,
+            4,
+            48,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "tikki-390-large.png",
+      "loading": false,
+      "primary": [
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          "/bible/",
+          [
+            18,
+            807.06,
+            178.89,
+            52.3
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 18,
+          "text": "จากภูเขากฎหมาย"
+        },
+        {
+          "left": 18,
+          "text": "สู่การเรียนรู้อย่าง"
+        },
+        {
+          "left": 18,
+          "text": "ฉลาดและมีความ"
+        },
+        {
+          "left": 18,
+          "text": "สุข"
+        }
+      ],
+      "examLinkCount": 0,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/tikki-story-cover-pastel.webp",
+          680,
+          [
+            18,
+            159.39,
+            138.05,
+            159.56
+          ]
+        ],
+        [
+          "/illustrations/tikki-student-pastel.webp",
+          0,
+          [
+            18,
+            901.36,
+            200,
+            227.64
+          ]
+        ],
+        [
+          "/illustrations/tikki-overwhelmed-pastel.webp",
+          0,
+          [
+            18,
+            1571.75,
+            200,
+            193.47
+          ]
+        ],
+        [
+          "/illustrations/tikki-smart-pastel.webp",
+          0,
+          [
+            18,
+            2207.97,
+            200,
+            181.47
+          ]
+        ],
+        [
+          "/illustrations/tikki-pass-pastel.webp",
+          0,
+          [
+            18,
+            2930.38,
+            200,
+            244.55
+          ]
+        ]
+      ],
+      "links": [
+        "/library/",
+        "/bible/",
+        "/illustrations/tikki-student-pastel.webp",
+        "/illustrations/tikki-overwhelmed-pastel.webp",
+        "/illustrations/tikki-smart-pastel.webp",
+        "/illustrations/tikki-pass-pastel.webp",
+        "/illustrations/tikki-officer-pastel.webp"
+      ],
+      "ready": true,
+      "h1box": [
+        18,
+        326.95,
+        354,
+        272.63
+      ],
+      "controls": [
+        [
+          "สำรวจ",
+          null,
+          [
+            18,
+            107.39,
+            60.03,
+            44
+          ],
+          ""
+        ],
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          null,
+          [
+            18,
+            807.06,
+            178.89,
+            52.3
+          ],
+          "primary"
+        ]
+      ],
+      "path": "/tikki/",
+      "query": "",
+      "lang": "th",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "enlarged": true,
+      "h1": [
+        "จากภูเขากฎหมาย\nสู่การเรียนรู้อย่างฉลาดและมีความสุข"
+      ],
+      "header": [
+        0,
+        0,
+        390,
+        53
+      ],
+      "nav": [
+        18,
+        53,
+        354,
+        46.39
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            12,
+            4,
+            142,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            154,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            198,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            242,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            286,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            330,
+            4,
+            48,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "-1024-ready.png",
+      "loading": false,
+      "primary": [
+        [
+          "ต่อ: บทที่ 1 · ประวัติ→",
+          "/bible/history/",
+          [
+            544.55,
+            227.38,
+            209.64,
+            49.69
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 544.546875,
+          "text": "ค่อย ๆ อ่าน"
+        },
+        {
+          "left": 544.546875,
+          "text": "ค่อย ๆ เข้าใจ"
+        }
+      ],
+      "examLinkCount": 1,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/reading-pastel.webp",
+          680,
+          [
+            270.27,
+            84.23,
+            224,
+            229.59
+          ]
+        ]
+      ],
+      "links": [
+        "/bible/history/",
+        "/notebook/",
+        "/read/",
+        "/practice/",
+        "/exam/",
+        "/along/",
+        "/memory/",
+        "/cram/",
+        "/flashcards/",
+        "/bible/",
+        "/rights/",
+        "/cheatsheet/"
+      ],
+      "ready": true,
+      "h1box": [
+        544.55,
+        98.44,
+        447.44,
+        124.94
+      ],
+      "controls": [
+        [
+          "ต่อ: บทที่ 1 · ประวัติ→",
+          null,
+          [
+            544.55,
+            227.38,
+            209.64,
+            49.69
+          ],
+          "primary hero-cta"
+        ],
+        [
+          "ยังไม่มีข้อถึงเวลาทบทวน จึงเริ่มที่คู่มือ",
+          null,
+          [
+            544.55,
+            285.06,
+            212.34,
+            44
+          ],
+          ""
+        ],
+        [
+          "เปิดสมุดสองหน้า →",
+          null,
+          [
+            244,
+            492.66,
+            143.48,
+            44
+          ],
+          ""
+        ],
+        [
+          "อ่านทั้งฉบับทีละหมวด →",
+          null,
+          [
+            403.48,
+            492.66,
+            174.98,
+            44
+          ],
+          ""
+        ],
+        [
+          "เริ่มรอบฝึก →",
+          null,
+          [
+            244,
+            742.53,
+            74.75,
+            44
+          ],
+          ""
+        ],
+        [
+          "เดินชมวังความจำ →",
+          null,
+          [
+            632,
+            742.53,
+            109.02,
+            44
+          ],
+          ""
+        ]
+      ],
+      "path": "/",
+      "query": "",
+      "lang": "th",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "enlarged": false,
+      "h1": [
+        "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ"
+      ],
+      "header": [
+        0,
+        0,
+        1024,
+        53
+      ],
+      "nav": [
+        32,
+        69,
+        180,
+        157.06
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            24,
+            4,
+            288.17,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            690.86,
+            4,
+            69.22,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            780.08,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            844.08,
+            4,
+            48.05,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            896.13,
+            4,
+            45.88,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            946,
+            4,
+            54,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "tikki-1024-ready.png",
+      "loading": false,
+      "primary": [
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          "/bible/",
+          [
+            244,
+            486.84,
+            152.19,
+            45.69
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 484,
+          "text": "จากภูเขากฎหมาย"
+        },
+        {
+          "left": 484,
+          "text": "สู่การเรียนรู้อย่างฉลาดและ"
+        },
+        {
+          "left": 484,
+          "text": "มีความสุข"
+        }
+      ],
+      "examLinkCount": 0,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/tikki-story-cover-pastel.webp",
+          680,
+          [
+            244,
+            121,
+            224,
+            258.91
+          ]
+        ],
+        [
+          "/illustrations/tikki-student-pastel.webp",
+          680,
+          [
+            244,
+            574.53,
+            220,
+            250.41
+          ]
+        ],
+        [
+          "/illustrations/tikki-overwhelmed-pastel.webp",
+          583,
+          [
+            244,
+            864.94,
+            220,
+            212.83
+          ]
+        ],
+        [
+          "/illustrations/tikki-smart-pastel.webp",
+          680,
+          [
+            244,
+            1117.77,
+            220,
+            199.61
+          ]
+        ],
+        [
+          "/illustrations/tikki-pass-pastel.webp",
+          606,
+          [
+            244,
+            1411.23,
+            220,
+            269
+          ]
+        ]
+      ],
+      "links": [
+        "/library/",
+        "/bible/",
+        "/illustrations/tikki-student-pastel.webp",
+        "/illustrations/tikki-overwhelmed-pastel.webp",
+        "/illustrations/tikki-smart-pastel.webp",
+        "/illustrations/tikki-pass-pastel.webp",
+        "/illustrations/tikki-officer-pastel.webp"
+      ],
+      "ready": true,
+      "h1box": [
+        244,
+        154.69,
+        748,
+        187.41
+      ],
+      "controls": [
+        [
+          "สำรวจ",
+          null,
+          [
+            244,
+            69,
+            49.11,
+            44
+          ],
+          ""
+        ],
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          null,
+          [
+            244,
+            486.84,
+            152.19,
+            45.69
+          ],
+          "primary"
+        ]
+      ],
+      "path": "/tikki/",
+      "query": "",
+      "lang": "th",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "enlarged": false,
+      "h1": [
+        "จากภูเขากฎหมาย\nสู่การเรียนรู้อย่างฉลาดและมีความสุข"
+      ],
+      "header": [
+        0,
+        0,
+        1024,
+        53
+      ],
+      "nav": [
+        32,
+        69,
+        180,
+        157.06
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            24,
+            4,
+            288.17,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            690.86,
+            4,
+            69.22,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            780.08,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            844.08,
+            4,
+            48.05,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            896.13,
+            4,
+            45.88,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            946,
+            4,
+            54,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "-1440-ready.png",
+      "loading": false,
+      "primary": [
+        [
+          "ต่อ: บทที่ 1 · ประวัติ→",
+          "/bible/history/",
+          [
+            656.41,
+            227.38,
+            209.64,
+            49.69
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 656.40625,
+          "text": "ค่อย ๆ อ่าน"
+        },
+        {
+          "left": 656.40625,
+          "text": "ค่อย ๆ เข้าใจ"
+        }
+      ],
+      "examLinkCount": 1,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/reading-pastel.webp",
+          680,
+          [
+            372.2,
+            84.23,
+            224,
+            229.59
+          ]
+        ]
+      ],
+      "links": [
+        "/bible/history/",
+        "/notebook/",
+        "/read/",
+        "/practice/",
+        "/exam/",
+        "/along/",
+        "/memory/",
+        "/cram/",
+        "/flashcards/",
+        "/bible/",
+        "/rights/",
+        "/cheatsheet/"
+      ],
+      "ready": true,
+      "h1box": [
+        656.41,
+        98.44,
+        479.58,
+        124.94
+      ],
+      "controls": [
+        [
+          "ต่อ: บทที่ 1 · ประวัติ→",
+          null,
+          [
+            656.41,
+            227.38,
+            209.64,
+            49.69
+          ],
+          "primary hero-cta"
+        ],
+        [
+          "ยังไม่มีข้อถึงเวลาทบทวน จึงเริ่มที่คู่มือ",
+          null,
+          [
+            656.41,
+            285.06,
+            212.34,
+            44
+          ],
+          ""
+        ],
+        [
+          "เปิดสมุดสองหน้า →",
+          null,
+          [
+            336,
+            492.66,
+            143.48,
+            44
+          ],
+          ""
+        ],
+        [
+          "อ่านทั้งฉบับทีละหมวด →",
+          null,
+          [
+            495.48,
+            492.66,
+            174.98,
+            44
+          ],
+          ""
+        ],
+        [
+          "เริ่มรอบฝึก →",
+          null,
+          [
+            336,
+            742.53,
+            74.75,
+            44
+          ],
+          ""
+        ],
+        [
+          "ข้อสอบจำลอง 30 ชุด",
+          null,
+          [
+            336,
+            794.53,
+            115.34,
+            44
+          ],
+          "pulse-link"
+        ],
+        [
+          "90 ประเด็นสอบนายอำเภอ",
+          null,
+          [
+            336,
+            846.53,
+            142.5,
+            44
+          ],
+          "pulse-link"
+        ],
+        [
+          "เดินชมวังความจำ →",
+          null,
+          [
+            846,
+            742.53,
+            109.02,
+            44
+          ],
+          ""
+        ],
+        [
+          "สูตรตัวเลข 79 ค่า",
+          null,
+          [
+            846,
+            794.53,
+            97.69,
+            44
+          ],
+          "pulse-link"
+        ],
+        [
+          "การ์ดความจำ",
+          null,
+          [
+            846,
+            846.53,
+            73.84,
+            44
+          ],
+          "pulse-link"
+        ]
+      ],
+      "path": "/",
+      "query": "",
+      "lang": "th",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "enlarged": false,
+      "h1": [
+        "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ"
+      ],
+      "header": [
+        0,
+        0,
+        1440,
+        53
+      ],
+      "nav": [
+        112,
+        69,
+        176,
+        157.06
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            24,
+            4,
+            288.17,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            1106.86,
+            4,
+            69.22,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            1196.08,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            1260.08,
+            4,
+            48.05,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            1312.13,
+            4,
+            45.88,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            1362,
+            4,
+            54,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "tikki-1440-ready.png",
+      "loading": false,
+      "primary": [
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          "/bible/",
+          [
+            740.59,
+            459.61,
+            152.19,
+            45.69
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 740.59375,
+          "text": "จากภูเขากฎหมาย"
+        },
+        {
+          "left": 740.59375,
+          "text": "สู่การเรียนรู้อย่างฉลาดและมี"
+        },
+        {
+          "left": 740.59375,
+          "text": "ความสุข"
+        }
+      ],
+      "examLinkCount": 0,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/tikki-story-cover-pastel.webp",
+          680,
+          [
+            382,
+            121,
+            334.59,
+            386.75
+          ]
+        ],
+        [
+          "/illustrations/tikki-student-pastel.webp",
+          680,
+          [
+            382,
+            549.75,
+            220,
+            250.41
+          ]
+        ],
+        [
+          "/illustrations/tikki-overwhelmed-pastel.webp",
+          583,
+          [
+            382,
+            840.16,
+            220,
+            212.83
+          ]
+        ],
+        [
+          "/illustrations/tikki-smart-pastel.webp",
+          680,
+          [
+            382,
+            1092.98,
+            220,
+            199.61
+          ]
+        ],
+        [
+          "/illustrations/tikki-pass-pastel.webp",
+          606,
+          [
+            382,
+            1335.33,
+            220,
+            269
+          ]
+        ]
+      ],
+      "links": [
+        "/library/",
+        "/bible/",
+        "/illustrations/tikki-student-pastel.webp",
+        "/illustrations/tikki-overwhelmed-pastel.webp",
+        "/illustrations/tikki-smart-pastel.webp",
+        "/illustrations/tikki-pass-pastel.webp",
+        "/illustrations/tikki-officer-pastel.webp"
+      ],
+      "ready": true,
+      "h1box": [
+        740.59,
+        157.14,
+        541.41,
+        187.41
+      ],
+      "controls": [
+        [
+          "สำรวจ",
+          null,
+          [
+            336,
+            69,
+            49.11,
+            44
+          ],
+          ""
+        ],
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          null,
+          [
+            740.59,
+            459.61,
+            152.19,
+            45.69
+          ],
+          "primary"
+        ],
+        [
+          "↓ ดาวน์โหลด",
+          null,
+          [
+            382,
+            808.16,
+            99.05,
+            32
+          ],
+          "download-pill micro"
+        ]
+      ],
+      "path": "/tikki/",
+      "query": "",
+      "lang": "th",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "enlarged": false,
+      "h1": [
+        "จากภูเขากฎหมาย\nสู่การเรียนรู้อย่างฉลาดและมีความสุข"
+      ],
+      "header": [
+        0,
+        0,
+        1440,
+        53
+      ],
+      "nav": [
+        112,
+        69,
+        176,
+        157.06
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            24,
+            4,
+            288.17,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            1106.86,
+            4,
+            69.22,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            1196.08,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            1260.08,
+            4,
+            48.05,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            1312.13,
+            4,
+            45.88,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            1362,
+            4,
+            54,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    }
+  ]
+}

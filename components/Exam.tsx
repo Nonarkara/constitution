@@ -105,7 +105,6 @@ export function Exam() {
   }, [paper, done, answers]);
 
   if (repair) return <Quiz ids={repair} onExit={() => setRepair(null)}/>;
-  if (repair) return <Quiz ids={repair} onExit={() => setRepair(null)}/>;
   if (!paper) {
     const [featured, ...rest] = FORMATS;
     const start = (f: (typeof FORMATS)[number]) => {
@@ -120,21 +119,11 @@ export function Exam() {
     };
     return (
       <>
-        <div className="intro-copy">
+        <div className="study-opening">
           <StudyArt scene="exam" />
-          <div className="intro-text">
+          <div className="study-opening-copy">
             <h1>{tr(lang, "ข้อสอบจำลอง", "Mock exam", "模拟考试")}</h1>
-            <p>
-              {tr(
-                lang,
-                `30 ชุดฝึกจากโจทย์เขียนเอง ${questions.length} ข้อ คลังครอบคลุมทุกมาตรา แต่แต่ละชุดเป็นการสุ่มตัวอย่าง ชุดเน้นเรื่องมีโจทย์หมวดอื่นเสริม เฉลยหลังส่ง ข้อที่ตอบผิดจะเข้าคิวทบทวน ข้อว่างยังไม่นับว่าลองตอบ`,
-                `30 study papers from ${questions.length} authored questions. The bank covers every section; each paper samples it. Topic papers include mixed supplements. Answers appear after submission. Wrong submitted answers enter review; blanks remain unattempted.`,
-                `30套练习卷来自${questions.length}道原创题。题库覆盖全部条文，每套只是抽样；主题卷补充其他章节。交卷后显示解析。已答错题进入复习，空白题仍算未尝试。`,
-              )}
-            </p>
-            {/* One thing to do on this page. Thirty equal cards used to sit here,
-                each with the same weight, so nothing led. The first paper is the
-                way in; the other twenty-nine are a quiet list under it. */}
+            <p>{tr(lang, "เลือกชุดจับเวลา แล้วดูเฉลยหลังส่ง", "Choose a timed paper. See the answers after you submit.", "选择一套计时练习，交卷后查看答案。")}</p>
             <div className="exam-featured">
               <span className="mono exam-featured-num">
                 {tr(lang, "ชุดที่ 01", "Paper 01", "第01套")}
@@ -155,16 +144,19 @@ export function Exam() {
             </div>
           </div>
         </div>
-        <p className="micro">
-          {tr(
-            lang,
-            "ข้อฝึกเขียนขึ้นเพื่อการเรียน ไม่ใช่ข้อสอบจริงหรือสถิติข้อสอบ",
-            "Questions are written for study; they are not real exam papers or exam statistics.",
-            "题目为学习而编写，并非真实考题或考试统计。",
-          )}
-        </p>
+        <p className="micro">{tr(lang,
+          `30 ชุดสุ่มจากโจทย์ฝึก ${questions.length} ข้อที่ครอบคลุมทุกมาตรา ชุดเน้นเรื่องมีโจทย์หมวดอื่นเสริม ข้อที่ตอบผิดเข้าคิวทบทวน ข้อว่างยังไม่นับว่าลองตอบ`,
+          `30 study papers sample an authored bank of ${questions.length} questions covering every section. Topic papers include questions from other chapters. Wrong answers enter review, and blanks remain unattempted.`,
+          `30套练习卷从覆盖全部条文的 ${questions.length} 道原创题中抽取。主题卷也包含其他章节的题目。错题进入复习，空白题仍算未尝试。`,
+        )}</p>
         <p className="notice">{tr(lang,"ชุดจับเวลาทั้ง 30 ชุดนี้ใช้คลังรัฐธรรมนูญ ส่วน 90 คำถามนายอำเภอและท้องถิ่นเป็นแบบฝึกเสริมแยก ไม่รวมในคะแนนหรือเกณฑ์ผ่านหมวด","These 30 timed papers use the Constitution bank. The 90 district-chief and local topics are separate, unscored extras and do not change chapter mastery.","这30套计时卷使用宪法题库。90道县长与地方考试题为单独、不计分的补充题，不改变章节掌握标准。")}</p>
-        <p><Link href="/along/">{tr(lang,"ลองแนวข้อสอบเสริม","Try the extra exam topics","试做补充题")} →</Link> · <Link href="/bible/exam-method/">{tr(lang,"อ่านวิธีทำข้อสอบ","Read the exam method","阅读答题方法")} →</Link></p>
+        <div className="exam-context">
+          <StudyArt scene="examStreet" compact />
+          <div>
+            <Link href="/along/">{tr(lang, "ลองแนวข้อสอบเสริม", "Try the extra exam topics", "试做补充题")} →</Link>
+            <Link href="/bible/exam-method/">{tr(lang, "อ่านวิธีทำข้อสอบ", "Read the exam method", "阅读答题方法")} →</Link>
+          </div>
+        </div>
         <h2 className="exam-others-title">
           {tr(lang, "หรือเลือกชุดอื่น", "Or pick another paper", "或选择其他试卷")}
         </h2>

@@ -105,22 +105,17 @@ export function Home() {
         </section>
       )}
 
-      <section className="hero">
-        {/* The drawing is written before the copy on purpose. On a narrow band
-            the drawing floats at the title's top right, and a float can only
-            be placed where it is written — after the text it drops to the
-            bottom of the page. The drawing is decorative (aria-hidden), so
-            the reading order is unchanged. */}
-        <figure className="hero-art" style={plateStyle(HOME_PLATE)} aria-hidden="true">
+      <section className="study-opening">
+        <figure className="study-art" style={plateStyle(HOME_PLATE)} aria-hidden="true">
           <Image
             src={HOME_PLATE}
             alt=""
             {...plateSize(HOME_PLATE)}
             priority
-            sizes="(max-width: 720px) 110px, 260px"
+            sizes="(max-width: 720px) 128px, 224px"
           />
         </figure>
-        <div className="hero-copy">
+        <div className="study-opening-copy">
           <span className="page-kicker mono">
             {tr(lang, "สมุดเรียนรัฐธรรมนูญ", "Constitutional Notebook", "宪法学习笔记")}
           </span>

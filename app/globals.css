@@ -1167,31 +1167,11 @@ html[data-large="true"] {
     scroll-behavior: auto !important;
   }
 }
-.study-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 22px;
-  padding: 14px 0;
-  margin-bottom: 28px;
-  border-bottom: 1px solid var(--line);
-}
-.study-strip a {
-  text-decoration: none;
-  min-height: 32px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.study-strip a:hover {
-  text-decoration: underline;
-}
-.study-strip b {
-  color: var(--ink);
-  font-family: "JetBrains Mono", "IBM Plex Sans Thai", monospace;
-}
-.study-strip a.due b {
-  color: var(--accent-deep);
-}
+
+
+
+
+
 .crumbs {
   margin: 0 0 12px;
 }
@@ -1268,8 +1248,7 @@ html[data-large="true"] {
   object-fit: contain;
 }
 
-/* Small marginal cues let long Thai headings use the reading column.
-   Paragraphs continue beneath the drawing instead of inheriting its height. */
+/* The drawing and the opening copy share a column pair. The news map has its own layout. */
 .intro-copy {
   display: flow-root;
 }
@@ -1284,19 +1263,23 @@ html[data-large="true"] {
 .intro-text > p {
   margin-top: 14px;
 }
-/* The float must be written before the text it stands beside, or the browser
-   can only place it where it is written — at the bottom of the page. Every
-   band writes its drawing first for that reason. The gutter is 16px: it is
-   inside the band's own width, and 28px of it came out of the title. */
-.intro-copy > .study-art {
-  float: right;
-  width: 72px;
-  margin: 0 0 8px 12px;
+.intro-copy:not(.intro-copy--map):has(> .study-art + .intro-text) {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
 }
-/* The desktop margin cue stays 100px wide at its original file ratio. */
+.intro-copy > .study-art {
+  width: 72px;
+  margin: 0;
+}
 @media (min-width: 721px) {
-  .intro-copy > .study-art {
-    width: 100px;
+  .intro-copy > .study-art { width: 112px; }
+}
+@media (max-width: 480px) {
+  html[data-large="true"] .intro-copy:not(.intro-copy--map):has(> .study-art + .intro-text) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
   }
 }
 @media (max-width: 720px) {
@@ -2421,49 +2404,11 @@ mark.hl.has-note {
   max-width: 1280px;
   gap: 48px;
 }
-.study-strip {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  color: var(--muted);
-  padding-bottom: 14px;
-  margin-bottom: 32px;
-  border-bottom: 1px solid var(--line);
-}
+
 .brand-mark {
   background: transparent;
   color: var(--ink);
   border: 0;
-}
-.hero {
-  display: flow-root;
-  padding: 16px 0;
-  margin-bottom: 0;
-  border-bottom: 0;
-}
-.hero-copy {
-  max-width: 760px;
-}
-.hero-art {
-  margin: 0 0 20px 16px;
-  float: right;
-  width: 100px;
-  position: relative;
-  aspect-ratio: var(--plate-ratio, 1);
-}
-.hero-art img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.hero-copy h1 {
-  margin: 0 0 14px;
-}
-.hero-copy p {
-  max-width: 540px;
 }
 .hero-action-group {
   display: flex;
@@ -2723,18 +2668,6 @@ mark.hl.has-note {
   .app-grid {
     display: block;
   }
-  /* The hero's own layout on a phone is set further down, where the plate
-     stands at the title's top right at its own small size. Only the band's
-     spacing belongs here. */
-  .hero {
-    gap: 12px;
-    padding-bottom: 24px;
-    margin-bottom: 0;
-  }
-  .hero-cta {
-    width: fit-content;
-    max-width: 100%;
-  }
   .anchor-content {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -2756,24 +2689,9 @@ mark.hl.has-note {
     display: none;
   }
 }
-.hero-cta + .micro {
-  margin-top: 12px;
-}
 @media (max-width: 720px) {
   .device-link {
     display: none;
-  }
-  .study-strip {
-    gap: 14px;
-    padding-bottom: 10px;
-    margin-bottom: 0;
-    border-bottom: 0;
-  }
-  .hero-copy .page-kicker {
-    margin-bottom: 10px;
-  }
-  .hero-copy h1 {
-    margin-bottom: 10px;
   }
 }
 /* The exam page has one thing to do: start a paper. Thirty identical cards
@@ -3121,9 +3039,6 @@ mark.hl.has-note {
 .practice-arena {
   margin-bottom: 56px;
 }
-.practice-header {
-  margin-bottom: 24px;
-}
 .practice-subnav {
   display: flex;
   flex-wrap: wrap;
@@ -3132,44 +3047,9 @@ mark.hl.has-note {
   padding-bottom: 8px;
   border-bottom: 1px solid var(--line);
 }
-.subnav-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  background: var(--wash);
-  border: 1px solid var(--line);
-  font-size: var(--micro);
-  border-radius: 0;
-  text-decoration: none;
-  color: var(--ink);
-  transition: all 120ms ease;
-}
-.subnav-pill:hover,
-.subnav-pill:focus-visible,
-.subnav-pill[aria-current="page"] {
-  background: var(--paper);
-  border-color: var(--ink);
-}
-.subnav-pill[aria-current="page"] {
-  font-weight: 600;
-}
 /* Practice Hub */
 .practice-hub {
   margin: 24px 0 40px;
-}
-.practice-hero-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  background: transparent;
-  border-block: 1px solid var(--line);
-  padding: 12px 0;
-  margin-bottom: 16px;
-}
-.practice-hero-info {
-  max-width: 540px;
 }
 .practice-tag {
   display: inline-block;
@@ -3178,15 +3058,6 @@ mark.hl.has-note {
   letter-spacing: 0.05em;
   color: var(--accent-deep);
   margin-bottom: 6px;
-}
-.practice-hero-info h2 {
-  margin: 0 0 8px;
-  font-size: var(--body);
-}
-.practice-hero-info p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.5;
 }
 .practice-start-btn {
   display: inline-flex;
@@ -3339,12 +3210,6 @@ mark.hl.has-note {
   text-decoration: underline;
 }
 @media (max-width: 720px) {
-  .practice-hero-card {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 0;
-    gap: 12px;
-  }
   .practice-start-btn {
     width: fit-content;
     max-width: 100%;
@@ -4254,7 +4119,6 @@ footer { flex-wrap:wrap; gap:16px; }
 @media print {
   .header,
   .sidebar,
-  .study-strip,
   .cram-tools,
   .skip {
     display: none !important;
@@ -4297,7 +4161,7 @@ footer { flex-wrap:wrap; gap:16px; }
 .header .brand small { font-size: var(--micro); }
 .sidebar nav .nav-active { background: transparent; }
 .sidebar-note { margin-top: 28px; }
-.study-strip { margin-bottom: var(--space-2); }
+
 .civic-shortcuts { margin-bottom: var(--space-4); border-block: 1px solid var(--line); font-size: var(--micro); }
 .where { margin-top: var(--space-2); margin-bottom: var(--space-2); }
 .chapter-info > a { float: right; margin: 0 0 var(--space-1) var(--space-2); }
@@ -4309,10 +4173,6 @@ footer { flex-wrap:wrap; gap:16px; }
 @media (min-width: 900px) {
   .where { grid-template-columns: 1fr 1.2fr 1.6fr; }
 }
-@media (min-width: 721px) and (max-width: 1100px) {
-  .hero { grid-template-columns: minmax(0, 1fr) 180px; gap: var(--space-2); }
-  .hero-copy h1 { font-size: var(--display); }
-}
 @media (max-width: 720px) {
   .header { flex-wrap: nowrap; gap: var(--space-1); padding-block: var(--space-1); }
   .header-controls { width: auto; gap: 0; }
@@ -4322,13 +4182,7 @@ footer { flex-wrap:wrap; gap:16px; }
   .reading-menu > summary { padding-inline: 6px; gap: 4px; }
   .reading-menu .themes { right: -110px; }
   main { padding-top: var(--space-1); }
-  .study-strip { gap: 0 var(--space-2); padding-block: 2px var(--space-1); margin-bottom: var(--space-1); border-bottom: 1px solid var(--line); }
-  .hero { position: relative; display: block; padding-top: var(--space-2); }
-  .hero-art { position: absolute; right: 0; top: var(--space-2); width: 88px; }
-  .hero-copy h1 { padding-right: 104px; margin-bottom: var(--space-1); }
-  .hero-copy p { max-width: none; }
-  .hero-cta { max-width:100%; }
-  .hero-cta + .micro { margin-bottom: 0; }
+
   .study-resources { gap: 0 var(--space-1); }
   .where-item { padding-block: var(--space-2); }
   .civic-shortcuts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--space-2); padding-block: var(--space-1); }
@@ -4596,30 +4450,28 @@ footer {
 }
 .tikki-hero {
   display: flow-root;
-  padding-bottom: 32px;
+  padding-bottom: 20px;
   border-bottom: 2px solid var(--ink);
-  margin-bottom: 40px;
 }
 .tikki-hero-copy h1 {
-  margin: 8px 0 14px;
-  white-space: pre-line;
+  margin: 4px 0 8px;
 }
 .tikki-hero-action {
-  margin-top: 20px;
+  margin-top: 12px;
 }
 .tikki-hero-action a.primary {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   min-height: 44px;
-  padding: 10px 20px;
+  padding: 8px 12px;
   width: fit-content;
   max-width: 100%;
 }
 .tikki-hero-art {
-  margin: 0 0 20px 16px;
-  float: right;
-  width: 100px;
+  margin: 0 16px 8px 0;
+  float: left;
+  width: min(40%, 224px);
   position: relative;
   aspect-ratio: var(--plate-ratio, 1);
 }
@@ -4631,31 +4483,23 @@ footer {
   height: 100%;
   object-fit: contain;
 }
-@media (min-width: 1218px) {
+@media (min-width: 641px) {
   .tikki-hero {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 48%;
-    gap: 28px;
-    align-items: start;
-  }
-  .tikki-hero-copy {
-    grid-column: 1;
-    grid-row: 1;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.618fr);
+    gap: 24px;
+    align-items: center;
   }
   .tikki-hero-art {
-    float: none;
-    grid-column: 2;
-    grid-row: 1;
-    width: 100%;
+    width: min(100%, 340px);
     margin: 0;
+    justify-self: center;
   }
 }
 .tikki-episodes {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  margin-bottom: 56px;
+  margin-top: 20px;
 }
+
 .tikki-episode-row {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
@@ -4777,16 +4621,8 @@ footer {
 }
 
 @media(max-width: 640px) {
-  .tikki-hero {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  .tikki-hero-art {
-    width: 150px;
-    max-width: none;
-    align-self: start;
-    justify-self: start;
-  }
+  .tikki-hero-art { width: min(39%, 150px); }
+  html[data-large="true"] .tikki-hero-copy h1 { clear: both; }
   .wallpaper-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -5028,8 +4864,8 @@ footer {
 .header { padding-top:calc(4px + env(safe-area-inset-top, 0px)); padding-bottom:4px; }
 .nav-progress { font-variant-numeric:tabular-nums; }
 .sidebar nav .nav-progress { display:none; }
-.study-strip { padding:0; margin-bottom:8px; }
-.study-strip a { min-height:44px; }
+
+
 .hero-reason { font-size:var(--micro); color:var(--muted); }
 .hero-reason summary { display:flex; align-items:center; gap:8px; min-height:44px; }
 .hero-reason summary::after { content:"+"; }
@@ -5053,7 +4889,7 @@ footer {
   .sidebar { padding-top:0; }
   .sidebar nav.has-progress { grid-template-columns:repeat(4,minmax(0,1fr)); }
   .sidebar nav .nav-progress { display:flex; }
-  .study-strip { display:none; }
+
   .palace-room figure { grid-template-columns:100px minmax(0,1fr); }
   .palace-room .palace-picture { width:100px; }
 }
@@ -5086,7 +4922,6 @@ footer {
 main h2 > a,main h3 > a,.crumbs a,.page-back a,.page-next a,.civic-law-list a,footer a {
   display:inline-flex; align-items:center; min-width:44px; min-height:44px;
 }
-.practice-subnav .subnav-pill { min-height:44px; }
 .room-heading { display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; }
 .room-heading a { display:inline-flex; align-items:center; min-height:44px; font-size:var(--micro); }
 
@@ -5114,3 +4949,159 @@ main h2 > a,main h3 > a,.crumbs a,.page-back a,.page-next a,.civic-law-list a,fo
 
 .quiz-exit { display:inline-flex; align-items:center; min-width:44px; min-height:44px; font-size:var(--micro); }
 .quiz-session > .quiz-exit { margin-bottom:8px; }
+
+/* A notebook opening pairs the scene with the action it introduces. The
+   illustration sets the scale on wide screens. The copy can grow on its own. */
+.study-opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.618fr);
+  align-items: center;
+  gap: 24px;
+  max-width: 800px;
+  margin-block: 0 24px;
+}
+.study-opening > .study-art {
+  width: min(100%, 224px);
+  margin: 0;
+  justify-self: center;
+}
+.study-opening-copy { min-width: 0; }
+.study-opening-copy h1 { margin: 0 0 4px; }
+.study-opening-copy p { margin: 0 0 12px; }
+.study-opening-copy .micro { color: var(--muted); }
+.study-opening-copy > .micro:last-child { margin: 8px 0 0; }
+.study-opening-link { min-height: 44px; padding-inline: 12px; }
+.study-opening .action-panel { margin-top: 8px; }
+
+.explore-groups {
+  display: grid;
+  grid-template-columns: minmax(0, 1.618fr) minmax(0, 1fr);
+  gap: 24px;
+  max-width: 800px;
+}
+.explore-groups h2 { margin: 0 0 4px; }
+.explore-groups ul { list-style: none; padding: 0; margin: 0; }
+.explore-groups li { border-top: 1px solid var(--line); }
+.explore-groups a {
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  min-height: 44px;
+  padding-block: 4px;
+  color: inherit;
+  text-decoration: none;
+}
+.explore-groups a:hover strong { text-decoration: underline; }
+.explore-groups .micro { color: var(--muted); }
+
+.sidebar nav .nav-progress { display: flex; gap: 4px; color: var(--muted); }
+.sidebar nav .nav-progress b { color: var(--ink); }
+.sidebar-note { margin-top: 12px; padding-block: 12px; }
+.sidebar-note p { margin: 4px 0 0; }
+main > .crumbs, main > .page-back { margin-bottom: 8px; }
+.page-next { margin-top: 24px; padding-top: 8px; }
+
+/* The action and its reason form one group. Only the control carries colour. */
+.action-panel:has(> .action-panel-cta) {
+  width: fit-content;
+  max-width: 100%;
+  margin-block-start: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.action-panel-cta { margin-top: 0; padding-inline: 12px; }
+
+.practice-subnav { gap: 16px; margin-bottom: 8px; padding-bottom: 0; }
+.practice-tab {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  text-underline-offset: 4px;
+}
+.practice-tab[aria-current="page"] {
+  font-weight: 600;
+  text-decoration-thickness: 2px;
+}
+.practice-beta { color: var(--muted); font-size: var(--micro); }
+.practice-hub { margin-block: 16px 24px; }
+.practice-section { margin-top: 16px; gap: 8px; }
+.practice-featured-grid { align-items: start; gap: 16px; }
+.practice-featured-card,
+.practice-mode-card {
+  justify-content: flex-start;
+  padding-block: 8px 4px;
+  border-top: 1px solid var(--line);
+}
+.practice-featured-card p,
+.practice-mode-card p { margin-bottom: 0; flex-grow: 0; }
+.practice-start-btn { white-space: normal; padding-inline: 12px; }
+.mode-card-link, .card-dual-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  align-self: flex-start;
+}
+.mode-card-link, .card-dual-links, .chapter-drill-action { padding-top: 0; border-top: 0; }
+.guide-route .chapter-row { padding-block: 8px; }
+.guide-route .chapter-info h3 { margin-bottom: 4px; }
+.search-controls button { min-width: 44px; }
+.read-section-head > a { display: inline-flex; align-items: center; min-height: 44px; }
+.section-heading > label { display: inline-flex; align-items: center; min-height: 44px; }
+
+@media (max-width: 720px) {
+  .study-opening {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.618fr);
+    align-items: start;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .study-opening > .study-art { width: min(100%, 128px); }
+  .explore-groups { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .sidebar nav .nav-progress span { display: none; }
+}
+@media (max-width: 720px) {
+  html[data-large="true"] .study-opening { grid-template-columns: minmax(0, 1fr); }
+  html[data-large="true"] .study-opening > .study-art { justify-self: start; }
+}
+.study-opening .exam-featured {
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.exam-context { display: flex; align-items: center; gap: 12px; margin-block: 12px; }
+.exam-context > .study-art { flex: 0 0 64px; margin: 0; }
+.exam-context a { display: flex; align-items: center; min-height: 44px; width: fit-content; }
+
+/* On a phone, continue the lesson under the illustration as soon as its edge
+   ends. Long guide titles and chapter selectors get the whole reading width. */
+@media (max-width: 720px) {
+  .study-opening,
+  html[data-large="true"] .study-opening,
+  .intro-copy:not(.intro-copy--map):has(> .study-art + .intro-text),
+  html[data-large="true"] .intro-copy:not(.intro-copy--map):has(> .study-art + .intro-text) {
+    display: flow-root;
+  }
+  .study-opening > .study-art,
+  .intro-copy > .study-art {
+    float: left;
+    margin: 0 12px 8px 0;
+  }
+  .study-opening > .study-art { width: min(36%, 128px); }
+  .read-head .lookup-label { display: block; clear: both; }
+}
+@media (max-width: 720px) {
+  html[data-large="true"] .study-opening-copy > h1,
+  html[data-large="true"] .read-head .intro-text > h1 { clear: both; }
+}
+
+.intro-copy--map > .study-art { float: right; margin: 0 0 8px 12px; }
+@media (min-width: 721px) {
+  .intro-copy--map > .study-art { width: 100px; }
+}
