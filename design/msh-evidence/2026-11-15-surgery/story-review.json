@@ -1,0 +1,1281 @@
+{
+  "base": "http://127.0.0.1:3068",
+  "at": "2026-11-15T03:48:00.274Z",
+  "report": [
+    {
+      "file": "tikki-390-th-ready.png",
+      "loading": false,
+      "primary": [
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          "/bible/",
+          [
+            18,
+            397.63,
+            152.19,
+            45.69
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 172.046875,
+          "text": "ติ๊กกี้กับ"
+        },
+        {
+          "left": 172.046875,
+          "text": "ภูเขากฎหมาย"
+        }
+      ],
+      "examLinkCount": 0,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/tikki-story-cover-pastel.webp",
+          680,
+          [
+            18,
+            158,
+            138.05,
+            159.56
+          ]
+        ],
+        [
+          "/illustrations/tikki-student-pastel.webp",
+          680,
+          [
+            18,
+            485.31,
+            200,
+            227.64
+          ]
+        ],
+        [
+          "/illustrations/tikki-overwhelmed-pastel.webp",
+          583,
+          [
+            18,
+            1062.42,
+            200,
+            193.47
+          ]
+        ],
+        [
+          "/illustrations/tikki-smart-pastel.webp",
+          680,
+          [
+            18,
+            1605.36,
+            200,
+            181.47
+          ]
+        ],
+        [
+          "/illustrations/tikki-pass-pastel.webp",
+          0,
+          [
+            18,
+            2165.98,
+            200,
+            244.55
+          ]
+        ]
+      ],
+      "links": [
+        "/library/",
+        "/bible/",
+        "/illustrations/tikki-student-pastel.webp",
+        "/illustrations/tikki-overwhelmed-pastel.webp",
+        "/illustrations/tikki-smart-pastel.webp",
+        "/illustrations/tikki-pass-pastel.webp",
+        "/illustrations/tikki-officer-pastel.webp"
+      ],
+      "ready": true,
+      "h1box": [
+        18,
+        162,
+        354,
+        90.88
+      ],
+      "controls": [
+        [
+          "สำรวจ",
+          null,
+          [
+            18,
+            106,
+            49.11,
+            44
+          ],
+          ""
+        ],
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          null,
+          [
+            18,
+            397.63,
+            152.19,
+            45.69
+          ],
+          "primary"
+        ],
+        [
+          "↓ ดาวน์โหลด",
+          null,
+          [
+            18,
+            720.95,
+            99.05,
+            32
+          ],
+          "download-pill micro"
+        ]
+      ],
+      "path": "/tikki/",
+      "query": "",
+      "lang": "th",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "enlarged": false,
+      "h1": [
+        "ติ๊กกี้กับภูเขากฎหมาย"
+      ],
+      "header": [
+        0,
+        0,
+        390,
+        53
+      ],
+      "nav": [
+        18,
+        53,
+        354,
+        45
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            12,
+            4,
+            112.78,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            132.78,
+            4,
+            61.22,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            198,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            246,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            290,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            334,
+            4,
+            44,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "tikki-390-th-large.png",
+      "loading": false,
+      "primary": [
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          "/bible/",
+          [
+            18,
+            598.16,
+            178.89,
+            52.3
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 18,
+          "text": "ติ๊กกี้กับ"
+        },
+        {
+          "left": 18,
+          "text": "ภูเขากฎหมาย"
+        }
+      ],
+      "examLinkCount": 0,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/tikki-story-cover-pastel.webp",
+          680,
+          [
+            18,
+            159.39,
+            138.05,
+            159.56
+          ]
+        ],
+        [
+          "/illustrations/tikki-student-pastel.webp",
+          680,
+          [
+            18,
+            692.45,
+            200,
+            227.64
+          ]
+        ],
+        [
+          "/illustrations/tikki-overwhelmed-pastel.webp",
+          583,
+          [
+            18,
+            1362.84,
+            200,
+            193.47
+          ]
+        ],
+        [
+          "/illustrations/tikki-smart-pastel.webp",
+          680,
+          [
+            18,
+            1999.06,
+            200,
+            181.47
+          ]
+        ],
+        [
+          "/illustrations/tikki-pass-pastel.webp",
+          0,
+          [
+            18,
+            2721.47,
+            200,
+            244.55
+          ]
+        ]
+      ],
+      "links": [
+        "/library/",
+        "/bible/",
+        "/illustrations/tikki-student-pastel.webp",
+        "/illustrations/tikki-overwhelmed-pastel.webp",
+        "/illustrations/tikki-smart-pastel.webp",
+        "/illustrations/tikki-pass-pastel.webp",
+        "/illustrations/tikki-officer-pastel.webp"
+      ],
+      "ready": true,
+      "h1box": [
+        18,
+        326.95,
+        354,
+        136.31
+      ],
+      "controls": [
+        [
+          "สำรวจ",
+          null,
+          [
+            18,
+            107.39,
+            60.03,
+            44
+          ],
+          ""
+        ],
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          null,
+          [
+            18,
+            598.16,
+            178.89,
+            52.3
+          ],
+          "primary"
+        ]
+      ],
+      "path": "/tikki/",
+      "query": "",
+      "lang": "th",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "enlarged": true,
+      "h1": [
+        "ติ๊กกี้กับภูเขากฎหมาย"
+      ],
+      "header": [
+        0,
+        0,
+        390,
+        53
+      ],
+      "nav": [
+        18,
+        53,
+        354,
+        46.39
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            12,
+            4,
+            142,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            154,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            198,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            242,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            286,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            330,
+            4,
+            48,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "tikki-1024-th-ready.png",
+      "loading": false,
+      "primary": [
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          "/bible/",
+          [
+            544.55,
+            333.89,
+            152.19,
+            45.69
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 544.546875,
+          "text": "ติ๊กกี้กับภูเขากฎหมาย"
+        }
+      ],
+      "examLinkCount": 0,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/tikki-story-cover-pastel.webp",
+          680,
+          [
+            244,
+            121,
+            276.55,
+            319.64
+          ]
+        ],
+        [
+          "/illustrations/tikki-student-pastel.webp",
+          680,
+          [
+            244,
+            482.64,
+            220,
+            250.41
+          ]
+        ],
+        [
+          "/illustrations/tikki-overwhelmed-pastel.webp",
+          583,
+          [
+            244,
+            773.05,
+            220,
+            212.83
+          ]
+        ],
+        [
+          "/illustrations/tikki-smart-pastel.webp",
+          680,
+          [
+            244,
+            1025.88,
+            220,
+            199.61
+          ]
+        ],
+        [
+          "/illustrations/tikki-pass-pastel.webp",
+          606,
+          [
+            244,
+            1319.34,
+            220,
+            269
+          ]
+        ]
+      ],
+      "links": [
+        "/library/",
+        "/bible/",
+        "/illustrations/tikki-student-pastel.webp",
+        "/illustrations/tikki-overwhelmed-pastel.webp",
+        "/illustrations/tikki-smart-pastel.webp",
+        "/illustrations/tikki-pass-pastel.webp",
+        "/illustrations/tikki-officer-pastel.webp"
+      ],
+      "ready": true,
+      "h1box": [
+        544.55,
+        186.05,
+        447.44,
+        62.47
+      ],
+      "controls": [
+        [
+          "สำรวจ",
+          null,
+          [
+            244,
+            69,
+            49.11,
+            44
+          ],
+          ""
+        ],
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          null,
+          [
+            544.55,
+            333.89,
+            152.19,
+            45.69
+          ],
+          "primary"
+        ],
+        [
+          "↓ ดาวน์โหลด",
+          null,
+          [
+            244,
+            741.05,
+            99.05,
+            32
+          ],
+          "download-pill micro"
+        ]
+      ],
+      "path": "/tikki/",
+      "query": "",
+      "lang": "th",
+      "width": 1024,
+      "height": 768,
+      "scrollWidth": 1024,
+      "enlarged": false,
+      "h1": [
+        "ติ๊กกี้กับภูเขากฎหมาย"
+      ],
+      "header": [
+        0,
+        0,
+        1024,
+        53
+      ],
+      "nav": [
+        32,
+        69,
+        180,
+        157.06
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            24,
+            4,
+            288.17,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            690.86,
+            4,
+            69.22,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            780.08,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            844.08,
+            4,
+            48.05,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            896.13,
+            4,
+            45.88,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            946,
+            4,
+            54,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "tikki-1440-th-ready.png",
+      "loading": false,
+      "primary": [
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          "/bible/",
+          [
+            740.59,
+            367.45,
+            152.19,
+            45.69
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 740.59375,
+          "text": "ติ๊กกี้กับภูเขากฎหมาย"
+        }
+      ],
+      "examLinkCount": 0,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/tikki-story-cover-pastel.webp",
+          680,
+          [
+            382,
+            121,
+            334.59,
+            386.75
+          ]
+        ],
+        [
+          "/illustrations/tikki-student-pastel.webp",
+          0,
+          [
+            382,
+            549.75,
+            220,
+            250.41
+          ]
+        ],
+        [
+          "/illustrations/tikki-overwhelmed-pastel.webp",
+          0,
+          [
+            382,
+            840.16,
+            220,
+            212.83
+          ]
+        ],
+        [
+          "/illustrations/tikki-smart-pastel.webp",
+          0,
+          [
+            382,
+            1092.98,
+            220,
+            199.61
+          ]
+        ],
+        [
+          "/illustrations/tikki-pass-pastel.webp",
+          0,
+          [
+            382,
+            1335.33,
+            220,
+            269
+          ]
+        ]
+      ],
+      "links": [
+        "/library/",
+        "/bible/",
+        "/illustrations/tikki-student-pastel.webp",
+        "/illustrations/tikki-overwhelmed-pastel.webp",
+        "/illustrations/tikki-smart-pastel.webp",
+        "/illustrations/tikki-pass-pastel.webp",
+        "/illustrations/tikki-officer-pastel.webp"
+      ],
+      "ready": true,
+      "h1box": [
+        740.59,
+        219.61,
+        541.41,
+        62.47
+      ],
+      "controls": [
+        [
+          "สำรวจ",
+          null,
+          [
+            336,
+            69,
+            49.11,
+            44
+          ],
+          ""
+        ],
+        [
+          "เริ่มเรียนรู้คู่มือ→",
+          null,
+          [
+            740.59,
+            367.45,
+            152.19,
+            45.69
+          ],
+          "primary"
+        ],
+        [
+          "↓ ดาวน์โหลด",
+          null,
+          [
+            382,
+            808.16,
+            99.05,
+            32
+          ],
+          "download-pill micro"
+        ]
+      ],
+      "path": "/tikki/",
+      "query": "",
+      "lang": "th",
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "enlarged": false,
+      "h1": [
+        "ติ๊กกี้กับภูเขากฎหมาย"
+      ],
+      "header": [
+        0,
+        0,
+        1440,
+        53
+      ],
+      "nav": [
+        112,
+        69,
+        176,
+        157.06
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            24,
+            4,
+            288.17,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            1106.86,
+            4,
+            69.22,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            1196.08,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            1260.08,
+            4,
+            48.05,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            1312.13,
+            4,
+            45.88,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            1362,
+            4,
+            54,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "tikki-390-en-ready.png",
+      "loading": false,
+      "primary": [
+        [
+          "Start the study guide→",
+          "/bible/",
+          [
+            18,
+            472.75,
+            202.47,
+            45.69
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 172.046875,
+          "text": "Tikki and the"
+        },
+        {
+          "left": 172.046875,
+          "text": "mountain"
+        },
+        {
+          "left": 172.046875,
+          "text": "of laws"
+        }
+      ],
+      "examLinkCount": 0,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/tikki-story-cover-pastel.webp",
+          680,
+          [
+            18,
+            158,
+            138.05,
+            159.56
+          ]
+        ],
+        [
+          "/illustrations/tikki-student-pastel.webp",
+          680,
+          [
+            18,
+            560.44,
+            200,
+            227.64
+          ]
+        ],
+        [
+          "/illustrations/tikki-overwhelmed-pastel.webp",
+          583,
+          [
+            18,
+            1158.34,
+            200,
+            193.47
+          ]
+        ],
+        [
+          "/illustrations/tikki-smart-pastel.webp",
+          680,
+          [
+            18,
+            1701.28,
+            200,
+            181.47
+          ]
+        ],
+        [
+          "/illustrations/tikki-pass-pastel.webp",
+          0,
+          [
+            18,
+            2291.59,
+            200,
+            244.55
+          ]
+        ]
+      ],
+      "links": [
+        "/library/",
+        "/bible/",
+        "/illustrations/tikki-student-pastel.webp",
+        "/illustrations/tikki-overwhelmed-pastel.webp",
+        "/illustrations/tikki-smart-pastel.webp",
+        "/illustrations/tikki-pass-pastel.webp",
+        "/illustrations/tikki-officer-pastel.webp"
+      ],
+      "ready": true,
+      "h1box": [
+        18,
+        162,
+        354,
+        136.31
+      ],
+      "controls": [
+        [
+          "Explore",
+          null,
+          [
+            18,
+            106,
+            56.88,
+            44
+          ],
+          ""
+        ],
+        [
+          "Start the study guide→",
+          null,
+          [
+            18,
+            472.75,
+            202.47,
+            45.69
+          ],
+          "primary"
+        ],
+        [
+          "↓ Download",
+          null,
+          [
+            18,
+            796.08,
+            95.73,
+            32
+          ],
+          "download-pill micro"
+        ]
+      ],
+      "path": "/tikki/",
+      "query": "",
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "enlarged": false,
+      "h1": [
+        "Tikki and the mountain of laws"
+      ],
+      "header": [
+        0,
+        0,
+        390,
+        53
+      ],
+      "nav": [
+        18,
+        53,
+        354,
+        45
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐The ConstitutionConstitutionRead. Recall. Understand.",
+          [
+            12,
+            4,
+            106.95,
+            44
+          ]
+        ],
+        [
+          "DisplayView",
+          [
+            126.95,
+            4,
+            64.09,
+            44
+          ]
+        ],
+        [
+          "Settings",
+          [
+            195.05,
+            4,
+            46.95,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            246,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            290,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            334,
+            4,
+            44,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "tikki-390-zh-ready.png",
+      "loading": false,
+      "primary": [
+        [
+          "开始阅读学习指南→",
+          "/bible/",
+          [
+            18,
+            397.63,
+            190.77,
+            45.69
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 172.046875,
+          "text": "蒂基和她的"
+        },
+        {
+          "left": 172.046875,
+          "text": "法律书山"
+        }
+      ],
+      "examLinkCount": 0,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/tikki-story-cover-pastel.webp",
+          680,
+          [
+            18,
+            158,
+            138.05,
+            159.56
+          ]
+        ],
+        [
+          "/illustrations/tikki-student-pastel.webp",
+          680,
+          [
+            18,
+            485.31,
+            200,
+            227.64
+          ]
+        ],
+        [
+          "/illustrations/tikki-overwhelmed-pastel.webp",
+          583,
+          [
+            18,
+            981.61,
+            200,
+            193.47
+          ]
+        ],
+        [
+          "/illustrations/tikki-smart-pastel.webp",
+          680,
+          [
+            18,
+            1465.17,
+            200,
+            181.47
+          ]
+        ],
+        [
+          "/illustrations/tikki-pass-pastel.webp",
+          606,
+          [
+            18,
+            1966.42,
+            200,
+            244.55
+          ]
+        ]
+      ],
+      "links": [
+        "/library/",
+        "/bible/",
+        "/illustrations/tikki-student-pastel.webp",
+        "/illustrations/tikki-overwhelmed-pastel.webp",
+        "/illustrations/tikki-smart-pastel.webp",
+        "/illustrations/tikki-pass-pastel.webp",
+        "/illustrations/tikki-officer-pastel.webp"
+      ],
+      "ready": true,
+      "h1box": [
+        18,
+        162,
+        354,
+        90.88
+      ],
+      "controls": [
+        [
+          "探索",
+          null,
+          [
+            18,
+            106,
+            44,
+            44
+          ],
+          ""
+        ],
+        [
+          "开始阅读学习指南→",
+          null,
+          [
+            18,
+            397.63,
+            190.77,
+            45.69
+          ],
+          "primary"
+        ],
+        [
+          "↓ 下载",
+          null,
+          [
+            18,
+            720.95,
+            66.56,
+            32
+          ],
+          "download-pill micro"
+        ]
+      ],
+      "path": "/tikki/",
+      "query": "",
+      "lang": "zh",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "enlarged": false,
+      "h1": [
+        "蒂基和她的法律书山"
+      ],
+      "header": [
+        0,
+        0,
+        390,
+        53
+      ],
+      "nav": [
+        18,
+        53,
+        354,
+        45
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐泰国宪法宪法读懂，记牢，会用。",
+          [
+            12,
+            4,
+            123.69,
+            44
+          ]
+        ],
+        [
+          "显示显示",
+          [
+            143.69,
+            4,
+            50.31,
+            44
+          ]
+        ],
+        [
+          "设置",
+          [
+            198,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            246,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            290,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            334,
+            4,
+            44,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    }
+  ]
+}
