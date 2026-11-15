@@ -1,0 +1,900 @@
+{
+  "base": "http://127.0.0.1:3071",
+  "at": "2026-11-15T11:52:07.967Z",
+  "report": [
+    {
+      "file": "-390-th-ready.png",
+      "loading": false,
+      "theme": "dark",
+      "kicker": [
+        30,
+        324.69,
+        114.08,
+        21.44
+      ],
+      "copy": [
+        18,
+        312.69,
+        195.08,
+        206.31
+      ],
+      "banner": [
+        18,
+        106,
+        354,
+        413
+      ],
+      "figure": null,
+      "imageStyle": {
+        "fit": "fill",
+        "position": "50% 50%"
+      },
+      "pulse": [
+        18,
+        519,
+        354,
+        52
+      ],
+      "due": "ทบทวน 5 ข้อ→",
+      "next": [
+        18,
+        600,
+        354,
+        27
+      ],
+      "primary": [
+        [
+          "ทบทวน 5 ข้อ→",
+          "/practice/?session=mixed",
+          [
+            30,
+            463,
+            113.45,
+            44
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 30,
+          "text": "ค่อย ๆ อ่าน"
+        },
+        {
+          "left": 30,
+          "text": "ค่อย ๆ เข้าใจ"
+        }
+      ],
+      "examLinkCount": 1,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/reading-pastel.webp",
+          680,
+          [
+            102.97,
+            106,
+            269.03,
+            275.75
+          ]
+        ]
+      ],
+      "links": [
+        "/practice/?session=mixed",
+        "/notes/",
+        "/notebook/",
+        "/read/",
+        "/practice/",
+        "/exam/",
+        "/along/",
+        "/memory/",
+        "/cram/",
+        "/flashcards/",
+        "/bible/",
+        "/rights/",
+        "/cheatsheet/"
+      ],
+      "ready": true,
+      "h1box": [
+        30,
+        364.13,
+        171.08,
+        90.88
+      ],
+      "controls": [
+        [
+          "ทบทวน 5 ข้อ→",
+          null,
+          [
+            30,
+            463,
+            113.45,
+            44
+          ],
+          "primary hero-cta"
+        ],
+        [
+          "4/279เริ่มแล้ว",
+          null,
+          [
+            18,
+            527,
+            90.78,
+            44
+          ],
+          "pulse-item"
+        ],
+        [
+          "เปิดสมุดสองหน้า →",
+          null,
+          [
+            18,
+            739.39,
+            143.48,
+            44
+          ],
+          ""
+        ],
+        [
+          "อ่านทั้งฉบับทีละหมวด →",
+          null,
+          [
+            177.48,
+            739.39,
+            174.98,
+            44
+          ],
+          ""
+        ]
+      ],
+      "path": "/",
+      "query": "",
+      "lang": "th",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "enlarged": false,
+      "h1": [
+        "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ"
+      ],
+      "header": [
+        0,
+        0,
+        390,
+        53
+      ],
+      "nav": [
+        18,
+        53,
+        354,
+        45
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            12,
+            4,
+            112.78,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            132.78,
+            4,
+            61.22,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            198,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            246,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            290,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            334,
+            4,
+            44,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "-390-th-large.png",
+      "loading": false,
+      "theme": "dark",
+      "kicker": [
+        30,
+        324.69,
+        140.41,
+        26.39
+      ],
+      "copy": [
+        18,
+        312.69,
+        280.61,
+        256.7
+      ],
+      "banner": [
+        18,
+        106,
+        354,
+        463.39
+      ],
+      "figure": null,
+      "imageStyle": {
+        "fit": "fill",
+        "position": "50% 50%"
+      },
+      "pulse": [
+        18,
+        569.39,
+        354,
+        52
+      ],
+      "due": "ทบทวน 5 ข้อ→",
+      "next": [
+        18,
+        650.39,
+        354,
+        33
+      ],
+      "primary": [
+        [
+          "ทบทวน 5 ข้อ→",
+          "/practice/?session=mixed",
+          [
+            30,
+            513.39,
+            132.27,
+            44
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 30,
+          "text": "ค่อย ๆ อ่าน"
+        },
+        {
+          "left": 30,
+          "text": "ค่อย ๆ เข้าใจ"
+        }
+      ],
+      "examLinkCount": 1,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/reading-pastel.webp",
+          680,
+          [
+            102.97,
+            106,
+            269.03,
+            275.75
+          ]
+        ]
+      ],
+      "links": [
+        "/practice/?session=mixed",
+        "/notes/",
+        "/notebook/",
+        "/read/",
+        "/practice/",
+        "/exam/",
+        "/along/",
+        "/memory/",
+        "/cram/",
+        "/flashcards/",
+        "/bible/",
+        "/rights/",
+        "/cheatsheet/"
+      ],
+      "ready": true,
+      "h1box": [
+        30,
+        369.08,
+        256.61,
+        136.31
+      ],
+      "controls": [
+        [
+          "ทบทวน 5 ข้อ→",
+          null,
+          [
+            30,
+            513.39,
+            132.27,
+            44
+          ],
+          "primary hero-cta"
+        ],
+        [
+          "4/279เริ่มแล้ว",
+          null,
+          [
+            18,
+            577.39,
+            109.78,
+            44
+          ],
+          "pulse-item"
+        ]
+      ],
+      "path": "/",
+      "query": "",
+      "lang": "th",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "enlarged": true,
+      "h1": [
+        "ค่อย ๆ อ่าน\nค่อย ๆ เข้าใจ"
+      ],
+      "header": [
+        0,
+        0,
+        390,
+        53
+      ],
+      "nav": [
+        18,
+        53,
+        354,
+        45
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐รัฐธรรมนูญรัฐธรรมนูญอ่านให้เข้าใจ • จำให้ใช้ได้",
+          [
+            12,
+            4,
+            142,
+            44
+          ]
+        ],
+        [
+          "หน้าจอจอ",
+          [
+            154,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ตั้งค่า",
+          [
+            198,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            242,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            286,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            330,
+            4,
+            48,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "-390-en-ready.png",
+      "loading": false,
+      "theme": "dark",
+      "kicker": [
+        30,
+        324.69,
+        179.41,
+        21.44
+      ],
+      "copy": [
+        18,
+        312.69,
+        231.91,
+        206.31
+      ],
+      "banner": [
+        18,
+        106,
+        354,
+        413
+      ],
+      "figure": null,
+      "imageStyle": {
+        "fit": "fill",
+        "position": "50% 50%"
+      },
+      "pulse": [
+        18,
+        519,
+        354,
+        52
+      ],
+      "due": "Review 5 questions→",
+      "next": [
+        18,
+        600,
+        354,
+        27
+      ],
+      "primary": [
+        [
+          "Review 5 questions→",
+          "/practice/?session=mixed",
+          [
+            30,
+            463,
+            156.8,
+            44
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 30,
+          "text": "One section."
+        },
+        {
+          "left": 30,
+          "text": "One small step."
+        }
+      ],
+      "examLinkCount": 1,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/reading-pastel.webp",
+          680,
+          [
+            102.97,
+            106,
+            269.03,
+            275.75
+          ]
+        ]
+      ],
+      "links": [
+        "/practice/?session=mixed",
+        "/notes/",
+        "/notebook/",
+        "/read/",
+        "/practice/",
+        "/exam/",
+        "/along/",
+        "/memory/",
+        "/cram/",
+        "/flashcards/",
+        "/bible/",
+        "/rights/",
+        "/cheatsheet/"
+      ],
+      "ready": true,
+      "h1box": [
+        30,
+        364.13,
+        207.91,
+        90.88
+      ],
+      "controls": [
+        [
+          "Review 5 questions→",
+          null,
+          [
+            30,
+            463,
+            156.8,
+            44
+          ],
+          "primary hero-cta"
+        ],
+        [
+          "4/279explored",
+          null,
+          [
+            18,
+            527,
+            97.84,
+            44
+          ],
+          "pulse-item"
+        ],
+        [
+          "Open the notebook →",
+          null,
+          [
+            18,
+            768.19,
+            167.92,
+            44
+          ],
+          ""
+        ],
+        [
+          "Read the whole text →",
+          null,
+          [
+            201.92,
+            768.19,
+            167.81,
+            44
+          ],
+          ""
+        ]
+      ],
+      "path": "/",
+      "query": "",
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "enlarged": false,
+      "h1": [
+        "One section.\nOne small step."
+      ],
+      "header": [
+        0,
+        0,
+        390,
+        53
+      ],
+      "nav": [
+        18,
+        53,
+        354,
+        45
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐The ConstitutionConstitutionRead. Recall. Understand.",
+          [
+            12,
+            4,
+            106.95,
+            44
+          ]
+        ],
+        [
+          "DisplayView",
+          [
+            126.95,
+            4,
+            64.09,
+            44
+          ]
+        ],
+        [
+          "Settings",
+          [
+            195.05,
+            4,
+            46.95,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            246,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            290,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            334,
+            4,
+            44,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    },
+    {
+      "file": "-390-zh-ready.png",
+      "loading": false,
+      "theme": "dark",
+      "kicker": [
+        30,
+        324.69,
+        78,
+        21.44
+      ],
+      "copy": [
+        18,
+        312.69,
+        210,
+        206.31
+      ],
+      "banner": [
+        18,
+        106,
+        354,
+        413
+      ],
+      "figure": null,
+      "imageStyle": {
+        "fit": "fill",
+        "position": "50% 50%"
+      },
+      "pulse": [
+        18,
+        519,
+        354,
+        52
+      ],
+      "due": "复习 5 道题→",
+      "next": [
+        18,
+        600,
+        354,
+        27
+      ],
+      "primary": [
+        [
+          "复习 5 道题→",
+          "/practice/?session=mixed",
+          [
+            30,
+            463,
+            111.25,
+            44
+          ]
+        ]
+      ],
+      "headingLines": [
+        {
+          "left": 30,
+          "text": "一条一条读，"
+        },
+        {
+          "left": 30,
+          "text": "一点一点懂。"
+        }
+      ],
+      "examLinkCount": 1,
+      "map": null,
+      "art": [
+        [
+          "/illustrations/reading-pastel.webp",
+          680,
+          [
+            102.97,
+            106,
+            269.03,
+            275.75
+          ]
+        ]
+      ],
+      "links": [
+        "/practice/?session=mixed",
+        "/notes/",
+        "/notebook/",
+        "/read/",
+        "/practice/",
+        "/exam/",
+        "/along/",
+        "/memory/",
+        "/cram/",
+        "/flashcards/",
+        "/bible/",
+        "/rights/",
+        "/cheatsheet/"
+      ],
+      "ready": true,
+      "h1box": [
+        30,
+        364.13,
+        186,
+        90.88
+      ],
+      "controls": [
+        [
+          "复习 5 道题→",
+          null,
+          [
+            30,
+            463,
+            111.25,
+            44
+          ],
+          "primary hero-cta"
+        ],
+        [
+          "4/279已接触",
+          null,
+          [
+            18,
+            527,
+            89.02,
+            44
+          ],
+          "pulse-item"
+        ],
+        [
+          "打开双页笔记 →",
+          null,
+          [
+            18,
+            739.39,
+            128.17,
+            44
+          ],
+          ""
+        ],
+        [
+          "阅读全文 →",
+          null,
+          [
+            162.17,
+            739.39,
+            92.17,
+            44
+          ],
+          ""
+        ]
+      ],
+      "path": "/",
+      "query": "",
+      "lang": "zh",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "enlarged": false,
+      "h1": [
+        "一条一条读，\n一点一点懂。"
+      ],
+      "header": [
+        0,
+        0,
+        390,
+        53
+      ],
+      "nav": [
+        18,
+        53,
+        354,
+        45
+      ],
+      "headerControls": [
+        [
+          "๒๕๖๐泰国宪法宪法读懂，记牢，会用。",
+          [
+            12,
+            4,
+            123.69,
+            44
+          ]
+        ],
+        [
+          "显示显示",
+          [
+            143.69,
+            4,
+            50.31,
+            44
+          ]
+        ],
+        [
+          "设置",
+          [
+            198,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "ไทย",
+          [
+            246,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "EN",
+          [
+            290,
+            4,
+            44,
+            44
+          ]
+        ],
+        [
+          "中文",
+          [
+            334,
+            4,
+            44,
+            44
+          ]
+        ]
+      ],
+      "context": null,
+      "search": null,
+      "read": null,
+      "compare": null,
+      "articleLanguages": [],
+      "body": null
+    }
+  ]
+}
