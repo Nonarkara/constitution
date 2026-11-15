@@ -158,9 +158,1479 @@
       "files": 2046,
       "exportSha256": "3afbdfda7968347cd7286ea80970ac7e07efb6465f360557ce1129bd676b931d",
       "recordedAt": "2026-11-15T11:52:09.433Z"
+    },
+    "carriedFrom": {
+      "commit": "447957d65de7c60c17adf4f22a9cf1cc84514e41",
+      "exportSha256": "2b28e5ae67cf3a1dbb88031ed597f05c09005c0162aa04ba7fc1ea76357338fa"
     }
   },
   "routes": {
+    "/": {
+      "359": {
+        "findings": [],
+        "firstAction": {
+          "y": 447,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "360": {
+        "findings": [],
+        "firstAction": {
+          "y": 447,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "361": {
+        "findings": [],
+        "firstAction": {
+          "y": 448,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "390": {
+        "findings": [],
+        "firstAction": {
+          "y": 463,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "399": {
+        "findings": [],
+        "firstAction": {
+          "y": 468,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "400": {
+        "findings": [],
+        "firstAction": {
+          "y": 468,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "401": {
+        "findings": [],
+        "firstAction": {
+          "y": 469,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "436": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "479": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "480": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "481": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "499": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "500": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "501": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "519": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "520": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "521": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "536": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "559": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "560": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "561": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "599": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "600": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "601": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "639": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "640": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "641": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "642": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "676": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "714": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "719": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "720": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "721": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "722": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "768": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "849": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "850": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "851": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "854": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "859": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "860": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "861": {
+        "findings": [],
+        "firstAction": {
+          "y": 285,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "899": {
+        "findings": [],
+        "firstAction": {
+          "y": 296,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "900": {
+        "findings": [],
+        "firstAction": {
+          "y": 296,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "901": {
+        "findings": [],
+        "firstAction": {
+          "y": 296,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 325,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 325,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 326,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1023": {
+        "findings": [],
+        "firstAction": {
+          "y": 332,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1024": {
+        "findings": [],
+        "firstAction": {
+          "y": 332,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1025": {
+        "findings": [],
+        "firstAction": {
+          "y": 333,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1099": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1100": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1101": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1130": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1138": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1199": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1200": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 900,
+          "top": 53,
+          "topPct": 5.9,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1201": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 900,
+          "top": 53,
+          "topPct": 5.9,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1440": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 900,
+          "top": 53,
+          "topPct": 5.9,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1920": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 900,
+          "top": 53,
+          "topPct": 5.9,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      }
+    },
     "/along/": {
       "359": {
         "findings": [],
@@ -36099,6 +37569,1472 @@
         }
       }
     },
+    "/learn/": {
+      "359": {
+        "findings": [],
+        "firstAction": {
+          "y": 447,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "360": {
+        "findings": [],
+        "firstAction": {
+          "y": 447,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "361": {
+        "findings": [],
+        "firstAction": {
+          "y": 448,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "390": {
+        "findings": [],
+        "firstAction": {
+          "y": 463,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "399": {
+        "findings": [],
+        "firstAction": {
+          "y": 468,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "400": {
+        "findings": [],
+        "firstAction": {
+          "y": 468,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "401": {
+        "findings": [],
+        "firstAction": {
+          "y": 469,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "436": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "479": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "480": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 844,
+          "top": 53,
+          "topPct": 6.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "481": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "499": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "500": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "501": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "519": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "520": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "521": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "536": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "559": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "560": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "561": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "599": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "600": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "601": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "639": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "640": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "641": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "642": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "676": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "714": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "719": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "720": {
+        "findings": [],
+        "firstAction": {
+          "y": 500,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 32,
+          "largest": 18,
+          "ratio": 1.78,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "721": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "722": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "768": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "849": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "850": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "851": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "854": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "859": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "860": {
+        "findings": [],
+        "firstAction": {
+          "y": 487,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "861": {
+        "findings": [],
+        "firstAction": {
+          "y": 285,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "899": {
+        "findings": [],
+        "firstAction": {
+          "y": 296,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "900": {
+        "findings": [],
+        "firstAction": {
+          "y": 296,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "901": {
+        "findings": [],
+        "firstAction": {
+          "y": 296,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "999": {
+        "findings": [],
+        "firstAction": {
+          "y": 325,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1000": {
+        "findings": [],
+        "firstAction": {
+          "y": 325,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1001": {
+        "findings": [],
+        "firstAction": {
+          "y": 326,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1023": {
+        "findings": [],
+        "firstAction": {
+          "y": 332,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1024": {
+        "findings": [],
+        "firstAction": {
+          "y": 332,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1025": {
+        "findings": [],
+        "firstAction": {
+          "y": 333,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1099": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1100": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1101": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1130": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1138": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1199": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 1000,
+          "top": 53,
+          "topPct": 5.3,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1200": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 900,
+          "top": 53,
+          "topPct": 5.9,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1201": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 900,
+          "top": 53,
+          "topPct": 5.9,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1440": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 900,
+          "top": 53,
+          "topPct": 5.9,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      },
+      "1920": {
+        "findings": [],
+        "firstAction": {
+          "y": 339,
+          "sel": "a.primary.hero-cta"
+        },
+        "chrome": {
+          "vh": 900,
+          "top": 53,
+          "topPct": 5.9,
+          "bottom": 0,
+          "bottomPct": 0,
+          "stacked": 1,
+          "topSel": "header.header",
+          "bottomSel": null
+        },
+        "hierarchy": {
+          "h1": 44,
+          "largest": 18,
+          "ratio": 2.44,
+          "peers": 7,
+          "share": 0.13
+        }
+      }
+    },
     "/library/": {
       "359": {
         "findings": [],
@@ -61954,2938 +64890,6 @@
           "ratio": 2.44,
           "peers": 1,
           "share": 0
-        }
-      }
-    },
-    "/": {
-      "359": {
-        "findings": [],
-        "firstAction": {
-          "y": 447,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "360": {
-        "findings": [],
-        "firstAction": {
-          "y": 447,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "361": {
-        "findings": [],
-        "firstAction": {
-          "y": 448,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "390": {
-        "findings": [],
-        "firstAction": {
-          "y": 463,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "399": {
-        "findings": [],
-        "firstAction": {
-          "y": 468,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "400": {
-        "findings": [],
-        "firstAction": {
-          "y": 468,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "401": {
-        "findings": [],
-        "firstAction": {
-          "y": 469,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "436": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "479": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "480": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "481": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "499": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "500": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "501": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "519": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "520": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "521": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "536": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "559": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "560": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "561": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "599": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "600": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "601": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "639": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "640": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "641": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "642": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "676": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "714": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "719": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "720": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "721": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "722": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "768": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "849": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "850": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "851": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "854": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "859": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "860": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "861": {
-        "findings": [],
-        "firstAction": {
-          "y": 285,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "899": {
-        "findings": [],
-        "firstAction": {
-          "y": 296,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "900": {
-        "findings": [],
-        "firstAction": {
-          "y": 296,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "901": {
-        "findings": [],
-        "firstAction": {
-          "y": 296,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "999": {
-        "findings": [],
-        "firstAction": {
-          "y": 325,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1000": {
-        "findings": [],
-        "firstAction": {
-          "y": 325,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1001": {
-        "findings": [],
-        "firstAction": {
-          "y": 326,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1023": {
-        "findings": [],
-        "firstAction": {
-          "y": 332,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1024": {
-        "findings": [],
-        "firstAction": {
-          "y": 332,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1025": {
-        "findings": [],
-        "firstAction": {
-          "y": 333,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1099": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1100": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1101": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1130": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1138": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1199": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1200": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 900,
-          "top": 53,
-          "topPct": 5.9,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1201": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 900,
-          "top": 53,
-          "topPct": 5.9,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1440": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 900,
-          "top": 53,
-          "topPct": 5.9,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1920": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 900,
-          "top": 53,
-          "topPct": 5.9,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      }
-    },
-    "/learn/": {
-      "359": {
-        "findings": [],
-        "firstAction": {
-          "y": 447,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "360": {
-        "findings": [],
-        "firstAction": {
-          "y": 447,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "361": {
-        "findings": [],
-        "firstAction": {
-          "y": 448,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "390": {
-        "findings": [],
-        "firstAction": {
-          "y": 463,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "399": {
-        "findings": [],
-        "firstAction": {
-          "y": 468,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "400": {
-        "findings": [],
-        "firstAction": {
-          "y": 468,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "401": {
-        "findings": [],
-        "firstAction": {
-          "y": 469,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "436": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "479": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "480": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 844,
-          "top": 53,
-          "topPct": 6.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "481": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "499": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "500": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "501": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "519": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "520": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "521": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "536": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "559": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "560": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "561": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "599": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "600": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "601": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "639": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "640": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "641": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "642": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "676": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "714": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "719": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "720": {
-        "findings": [],
-        "firstAction": {
-          "y": 500,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 32,
-          "largest": 18,
-          "ratio": 1.78,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "721": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "722": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "768": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "849": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "850": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "851": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "854": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "859": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "860": {
-        "findings": [],
-        "firstAction": {
-          "y": 487,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "861": {
-        "findings": [],
-        "firstAction": {
-          "y": 285,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "899": {
-        "findings": [],
-        "firstAction": {
-          "y": 296,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "900": {
-        "findings": [],
-        "firstAction": {
-          "y": 296,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "901": {
-        "findings": [],
-        "firstAction": {
-          "y": 296,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "999": {
-        "findings": [],
-        "firstAction": {
-          "y": 325,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1000": {
-        "findings": [],
-        "firstAction": {
-          "y": 325,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1001": {
-        "findings": [],
-        "firstAction": {
-          "y": 326,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1023": {
-        "findings": [],
-        "firstAction": {
-          "y": 332,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1024": {
-        "findings": [],
-        "firstAction": {
-          "y": 332,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1025": {
-        "findings": [],
-        "firstAction": {
-          "y": 333,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1099": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1100": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1101": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1130": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1138": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1199": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 1000,
-          "top": 53,
-          "topPct": 5.3,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1200": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 900,
-          "top": 53,
-          "topPct": 5.9,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1201": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 900,
-          "top": 53,
-          "topPct": 5.9,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1440": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 900,
-          "top": 53,
-          "topPct": 5.9,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
-        }
-      },
-      "1920": {
-        "findings": [],
-        "firstAction": {
-          "y": 339,
-          "sel": "a.primary.hero-cta"
-        },
-        "chrome": {
-          "vh": 900,
-          "top": 53,
-          "topPct": 5.9,
-          "bottom": 0,
-          "bottomPct": 0,
-          "stacked": 1,
-          "topSel": "header.header",
-          "bottomSel": null
-        },
-        "hierarchy": {
-          "h1": 44,
-          "largest": 18,
-          "ratio": 2.44,
-          "peers": 7,
-          "share": 0.13
         }
       }
     }
