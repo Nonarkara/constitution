@@ -146,17 +146,7 @@ export function TikkiStory() {
 
   return (
     <article className="tikki-story-page">
-      {/* 1. Header with Mascot */}
       <header className="tikki-hero">
-        {/* The cover is its own drawing, not scene 1. The story's arc — from a
-            mountain of law to joyful learning — is the page's subject, so the
-            hero has to show the arc; repeating scene 1 here would put the same
-            picture on the page twice and shrink both copies.
-
-            It is written before the copy on purpose: on a narrow band the
-            drawing floats at the title's top right, and a float can only be
-            placed where it is written. The drawing is decorative
-            (aria-hidden), so the reading order is unchanged. */}
         <figure
           className="tikki-hero-art"
           style={plateStyle(STORY_COVER)}
@@ -167,7 +157,7 @@ export function TikkiStory() {
             alt=""
             {...plateSize(STORY_COVER)}
             priority
-            sizes="(max-width: 720px) 150px, 340px"
+            sizes="(min-width: 1218px) 340px, (max-width: 640px) 150px, 224px"
           />
         </figure>
         <div className="tikki-hero-copy">

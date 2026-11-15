@@ -180,16 +180,19 @@ function measure(route, w, d) {
   var rec = { route: route, w: w, label: labelOf(w), clientWidth: vw, scrollWidth: sw, over: sw - vw, culprits: [] };
   if (vw === 0) { rec.error = 'clientWidth 0 — page did not lay out'; return rec; }
 
-  // At phone width these two directories should offer a real choice in
-  // the first screen, with their artwork and primary action both visible.
-  if (w === 390 && (route === '/library/' || route === '/practice/')) {
-    var art = d.querySelector('main .study-opening img');
-    var start = d.querySelector('main .study-opening .primary');
-    var href = route === '/library/' ? '/news/' : '/exam/';
-    var options = d.querySelectorAll('main a[href="' + href + '"]');
+  // Keep the scene and first useful action together within a phone screen.
+  if (w === 390 && ['/', '/library/', '/practice/', '/tikki/'].includes(route)) {
+    var opening = d.querySelector(route === '/tikki/' ? 'main .tikki-hero' : 'main .study-opening');
+    var art = opening && opening.querySelector('img');
+    var start = opening && opening.querySelector('.primary');
+    var actionLimit = route === '/tikki/' ? 560 : 420;
     if (!art || art.getBoundingClientRect().width < 100) rec.openingError = 'Tikki does not lead the opening';
-    else if (!start || start.getBoundingClientRect().bottom > 420) rec.openingError = 'primary action below 420px';
-    else if (options.length !== 1 || options[0].getBoundingClientRect().bottom > 720) rec.openingError = href + ' must appear once and end by 720px';
+    else if (!start || start.getBoundingClientRect().bottom > actionLimit) rec.openingError = 'primary action below ' + actionLimit + 'px';
+    else if (route === '/library/' || route === '/practice/') {
+      var href = route === '/library/' ? '/news/' : '/exam/';
+      var options = d.querySelectorAll('main a[href="' + href + '"]');
+      if (options.length !== 1 || options[0].getBoundingClientRect().bottom > 720) rec.openingError = href + ' must appear once and end by 720px';
+    }
   }
 
   // Cold-visit check. This gate loads every route with empty localStorage, which
