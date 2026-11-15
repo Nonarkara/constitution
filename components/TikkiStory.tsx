@@ -161,23 +161,20 @@ export function TikkiStory() {
           />
         </figure>
         <div className="tikki-hero-copy">
-          <span className="mono micro text-accent font-bold">
-            {tr(lang, "เรื่องราวของติ๊กกี้", "Tikki's Story", "蒂基的故事")}
-          </span>
           <h1>
             {tr(
               lang,
-              "จากภูเขากฎหมาย\nสู่การเรียนรู้อย่างฉลาดและมีความสุข",
-              "From a mountain of books\nto joyful, smarter learning.",
-              "从堆积如山的书海，\n到快乐聪明的学习法。"
+              "ติ๊กกี้กับภูเขากฎหมาย",
+              "Tikki and the mountain of laws",
+              "蒂基和她的法律书山"
             )}
           </h1>
           <p>
             {tr(
               lang,
-              "ติ๊กกี้คือตัวแทนของทุกคนที่กำลังเตรียมสอบรับราชการ ท่ามกลาง 279 มาตราที่ดูซับซ้อน สมุดเล่มนี้ถูกสร้างขึ้นมาเพื่อให้การอ่านกฎหมายกลายเป็นเรื่องสนุก เข้าใจง่าย และสอบผ่านได้จริง",
-              "Tikki represents every earnest learner preparing for public service. Faced with 279 daunting sections, this notebook was created to make constitutional study visual, engaging, and genuinely effective.",
-              "蒂基是每一位认真备考公务员的学习者的缩影。面对279条繁复的法条，本系统应运而生，让学法变得生动可视化、条理清晰且切实见效。"
+              "ติ๊กกี้เตรียมสอบรับราชการ แต่จะเริ่มตรงไหนเมื่อมีตั้ง 279 มาตรา? เธอลองใช้ภาพ เรื่องเล่า และโจทย์สั้น ๆ ช่วยจำ",
+              "Tikki is preparing for a civil service exam. With 279 sections to study, where should she start? She tries pictures, stories and short quizzes to help her remember.",
+              "蒂基在准备公务员考试。宪法有279条，该从哪儿学起？她试着用插画、故事和小测验帮自己记住要点。"
             )}
           </p>
           <div className="tikki-hero-action">
