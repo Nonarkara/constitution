@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useMemo } from "react";
 import Link from "next/link";
 import { questionIndex } from "@/lib/outline";
@@ -10,13 +9,7 @@ import { useStudy } from "./Provider";
 import { tr } from "@/lib/i18n";
 import { knowSummary, sectionSignals } from "@/lib/knowledge";
 import { RIGHT_GROUPS } from "@/lib/rights";
-import { plateSize } from "@/lib/plate";
-
-// The plate for this hero. The path is named once, in one place, because a
-// drawing is a cue for one page: the test that guards the catalogue counts
-// the places a drawing is named, and a drawing named four times in one
-// component reads as four placements.
-const HOME_PLATE = "/illustrations/reading-pastel.webp";
+import { StudyArt } from "./StudyArt";
 
 // Counted from the data, never typed in. These were both wrong as literals
 // once: the homepage said 10 guide chapters (there are 13) and 22 civic
@@ -65,14 +58,9 @@ export function Home() {
   return (
     <div className="home-dashboard">
       <section className="home-cover">
-        <Image
-          className="home-cover-art"
-          src={HOME_PLATE}
-          alt=""
-          {...plateSize(HOME_PLATE)}
-          preload
-          sizes="(max-width: 860px) min(76vw, 322px), 440px"
-        />
+        <div className="home-cover-art">
+          <StudyArt scene="reading" />
+        </div>
         <div className="home-cover-content">
           <span className="page-kicker mono">
             {tr(lang, "สมุดเรียนรัฐธรรมนูญ", "Constitutional Notebook", "宪法学习笔记")}
