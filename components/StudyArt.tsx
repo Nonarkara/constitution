@@ -1,5 +1,8 @@
+"use client";
 import Image from "next/image";
 import { plateSize, plateStyle } from "@/lib/plate";
+import { useStudy } from "./Provider";
+import { streetCueFor, type StreetCue } from "@/lib/street-cues";
 
 /**
  * The crayon drawings, and the page each one belongs to.
@@ -13,7 +16,7 @@ import { plateSize, plateStyle } from "@/lib/plate";
  * The three older scenes predate the Tikki series and keep their original files.
  */
 export const STUDY_ART = {
-  reading: "/illustrations/reading-pastel.webp",
+  reading: "/illustrations/tikki-read-pastel.webp",
   listening: "/illustrations/listening-pastel.webp",
   review: "/illustrations/tikki-review-pastel.webp",
   along: "/illustrations/tikki-along-pastel.webp",
@@ -64,11 +67,16 @@ export function StudyArt({
   compact?: boolean;
 }) {
   const src = STUDY_ART[scene];
+  const cue = streetCueFor(src);
   return (
     <figure
-      className={"study-art" + (compact ? " study-art-compact" : "")}
+      className={
+        "study-art" +
+        (compact ? " study-art-compact" : "") +
+        (cue ? " study-art--street" : "")
+      }
       style={plateStyle(src)}
-      aria-hidden="true"
+      aria-hidden={cue ? undefined : "true"}
     >
       <Image
         src={src}
@@ -81,6 +89,36 @@ export function StudyArt({
         }
         priority={!compact}
       />
+      {cue ? <StreetCaption cue={cue} /> : null}
     </figure>
+  );
+}
+
+/**
+ * THE NAME OF THE PLACE, IN TEXT.
+ *
+ * A street picture shows a place; the caption says which one. The name used
+ * to be printed INTO the picture, and that failed for two reasons that
+ * arithmetic settles: these plates are shown 64 to 224 pixels wide, and 21
+ * points of type in a 760-point picture arrives at 1.8 to 6.2 points on the
+ * screen — a grey smudge in the corner of a street. And a name inside a
+ * picture is not text at all: a screen reader had nothing to say about
+ * Ratchadamnoen.
+ *
+ * So the name is text, in the house's own type, under the picture it belongs
+ * to — legible at every size, and readable aloud.
+ *
+ * Only the PLACE is printed. The number the plate turns on — sixteen
+ * chapters, two hundred and seventy-nine sections — is already in each of
+ * these pages' own text, and a second copy of a number the reader has just
+ * read is noise. It stays in `data/street-cues.json`, where the release gate
+ * can check it against the picture.
+ */
+function StreetCaption({ cue }: { cue: StreetCue }) {
+  const { lang } = useStudy();
+  return (
+    <figcaption className="study-art-caption">
+      <span className="study-art-caption-place">{cue.place[lang]}</span>
+    </figcaption>
   );
 }

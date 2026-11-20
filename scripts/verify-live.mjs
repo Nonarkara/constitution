@@ -81,6 +81,30 @@ function servedUrl(base, asset) {
   return base + encoded;
 }
 
+/**
+ * Does the public domain serve the bytes the build has?
+ *
+ * A deploy is not finished when the deploy command says it is finished: the
+ * edge keeps the objects it already has, and a page that was fetched a second
+ * before the upload can still be answered from the old copy for a while.
+ * A verifier that reads those bytes reports a difference that is not a
+ * difference — and a verifier that is believed is worse than none.
+ *
+ * So a difference is asked again. Three times, with a moment between, and
+ * only then is it a difference.
+ */
+async function compare(url, local) {
+  let live = null;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    live = await get(url);
+    if (live.status === 200 && sha256(live.body) === sha256(local)) {
+      return { ok: true, status: live.status, bytes: live.body.length };
+    }
+    if (attempt < 3) await new Promise((r) => setTimeout(r, 2500 * attempt));
+  }
+  return { ok: false, status: live.status, bytes: live.body.length };
+}
+
 const manifest = JSON.parse(await readFile(path.join(BUILD, "offline-manifest.json"), "utf8"));
 
 // ---- 1. every page body the build has -------------------------------------
@@ -103,9 +127,9 @@ let bodiesMatched = 0;
 const bodyMismatches = [];
 for (const route of pageRoutes) {
   const local = await readFile(path.join(BUILD, route.replace(/^\//, ""), "index.html"));
-  const live = await get(BASE + route);
-  if (live.status === 200 && sha256(live.body) === sha256(local)) bodiesMatched++;
-  else bodyMismatches.push({ route, live: live.status, liveBytes: live.body.length });
+  const seen = await compare(BASE + route, local);
+  if (seen.ok) bodiesMatched++;
+  else bodyMismatches.push({ route, live: seen.status, liveBytes: seen.bytes });
 }
 note(
   bodiesMatched === pageRoutes.length,
@@ -132,9 +156,9 @@ for (const asset of assets) {
     continue;
   }
   const local = await readFile(file);
-  const live = await get(servedUrl(BASE, asset));
-  if (live.status === 200 && sha256(live.body) === sha256(local)) assetsMatched++;
-  else assetMismatches.push({ asset, live: live.status, liveBytes: live.body.length });
+  const seen = await compare(servedUrl(BASE, asset), local);
+  if (seen.ok) assetsMatched++;
+  else assetMismatches.push({ asset, live: seen.status, liveBytes: seen.bytes });
 }
 note(
   assetsMatched === assets.length,

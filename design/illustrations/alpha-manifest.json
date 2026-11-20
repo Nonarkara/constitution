@@ -1431,8 +1431,8 @@
     {
       "name": "scene-democracy-aerial.webp",
       "served": "public/illustrations/scene-democracy-aerial.webp",
-      "sha256": "45439c2e99f9ab007ad90a89bf2003756ef59a87129cbfe5788e14372d10526f",
-      "bytes": 270804,
+      "sha256": "4fe87ea83de6f3be2460bf5914db335f9acc1e9d14bca834911276a7a7f97fd9",
+      "bytes": 269768,
       "output_size": [
         760,
         841
@@ -1442,8 +1442,8 @@
     {
       "name": "scene-ratchadamnoen.webp",
       "served": "public/illustrations/scene-ratchadamnoen.webp",
-      "sha256": "6a069f9d6ee03dfa3b12d6ff8d24ed97b0f42ef8dd5e728c757603ccd1af7d01",
-      "bytes": 103058,
+      "sha256": "76571c63044469006dee66d3222017e61290e8cffe356b3cdfb2d31be7d39789",
+      "bytes": 100984,
       "output_size": [
         760,
         841
@@ -1453,8 +1453,8 @@
     {
       "name": "scene-sukhumvit.webp",
       "served": "public/illustrations/scene-sukhumvit.webp",
-      "sha256": "a00b177c268fedad4dd21dbaa6d500b71f3da2a1bbbc64f2ba87577c3909b14a",
-      "bytes": 267242,
+      "sha256": "7f68b4d3c965bb5e941ded3bdd09941e061cc731e7af7fc10d148976f9bbb775",
+      "bytes": 269770,
       "output_size": [
         760,
         841
@@ -1464,8 +1464,8 @@
     {
       "name": "scene-wat-phra-kaew.webp",
       "served": "public/illustrations/scene-wat-phra-kaew.webp",
-      "sha256": "72cac6946104092cf7c7c6fd1c61dc3150e6a576fe9fbef12e7a92289b4a81fa",
-      "bytes": 174948,
+      "sha256": "d362b69af1e0ca0314f63ba32667dfa6f3912bad3905b24903a98c2f0d1a7ce9",
+      "bytes": 178120,
       "output_size": [
         760,
         841
@@ -1475,8 +1475,8 @@
     {
       "name": "scene-yaowarat.webp",
       "served": "public/illustrations/scene-yaowarat.webp",
-      "sha256": "9989018ef10c2a075ca1d7317dd987a308e0f759911a743498d87ec6016a4539",
-      "bytes": 236310,
+      "sha256": "bff5ee31a341711c637130352109cfcafdbfec41d6307034bbcc2b483fa182ec",
+      "bytes": 238012,
       "output_size": [
         760,
         841

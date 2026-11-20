@@ -89,6 +89,11 @@ registry["next/image"] = { __esModule: true, default: ({src,alt}: {src:string;al
 // the proportions of each plate, measured from the file that ships
 registry["@/lib/illustration-ratios"] = load("lib/illustration-ratios.ts", registry);
 registry["@/lib/plate"] = load("lib/plate.ts", registry);
+// The name of the place a street picture shows. Loaded for real, so the test
+// sees the same caption the learner does — and the blind pass, which shows a
+// crayon drawing and never a street, still shows no place name.
+registry["@/data/street-cues.json"] = JSON.parse(readFileSync(path.join(repo, "data/street-cues.json"), "utf8"));
+registry["@/lib/street-cues"] = load("lib/street-cues.ts", registry);
 registry["./QuestionVisual"] = load("components/QuestionVisual.tsx", registry);
 // The brief carries the page's crayon drawing. It is loaded for real, not
 // stubbed away, so the test sees the same DOM the learner does — and the

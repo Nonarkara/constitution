@@ -44,6 +44,7 @@ ROOT = Path(__file__).resolve().parents[2]
 MASTERS = ROOT / "design" / "illustrations" / "streets"
 SERVED = ROOT / "public" / "illustrations"
 MANIFEST = ROOT / "design" / "illustrations" / "street-manifest.json"
+CUES = ROOT / "data" / "street-cues.json"
 ALPHA_MANIFEST = ROOT / "design" / "illustrations" / "alpha-manifest.json"
 
 # The paper of the house and the ink of the house. The street is drawn on the
@@ -158,15 +159,39 @@ STREET_WIDTH = 760
 #
 # A picture that does not name what it is for is decoration. The house's own
 # rule is that one picture has to cue one place, or it cues none — so each
-# street carries the number its page turns on, printed into the scene the way
-# a sign is printed into a street. The place is named too, because that is
-# what the learner is being asked to recall: not a drawing, but a place.
+# street names its place, and the number its page turns on.
+#
+# THE NAME IS NOT PRINTED INTO THE PICTURE. It was, and the arithmetic killed
+# it. These plates are shown at 64–224 pixels wide; the name is 21 points of
+# type in a 760-point picture, so it arrives at 1.8 to 6.2 points on the
+# screen — a grey smudge in the corner of a street, and nothing at all to a
+# screen reader, because a name inside a picture is not text.
+#
+# So the name is DATA, written to data/street-cues.json, and the app prints
+# it in its own type beside the picture — where it is legible, where it
+# scales with the reader's text size, and where it can be read aloud. The
+# picture keeps the place; the page says what the place is called.
 CUE = {
-    "scene-ratchadamnoen": ("ถนนราชดำเนิน", "16 หมวด · 279 มาตรา"),
-    "scene-wat-phra-kaew": ("วัดพระแก้ว", "มาตรา 255"),
-    "scene-yaowarat": ("เยาวราช", "มาตรา 1–279"),
-    "scene-sukhumvit": ("สุขุมวิท", "3 แหล่งข่าว"),
-    "scene-democracy-aerial": ("อนุสาวรีย์ประชาธิปไตย", "16 หมวด"),
+    "scene-ratchadamnoen": {
+        "place": {"th": "ถนนราชดำเนิน", "en": "Ratchadamnoen Avenue", "zh": "拉差丹能路"},
+        "number": {"th": "16 หมวด · 279 มาตรา", "en": "16 chapters · 279 sections", "zh": "16 章 · 279 条"},
+    },
+    "scene-wat-phra-kaew": {
+        "place": {"th": "วัดพระแก้ว", "en": "Wat Phra Kaew", "zh": "卧佛寺一带"},
+        "number": {"th": "มาตรา 255", "en": "Section 255", "zh": "第 255 条"},
+    },
+    "scene-yaowarat": {
+        "place": {"th": "เยาวราช", "en": "Yaowarat", "zh": "耀华力路"},
+        "number": {"th": "มาตรา 1–279", "en": "Sections 1–279", "zh": "第 1–279 条"},
+    },
+    "scene-sukhumvit": {
+        "place": {"th": "สุขุมวิท", "en": "Sukhumvit", "zh": "素坤逸"},
+        "number": {"th": "3 แหล่งข่าว", "en": "3 news sources", "zh": "3 个新闻源"},
+    },
+    "scene-democracy-aerial": {
+        "place": {"th": "อนุสาวรีย์ประชาธิปไตย", "en": "The Democracy Monument", "zh": "民主纪念碑"},
+        "number": {"th": "16 หมวด", "en": "16 chapters", "zh": "16 章"},
+    },
 }
 
 PAPER_TINT = (247, 243, 233)
@@ -191,33 +216,34 @@ def load_font(size: int, bold: bool = False):
     return None
 
 
-def stamp(scene: dict, image: Image.Image) -> Image.Image:
-    """Print the place and its cue into the street."""
-    cue = CUE.get(scene["name"])
-    if not cue:
-        return image
-    place, number = cue
-    font = load_font(21)
-    if font is None:
-        return image
-    draw = ImageDraw.Draw(image)
-    lines = [(place, font), (number, font)]
-    widths = [draw.textlength(t, font=f) for t, f in lines]
-    pad_x, pad_y, gap = 14, 10, 6
-    box_w = int(max(widths)) + pad_x * 2
-    box_h = 21 * len(lines) + gap + pad_y * 2
-    x = 20
-    # Above the credit, which the tool printed into the bottom of the
-    # picture. The credit has to stay readable: it is the licence. The
-    # aerial has no clear ground at the bottom, so its tag goes to the top.
-    y = 20 if scene["name"] == "scene-democracy-aerial" else image.height - box_h - 46
-    # A paper tag, laid on the street, with the ink of the house.
-    draw.rectangle([x, y, x + box_w, y + box_h], fill=PAPER_TINT, outline=INK_TINT, width=2)
-    ty = y + pad_y
-    for (text, f), in zip(((t, ff) for t, ff in lines)):
-        draw.text((x + pad_x, ty), text, font=f, fill=INK_TINT)
-        ty += 21 + gap
-    return image
+def write_cues() -> None:
+    """Write the cue each street carries to the data the app reads.
+
+    The name of a place is not a picture of a place. Printing it into the
+    picture made it a smudge at the size the picture is shown, and made it
+    invisible to a screen reader — a name inside a picture is not text. So
+    the name is written here, in three languages, and the page prints it in
+    the house's own type beside the picture.
+
+    It is written by the script that makes the streets, so the picture and
+    the caption cannot disagree about which place this is.
+    """
+    cues = {}
+    for name, cue in CUE.items():
+        cues[name] = {
+            "served": f"/illustrations/{name}.webp",
+            "place": cue["place"],
+            "number": cue["number"],
+        }
+    payload = {
+        "note": (
+            "The name of the place each street picture shows, and the number "
+            "its page turns on. Written by scripts/illustrations/build_streets.py "
+            "so the picture and the caption cannot disagree."
+        ),
+        "scenes": cues,
+    }
+    CUES.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def trim_aura(figure: Image.Image) -> Image.Image:
@@ -252,7 +278,7 @@ def compose(scene: dict) -> Image.Image:
     y = int(sh * scene["ground"] - figure.height)
     base = street.convert("RGBA")
     base.alpha_composite(figure, (x, y))
-    return stamp(scene, base.convert("RGB"))
+    return base.convert("RGB")
 
 
 def build() -> dict:
@@ -296,6 +322,7 @@ def build() -> dict:
     }
     MANIFEST.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     record_kept_bytes(entries)
+    write_cues()
     return manifest
 
 

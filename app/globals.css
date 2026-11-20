@@ -1248,6 +1248,46 @@ html[data-large="true"] {
   object-fit: contain;
 }
 
+/* A STREET PICTURE THAT SAYS WHICH PLACE IT IS.
+ *
+ * The name of a place is not a picture of a place. It used to be printed
+ * into the picture, and that failed twice over: these plates are shown 64 to
+ * 224 pixels wide, so 21 points of type in a 760-point picture arrived at 1.8
+ * to 6.2 points on the screen — a grey smudge in the corner of a street —
+ * and a name inside a picture is not text, so a screen reader had nothing to
+ * say about Ratchadamnoen.
+ *
+ * So the name is set in the house's own type, under the picture it belongs
+ * to, the way a plate is captioned in a book. The image leaves its absolute
+ * box so the caption can sit beneath it, and the caption is muted ink: it
+ * names the place, it does not compete with it. */
+.study-art--street {
+  aspect-ratio: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.study-art--street img {
+  position: static;
+  inset: auto;
+  aspect-ratio: var(--plate-ratio, 1);
+  height: auto;
+}
+.study-art-caption {
+  display: flex;
+  flex-direction: column;
+  /* The house's own micro size — 13, and 16 when the reader enlarges the
+     text. A caption is not a new size; it is the quietest size there is. */
+  font-size: var(--micro);
+  line-height: 1.25;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.study-art-caption-place {
+  color: var(--ink);
+  font-weight: 600;
+}
 /* The drawing and the opening copy share a column pair. The news map has its own layout. */
 .intro-copy {
   display: flow-root;
@@ -1267,14 +1307,14 @@ html[data-large="true"] {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   align-items: start;
-  gap: 12px;
+  gap: 16px;
 }
 .intro-copy > .study-art {
-  width: 72px;
+  width: 96px;
   margin: 0;
 }
 @media (min-width: 721px) {
-  .intro-copy > .study-art { width: 112px; }
+  .intro-copy > .study-art { width: 148px; }
 }
 @media (max-width: 480px) {
   html[data-large="true"] .intro-copy:not(.intro-copy--map):has(> .study-art + .intro-text) {
@@ -2412,33 +2452,29 @@ mark.hl.has-note {
 }
 .home-cover {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
   background: var(--wash);
-}
-.home-cover-art,
-.home-cover-content {
-  grid-area: 1 / 1;
+  padding: 20px 24px;
+  gap: 24px;
 }
 .home-cover-art {
   display: block;
-  justify-self: end;
-  align-self: start;
-  width: min(57%, 440px);
-  height: auto;
-  margin-inline-end: 6%;
+  order: 2;
+  width: min(100%, 360px);
+  justify-self: center;
+  align-self: center;
   pointer-events: none;
 }
-.home-cover-content {
-  z-index: 1;
-  align-self: center;
-  justify-self: start;
-  width: fit-content;
-  max-width: 56%;
-  padding: 12px 16px;
+.home-cover-art .study-art {
+  width: 100%;
+  margin: 0;
 }
-.home-cover-content :is(.page-kicker, h1, .home-cover-topic) {
+.home-cover-content {
+  order: 1;
   width: fit-content;
-  background: var(--wash);
+  max-width: 100%;
+  padding: 0;
 }
 .home-cover-content h1 {
   margin: 4px 0 8px;
@@ -2460,15 +2496,25 @@ mark.hl.has-note {
   text-decoration: none;
 }
 @media (max-width: 860px) {
+  .home-cover {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 16px 20px;
+    gap: 16px;
+  }
   .home-cover-art {
-    width: min(76%, 322px);
-    margin-inline-end: 0;
+    order: 1;
+    width: min(68%, 240px);
+    margin: 0;
+    align-self: center;
   }
   .home-cover-content {
-    align-self: end;
+    order: 2;
+    width: 100%;
     max-width: 100%;
-    margin-top: clamp(156px, 53vw, 244px);
-    padding-inline: 12px;
+    margin-top: 0;
+    padding: 0;
   }
 }
 .route-number {
@@ -5104,8 +5150,8 @@ main > .crumbs, main > .page-back { margin-bottom: 8px; }
   background: transparent;
 }
 
-.exam-context { display: flex; align-items: center; gap: 12px; margin-block: 12px; }
-.exam-context > .study-art { flex: 0 0 64px; margin: 0; }
+.exam-context { display: flex; align-items: center; gap: 16px; margin-block: 14px; }
+.exam-context > .study-art { flex: 0 0 112px; margin: 0; }
 .exam-context a { display: flex; align-items: center; min-height: 44px; width: fit-content; }
 
 /* On a phone, continue the lesson under the illustration as soon as its edge

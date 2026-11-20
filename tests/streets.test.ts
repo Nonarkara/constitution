@@ -49,6 +49,39 @@ test("five pages stand in a Bangkok street, and each drawing appears once", () =
   }
 });
 
+test("every street names the place it shows, in every language", () => {
+  // The name of a place is DATA, printed by the page beside the picture.
+  // It used to be printed INTO the picture, where it arrived at 1.8 to 6.2
+  // points on the screen — a smudge — and where no screen reader could reach
+  // it at all. So the name lives here, and this test is what keeps it honest:
+  // a street with no name is a street that cues nothing, and a name for a
+  // picture that does not ship is a caption for a picture nobody sees.
+  const cues = JSON.parse(read("/data/street-cues.json"));
+  const manifest = JSON.parse(read("/design/illustrations/street-manifest.json"));
+  const served = new Set(
+    manifest.scenes.map((s: { name: string }) => `/illustrations/${s.name}`),
+  );
+  const names = Object.keys(cues.scenes);
+  assert.equal(names.length, served.size, "every street has a name");
+  for (const name of names) {
+    const cue = cues.scenes[name];
+    assert.ok(served.has(cue.served), `${name} names a picture that does not ship`);
+    for (const lang of ["th", "en", "zh"]) {
+      assert.ok(cue.place[lang] && cue.place[lang].length > 1, `${name} has no ${lang} place name`);
+      assert.ok(cue.number[lang] && cue.number[lang].length > 1, `${name} has no ${lang} number`);
+    }
+  }
+  // Every street the app shows is named — the picture and the caption cannot
+  // disagree about which place this is.
+  for (const [, src] of Object.entries(artMap())) {
+    if (!src.includes("/illustrations/scene-")) continue;
+    assert.ok(
+      names.some((n) => cues.scenes[n].served === src),
+      `${src} is shown but not named`,
+    );
+  }
+});
+
 test("the street gate resolves Python the way CI installs it", () => {
   // setup-python puts Pillow on `python3` and does not create `.venv`.
   // A script that names `.venv/bin/python` dies with exit 127, and the

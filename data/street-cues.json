@@ -1,0 +1,70 @@
+{
+  "note": "The name of the place each street picture shows, and the number its page turns on. Written by scripts/illustrations/build_streets.py so the picture and the caption cannot disagree.",
+  "scenes": {
+    "scene-ratchadamnoen": {
+      "served": "/illustrations/scene-ratchadamnoen.webp",
+      "place": {
+        "th": "ถนนราชดำเนิน",
+        "en": "Ratchadamnoen Avenue",
+        "zh": "拉差丹能路"
+      },
+      "number": {
+        "th": "16 หมวด · 279 มาตรา",
+        "en": "16 chapters · 279 sections",
+        "zh": "16 章 · 279 条"
+      }
+    },
+    "scene-wat-phra-kaew": {
+      "served": "/illustrations/scene-wat-phra-kaew.webp",
+      "place": {
+        "th": "วัดพระแก้ว",
+        "en": "Wat Phra Kaew",
+        "zh": "卧佛寺一带"
+      },
+      "number": {
+        "th": "มาตรา 255",
+        "en": "Section 255",
+        "zh": "第 255 条"
+      }
+    },
+    "scene-yaowarat": {
+      "served": "/illustrations/scene-yaowarat.webp",
+      "place": {
+        "th": "เยาวราช",
+        "en": "Yaowarat",
+        "zh": "耀华力路"
+      },
+      "number": {
+        "th": "มาตรา 1–279",
+        "en": "Sections 1–279",
+        "zh": "第 1–279 条"
+      }
+    },
+    "scene-sukhumvit": {
+      "served": "/illustrations/scene-sukhumvit.webp",
+      "place": {
+        "th": "สุขุมวิท",
+        "en": "Sukhumvit",
+        "zh": "素坤逸"
+      },
+      "number": {
+        "th": "3 แหล่งข่าว",
+        "en": "3 news sources",
+        "zh": "3 个新闻源"
+      }
+    },
+    "scene-democracy-aerial": {
+      "served": "/illustrations/scene-democracy-aerial.webp",
+      "place": {
+        "th": "อนุสาวรีย์ประชาธิปไตย",
+        "en": "The Democracy Monument",
+        "zh": "民主纪念碑"
+      },
+      "number": {
+        "th": "16 หมวด",
+        "en": "16 chapters",
+        "zh": "16 章"
+      }
+    }
+  }
+}

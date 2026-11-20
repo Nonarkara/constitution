@@ -722,12 +722,14 @@ function run() {
     if (i >= ROUTES.length) { post({ measurements: results, done: true }); return; }
     var route = ROUTES[i];
     var W = WIDTHS[j];
+    // Say that THIS measurement is starting. The watchdog counts from here:
+    // a browser that stops answering mid-measurement is caught by a clock
+    // that restarts for every measurement, so a browser that is breathing
+    // but stuck on one page cannot keep the sweep alive for ever.
+    heartbeat(route, W);
     loadPage(route, W, heightFor(W), function (rec) {
       rec.route = route; rec.w = W;
       results.push(rec);
-      // Say that this measurement is done, so the other side can tell a slow
-      // machine from a dead browser.
-      heartbeat(route, W);
       j++;
       if (j >= WIDTHS.length) {
         j = 0;
@@ -787,6 +789,11 @@ let batchStartRoutes = 0;
 // stopped reporting is hung, not slow: it is restarted and resumes after the
 // last route it finished, instead of holding the sweep for the whole watchdog.
 let lastPost = Date.now();
+// The measurement currently in flight, and when it began. A browser that is
+// breathing but is stuck on ONE measurement is still stuck, and this is what
+// the watchdog counts.
+let inFlightKey = null;
+let inFlightSince = Date.now();
 function newResultsPromise() {
   return new Promise((resolve) => {
     resultsResolve = resolve;
@@ -810,6 +817,20 @@ function takeResults(req, res) {
       // the results promise: a gate that finished on a heartbeat would report
       // a sweep that measured nothing, and a heartbeat that arrived after the
       // sweep was already over must not undo a verdict.
+      //
+      // It does say WHICH measurement is in flight, and that is what the
+      // watchdog watches. A heartbeat that merely proves the browser is
+      // breathing can keep a stuck route alive for ever: the browser finishes
+      // width after width of a route that never completes, and every one of
+      // them says hello. What has not finished is the MEASUREMENT, so the
+      // watchdog counts the time since the current measurement began.
+      if (payload.route && payload.w !== undefined) {
+        const key = `${payload.route}@${payload.w}`;
+        if (key !== inFlightKey) {
+          inFlightKey = key;
+          inFlightSince = Date.now();
+        }
+      }
       return;
     }
     if (payload && payload.progress) {
@@ -977,6 +998,25 @@ async function buildFingerprint() {
 }
 
 /**
+ * The routes the project says have no content of their own.
+ *
+ * A forwarder — a page whose only job is to send the reader somewhere else —
+ * has nothing to review: no layout of its own, no heading, no first action.
+ * It is also a RACE to measure, because the redirect that replaces it runs as
+ * soon as the page does, and the gate can arrive on either side of it. The
+ * receipt that held such a page was a receipt of a race, and it failed the
+ * day the race went the other way.
+ *
+ * So the project writes the exemption down, the gate leaves the page alone,
+ * and the receipt says which pages it left alone.
+ */
+function forwarderRoutes() {
+  return ((baseline && baseline.exempt) || [])
+    .filter((e) => e && e.check === "noContentOfItsOwn" && e.route)
+    .map((e) => e.route);
+}
+
+/**
  * The routes this run will measure — and the ones it cannot.
  *
  * A run told to measure "/read/" and given "/reed/" must say so at once, and
@@ -1084,7 +1124,13 @@ async function discoverRoutes() {
     // advertises it or not. The receipt is the contract.
     for (const rt of Object.keys((baseline && baseline.routes) || {})) routes.add(rt);
 
-    return selectRoutes([...routes].sort(), requested);
+    // A forwarder is left alone: it has no content of its own, and measuring
+    // it is a race with the redirect that replaces it.
+    const skipped = forwarderRoutes();
+    return selectRoutes(
+      [...routes].filter((rt) => !skipped.includes(rt)).sort(),
+      requested,
+    );
   }
   const root = SRC_DIR;
   if (!existsSync(root)) {
@@ -1117,8 +1163,10 @@ async function discoverRoutes() {
     }
   }
   await walk(DIST, "");
+  // A forwarder is left alone, for the reason above.
+  const skipped = forwarderRoutes();
   routes.sort();
-  return selectRoutes(routes, requested);
+  return selectRoutes(routes.filter((rt) => !skipped.includes(rt)), requested);
 }
 
 // ---------------------------------------------------------------- the baseline
@@ -1455,10 +1503,14 @@ for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
   // threshold, and a slow machine paid for a dead one's mistake.
   const STALL_MS = Number(process.env.SPATIAL_STALL_MS) || 3 * 60 * 1000;
   lastPost = Date.now();
+  // A fresh browser starts a fresh measurement, so the watchdog's clock
+  // starts now too.
+  inFlightKey = null;
+  inFlightSince = Date.now();
   let stallTimer = null;
   const stall = new Promise((r) => {
     stallTimer = setInterval(() => {
-      if (Date.now() - lastPost > STALL_MS) r(stalled);
+      if (Date.now() - inFlightSince > STALL_MS) r(stalled);
     }, 5000);
   });
   // The watchdog is a TIMER, and a live timer holds the event loop open. The
@@ -2033,7 +2085,12 @@ if (namedCliffs.size) {
 // A run that was told which routes to measure is a deliberate narrowing and
 // is not a failure; it is a note.
 const baselineRouteList = Object.keys(baselineRoutes);
-const vanishedRoutes = baselineRouteList.filter((rt) => !measuredRoutes.has(rt));
+// The routes the project declared content-free. They are not measured, so
+// they are not missing either: the receipt says they were left alone.
+const skippedRoutes = forwarderRoutes();
+const vanishedRoutes = baselineRouteList.filter(
+  (rt) => !measuredRoutes.has(rt) && !skippedRoutes.includes(rt),
+);
 if (!ROUTES_ARG) {
   for (const rt of vanishedRoutes) {
     failures.push(
@@ -2106,6 +2163,11 @@ if (fullSweep) {
     // sweep did not measure it" is not staleness. It goes stale when the
     // SITE stops advertising the route, which is a different fact.
     if (e.check === "pageWithoutReceipt" && advertisedRoutes && advertisedRoutes.includes(e.route)) {
+      continue;
+    }
+    // A forwarder exemption names a route this sweep deliberately did not
+    // measure, which is the whole point of it.
+    if (e.check === "noContentOfItsOwn" && skippedRoutes.includes(e.route)) {
       continue;
     }
     staleExempts.push(e);
@@ -2196,6 +2258,8 @@ if (UPDATE) {  // A reason for a decision that is no longer there is not recorde
       widths: widths.length,
       measuredTogether: carriedRouteList.length === 0,
       carriedOver: carriedRouteList,
+      // The pages this receipt deliberately did not measure, and why.
+      skipped: skippedRoutes,
       // WHICH BUILD this receipt is a receipt of.
       //
       // The measurements are numbers about a directory. Without the
