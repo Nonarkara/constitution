@@ -1,0 +1,31 @@
+{
+  "base": "https://constitution.nonarkara.org",
+  "verifiedAt": "2026-11-20T21:26:42.020Z",
+  "sourceCommit": "3f8444e6601a372926647b7b46b024a324533c62",
+  "workerVersion": "f2fd505f-0873-4dfe-9220-3438e45926ce",
+  "revision": "66c5610bf9c59841",
+  "exportSha256": "c8ec2ed9fc4a0fd8919f5f72b9d763b8ae50737a2b94c0ac0a90a9d223f67f45",
+  "pageBodies": {
+    "matched": 43,
+    "of": 43,
+    "mismatches": []
+  },
+  "assets": {
+    "matched": 364,
+    "of": 364,
+    "mismatches": []
+  },
+  "httpsOnly": {
+    "plainHttpStatus": 308,
+    "plainHttpLocation": "https://constitution.nonarkara.org/read/?section=99",
+    "keptPathAndQuery": true
+  },
+  "thai": {
+    "chunk": "/_next/static/chunks/3497-1958db27b0dbd884.js",
+    "respacedPresent": true,
+    "preSpacingPresent": false
+  },
+  "verdict": "PASS",
+  "failures": [],
+  "sourceCommitNote": "The deployed bytes are the tree of 3f8444e — this round's caption work (7a25eec) merged with the parallel home-cover rework (3f8444e)."
+}

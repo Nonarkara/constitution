@@ -111,7 +111,7 @@
     }
   ],
   "provenance": {
-    "measuredAt": "2026-11-20T16:58:06.846Z",
+    "measuredAt": "2026-11-20T21:21:10.126Z",
     "measurements": 2562,
     "routes": 42,
     "carriedMeasurements": 0,
@@ -123,8 +123,8 @@
     ],
     "build": {
       "files": 2047,
-      "exportSha256": "c7f76bc4f066476c4b759ac234e121fbfaae8e29cbfb27bd59032be27557f3c7",
-      "recordedAt": "2026-11-20T16:31:54.675Z"
+      "exportSha256": "434ab7a0fdc43fb5d6fb80ab64e22e90c25593e9c85887a7a7458ddc26bea321",
+      "recordedAt": "2026-11-20T20:59:49.328Z"
     }
   },
   "routes": {
@@ -132,7 +132,7 @@
       "359": {
         "findings": [],
         "firstAction": {
-          "y": 447,
+          "y": 429,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -156,7 +156,7 @@
       "360": {
         "findings": [],
         "firstAction": {
-          "y": 447,
+          "y": 429,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -180,7 +180,7 @@
       "361": {
         "findings": [],
         "firstAction": {
-          "y": 448,
+          "y": 430,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -204,7 +204,7 @@
       "390": {
         "findings": [],
         "firstAction": {
-          "y": 463,
+          "y": 444,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -228,7 +228,7 @@
       "399": {
         "findings": [],
         "firstAction": {
-          "y": 468,
+          "y": 448,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -252,7 +252,7 @@
       "400": {
         "findings": [],
         "firstAction": {
-          "y": 468,
+          "y": 448,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -276,7 +276,7 @@
       "401": {
         "findings": [],
         "firstAction": {
-          "y": 469,
+          "y": 449,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -300,7 +300,7 @@
       "436": {
         "findings": [],
         "firstAction": {
-          "y": 487,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -324,7 +324,7 @@
       "479": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -348,7 +348,7 @@
       "480": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -372,7 +372,7 @@
       "481": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -396,7 +396,7 @@
       "499": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -420,7 +420,7 @@
       "500": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -444,7 +444,7 @@
       "501": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -468,7 +468,7 @@
       "519": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -492,7 +492,7 @@
       "520": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -516,7 +516,7 @@
       "521": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -540,7 +540,7 @@
       "536": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -564,7 +564,7 @@
       "559": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -588,7 +588,7 @@
       "560": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -612,7 +612,7 @@
       "561": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -636,7 +636,7 @@
       "599": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -660,7 +660,7 @@
       "600": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -684,7 +684,7 @@
       "601": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -708,7 +708,7 @@
       "639": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -732,7 +732,7 @@
       "640": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -756,7 +756,7 @@
       "641": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -780,7 +780,7 @@
       "642": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -804,7 +804,7 @@
       "676": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -828,7 +828,7 @@
       "714": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -852,7 +852,7 @@
       "719": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -876,7 +876,7 @@
       "720": {
         "findings": [],
         "firstAction": {
-          "y": 500,
+          "y": 456,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -900,7 +900,7 @@
       "721": {
         "findings": [],
         "firstAction": {
-          "y": 487,
+          "y": 443,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -924,7 +924,7 @@
       "722": {
         "findings": [],
         "firstAction": {
-          "y": 487,
+          "y": 443,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -948,7 +948,7 @@
       "768": {
         "findings": [],
         "firstAction": {
-          "y": 487,
+          "y": 443,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -972,7 +972,7 @@
       "849": {
         "findings": [],
         "firstAction": {
-          "y": 487,
+          "y": 443,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -996,7 +996,7 @@
       "850": {
         "findings": [],
         "firstAction": {
-          "y": 487,
+          "y": 443,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1020,7 +1020,7 @@
       "851": {
         "findings": [],
         "firstAction": {
-          "y": 487,
+          "y": 443,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1044,7 +1044,7 @@
       "854": {
         "findings": [],
         "firstAction": {
-          "y": 487,
+          "y": 443,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1068,7 +1068,7 @@
       "859": {
         "findings": [],
         "firstAction": {
-          "y": 487,
+          "y": 443,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1092,7 +1092,7 @@
       "860": {
         "findings": [],
         "firstAction": {
-          "y": 487,
+          "y": 443,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1116,7 +1116,7 @@
       "861": {
         "findings": [],
         "firstAction": {
-          "y": 285,
+          "y": 251,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1140,7 +1140,7 @@
       "899": {
         "findings": [],
         "firstAction": {
-          "y": 296,
+          "y": 260,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1164,7 +1164,7 @@
       "900": {
         "findings": [],
         "firstAction": {
-          "y": 296,
+          "y": 260,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1188,7 +1188,7 @@
       "901": {
         "findings": [],
         "firstAction": {
-          "y": 296,
+          "y": 261,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1212,7 +1212,7 @@
       "999": {
         "findings": [],
         "firstAction": {
-          "y": 325,
+          "y": 283,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1236,7 +1236,7 @@
       "1000": {
         "findings": [],
         "firstAction": {
-          "y": 325,
+          "y": 283,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1260,7 +1260,7 @@
       "1001": {
         "findings": [],
         "firstAction": {
-          "y": 326,
+          "y": 284,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1284,7 +1284,7 @@
       "1023": {
         "findings": [],
         "firstAction": {
-          "y": 332,
+          "y": 289,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1308,7 +1308,7 @@
       "1024": {
         "findings": [],
         "firstAction": {
-          "y": 332,
+          "y": 289,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1332,7 +1332,7 @@
       "1025": {
         "findings": [],
         "firstAction": {
-          "y": 333,
+          "y": 289,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1356,7 +1356,7 @@
       "1099": {
         "findings": [],
         "firstAction": {
-          "y": 339,
+          "y": 306,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1380,7 +1380,7 @@
       "1100": {
         "findings": [],
         "firstAction": {
-          "y": 339,
+          "y": 306,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1404,7 +1404,7 @@
       "1101": {
         "findings": [],
         "firstAction": {
-          "y": 339,
+          "y": 304,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1428,7 +1428,7 @@
       "1130": {
         "findings": [],
         "firstAction": {
-          "y": 339,
+          "y": 310,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1452,7 +1452,7 @@
       "1138": {
         "findings": [],
         "firstAction": {
-          "y": 339,
+          "y": 312,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1476,7 +1476,7 @@
       "1199": {
         "findings": [],
         "firstAction": {
-          "y": 339,
+          "y": 315,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1500,7 +1500,7 @@
       "1200": {
         "findings": [],
         "firstAction": {
-          "y": 339,
+          "y": 315,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1524,7 +1524,7 @@
       "1201": {
         "findings": [],
         "firstAction": {
-          "y": 339,
+          "y": 315,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1548,7 +1548,7 @@
       "1440": {
         "findings": [],
         "firstAction": {
-          "y": 339,
+          "y": 315,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -1572,7 +1572,7 @@
       "1920": {
         "findings": [],
         "firstAction": {
-          "y": 339,
+          "y": 315,
           "sel": "a.primary.hero-cta"
         },
         "chrome": {
@@ -33978,8 +33978,8 @@
       "849": {
         "findings": [],
         "firstAction": {
-          "y": 500,
-          "sel": "button"
+          "y": null,
+          "sel": null
         },
         "chrome": {
           "vh": 1000,
@@ -33992,18 +33992,18 @@
           "bottomSel": null
         },
         "hierarchy": {
-          "h1": 44,
+          "h1": 0,
           "largest": 18,
-          "ratio": 2.44,
-          "peers": 2,
-          "share": 0.03
+          "ratio": null,
+          "peers": 0,
+          "share": 0
         }
       },
       "850": {
         "findings": [],
         "firstAction": {
-          "y": 500,
-          "sel": "button"
+          "y": null,
+          "sel": null
         },
         "chrome": {
           "vh": 1000,
@@ -34016,11 +34016,11 @@
           "bottomSel": null
         },
         "hierarchy": {
-          "h1": 44,
+          "h1": 0,
           "largest": 18,
-          "ratio": 2.44,
-          "peers": 2,
-          "share": 0.03
+          "ratio": null,
+          "peers": 0,
+          "share": 0
         }
       },
       "851": {
