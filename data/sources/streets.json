@@ -10,9 +10,9 @@
     "zh": "Location Scout（oyasumi-gamedev.com）——依据 OpenStreetMap 数据与高程瓦片渲染"
   },
   "credit": {
-    "th": "ข้อมูลแผนที่ © ผู้มีส่วนร่วมใน OpenStreetMap (ODbL) · ระดับความสูง: Terrain Tiles · ภูมิทัศน์รอบ: OpenFreeMap © OpenMapTiles — เครดิตนี้ถูกปั๊มไว้ที่มุมขวาล่างของภาพทุกใบ",
-    "en": "Map data © OpenStreetMap contributors (ODbL) · Elevation: Terrain Tiles · Surroundings: OpenFreeMap © OpenMapTiles — this credit is printed into the bottom of every picture.",
-    "zh": "地图数据 © OpenStreetMap 贡献者（ODbL）· 高程：Terrain Tiles · 远景：OpenFreeMap © OpenMapTiles —— 此署名已印入每张图片的右下角。"
+    "th": "ข้อมูลแผนที่ © ผู้มีส่วนร่วมใน OpenStreetMap (ODbL) · ระดับความสูง: Terrain Tiles · ภูมิทัศน์รอบ: OpenFreeMap © OpenMapTiles — บันทึกเครดิตไว้ที่หน้ารายการแหล่งข้อมูล",
+    "en": "Map data © OpenStreetMap contributors (ODbL) · Elevation: Terrain Tiles · Surroundings: OpenFreeMap © OpenMapTiles — credit is recorded on the Sources page.",
+    "zh": "地图数据 © OpenStreetMap 贡献者（ODbL）· 高程：Terrain Tiles · 远景：OpenFreeMap © OpenMapTiles —— 署名记录于来源页。"
   },
   "terms": {
     "th": "ภาพที่ได้จากเครื่องมือนี้ใช้ประกอบอยู่ในงานนี้ได้ ตามเงื่อนไขการใช้งานของเครื่องมือ ห้ามนำไปแจกจ่ายหรือขายไฟล์ที่ส่งออกโดยตรงหรือแก้ไขเพียงเล็กน้อย",
