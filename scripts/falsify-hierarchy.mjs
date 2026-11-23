@@ -69,8 +69,12 @@ const VIOLATIONS = [
     expect: "no dominant affordance",
   },
   {
+    // The quiet list under the one explore action. Those links were
+    // `.hub-list a` until the explore page moved them to `.explore-groups a`
+    // and left `.hub-list` for drill buttons. The old selector painted
+    // nothing, so the gate had no second action to reject.
     name: "a second main action competes with the first",
-    rule: ".hub-list a{background:var(--accent)!important;border-color:var(--accent)!important}",
+    rule: ".explore-groups a{background:var(--accent)!important;border-color:var(--accent)!important}",
     expect: "dominant affordances compete",
   },
 ];
