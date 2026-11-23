@@ -2513,6 +2513,10 @@ mark.hl.has-note {
     margin: 0;
   }
   .home-cover-content {
+    /* The drawing's img is absolutely positioned and would paint over the
+       title; the text sits above the backdrop, never under it (MSH tell 9). */
+    position: relative;
+    z-index: 1;
     order: unset;
     align-self: end;
     max-width: 100%;
