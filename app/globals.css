@@ -543,6 +543,7 @@ footer {
   font-size: var(--micro);
   color: var(--muted);
 }
+footer { flex-wrap: wrap; gap: 16px; }
 .note {
   width: fit-content;
   max-width: min(100%, 38em);
@@ -2665,9 +2666,9 @@ mark.hl.has-note {
 .engine-column {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding-top: 14px;
-  border-top: 2px solid var(--line);
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
 }
 .engine-head {
   display: flex;
@@ -2697,24 +2698,13 @@ mark.hl.has-note {
   line-height: 1.55;
   max-width: 48ch;
 }
-.engine-links {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px 18px;
-  padding-top: 6px;
-}
-.engine-links a {
-  font-weight: 600;
-}
-
 /* Tier 3: Reference & Civic Knowledge Shelf */
 .home-reference {
   border-top: 1px solid var(--line);
-  padding-top: 18px;
+  padding-top: 12px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 .reference-tag {
   font-weight: 700;
@@ -2738,16 +2728,25 @@ mark.hl.has-note {
   line-height: 1.5;
   max-width: 58ch;
 }
+.engine-links,
 .reference-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, max-content) minmax(0, max-content);
+  justify-content: start;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 14px 20px;
-  padding-top: 4px;
+  gap: 0 16px;
 }
+.engine-links a,
 .reference-nav a {
+  font-weight: 400;
+}
+.engine-links a:first-child,
+.reference-nav a:first-child {
+  grid-column: 1 / -1;
+  justify-self: start;
   font-weight: 600;
 }
+main:has(> .home-dashboard) { padding-bottom: 16px; }
 
 @media (max-width: 1100px) {
   .app-grid {
@@ -3732,7 +3731,7 @@ mark.hl.has-note {
 .research-table caption { text-align:left; padding:16px 0; }
 .research-table th, .research-table td { text-align:left; vertical-align:top; padding:16px 12px; border-bottom:1px solid var(--line); font-weight:400; overflow-wrap:anywhere; }
 .research-table th:first-child { width:28%; font-weight:600; }
-footer { flex-wrap:wrap; gap:16px; }
+
 @media(max-width:720px) {
  .civic-title { align-items:flex-start; gap:10px; }
  .civic-title .study-art { flex:0 0 90px; align-self:start; max-width:none; }
@@ -4491,6 +4490,20 @@ main ul.micro > li:lang(th),
     padding: 16px 18px;
   }
 }
+.site-footer {
+  padding: 12px 32px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0 16px;
+}
+@media (max-width: 720px) {
+  .site-footer {
+    flex-direction: row;
+    padding-inline: 18px;
+  }
+  .site-footer > a:first-child { flex-basis: 100%; }
+}
+
 /* Header, grid and footer share one container, so their edges line up. */
 .header,
 footer {
@@ -4752,24 +4765,7 @@ footer {
    answer below is a reason a stranger can check.
    ------------------------------------------------------------------ */
 
-/* The engine card's three links are a list of references, read down the
-   card. They are not a shelf: a shelf of three links breaks wherever it
-   runs out of room, and the card is the same width on every screen, so a
-   list is the arrangement that can be relied on. */
-.engine-links {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-/* Below 560px a row of these cannot fit, so it becomes a list rather than a
-   broken row. The chips keep the top alignment they were given at 720px. */
 @media (max-width: 560px) {
-  .reference-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
   .anchor-features { flex-direction: row; }
 }
 

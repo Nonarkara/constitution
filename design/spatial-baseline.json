@@ -111,21 +111,118 @@
     }
   ],
   "provenance": {
-    "measuredAt": "2026-11-20T21:21:10.126Z",
+    "measuredAt": "2026-11-24T01:52:23.739Z",
     "measurements": 2562,
     "routes": 42,
     "carriedMeasurements": 0,
     "widths": 61,
-    "measuredTogether": true,
+    "measuredTogether": false,
     "carriedOver": [],
-    "skipped": [
-      "/learn/"
-    ],
     "build": {
       "files": 2047,
-      "exportSha256": "434ab7a0fdc43fb5d6fb80ab64e22e90c25593e9c85887a7a7458ddc26bea321",
-      "recordedAt": "2026-11-20T20:59:49.328Z"
-    }
+      "exportSha256": "244ec60a35af9c80c6a08448eaaa24792d3b70eb22fca77d84a3844c91c31732",
+      "recordedAt": "2026-11-24T01:46:49.393Z"
+    },
+    "sweeps": [
+      {
+        "routes": [
+          "/",
+          "/bible/exam-method/",
+          "/bible/parliament/",
+          "/exam/",
+          "/notebook/",
+          "/review/"
+        ],
+        "measurements": 366,
+        "measuredAt": "2026-11-24T01:46:30.719Z",
+        "rawSha256": "cb103f453aa73793a03e32bc1e1efcb13d4fadbcaa102b070349e86269b56d55",
+        "raw": "raw-0.json"
+      },
+      {
+        "routes": [
+          "/along/",
+          "/bible/general-and-king/",
+          "/bible/rights/",
+          "/flashcards/",
+          "/notes/",
+          "/rights/"
+        ],
+        "measurements": 366,
+        "measuredAt": "2026-11-24T01:46:32.035Z",
+        "rawSha256": "b2b66a746773c7dafb33b08ee8de035042c153e69ee8aee9c6db04c74b471d9f",
+        "raw": "raw-1.json"
+      },
+      {
+        "routes": [
+          "/amend/",
+          "/bible/history/",
+          "/bible/transitory/",
+          "/games/",
+          "/polls/",
+          "/section/"
+        ],
+        "measurements": 366,
+        "measuredAt": "2026-11-24T01:46:24.987Z",
+        "rawSha256": "865a26dcca82d02c6b1d600f53f74fa7ba5348df1f3fd2c6c1bed0086eb87cd5",
+        "raw": "raw-2.json"
+      },
+      {
+        "routes": [
+          "/bible/",
+          "/bible/how-to-read/",
+          "/cheatsheet/",
+          "/glossary/",
+          "/practice/",
+          "/settings/"
+        ],
+        "measurements": 366,
+        "measuredAt": "2026-11-24T01:46:29.835Z",
+        "rawSha256": "bec562e6444d136ccf2d9dc965b5d47f7975d7d3e45d30a9c9675347a3cf20c7",
+        "raw": "raw-3.json"
+      },
+      {
+        "routes": [
+          "/bible/cabinet/",
+          "/bible/independent-organs/",
+          "/civic/",
+          "/library/",
+          "/practice/pokklong/",
+          "/sources/"
+        ],
+        "measurements": 366,
+        "measuredAt": "2026-11-24T01:50:46.349Z",
+        "rawSha256": "d4e023cdc65ad982341cdbf7f0c92a4da1a7da98f67e8413fcc97d7f79d15505",
+        "raw": "raw-4.json"
+      },
+      {
+        "routes": [
+          "/bible/courts/",
+          "/bible/local-and-amendment/",
+          "/cram/",
+          "/memory/",
+          "/read/",
+          "/tikki/"
+        ],
+        "measurements": 366,
+        "measuredAt": "2026-11-24T01:52:23.739Z",
+        "rawSha256": "4db5fdc355d669d244f9f05e5250c4d6f0ab77309a57e6fb04075419303f0f4d",
+        "raw": "raw-5.json"
+      },
+      {
+        "routes": [
+          "/bible/duties-state-policy/",
+          "/bible/organic-laws/",
+          "/drills/",
+          "/news/",
+          "/research/",
+          "/topics/"
+        ],
+        "measurements": 366,
+        "measuredAt": "2026-11-24T01:51:00.857Z",
+        "rawSha256": "2beb5ba1b9b8ebf4caeab555a74c92e8706d68f9db26c60fd0d7957110d409c5",
+        "raw": "raw-6.json"
+      }
+    ]
   },
   "routes": {
     "/": {
@@ -33978,8 +34075,8 @@
       "849": {
         "findings": [],
         "firstAction": {
-          "y": null,
-          "sel": null
+          "y": 500,
+          "sel": "button"
         },
         "chrome": {
           "vh": 1000,
@@ -33992,18 +34089,18 @@
           "bottomSel": null
         },
         "hierarchy": {
-          "h1": 0,
+          "h1": 44,
           "largest": 18,
-          "ratio": null,
-          "peers": 0,
-          "share": 0
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.03
         }
       },
       "850": {
         "findings": [],
         "firstAction": {
-          "y": null,
-          "sel": null
+          "y": 500,
+          "sel": "button"
         },
         "chrome": {
           "vh": 1000,
@@ -34016,11 +34113,11 @@
           "bottomSel": null
         },
         "hierarchy": {
-          "h1": 0,
+          "h1": 44,
           "largest": 18,
-          "ratio": null,
-          "peers": 0,
-          "share": 0
+          "ratio": 2.44,
+          "peers": 2,
+          "share": 0.03
         }
       },
       "851": {
@@ -41028,7 +41125,7 @@
           "largest": 18,
           "ratio": 1.78,
           "peers": 17,
-          "share": 0.28
+          "share": 0.29
         }
       },
       "521": {

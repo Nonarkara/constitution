@@ -205,6 +205,31 @@ function measure(route, w, d) {
     }
   }
 
+  if (route === '/') {
+    var groups = d.querySelectorAll('.engine-links, .reference-nav');
+    for (var group of groups) {
+      var links = Array.from(group.querySelectorAll('a'));
+      var bounds = group.getBoundingClientRect();
+      var lead = group.previousElementSibling;
+      var description = lead && (lead.matches('p') ? lead : lead.querySelector('p'));
+      if (description && bounds.top - description.getBoundingClientRect().bottom > 8) rec.openingError = 'home study action is too far from its description';
+      if (links.length !== 3) rec.openingError = 'home study group is missing a destination';
+      else if (bounds.height > 100) rec.openingError = 'home study links occupy more than two compact rows';
+      else if (links.some(function (link) { return link.getBoundingClientRect().height < 44; })) rec.openingError = 'home study target is too short';
+      else {
+        var first = links[0].getBoundingClientRect();
+        var second = links[1].getBoundingClientRect();
+        var third = links[2].getBoundingClientRect();
+        if (Math.abs(second.top - third.top) > 1) rec.openingError = 'home secondary links are separated into spare rows';
+        if (second.top - first.bottom > 4) rec.openingError = 'home related link rows are too far apart';
+      }
+    }
+  }
+
+  if (route === '/' && w === 390 && d.querySelector('footer').getBoundingClientRect().height > 128) {
+    rec.openingError = 'home footer uses spare rows for related information';
+  }
+
   // Cold-visit check. This gate loads every route with empty localStorage, which
   // is precisely when an all-zero progress readout is a defect: a first-time
   // reader has studied nothing, so "0/279" states nothing they can act on. It

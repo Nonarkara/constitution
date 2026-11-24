@@ -1,0 +1,145 @@
+[
+  {
+    "href": "/practice/",
+    "text": "เริ่มรอบฝึก →",
+    "group": "สนามฝึกตอบ & ข้อสอบจำลอง",
+    "visible": true,
+    "outline": "solid",
+    "box": [
+      18,
+      400.359375,
+      74.75,
+      44
+    ]
+  },
+  {
+    "href": "/exam/",
+    "text": "ข้อสอบจำลอง 30 ชุด",
+    "group": "สนามฝึกตอบ & ข้อสอบจำลอง",
+    "visible": true,
+    "outline": "solid",
+    "box": [
+      18,
+      444.359375,
+      113.28125,
+      44
+    ]
+  },
+  {
+    "href": "/along/",
+    "text": "90 ประเด็นสอบนายอำเภอ",
+    "group": "สนามฝึกตอบ & ข้อสอบจำลอง",
+    "visible": true,
+    "outline": "solid",
+    "box": [
+      147.28125,
+      444.359375,
+      139.25,
+      44
+    ]
+  },
+  {
+    "href": "/memory/",
+    "text": "เดินชมวังความจำ →",
+    "group": "บ้านความจำและการ์ดช่วยจำ",
+    "visible": true,
+    "outline": "solid",
+    "box": [
+      18,
+      630.4375,
+      109.015625,
+      44
+    ]
+  },
+  {
+    "href": "/cram/",
+    "text": "สูตรตัวเลข 79 ค่า",
+    "group": "บ้านความจำและการ์ดช่วยจำ",
+    "visible": true,
+    "outline": "solid",
+    "box": [
+      18,
+      674.4375,
+      94.328125,
+      44
+    ]
+  },
+  {
+    "href": "/flashcards/",
+    "text": "การ์ดความจำ",
+    "group": "บ้านความจำและการ์ดช่วยจำ",
+    "visible": true,
+    "outline": "solid",
+    "box": [
+      128.328125,
+      674.4375,
+      72.0625,
+      44
+    ]
+  },
+  {
+    "href": "/bible/",
+    "text": "อ่านคู่มือ 13 บท →",
+    "group": "reference",
+    "visible": true,
+    "outline": "solid",
+    "box": [
+      18,
+      611.125,
+      99.953125,
+      44
+    ]
+  },
+  {
+    "href": "/rights/",
+    "text": "สิทธิพลเมือง 15 ด้าน",
+    "group": "reference",
+    "visible": true,
+    "outline": "solid",
+    "box": [
+      18,
+      655.125,
+      109.453125,
+      44
+    ]
+  },
+  {
+    "href": "/cheatsheet/",
+    "text": "แผ่นสรุปสูตร",
+    "group": "reference",
+    "visible": true,
+    "outline": "solid",
+    "box": [
+      143.453125,
+      655.125,
+      70.53125,
+      44
+    ]
+  },
+  {
+    "href": "/research/",
+    "text": "Dr. Non Arkaraprasertkul · ที่มาของสมุด",
+    "group": "footer",
+    "visible": true,
+    "outline": "solid",
+    "box": [
+      18,
+      744.125,
+      354,
+      44
+    ]
+  },
+  {
+    "href": "/sources/",
+    "text": "ตรวจสอบกับต้นฉบับเสมอ",
+    "group": "footer",
+    "visible": true,
+    "outline": "solid",
+    "box": [
+      203.546875,
+      788.125,
+      137.28125,
+      44
+    ]
+  }
+]

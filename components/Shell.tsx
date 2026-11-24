@@ -249,7 +249,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </Suspense>
         </main>
       </div>
-      <footer>
+      <footer className="site-footer">
         <Link href="/research/">Dr. Non Arkaraprasertkul · {tr(lang, "ที่มาของสมุด", "About this notebook", "关于这本笔记")}</Link>
         <span>
           {tr(lang, "ประเทศไทย · รัฐธรรมนูญ 2560", "Thailand · Constitution 2017", "泰国 · 2017年宪法")}

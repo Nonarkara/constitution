@@ -1,0 +1,5 @@
+FAIL — / @390px — home study links occupy more than two compact rows
+FAIL — / @721px — home study links occupy more than two compact rows
+FAIL — / @860px — home study links occupy more than two compact rows
+FAIL — / @1024px — home study links occupy more than two compact rows
+FAIL — / @1440px — home study links occupy more than two compact rows
