@@ -118,6 +118,9 @@ export function BlindExam() {
             </p>
           </div>
         </div>
+        <button className="primary" onClick={begin}>
+          {tr(lang, "เริ่มสอบ 90 ข้อ", "Begin · 90 questions", "开始 · 90题")} →
+        </button>
         <p>
           {tr(
             lang,
@@ -137,9 +140,6 @@ export function BlindExam() {
         <p className="notice">
           {tr(lang, "ไม่ใช่ข้อสอบทางการ แสดงคะแนนครั้งแรกแยกจากความก้าวหน้ารายบท ข้อที่มีแหล่งอ้างอิงจะแสดงที่มาและวันที่ในเฉลย ควรตรวจข้อมูลล่าสุดก่อนสอบ", "Not an official paper. Your first-attempt score is separate from chapter mastery. Available sources and dates appear in the review; check dated facts before your exam.", "非官方试卷。首次成绩与各章学习进度分开记录。解析中列出已有来源和日期；考前请核对时效性资料。")}
         </p>
-        <button className="primary" onClick={begin}>
-          {tr(lang, "เริ่มสอบ 90 ข้อ", "Begin · 90 questions", "开始 · 90题")} →
-        </button>
       </section>
     );
 

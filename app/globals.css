@@ -1200,8 +1200,8 @@ html[data-large="true"] {
   margin: 0 0 16px;
 }
 .page-next {
-  margin-top: 40px;
-  padding-top: 16px;
+  margin-top: 24px;
+  padding-top: 12px;
   border-top: 1px solid var(--line);
 }
 .header-settings {
@@ -1446,16 +1446,16 @@ html[data-large="true"] {
 
 /* Cheat Sheet & Algorithmic Diagrams */
 .cheatsheet-page {
-  margin-bottom: 48px;
+  margin-bottom: 0;
 }
 .cheatsheet-tabs {
   grid-template-columns: repeat(3, 1fr);
-  margin: 24px 0;
+  margin: 14px 0;
 }
 .sheet-section {
-  margin: 32px 0;
+  margin: 20px 0;
   border-top: 3px solid var(--ink);
-  padding-top: 24px;
+  padding-top: 16px;
 }
 .crayon-diagram-box {
   background: var(--wash);
@@ -2010,14 +2010,14 @@ html[data-large="true"] {
    Flashcards Interactive Arena (/flashcards/) & 3D Flip
    ============================================================ */
 .flashcards-page {
-  margin-bottom: 56px;
+  margin-bottom: 0;
 }
 .adaptive-profile-card {
   background: var(--wash);
   border: 1px solid var(--line);
   border-left: 4px solid var(--accent);
-  padding: 16px 18px;
-  margin: 20px 0 24px;
+  padding: 12px 14px;
+  margin: 12px 0 16px;
 }
 .adaptive-head {
   display: flex;
@@ -2900,7 +2900,7 @@ main:has(> .home-dashboard) { padding-bottom: 16px; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
-  margin: 36px 0 0;
+  margin: 20px 0 0;
 }
 .exam-formats {
   display: grid;
@@ -3044,13 +3044,13 @@ main:has(> .home-dashboard) { padding-bottom: 16px; }
 }
 .glossary-list > div {
   border-top: 1px solid var(--line);
-  padding: 16px 0 4px;
+  padding: 8px 0 6px;
 }
 .glossary-list dt {
   font-weight: 600;
 }
 .glossary-list dd {
-  margin: 6px 0 0;
+  margin: 3px 0 0;
 }
 .topic-list {
   list-style: none;
@@ -3062,7 +3062,7 @@ main:has(> .home-dashboard) { padding-bottom: 16px; }
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 4px 16px;
-  padding: 12px 0;
+  padding: 7px 0;
   border-top: 1px solid var(--line);
 }
 .bible {
@@ -3953,8 +3953,8 @@ main:has(> .home-dashboard) { padding-bottom: 16px; }
   color: var(--accent-deep);
 }
 .notes-all {
-  margin-top: 56px;
-  padding-top: 18px;
+  margin-top: 24px;
+  padding-top: 14px;
   border-top: 3px solid var(--ink);
 }
 @media (min-width: 900px) {
@@ -4072,9 +4072,9 @@ main:has(> .home-dashboard) { padding-bottom: 16px; }
 }
 
 /* Four memory stations: artwork above, one active story below. */
-.civic-panorama { margin: var(--space-4, 1.5rem) 0; }
-.civic-panorama img { width: 100%; height: auto; max-height: 320px; object-fit: contain; filter: var(--art); }
-.civic-rooms { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 3px solid var(--ink); margin-block: 1.5rem; }
+.civic-panorama { margin: 12px 0; }
+.civic-panorama img { width: 100%; height: auto; max-height: 220px; object-fit: contain; filter: var(--art); }
+.civic-rooms { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 3px solid var(--ink); margin-block: 12px; }
 .civic-rooms button { display: flex; flex-direction: column; text-align: left; gap: .5rem; padding: 1rem; border: 0; border-right: 1px solid var(--line); background: transparent; }
 .civic-rooms button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
 .civic-rooms span { font-size: var(--micro); }
@@ -4153,19 +4153,19 @@ main:has(> .home-dashboard) { padding-bottom: 16px; }
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 20px 0;
+  margin: 12px 0;
 }
 /* MSH: a group is its table plus a small gap, not a screen of margin. */
 .cram-group {
-  margin: 20px 0;
+  margin: 14px 0;
 }
 .cram-list > div {
   display: grid;
   /* A long answer used to take the auto track and squeeze the label to one word a line. */
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 4px 16px;
+  gap: 2px 12px;
   align-items: center;
-  padding: 6px 0;
+  padding: 4px 0;
   border-top: 1px solid var(--line);
 }
 .cram-list dd {

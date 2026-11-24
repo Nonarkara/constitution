@@ -45,14 +45,6 @@ export function Drills() {
           </p>
         </div>
       </div>
-      <p className="notice">
-        {tr(
-          lang,
-          "ตัวเลขสมาชิกเป็นสมมติ เช็กเฉพาะเกณฑ์ที่ถาม ไม่สรุปว่าขั้นตอนทั้งกฎหมายจบแล้ว ความก้าวหน้าของโจทย์ชุดนี้แยกจากเกณฑ์ผ่านหมวดเดิม",
-          "Membership numbers are fictional. Check the gate asked about, not completion of the entire legal process. Drill progress does not enlarge your existing chapter mastery requirement.",
-          "成员人数是假设值，只检查题目所问门槛，不代表整个法律程序完成。这组进度不会提高原有章节掌握要求。",
-        )}
-      </p>
       {/* One thing to do. Ten equal family buttons used to sit here, and the
           only review button was disabled whenever nothing was due — so on a
           fresh account the page had nothing to press at all. */}
@@ -108,6 +100,14 @@ export function Drills() {
               )}
         </p>
       </div>
+      <p className="notice">
+        {tr(
+          lang,
+          "ตัวเลขสมาชิกเป็นสมมติ เช็กเฉพาะเกณฑ์ที่ถาม ไม่สรุปว่าขั้นตอนทั้งกฎหมายจบแล้ว ความก้าวหน้าของโจทย์ชุดนี้แยกจากเกณฑ์ผ่านหมวดเดิม",
+          "Membership numbers are fictional. Check the gate asked about, not completion of the entire legal process. Drill progress does not enlarge your existing chapter mastery requirement.",
+          "成员人数是假设值，只检查题目所问门槛，不代表整个法律程序完成。这组进度不会提高原有章节掌握要求。",
+        )}
+      </p>
       <h2 className="hub-others-title">
         {tr(lang, "หรือเลือกชุดอื่น", "Or pick another set", "或选择其他组")}
       </h2>
