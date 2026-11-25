@@ -1,0 +1,42 @@
+{
+  "stacked": [
+    {
+      "lang": "th",
+      "width": 748,
+      "y": 570,
+      "height": 1846
+    },
+    {
+      "lang": "en",
+      "width": 748,
+      "y": 2438,
+      "height": 2666
+    },
+    {
+      "lang": "zh",
+      "width": 748,
+      "y": 5127,
+      "height": 1116
+    }
+  ],
+  "parallelPrototype": [
+    {
+      "lang": "th",
+      "width": 239,
+      "y": 570,
+      "height": 5684
+    },
+    {
+      "lang": "en",
+      "width": 226,
+      "y": 570,
+      "height": 5684
+    },
+    {
+      "lang": "zh",
+      "width": 226,
+      "y": 570,
+      "height": 5684
+    }
+  ]
+}

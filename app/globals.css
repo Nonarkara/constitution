@@ -3416,6 +3416,11 @@ main:has(> .home-dashboard) { padding-bottom: 16px; }
   gap: 10px;
   margin-bottom: 20px;
 }
+.practice-choices { border: 0; padding: 0; min-inline-size: 0; margin-inline: 0; }
+.practice-choices input { accent-color: var(--accent-deep); flex: none; }
+.practice-choices .choice-card:focus-within { outline: 2px solid var(--focus); outline-offset: 2px; }
+.offline-install-status { margin: 8px 0 0; }
+
 .choice-card {
   display: flex;
   align-items: center;

@@ -152,8 +152,8 @@ export function Home() {
             </p>
             <div className="engine-links micro">
               <Link href="/practice/">{tr(lang, "เริ่มรอบฝึก", "Start Practice", "开始练习")} →</Link>
-              <Link href="/exam/" className="pulse-link">{tr(lang, "ข้อสอบจำลอง 30 ชุด", "30 Mock Papers", "30套模拟卷")}</Link>
-              <Link href="/along/" className="pulse-link">{tr(lang, "90 ประเด็นสอบนายอำเภอ", "90 District Topics", "90道实务考点")}</Link>
+              <Link href="/exam/" className="pulse-link">{tr(lang, "ข้อสอบจำลองจับเวลา", "Timed mock exams", "计时模拟考试")}</Link>
+              <Link href="/along/" className="pulse-link">{tr(lang, "แนวข้อสอบนายอำเภอ", "District-chief exam practice", "县长考试练习")}</Link>
             </div>
           </div>
 

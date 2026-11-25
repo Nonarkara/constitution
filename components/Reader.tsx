@@ -151,7 +151,7 @@ export function Reader() {
                 checked={compare}
                 onChange={(e) => setCompare(e.target.checked)}
               />
-              {tr(lang, "เทียบ 3 ภาษา", "Compare 3 languages", "三语对照")}
+              {tr(lang, "แสดง 3 ภาษา", "Show 3 languages", "显示三种语言")}
             </label>
           </div>
           {section.amended && (

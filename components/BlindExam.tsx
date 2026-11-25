@@ -1,4 +1,5 @@
 "use client";
+import { useHidePageNext } from "./Shell";
 import { QuestionVisual } from "./QuestionVisual";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
@@ -34,6 +35,7 @@ export function BlindExam() {
   const [last, setLast] = useState<"right" | "wrong" | null>(null);
   const [earnedId, setEarnedId] = useState<string | null>(null);
   const head = useRef<HTMLHeadingElement>(null);
+  useHidePageNext(phase !== "brief" && phase !== "handoff");
 
   const queue = useMemo(() => (s ? outstanding(s) : []), [s]);
   const open = queue[0] ?? null;
@@ -107,7 +109,7 @@ export function BlindExam() {
         <div className="intro-copy">
           <StudyArt scene="along" />
           <div className="intro-text">
-            <h1 ref={head} tabIndex={-1}>{tr(lang, "ลองสอบ แล้วค่อยเรียน", "Try first. Study after.", "先试一试，再学解析")}</h1>
+            <h1 ref={head} tabIndex={-1}>{tr(lang, "แนวข้อสอบนายอำเภอ", "District-chief exam practice", "县长考试练习")}</h1>
             <p>
               {tr(
                 lang,

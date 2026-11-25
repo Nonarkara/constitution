@@ -220,7 +220,7 @@ export function DoublePageReader() {
               checked={viewCompare}
               onChange={(e) => setViewCompare(e.target.checked)}
             />
-            {tr(lang, "เปิดเทียบ 3 ภาษา", "Compare 3 Languages", "三语对照")}
+            {tr(lang, "แสดง 3 ภาษา", "Show 3 languages", "显示三种语言")}
           </label>
         </div>
       {/* User Stats Banner */}

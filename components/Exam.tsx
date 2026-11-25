@@ -122,7 +122,7 @@ export function Exam() {
         <div className="study-opening">
           <StudyArt scene="exam" />
           <div className="study-opening-copy">
-            <h1>{tr(lang, "ข้อสอบจำลอง", "Mock exam", "模拟考试")}</h1>
+            <h1>{tr(lang, "ข้อสอบจำลองจับเวลา", "Timed mock exams", "计时模拟考试")}</h1>
             <p>{tr(lang, "เลือกชุดจับเวลา แล้วดูเฉลยหลังส่ง", "Choose a timed paper. See the answers after you submit.", "选择一套计时练习，交卷后查看答案。")}</p>
             <div className="exam-featured">
               <span className="mono exam-featured-num">
@@ -153,7 +153,7 @@ export function Exam() {
         <div className="exam-context">
           <StudyArt scene="examStreet" compact />
           <div>
-            <Link href="/along/">{tr(lang, "ลองแนวข้อสอบเสริม", "Try the extra exam topics", "试做补充题")} →</Link>
+            <Link href="/along/">{tr(lang, "แนวข้อสอบนายอำเภอ", "District-chief exam practice", "县长考试练习")} →</Link>
             <Link href="/bible/exam-method/">{tr(lang, "อ่านวิธีทำข้อสอบ", "Read the exam method", "阅读答题方法")} →</Link>
           </div>
         </div>

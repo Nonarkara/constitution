@@ -55,3 +55,17 @@ test("fully mastered weak mode has no repair queue", () => {
   for (const q of bank) progress.questions[q.id] = {correct:true,level:1,due:0};
   assert.equal(buildPracticeQueue(bank, progress, "weak").length, 0);
 });
+
+test("mixed practice restores question order, option order, score and an unsubmitted choice", async () => {
+  const { encodeMixedRound, parseMixedRound } = await import("../lib/practice-session.ts");
+  const { MIXED_DRILLS } = await import("../lib/mixed.ts");
+  const originals = [bank[0], MIXED_DRILLS[0]];
+  const queue = originals.map((q) => preparePracticeQuestion(q, () => 0));
+  const answers = { [queue[0].id]: queue[0].answer };
+  const raw = encodeMixedRound(originals, queue, 1, answers, 2);
+  assert.deepEqual(parseMixedRound(raw, originals), { queue, index: 1, answers, selected: 2 });
+  assert.equal(parseMixedRound(raw, [{ ...bank[0], answer: 1 - bank[0].answer }, MIXED_DRILLS[0]]), null);
+  const corrupted = JSON.parse(raw);
+  corrupted.order[0][1] = [0, 0, 0, 0];
+  assert.equal(parseMixedRound(JSON.stringify(corrupted), originals), null);
+});

@@ -129,29 +129,29 @@ export function Settings() {
             "下方显示准备完成后，可离线阅读、搜索和练习。保存到离线的录音也可播放。参议院录音及浏览器语音搜索可能需要网络。",
           )}
         </p>
-      </div>
-      <p className="notice" role="status">
-        {offline === "ready"
-          ? tr(
-              lang,
-              "พร้อมเรียนออฟไลน์แล้ว",
-              "Ready for offline study",
-              "已准备好离线学习",
-            )
-          : offline === "loading"
+        <p className="notice offline-install-status" role="status">
+          {offline === "ready"
             ? tr(
                 lang,
-                "กำลังบันทึกชุดเรียนไว้บนเครื่อง…",
-                "Saving the study kit on this device…",
-                "正在将学习内容保存到设备…",
+                "พร้อมเรียนออฟไลน์แล้ว",
+                "Ready for offline study",
+                "已准备好离线学习",
               )
-            : tr(
-                lang,
-                "ยังไม่ได้บันทึกชุดเรียนออฟไลน์ ลองเปิดเว็บขณะมีอินเทอร์เน็ตอีกครั้ง",
-                "Offline kit is not saved yet. Reopen while connected to try again.",
-                "离线内容尚未保存，请联网重新打开网站。",
-              )}
-      </p>
+            : offline === "loading"
+              ? tr(
+                  lang,
+                  "กำลังบันทึกชุดเรียนไว้บนเครื่อง…",
+                  "Saving the study kit on this device…",
+                  "正在将学习内容保存到设备…",
+                )
+              : tr(
+                  lang,
+                  "ยังไม่ได้บันทึกชุดเรียนออฟไลน์ ลองเปิดเว็บขณะมีอินเทอร์เน็ตอีกครั้ง",
+                  "Offline kit is not saved yet. Reopen while connected to try again.",
+                  "离线内容尚未保存，请联网重新打开网站。",
+                )}
+        </p>
+      </div>
       <div className="source-card settings-card">
         <h2>
           {tr(lang, "อ่านสบายขึ้น", "Read more comfortably", "更舒适地阅读")}

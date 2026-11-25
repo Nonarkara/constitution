@@ -66,6 +66,7 @@ function load(file: string, registry: Record<string, unknown>): Record<string, u
 }
 
 const registry: Record<string, unknown> = {
+  "./Shell": { useHidePageNext: () => {} },
   react: React,
   "@/lib/shuffle": { fisherYates: (a: unknown[]) => typeof a[0] === "number" ? [...a].reverse() : a, choiceLetter: (_l: string, i: number) => "ABCD"[i] },
   "@/lib/i18n": {

@@ -8,10 +8,10 @@ import { chapters } from "@/lib/outline";
 import { recordAnswer } from "@/lib/learning";
 import { useStudy } from "./Provider";
 import { choiceLetter, fisherYates } from "@/lib/shuffle";
-import { preparePracticeQuestion, practiceSessionScore } from "@/lib/practice-session";
+import { encodeMixedRound, MIXED_CHECKPOINT, parseMixedRound, preparePracticeQuestion, practiceSessionScore } from "@/lib/practice-session";
 import { tr, sectionLabel, chapterPickerLabel, chapterLabel } from "@/lib/i18n";
 import { buildPracticeQueue } from "@/lib/adaptive";
-import { buildMixedSession, buildSectionSession } from "@/lib/mixed";
+import { buildMixedSession, buildSectionSession, MIXED_DRILLS } from "@/lib/mixed";
 import dynamic from "next/dynamic";
 import { TeachingSteps } from "./TeachingSteps";
 import { ExplainBack } from "./LearningCoach";
@@ -24,6 +24,7 @@ const PokklongPractice = dynamic(() =>
 );
 
 type Question = (typeof questions)[number];
+const mixedBank = [...questions, ...MIXED_DRILLS];
 
 
 
@@ -40,7 +41,11 @@ function ConstitutionArena() {
     "competition" | "weak" | "sprint" | "real-life" | "endless" | "chapter"
   >("competition");
   const [selectedChapter, setSelectedChapter] = useState<number>(11);
-  const [immediateFeedback, setImmediateFeedback] = useState<boolean>(true);
+  const [mixed, setMixed] = useState(false);
+  const [checkpointReady, setCheckpointReady] = useState(false);
+  const [checkpointError, setCheckpointError] = useState(false);
+  const questionHeading = useRef<HTMLHeadingElement>(null);
+  const feedbackHeading = useRef<HTMLSpanElement>(null);
 
   // Active quiz session state
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -73,6 +78,7 @@ function ConstitutionArena() {
     setSessionNotice("");
     setMode(chosenMode);
     if (chNum) setSelectedChapter(chNum);
+    setMixed(false);
     setQueue(qList.map((question) => preparePracticeQuestion(question)));
     setCurrentIndex(0);
     setSelectedChoice(null);
@@ -83,14 +89,15 @@ function ConstitutionArena() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const begin = (items: Question[], chosen: typeof mode = "weak") => {
+  const begin = (items: Question[], isMixed = false) => {
     if (!items.length) {
       setSessionNotice(tr(lang, "ยังไม่มีข้อในชุดนี้", "This set has no questions yet.", "这组还没有题目。"));
       setIsActive(false);
       return;
     }
     setSessionNotice("");
-    setMode(chosen);
+    setMode("weak");
+    setMixed(isMixed);
     setQueue(items.map((question) => preparePracticeQuestion(question)));
     setCurrentIndex(0);
     setSelectedChoice(null);
@@ -100,14 +107,33 @@ function ConstitutionArena() {
     setIsActive(true);
   };
 
-  const startMixed = () => begin(buildMixedSession(questions, progress, Date.now()), "weak");
+  const startMixed = () => begin(buildMixedSession(questions, progress, Date.now()), true);
 
   const startSectionDrill = (section: number) => {
-    begin(buildSectionSession(questions, section), "weak");
+    begin(buildSectionSession(questions, section));
   };
 
   const openFromQuery = (session: string | null, check: number, section: number) => {
     if (autostarted.current) return;
+    setCheckpointReady(true);
+    if (!check && (!session || session === "mixed")) {
+      try {
+        const raw = localStorage.getItem(MIXED_CHECKPOINT);
+        const saved = raw && parseMixedRound(raw, mixedBank);
+        if (saved) {
+          autostarted.current = true;
+          setMode("weak");
+          setMixed(true);
+          setQueue(saved.queue);
+          setCurrentIndex(saved.index);
+          setSessionAnswers(saved.answers);
+          setSelectedChoice(saved.selected);
+          setShowExplanation(Object.hasOwn(saved.answers, saved.queue[saved.index].id));
+          setIsActive(true);
+          return;
+        }
+      } catch { setCheckpointError(true); }
+    }
     if (session === "mixed") {
       autostarted.current = true;
       startMixed();
@@ -123,21 +149,32 @@ function ConstitutionArena() {
   const currentQ = queue[currentIndex];
   const { correct: score, percentage } = practiceSessionScore(queue, sessionAnswers);
 
-  const handleSelectChoice = (choiceIdx: number) => {
-    if (selectedChoice !== null && immediateFeedback) return;
-    setSelectedChoice(choiceIdx);
+  useEffect(() => {
+    if (!checkpointReady || !mixed) return;
+    try {
+      if (isActive && !sessionCompleted) {
+        localStorage.setItem(MIXED_CHECKPOINT, encodeMixedRound(mixedBank, queue, currentIndex, sessionAnswers, selectedChoice));
+      } else {
+        localStorage.removeItem(MIXED_CHECKPOINT);
+      }
+      setCheckpointError(false);
+    } catch { setCheckpointError(true); }
+  }, [checkpointReady, mixed, isActive, sessionCompleted, queue, currentIndex, sessionAnswers, selectedChoice]);
 
-    const isCorrect = choiceIdx === currentQ.answer;
+  useEffect(() => {
+    if (isActive && !sessionCompleted) questionHeading.current?.focus();
+  }, [isActive, sessionCompleted, currentIndex, queue]);
 
-    // Record answer in global progress
-    const updated = recordAnswer(progress, currentQ, isCorrect, Date.now());
+  useEffect(() => {
+    if (showExplanation && isActive && !sessionCompleted) feedbackHeading.current?.focus();
+  }, [showExplanation, isActive, sessionCompleted, currentIndex]);
+
+  const submitChoice = () => {
+    if (selectedChoice === null || showExplanation || Object.hasOwn(sessionAnswers, currentQ.id)) return;
+    const updated = recordAnswer(progress, currentQ, selectedChoice === currentQ.answer, Date.now());
     save(updated);
-
-    setSessionAnswers((prev) => ({ ...prev, [currentQ.id]: choiceIdx }));
-
-    if (immediateFeedback) {
-      setShowExplanation(true);
-    }
+    setSessionAnswers((prev) => ({ ...prev, [currentQ.id]: selectedChoice }));
+    setShowExplanation(true);
   };
 
   const handleNext = () => {
@@ -157,6 +194,7 @@ function ConstitutionArena() {
         <SessionFromQuery ready={ready} onOpen={openFromQuery} />
       </Suspense>
 
+      {checkpointError && <p role="status">{tr(lang, "บันทึกรอบฝึกบนเครื่องนี้ไม่ได้", "This device could not save your practice round.", "此设备无法保存本轮练习。")}</p>}
       {!isActive ? (
         <>
           <PracticeTabs />
@@ -185,7 +223,7 @@ function ConstitutionArena() {
                 {/* The timed paper leads; the exam topics follow it on a quieter rule. */}
                 <div className="practice-featured-card">
                   <h3>
-                    {tr(lang, "ชุดฝึกจับเวลา 30 ชุด", "30 timed study papers", "30套计时练习卷")}
+                    {tr(lang, "ข้อสอบจำลองจับเวลา 30 ชุด", "Timed mock exams · 30 papers", "计时模拟考试 · 30套")}
                   </h3>
                   <p className="micro">
                     {tr(lang, "สุ่มจากคลังข้อฝึกที่ครอบคลุมทุกมาตรา เฉลยและคะแนนรายหมวดหลังส่ง", "Sampled from a bank that covers every section. Answers and a chapter-by-chapter score after you submit.", "从覆盖全部条文的题库中抽题。交卷后显示答案与各章得分。")}
@@ -198,7 +236,7 @@ function ConstitutionArena() {
                 {/* 90 District Exam Topics */}
                 <div className="practice-featured-card practice-featured-second">
                   <h3>
-                    {tr(lang, "แนวข้อสอบนายอำเภอและท้องถิ่น 90 ข้อ", "90 district-chief and local exam questions", "县长与地方考试题型90题")}
+                    {tr(lang, "แนวข้อสอบนายอำเภอ 90 ข้อ", "District-chief exam practice · 90 questions", "县长考试练习 · 90题")}
                   </h3>
                   <p className="micro">
                     {tr(lang, "อิงหัวข้อสอบปี 2568 มีที่มาและวันที่ทุกข้อ ครอบคลุมตัวบท ความรู้รอบตัว และการบริหาร", "Based on 2025 exam topics, with a source and date for each question. Covers constitutional law, general knowledge and administration.", "依据2025年考试题型，每题注明来源与日期，涵盖宪法条文、常识和行政管理。")}
@@ -310,9 +348,10 @@ function ConstitutionArena() {
         /* SESSION RESULT SCREEN */
         <div className="session-result-screen">
           <div className="result-card">
-            <h2>
-              {tr(lang, "จบรอบนี้แล้ว", "That's the set", "本轮结束")}
-            </h2>
+            <h1>{mixed
+              ? tr(lang, "ผลรอบฝึกผสม", "Mixed practice results", "混合练习结果")
+              : tr(lang, "ผลการฝึก", "Practice results", "练习结果")}
+            </h1>
             <div className="result-score-display">
               <span className="mono score-number">
                 {score} / {queue.length}
@@ -351,6 +390,7 @@ function ConstitutionArena() {
               ← {tr(lang, "ออกจากการฝึก", "Exit Practice", "退出练习")}
             </button>
             <div className="quiz-progress-stats micro mono">
+              {mixed && <span>{tr(lang, "รอบฝึกผสม", "Mixed practice", "混合练习")}</span>}
               <span>
                 {tr(lang, "ข้อ", "Question", "题目")} {currentIndex + 1} / {queue.length}
               </span>
@@ -380,10 +420,10 @@ function ConstitutionArena() {
               </div>
             </header>
 
-            <h2 className="question-prompt-text">{currentQ.prompt[lang]}</h2>
+            <h1 id="practice-question" ref={questionHeading} tabIndex={-1} className="question-prompt-text">{currentQ.prompt[lang]}</h1>
 
             {/* Answer Choices */}
-            <div className="choices-list" role="radiogroup">
+            <fieldset className="choices-list practice-choices" aria-labelledby="practice-question" disabled={showExplanation}>
               {currentQ.choices.map((choice, idx) => {
                 const isSelected = selectedChoice === idx;
                 const isCorrect = idx === currentQ.answer;
@@ -396,25 +436,21 @@ function ConstitutionArena() {
                 }
 
                 return (
-                  <div
-                    key={idx}
-                    className={`choice-card ${choiceStateClass}`}
-                    onClick={() => handleSelectChoice(idx)}
-                    role="radio"
-                    aria-checked={isSelected}
-                    tabIndex={0}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") handleSelectChoice(idx);
-                    }}
-                  >
+                  <label key={idx} className={`choice-card ${choiceStateClass}`}>
+                    <input type="radio" name={`practice-${currentQ.id}`} checked={isSelected} onChange={() => setSelectedChoice(idx)} />
                     <span className="mono choice-letter">
                       {choiceLetter(lang, idx)}
                     </span>
                     <span className="choice-text">{choice[lang]}</span>
-                  </div>
+                  </label>
                 );
               })}
-            </div>
+            </fieldset>
+            {!showExplanation && (
+              <button className="primary" disabled={selectedChoice === null} onClick={submitChoice}>
+                {tr(lang, "ตรวจคำตอบ", "Check answer", "检查答案")}
+              </button>
+            )}
 
             {/* Immediate Explanation Card */}
             {showExplanation && (
@@ -426,7 +462,7 @@ function ConstitutionArena() {
                 }`}
               >
                 <div className="explanation-head">
-                  <span className="font-bold">
+                  <span className="font-bold" ref={feedbackHeading} tabIndex={-1}>
                     {selectedChoice === currentQ.answer
                       ? tr(lang, "ถูก", "Correct", "正确")
                       : `${tr(
@@ -439,6 +475,13 @@ function ConstitutionArena() {
                 </div>
 
                 <p className="explanation-body">{currentQ.explanation[lang]}</p>
+                <div className="next-btn-container">
+                  <button className="primary btn-next-q" onClick={handleNext}>
+                    {currentIndex < queue.length - 1
+                      ? tr(lang, `ข้อ ${currentIndex + 2} →`, `Question ${currentIndex + 2} →`, `第${currentIndex + 2}题 →`)
+                      : tr(lang, "ดูสรุปผลคะแนน →", "View Final Score →", "查看考试成绩 →")}
+                  </button>
+                </div>
                 <QuestionVisual question={currentQ} position={currentIndex} selected={selectedChoice ?? undefined} lang={lang} />
                 <TeachingSteps question={currentQ} selected={selectedChoice ?? undefined}/>
                 <ExplainBack section={currentQ.sections[0]}/>
@@ -476,13 +519,6 @@ function ConstitutionArena() {
                   </Link>
                 </div>
 
-                <div className="next-btn-container">
-                  <button className="primary btn-next-q" onClick={handleNext}>
-                    {currentIndex < queue.length - 1
-                      ? tr(lang, `ข้อ ${currentIndex + 2} →`, `Question ${currentIndex + 2} →`, `第${currentIndex + 2}题 →`)
-                      : tr(lang, "ดูสรุปผลคะแนน →", "View Final Score →", "查看考试成绩 →")}
-                  </button>
-                </div>
               </div>
             )}
           </article>
